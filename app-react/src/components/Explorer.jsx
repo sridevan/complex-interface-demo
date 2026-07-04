@@ -148,7 +148,7 @@ export default function Explorer({ interfaces, residue, epitope }) {
             <span className="dot" style={{ background: '#e19039' }} /> antibody · structure served from PDBe
           </div>
           {selected ? <Viewer3Dmol pdbId={selected.pdb_id} agResidues={iface.ag} abResidues={iface.ab}
-                                    highlight={highlight} height={480} />
+                                    highlight={highlight} onClearHighlight={() => setHighlight(null)} height={480} />
             : <p className="note">No instance selected.</p>}
         </div>
       </div>

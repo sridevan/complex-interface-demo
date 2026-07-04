@@ -19,7 +19,7 @@ function groupByChain(residues) {
 const HL_COLOR = 0x12c9a6  // highlight teal for a Sankey-selected residue
 
 // residues: [{ chain: <author asym id>, resi: <author seq num> }]
-export default function Viewer3Dmol({ pdbId, agResidues, abResidues, highlight, height = 480 }) {
+export default function Viewer3Dmol({ pdbId, agResidues, abResidues, highlight, onClearHighlight, height = 480 }) {
   const hostRef = useRef(null)
   const viewerRef = useRef(null)
   const surfRef = useRef(null)
@@ -91,8 +91,10 @@ export default function Viewer3Dmol({ pdbId, agResidues, abResidues, highlight, 
     }
   }
 
-  // Re-frame the camera on the interacting residues (after the user has rotated/zoomed away).
+  // Re-frame the camera on the interacting residues and clear any Sankey-selected highlight
+  // (the highlight prop change re-styles/de-highlights via the effect below).
   const recenter = () => {
+    if (onClearHighlight) onClearHighlight()
     const v = viewerRef.current, sel = ifaceSelRef.current
     if (!v || !sel) return
     v.zoomTo(sel, 250)
