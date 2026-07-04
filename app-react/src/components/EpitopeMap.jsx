@@ -11,9 +11,9 @@ reg('nightingale-track-canvas', NightingaleTrackCanvas)
 reg('nightingale-manager', NightingaleManager)
 reg('nightingale-navigation', NightingaleNavigation)
 
-// SARS-CoV-2 spike (P0DTC2) is 1273 aa; the track spans the whole protein so the epitope's
-// position along the spike is visible (RBD ~319-541, S2 etc.), matching PDBe-KB's ProtVista idiom.
-const SPIKE_LEN = 1273
+// Antigen length (SARS-CoV-2 spike P0DTC2 is 1273 aa); the track spans the whole protein so the
+// epitope's position along the antigen is visible, matching PDBe-KB's ProtVista idiom.
+const ANTIGEN_LEN = 1273
 
 function toFeatures(rows, key, color, label) {
   const vals = rows.map((r) => r[key] || 0)
@@ -40,7 +40,7 @@ const TRACKS = [
 export default function EpitopeMap({ epitope, onSelect, selected }) {
   const navRef = useRef(null)
   const trackRefs = useRef(TRACKS.map(() => React.createRef()))
-  const L = Math.max(SPIKE_LEN, ...epitope.map((r) => r.antigen_uniprot_position || 0))
+  const L = Math.max(ANTIGEN_LEN, ...epitope.map((r) => r.antigen_uniprot_position || 0))
   const [hover, setHover] = useState(null)
 
   // Configure navigation + tracks imperatively (properties/attributes on web components).
@@ -117,11 +117,11 @@ export default function EpitopeMap({ epitope, onSelect, selected }) {
 
   return (
     <div className="card">
-      <h2>Spike epitope map</h2>
+      <h2>Antigen epitope map</h2>
       <p className="note">
-        Per-residue antibody contacts along the SARS-CoV-2 spike (UniProt P0DTC2), the way PDBe-KB
-        shows residue-level annotations (Nightingale track). Colour intensity ∝ contact pairs; drag on
-        the ruler to zoom, click a residue to filter the tables below. Antigen positions come from PISA
+        Per-residue antibody contacts along the antigen (UniProt P0DTC2), the way PDBe-KB shows
+        residue-level annotations (Nightingale track). Colour intensity ∝ contact pairs; drag on the
+        ruler to zoom, click a residue to filter the tables below. Antigen positions come from PISA
         (SIFTS fallback where PISA lacks them).
       </p>
       <div className="legend">

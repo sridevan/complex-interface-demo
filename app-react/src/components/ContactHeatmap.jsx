@@ -72,7 +72,7 @@ export default function ContactHeatmap({ residue, onSelect, chainType }) {
     <div className="card">
       <h2>{title}</h2>
       <p className="note">
-        Contact intensity between each spike residue (UniProt position, from PISA) and each antibody
+        Contact intensity between each antigen residue (UniProt position, from PISA) and each antibody
         IMGT region (from ANARCII), aggregated across all processed structures. Single-hue scale
         (white-to-purple) is colour-blind-safe. Toggle <b>structures</b> to de-bias residues that recur
         across many PDB entries. Click a row to filter the residue table.
@@ -88,7 +88,7 @@ export default function ContactHeatmap({ residue, onSelect, chainType }) {
           <button className={sortBy === 'contacts' ? 'active' : ''} onClick={() => setSortBy('contacts')}>By contacts</button>
           <button className={sortBy === 'position' ? 'active' : ''} onClick={() => setSortBy('position')}>By position</button>
         </span>
-        <span className="rowcount">{sorted.length} spike residues</span>
+        <span className="rowcount">{sorted.length} antigen residues</span>
       </div>
 
       <div className="hm-legend">
@@ -101,7 +101,7 @@ export default function ContactHeatmap({ residue, onSelect, chainType }) {
         <table className="heatmap">
           <thead>
             <tr>
-              <th className="hm-rowhead">Spike residue</th>
+              <th className="hm-rowhead">Antigen residue</th>
               {REGIONS.map((r) => (
                 <th key={r} className={'hm-col ' + (r.includes('-H') || r.endsWith('-H') ? 'hcol' : 'lcol')}>{SHORT[r]}</th>
               ))}

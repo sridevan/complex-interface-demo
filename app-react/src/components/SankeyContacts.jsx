@@ -37,7 +37,7 @@ function buildGraph(rows) {
       return { kind: 'ag', name: `${r.antigen_residue_name}${r.antigen_uniprot_position}`,
                color: AA_COLOR[cls], sub: cls }
     })
-    const lk = `${abI}->${agI}`
+    const lk = `${agI}->${abI}`   // antigen (left / source) -> antibody (right / target)
     if (!linkMap.has(lk)) linkMap.set(lk, { value: 0, types: {}, minDist: Infinity, pairs: 0 })
     const e = linkMap.get(lk)
     e.value += r.bond_count || 1
@@ -46,14 +46,14 @@ function buildGraph(rows) {
     if (r.min_distance != null) e.minDist = Math.min(e.minDist, r.min_distance)
   }
   const links = []
-  const linkInfo = new Map()  // "abName|agName" -> breakdown (Recharts drops custom link fields)
+  const linkInfo = new Map()  // "agName|abName" -> breakdown (Recharts drops custom link fields)
   for (const [k, info] of linkMap.entries()) {
-    const [source, target] = k.split('->').map(Number)
+    const [source, target] = k.split('->').map(Number)  // source = antigen, target = antibody
     links.push({ source, target, value: info.value })
     linkInfo.set(`${nodes[source].name}|${nodes[target].name}`, {
       value: info.value, types: info.types,
       minDist: isFinite(info.minDist) ? info.minDist : null,
-      abRegion: nodes[source].sub, agClass: nodes[target].sub,
+      agClass: nodes[source].sub, abRegion: nodes[target].sub,
     })
   }
   return { nodes, links, linkInfo }
@@ -75,15 +75,15 @@ function SankeyTooltip({ active, payload, linkInfo }) {
   // Recharts labels a link "sourceName - targetName" (residue names never contain ' - ').
   const isLink = nameStr.includes(' - ') || (d && d.source !== undefined && d.target !== undefined)
   if (isLink) {
-    let abName, agName
-    if (d && typeof d.source === 'object') { abName = d.source.name; agName = d.target.name }
-    else { [abName, agName] = nameStr.split(' - ') }
-    const info = (linkInfo && linkInfo.get(`${abName}|${agName}`)) || {}
+    let agName, abName
+    if (d && typeof d.source === 'object') { agName = d.source.name; abName = d.target.name }
+    else { [agName, abName] = nameStr.split(' - ') }
+    const info = (linkInfo && linkInfo.get(`${agName}|${abName}`)) || {}
     const value = info.value ?? item.value
     return (
       <div className="sankey-tip">
-        <div className="st-head">{abName} <span className="st-sub">({info.abRegion})</span>
-          {'  —  '}{agName} <span className="st-sub">({info.agClass})</span></div>
+        <div className="st-head">{agName} <span className="st-sub">({info.agClass})</span>
+          {'  —  '}{abName} <span className="st-sub">({info.abRegion})</span></div>
         <div className="st-row"><b>{value}</b> contact{value === 1 ? '' : 's'}
           {info.minDist != null ? ` · closest ${info.minDist.toFixed(2)} Å` : ''}</div>
         <div className="st-types">{Object.entries(info.types || {}).sort((a, b) => b[1] - a[1])
@@ -96,15 +96,15 @@ function SankeyTooltip({ active, payload, linkInfo }) {
 }
 
 function SankeyNode({ x, y, width, height, index, payload }) {
-  const isAb = payload.kind === 'ab'
+  const isLeft = payload.kind === 'ag'   // antigen nodes are on the left
   const h = Math.max(height, 3)  // floor so 1-2 bond residues are still a visible bar
   return (
     <Layer key={`node-${index}`}>
       <Rectangle x={x} y={y} width={width} height={h} fill={payload.color} fillOpacity={0.95} />
       <text
-        x={isAb ? x - 5 : x + width + 5}
+        x={isLeft ? x - 5 : x + width + 5}
         y={y + height / 2}
-        textAnchor={isAb ? 'end' : 'start'}
+        textAnchor={isLeft ? 'end' : 'start'}
         dominantBaseline="middle"
         fontSize={10}
         fill="#333"
@@ -128,11 +128,11 @@ export default function SankeyContacts({ rows, title }) {
   return (
     <div>
       <div className="legend" style={{ marginTop: 0 }}>
-        <b style={{ color: '#333' }}>antibody</b> by IMGT region ·{' '}
-        <b style={{ color: '#333' }}>antigen</b> by residue class:
+        <b style={{ color: '#333' }}>antigen</b> (left) by residue class:
         {LEGEND_AA.map(([k, c]) => (
           <span key={k}><span className="dot" style={{ background: c }} />{k}</span>
         ))}
+        {'  ·  '}<b style={{ color: '#333' }}>antibody</b> (right) by IMGT region
       </div>
       <ResponsiveContainer width="100%" height={height}>
         <Sankey

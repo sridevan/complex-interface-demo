@@ -5,14 +5,14 @@ import ContactHeatmap from './ContactHeatmap.jsx'
 import DataTable from './DataTable.jsx'
 
 const CONTACT_COLS = [
-  { key: 'spike', label: 'Spike residue' },
+  { key: 'antigen', label: 'Antigen residue' },
   { key: 'antibody_residue', label: 'Antibody residue' },
   { key: 'region', label: 'Antibody region' },
   { key: 'contacts', label: 'Contacts', num: true },
   { key: 'assemblies', label: 'Assemblies', num: true },
 ]
 
-// Aggregate ONE chain type's contacts per (spike residue, antibody IMGT residue). Antibody residue
+// Aggregate ONE chain type's contacts per (antigen residue, antibody IMGT residue). Antibody residue
 // is identified by residue name + IMGT position (its conserved cross-structure identity); region is
 // the IMGT region (CDR-H1/2/3, Framework-H, ...), constant for a given IMGT position.
 function contactTable(rows) {
@@ -24,7 +24,7 @@ function contactTable(rows) {
       : `${p.antibody_residue_name}${p.antibody_residue_author_number}*`  // * = IMGT-unmapped
     const k = `${p.antigen_uniprot_position}|${p.antigen_residue_name}|${abres}`
     if (!m.has(k)) m.set(k, {
-      spike: `${p.antigen_residue_name}${p.antigen_uniprot_position}`,
+      antigen: `${p.antigen_residue_name}${p.antigen_uniprot_position}`,
       antigen_uniprot_position: p.antigen_uniprot_position,
       antibody_residue: abres, region: p.antibody_imgt_region, contacts: 0, asm: new Set(),
     })
@@ -121,7 +121,7 @@ export default function Explorer({ interfaces, residue, epitope }) {
             <table>
               <thead>
                 <tr><th>PDB</th><th className="num">Asm</th><th className="num">Interface</th>
-                  <th>Ab chain</th><th>Ag chain</th><th className="num">Area (Å²)</th>
+                  <th>Ag chain</th><th>Ab chain</th><th className="num">Area (Å²)</th>
                   <th className="num">Residue contacts</th></tr>
               </thead>
               <tbody>
@@ -129,8 +129,8 @@ export default function Explorer({ interfaces, residue, epitope }) {
                   <tr key={keyOf(r)} className={'selrow' + (selected && keyOf(r) === keyOf(selected) ? ' sel' : '')}
                       onClick={() => setSelKey(keyOf(r))}>
                     <td>{r.pdb_id}</td><td className="num">{r.assembly_id}</td>
-                    <td className="num">{r.interface_id}</td><td>{r.antibody_chain}</td>
-                    <td>{r.antigen_chain}</td><td className="num">{Math.round(r.interface_area)}</td>
+                    <td className="num">{r.interface_id}</td><td>{r.antigen_chain}</td>
+                    <td>{r.antibody_chain}</td><td className="num">{Math.round(r.interface_area)}</td>
                     <td className="num">{r.residue_contacts}</td>
                   </tr>
                 ))}
@@ -142,7 +142,7 @@ export default function Explorer({ interfaces, residue, epitope }) {
         {/* Row 2, Col 2 — Sankey for selected instance */}
         <div className="card ex-cell">
           <h2>Paratope–epitope contacts{selected ? ` (${selected.pdb_id} interface ${selected.interface_id})` : ''}</h2>
-          <p className="note">Paratope (antibody) residues on the left, epitope (spike) residues on the
+          <p className="note">Epitope (antigen) residues on the left, paratope (antibody) residues on the
             right, for the selected interface. Ribbon width is proportional to the number of interatomic
             bonds.</p>
           <SankeyContacts rows={sankeyRows} />

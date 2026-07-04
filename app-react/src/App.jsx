@@ -42,7 +42,7 @@ export default function App() {
     <div className="wrap">
       <h1>Aggregated antibody–antigen interfaces</h1>
       <p className="subtitle">
-        {COMPLEX_ID} — SARS-CoV-2 spike · antigen normalised by UniProt (PISA), antibody by IMGT (ANARCII)
+        {COMPLEX_ID} · antigen residues normalised by UniProt (PISA), antibody residues by IMGT (ANARCII)
       </p>
 
       {nPdb === 1 && (
@@ -59,7 +59,7 @@ export default function App() {
         <Metric label="Assemblies processed" value={nAssemblies} />
         <Metric label="PDB entries" value={nPdb} />
         <Metric label="Antibody–antigen interfaces" value={interfaces.length} />
-        <Metric label="Unique spike residues" value={epitope.length} />
+        <Metric label="Unique antigen residues" value={epitope.length} />
         <Metric label="Unique antibody IMGT positions" value={uniqueImgt} />
         <Metric label="Heavy-chain contacts" value={heavy} />
         <Metric label="Light-chain contacts" value={light} />
@@ -88,7 +88,7 @@ const Metric = ({ label, value }) => (
   <div className="metric"><div className="label">{label}</div><div className="value">{value}</div></div>
 )
 
-// ---- Tab 0: merged spike epitope + heavy/light (one table, no duplication) ----
+// ---- Tab 0: merged antigen epitope + heavy/light (one table, no duplication) ----
 function EpitopeTab({ epitope }) {
   const [filter, setFilter] = useState('all')
   const rows = useMemo(() => epitope.filter((r) => {
@@ -115,7 +115,7 @@ function EpitopeTab({ epitope }) {
   return (
     <div className="card">
       <h2>Epitope residues by heavy and light chain</h2>
-      <p className="note">One row per spike UniProt position (from PISA). Heavy/light split and top
+      <p className="note">One row per antigen UniProt position (from PISA). Heavy/light split and top
         IMGT regions come from ANARCII. Unit: contact pairs. (This single view replaces the separate
         epitope and heavy/light tables — same grouping axis.)</p>
       <div className="controls">
@@ -195,7 +195,7 @@ function ResidueTab({ rows, selected, onClearSelected }) {
         (PISA). Antibody numbering: IMGT (ANARCII).</p>
       {selected != null && (
         <div className="banner info" style={{ marginBottom: 10 }}>
-          Filtered to spike UniProt position <b>{selected}</b> (from the epitope map).{' '}
+          Filtered to antigen UniProt position <b>{selected}</b> (from the epitope map).{' '}
           <button className="linklike" onClick={onClearSelected}>clear</button>
         </div>
       )}
@@ -212,7 +212,7 @@ function ResidueTab({ rows, selected, onClearSelected }) {
         <select value={itype} onChange={(e) => setItype(e.target.value)}>
           <option value="">all</option>{itypes.map((x) => <option key={x} value={x}>{x}</option>)}
         </select>
-        <label>Spike pos</label>
+        <label>Antigen pos</label>
         <input type="text" value={q} placeholder="e.g. 343" onChange={(e) => setQ(e.target.value)} style={{ width: 80 }} />
         <span className="rowcount">{filtered.length} of {rows.length} pairs</span>
       </div>

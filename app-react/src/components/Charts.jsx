@@ -15,7 +15,7 @@ export default function Charts({ region, epitope }) {
   const light = epitope.reduce((s, r) => s + (r.light_chain_contacts || 0), 0)
   const hlData = [{ name: 'Heavy', v: heavy, fill: '#e19039' }, { name: 'Light', v: light, fill: '#4b7fcc' }]
 
-  const topSpike = [...epitope]
+  const topAntigen = [...epitope]
     .sort((a, b) => b.total_contacts - a.total_contacts)
     .slice(0, 20)
     .map((r) => ({ name: `${r.antigen_residue_name}${r.antigen_uniprot_position}`,
@@ -55,10 +55,10 @@ export default function Charts({ region, epitope }) {
       </div>
 
       <div className="card">
-        <h2>Top contacted spike residues</h2>
+        <h2>Top contacted antigen residues</h2>
         <p className="note">Antigen UniProt position (P0DTC2), stacked by antibody chain type.</p>
         <ResponsiveContainer width="100%" height={320}>
-          <BarChart data={topSpike} margin={{ top: 8, right: 16, bottom: 50, left: 0 }}>
+          <BarChart data={topAntigen} margin={{ top: 8, right: 16, bottom: 50, left: 0 }}>
             <CartesianGrid strokeDasharray="3 3" vertical={false} />
             <XAxis dataKey="name" angle={-40} textAnchor="end" interval={0} height={70} fontSize={11} />
             <YAxis fontSize={12} />
