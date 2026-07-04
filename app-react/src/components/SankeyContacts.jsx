@@ -102,7 +102,7 @@ function SankeyTooltip({ active, payload, linkInfo }) {
       <div className="sankey-tip">
         <div className="st-head">{agName} <span className="st-sub">({info.agClass})</span>
           {'  —  '}{abName} <span className="st-sub">({info.abRegion})</span></div>
-        <div className="st-row"><b>{value}</b> contact{value === 1 ? '' : 's'}
+        <div className="st-row"><b>{value}</b> bond{value === 1 ? '' : 's'}
           {info.minDist != null ? ` · closest ${info.minDist.toFixed(2)} Å` : ''}</div>
         <div className="st-types">{Object.entries(info.types || {}).sort((a, b) => b[1] - a[1])
           .map(([t, c]) => `${TYPE_LABEL[t] || t} ×${c}`).join(', ') || '—'}</div>
