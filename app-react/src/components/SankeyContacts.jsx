@@ -1,6 +1,20 @@
 import React, { useMemo } from 'react'
 import { Sankey, Tooltip, ResponsiveContainer, Layer, Rectangle } from 'recharts'
-import { REGION_COLORS } from '../data.js'
+
+// Antibody (paratope) nodes are coloured by IMGT region CLASS. A single-instance Sankey is one
+// chain type, so we don't need the heavy/light hue split here — instead we give CDR1/2/3 and
+// Framework distinct, distinguishable colours (the amber-only heavy palette was hard to tell apart).
+// Colour-blind-safe (Paul Tol). Distinct from the antigen residue-class palette below:
+// antigen = red / blue / green / sand; antibody = orange / cyan / magenta / grey.
+const REGION_CLASS_COLOR = { CDR1: '#EE7733', CDR2: '#66CCEE', CDR3: '#AA3377', Framework: '#999999' }
+function abRegionColor(region) {
+  if (!region) return '#c9ced6'
+  if (region.startsWith('Framework')) return REGION_CLASS_COLOR.Framework
+  if (region.endsWith('1')) return REGION_CLASS_COLOR.CDR1
+  if (region.endsWith('2')) return REGION_CLASS_COLOR.CDR2
+  if (region.endsWith('3')) return REGION_CLASS_COLOR.CDR3
+  return '#c9ced6'
+}
 
 // Amino-acid class colouring for antigen nodes.
 const AA_CLASS = {
@@ -10,7 +24,9 @@ const AA_CLASS = {
   ALA: 'hydrophobic', VAL: 'hydrophobic', LEU: 'hydrophobic', ILE: 'hydrophobic',
   MET: 'hydrophobic', PHE: 'hydrophobic', TRP: 'hydrophobic', PRO: 'hydrophobic', GLY: 'hydrophobic',
 }
-const AA_COLOR = { acidic: '#d9544d', basic: '#4b7fcc', polar: '#46a758', hydrophobic: '#9aa0a6', unknown: '#c9ced6' }
+// Colour-blind-safe (Paul Tol); conventional residue-class hues, all distinct from the antibody
+// region palette above (hydrophobic uses sand rather than grey to avoid clashing with Framework).
+const AA_COLOR = { acidic: '#CC3311', basic: '#4477AA', polar: '#228833', hydrophobic: '#DDCC77', unknown: '#c9ced6' }
 
 function buildGraph(rows) {
   const abIndex = new Map(), agIndex = new Map()
@@ -29,7 +45,7 @@ function buildGraph(rows) {
       name: r.antibody_imgt_position != null
         ? `${r.antibody_residue_name}${r.antibody_imgt_position}${r.antibody_imgt_insertion_code || ''}`
         : `${r.antibody_residue_name}${r.antibody_residue_author_number}`,
-      color: REGION_COLORS[r.antibody_imgt_region] || '#c9ced6',
+      color: abRegionColor(r.antibody_imgt_region),
       sub: r.antibody_imgt_region || 'unmapped',
     }))
     const agI = add(agKey, () => {
@@ -115,6 +131,8 @@ function SankeyNode({ x, y, width, height, index, payload }) {
 
 const LEGEND_AA = [['acidic', AA_COLOR.acidic], ['basic', AA_COLOR.basic],
                    ['polar', AA_COLOR.polar], ['hydrophobic', AA_COLOR.hydrophobic]]
+const LEGEND_REGION = [['CDR1', REGION_CLASS_COLOR.CDR1], ['CDR2', REGION_CLASS_COLOR.CDR2],
+                       ['CDR3', REGION_CLASS_COLOR.CDR3], ['Framework', REGION_CLASS_COLOR.Framework]]
 
 export default function SankeyContacts({ rows, title }) {
   const data = useMemo(() => buildGraph(rows || []), [rows])
@@ -127,13 +145,6 @@ export default function SankeyContacts({ rows, title }) {
   if (!rows || !rows.length) return <p className="note">No contacts for the selected instance.</p>
   return (
     <div>
-      <div className="legend" style={{ marginTop: 0 }}>
-        <b style={{ color: '#333' }}>antigen</b> (left) by residue class:
-        {LEGEND_AA.map(([k, c]) => (
-          <span key={k}><span className="dot" style={{ background: c }} />{k}</span>
-        ))}
-        {'  ·  '}<b style={{ color: '#333' }}>antibody</b> (right) by IMGT region
-      </div>
       <ResponsiveContainer width="100%" height={height}>
         <Sankey
           data={data}
@@ -146,6 +157,20 @@ export default function SankeyContacts({ rows, title }) {
           <Tooltip content={<SankeyTooltip linkInfo={data.linkInfo} />} />
         </Sankey>
       </ResponsiveContainer>
+      <div className="legend sankey-legend">
+        <div>
+          <b style={{ color: '#333' }}>antigen</b> (left) by residue class:
+          {LEGEND_AA.map(([k, c]) => (
+            <span key={k}><span className="dot" style={{ background: c }} />{k}</span>
+          ))}
+        </div>
+        <div>
+          <b style={{ color: '#333' }}>antibody</b> (right) by IMGT region:
+          {LEGEND_REGION.map(([k, c]) => (
+            <span key={k}><span className="dot" style={{ background: c }} />{k}</span>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }
