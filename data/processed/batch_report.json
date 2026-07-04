@@ -1,0 +1,341 @@
+{
+ "requested": 20,
+ "processed": 19,
+ "skipped": [
+  {
+   "entry": "7b18/assembly1",
+   "reason": "no_antigen_or_antibody_chain"
+  }
+ ],
+ "rows_by_entry": [
+  {
+   "entry": "6wps/assembly1",
+   "rows": 390,
+   "kept": 390
+  },
+  {
+   "entry": "6wpt/assembly1",
+   "rows": 194,
+   "kept": 194
+  },
+  {
+   "entry": "6xcm/assembly1",
+   "rows": 287,
+   "kept": 287
+  },
+  {
+   "entry": "6xcn/assembly1",
+   "rows": 306,
+   "kept": 306
+  },
+  {
+   "entry": "6z43/assembly1",
+   "rows": 406,
+   "kept": 406
+  },
+  {
+   "entry": "6zdg/assembly1",
+   "rows": 456,
+   "kept": 456
+  },
+  {
+   "entry": "6zdh/assembly1",
+   "rows": 386,
+   "kept": 386
+  },
+  {
+   "entry": "6zxn/assembly1",
+   "rows": 330,
+   "kept": 330
+  },
+  {
+   "entry": "7a25/assembly1",
+   "rows": 201,
+   "kept": 201
+  },
+  {
+   "entry": "7a29/assembly1",
+   "rows": 215,
+   "kept": 215
+  },
+  {
+   "entry": "7akd/assembly1",
+   "rows": 134,
+   "kept": 134
+  },
+  {
+   "entry": "7byr/assembly1",
+   "rows": 85,
+   "kept": 85
+  },
+  {
+   "entry": "7c2l/assembly1",
+   "rows": 317,
+   "kept": 317
+  },
+  {
+   "entry": "7cac/assembly1",
+   "rows": 196,
+   "kept": 196
+  },
+  {
+   "entry": "7cai/assembly1",
+   "rows": 356,
+   "kept": 356
+  },
+  {
+   "entry": "7cak/assembly1",
+   "rows": 369,
+   "kept": 369
+  },
+  {
+   "entry": "7chh/assembly1",
+   "rows": 268,
+   "kept": 268
+  },
+  {
+   "entry": "7cwl/assembly1",
+   "rows": 384,
+   "kept": 384
+  },
+  {
+   "entry": "7cwm/assembly1",
+   "rows": 461,
+   "kept": 461
+  }
+ ],
+ "entries_no_interface": 0,
+ "antigen_unp_coverage": [
+  {
+   "pdb_id": "6wps",
+   "assembly_id": "1",
+   "antigen_contacts": 390,
+   "unp_from_pisa": 390,
+   "unp_from_sifts_fallback": 0,
+   "unp_still_unmapped": 0,
+   "pisa_provides_antigen_unp": true,
+   "recovered_by_sifts": false,
+   "pct_mapped": 100.0
+  },
+  {
+   "pdb_id": "6wpt",
+   "assembly_id": "1",
+   "antigen_contacts": 194,
+   "unp_from_pisa": 0,
+   "unp_from_sifts_fallback": 194,
+   "unp_still_unmapped": 0,
+   "pisa_provides_antigen_unp": false,
+   "recovered_by_sifts": true,
+   "pct_mapped": 100.0
+  },
+  {
+   "pdb_id": "6xcm",
+   "assembly_id": "1",
+   "antigen_contacts": 287,
+   "unp_from_pisa": 0,
+   "unp_from_sifts_fallback": 287,
+   "unp_still_unmapped": 0,
+   "pisa_provides_antigen_unp": false,
+   "recovered_by_sifts": true,
+   "pct_mapped": 100.0
+  },
+  {
+   "pdb_id": "6xcn",
+   "assembly_id": "1",
+   "antigen_contacts": 306,
+   "unp_from_pisa": 306,
+   "unp_from_sifts_fallback": 0,
+   "unp_still_unmapped": 0,
+   "pisa_provides_antigen_unp": true,
+   "recovered_by_sifts": false,
+   "pct_mapped": 100.0
+  },
+  {
+   "pdb_id": "6z43",
+   "assembly_id": "1",
+   "antigen_contacts": 406,
+   "unp_from_pisa": 0,
+   "unp_from_sifts_fallback": 406,
+   "unp_still_unmapped": 0,
+   "pisa_provides_antigen_unp": false,
+   "recovered_by_sifts": true,
+   "pct_mapped": 100.0
+  },
+  {
+   "pdb_id": "6zdg",
+   "assembly_id": "1",
+   "antigen_contacts": 456,
+   "unp_from_pisa": 0,
+   "unp_from_sifts_fallback": 456,
+   "unp_still_unmapped": 0,
+   "pisa_provides_antigen_unp": false,
+   "recovered_by_sifts": true,
+   "pct_mapped": 100.0
+  },
+  {
+   "pdb_id": "6zdh",
+   "assembly_id": "1",
+   "antigen_contacts": 386,
+   "unp_from_pisa": 0,
+   "unp_from_sifts_fallback": 386,
+   "unp_still_unmapped": 0,
+   "pisa_provides_antigen_unp": false,
+   "recovered_by_sifts": true,
+   "pct_mapped": 100.0
+  },
+  {
+   "pdb_id": "6zxn",
+   "assembly_id": "1",
+   "antigen_contacts": 330,
+   "unp_from_pisa": 330,
+   "unp_from_sifts_fallback": 0,
+   "unp_still_unmapped": 0,
+   "pisa_provides_antigen_unp": true,
+   "recovered_by_sifts": false,
+   "pct_mapped": 100.0
+  },
+  {
+   "pdb_id": "7a25",
+   "assembly_id": "1",
+   "antigen_contacts": 201,
+   "unp_from_pisa": 0,
+   "unp_from_sifts_fallback": 201,
+   "unp_still_unmapped": 0,
+   "pisa_provides_antigen_unp": false,
+   "recovered_by_sifts": true,
+   "pct_mapped": 100.0
+  },
+  {
+   "pdb_id": "7a29",
+   "assembly_id": "1",
+   "antigen_contacts": 215,
+   "unp_from_pisa": 0,
+   "unp_from_sifts_fallback": 215,
+   "unp_still_unmapped": 0,
+   "pisa_provides_antigen_unp": false,
+   "recovered_by_sifts": true,
+   "pct_mapped": 100.0
+  },
+  {
+   "pdb_id": "7akd",
+   "assembly_id": "1",
+   "antigen_contacts": 134,
+   "unp_from_pisa": 134,
+   "unp_from_sifts_fallback": 0,
+   "unp_still_unmapped": 0,
+   "pisa_provides_antigen_unp": true,
+   "recovered_by_sifts": false,
+   "pct_mapped": 100.0
+  },
+  {
+   "pdb_id": "7byr",
+   "assembly_id": "1",
+   "antigen_contacts": 85,
+   "unp_from_pisa": 85,
+   "unp_from_sifts_fallback": 0,
+   "unp_still_unmapped": 0,
+   "pisa_provides_antigen_unp": true,
+   "recovered_by_sifts": false,
+   "pct_mapped": 100.0
+  },
+  {
+   "pdb_id": "7c2l",
+   "assembly_id": "1",
+   "antigen_contacts": 317,
+   "unp_from_pisa": 0,
+   "unp_from_sifts_fallback": 317,
+   "unp_still_unmapped": 0,
+   "pisa_provides_antigen_unp": false,
+   "recovered_by_sifts": true,
+   "pct_mapped": 100.0
+  },
+  {
+   "pdb_id": "7cac",
+   "assembly_id": "1",
+   "antigen_contacts": 196,
+   "unp_from_pisa": 0,
+   "unp_from_sifts_fallback": 196,
+   "unp_still_unmapped": 0,
+   "pisa_provides_antigen_unp": false,
+   "recovered_by_sifts": true,
+   "pct_mapped": 100.0
+  },
+  {
+   "pdb_id": "7cai",
+   "assembly_id": "1",
+   "antigen_contacts": 356,
+   "unp_from_pisa": 356,
+   "unp_from_sifts_fallback": 0,
+   "unp_still_unmapped": 0,
+   "pisa_provides_antigen_unp": true,
+   "recovered_by_sifts": false,
+   "pct_mapped": 100.0
+  },
+  {
+   "pdb_id": "7cak",
+   "assembly_id": "1",
+   "antigen_contacts": 369,
+   "unp_from_pisa": 369,
+   "unp_from_sifts_fallback": 0,
+   "unp_still_unmapped": 0,
+   "pisa_provides_antigen_unp": true,
+   "recovered_by_sifts": false,
+   "pct_mapped": 100.0
+  },
+  {
+   "pdb_id": "7chh",
+   "assembly_id": "1",
+   "antigen_contacts": 268,
+   "unp_from_pisa": 268,
+   "unp_from_sifts_fallback": 0,
+   "unp_still_unmapped": 0,
+   "pisa_provides_antigen_unp": true,
+   "recovered_by_sifts": false,
+   "pct_mapped": 100.0
+  },
+  {
+   "pdb_id": "7cwl",
+   "assembly_id": "1",
+   "antigen_contacts": 384,
+   "unp_from_pisa": 384,
+   "unp_from_sifts_fallback": 0,
+   "unp_still_unmapped": 0,
+   "pisa_provides_antigen_unp": true,
+   "recovered_by_sifts": false,
+   "pct_mapped": 100.0
+  },
+  {
+   "pdb_id": "7cwm",
+   "assembly_id": "1",
+   "antigen_contacts": 461,
+   "unp_from_pisa": 461,
+   "unp_from_sifts_fallback": 0,
+   "unp_still_unmapped": 0,
+   "pisa_provides_antigen_unp": true,
+   "recovered_by_sifts": false,
+   "pct_mapped": 100.0
+  }
+ ],
+ "total_rows": 5741,
+ "contact_pairs": 1464,
+ "unique_pdb_entries": 19,
+ "heavy_pairs": 1120,
+ "light_pairs": 344,
+ "anomaly_occurrences": 499,
+ "antigen_unp_summary": {
+  "assemblies_total": 19,
+  "assemblies_pisa_missing_antigen_unp": 9,
+  "assemblies_recovered_by_sifts": 9,
+  "assemblies_pisa_missing_list": [
+   "6wpt/1",
+   "6xcm/1",
+   "6z43/1",
+   "6zdg/1",
+   "6zdh/1",
+   "7a25/1",
+   "7a29/1",
+   "7c2l/1",
+   "7cac/1"
+  ]
+ }
+}

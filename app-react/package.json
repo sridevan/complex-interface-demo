@@ -1,0 +1,27 @@
+{
+  "name": "antibody-interface-demo-react",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "sync-data": "node scripts/sync-data.mjs",
+    "predev": "npm run sync-data",
+    "prebuild": "npm run sync-data",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@nightingale-elements/nightingale-manager": "^5.6.0",
+    "@nightingale-elements/nightingale-navigation": "^5.6.0",
+    "@nightingale-elements/nightingale-track": "^5.6.0",
+    "@nightingale-elements/nightingale-track-canvas": "^5.6.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^2.12.7"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.0"
+  }
+}

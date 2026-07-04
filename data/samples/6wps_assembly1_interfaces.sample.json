@@ -1,0 +1,7715 @@
+{
+ "6wps": {
+  "assembly_id": "1",
+  "pisa_version": "2.0",
+  "assembly": {
+   "mmsize": "9",
+   "dissociation_energy": -20.12,
+   "accessible_surface_area": 151439.01,
+   "buried_surface_area": 54188.03,
+   "entropy": 73.6,
+   "dissociation_area": 5533.82,
+   "solvation_energy_gain": 50.16,
+   "formula": "A(3)B(3)C(3)a(63)b(3)c(6)d(3)",
+   "composition": "ABECFHDGL[NAG](63)[BMA](3)[MAN](6)[FUC](3)",
+   "interface_count": 12,
+   "interfaces": [
+    {
+     "interface_id": "1",
+     "interface_area": 4533.8,
+     "solvation_energy": -47.99,
+     "stabilization_energy": -67.84,
+     "p_value": 0.059,
+     "number_interface_residues": 955,
+     "number_hydrogen_bonds": 38,
+     "number_covalent_bonds": 0,
+     "number_disulfide_bonds": 0,
+     "number_salt_bridges": 8,
+     "number_other_bonds": 499,
+     "hydrogen_bonds": {
+      "bond_distances": [
+       3.05,
+       2.96,
+       2.9,
+       3.67
+      ],
+      "atom_site_1_chains": [
+       "B",
+       "B",
+       "B",
+       "B"
+      ],
+      "atom_site_1_residues": [
+       "ASP",
+       "ASN",
+       "PHE",
+       "TYR"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "D",
+       "D",
+       "D",
+       "D"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "D",
+       "D",
+       "D",
+       "D"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "985",
+       "978",
+       "43",
+       "873"
+      ],
+      "atom_site_1_seq_nums": [
+       "985",
+       "978",
+       "43",
+       "873"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "1004",
+       "997",
+       "62",
+       "892"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " N  ",
+       " ND2",
+       " N  ",
+       " OH "
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "E",
+       "E",
+       "E",
+       "E"
+      ],
+      "atom_site_2_residues": [
+       "SER",
+       "THR",
+       "PHE",
+       "LEU"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "G",
+       "G",
+       "G",
+       "G"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "G",
+       "G",
+       "G",
+       "G"
+      ],
+      "atom_site_2_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_2_unp_nums": [
+       "383",
+       "547",
+       "565",
+       "699"
+      ],
+      "atom_site_2_seq_nums": [
+       "383",
+       "547",
+       "565",
+       "699"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "402",
+       "566",
+       "584",
+       "718"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OG ",
+       " O  ",
+       " O  ",
+       " O  "
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "salt_bridges": {
+      "bond_distances": [
+       2.86,
+       3.99,
+       3.16,
+       2.52
+      ],
+      "atom_site_1_chains": [
+       "B",
+       "B",
+       "B",
+       "B"
+      ],
+      "atom_site_1_residues": [
+       "LYS",
+       "ARG",
+       "ASP",
+       "ASP"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "D",
+       "D",
+       "D",
+       "D"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "D",
+       "D",
+       "D",
+       "D"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "790",
+       "1019",
+       "737",
+       "985"
+      ],
+      "atom_site_1_seq_nums": [
+       "790",
+       "1019",
+       "737",
+       "985"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "809",
+       "1038",
+       "756",
+       "1004"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " NZ ",
+       " NH2",
+       " OD2",
+       " OD1"
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "E",
+       "E",
+       "E",
+       "E"
+      ],
+      "atom_site_2_residues": [
+       "GLU",
+       "GLU",
+       "ARG",
+       "LYS"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "G",
+       "G",
+       "G",
+       "G"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "G",
+       "G",
+       "G",
+       "G"
+      ],
+      "atom_site_2_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_2_unp_nums": [
+       "702",
+       "1017",
+       "319",
+       "386"
+      ],
+      "atom_site_2_seq_nums": [
+       "702",
+       "1017",
+       "319",
+       "386"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "721",
+       "1036",
+       "338",
+       "405"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OE2",
+       " OE1",
+       " NH2",
+       " NZ "
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "disulfide_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "covalent_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "other_bonds": {
+      "bond_distances": [
+       3.86,
+       3.83,
+       3.58,
+       3.97
+      ],
+      "atom_site_1_chains": [
+       "B",
+       "B",
+       "B",
+       "B"
+      ],
+      "atom_site_1_residues": [
+       "TYR",
+       "TYR",
+       "ASP",
+       "LYS"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "D",
+       "D",
+       "D",
+       "D"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "D",
+       "D",
+       "D",
+       "D"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "38",
+       "38",
+       "40",
+       "41"
+      ],
+      "atom_site_1_seq_nums": [
+       "38",
+       "38",
+       "40",
+       "41"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "57",
+       "57",
+       "59",
+       "60"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " CE2",
+       " CZ ",
+       " O  ",
+       " CA "
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "E",
+       "E",
+       "E",
+       "E"
+      ],
+      "atom_site_2_residues": [
+       "LEU",
+       "LEU",
+       "PHE",
+       "PHE"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "G",
+       "G",
+       "G",
+       "G"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "G",
+       "G",
+       "G",
+       "G"
+      ],
+      "atom_site_2_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_2_unp_nums": [
+       "560",
+       "560",
+       "562",
+       "562"
+      ],
+      "atom_site_2_seq_nums": [
+       "560",
+       "560",
+       "562",
+       "562"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "579",
+       "579",
+       "581",
+       "581"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " CD1",
+       " CD1",
+       " CE1",
+       " CD1"
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "molecules": [
+      {
+       "molecule_id": "1",
+       "molecule_class": "Protein",
+       "chain_id": "B",
+       "residue_label_comp_ids": [
+        "ALA",
+        "TYR",
+        "THR",
+        "ASN",
+        "SER",
+        "PHE",
+        "THR",
+        "ARG"
+       ],
+       "residue_seq_ids": [
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34"
+       ],
+       "residue_label_seq_ids": [
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        81.17,
+        144.3,
+        18.28,
+        60.28,
+        0.96,
+        46.07,
+        33.31,
+        16.25
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      },
+      {
+       "molecule_id": "2",
+       "molecule_class": "Protein",
+       "chain_id": "E",
+       "residue_label_comp_ids": [
+        "ALA",
+        "TYR",
+        "THR",
+        "ASN",
+        "SER",
+        "PHE",
+        "THR",
+        "ARG"
+       ],
+       "residue_seq_ids": [
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34"
+       ],
+       "residue_label_seq_ids": [
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        81.09,
+        143.67,
+        18.26,
+        60.28,
+        0.8,
+        46.09,
+        32.97,
+        17.44
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "interface_id": "2",
+     "interface_area": 4531.42,
+     "solvation_energy": -48.16,
+     "stabilization_energy": -68.45,
+     "p_value": 0.06,
+     "number_interface_residues": 955,
+     "number_hydrogen_bonds": 39,
+     "number_covalent_bonds": 0,
+     "number_disulfide_bonds": 0,
+     "number_salt_bridges": 8,
+     "number_other_bonds": 499,
+     "hydrogen_bonds": {
+      "bond_distances": [
+       2.77,
+       2.84,
+       3.39,
+       3.32
+      ],
+      "atom_site_1_chains": [
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_residues": [
+       "ARG",
+       "SER",
+       "THR",
+       "THR"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "355",
+       "383",
+       "385",
+       "385"
+      ],
+      "atom_site_1_seq_nums": [
+       "355",
+       "383",
+       "385",
+       "385"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "374",
+       "402",
+       "404",
+       "404"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " NH2",
+       " N  ",
+       " OG1",
+       " OG1"
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "E",
+       "E",
+       "E",
+       "E"
+      ],
+      "atom_site_2_residues": [
+       "TYR",
+       "ARG",
+       "ASP",
+       "ASP"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "G",
+       "G",
+       "G",
+       "G"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "G",
+       "G",
+       "G",
+       "G"
+      ],
+      "atom_site_2_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_2_unp_nums": [
+       "200",
+       "983",
+       "985",
+       "985"
+      ],
+      "atom_site_2_seq_nums": [
+       "200",
+       "983",
+       "985",
+       "985"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "219",
+       "1002",
+       "1004",
+       "1004"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OH ",
+       " O  ",
+       " OD2",
+       " OD1"
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "salt_bridges": {
+      "bond_distances": [
+       3.16,
+       2.52,
+       3.8,
+       3.56
+      ],
+      "atom_site_1_chains": [
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_residues": [
+       "ARG",
+       "LYS",
+       "HIS",
+       "ARG"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "319",
+       "386",
+       "519",
+       "1039"
+      ],
+      "atom_site_1_seq_nums": [
+       "319",
+       "386",
+       "519",
+       "1039"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "338",
+       "405",
+       "538",
+       "1058"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " NH2",
+       " NZ ",
+       " NE2",
+       " NE "
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "E",
+       "E",
+       "E",
+       "E"
+      ],
+      "atom_site_2_residues": [
+       "ASP",
+       "ASP",
+       "ASP",
+       "GLU"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "G",
+       "G",
+       "G",
+       "G"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "G",
+       "G",
+       "G",
+       "G"
+      ],
+      "atom_site_2_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_2_unp_nums": [
+       "737",
+       "985",
+       "979",
+       "1031"
+      ],
+      "atom_site_2_seq_nums": [
+       "737",
+       "985",
+       "979",
+       "1031"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "756",
+       "1004",
+       "998",
+       "1050"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OD2",
+       " OD1",
+       " OD1",
+       " OE1"
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "disulfide_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "covalent_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "other_bonds": {
+      "bond_distances": [
+       3.39,
+       3.57,
+       3.91,
+       3.36
+      ],
+      "atom_site_1_chains": [
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_residues": [
+       "ASN",
+       "ASN",
+       "ASN",
+       "ASN"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "317",
+       "317",
+       "317",
+       "317"
+      ],
+      "atom_site_1_seq_nums": [
+       "317",
+       "317",
+       "317",
+       "317"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "336",
+       "336",
+       "336",
+       "336"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " CG ",
+       " OD1",
+       " ND2",
+       " ND2"
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "E",
+       "E",
+       "E",
+       "E"
+      ],
+      "atom_site_2_residues": [
+       "ASP",
+       "ASP",
+       "ASP",
+       "ASP"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "G",
+       "G",
+       "G",
+       "G"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "G",
+       "G",
+       "G",
+       "G"
+      ],
+      "atom_site_2_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_2_unp_nums": [
+       "737",
+       "737",
+       "737",
+       "737"
+      ],
+      "atom_site_2_seq_nums": [
+       "737",
+       "737",
+       "737",
+       "737"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "756",
+       "756",
+       "756",
+       "756"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OD2",
+       " OD2",
+       " CG ",
+       " OD2"
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "molecules": [
+      {
+       "molecule_id": "1",
+       "molecule_class": "Protein",
+       "chain_id": "A",
+       "residue_label_comp_ids": [
+        "ALA",
+        "TYR",
+        "THR",
+        "ASN",
+        "SER",
+        "PHE",
+        "THR",
+        "ARG"
+       ],
+       "residue_seq_ids": [
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34"
+       ],
+       "residue_label_seq_ids": [
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        82.04,
+        143.76,
+        18.38,
+        60.15,
+        0.8,
+        46.59,
+        33.05,
+        16.9
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      },
+      {
+       "molecule_id": "2",
+       "molecule_class": "Protein",
+       "chain_id": "E",
+       "residue_label_comp_ids": [
+        "ALA",
+        "TYR",
+        "THR",
+        "ASN",
+        "SER",
+        "PHE",
+        "THR",
+        "ARG"
+       ],
+       "residue_seq_ids": [
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34"
+       ],
+       "residue_label_seq_ids": [
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        81.09,
+        143.67,
+        18.26,
+        60.28,
+        0.8,
+        46.09,
+        32.97,
+        17.44
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "interface_id": "3",
+     "interface_area": 4530.39,
+     "solvation_energy": -48.37,
+     "stabilization_energy": -68.66,
+     "p_value": 0.058,
+     "number_interface_residues": 955,
+     "number_hydrogen_bonds": 39,
+     "number_covalent_bonds": 0,
+     "number_disulfide_bonds": 0,
+     "number_salt_bridges": 8,
+     "number_other_bonds": 499,
+     "hydrogen_bonds": {
+      "bond_distances": [
+       2.9,
+       3.9,
+       2.78,
+       3.22
+      ],
+      "atom_site_1_chains": [
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_residues": [
+       "PHE",
+       "GLY",
+       "SER",
+       "ARG"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "43",
+       "199",
+       "758",
+       "765"
+      ],
+      "atom_site_1_seq_nums": [
+       "43",
+       "199",
+       "758",
+       "765"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "62",
+       "218",
+       "777",
+       "784"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " N  ",
+       " N  ",
+       " N  ",
+       " NH2"
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "B",
+       "B",
+       "B",
+       "B"
+      ],
+      "atom_site_2_residues": [
+       "PHE",
+       "PRO",
+       "GLN",
+       "THR"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "D",
+       "D",
+       "D",
+       "D"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "D",
+       "D",
+       "D",
+       "D"
+      ],
+      "atom_site_2_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_2_unp_nums": [
+       "565",
+       "463",
+       "965",
+       "961"
+      ],
+      "atom_site_2_seq_nums": [
+       "565",
+       "463",
+       "965",
+       "961"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "584",
+       "482",
+       "984",
+       "980"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " O  ",
+       " O  ",
+       " OE1",
+       " OG1"
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "salt_bridges": {
+      "bond_distances": [
+       2.86,
+       3.99,
+       3.16,
+       2.52
+      ],
+      "atom_site_1_chains": [
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_residues": [
+       "LYS",
+       "ARG",
+       "ASP",
+       "ASP"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "790",
+       "1019",
+       "737",
+       "985"
+      ],
+      "atom_site_1_seq_nums": [
+       "790",
+       "1019",
+       "737",
+       "985"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "809",
+       "1038",
+       "756",
+       "1004"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " NZ ",
+       " NH2",
+       " OD2",
+       " OD1"
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "B",
+       "B",
+       "B",
+       "B"
+      ],
+      "atom_site_2_residues": [
+       "GLU",
+       "GLU",
+       "ARG",
+       "LYS"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "D",
+       "D",
+       "D",
+       "D"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "D",
+       "D",
+       "D",
+       "D"
+      ],
+      "atom_site_2_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_2_unp_nums": [
+       "702",
+       "1017",
+       "319",
+       "386"
+      ],
+      "atom_site_2_seq_nums": [
+       "702",
+       "1017",
+       "319",
+       "386"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "721",
+       "1036",
+       "338",
+       "405"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OE2",
+       " OE1",
+       " NH2",
+       " NZ "
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "disulfide_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "covalent_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "other_bonds": {
+      "bond_distances": [
+       3.86,
+       3.83,
+       3.58,
+       3.97
+      ],
+      "atom_site_1_chains": [
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_residues": [
+       "TYR",
+       "TYR",
+       "ASP",
+       "LYS"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "38",
+       "38",
+       "40",
+       "41"
+      ],
+      "atom_site_1_seq_nums": [
+       "38",
+       "38",
+       "40",
+       "41"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "57",
+       "57",
+       "59",
+       "60"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " CE2",
+       " CZ ",
+       " O  ",
+       " CA "
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "B",
+       "B",
+       "B",
+       "B"
+      ],
+      "atom_site_2_residues": [
+       "LEU",
+       "LEU",
+       "PHE",
+       "PHE"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "D",
+       "D",
+       "D",
+       "D"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "D",
+       "D",
+       "D",
+       "D"
+      ],
+      "atom_site_2_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_2_unp_nums": [
+       "560",
+       "560",
+       "562",
+       "562"
+      ],
+      "atom_site_2_seq_nums": [
+       "560",
+       "560",
+       "562",
+       "562"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "579",
+       "579",
+       "581",
+       "581"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " CD1",
+       " CD1",
+       " CE1",
+       " CD1"
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "molecules": [
+      {
+       "molecule_id": "1",
+       "molecule_class": "Protein",
+       "chain_id": "A",
+       "residue_label_comp_ids": [
+        "ALA",
+        "TYR",
+        "THR",
+        "ASN",
+        "SER",
+        "PHE",
+        "THR",
+        "ARG"
+       ],
+       "residue_seq_ids": [
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34"
+       ],
+       "residue_label_seq_ids": [
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        82.04,
+        143.76,
+        18.38,
+        60.15,
+        0.8,
+        46.59,
+        33.05,
+        16.9
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      },
+      {
+       "molecule_id": "2",
+       "molecule_class": "Protein",
+       "chain_id": "B",
+       "residue_label_comp_ids": [
+        "ALA",
+        "TYR",
+        "THR",
+        "ASN",
+        "SER",
+        "PHE",
+        "THR",
+        "ARG"
+       ],
+       "residue_seq_ids": [
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34"
+       ],
+       "residue_label_seq_ids": [
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        81.17,
+        144.3,
+        18.28,
+        60.28,
+        0.96,
+        46.07,
+        33.31,
+        16.25
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "interface_id": "4",
+     "interface_area": 705.12,
+     "solvation_energy": -9.63,
+     "stabilization_energy": -12.74,
+     "p_value": 0.319,
+     "number_interface_residues": 102,
+     "number_hydrogen_bonds": 7,
+     "number_covalent_bonds": 0,
+     "number_disulfide_bonds": 0,
+     "number_salt_bridges": 0,
+     "number_other_bonds": 91,
+     "hydrogen_bonds": {
+      "bond_distances": [
+       3.29,
+       3.0,
+       3.71,
+       2.83
+      ],
+      "atom_site_1_chains": [
+       "C",
+       "C",
+       "C",
+       "C"
+      ],
+      "atom_site_1_residues": [
+       "GLN",
+       "GLN",
+       "TYR",
+       "PHE"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "E",
+       "E",
+       "E",
+       "E"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "E",
+       "E",
+       "E",
+       "E"
+      ],
+      "atom_site_1_unp_accs": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_1_unp_nums": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_1_seq_nums": [
+       "39",
+       "39",
+       "95",
+       "114"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "39",
+       "39",
+       "95",
+       "114"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " NE2",
+       " NE2",
+       " OH ",
+       " N  "
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "D",
+       "D",
+       "D",
+       "D"
+      ],
+      "atom_site_2_residues": [
+       "TYR",
+       "GLN",
+       "GLN",
+       "TYR"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "F",
+       "F",
+       "F",
+       "F"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "F",
+       "F",
+       "F",
+       "F"
+      ],
+      "atom_site_2_unp_accs": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_unp_nums": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_seq_nums": [
+       "88",
+       "39",
+       "43",
+       "37"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "88",
+       "39",
+       "43",
+       "37"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OH ",
+       " OE1",
+       " O  ",
+       " OH "
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "salt_bridges": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "disulfide_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "covalent_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "other_bonds": {
+      "bond_distances": [
+       3.69,
+       3.61,
+       3.98,
+       3.82,
+       3.12,
+       3.47,
+       3.62,
+       3.56,
+       3.06,
+       3.39,
+       3.73,
+       3.82,
+       3.82,
+       3.86
+      ],
+      "atom_site_1_chains": [
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C"
+      ],
+      "atom_site_1_residues": [
+       "ILE",
+       "ILE",
+       "ILE",
+       "ILE",
+       "TRP",
+       "TRP",
+       "TRP",
+       "TRP",
+       "TRP",
+       "TRP",
+       "LEU",
+       "LEU",
+       "TRP",
+       "TRP"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E"
+      ],
+      "atom_site_1_unp_accs": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_1_unp_nums": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_1_seq_nums": [
+       "111",
+       "111",
+       "111",
+       "111",
+       "117",
+       "117",
+       "117",
+       "117",
+       "117",
+       "117",
+       "45",
+       "45",
+       "117",
+       "117"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "111",
+       "111",
+       "111",
+       "111",
+       "117",
+       "117",
+       "117",
+       "117",
+       "117",
+       "117",
+       "45",
+       "45",
+       "117",
+       "117"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " CG1",
+       " CG2",
+       " CG1",
+       " CD1",
+       " CD1",
+       " NE1",
+       " CE2",
+       " CB ",
+       " CG ",
+       " CD2",
+       " CD1",
+       " CD2",
+       " CZ3",
+       " CZ3"
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "D",
+       "D",
+       "D",
+       "D",
+       "D",
+       "D",
+       "D",
+       "D",
+       "D",
+       "D",
+       "D",
+       "D",
+       "D",
+       "D"
+      ],
+      "atom_site_2_residues": [
+       "THR",
+       "THR",
+       "THR",
+       "THR",
+       "PRO",
+       "PRO",
+       "PRO",
+       "PRO",
+       "PRO",
+       "PRO",
+       "PRO",
+       "PRO",
+       "PRO",
+       "PRO"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F"
+      ],
+      "atom_site_2_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_2_unp_nums": [
+       "13",
+       "13",
+       "13",
+       "13",
+       "26",
+       "26",
+       "26",
+       "26",
+       "26",
+       "26",
+       "26",
+       "26",
+       "26",
+       "26"
+      ],
+      "atom_site_2_seq_nums": [
+       "32",
+       "32",
+       "32",
+       "32",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "32",
+       "32",
+       "32",
+       "32",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " O  ",
+       " O  ",
+       " CB ",
+       " CB ",
+       " O  ",
+       " O  ",
+       " O  ",
+       " O  ",
+       " O  ",
+       " O  ",
+       " CG ",
+       " CG ",
+       " CG ",
+       " CD "
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "molecules": [
+      {
+       "molecule_id": "1",
+       "molecule_class": "Protein",
+       "chain_id": "C",
+       "residue_label_comp_ids": [
+        "VAL",
+        "GLN",
+        "LEU",
+        "VAL",
+        "GLN",
+        "SER",
+        "GLY",
+        "ALA"
+       ],
+       "residue_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+       ],
+       "residue_label_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        78.53,
+        103.45,
+        11.44,
+        73.73,
+        34.09,
+        41.92,
+        56.1,
+        76.9
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      },
+      {
+       "molecule_id": "2",
+       "molecule_class": "Protein",
+       "chain_id": "D",
+       "residue_label_comp_ids": [
+        "ILE",
+        "VAL",
+        "LEU",
+        "THR",
+        "GLN",
+        "GLY",
+        "THR",
+        "LEU"
+       ],
+       "residue_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "9",
+        "10",
+        "11"
+       ],
+       "residue_label_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "9",
+        "10",
+        "11"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        62.69,
+        106.37,
+        13.23,
+        86.81,
+        49.91,
+        95.14,
+        86.29,
+        34.82
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "interface_id": "5",
+     "interface_area": 704.86,
+     "solvation_energy": -9.6,
+     "stabilization_energy": -12.7,
+     "p_value": 0.32,
+     "number_interface_residues": 102,
+     "number_hydrogen_bonds": 7,
+     "number_covalent_bonds": 0,
+     "number_disulfide_bonds": 0,
+     "number_salt_bridges": 0,
+     "number_other_bonds": 91,
+     "hydrogen_bonds": {
+      "bond_distances": [
+       3.29,
+       3.0,
+       3.71,
+       2.83
+      ],
+      "atom_site_1_chains": [
+       "H",
+       "H",
+       "H",
+       "H"
+      ],
+      "atom_site_1_residues": [
+       "GLN",
+       "GLN",
+       "TYR",
+       "PHE"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "B",
+       "B",
+       "B",
+       "B"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "B",
+       "B",
+       "B",
+       "B"
+      ],
+      "atom_site_1_unp_accs": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_1_unp_nums": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_1_seq_nums": [
+       "39",
+       "39",
+       "95",
+       "114"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "39",
+       "39",
+       "95",
+       "114"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " NE2",
+       " NE2",
+       " OH ",
+       " N  "
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "L",
+       "L",
+       "L",
+       "L"
+      ],
+      "atom_site_2_residues": [
+       "TYR",
+       "GLN",
+       "GLN",
+       "TYR"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "C",
+       "C",
+       "C",
+       "C"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "C",
+       "C",
+       "C",
+       "C"
+      ],
+      "atom_site_2_unp_accs": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_unp_nums": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_seq_nums": [
+       "88",
+       "39",
+       "43",
+       "37"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "88",
+       "39",
+       "43",
+       "37"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OH ",
+       " OE1",
+       " O  ",
+       " OH "
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "salt_bridges": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "disulfide_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "covalent_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "other_bonds": {
+      "bond_distances": [
+       3.69,
+       3.61,
+       3.98,
+       3.82,
+       3.56,
+       3.06,
+       3.12,
+       3.39,
+       3.47,
+       3.62,
+       3.82,
+       3.82,
+       3.73,
+       3.72
+      ],
+      "atom_site_1_chains": [
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H"
+      ],
+      "atom_site_1_residues": [
+       "ILE",
+       "ILE",
+       "ILE",
+       "ILE",
+       "TRP",
+       "TRP",
+       "TRP",
+       "TRP",
+       "TRP",
+       "TRP",
+       "LEU",
+       "TRP",
+       "LEU",
+       "TRP"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B"
+      ],
+      "atom_site_1_unp_accs": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_1_unp_nums": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_1_seq_nums": [
+       "111",
+       "111",
+       "111",
+       "111",
+       "117",
+       "117",
+       "117",
+       "117",
+       "117",
+       "117",
+       "45",
+       "117",
+       "45",
+       "117"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "111",
+       "111",
+       "111",
+       "111",
+       "117",
+       "117",
+       "117",
+       "117",
+       "117",
+       "117",
+       "45",
+       "117",
+       "45",
+       "117"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " CG1",
+       " CG2",
+       " CG1",
+       " CD1",
+       " CB ",
+       " CG ",
+       " CD1",
+       " CD2",
+       " NE1",
+       " CE2",
+       " CD2",
+       " CZ3",
+       " CD1",
+       " CE3"
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "L",
+       "L",
+       "L",
+       "L",
+       "L",
+       "L",
+       "L",
+       "L",
+       "L",
+       "L",
+       "L",
+       "L",
+       "L",
+       "L"
+      ],
+      "atom_site_2_residues": [
+       "THR",
+       "THR",
+       "THR",
+       "THR",
+       "PRO",
+       "PRO",
+       "PRO",
+       "PRO",
+       "PRO",
+       "PRO",
+       "PRO",
+       "PRO",
+       "PRO",
+       "PRO"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C"
+      ],
+      "atom_site_2_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_2_unp_nums": [
+       "13",
+       "13",
+       "13",
+       "13",
+       "26",
+       "26",
+       "26",
+       "26",
+       "26",
+       "26",
+       "26",
+       "26",
+       "26",
+       "26"
+      ],
+      "atom_site_2_seq_nums": [
+       "32",
+       "32",
+       "32",
+       "32",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "32",
+       "32",
+       "32",
+       "32",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " O  ",
+       " O  ",
+       " CB ",
+       " CB ",
+       " O  ",
+       " O  ",
+       " O  ",
+       " O  ",
+       " O  ",
+       " O  ",
+       " CG ",
+       " CG ",
+       " CG ",
+       " CD "
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "molecules": [
+      {
+       "molecule_id": "1",
+       "molecule_class": "Protein",
+       "chain_id": "H",
+       "residue_label_comp_ids": [
+        "VAL",
+        "GLN",
+        "LEU",
+        "VAL",
+        "GLN",
+        "SER",
+        "GLY",
+        "ALA"
+       ],
+       "residue_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+       ],
+       "residue_label_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        78.5,
+        103.55,
+        11.59,
+        74.23,
+        34.11,
+        42.36,
+        55.45,
+        77.33
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      },
+      {
+       "molecule_id": "2",
+       "molecule_class": "Protein",
+       "chain_id": "L",
+       "residue_label_comp_ids": [
+        "ILE",
+        "VAL",
+        "LEU",
+        "THR",
+        "GLN",
+        "GLY",
+        "THR",
+        "LEU"
+       ],
+       "residue_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "9",
+        "10",
+        "11"
+       ],
+       "residue_label_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "9",
+        "10",
+        "11"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        63.2,
+        106.78,
+        12.73,
+        87.12,
+        50.53,
+        94.44,
+        86.93,
+        34.07
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "interface_id": "6",
+     "interface_area": 703.95,
+     "solvation_energy": -9.57,
+     "stabilization_energy": -12.68,
+     "p_value": 0.312,
+     "number_interface_residues": 102,
+     "number_hydrogen_bonds": 7,
+     "number_covalent_bonds": 0,
+     "number_disulfide_bonds": 0,
+     "number_salt_bridges": 0,
+     "number_other_bonds": 91,
+     "hydrogen_bonds": {
+      "bond_distances": [
+       3.0,
+       3.29,
+       3.71,
+       2.83
+      ],
+      "atom_site_1_chains": [
+       "F",
+       "F",
+       "F",
+       "F"
+      ],
+      "atom_site_1_residues": [
+       "GLN",
+       "GLN",
+       "TYR",
+       "PHE"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "H",
+       "H",
+       "H",
+       "H"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "H",
+       "H",
+       "H",
+       "H"
+      ],
+      "atom_site_1_unp_accs": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_1_unp_nums": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_1_seq_nums": [
+       "39",
+       "39",
+       "95",
+       "114"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "39",
+       "39",
+       "95",
+       "114"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " NE2",
+       " NE2",
+       " OH ",
+       " N  "
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "G",
+       "G",
+       "G",
+       "G"
+      ],
+      "atom_site_2_residues": [
+       "GLN",
+       "TYR",
+       "GLN",
+       "TYR"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "I",
+       "I",
+       "I",
+       "I"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "I",
+       "I",
+       "I",
+       "I"
+      ],
+      "atom_site_2_unp_accs": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_unp_nums": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_seq_nums": [
+       "39",
+       "88",
+       "43",
+       "37"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "39",
+       "88",
+       "43",
+       "37"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OE1",
+       " OH ",
+       " O  ",
+       " OH "
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "salt_bridges": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "disulfide_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "covalent_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "other_bonds": {
+      "bond_distances": [
+       3.69,
+       3.61,
+       3.98,
+       3.82,
+       3.56,
+       3.12,
+       3.06,
+       3.39,
+       3.47,
+       3.62,
+       3.73,
+       3.82,
+       3.82,
+       3.72
+      ],
+      "atom_site_1_chains": [
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F"
+      ],
+      "atom_site_1_residues": [
+       "ILE",
+       "ILE",
+       "ILE",
+       "ILE",
+       "TRP",
+       "TRP",
+       "TRP",
+       "TRP",
+       "TRP",
+       "TRP",
+       "LEU",
+       "LEU",
+       "TRP",
+       "TRP"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H"
+      ],
+      "atom_site_1_unp_accs": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_1_unp_nums": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_1_seq_nums": [
+       "111",
+       "111",
+       "111",
+       "111",
+       "117",
+       "117",
+       "117",
+       "117",
+       "117",
+       "117",
+       "45",
+       "45",
+       "117",
+       "117"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "111",
+       "111",
+       "111",
+       "111",
+       "117",
+       "117",
+       "117",
+       "117",
+       "117",
+       "117",
+       "45",
+       "45",
+       "117",
+       "117"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " CG1",
+       " CG2",
+       " CG1",
+       " CD1",
+       " CB ",
+       " CD1",
+       " CG ",
+       " CD2",
+       " NE1",
+       " CE2",
+       " CD1",
+       " CD2",
+       " CZ3",
+       " CE3"
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "G",
+       "G",
+       "G",
+       "G",
+       "G",
+       "G",
+       "G",
+       "G",
+       "G",
+       "G",
+       "G",
+       "G",
+       "G",
+       "G"
+      ],
+      "atom_site_2_residues": [
+       "THR",
+       "THR",
+       "THR",
+       "THR",
+       "PRO",
+       "PRO",
+       "PRO",
+       "PRO",
+       "PRO",
+       "PRO",
+       "PRO",
+       "PRO",
+       "PRO",
+       "PRO"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "I",
+       "I",
+       "I",
+       "I",
+       "I",
+       "I",
+       "I",
+       "I",
+       "I",
+       "I",
+       "I",
+       "I",
+       "I",
+       "I"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "I",
+       "I",
+       "I",
+       "I",
+       "I",
+       "I",
+       "I",
+       "I",
+       "I",
+       "I",
+       "I",
+       "I",
+       "I",
+       "I"
+      ],
+      "atom_site_2_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_2_unp_nums": [
+       "13",
+       "13",
+       "13",
+       "13",
+       "26",
+       "26",
+       "26",
+       "26",
+       "26",
+       "26",
+       "26",
+       "26",
+       "26",
+       "26"
+      ],
+      "atom_site_2_seq_nums": [
+       "32",
+       "32",
+       "32",
+       "32",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "32",
+       "32",
+       "32",
+       "32",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45",
+       "45"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " O  ",
+       " O  ",
+       " CB ",
+       " CB ",
+       " O  ",
+       " O  ",
+       " O  ",
+       " O  ",
+       " O  ",
+       " O  ",
+       " CG ",
+       " CG ",
+       " CG ",
+       " CD "
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "molecules": [
+      {
+       "molecule_id": "1",
+       "molecule_class": "Protein",
+       "chain_id": "F",
+       "residue_label_comp_ids": [
+        "VAL",
+        "GLN",
+        "LEU",
+        "VAL",
+        "GLN",
+        "SER",
+        "GLY",
+        "ALA"
+       ],
+       "residue_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+       ],
+       "residue_label_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        79.12,
+        103.35,
+        11.19,
+        74.58,
+        33.63,
+        42.37,
+        54.92,
+        76.78
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      },
+      {
+       "molecule_id": "2",
+       "molecule_class": "Protein",
+       "chain_id": "G",
+       "residue_label_comp_ids": [
+        "ILE",
+        "VAL",
+        "LEU",
+        "THR",
+        "GLN",
+        "GLY",
+        "THR",
+        "LEU"
+       ],
+       "residue_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "9",
+        "10",
+        "11"
+       ],
+       "residue_label_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "9",
+        "10",
+        "11"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        62.79,
+        105.89,
+        13.3,
+        86.35,
+        50.74,
+        94.29,
+        87.56,
+        34.53
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "interface_id": "7",
+     "interface_area": 629.68,
+     "solvation_energy": -5.61,
+     "stabilization_energy": -9.02,
+     "p_value": 0.211,
+     "number_interface_residues": 123,
+     "number_hydrogen_bonds": 6,
+     "number_covalent_bonds": 0,
+     "number_disulfide_bonds": 0,
+     "number_salt_bridges": 2,
+     "number_other_bonds": 105,
+     "hydrogen_bonds": {
+      "bond_distances": [
+       3.21,
+       2.94,
+       2.84,
+       3.04
+      ],
+      "atom_site_1_chains": [
+       "E",
+       "E",
+       "E",
+       "E"
+      ],
+      "atom_site_1_residues": [
+       "ASN",
+       "THR",
+       "ASN",
+       "GLU"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "G",
+       "G",
+       "G",
+       "G"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "G",
+       "G",
+       "G",
+       "G"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "343",
+       "345",
+       "334",
+       "340"
+      ],
+      "atom_site_1_seq_nums": [
+       "343",
+       "345",
+       "334",
+       "340"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "362",
+       "364",
+       "353",
+       "359"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " ND2",
+       " N  ",
+       " OD1",
+       " OE2"
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "F",
+       "F",
+       "F",
+       "F"
+      ],
+      "atom_site_2_residues": [
+       "TYR",
+       "SER",
+       "THR",
+       "ALA"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "H",
+       "H",
+       "H",
+       "H"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "H",
+       "H",
+       "H",
+       "H"
+      ],
+      "atom_site_2_unp_accs": [
+       null,
+       null,
+       "P0DTC2",
+       null
+      ],
+      "atom_site_2_unp_nums": [
+       null,
+       null,
+       "11",
+       null
+      ],
+      "atom_site_2_seq_nums": [
+       "100",
+       "109",
+       "30",
+       "104"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "100",
+       "109",
+       "30",
+       "104"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OH ",
+       " O  ",
+       " OG1",
+       " N  "
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "salt_bridges": {
+      "bond_distances": [
+       2.87,
+       3.72
+      ],
+      "atom_site_1_chains": [
+       "E",
+       "E"
+      ],
+      "atom_site_1_residues": [
+       "LYS",
+       "LYS"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "G",
+       "G"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "G",
+       "G"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "356",
+       "356"
+      ],
+      "atom_site_1_seq_nums": [
+       "356",
+       "356"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "375",
+       "375"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " NZ ",
+       " NZ "
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "F",
+       "F"
+      ],
+      "atom_site_2_residues": [
+       "GLU",
+       "GLU"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "H",
+       "H"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "H",
+       "H"
+      ],
+      "atom_site_2_unp_accs": [
+       null,
+       null
+      ],
+      "atom_site_2_unp_nums": [
+       null,
+       null
+      ],
+      "atom_site_2_seq_nums": [
+       "108",
+       "108"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "108",
+       "108"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OE1",
+       " OE2"
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null
+      ]
+     },
+     "disulfide_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "covalent_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "other_bonds": {
+      "bond_distances": [
+       3.85,
+       3.42,
+       3.69,
+       3.86,
+       3.65,
+       2.84,
+       3.41
+      ],
+      "atom_site_1_chains": [
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E"
+      ],
+      "atom_site_1_residues": [
+       "LEU",
+       "ASN",
+       "ASN",
+       "ASN",
+       "ASN",
+       "ASN",
+       "ASN"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "G",
+       "G",
+       "G",
+       "G",
+       "G",
+       "G",
+       "G"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "G",
+       "G",
+       "G",
+       "G",
+       "G",
+       "G",
+       "G"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "335",
+       "334",
+       "334",
+       "334",
+       "334",
+       "334",
+       "334"
+      ],
+      "atom_site_1_seq_nums": [
+       "335",
+       "334",
+       "334",
+       "334",
+       "334",
+       "334",
+       "334"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "354",
+       "353",
+       "353",
+       "353",
+       "353",
+       "353",
+       "353"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " CD2",
+       " OD1",
+       " CA ",
+       " CB ",
+       " CG ",
+       " OD1",
+       " OD1"
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F"
+      ],
+      "atom_site_2_residues": [
+       "PRO",
+       "THR",
+       "THR",
+       "THR",
+       "THR",
+       "THR",
+       "THR"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H"
+      ],
+      "atom_site_2_unp_accs": [
+       null,
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_2_unp_nums": [
+       null,
+       "11",
+       "11",
+       "11",
+       "11",
+       "11",
+       "11"
+      ],
+      "atom_site_2_seq_nums": [
+       "28",
+       "30",
+       "30",
+       "30",
+       "30",
+       "30",
+       "30"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "28",
+       "30",
+       "30",
+       "30",
+       "30",
+       "30",
+       "30"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " CG ",
+       " CB ",
+       " OG1",
+       " OG1",
+       " OG1",
+       " OG1",
+       " CG2"
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "molecules": [
+      {
+       "molecule_id": "1",
+       "molecule_class": "Protein",
+       "chain_id": "E",
+       "residue_label_comp_ids": [
+        "ALA",
+        "TYR",
+        "THR",
+        "ASN",
+        "SER",
+        "PHE",
+        "THR",
+        "ARG"
+       ],
+       "residue_seq_ids": [
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34"
+       ],
+       "residue_label_seq_ids": [
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        81.09,
+        143.67,
+        18.26,
+        60.28,
+        0.8,
+        46.09,
+        32.97,
+        17.44
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      },
+      {
+       "molecule_id": "2",
+       "molecule_class": "Protein",
+       "chain_id": "F",
+       "residue_label_comp_ids": [
+        "VAL",
+        "GLN",
+        "LEU",
+        "VAL",
+        "GLN",
+        "SER",
+        "GLY",
+        "ALA"
+       ],
+       "residue_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+       ],
+       "residue_label_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        79.12,
+        103.35,
+        11.19,
+        74.58,
+        33.63,
+        42.37,
+        54.92,
+        76.78
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "interface_id": "8",
+     "interface_area": 628.92,
+     "solvation_energy": -5.63,
+     "stabilization_energy": -9.04,
+     "p_value": 0.209,
+     "number_interface_residues": 123,
+     "number_hydrogen_bonds": 6,
+     "number_covalent_bonds": 0,
+     "number_disulfide_bonds": 0,
+     "number_salt_bridges": 2,
+     "number_other_bonds": 105,
+     "hydrogen_bonds": {
+      "bond_distances": [
+       3.21,
+       2.94,
+       2.84,
+       3.04
+      ],
+      "atom_site_1_chains": [
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_residues": [
+       "ASN",
+       "THR",
+       "ASN",
+       "GLU"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "343",
+       "345",
+       "334",
+       "340"
+      ],
+      "atom_site_1_seq_nums": [
+       "343",
+       "345",
+       "334",
+       "340"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "362",
+       "364",
+       "353",
+       "359"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " ND2",
+       " N  ",
+       " OD1",
+       " OE2"
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "H",
+       "H",
+       "H",
+       "H"
+      ],
+      "atom_site_2_residues": [
+       "TYR",
+       "SER",
+       "THR",
+       "ALA"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "B",
+       "B",
+       "B",
+       "B"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "B",
+       "B",
+       "B",
+       "B"
+      ],
+      "atom_site_2_unp_accs": [
+       null,
+       null,
+       "P0DTC2",
+       null
+      ],
+      "atom_site_2_unp_nums": [
+       null,
+       null,
+       "11",
+       null
+      ],
+      "atom_site_2_seq_nums": [
+       "100",
+       "109",
+       "30",
+       "104"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "100",
+       "109",
+       "30",
+       "104"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OH ",
+       " O  ",
+       " OG1",
+       " N  "
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "salt_bridges": {
+      "bond_distances": [
+       2.87,
+       3.72
+      ],
+      "atom_site_1_chains": [
+       "A",
+       "A"
+      ],
+      "atom_site_1_residues": [
+       "LYS",
+       "LYS"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "A",
+       "A"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "A",
+       "A"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "356",
+       "356"
+      ],
+      "atom_site_1_seq_nums": [
+       "356",
+       "356"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "375",
+       "375"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " NZ ",
+       " NZ "
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "H",
+       "H"
+      ],
+      "atom_site_2_residues": [
+       "GLU",
+       "GLU"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "B",
+       "B"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "B",
+       "B"
+      ],
+      "atom_site_2_unp_accs": [
+       null,
+       null
+      ],
+      "atom_site_2_unp_nums": [
+       null,
+       null
+      ],
+      "atom_site_2_seq_nums": [
+       "108",
+       "108"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "108",
+       "108"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OE1",
+       " OE2"
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null
+      ]
+     },
+     "disulfide_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "covalent_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "other_bonds": {
+      "bond_distances": [
+       3.85,
+       3.42,
+       3.69,
+       3.86,
+       3.65,
+       2.84,
+       3.41
+      ],
+      "atom_site_1_chains": [
+       "A",
+       "A",
+       "A",
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_residues": [
+       "LEU",
+       "ASN",
+       "ASN",
+       "ASN",
+       "ASN",
+       "ASN",
+       "ASN"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "A",
+       "A",
+       "A",
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "A",
+       "A",
+       "A",
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "335",
+       "334",
+       "334",
+       "334",
+       "334",
+       "334",
+       "334"
+      ],
+      "atom_site_1_seq_nums": [
+       "335",
+       "334",
+       "334",
+       "334",
+       "334",
+       "334",
+       "334"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "354",
+       "353",
+       "353",
+       "353",
+       "353",
+       "353",
+       "353"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " CD2",
+       " OD1",
+       " CA ",
+       " CB ",
+       " CG ",
+       " OD1",
+       " OD1"
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H",
+       "H"
+      ],
+      "atom_site_2_residues": [
+       "PRO",
+       "THR",
+       "THR",
+       "THR",
+       "THR",
+       "THR",
+       "THR"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B"
+      ],
+      "atom_site_2_unp_accs": [
+       null,
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_2_unp_nums": [
+       null,
+       "11",
+       "11",
+       "11",
+       "11",
+       "11",
+       "11"
+      ],
+      "atom_site_2_seq_nums": [
+       "28",
+       "30",
+       "30",
+       "30",
+       "30",
+       "30",
+       "30"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "28",
+       "30",
+       "30",
+       "30",
+       "30",
+       "30",
+       "30"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " CG ",
+       " CB ",
+       " OG1",
+       " OG1",
+       " OG1",
+       " OG1",
+       " CG2"
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "molecules": [
+      {
+       "molecule_id": "1",
+       "molecule_class": "Protein",
+       "chain_id": "A",
+       "residue_label_comp_ids": [
+        "ALA",
+        "TYR",
+        "THR",
+        "ASN",
+        "SER",
+        "PHE",
+        "THR",
+        "ARG"
+       ],
+       "residue_seq_ids": [
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34"
+       ],
+       "residue_label_seq_ids": [
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        82.04,
+        143.76,
+        18.38,
+        60.15,
+        0.8,
+        46.59,
+        33.05,
+        16.9
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      },
+      {
+       "molecule_id": "2",
+       "molecule_class": "Protein",
+       "chain_id": "H",
+       "residue_label_comp_ids": [
+        "VAL",
+        "GLN",
+        "LEU",
+        "VAL",
+        "GLN",
+        "SER",
+        "GLY",
+        "ALA"
+       ],
+       "residue_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+       ],
+       "residue_label_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        78.5,
+        103.55,
+        11.59,
+        74.23,
+        34.11,
+        42.36,
+        55.45,
+        77.33
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "interface_id": "9",
+     "interface_area": 628.88,
+     "solvation_energy": -5.64,
+     "stabilization_energy": -9.05,
+     "p_value": 0.211,
+     "number_interface_residues": 123,
+     "number_hydrogen_bonds": 6,
+     "number_covalent_bonds": 0,
+     "number_disulfide_bonds": 0,
+     "number_salt_bridges": 2,
+     "number_other_bonds": 105,
+     "hydrogen_bonds": {
+      "bond_distances": [
+       3.21,
+       2.94,
+       2.84,
+       3.04
+      ],
+      "atom_site_1_chains": [
+       "B",
+       "B",
+       "B",
+       "B"
+      ],
+      "atom_site_1_residues": [
+       "ASN",
+       "THR",
+       "ASN",
+       "GLU"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "D",
+       "D",
+       "D",
+       "D"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "D",
+       "D",
+       "D",
+       "D"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "343",
+       "345",
+       "334",
+       "340"
+      ],
+      "atom_site_1_seq_nums": [
+       "343",
+       "345",
+       "334",
+       "340"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "362",
+       "364",
+       "353",
+       "359"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " ND2",
+       " N  ",
+       " OD1",
+       " OE2"
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "C",
+       "C",
+       "C",
+       "C"
+      ],
+      "atom_site_2_residues": [
+       "TYR",
+       "SER",
+       "THR",
+       "ALA"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "E",
+       "E",
+       "E",
+       "E"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "E",
+       "E",
+       "E",
+       "E"
+      ],
+      "atom_site_2_unp_accs": [
+       null,
+       null,
+       "P0DTC2",
+       null
+      ],
+      "atom_site_2_unp_nums": [
+       null,
+       null,
+       "11",
+       null
+      ],
+      "atom_site_2_seq_nums": [
+       "100",
+       "109",
+       "30",
+       "104"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "100",
+       "109",
+       "30",
+       "104"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OH ",
+       " O  ",
+       " OG1",
+       " N  "
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "salt_bridges": {
+      "bond_distances": [
+       2.87,
+       3.72
+      ],
+      "atom_site_1_chains": [
+       "B",
+       "B"
+      ],
+      "atom_site_1_residues": [
+       "LYS",
+       "LYS"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "D",
+       "D"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "D",
+       "D"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "356",
+       "356"
+      ],
+      "atom_site_1_seq_nums": [
+       "356",
+       "356"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "375",
+       "375"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " NZ ",
+       " NZ "
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "C",
+       "C"
+      ],
+      "atom_site_2_residues": [
+       "GLU",
+       "GLU"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "E",
+       "E"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "E",
+       "E"
+      ],
+      "atom_site_2_unp_accs": [
+       null,
+       null
+      ],
+      "atom_site_2_unp_nums": [
+       null,
+       null
+      ],
+      "atom_site_2_seq_nums": [
+       "108",
+       "108"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "108",
+       "108"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OE1",
+       " OE2"
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null
+      ]
+     },
+     "disulfide_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "covalent_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "other_bonds": {
+      "bond_distances": [
+       3.85,
+       3.42,
+       3.69,
+       3.86,
+       3.65,
+       2.84,
+       3.41
+      ],
+      "atom_site_1_chains": [
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B"
+      ],
+      "atom_site_1_residues": [
+       "LEU",
+       "ASN",
+       "ASN",
+       "ASN",
+       "ASN",
+       "ASN",
+       "ASN"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "D",
+       "D",
+       "D",
+       "D",
+       "D",
+       "D",
+       "D"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "D",
+       "D",
+       "D",
+       "D",
+       "D",
+       "D",
+       "D"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "335",
+       "334",
+       "334",
+       "334",
+       "334",
+       "334",
+       "334"
+      ],
+      "atom_site_1_seq_nums": [
+       "335",
+       "334",
+       "334",
+       "334",
+       "334",
+       "334",
+       "334"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "354",
+       "353",
+       "353",
+       "353",
+       "353",
+       "353",
+       "353"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " CD2",
+       " OD1",
+       " CA ",
+       " CB ",
+       " CG ",
+       " OD1",
+       " OD1"
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C"
+      ],
+      "atom_site_2_residues": [
+       "PRO",
+       "THR",
+       "THR",
+       "THR",
+       "THR",
+       "THR",
+       "THR"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E"
+      ],
+      "atom_site_2_unp_accs": [
+       null,
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_2_unp_nums": [
+       null,
+       "11",
+       "11",
+       "11",
+       "11",
+       "11",
+       "11"
+      ],
+      "atom_site_2_seq_nums": [
+       "28",
+       "30",
+       "30",
+       "30",
+       "30",
+       "30",
+       "30"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "28",
+       "30",
+       "30",
+       "30",
+       "30",
+       "30",
+       "30"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " CG ",
+       " CB ",
+       " OG1",
+       " OG1",
+       " OG1",
+       " OG1",
+       " CG2"
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "molecules": [
+      {
+       "molecule_id": "1",
+       "molecule_class": "Protein",
+       "chain_id": "B",
+       "residue_label_comp_ids": [
+        "ALA",
+        "TYR",
+        "THR",
+        "ASN",
+        "SER",
+        "PHE",
+        "THR",
+        "ARG"
+       ],
+       "residue_seq_ids": [
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34"
+       ],
+       "residue_label_seq_ids": [
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        81.17,
+        144.3,
+        18.28,
+        60.28,
+        0.96,
+        46.07,
+        33.31,
+        16.25
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      },
+      {
+       "molecule_id": "2",
+       "molecule_class": "Protein",
+       "chain_id": "C",
+       "residue_label_comp_ids": [
+        "VAL",
+        "GLN",
+        "LEU",
+        "VAL",
+        "GLN",
+        "SER",
+        "GLY",
+        "ALA"
+       ],
+       "residue_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+       ],
+       "residue_label_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        78.53,
+        103.45,
+        11.44,
+        73.73,
+        34.09,
+        41.92,
+        56.1,
+        76.9
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "interface_id": "10",
+     "interface_area": 166.63,
+     "solvation_energy": -0.01,
+     "stabilization_energy": -1.64,
+     "p_value": 0.741,
+     "number_interface_residues": 102,
+     "number_hydrogen_bonds": 2,
+     "number_covalent_bonds": 0,
+     "number_disulfide_bonds": 0,
+     "number_salt_bridges": 2,
+     "number_other_bonds": 13,
+     "hydrogen_bonds": {
+      "bond_distances": [
+       3.67,
+       3.32
+      ],
+      "atom_site_1_chains": [
+       "E",
+       "E"
+      ],
+      "atom_site_1_residues": [
+       "THR",
+       "LEU"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "G",
+       "G"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "G",
+       "G"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "345",
+       "441"
+      ],
+      "atom_site_1_seq_nums": [
+       "345",
+       "441"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "364",
+       "460"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " O  ",
+       " O  "
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "G",
+       "G"
+      ],
+      "atom_site_2_residues": [
+       "THR",
+       "SER"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "I",
+       "I"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "I",
+       "I"
+      ],
+      "atom_site_2_unp_accs": [
+       "P0DTC2",
+       null
+      ],
+      "atom_site_2_unp_nums": [
+       "13",
+       null
+      ],
+      "atom_site_2_seq_nums": [
+       "32",
+       "31"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "32",
+       "31"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OG1",
+       " OG "
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null
+      ]
+     },
+     "salt_bridges": {
+      "bond_distances": [
+       2.43,
+       3.52
+      ],
+      "atom_site_1_chains": [
+       "E",
+       "E"
+      ],
+      "atom_site_1_residues": [
+       "ARG",
+       "ARG"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "G",
+       "G"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "G",
+       "G"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "346",
+       "346"
+      ],
+      "atom_site_1_seq_nums": [
+       "346",
+       "346"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "365",
+       "365"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " NH1",
+       " NH1"
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "G",
+       "G"
+      ],
+      "atom_site_2_residues": [
+       "ASP",
+       "ASP"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "I",
+       "I"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "I",
+       "I"
+      ],
+      "atom_site_2_unp_accs": [
+       null,
+       null
+      ],
+      "atom_site_2_unp_nums": [
+       null,
+       null
+      ],
+      "atom_site_2_seq_nums": [
+       "93",
+       "93"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "93",
+       "93"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OD1",
+       " OD2"
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null
+      ]
+     },
+     "disulfide_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "covalent_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "other_bonds": {
+      "bond_distances": [
+       3.32,
+       3.67,
+       3.49,
+       3.82,
+       3.84,
+       3.55,
+       3.86
+      ],
+      "atom_site_1_chains": [
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E",
+       "E"
+      ],
+      "atom_site_1_residues": [
+       "LEU",
+       "THR",
+       "THR",
+       "LEU",
+       "LEU",
+       "LEU",
+       "LEU"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "G",
+       "G",
+       "G",
+       "G",
+       "G",
+       "G",
+       "G"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "G",
+       "G",
+       "G",
+       "G",
+       "G",
+       "G",
+       "G"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "441",
+       "345",
+       "345",
+       "441",
+       "441",
+       "441",
+       "441"
+      ],
+      "atom_site_1_seq_nums": [
+       "441",
+       "345",
+       "345",
+       "441",
+       "441",
+       "441",
+       "441"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "460",
+       "364",
+       "364",
+       "460",
+       "460",
+       "460",
+       "460"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " O  ",
+       " O  ",
+       " CG2",
+       " CA ",
+       " CB ",
+       " CD2",
+       " O  "
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "G",
+       "G",
+       "G",
+       "G",
+       "G",
+       "G",
+       "G"
+      ],
+      "atom_site_2_residues": [
+       "SER",
+       "THR",
+       "THR",
+       "THR",
+       "THR",
+       "THR",
+       "THR"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "I",
+       "I",
+       "I",
+       "I",
+       "I",
+       "I",
+       "I"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "I",
+       "I",
+       "I",
+       "I",
+       "I",
+       "I",
+       "I"
+      ],
+      "atom_site_2_unp_accs": [
+       null,
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_2_unp_nums": [
+       null,
+       "13",
+       "13",
+       "13",
+       "13",
+       "13",
+       "13"
+      ],
+      "atom_site_2_seq_nums": [
+       "31",
+       "32",
+       "32",
+       "32",
+       "32",
+       "32",
+       "32"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "31",
+       "32",
+       "32",
+       "32",
+       "32",
+       "32",
+       "32"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OG ",
+       " OG1",
+       " OG1",
+       " CG2",
+       " CG2",
+       " CG2",
+       " CG2"
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "molecules": [
+      {
+       "molecule_id": "1",
+       "molecule_class": "Protein",
+       "chain_id": "E",
+       "residue_label_comp_ids": [
+        "ALA",
+        "TYR",
+        "THR",
+        "ASN",
+        "SER",
+        "PHE",
+        "THR",
+        "ARG"
+       ],
+       "residue_seq_ids": [
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34"
+       ],
+       "residue_label_seq_ids": [
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        81.09,
+        143.67,
+        18.26,
+        60.28,
+        0.8,
+        46.09,
+        32.97,
+        17.44
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      },
+      {
+       "molecule_id": "2",
+       "molecule_class": "Protein",
+       "chain_id": "G",
+       "residue_label_comp_ids": [
+        "ILE",
+        "VAL",
+        "LEU",
+        "THR",
+        "GLN",
+        "GLY",
+        "THR",
+        "LEU"
+       ],
+       "residue_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "9",
+        "10",
+        "11"
+       ],
+       "residue_label_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "9",
+        "10",
+        "11"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        62.79,
+        105.89,
+        13.3,
+        86.35,
+        50.74,
+        94.29,
+        87.56,
+        34.53
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "interface_id": "11",
+     "interface_area": 166.35,
+     "solvation_energy": -0.0,
+     "stabilization_energy": -1.64,
+     "p_value": 0.741,
+     "number_interface_residues": 102,
+     "number_hydrogen_bonds": 2,
+     "number_covalent_bonds": 0,
+     "number_disulfide_bonds": 0,
+     "number_salt_bridges": 2,
+     "number_other_bonds": 13,
+     "hydrogen_bonds": {
+      "bond_distances": [
+       3.67,
+       3.32
+      ],
+      "atom_site_1_chains": [
+       "B",
+       "B"
+      ],
+      "atom_site_1_residues": [
+       "THR",
+       "LEU"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "D",
+       "D"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "D",
+       "D"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "345",
+       "441"
+      ],
+      "atom_site_1_seq_nums": [
+       "345",
+       "441"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "364",
+       "460"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " O  ",
+       " O  "
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "D",
+       "D"
+      ],
+      "atom_site_2_residues": [
+       "THR",
+       "SER"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "F",
+       "F"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "F",
+       "F"
+      ],
+      "atom_site_2_unp_accs": [
+       "P0DTC2",
+       null
+      ],
+      "atom_site_2_unp_nums": [
+       "13",
+       null
+      ],
+      "atom_site_2_seq_nums": [
+       "32",
+       "31"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "32",
+       "31"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OG1",
+       " OG "
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null
+      ]
+     },
+     "salt_bridges": {
+      "bond_distances": [
+       2.43,
+       3.52
+      ],
+      "atom_site_1_chains": [
+       "B",
+       "B"
+      ],
+      "atom_site_1_residues": [
+       "ARG",
+       "ARG"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "D",
+       "D"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "D",
+       "D"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "346",
+       "346"
+      ],
+      "atom_site_1_seq_nums": [
+       "346",
+       "346"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "365",
+       "365"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " NH1",
+       " NH1"
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "D",
+       "D"
+      ],
+      "atom_site_2_residues": [
+       "ASP",
+       "ASP"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "F",
+       "F"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "F",
+       "F"
+      ],
+      "atom_site_2_unp_accs": [
+       null,
+       null
+      ],
+      "atom_site_2_unp_nums": [
+       null,
+       null
+      ],
+      "atom_site_2_seq_nums": [
+       "93",
+       "93"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "93",
+       "93"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OD1",
+       " OD2"
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null
+      ]
+     },
+     "disulfide_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "covalent_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "other_bonds": {
+      "bond_distances": [
+       3.32,
+       3.67,
+       3.49,
+       3.82,
+       3.86,
+       3.84,
+       3.55
+      ],
+      "atom_site_1_chains": [
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B",
+       "B"
+      ],
+      "atom_site_1_residues": [
+       "LEU",
+       "THR",
+       "THR",
+       "LEU",
+       "LEU",
+       "LEU",
+       "LEU"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "D",
+       "D",
+       "D",
+       "D",
+       "D",
+       "D",
+       "D"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "D",
+       "D",
+       "D",
+       "D",
+       "D",
+       "D",
+       "D"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "441",
+       "345",
+       "345",
+       "441",
+       "441",
+       "441",
+       "441"
+      ],
+      "atom_site_1_seq_nums": [
+       "441",
+       "345",
+       "345",
+       "441",
+       "441",
+       "441",
+       "441"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "460",
+       "364",
+       "364",
+       "460",
+       "460",
+       "460",
+       "460"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " O  ",
+       " O  ",
+       " CG2",
+       " CA ",
+       " O  ",
+       " CB ",
+       " CD2"
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "D",
+       "D",
+       "D",
+       "D",
+       "D",
+       "D",
+       "D"
+      ],
+      "atom_site_2_residues": [
+       "SER",
+       "THR",
+       "THR",
+       "THR",
+       "THR",
+       "THR",
+       "THR"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F",
+       "F"
+      ],
+      "atom_site_2_unp_accs": [
+       null,
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_2_unp_nums": [
+       null,
+       "13",
+       "13",
+       "13",
+       "13",
+       "13",
+       "13"
+      ],
+      "atom_site_2_seq_nums": [
+       "31",
+       "32",
+       "32",
+       "32",
+       "32",
+       "32",
+       "32"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "31",
+       "32",
+       "32",
+       "32",
+       "32",
+       "32",
+       "32"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OG ",
+       " OG1",
+       " OG1",
+       " CG2",
+       " CG2",
+       " CG2",
+       " CG2"
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "molecules": [
+      {
+       "molecule_id": "1",
+       "molecule_class": "Protein",
+       "chain_id": "B",
+       "residue_label_comp_ids": [
+        "ALA",
+        "TYR",
+        "THR",
+        "ASN",
+        "SER",
+        "PHE",
+        "THR",
+        "ARG"
+       ],
+       "residue_seq_ids": [
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34"
+       ],
+       "residue_label_seq_ids": [
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        81.17,
+        144.3,
+        18.28,
+        60.28,
+        0.96,
+        46.07,
+        33.31,
+        16.25
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      },
+      {
+       "molecule_id": "2",
+       "molecule_class": "Protein",
+       "chain_id": "D",
+       "residue_label_comp_ids": [
+        "ILE",
+        "VAL",
+        "LEU",
+        "THR",
+        "GLN",
+        "GLY",
+        "THR",
+        "LEU"
+       ],
+       "residue_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "9",
+        "10",
+        "11"
+       ],
+       "residue_label_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "9",
+        "10",
+        "11"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        62.69,
+        106.37,
+        13.23,
+        86.81,
+        49.91,
+        95.14,
+        86.29,
+        34.82
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "interface_id": "12",
+     "interface_area": 165.76,
+     "solvation_energy": -0.01,
+     "stabilization_energy": -1.64,
+     "p_value": 0.743,
+     "number_interface_residues": 102,
+     "number_hydrogen_bonds": 2,
+     "number_covalent_bonds": 0,
+     "number_disulfide_bonds": 0,
+     "number_salt_bridges": 2,
+     "number_other_bonds": 13,
+     "hydrogen_bonds": {
+      "bond_distances": [
+       3.67,
+       3.32
+      ],
+      "atom_site_1_chains": [
+       "A",
+       "A"
+      ],
+      "atom_site_1_residues": [
+       "THR",
+       "LEU"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "A",
+       "A"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "A",
+       "A"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "345",
+       "441"
+      ],
+      "atom_site_1_seq_nums": [
+       "345",
+       "441"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "364",
+       "460"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " O  ",
+       " O  "
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "L",
+       "L"
+      ],
+      "atom_site_2_residues": [
+       "THR",
+       "SER"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "C",
+       "C"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "C",
+       "C"
+      ],
+      "atom_site_2_unp_accs": [
+       "P0DTC2",
+       null
+      ],
+      "atom_site_2_unp_nums": [
+       "13",
+       null
+      ],
+      "atom_site_2_seq_nums": [
+       "32",
+       "31"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "32",
+       "31"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OG1",
+       " OG "
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null
+      ]
+     },
+     "salt_bridges": {
+      "bond_distances": [
+       2.43,
+       3.52
+      ],
+      "atom_site_1_chains": [
+       "A",
+       "A"
+      ],
+      "atom_site_1_residues": [
+       "ARG",
+       "ARG"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "A",
+       "A"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "A",
+       "A"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "346",
+       "346"
+      ],
+      "atom_site_1_seq_nums": [
+       "346",
+       "346"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "365",
+       "365"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " NH1",
+       " NH1"
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "L",
+       "L"
+      ],
+      "atom_site_2_residues": [
+       "ASP",
+       "ASP"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "C",
+       "C"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "C",
+       "C"
+      ],
+      "atom_site_2_unp_accs": [
+       null,
+       null
+      ],
+      "atom_site_2_unp_nums": [
+       null,
+       null
+      ],
+      "atom_site_2_seq_nums": [
+       "93",
+       "93"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "93",
+       "93"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OD1",
+       " OD2"
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null
+      ]
+     },
+     "disulfide_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "covalent_bonds": {
+      "bond_distances": [],
+      "atom_site_1_chains": [],
+      "atom_site_1_residues": [],
+      "atom_site_1_label_asym_ids": [],
+      "atom_site_1_orig_label_asym_ids": [],
+      "atom_site_1_unp_accs": [],
+      "atom_site_1_unp_nums": [],
+      "atom_site_1_seq_nums": [],
+      "atom_site_1_label_seq_ids": [],
+      "atom_site_1_label_atom_ids": [],
+      "atom_site_1_inscodes": [],
+      "atom_site_2_chains": [],
+      "atom_site_2_residues": [],
+      "atom_site_2_label_asym_ids": [],
+      "atom_site_2_orig_label_asym_ids": [],
+      "atom_site_2_unp_accs": [],
+      "atom_site_2_unp_nums": [],
+      "atom_site_2_seq_nums": [],
+      "atom_site_2_label_seq_ids": [],
+      "atom_site_2_label_atom_ids": [],
+      "atom_site_2_inscodes": []
+     },
+     "other_bonds": {
+      "bond_distances": [
+       3.32,
+       3.49,
+       3.67,
+       3.82,
+       3.84,
+       3.55,
+       3.86
+      ],
+      "atom_site_1_chains": [
+       "A",
+       "A",
+       "A",
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_residues": [
+       "LEU",
+       "THR",
+       "THR",
+       "LEU",
+       "LEU",
+       "LEU",
+       "LEU"
+      ],
+      "atom_site_1_label_asym_ids": [
+       "A",
+       "A",
+       "A",
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_orig_label_asym_ids": [
+       "A",
+       "A",
+       "A",
+       "A",
+       "A",
+       "A",
+       "A"
+      ],
+      "atom_site_1_unp_accs": [
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_1_unp_nums": [
+       "441",
+       "345",
+       "345",
+       "441",
+       "441",
+       "441",
+       "441"
+      ],
+      "atom_site_1_seq_nums": [
+       "441",
+       "345",
+       "345",
+       "441",
+       "441",
+       "441",
+       "441"
+      ],
+      "atom_site_1_label_seq_ids": [
+       "460",
+       "364",
+       "364",
+       "460",
+       "460",
+       "460",
+       "460"
+      ],
+      "atom_site_1_label_atom_ids": [
+       " O  ",
+       " CG2",
+       " O  ",
+       " CA ",
+       " CB ",
+       " CD2",
+       " O  "
+      ],
+      "atom_site_1_inscodes": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "atom_site_2_chains": [
+       "L",
+       "L",
+       "L",
+       "L",
+       "L",
+       "L",
+       "L"
+      ],
+      "atom_site_2_residues": [
+       "SER",
+       "THR",
+       "THR",
+       "THR",
+       "THR",
+       "THR",
+       "THR"
+      ],
+      "atom_site_2_label_asym_ids": [
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C"
+      ],
+      "atom_site_2_orig_label_asym_ids": [
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C",
+       "C"
+      ],
+      "atom_site_2_unp_accs": [
+       null,
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2",
+       "P0DTC2"
+      ],
+      "atom_site_2_unp_nums": [
+       null,
+       "13",
+       "13",
+       "13",
+       "13",
+       "13",
+       "13"
+      ],
+      "atom_site_2_seq_nums": [
+       "31",
+       "32",
+       "32",
+       "32",
+       "32",
+       "32",
+       "32"
+      ],
+      "atom_site_2_label_seq_ids": [
+       "31",
+       "32",
+       "32",
+       "32",
+       "32",
+       "32",
+       "32"
+      ],
+      "atom_site_2_label_atom_ids": [
+       " OG ",
+       " OG1",
+       " OG1",
+       " CG2",
+       " CG2",
+       " CG2",
+       " CG2"
+      ],
+      "atom_site_2_inscodes": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "molecules": [
+      {
+       "molecule_id": "1",
+       "molecule_class": "Protein",
+       "chain_id": "A",
+       "residue_label_comp_ids": [
+        "ALA",
+        "TYR",
+        "THR",
+        "ASN",
+        "SER",
+        "PHE",
+        "THR",
+        "ARG"
+       ],
+       "residue_seq_ids": [
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34"
+       ],
+       "residue_label_seq_ids": [
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        82.04,
+        143.76,
+        18.38,
+        60.15,
+        0.8,
+        46.59,
+        33.05,
+        16.9
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      },
+      {
+       "molecule_id": "2",
+       "molecule_class": "Protein",
+       "chain_id": "L",
+       "residue_label_comp_ids": [
+        "ILE",
+        "VAL",
+        "LEU",
+        "THR",
+        "GLN",
+        "GLY",
+        "THR",
+        "LEU"
+       ],
+       "residue_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "9",
+        "10",
+        "11"
+       ],
+       "residue_label_seq_ids": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "9",
+        "10",
+        "11"
+       ],
+       "residue_ins_codes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "residue_bonds": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ],
+       "solvation_energies": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "accessible_surface_areas": [
+        63.2,
+        106.78,
+        12.73,
+        87.12,
+        50.53,
+        94.44,
+        86.93,
+        34.07
+       ],
+       "buried_surface_areas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

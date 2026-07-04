@@ -1,0 +1,298 @@
+{
+  "_meta": {
+    "tool": "anarcii 2.0.6",
+    "seq_type": "antibody",
+    "mode": "accuracy",
+    "scheme": "imgt",
+    "pdb_id": "6wps",
+    "input": "list-of-sequences mode",
+    "IMPORTANT_key_format": "result dict is keyed positionally 'Sequence 1','Sequence 2' (1-based input order), NOT by the input sequence string. Map back by order.",
+    "numbering_element_shape": "((imgt_position:int, insertion_code:str), residue_one_letter:str); skip entries whose residue is '-' (alignment gap)"
+  },
+  "heavy": {
+    "result_dict_key": "Sequence 1",
+    "source_entity": 2,
+    "author_chains": "C/F/H",
+    "input_seq_len": 127,
+    "chain_type": "H",
+    "score": 30.969,
+    "query_start": 0,
+    "query_end": 126,
+    "error": null,
+    "scheme": "imgt",
+    "numbering_len": 135,
+    "numbering_head": [
+      [
+        [
+          1,
+          " "
+        ],
+        "Q"
+      ],
+      [
+        [
+          2,
+          " "
+        ],
+        "V"
+      ],
+      [
+        [
+          3,
+          " "
+        ],
+        "Q"
+      ],
+      [
+        [
+          4,
+          " "
+        ],
+        "L"
+      ],
+      [
+        [
+          5,
+          " "
+        ],
+        "V"
+      ],
+      [
+        [
+          6,
+          " "
+        ],
+        "Q"
+      ],
+      [
+        [
+          7,
+          " "
+        ],
+        "S"
+      ],
+      [
+        [
+          8,
+          " "
+        ],
+        "G"
+      ],
+      [
+        [
+          9,
+          " "
+        ],
+        "A"
+      ],
+      [
+        [
+          10,
+          " "
+        ],
+        "-"
+      ],
+      [
+        [
+          11,
+          " "
+        ],
+        "E"
+      ],
+      [
+        [
+          12,
+          " "
+        ],
+        "V"
+      ]
+    ],
+    "numbering_tail": [
+      [
+        [
+          123,
+          " "
+        ],
+        "L"
+      ],
+      [
+        [
+          124,
+          " "
+        ],
+        "V"
+      ],
+      [
+        [
+          125,
+          " "
+        ],
+        "T"
+      ],
+      [
+        [
+          126,
+          " "
+        ],
+        "V"
+      ],
+      [
+        [
+          127,
+          " "
+        ],
+        "S"
+      ],
+      [
+        [
+          128,
+          " "
+        ],
+        "S"
+      ]
+    ]
+  },
+  "light": {
+    "result_dict_key": "Sequence 2",
+    "source_entity": 3,
+    "author_chains": "D/G/L",
+    "input_seq_len": 107,
+    "chain_type": "K",
+    "score": 30.812,
+    "query_start": 0,
+    "query_end": 106,
+    "error": null,
+    "scheme": "imgt",
+    "numbering_len": 128,
+    "numbering_head": [
+      [
+        [
+          1,
+          " "
+        ],
+        "E"
+      ],
+      [
+        [
+          2,
+          " "
+        ],
+        "I"
+      ],
+      [
+        [
+          3,
+          " "
+        ],
+        "V"
+      ],
+      [
+        [
+          4,
+          " "
+        ],
+        "L"
+      ],
+      [
+        [
+          5,
+          " "
+        ],
+        "T"
+      ],
+      [
+        [
+          6,
+          " "
+        ],
+        "Q"
+      ],
+      [
+        [
+          7,
+          " "
+        ],
+        "S"
+      ],
+      [
+        [
+          8,
+          " "
+        ],
+        "P"
+      ],
+      [
+        [
+          9,
+          " "
+        ],
+        "G"
+      ],
+      [
+        [
+          10,
+          " "
+        ],
+        "T"
+      ],
+      [
+        [
+          11,
+          " "
+        ],
+        "L"
+      ],
+      [
+        [
+          12,
+          " "
+        ],
+        "S"
+      ]
+    ],
+    "numbering_tail": [
+      [
+        [
+          123,
+          " "
+        ],
+        "K"
+      ],
+      [
+        [
+          124,
+          " "
+        ],
+        "V"
+      ],
+      [
+        [
+          125,
+          " "
+        ],
+        "E"
+      ],
+      [
+        [
+          126,
+          " "
+        ],
+        "I"
+      ],
+      [
+        [
+          127,
+          " "
+        ],
+        "K"
+      ],
+      [
+        [
+          128,
+          " "
+        ],
+        "-"
+      ]
+    ]
+  }
+}

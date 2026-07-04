@@ -1,0 +1,6 @@
+anarcii>=2.0.5
+molviewspec
+pandas
+requests
+streamlit
+gemmi

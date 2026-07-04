@@ -1,0 +1,572 @@
+[
+  {
+    "pdb_id": "6wps",
+    "assembly_id": "1",
+    "interface_id": "7",
+    "mvsj": "6wps_assembly1_interface7.mvsj"
+  },
+  {
+    "pdb_id": "6wps",
+    "assembly_id": "1",
+    "interface_id": "8",
+    "mvsj": "6wps_assembly1_interface8.mvsj"
+  },
+  {
+    "pdb_id": "6wps",
+    "assembly_id": "1",
+    "interface_id": "9",
+    "mvsj": "6wps_assembly1_interface9.mvsj"
+  },
+  {
+    "pdb_id": "6wps",
+    "assembly_id": "1",
+    "interface_id": "10",
+    "mvsj": "6wps_assembly1_interface10.mvsj"
+  },
+  {
+    "pdb_id": "6wps",
+    "assembly_id": "1",
+    "interface_id": "11",
+    "mvsj": "6wps_assembly1_interface11.mvsj"
+  },
+  {
+    "pdb_id": "6wps",
+    "assembly_id": "1",
+    "interface_id": "12",
+    "mvsj": "6wps_assembly1_interface12.mvsj"
+  },
+  {
+    "pdb_id": "6wpt",
+    "assembly_id": "1",
+    "interface_id": "6",
+    "mvsj": "6wpt_assembly1_interface6.mvsj"
+  },
+  {
+    "pdb_id": "6wpt",
+    "assembly_id": "1",
+    "interface_id": "7",
+    "mvsj": "6wpt_assembly1_interface7.mvsj"
+  },
+  {
+    "pdb_id": "6wpt",
+    "assembly_id": "1",
+    "interface_id": "8",
+    "mvsj": "6wpt_assembly1_interface8.mvsj"
+  },
+  {
+    "pdb_id": "6xcm",
+    "assembly_id": "1",
+    "interface_id": "6",
+    "mvsj": "6xcm_assembly1_interface6.mvsj"
+  },
+  {
+    "pdb_id": "6xcm",
+    "assembly_id": "1",
+    "interface_id": "7",
+    "mvsj": "6xcm_assembly1_interface7.mvsj"
+  },
+  {
+    "pdb_id": "6xcm",
+    "assembly_id": "1",
+    "interface_id": "8",
+    "mvsj": "6xcm_assembly1_interface8.mvsj"
+  },
+  {
+    "pdb_id": "6xcm",
+    "assembly_id": "1",
+    "interface_id": "9",
+    "mvsj": "6xcm_assembly1_interface9.mvsj"
+  },
+  {
+    "pdb_id": "6xcn",
+    "assembly_id": "1",
+    "interface_id": "7",
+    "mvsj": "6xcn_assembly1_interface7.mvsj"
+  },
+  {
+    "pdb_id": "6xcn",
+    "assembly_id": "1",
+    "interface_id": "8",
+    "mvsj": "6xcn_assembly1_interface8.mvsj"
+  },
+  {
+    "pdb_id": "6xcn",
+    "assembly_id": "1",
+    "interface_id": "9",
+    "mvsj": "6xcn_assembly1_interface9.mvsj"
+  },
+  {
+    "pdb_id": "6xcn",
+    "assembly_id": "1",
+    "interface_id": "10",
+    "mvsj": "6xcn_assembly1_interface10.mvsj"
+  },
+  {
+    "pdb_id": "6xcn",
+    "assembly_id": "1",
+    "interface_id": "11",
+    "mvsj": "6xcn_assembly1_interface11.mvsj"
+  },
+  {
+    "pdb_id": "6xcn",
+    "assembly_id": "1",
+    "interface_id": "12",
+    "mvsj": "6xcn_assembly1_interface12.mvsj"
+  },
+  {
+    "pdb_id": "6z43",
+    "assembly_id": "1",
+    "interface_id": "4",
+    "mvsj": "6z43_assembly1_interface4.mvsj"
+  },
+  {
+    "pdb_id": "6z43",
+    "assembly_id": "1",
+    "interface_id": "5",
+    "mvsj": "6z43_assembly1_interface5.mvsj"
+  },
+  {
+    "pdb_id": "6z43",
+    "assembly_id": "1",
+    "interface_id": "6",
+    "mvsj": "6z43_assembly1_interface6.mvsj"
+  },
+  {
+    "pdb_id": "6zdg",
+    "assembly_id": "1",
+    "interface_id": "4",
+    "mvsj": "6zdg_assembly1_interface4.mvsj"
+  },
+  {
+    "pdb_id": "6zdg",
+    "assembly_id": "1",
+    "interface_id": "5",
+    "mvsj": "6zdg_assembly1_interface5.mvsj"
+  },
+  {
+    "pdb_id": "6zdg",
+    "assembly_id": "1",
+    "interface_id": "6",
+    "mvsj": "6zdg_assembly1_interface6.mvsj"
+  },
+  {
+    "pdb_id": "6zdg",
+    "assembly_id": "1",
+    "interface_id": "7",
+    "mvsj": "6zdg_assembly1_interface7.mvsj"
+  },
+  {
+    "pdb_id": "6zdg",
+    "assembly_id": "1",
+    "interface_id": "8",
+    "mvsj": "6zdg_assembly1_interface8.mvsj"
+  },
+  {
+    "pdb_id": "6zdg",
+    "assembly_id": "1",
+    "interface_id": "9",
+    "mvsj": "6zdg_assembly1_interface9.mvsj"
+  },
+  {
+    "pdb_id": "6zdg",
+    "assembly_id": "1",
+    "interface_id": "10",
+    "mvsj": "6zdg_assembly1_interface10.mvsj"
+  },
+  {
+    "pdb_id": "6zdg",
+    "assembly_id": "1",
+    "interface_id": "11",
+    "mvsj": "6zdg_assembly1_interface11.mvsj"
+  },
+  {
+    "pdb_id": "6zdg",
+    "assembly_id": "1",
+    "interface_id": "12",
+    "mvsj": "6zdg_assembly1_interface12.mvsj"
+  },
+  {
+    "pdb_id": "6zdg",
+    "assembly_id": "1",
+    "interface_id": "16",
+    "mvsj": "6zdg_assembly1_interface16.mvsj"
+  },
+  {
+    "pdb_id": "6zdh",
+    "assembly_id": "1",
+    "interface_id": "7",
+    "mvsj": "6zdh_assembly1_interface7.mvsj"
+  },
+  {
+    "pdb_id": "6zdh",
+    "assembly_id": "1",
+    "interface_id": "8",
+    "mvsj": "6zdh_assembly1_interface8.mvsj"
+  },
+  {
+    "pdb_id": "6zdh",
+    "assembly_id": "1",
+    "interface_id": "9",
+    "mvsj": "6zdh_assembly1_interface9.mvsj"
+  },
+  {
+    "pdb_id": "6zdh",
+    "assembly_id": "1",
+    "interface_id": "10",
+    "mvsj": "6zdh_assembly1_interface10.mvsj"
+  },
+  {
+    "pdb_id": "6zdh",
+    "assembly_id": "1",
+    "interface_id": "11",
+    "mvsj": "6zdh_assembly1_interface11.mvsj"
+  },
+  {
+    "pdb_id": "6zdh",
+    "assembly_id": "1",
+    "interface_id": "12",
+    "mvsj": "6zdh_assembly1_interface12.mvsj"
+  },
+  {
+    "pdb_id": "6zdh",
+    "assembly_id": "1",
+    "interface_id": "23",
+    "mvsj": "6zdh_assembly1_interface23.mvsj"
+  },
+  {
+    "pdb_id": "6zdh",
+    "assembly_id": "1",
+    "interface_id": "63",
+    "mvsj": "6zdh_assembly1_interface63.mvsj"
+  },
+  {
+    "pdb_id": "6zdh",
+    "assembly_id": "1",
+    "interface_id": "70",
+    "mvsj": "6zdh_assembly1_interface70.mvsj"
+  },
+  {
+    "pdb_id": "6zxn",
+    "assembly_id": "1",
+    "interface_id": "4",
+    "mvsj": "6zxn_assembly1_interface4.mvsj"
+  },
+  {
+    "pdb_id": "6zxn",
+    "assembly_id": "1",
+    "interface_id": "5",
+    "mvsj": "6zxn_assembly1_interface5.mvsj"
+  },
+  {
+    "pdb_id": "6zxn",
+    "assembly_id": "1",
+    "interface_id": "6",
+    "mvsj": "6zxn_assembly1_interface6.mvsj"
+  },
+  {
+    "pdb_id": "6zxn",
+    "assembly_id": "1",
+    "interface_id": "42",
+    "mvsj": "6zxn_assembly1_interface42.mvsj"
+  },
+  {
+    "pdb_id": "7a25",
+    "assembly_id": "1",
+    "interface_id": "4",
+    "mvsj": "7a25_assembly1_interface4.mvsj"
+  },
+  {
+    "pdb_id": "7a25",
+    "assembly_id": "1",
+    "interface_id": "5",
+    "mvsj": "7a25_assembly1_interface5.mvsj"
+  },
+  {
+    "pdb_id": "7a25",
+    "assembly_id": "1",
+    "interface_id": "6",
+    "mvsj": "7a25_assembly1_interface6.mvsj"
+  },
+  {
+    "pdb_id": "7a29",
+    "assembly_id": "1",
+    "interface_id": "4",
+    "mvsj": "7a29_assembly1_interface4.mvsj"
+  },
+  {
+    "pdb_id": "7a29",
+    "assembly_id": "1",
+    "interface_id": "5",
+    "mvsj": "7a29_assembly1_interface5.mvsj"
+  },
+  {
+    "pdb_id": "7a29",
+    "assembly_id": "1",
+    "interface_id": "6",
+    "mvsj": "7a29_assembly1_interface6.mvsj"
+  },
+  {
+    "pdb_id": "7a29",
+    "assembly_id": "1",
+    "interface_id": "66",
+    "mvsj": "7a29_assembly1_interface66.mvsj"
+  },
+  {
+    "pdb_id": "7akd",
+    "assembly_id": "1",
+    "interface_id": "6",
+    "mvsj": "7akd_assembly1_interface6.mvsj"
+  },
+  {
+    "pdb_id": "7akd",
+    "assembly_id": "1",
+    "interface_id": "7",
+    "mvsj": "7akd_assembly1_interface7.mvsj"
+  },
+  {
+    "pdb_id": "7akd",
+    "assembly_id": "1",
+    "interface_id": "8",
+    "mvsj": "7akd_assembly1_interface8.mvsj"
+  },
+  {
+    "pdb_id": "7akd",
+    "assembly_id": "1",
+    "interface_id": "9",
+    "mvsj": "7akd_assembly1_interface9.mvsj"
+  },
+  {
+    "pdb_id": "7akd",
+    "assembly_id": "1",
+    "interface_id": "10",
+    "mvsj": "7akd_assembly1_interface10.mvsj"
+  },
+  {
+    "pdb_id": "7byr",
+    "assembly_id": "1",
+    "interface_id": "5",
+    "mvsj": "7byr_assembly1_interface5.mvsj"
+  },
+  {
+    "pdb_id": "7c2l",
+    "assembly_id": "1",
+    "interface_id": "7",
+    "mvsj": "7c2l_assembly1_interface7.mvsj"
+  },
+  {
+    "pdb_id": "7c2l",
+    "assembly_id": "1",
+    "interface_id": "8",
+    "mvsj": "7c2l_assembly1_interface8.mvsj"
+  },
+  {
+    "pdb_id": "7c2l",
+    "assembly_id": "1",
+    "interface_id": "9",
+    "mvsj": "7c2l_assembly1_interface9.mvsj"
+  },
+  {
+    "pdb_id": "7cac",
+    "assembly_id": "1",
+    "interface_id": "5",
+    "mvsj": "7cac_assembly1_interface5.mvsj"
+  },
+  {
+    "pdb_id": "7cac",
+    "assembly_id": "1",
+    "interface_id": "6",
+    "mvsj": "7cac_assembly1_interface6.mvsj"
+  },
+  {
+    "pdb_id": "7cac",
+    "assembly_id": "1",
+    "interface_id": "7",
+    "mvsj": "7cac_assembly1_interface7.mvsj"
+  },
+  {
+    "pdb_id": "7cai",
+    "assembly_id": "1",
+    "interface_id": "6",
+    "mvsj": "7cai_assembly1_interface6.mvsj"
+  },
+  {
+    "pdb_id": "7cai",
+    "assembly_id": "1",
+    "interface_id": "7",
+    "mvsj": "7cai_assembly1_interface7.mvsj"
+  },
+  {
+    "pdb_id": "7cai",
+    "assembly_id": "1",
+    "interface_id": "8",
+    "mvsj": "7cai_assembly1_interface8.mvsj"
+  },
+  {
+    "pdb_id": "7cai",
+    "assembly_id": "1",
+    "interface_id": "9",
+    "mvsj": "7cai_assembly1_interface9.mvsj"
+  },
+  {
+    "pdb_id": "7cai",
+    "assembly_id": "1",
+    "interface_id": "10",
+    "mvsj": "7cai_assembly1_interface10.mvsj"
+  },
+  {
+    "pdb_id": "7cak",
+    "assembly_id": "1",
+    "interface_id": "7",
+    "mvsj": "7cak_assembly1_interface7.mvsj"
+  },
+  {
+    "pdb_id": "7cak",
+    "assembly_id": "1",
+    "interface_id": "8",
+    "mvsj": "7cak_assembly1_interface8.mvsj"
+  },
+  {
+    "pdb_id": "7cak",
+    "assembly_id": "1",
+    "interface_id": "9",
+    "mvsj": "7cak_assembly1_interface9.mvsj"
+  },
+  {
+    "pdb_id": "7cak",
+    "assembly_id": "1",
+    "interface_id": "10",
+    "mvsj": "7cak_assembly1_interface10.mvsj"
+  },
+  {
+    "pdb_id": "7cak",
+    "assembly_id": "1",
+    "interface_id": "11",
+    "mvsj": "7cak_assembly1_interface11.mvsj"
+  },
+  {
+    "pdb_id": "7cak",
+    "assembly_id": "1",
+    "interface_id": "12",
+    "mvsj": "7cak_assembly1_interface12.mvsj"
+  },
+  {
+    "pdb_id": "7chh",
+    "assembly_id": "1",
+    "interface_id": "7",
+    "mvsj": "7chh_assembly1_interface7.mvsj"
+  },
+  {
+    "pdb_id": "7chh",
+    "assembly_id": "1",
+    "interface_id": "8",
+    "mvsj": "7chh_assembly1_interface8.mvsj"
+  },
+  {
+    "pdb_id": "7chh",
+    "assembly_id": "1",
+    "interface_id": "9",
+    "mvsj": "7chh_assembly1_interface9.mvsj"
+  },
+  {
+    "pdb_id": "7chh",
+    "assembly_id": "1",
+    "interface_id": "10",
+    "mvsj": "7chh_assembly1_interface10.mvsj"
+  },
+  {
+    "pdb_id": "7chh",
+    "assembly_id": "1",
+    "interface_id": "11",
+    "mvsj": "7chh_assembly1_interface11.mvsj"
+  },
+  {
+    "pdb_id": "7chh",
+    "assembly_id": "1",
+    "interface_id": "13",
+    "mvsj": "7chh_assembly1_interface13.mvsj"
+  },
+  {
+    "pdb_id": "7cwl",
+    "assembly_id": "1",
+    "interface_id": "7",
+    "mvsj": "7cwl_assembly1_interface7.mvsj"
+  },
+  {
+    "pdb_id": "7cwl",
+    "assembly_id": "1",
+    "interface_id": "8",
+    "mvsj": "7cwl_assembly1_interface8.mvsj"
+  },
+  {
+    "pdb_id": "7cwl",
+    "assembly_id": "1",
+    "interface_id": "9",
+    "mvsj": "7cwl_assembly1_interface9.mvsj"
+  },
+  {
+    "pdb_id": "7cwl",
+    "assembly_id": "1",
+    "interface_id": "10",
+    "mvsj": "7cwl_assembly1_interface10.mvsj"
+  },
+  {
+    "pdb_id": "7cwl",
+    "assembly_id": "1",
+    "interface_id": "11",
+    "mvsj": "7cwl_assembly1_interface11.mvsj"
+  },
+  {
+    "pdb_id": "7cwl",
+    "assembly_id": "1",
+    "interface_id": "12",
+    "mvsj": "7cwl_assembly1_interface12.mvsj"
+  },
+  {
+    "pdb_id": "7cwl",
+    "assembly_id": "1",
+    "interface_id": "13",
+    "mvsj": "7cwl_assembly1_interface13.mvsj"
+  },
+  {
+    "pdb_id": "7cwm",
+    "assembly_id": "1",
+    "interface_id": "7",
+    "mvsj": "7cwm_assembly1_interface7.mvsj"
+  },
+  {
+    "pdb_id": "7cwm",
+    "assembly_id": "1",
+    "interface_id": "8",
+    "mvsj": "7cwm_assembly1_interface8.mvsj"
+  },
+  {
+    "pdb_id": "7cwm",
+    "assembly_id": "1",
+    "interface_id": "9",
+    "mvsj": "7cwm_assembly1_interface9.mvsj"
+  },
+  {
+    "pdb_id": "7cwm",
+    "assembly_id": "1",
+    "interface_id": "10",
+    "mvsj": "7cwm_assembly1_interface10.mvsj"
+  },
+  {
+    "pdb_id": "7cwm",
+    "assembly_id": "1",
+    "interface_id": "11",
+    "mvsj": "7cwm_assembly1_interface11.mvsj"
+  },
+  {
+    "pdb_id": "7cwm",
+    "assembly_id": "1",
+    "interface_id": "12",
+    "mvsj": "7cwm_assembly1_interface12.mvsj"
+  },
+  {
+    "pdb_id": "7cwm",
+    "assembly_id": "1",
+    "interface_id": "13",
+    "mvsj": "7cwm_assembly1_interface13.mvsj"
+  }
+]

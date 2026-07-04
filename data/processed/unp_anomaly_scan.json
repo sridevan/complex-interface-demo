@@ -1,0 +1,494 @@
+[
+  {
+    "pdb_id": "6wps",
+    "assembly_id": "1",
+    "antibody_auth_asym_id": "D",
+    "antibody_residue_author_number": "32",
+    "antibody_residue_name": "THR",
+    "spurious_unp_accession": "P0DTC2",
+    "spurious_unp_position": "13",
+    "occurrence_count": 11,
+    "reasons": [
+      "accession_on_low_coverage_chain",
+      "antigen_accession_on_antibody_chain"
+    ],
+    "example_locations": [
+      {
+        "interface_id": "4",
+        "bond_type": "other_bonds",
+        "bond_index": 0
+      },
+      {
+        "interface_id": "4",
+        "bond_type": "other_bonds",
+        "bond_index": 1
+      },
+      {
+        "interface_id": "4",
+        "bond_type": "other_bonds",
+        "bond_index": 2
+      },
+      {
+        "interface_id": "4",
+        "bond_type": "other_bonds",
+        "bond_index": 3
+      },
+      {
+        "interface_id": "11",
+        "bond_type": "hydrogen_bonds",
+        "bond_index": 0
+      }
+    ]
+  },
+  {
+    "pdb_id": "6wps",
+    "assembly_id": "1",
+    "antibody_auth_asym_id": "D",
+    "antibody_residue_author_number": "45",
+    "antibody_residue_name": "PRO",
+    "spurious_unp_accession": "P0DTC2",
+    "spurious_unp_position": "26",
+    "occurrence_count": 11,
+    "reasons": [
+      "accession_on_low_coverage_chain",
+      "antigen_accession_on_antibody_chain"
+    ],
+    "example_locations": [
+      {
+        "interface_id": "4",
+        "bond_type": "other_bonds",
+        "bond_index": 30
+      },
+      {
+        "interface_id": "4",
+        "bond_type": "other_bonds",
+        "bond_index": 31
+      },
+      {
+        "interface_id": "4",
+        "bond_type": "other_bonds",
+        "bond_index": 32
+      },
+      {
+        "interface_id": "4",
+        "bond_type": "other_bonds",
+        "bond_index": 33
+      },
+      {
+        "interface_id": "4",
+        "bond_type": "other_bonds",
+        "bond_index": 34
+      }
+    ]
+  },
+  {
+    "pdb_id": "6wps",
+    "assembly_id": "1",
+    "antibody_auth_asym_id": "G",
+    "antibody_residue_author_number": "32",
+    "antibody_residue_name": "THR",
+    "spurious_unp_accession": "P0DTC2",
+    "spurious_unp_position": "13",
+    "occurrence_count": 11,
+    "reasons": [
+      "accession_on_low_coverage_chain",
+      "antigen_accession_on_antibody_chain"
+    ],
+    "example_locations": [
+      {
+        "interface_id": "6",
+        "bond_type": "other_bonds",
+        "bond_index": 0
+      },
+      {
+        "interface_id": "6",
+        "bond_type": "other_bonds",
+        "bond_index": 1
+      },
+      {
+        "interface_id": "6",
+        "bond_type": "other_bonds",
+        "bond_index": 2
+      },
+      {
+        "interface_id": "6",
+        "bond_type": "other_bonds",
+        "bond_index": 3
+      },
+      {
+        "interface_id": "10",
+        "bond_type": "hydrogen_bonds",
+        "bond_index": 0
+      }
+    ]
+  },
+  {
+    "pdb_id": "6wps",
+    "assembly_id": "1",
+    "antibody_auth_asym_id": "G",
+    "antibody_residue_author_number": "45",
+    "antibody_residue_name": "PRO",
+    "spurious_unp_accession": "P0DTC2",
+    "spurious_unp_position": "26",
+    "occurrence_count": 11,
+    "reasons": [
+      "accession_on_low_coverage_chain",
+      "antigen_accession_on_antibody_chain"
+    ],
+    "example_locations": [
+      {
+        "interface_id": "6",
+        "bond_type": "other_bonds",
+        "bond_index": 30
+      },
+      {
+        "interface_id": "6",
+        "bond_type": "other_bonds",
+        "bond_index": 31
+      },
+      {
+        "interface_id": "6",
+        "bond_type": "other_bonds",
+        "bond_index": 32
+      },
+      {
+        "interface_id": "6",
+        "bond_type": "other_bonds",
+        "bond_index": 33
+      },
+      {
+        "interface_id": "6",
+        "bond_type": "other_bonds",
+        "bond_index": 34
+      }
+    ]
+  },
+  {
+    "pdb_id": "6wps",
+    "assembly_id": "1",
+    "antibody_auth_asym_id": "L",
+    "antibody_residue_author_number": "32",
+    "antibody_residue_name": "THR",
+    "spurious_unp_accession": "P0DTC2",
+    "spurious_unp_position": "13",
+    "occurrence_count": 11,
+    "reasons": [
+      "accession_on_low_coverage_chain",
+      "antigen_accession_on_antibody_chain"
+    ],
+    "example_locations": [
+      {
+        "interface_id": "5",
+        "bond_type": "other_bonds",
+        "bond_index": 0
+      },
+      {
+        "interface_id": "5",
+        "bond_type": "other_bonds",
+        "bond_index": 1
+      },
+      {
+        "interface_id": "5",
+        "bond_type": "other_bonds",
+        "bond_index": 2
+      },
+      {
+        "interface_id": "5",
+        "bond_type": "other_bonds",
+        "bond_index": 3
+      },
+      {
+        "interface_id": "12",
+        "bond_type": "hydrogen_bonds",
+        "bond_index": 0
+      }
+    ]
+  },
+  {
+    "pdb_id": "6wps",
+    "assembly_id": "1",
+    "antibody_auth_asym_id": "L",
+    "antibody_residue_author_number": "45",
+    "antibody_residue_name": "PRO",
+    "spurious_unp_accession": "P0DTC2",
+    "spurious_unp_position": "26",
+    "occurrence_count": 11,
+    "reasons": [
+      "accession_on_low_coverage_chain",
+      "antigen_accession_on_antibody_chain"
+    ],
+    "example_locations": [
+      {
+        "interface_id": "5",
+        "bond_type": "other_bonds",
+        "bond_index": 30
+      },
+      {
+        "interface_id": "5",
+        "bond_type": "other_bonds",
+        "bond_index": 31
+      },
+      {
+        "interface_id": "5",
+        "bond_type": "other_bonds",
+        "bond_index": 32
+      },
+      {
+        "interface_id": "5",
+        "bond_type": "other_bonds",
+        "bond_index": 33
+      },
+      {
+        "interface_id": "5",
+        "bond_type": "other_bonds",
+        "bond_index": 34
+      }
+    ]
+  },
+  {
+    "pdb_id": "6wps",
+    "assembly_id": "1",
+    "antibody_auth_asym_id": "D",
+    "antibody_residue_author_number": "98",
+    "antibody_residue_name": "PHE",
+    "spurious_unp_accession": "P0DTC2",
+    "spurious_unp_position": "79",
+    "occurrence_count": 10,
+    "reasons": [
+      "accession_on_low_coverage_chain",
+      "antigen_accession_on_antibody_chain"
+    ],
+    "example_locations": [
+      {
+        "interface_id": "4",
+        "bond_type": "other_bonds",
+        "bond_index": 81
+      },
+      {
+        "interface_id": "4",
+        "bond_type": "other_bonds",
+        "bond_index": 82
+      },
+      {
+        "interface_id": "4",
+        "bond_type": "other_bonds",
+        "bond_index": 83
+      },
+      {
+        "interface_id": "4",
+        "bond_type": "other_bonds",
+        "bond_index": 84
+      },
+      {
+        "interface_id": "4",
+        "bond_type": "other_bonds",
+        "bond_index": 85
+      }
+    ]
+  },
+  {
+    "pdb_id": "6wps",
+    "assembly_id": "1",
+    "antibody_auth_asym_id": "G",
+    "antibody_residue_author_number": "98",
+    "antibody_residue_name": "PHE",
+    "spurious_unp_accession": "P0DTC2",
+    "spurious_unp_position": "79",
+    "occurrence_count": 10,
+    "reasons": [
+      "accession_on_low_coverage_chain",
+      "antigen_accession_on_antibody_chain"
+    ],
+    "example_locations": [
+      {
+        "interface_id": "6",
+        "bond_type": "other_bonds",
+        "bond_index": 81
+      },
+      {
+        "interface_id": "6",
+        "bond_type": "other_bonds",
+        "bond_index": 82
+      },
+      {
+        "interface_id": "6",
+        "bond_type": "other_bonds",
+        "bond_index": 83
+      },
+      {
+        "interface_id": "6",
+        "bond_type": "other_bonds",
+        "bond_index": 84
+      },
+      {
+        "interface_id": "6",
+        "bond_type": "other_bonds",
+        "bond_index": 85
+      }
+    ]
+  },
+  {
+    "pdb_id": "6wps",
+    "assembly_id": "1",
+    "antibody_auth_asym_id": "L",
+    "antibody_residue_author_number": "98",
+    "antibody_residue_name": "PHE",
+    "spurious_unp_accession": "P0DTC2",
+    "spurious_unp_position": "79",
+    "occurrence_count": 10,
+    "reasons": [
+      "accession_on_low_coverage_chain",
+      "antigen_accession_on_antibody_chain"
+    ],
+    "example_locations": [
+      {
+        "interface_id": "5",
+        "bond_type": "other_bonds",
+        "bond_index": 81
+      },
+      {
+        "interface_id": "5",
+        "bond_type": "other_bonds",
+        "bond_index": 82
+      },
+      {
+        "interface_id": "5",
+        "bond_type": "other_bonds",
+        "bond_index": 83
+      },
+      {
+        "interface_id": "5",
+        "bond_type": "other_bonds",
+        "bond_index": 84
+      },
+      {
+        "interface_id": "5",
+        "bond_type": "other_bonds",
+        "bond_index": 85
+      }
+    ]
+  },
+  {
+    "pdb_id": "6wps",
+    "assembly_id": "1",
+    "antibody_auth_asym_id": "C",
+    "antibody_residue_author_number": "30",
+    "antibody_residue_name": "THR",
+    "spurious_unp_accession": "P0DTC2",
+    "spurious_unp_position": "11",
+    "occurrence_count": 7,
+    "reasons": [
+      "accession_on_low_coverage_chain",
+      "antigen_accession_on_antibody_chain"
+    ],
+    "example_locations": [
+      {
+        "interface_id": "9",
+        "bond_type": "hydrogen_bonds",
+        "bond_index": 2
+      },
+      {
+        "interface_id": "9",
+        "bond_type": "other_bonds",
+        "bond_index": 1
+      },
+      {
+        "interface_id": "9",
+        "bond_type": "other_bonds",
+        "bond_index": 2
+      },
+      {
+        "interface_id": "9",
+        "bond_type": "other_bonds",
+        "bond_index": 3
+      },
+      {
+        "interface_id": "9",
+        "bond_type": "other_bonds",
+        "bond_index": 4
+      }
+    ]
+  },
+  {
+    "pdb_id": "6wps",
+    "assembly_id": "1",
+    "antibody_auth_asym_id": "F",
+    "antibody_residue_author_number": "30",
+    "antibody_residue_name": "THR",
+    "spurious_unp_accession": "P0DTC2",
+    "spurious_unp_position": "11",
+    "occurrence_count": 7,
+    "reasons": [
+      "accession_on_low_coverage_chain",
+      "antigen_accession_on_antibody_chain"
+    ],
+    "example_locations": [
+      {
+        "interface_id": "7",
+        "bond_type": "hydrogen_bonds",
+        "bond_index": 2
+      },
+      {
+        "interface_id": "7",
+        "bond_type": "other_bonds",
+        "bond_index": 1
+      },
+      {
+        "interface_id": "7",
+        "bond_type": "other_bonds",
+        "bond_index": 2
+      },
+      {
+        "interface_id": "7",
+        "bond_type": "other_bonds",
+        "bond_index": 3
+      },
+      {
+        "interface_id": "7",
+        "bond_type": "other_bonds",
+        "bond_index": 4
+      }
+    ]
+  },
+  {
+    "pdb_id": "6wps",
+    "assembly_id": "1",
+    "antibody_auth_asym_id": "H",
+    "antibody_residue_author_number": "30",
+    "antibody_residue_name": "THR",
+    "spurious_unp_accession": "P0DTC2",
+    "spurious_unp_position": "11",
+    "occurrence_count": 7,
+    "reasons": [
+      "accession_on_low_coverage_chain",
+      "antigen_accession_on_antibody_chain"
+    ],
+    "example_locations": [
+      {
+        "interface_id": "8",
+        "bond_type": "hydrogen_bonds",
+        "bond_index": 2
+      },
+      {
+        "interface_id": "8",
+        "bond_type": "other_bonds",
+        "bond_index": 1
+      },
+      {
+        "interface_id": "8",
+        "bond_type": "other_bonds",
+        "bond_index": 2
+      },
+      {
+        "interface_id": "8",
+        "bond_type": "other_bonds",
+        "bond_index": 3
+      },
+      {
+        "interface_id": "8",
+        "bond_type": "other_bonds",
+        "bond_index": 4
+      }
+    ]
+  }
+]
