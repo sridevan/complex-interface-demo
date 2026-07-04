@@ -48,6 +48,13 @@ const median = (arr) => {
 }
 const keyOf = (r) => `${r.pdb_id}|${r.assembly_id}|${r.interface_id}`
 
+const AA3TO1 = {
+  ALA: 'A', ARG: 'R', ASN: 'N', ASP: 'D', CYS: 'C', GLU: 'E', GLN: 'Q', GLY: 'G', HIS: 'H',
+  ILE: 'I', LEU: 'L', LYS: 'K', MET: 'M', PHE: 'F', PRO: 'P', SER: 'S', THR: 'T', TRP: 'W',
+  TYR: 'Y', VAL: 'V', MSE: 'M', SEC: 'U', PYL: 'O',
+}
+const one = (resn) => AA3TO1[resn] || 'X'
+
 function SelectorCard({ label, color, count, medBsa, active, onClick }) {
   return (
     <div className={'selcard' + (active ? ' active' : '')} onClick={onClick}
@@ -94,13 +101,15 @@ export default function Explorer({ interfaces, residue, epitope }) {
       const agNum = r.antigen_uniprot_position ?? r.antigen_residue_author_number
       ag.set(`${r.antigen_chain_id}|${r.antigen_residue_author_number}`, {
         chain: r.antigen_chain_id, resi: r.antigen_residue_author_number,
-        label: `${r.antigen_chain_id}:${r.antigen_residue_name}${agNum} (UNP)`,
+        label: `${r.antigen_chain_id}:${r.antigen_residue_name}${agNum} (UNP)`,   // hover (detailed)
+        short: `${r.antigen_chain_id}:${one(r.antigen_residue_name)}${agNum}`,     // persistent (compact)
       })
       const abNum = r.antibody_imgt_position != null
         ? `${r.antibody_imgt_position}${r.antibody_imgt_insertion_code || ''}` : r.antibody_residue_author_number
       ab.set(`${r.antibody_chain_id}|${r.antibody_residue_author_number}`, {
         chain: r.antibody_chain_id, resi: r.antibody_residue_author_number,
         label: `${r.antibody_chain_id}:${r.antibody_residue_name}${abNum} (IMGT)`,
+        short: `${r.antibody_chain_id}:${one(r.antibody_residue_name)}${abNum}`,
       })
     }
     return { ag: [...ag.values()], ab: [...ab.values()] }

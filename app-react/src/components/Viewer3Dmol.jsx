@@ -22,7 +22,10 @@ export default function Viewer3Dmol({ pdbId, agResidues, abResidues, height = 48
   const viewerRef = useRef(null)
   const surfRef = useRef(null)
   const showBgRef = useRef(true)
+  const labelsRef = useRef([])
+  const showLabelsRef = useRef(false)
   const [showBg, setShowBg] = useState(true)
+  const [showLabels, setShowLabels] = useState(false)
   const [err, setErr] = useState(null)
 
   // Show/hide the grey context volume (background) without recomputing the surface.
@@ -37,6 +40,37 @@ export default function Viewer3Dmol({ pdbId, agResidues, abResidues, height = 48
     applyBg(viewerRef.current, surfRef.current, next)
   }
 
+  // Persistent residue labels (<chain>:<resname><resnum> (UNP|IMGT)) placed at each residue's CA.
+  const addResidueLabels = (v) => {
+    const model = v.getModel()
+    if (!model) return
+    const out = []
+    for (const r of [...agResidues, ...abResidues]) {
+      const atoms = model.selectedAtoms({ chain: r.chain, resi: r.resi })
+      if (!atoms.length) continue
+      const a = atoms.find((x) => x.atom === 'CA') || atoms[0]
+      out.push(v.addLabel(r.short || r.label, {
+        position: { x: a.x, y: a.y, z: a.z }, inFront: true, fontColor: 'black',
+        backgroundOpacity: 0, fontSize: 13, borderThickness: 0,
+      }))
+    }
+    labelsRef.current = out
+    v.render()
+  }
+  const clearResidueLabels = (v) => {
+    for (const l of labelsRef.current) v.removeLabel(l)
+    labelsRef.current = []
+    v.render()
+  }
+  const toggleLabels = () => {
+    const next = !showLabelsRef.current
+    showLabelsRef.current = next
+    setShowLabels(next)
+    const v = viewerRef.current
+    if (!v) return
+    if (next) addResidueLabels(v); else clearResidueLabels(v)
+  }
+
   useEffect(() => {
     let cancelled = false
     async function run() {
@@ -49,6 +83,7 @@ export default function Viewer3Dmol({ pdbId, agResidues, abResidues, height = 48
         }
         const viewer = viewerRef.current
         viewer.clear()
+        labelsRef.current = []  // clear() removes any existing labels
         const cif = await fetch(CIF_URL(pdbId)).then((r) => r.text())
         if (cancelled) return
         viewer.addModel(cif, 'cif')
@@ -96,6 +131,7 @@ export default function Viewer3Dmol({ pdbId, agResidues, abResidues, height = 48
         viewer.zoomTo(ifaceSel)
         viewer.zoom(1.2)  // push the interacting residues closer to the viewer
         viewer.render()
+        if (showLabelsRef.current) addResidueLabels(viewer)  // respect the labels toggle across instances
         setErr(null)
       } catch (e) { setErr(String(e)) }
     }
@@ -107,10 +143,16 @@ export default function Viewer3Dmol({ pdbId, agResidues, abResidues, height = 48
     <>
       <div className="viewer-wrap" style={{ height }}>
         <div ref={hostRef} className="viewer" style={{ height }} />
-        <button className="viewer-btn" onClick={toggleBg}
-                title="Toggle the surrounding structure (background)">
-          {showBg ? 'Hide background' : 'Show background'}
-        </button>
+        <div className="viewer-btns">
+          <button className="viewer-btn" onClick={toggleBg}
+                  title="Toggle the surrounding structure (background)">
+            {showBg ? 'Hide background' : 'Show background'}
+          </button>
+          <button className="viewer-btn" onClick={toggleLabels}
+                  title="Label the interacting residues (chain:resname+resnum)">
+            {showLabels ? 'Hide labels' : 'Show labels'}
+          </button>
+        </div>
       </div>
       {err && <p className="note" style={{ color: '#b1442f' }}>{err}</p>}
     </>
