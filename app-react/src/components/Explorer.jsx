@@ -3,7 +3,6 @@ import Viewer3Dmol from './Viewer3Dmol.jsx'
 import SankeyContacts from './SankeyContacts.jsx'
 import ContactHeatmap from './ContactHeatmap.jsx'
 import DataTable from './DataTable.jsx'
-import InfoTip from './InfoTip.jsx'
 
 // Residue columns sort by sequence position (antigen UniProt, antibody IMGT + insertion code),
 // which is how epitope/paratope residues are read — not alphabetically by the displayed label.
@@ -134,7 +133,7 @@ export default function Explorer({ interfaces, residue, epitope }) {
       <div className="ex-row ex-row1">
         {/* Row 1, Col 1 — selector cards */}
         <div className="card ex-cell">
-          <h2>Interface selection<InfoTip text="Each card's stats span all antigen–antibody interfaces of that chain type across every processed structure. BSA = buried surface area." /></h2>
+          <h2>Interface selection</h2>
           <p className="note">Select an antibody chain type to explore.</p>
           <div className="selcards">
             <SelectorCard label="Antigen–heavy chain" color="#e19039"
@@ -162,7 +161,7 @@ export default function Explorer({ interfaces, residue, epitope }) {
       <div className="ex-row ex-row2">
         {/* Row 2, Col 1 — instances table */}
         <div className="card ex-cell">
-          <h2>Interface instances<InfoTip text="BSA (buried surface area) = PISA interface area buried on complex formation, per side — not solvent-accessible area (ASA)." /></h2>
+          <h2>Interface instances</h2>
           <p className="note">Sorted by buried surface area (BSA), largest first. Click a row to inspect it above.</p>
           <div className="table-scroll ex-scroll">
             <table>
@@ -188,7 +187,7 @@ export default function Explorer({ interfaces, residue, epitope }) {
 
         {/* Row 2, Col 2 — Sankey for selected instance */}
         <div className="card ex-cell">
-          <h2>Paratope–epitope contacts{selected ? ` (${selected.pdb_id} interface ${selected.interface_id})` : ''}<InfoTip text="Ribbon width is proportional to the number of interatomic bonds between the two residues. Antigen nodes are coloured by residue class, antibody nodes by IMGT region (see legend)." /></h2>
+          <h2>Paratope–epitope contacts{selected ? ` (${selected.pdb_id} interface ${selected.interface_id})` : ''}</h2>
           <p className="note">Epitope (antigen) on the left, paratope (antibody) on the right, for the
             selected interface. <b>Click a node to highlight it in 3D.</b></p>
           <SankeyContacts rows={sankeyRows} onNodeClick={setHighlight} />
@@ -198,7 +197,7 @@ export default function Explorer({ interfaces, residue, epitope }) {
       {/* Row 3 — contact table + contact map, BOTH scoped to the selected heavy/light group */}
       <div className="ex-row ex-row3">
         <div className="card ex-cell">
-          <h2>Aggregated contact table<InfoTip text="Antibody residue = residue name + IMGT position; region = IMGT region (CDR-H1/2/3, Framework-H, …). Aggregated across every processed structure — independent of the single interface selected above." /></h2>
+          <h2>Aggregated contact table</h2>
           <p className="note">One row per epitope–paratope residue pair over <b>all {chainType}-chain
             instances</b>. Sorted by contacts.</p>
           {epiFilter != null && (

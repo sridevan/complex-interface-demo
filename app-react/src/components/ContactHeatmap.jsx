@@ -1,5 +1,4 @@
 import React, { useMemo, useState } from 'react'
-import InfoTip from './InfoTip.jsx'
 
 // Antibody IMGT regions in a fixed, readable order (heavy block then light block).
 const HEAVY_REGIONS = ['CDR-H1', 'CDR-H2', 'CDR-H3', 'Framework-H']
@@ -72,7 +71,7 @@ export default function ContactHeatmap({ residue, onSelect, selected, chainType 
 
   return (
     <div className="card">
-      <h2>{title}<InfoTip text="Antigen residues by UniProt position (PISA); antibody regions by IMGT (ANARCII). Colour intensity = residue–residue contact pairs on a colour-blind-safe white-to-purple scale. 'Structures contacted' counts distinct PDB structures instead, de-biasing recurrent depositions." /></h2>
+      <h2>{title}</h2>
       <p className="note">Antigen residue × antibody IMGT region, aggregated across all structures. Click a
         row to filter the contact table (click again to clear).</p>
       <div className="controls">
