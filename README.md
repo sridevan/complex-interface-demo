@@ -125,3 +125,8 @@ PISA JSON structure.
 Validated on 6wps; a 20-assembly tranche processed (19/20; one entry skipped — no antibody
 chain classified). The full ≈458-assembly batch and atom-level contact detail in the Sankey
 tooltip are the main outstanding items.
+
+## License
+
+MIT — see [LICENSE](LICENSE). Note that the **ANARCII** dependency is BSD-3-Clause and
+**Mol\*** is MIT; the demo streams structures/metadata from the PDBe and EBI web services.
