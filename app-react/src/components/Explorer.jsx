@@ -60,10 +60,11 @@ export default function Explorer({ interfaces, residue, epitope }) {
   const [chainType, setChainType] = useState('heavy')
   const [selKey, setSelKey] = useState(null)
 
-  const byType = useMemo(() => ({
-    heavy: interfaces.filter((i) => i.antibody_chain_type === 'heavy'),
-    light: interfaces.filter((i) => i.antibody_chain_type === 'light'),
-  }), [interfaces])
+  const byType = useMemo(() => {
+    const bySide = (t) => interfaces.filter((i) => i.antibody_chain_type === t)
+      .sort((a, b) => (b.interface_area || 0) - (a.interface_area || 0))  // largest BSA first
+    return { heavy: bySide('heavy'), light: bySide('light') }
+  }, [interfaces])
 
   const stats = useMemo(() => ({
     heavy: { count: byType.heavy.length, med: median(byType.heavy.map((i) => i.interface_area).filter((x) => x != null)) },
@@ -117,11 +118,14 @@ export default function Explorer({ interfaces, residue, epitope }) {
         {/* Row 2, Col 1 — instances table */}
         <div className="card ex-cell">
           <h2>Interface instances ({chainType} chain)</h2>
+          <p className="note">Sorted by buried surface area (BSA) descending. <b>BSA</b> = PISA interface
+            area, i.e. the surface area buried on complex formation (per side) — not solvent-accessible
+            area (ASA).</p>
           <div className="table-scroll ex-scroll">
             <table>
               <thead>
                 <tr><th>PDB</th><th className="num">Asm</th><th className="num">Interface</th>
-                  <th>Ag chain</th><th>Ab chain</th><th className="num">Area (Å²)</th>
+                  <th>Ag chain</th><th>Ab chain</th><th className="num">BSA (Å²)</th>
                   <th className="num">Residue contacts</th></tr>
               </thead>
               <tbody>
