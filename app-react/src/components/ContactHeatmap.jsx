@@ -21,7 +21,6 @@ function cell(t) {
 }
 
 export default function ContactHeatmap({ residue, onSelect, chainType }) {
-  const [metric, setMetric] = useState('pairs')     // 'pairs' | 'structures'
   const [sortBy, setSortBy] = useState('contacts')  // 'contacts' | 'position'
   const [hover, setHover] = useState(null)
 
@@ -51,14 +50,12 @@ export default function ContactHeatmap({ residue, onSelect, chainType }) {
     }
     const rows = [...map.values()].map((row) => ({
       ...row,
-      values: Object.fromEntries(REGIONS.map((r) => [
-        r, metric === 'pairs' ? row.cells[r].pairs : row.cells[r].structs.size])),
-      rowTotal: REGIONS.reduce((s, r) =>
-        s + (metric === 'pairs' ? row.cells[r].pairs : row.cells[r].structs.size), 0),
+      values: Object.fromEntries(REGIONS.map((r) => [r, row.cells[r].pairs])),
+      rowTotal: REGIONS.reduce((s, r) => s + row.cells[r].pairs, 0),
     }))
     const maxVal = Math.max(1, ...rows.flatMap((row) => REGIONS.map((r) => row.values[r])))
     return { rows, maxVal }
-  }, [residue, metric, chainType])
+  }, [residue, chainType])
 
   const sorted = useMemo(() => {
     const c = [...rows]
@@ -75,17 +72,12 @@ export default function ContactHeatmap({ residue, onSelect, chainType }) {
       <h2>{title}</h2>
       <p className="note">
         Contact intensity between each antigen residue (UniProt position, from PISA) and each antibody
-        IMGT region (from ANARCII), aggregated across all processed structures. Single-hue scale
-        (white-to-purple) is colour-blind-safe. Toggle <b>structures</b> to de-bias residues that recur
-        across many PDB entries. Click a row to filter the residue table.
+        IMGT region (from ANARCII), aggregated across all processed structures as the number of
+        contact pairs. Single-hue scale (white-to-purple) is colour-blind-safe. Click a row to filter
+        the residue table.
       </p>
       <div className="controls">
-        <label>Value</label>
-        <span className="pill">
-          <button className={metric === 'pairs' ? 'active' : ''} onClick={() => setMetric('pairs')}>Contact pairs</button>
-          <button className={metric === 'structures' ? 'active' : ''} onClick={() => setMetric('structures')}>Structures contacted</button>
-        </span>
-        <label style={{ marginLeft: 10 }}>Sort</label>
+        <label>Sort</label>
         <span className="pill">
           <button className={sortBy === 'contacts' ? 'active' : ''} onClick={() => setSortBy('contacts')}>By contacts</button>
           <button className={sortBy === 'position' ? 'active' : ''} onClick={() => setSortBy('position')}>By position</button>
@@ -96,7 +88,7 @@ export default function ContactHeatmap({ residue, onSelect, chainType }) {
       <div className="hm-legend">
         low
         <span className="hm-ramp" />
-        high (max {maxVal} {metric === 'pairs' ? 'pairs' : 'structures'})
+        high (max {maxVal} contact pairs)
       </div>
 
       <div className="hm-wrap">
@@ -120,7 +112,7 @@ export default function ContactHeatmap({ residue, onSelect, chainType }) {
                   return (
                     <td key={r} className="hm-cell"
                         style={{ background: c.bg, color: c.fg }}
-                        onMouseEnter={() => setHover(`${row.residue}${row.position} × ${r}: ${v} ${metric === 'pairs' ? 'contact pairs' : 'structures'}`)}
+                        onMouseEnter={() => setHover(`${row.residue}${row.position} × ${r}: ${v} contact pairs`)}
                         onMouseLeave={() => setHover(null)}>
                       {v > 0 ? v : ''}
                     </td>
