@@ -71,6 +71,9 @@ function SelectorCard({ label, color, count, medBsa, active, onClick }) {
 export default function Explorer({ interfaces, residue, epitope }) {
   const [chainType, setChainType] = useState('heavy')
   const [selKey, setSelKey] = useState(null)
+  const [highlight, setHighlight] = useState(null)  // residue clicked in the Sankey -> highlight in 3D
+  const selectInstance = (k) => { setSelKey(k); setHighlight(null) }
+  const pickChain = (t) => { setChainType(t); setSelKey(null); setHighlight(null) }
 
   const byType = useMemo(() => {
     const bySide = (t) => interfaces.filter((i) => i.antibody_chain_type === t)
@@ -130,10 +133,10 @@ export default function Explorer({ interfaces, residue, epitope }) {
           <div className="selcards">
             <SelectorCard label="Antigen–heavy chain" color="#e19039"
               count={stats.heavy.count} medBsa={stats.heavy.med}
-              active={chainType === 'heavy'} onClick={() => { setChainType('heavy'); setSelKey(null) }} />
+              active={chainType === 'heavy'} onClick={() => pickChain('heavy')} />
             <SelectorCard label="Antigen–light chain" color="#4b7fcc"
               count={stats.light.count} medBsa={stats.light.med}
-              active={chainType === 'light'} onClick={() => { setChainType('light'); setSelKey(null) }} />
+              active={chainType === 'light'} onClick={() => pickChain('light')} />
           </div>
         </div>
 
@@ -144,7 +147,8 @@ export default function Explorer({ interfaces, residue, epitope }) {
             <span className="dot" style={{ background: '#4b7fcc' }} /> antigen
             <span className="dot" style={{ background: '#e19039' }} /> antibody · structure served from PDBe
           </div>
-          {selected ? <Viewer3Dmol pdbId={selected.pdb_id} agResidues={iface.ag} abResidues={iface.ab} height={480} />
+          {selected ? <Viewer3Dmol pdbId={selected.pdb_id} agResidues={iface.ag} abResidues={iface.ab}
+                                    highlight={highlight} height={480} />
             : <p className="note">No instance selected.</p>}
         </div>
       </div>
@@ -166,7 +170,7 @@ export default function Explorer({ interfaces, residue, epitope }) {
               <tbody>
                 {instances.map((r) => (
                   <tr key={keyOf(r)} className={'selrow' + (selected && keyOf(r) === keyOf(selected) ? ' sel' : '')}
-                      onClick={() => setSelKey(keyOf(r))}>
+                      onClick={() => selectInstance(keyOf(r))}>
                     <td>{r.pdb_id}</td><td className="num">{r.assembly_id}</td>
                     <td className="num">{r.interface_id}</td><td>{r.antigen_chain}</td>
                     <td>{r.antibody_chain}</td><td className="num">{Math.round(r.interface_area)}</td>
@@ -183,8 +187,8 @@ export default function Explorer({ interfaces, residue, epitope }) {
           <h2>Paratope–epitope contacts{selected ? ` (${selected.pdb_id} interface ${selected.interface_id})` : ''}</h2>
           <p className="note">Epitope (antigen) residues on the left, paratope (antibody) residues on the
             right, for the selected interface. Ribbon width is proportional to the number of interatomic
-            bonds.</p>
-          <SankeyContacts rows={sankeyRows} />
+            bonds. <b>Click a residue node to highlight it in the 3D viewer.</b></p>
+          <SankeyContacts rows={sankeyRows} onNodeClick={setHighlight} />
         </div>
       </div>
 

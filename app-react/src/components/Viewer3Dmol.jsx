@@ -16,12 +16,16 @@ function groupByChain(residues) {
   return Object.entries(by).map(([chain, set]) => ({ chain, resi: [...set] }))
 }
 
+const HL_COLOR = 0x12c9a6  // highlight teal for a Sankey-selected residue
+
 // residues: [{ chain: <author asym id>, resi: <author seq num> }]
-export default function Viewer3Dmol({ pdbId, agResidues, abResidues, height = 480 }) {
+export default function Viewer3Dmol({ pdbId, agResidues, abResidues, highlight, height = 480 }) {
   const hostRef = useRef(null)
   const viewerRef = useRef(null)
   const surfRef = useRef(null)
   const ifaceSelRef = useRef(null)
+  const highlightRef = useRef(null)
+  highlightRef.current = highlight  // keep current for restyle() called from either effect
   const showBgRef = useRef(true)
   const labelsRef = useRef([])
   const showLabelsRef = useRef(false)
@@ -71,6 +75,22 @@ export default function Viewer3Dmol({ pdbId, agResidues, abResidues, height = 48
     if (!v) return
     if (next) addResidueLabels(v); else clearResidueLabels(v)
   }
+  // Apply interface-residue sticks (per-side CPK) + the current highlight, if any.
+  const restyle = (v) => {
+    for (const g of groupByChain(agResidues))
+      v.setStyle({ chain: g.chain, resi: g.resi }, { stick: { radius: 0.25, colorscheme: carbonScheme(AG_CARBON) } })
+    for (const g of groupByChain(abResidues))
+      v.setStyle({ chain: g.chain, resi: g.resi }, { stick: { radius: 0.25, colorscheme: carbonScheme(AB_CARBON) } })
+    v.setStyle({ elem: 'H' }, {})
+    const hl = highlightRef.current
+    if (hl && hl.chain != null && hl.resi != null) {
+      const sel = { chain: hl.chain, resi: hl.resi }
+      v.setStyle(sel, { stick: { radius: 0.42, color: HL_COLOR } })
+      v.addStyle(sel, { sphere: { radius: 0.9, color: HL_COLOR, opacity: 0.22 } })
+      v.setStyle({ chain: hl.chain, resi: hl.resi, elem: 'H' }, {})
+    }
+  }
+
   // Re-frame the camera on the interacting residues (after the user has rotated/zoomed away).
   const recenter = () => {
     const v = viewerRef.current, sel = ifaceSelRef.current
@@ -113,12 +133,9 @@ export default function Viewer3Dmol({ pdbId, agResidues, abResidues, height = 48
         if (cancelled) return
         if (!showBgRef.current) applyBg(viewer, surf, false)  // respect the toggle across instances
 
-        // Interacting residues as bright sticks on top (they sit forward of the translucent volumes).
-        for (const g of groupByChain(agResidues))
-          viewer.setStyle({ chain: g.chain, resi: g.resi }, { stick: { radius: 0.25, colorscheme: carbonScheme(AG_CARBON) } })
-        for (const g of groupByChain(abResidues))
-          viewer.setStyle({ chain: g.chain, resi: g.resi }, { stick: { radius: 0.25, colorscheme: carbonScheme(AB_CARBON) } })
-        viewer.setStyle({ elem: 'H' }, {})  // hide hydrogens from the PDBe mmCIF
+        // Interacting residues as bright sticks on top (they sit forward of the translucent volumes),
+        // plus the current highlight if a Sankey node is selected.
+        restyle(viewer)
 
         // Hover a residue -> label with its normalised numbering (UniProt / IMGT).
         const labelMap = {}
@@ -148,6 +165,17 @@ export default function Viewer3Dmol({ pdbId, agResidues, abResidues, height = 48
     run()
     return () => { cancelled = true }
   }, [pdbId, agResidues, abResidues])
+
+  // When a Sankey node is clicked, re-apply styles with the highlight and bring it into view.
+  useEffect(() => {
+    const v = viewerRef.current
+    if (!v) return
+    restyle(v)
+    if (highlight && highlight.chain != null && highlight.resi != null) {
+      v.center({ chain: highlight.chain, resi: highlight.resi }, 350)
+    }
+    v.render()
+  }, [highlight])
 
   return (
     <>

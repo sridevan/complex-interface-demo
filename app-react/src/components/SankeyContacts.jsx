@@ -47,11 +47,13 @@ function buildGraph(rows) {
         : `${r.antibody_residue_name}${r.antibody_residue_author_number}`,
       color: abRegionColor(r.antibody_imgt_region),
       sub: r.antibody_imgt_region || 'unmapped',
+      chain: r.antibody_chain_id, resi: r.antibody_residue_author_number,  // for 3D highlight
     }))
     const agI = add(agKey, () => {
       const cls = AA_CLASS[r.antigen_residue_name] || 'unknown'
       return { kind: 'ag', name: `${r.antigen_residue_name}${r.antigen_uniprot_position}`,
-               color: AA_COLOR[cls], sub: cls }
+               color: AA_COLOR[cls], sub: cls,
+               chain: r.antigen_chain_id, resi: r.antigen_residue_author_number }  // for 3D highlight
     })
     const lk = `${agI}->${abI}`   // antigen (left / source) -> antibody (right / target)
     if (!linkMap.has(lk)) linkMap.set(lk, { value: 0, types: {}, minDist: Infinity, pairs: 0 })
@@ -111,11 +113,13 @@ function SankeyTooltip({ active, payload, linkInfo }) {
   return <div className="sankey-tip"><b>{nameStr}</b>{d?.sub ? ` (${d.sub})` : ''} · {item.value} bonds</div>
 }
 
-function SankeyNode({ x, y, width, height, index, payload }) {
+function SankeyNode({ x, y, width, height, index, payload, onNodeClick }) {
   const isLeft = payload.kind === 'ag'   // antigen nodes are on the left
   const h = Math.max(height, 3)  // floor so 1-2 bond residues are still a visible bar
+  const clickable = onNodeClick && payload.chain != null && payload.resi != null
   return (
-    <Layer key={`node-${index}`}>
+    <Layer key={`node-${index}`} style={{ cursor: clickable ? 'pointer' : 'default' }}
+           onClick={clickable ? () => onNodeClick({ chain: payload.chain, resi: payload.resi, name: payload.name }) : undefined}>
       <Rectangle x={x} y={y} width={width} height={h} fill={payload.color} fillOpacity={0.95} />
       <text
         x={isLeft ? x - 5 : x + width + 5}
@@ -134,7 +138,7 @@ const LEGEND_AA = [['acidic', AA_COLOR.acidic], ['basic', AA_COLOR.basic],
 const LEGEND_REGION = [['CDR1', REGION_CLASS_COLOR.CDR1], ['CDR2', REGION_CLASS_COLOR.CDR2],
                        ['CDR3', REGION_CLASS_COLOR.CDR3], ['Framework', REGION_CLASS_COLOR.Framework]]
 
-export default function SankeyContacts({ rows, title }) {
+export default function SankeyContacts({ rows, onNodeClick }) {
   const data = useMemo(() => buildGraph(rows || []), [rows])
   // Give every node room: ~24px of vertical space per node on the busier side so thin (low-bond)
   // residues separate enough to read their labels.
@@ -148,7 +152,7 @@ export default function SankeyContacts({ rows, title }) {
       <ResponsiveContainer width="100%" height={height}>
         <Sankey
           data={data}
-          node={<SankeyNode />}
+          node={<SankeyNode onNodeClick={onNodeClick} />}
           nodePadding={14}
           nodeWidth={12}
           link={{ stroke: '#b9c0c9', strokeOpacity: 0.35 }}
