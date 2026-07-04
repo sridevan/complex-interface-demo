@@ -60,12 +60,8 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .legend { font-size: 12px; color: var(--muted); margin: 8px 0; }
 .legend .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin: 0 4px 0 10px; vertical-align: middle; }
 
-/* Nightingale epitope track grid */
-.nt-grid { display: grid; grid-template-columns: 54px 1fr; gap: 3px 8px; align-items: center; width: 100%; }
-.nt-lbl { font-size: 11px; color: var(--muted); text-align: right; }
-.nt-grid nightingale-navigation, .nt-grid nightingale-track-canvas { width: 100%; display: block; }
+/* Small hover-tooltip line (used by the contact heatmap) */
 .nt-tip { font-size: 12px; color: var(--muted); margin-top: 6px; }
-.linklike { background: none; border: none; color: var(--accent); cursor: pointer; font-size: 12px; padding: 0 2px; text-decoration: underline; }
 
 /* Explorer dashboard */
 /* Row 1: narrow selector cards + wide Mol* viewer. Row 2: even 50/50 split. */
