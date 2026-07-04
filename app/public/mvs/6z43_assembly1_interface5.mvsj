@@ -102,7 +102,9 @@
                       {
                         "kind": "representation",
                         "params": {
-                          "type": "ball_and_stick"
+                          "type": "ball_and_stick",
+                          "ignore_hydrogens": true,
+                          "size_factor": 0.2
                         },
                         "children": [
                           {
@@ -200,7 +202,9 @@
                       {
                         "kind": "representation",
                         "params": {
-                          "type": "ball_and_stick"
+                          "type": "ball_and_stick",
+                          "ignore_hydrogens": true,
+                          "size_factor": 0.2
                         },
                         "children": [
                           {
@@ -364,7 +368,7 @@
     ]
   },
   "metadata": {
-    "timestamp": "2026-07-04T11:54:58.222973+00:00",
+    "timestamp": "2026-07-04T12:10:11.481463+00:00",
     "version": "1.8"
   }
 }

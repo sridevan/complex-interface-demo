@@ -151,7 +151,8 @@ def build_interface_mvsj(pdb_id, assembly_id, itf, antigen_auth, antibody_auth):
                  for la, seqs in side_label[side].items() for seq in sorted(seqs)]
         if not exprs:
             continue
-        rep = structure.component(selector=exprs).representation(type="ball_and_stick")
+        rep = structure.component(selector=exprs).representation(
+            type="ball_and_stick", size_factor=0.2, ignore_hydrogens=True)
         rep.color(color=carbon)  # base: carbons + anything not overridden below
         rep.color(color=O_COLOR, selector=mvs.ComponentExpression(type_symbol="O"))
         rep.color(color=N_COLOR, selector=mvs.ComponentExpression(type_symbol="N"))
