@@ -142,7 +142,7 @@ export default function Explorer({ interfaces, residue, epitope }) {
 
         {/* Row 1, Col 2 — Mol* */}
         <div className="card ex-cell">
-          <h2>Interface structure{selected ? ` (${selected.pdb_id} interface ${selected.interface_id})` : ''}</h2>
+          <h2>Interface 3D visualisation{selected ? ` (${selected.pdb_id} interface ${selected.interface_id})` : ''}</h2>
           <div className="legend" style={{ marginTop: 0 }}>
             <span className="dot" style={{ background: '#4b7fcc' }} /> antigen
             <span className="dot" style={{ background: '#e19039' }} /> antibody · structure served from PDBe
