@@ -30,9 +30,12 @@ export default function DataTable({ columns, rows, initialSort, initialDir = 'de
         <thead>
           <tr>
             {columns.map((c) => (
-              <th key={c.key} className={c.num ? 'num' : ''} onClick={() => onSort(c.key)}>
+              <th key={c.key} className={(c.num ? 'num ' : '') + 'sortable'}
+                  onClick={() => onSort(c.key)} title="Click to sort">
                 {c.label}
-                {sortKey === c.key && <span className="arrow">{dir === 'asc' ? '▲' : '▼'}</span>}
+                <span className={'sort-ind' + (sortKey === c.key ? ' active' : '')}>
+                  {sortKey === c.key ? (dir === 'asc' ? '▲' : '▼') : '↕'}
+                </span>
               </th>
             ))}
           </tr>

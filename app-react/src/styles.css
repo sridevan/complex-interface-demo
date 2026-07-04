@@ -45,8 +45,13 @@ select, input[type="text"] { padding: 6px 8px; border: 1px solid var(--border); 
 .table-scroll { overflow-x: auto; }
 table { border-collapse: collapse; width: 100%; font-size: 13px; }
 th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--border); white-space: nowrap; }
-th { position: sticky; top: 0; background: #fbfcfd; cursor: pointer; user-select: none; font-weight: 600; }
-th .arrow { color: var(--accent); margin-left: 4px; }
+th { position: sticky; top: 0; background: #fbfcfd; user-select: none; font-weight: 600; }
+/* Only click-sortable headers get the pointer + a persistent sort cue. */
+th.sortable { cursor: pointer; }
+th.sortable:hover { background: #eef2f7; }
+.sort-ind { margin-left: 5px; font-size: 10px; color: #c2c8d0; }   /* faint chevron = sortable */
+th.sortable:hover .sort-ind { color: var(--muted); }
+.sort-ind.active { color: var(--accent); }                          /* solid arrow = active sort */
 tbody tr:hover { background: #f4f7fb; }
 td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .tag { display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: 11px; font-weight: 600; }
