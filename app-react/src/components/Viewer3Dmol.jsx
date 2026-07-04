@@ -20,7 +20,22 @@ function groupByChain(residues) {
 export default function Viewer3Dmol({ pdbId, agResidues, abResidues, height = 480 }) {
   const hostRef = useRef(null)
   const viewerRef = useRef(null)
+  const surfRef = useRef(null)
+  const showBgRef = useRef(true)
+  const [showBg, setShowBg] = useState(true)
   const [err, setErr] = useState(null)
+
+  // Show/hide the grey context volume (background) without recomputing the surface.
+  const applyBg = (v, surf, show) => {
+    if (!v || surf == null) return
+    try { v.setSurfaceMaterialStyle(surf, { opacity: show ? 0.3 : 0, color: '#dce0e6' }); v.render() } catch { /* noop */ }
+  }
+  const toggleBg = () => {
+    const next = !showBgRef.current
+    showBgRef.current = next
+    setShowBg(next)
+    applyBg(viewerRef.current, surfRef.current, next)
+  }
 
   useEffect(() => {
     let cancelled = false
@@ -48,8 +63,10 @@ export default function Viewer3Dmol({ pdbId, agResidues, abResidues, height = 48
         // volume), restricted to the region around the interface so it stays fast. The coloured
         // sticks already convey antigen vs antibody, so a neutral volume reads cleanest.
         const near = { within: { distance: 16, sel: ifaceSel } }
-        await viewer.addSurface($3Dmol.SurfaceType.VDW, { opacity: 0.3, color: '#dce0e6' }, near)
+        const surf = await viewer.addSurface($3Dmol.SurfaceType.VDW, { opacity: 0.3, color: '#dce0e6' }, near)
+        surfRef.current = surf
         if (cancelled) return
+        if (!showBgRef.current) applyBg(viewer, surf, false)  // respect the toggle across instances
 
         // Interacting residues as bright sticks on top (they sit forward of the translucent volumes).
         for (const g of groupByChain(agResidues))
@@ -88,7 +105,13 @@ export default function Viewer3Dmol({ pdbId, agResidues, abResidues, height = 48
 
   return (
     <>
-      <div ref={hostRef} className="viewer" style={{ height }} />
+      <div className="viewer-wrap" style={{ height }}>
+        <div ref={hostRef} className="viewer" style={{ height }} />
+        <button className="viewer-btn" onClick={toggleBg}
+                title="Toggle the surrounding structure (background)">
+          {showBg ? 'Hide background' : 'Show background'}
+        </button>
+      </div>
       {err && <p className="note" style={{ color: '#b1442f' }}>{err}</p>}
     </>
   )
