@@ -65,7 +65,7 @@ export default function ContactHeatmap({ residue, onSelect, chainType }) {
   }, [rows, sortBy])
 
   const title = chainType
-    ? `Aggregated epitope × paratope contact map (all ${chainType} chain instances)`
+    ? 'Aggregated epitope × paratope contact map'
     : 'Epitope × paratope contact map'
 
   return (

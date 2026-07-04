@@ -156,7 +156,7 @@ export default function Explorer({ interfaces, residue, epitope }) {
       <div className="ex-row ex-row2">
         {/* Row 2, Col 1 — instances table */}
         <div className="card ex-cell">
-          <h2>Interface instances ({chainType} chain)</h2>
+          <h2>Interface instances</h2>
           <p className="note">Sorted by buried surface area (BSA) descending. <b>BSA</b> = PISA interface
             area, i.e. the surface area buried on complex formation (per side) — not solvent-accessible
             area (ASA).</p>
@@ -195,7 +195,7 @@ export default function Explorer({ interfaces, residue, epitope }) {
       {/* Row 3 — contact table + contact map, BOTH scoped to the selected heavy/light group */}
       <div className="ex-row ex-row3">
         <div className="card ex-cell">
-          <h2>Aggregated contact table (all {chainType} chain instances)</h2>
+          <h2>Aggregated contact table</h2>
           <p className="note">One row per epitope residue–paratope residue (IMGT) contact, aggregated
             over <b>all {chainType}-chain interface instances</b> across every processed structure (not
             the single instance selected above). Antibody residue = residue name and IMGT position;
