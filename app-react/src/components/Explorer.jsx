@@ -4,9 +4,12 @@ import SankeyContacts from './SankeyContacts.jsx'
 import ContactHeatmap from './ContactHeatmap.jsx'
 import DataTable from './DataTable.jsx'
 
+// Residue columns sort by sequence position (antigen UniProt, antibody IMGT + insertion code),
+// which is how epitope/paratope residues are read — not alphabetically by the displayed label.
 const CONTACT_COLS = [
-  { key: 'antigen', label: 'Antigen residue' },
-  { key: 'antibody_residue', label: 'Antibody residue' },
+  { key: 'antigen', label: 'Antigen residue', sortValue: (r) => r.antigen_uniprot_position ?? Infinity },
+  { key: 'antibody_residue', label: 'Antibody residue',
+    sortValue: (r) => (r.ab_pos ?? 9999) + (r.ab_ins ? (r.ab_ins.charCodeAt(0) - 64) / 100 : 0) },
   { key: 'region', label: 'Antibody region' },
   { key: 'contacts', label: 'Contacts', num: true },
   { key: 'assemblies', label: 'Assemblies', num: true },
@@ -26,7 +29,9 @@ function contactTable(rows) {
     if (!m.has(k)) m.set(k, {
       antigen: `${p.antigen_residue_name}${p.antigen_uniprot_position}`,
       antigen_uniprot_position: p.antigen_uniprot_position,
-      antibody_residue: abres, region: p.antibody_imgt_region, contacts: 0, asm: new Set(),
+      antibody_residue: abres, region: p.antibody_imgt_region,
+      ab_pos: p.antibody_imgt_position, ab_ins: p.antibody_imgt_insertion_code || '',
+      contacts: 0, asm: new Set(),
     })
     const e = m.get(k)
     e.contacts += 1
