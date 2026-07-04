@@ -20,7 +20,7 @@ function cell(t) {
   return { bg: `rgb(${r},${g},${b})`, fg: lum < 150 ? '#ffffff' : '#2a2f36' }
 }
 
-export default function ContactHeatmap({ residue, onSelect, chainType }) {
+export default function ContactHeatmap({ residue, onSelect, selected, chainType }) {
   const [sortBy, setSortBy] = useState('contacts')  // 'contacts' | 'position'
   const [hover, setHover] = useState(null)
 
@@ -74,7 +74,7 @@ export default function ContactHeatmap({ residue, onSelect, chainType }) {
         Contact intensity between each antigen residue (UniProt position, from PISA) and each antibody
         IMGT region (from ANARCII), aggregated across all processed structures as the number of
         contact pairs. Single-hue scale (white-to-purple) is colour-blind-safe. Click a row to filter
-        the residue table.
+        the aggregated contact table to that antigen residue (click again to clear).
       </p>
       <div className="controls">
         <label>Sort</label>
@@ -104,7 +104,9 @@ export default function ContactHeatmap({ residue, onSelect, chainType }) {
           </thead>
           <tbody>
             {sorted.map((row) => (
-              <tr key={row.position} className="selrow" onClick={() => onSelect?.(row.position)}>
+              <tr key={row.position} className={'selrow' + (row.position === selected ? ' sel' : '')}
+                  onClick={() => onSelect?.(row.position)}
+                  title="Click to filter the aggregated contact table to this antigen residue">
                 <td className="hm-rowhead">{row.residue}{row.position}</td>
                 {REGIONS.map((r) => {
                   const v = row.values[r]

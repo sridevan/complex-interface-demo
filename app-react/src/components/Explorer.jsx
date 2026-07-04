@@ -72,8 +72,10 @@ export default function Explorer({ interfaces, residue, epitope }) {
   const [chainType, setChainType] = useState('heavy')
   const [selKey, setSelKey] = useState(null)
   const [highlight, setHighlight] = useState(null)  // residue clicked in the Sankey -> highlight in 3D
+  const [epiFilter, setEpiFilter] = useState(null)  // antigen UniProt pos clicked in heatmap -> filter contact table
   const selectInstance = (k) => { setSelKey(k); setHighlight(null) }
-  const pickChain = (t) => { setChainType(t); setSelKey(null); setHighlight(null) }
+  const pickChain = (t) => { setChainType(t); setSelKey(null); setHighlight(null); setEpiFilter(null) }
+  const toggleEpi = (pos) => setEpiFilter((p) => (p === pos ? null : pos))
 
   const byType = useMemo(() => {
     const bySide = (t) => interfaces.filter((i) => i.antibody_chain_type === t)
@@ -121,6 +123,10 @@ export default function Explorer({ interfaces, residue, epitope }) {
   // Row 3 shows ONLY the selected chain type's contacts (not heavy + light combined).
   const typeResidue = useMemo(() => residue.filter((r) => r.antibody_chain_type === chainType), [residue, chainType])
   const typeContactTable = useMemo(() => contactTable(typeResidue), [typeResidue])
+  const shownContactTable = useMemo(() => epiFilter == null ? typeContactTable
+    : typeContactTable.filter((r) => r.antigen_uniprot_position === epiFilter), [typeContactTable, epiFilter])
+  const epiLabel = epiFilter == null ? null
+    : (typeContactTable.find((r) => r.antigen_uniprot_position === epiFilter)?.antigen ?? `residue ${epiFilter}`)
 
   return (
     <>
@@ -200,11 +206,17 @@ export default function Explorer({ interfaces, residue, epitope }) {
             over <b>all {chainType}-chain interface instances</b> across every processed structure (not
             the single instance selected above). Antibody residue = residue name and IMGT position;
             region = IMGT region (CDR-H1/2/3, Framework-H, …). Sorted by number of contacts.</p>
+          {epiFilter != null && (
+            <div className="filter-chip">
+              Filtered to antigen residue <b>{epiLabel}</b>
+              <button onClick={() => setEpiFilter(null)}>clear ✕</button>
+            </div>
+          )}
           <div className="ex-scroll">
-            <DataTable columns={CONTACT_COLS} rows={typeContactTable} initialSort="contacts" />
+            <DataTable columns={CONTACT_COLS} rows={shownContactTable} initialSort="contacts" />
           </div>
         </div>
-        <ContactHeatmap residue={typeResidue} chainType={chainType} />
+        <ContactHeatmap residue={typeResidue} onSelect={toggleEpi} selected={epiFilter} chainType={chainType} />
       </div>
     </>
   )
