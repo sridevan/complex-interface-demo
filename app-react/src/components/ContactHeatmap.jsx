@@ -8,14 +8,16 @@ const SHORT = { 'CDR-H1': 'H1', 'CDR-H2': 'H2', 'CDR-H3': 'H3', 'Framework-H': '
                 'CDR-L1': 'L1', 'CDR-L2': 'L2', 'CDR-L3': 'L3', 'Framework-L': 'FR-L' }
 
 // Single-hue sequential ramp (white -> deep purple). Colourblind-safe (no rainbow); sqrt boosts
-// visibility of low counts. t in [0,1].
-function color(t) {
-  if (t <= 0) return '#ffffff'
+// visibility of low counts. Returns { bg, fg }: the count text flips to white on dark cells so it
+// never gets swallowed by the deep-purple end of the ramp. t in [0,1].
+function cell(t) {
+  if (t <= 0) return { bg: '#ffffff', fg: '#2a2f36' }
   const k = Math.sqrt(Math.min(1, t))
   const lerp = (a, b) => Math.round(a + (b - a) * k)
   // #f4f0fa (very light) -> #3f007d (deep purple)
   const r = lerp(244, 63), g = lerp(240, 0), b = lerp(250, 125)
-  return `rgb(${r},${g},${b})`
+  const lum = 0.299 * r + 0.587 * g + 0.114 * b   // perceived brightness
+  return { bg: `rgb(${r},${g},${b})`, fg: lum < 150 ? '#ffffff' : '#2a2f36' }
 }
 
 export default function ContactHeatmap({ residue, onSelect, chainType }) {
@@ -114,9 +116,10 @@ export default function ContactHeatmap({ residue, onSelect, chainType }) {
                 <td className="hm-rowhead">{row.residue}{row.position}</td>
                 {REGIONS.map((r) => {
                   const v = row.values[r]
+                  const c = cell(v / maxVal)
                   return (
                     <td key={r} className="hm-cell"
-                        style={{ background: color(v / maxVal) }}
+                        style={{ background: c.bg, color: c.fg }}
                         onMouseEnter={() => setHover(`${row.residue}${row.position} × ${r}: ${v} ${metric === 'pairs' ? 'contact pairs' : 'structures'}`)}
                         onMouseLeave={() => setHover(null)}>
                       {v > 0 ? v : ''}
