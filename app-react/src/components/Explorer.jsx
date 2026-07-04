@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react'
-import MolstarViewer from './MolstarViewer.jsx'
+import Viewer3Dmol from './Viewer3Dmol.jsx'
 import SankeyContacts from './SankeyContacts.jsx'
 import ContactHeatmap from './ContactHeatmap.jsx'
 import DataTable from './DataTable.jsx'
@@ -85,6 +85,27 @@ export default function Explorer({ interfaces, residue, epitope }) {
       && r.assembly_id === selected.assembly_id && r.interface_id === selected.interface_id)
   }, [selected, residue])
 
+  // Interface residues for the 3D viewer (author chain + author residue number + a hover label
+  // showing the normalised numbering — UniProt for antigen, IMGT + region for antibody).
+  const iface = useMemo(() => {
+    const ag = new Map(), ab = new Map()
+    for (const r of sankeyRows) {
+      // Consistent label: <chain>:<resname><resnum> (numbering scheme). Antigen -> UniProt, antibody -> IMGT.
+      const agNum = r.antigen_uniprot_position ?? r.antigen_residue_author_number
+      ag.set(`${r.antigen_chain_id}|${r.antigen_residue_author_number}`, {
+        chain: r.antigen_chain_id, resi: r.antigen_residue_author_number,
+        label: `${r.antigen_chain_id}:${r.antigen_residue_name}${agNum} (UNP)`,
+      })
+      const abNum = r.antibody_imgt_position != null
+        ? `${r.antibody_imgt_position}${r.antibody_imgt_insertion_code || ''}` : r.antibody_residue_author_number
+      ab.set(`${r.antibody_chain_id}|${r.antibody_residue_author_number}`, {
+        chain: r.antibody_chain_id, resi: r.antibody_residue_author_number,
+        label: `${r.antibody_chain_id}:${r.antibody_residue_name}${abNum} (IMGT)`,
+      })
+    }
+    return { ag: [...ag.values()], ab: [...ab.values()] }
+  }, [sankeyRows])
+
   // Row 3 shows ONLY the selected chain type's contacts (not heavy + light combined).
   const typeResidue = useMemo(() => residue.filter((r) => r.antibody_chain_type === chainType), [residue, chainType])
   const typeContactTable = useMemo(() => contactTable(typeResidue), [typeResidue])
@@ -114,7 +135,7 @@ export default function Explorer({ interfaces, residue, epitope }) {
             <span className="dot" style={{ background: '#4b7fcc' }} /> antigen
             <span className="dot" style={{ background: '#e19039' }} /> antibody · structure served from PDBe
           </div>
-          {selected ? <MolstarViewer mvsj={selected.mvsj} height={480} />
+          {selected ? <Viewer3Dmol pdbId={selected.pdb_id} agResidues={iface.ag} abResidues={iface.ab} height={480} />
             : <p className="note">No instance selected.</p>}
         </div>
       </div>

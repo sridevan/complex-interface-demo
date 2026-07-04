@@ -23,15 +23,20 @@ region** and is dominated by **CDR-H3**.
 A React dashboard (Vite + Recharts, Mol\* from CDN) that reads the processed tables:
 
 - **Interface explorer** — heavy/light selector cards (median interface BSA + instance count)
-  driving an instances table, an embedded **Mol\*** 3D viewer, a per-interface **Sankey** of
-  paratope→epitope contacts (antigen coloured by residue class, antibody by IMGT region, with a
-  hover breakdown of interaction types / distance), and an aggregated contact table + heatmap.
-- **Epitope map** — a PDBe-KB-style **Nightingale canvas track** of per-residue antibody
-  contacts along the spike UniProt sequence; click a residue to filter the tables.
-- **Contact map** — an epitope × paratope-region contact-frequency **heatmap** (colour-blind-safe).
-- Aggregated **epitope residues**, **paratope (IMGT) positions**, a filterable **residue
-  contacts** table, **summary charts**, a **structure viewer**, and a **data-provenance** panel
-  (antigen-UniProt coverage + upstream mapping anomalies).
+  driving an instances table (sorted by BSA), an embedded **3D viewer**, a per-interface **Sankey**
+  of epitope→paratope contacts (antigen coloured by residue class, antibody by IMGT region, with a
+  hover breakdown of interaction types / distance), and an aggregated contact table + contact
+  heatmap (both scoped to the selected chain type).
+- **Data provenance** — per-assembly antigen-UniProt coverage (PISA vs SIFTS fallback) and the
+  UniProt-on-antibody anomaly log.
+
+**3D viewer.** The demo uses **3Dmol.js** (`Viewer3Dmol.jsx`): the two partners as a faint grey
+molecular-surface "volume", the interacting side chains as sticks (antigen blue / antibody orange
+carbons + CPK heteroatoms), and hover labels in `<chain>:<resname><resnum> (UNP|IMGT)` form. It
+builds the scene client-side from the app's residue data — no pre-built scene files needed.
+A **Mol\*** path is kept as a production backup: `MolstarViewer.jsx` + the pre-built `.mvsj` scenes
+from `scripts/build_mvs.py` (side chains as sticks with the same colouring). Swap `Viewer3Dmol` for
+`MolstarViewer` in `Explorer.jsx` and restore the Mol\* CDN in `index.html` to use it.
 
 A lightweight **Streamlit** app (`app/app.py`) covers the same tables.
 
