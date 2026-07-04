@@ -12,8 +12,10 @@ export default function DataTable({ columns, rows, initialSort, initialDir = 'de
       if (av === bv) return 0
       if (av === null || av === undefined) return 1
       if (bv === null || bv === undefined) return -1
+      // Natural sort: numeric-aware so residue ids like LYS40/LYS386 order by their
+      // embedded number, not lexicographically (LYS386 before LYS40).
       const cmp = typeof av === 'number' && typeof bv === 'number'
-        ? av - bv : String(av).localeCompare(String(bv))
+        ? av - bv : String(av).localeCompare(String(bv), undefined, { numeric: true, sensitivity: 'base' })
       return dir === 'asc' ? cmp : -cmp
     })
     return copy
