@@ -40,9 +40,14 @@ BOND_TYPES = ["hydrogen_bonds", "salt_bridges", "disulfide_bonds", "covalent_bon
 # PDBe updated mmCIF carries label ids + UniProt mapping consistent with PISA.
 PDBE_CIF_URL = "https://www.ebi.ac.uk/pdbe/entry-files/download/{pdb_id}_updated.cif"
 
-ANTIGEN_COLOR = "#4b7fcc"   # blue
-ANTIBODY_COLOR = "#e19039"  # orange
+ANTIGEN_COLOR = "#4b7fcc"   # blue   (antigen side-chain carbons)
+ANTIBODY_COLOR = "#e19039"  # orange (antibody side-chain carbons)
 CONTEXT_COLOR = "#d0d0d0"   # faint grey cartoon
+# CPK heteroatom colours overlaid on the side-chain sticks (carbon keeps the per-side colour),
+# giving a chemical, histo.fyi/YRB-style read of the interface side chains.
+O_COLOR = "#d1392c"  # oxygen  – red
+N_COLOR = "#3454d1"  # nitrogen – blue
+S_COLOR = "#e6b800"  # sulfur  – yellow
 
 
 def load_interfaces(path):
@@ -137,16 +142,21 @@ def build_interface_mvsj(pdb_id, assembly_id, itf, antigen_auth, antibody_auth):
     # Faint context cartoon for the whole polymer.
     structure.component(selector="polymer").representation(type="cartoon").color(color=CONTEXT_COLOR)
 
+    # Interface residues as ball-and-stick side chains: carbons coloured by side (antigen blue /
+    # antibody orange), heteroatoms by CPK (O red, N blue, S yellow).
     focus_expressions = []
     for side in (1, 2):
-        role = roles[side]
-        color = ANTIGEN_COLOR if role == "antigen" else ANTIBODY_COLOR
-        for label_asym, seqs in side_label[side].items():
-            for seq in sorted(seqs):
-                expr = mvs.ComponentExpression(label_asym_id=label_asym, label_seq_id=seq)
-                comp = structure.component(selector=expr)
-                comp.representation(type="ball_and_stick").color(color=color)
-                focus_expressions.append(expr)
+        carbon = ANTIGEN_COLOR if roles[side] == "antigen" else ANTIBODY_COLOR
+        exprs = [mvs.ComponentExpression(label_asym_id=la, label_seq_id=seq)
+                 for la, seqs in side_label[side].items() for seq in sorted(seqs)]
+        if not exprs:
+            continue
+        rep = structure.component(selector=exprs).representation(type="ball_and_stick")
+        rep.color(color=carbon)  # base: carbons + anything not overridden below
+        rep.color(color=O_COLOR, selector=mvs.ComponentExpression(type_symbol="O"))
+        rep.color(color=N_COLOR, selector=mvs.ComponentExpression(type_symbol="N"))
+        rep.color(color=S_COLOR, selector=mvs.ComponentExpression(type_symbol="S"))
+        focus_expressions.extend(exprs)
 
     # Focus camera on the union of interface residues (a dedicated component we .focus()).
     if focus_expressions:

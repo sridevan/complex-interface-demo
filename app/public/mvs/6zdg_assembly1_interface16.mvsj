@@ -47,10 +47,12 @@
                   {
                     "kind": "component",
                     "params": {
-                      "selector": {
-                        "label_asym_id": "D",
-                        "label_seq_id": 149
-                      }
+                      "selector": [
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 149
+                        }
+                      ]
                     },
                     "children": [
                       {
@@ -64,6 +66,33 @@
                             "params": {
                               "color": "#4b7fcc"
                             }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "O"
+                              },
+                              "color": "#d1392c"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "N"
+                              },
+                              "color": "#3454d1"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "S"
+                              },
+                              "color": "#e6b800"
+                            }
                           }
                         ]
                       }
@@ -72,10 +101,12 @@
                   {
                     "kind": "component",
                     "params": {
-                      "selector": {
-                        "label_asym_id": "B",
-                        "label_seq_id": 89
-                      }
+                      "selector": [
+                        {
+                          "label_asym_id": "B",
+                          "label_seq_id": 89
+                        }
+                      ]
                     },
                     "children": [
                       {
@@ -88,6 +119,33 @@
                             "kind": "color",
                             "params": {
                               "color": "#e19039"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "O"
+                              },
+                              "color": "#d1392c"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "N"
+                              },
+                              "color": "#3454d1"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "S"
+                              },
+                              "color": "#e6b800"
                             }
                           }
                         ]
@@ -130,7 +188,7 @@
     ]
   },
   "metadata": {
-    "timestamp": "2026-07-04T03:24:25.683654+00:00",
+    "timestamp": "2026-07-04T11:54:58.235163+00:00",
     "version": "1.8"
   }
 }

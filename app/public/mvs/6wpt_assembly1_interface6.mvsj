@@ -47,10 +47,68 @@
                   {
                     "kind": "component",
                     "params": {
-                      "selector": {
-                        "label_asym_id": "C",
-                        "label_seq_id": 353
-                      }
+                      "selector": [
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 353
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 354
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 356
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 358
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 359
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 362
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 363
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 364
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 373
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 375
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 376
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 378
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 379
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 380
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 528
+                        }
+                      ]
                     },
                     "children": [
                       {
@@ -64,30 +122,32 @@
                             "params": {
                               "color": "#4b7fcc"
                             }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "C",
-                        "label_seq_id": 354
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
-                        },
-                        "children": [
+                          },
                           {
                             "kind": "color",
                             "params": {
-                              "color": "#4b7fcc"
+                              "selector": {
+                                "type_symbol": "O"
+                              },
+                              "color": "#d1392c"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "N"
+                              },
+                              "color": "#3454d1"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "S"
+                              },
+                              "color": "#e6b800"
                             }
                           }
                         ]
@@ -97,335 +157,52 @@
                   {
                     "kind": "component",
                     "params": {
-                      "selector": {
-                        "label_asym_id": "C",
-                        "label_seq_id": 356
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
+                      "selector": [
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 28
                         },
-                        "children": [
-                          {
-                            "kind": "color",
-                            "params": {
-                              "color": "#4b7fcc"
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "C",
-                        "label_seq_id": 358
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 30
                         },
-                        "children": [
-                          {
-                            "kind": "color",
-                            "params": {
-                              "color": "#4b7fcc"
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "C",
-                        "label_seq_id": 359
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 100
                         },
-                        "children": [
-                          {
-                            "kind": "color",
-                            "params": {
-                              "color": "#4b7fcc"
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "C",
-                        "label_seq_id": 362
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 103
                         },
-                        "children": [
-                          {
-                            "kind": "color",
-                            "params": {
-                              "color": "#4b7fcc"
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "C",
-                        "label_seq_id": 363
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 104
                         },
-                        "children": [
-                          {
-                            "kind": "color",
-                            "params": {
-                              "color": "#4b7fcc"
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "C",
-                        "label_seq_id": 364
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 105
                         },
-                        "children": [
-                          {
-                            "kind": "color",
-                            "params": {
-                              "color": "#4b7fcc"
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "C",
-                        "label_seq_id": 373
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 106
                         },
-                        "children": [
-                          {
-                            "kind": "color",
-                            "params": {
-                              "color": "#4b7fcc"
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "C",
-                        "label_seq_id": 375
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 108
                         },
-                        "children": [
-                          {
-                            "kind": "color",
-                            "params": {
-                              "color": "#4b7fcc"
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "C",
-                        "label_seq_id": 376
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 109
                         },
-                        "children": [
-                          {
-                            "kind": "color",
-                            "params": {
-                              "color": "#4b7fcc"
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "C",
-                        "label_seq_id": 378
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 110
                         },
-                        "children": [
-                          {
-                            "kind": "color",
-                            "params": {
-                              "color": "#4b7fcc"
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "C",
-                        "label_seq_id": 379
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
-                        },
-                        "children": [
-                          {
-                            "kind": "color",
-                            "params": {
-                              "color": "#4b7fcc"
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "C",
-                        "label_seq_id": 380
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
-                        },
-                        "children": [
-                          {
-                            "kind": "color",
-                            "params": {
-                              "color": "#4b7fcc"
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "C",
-                        "label_seq_id": 528
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
-                        },
-                        "children": [
-                          {
-                            "kind": "color",
-                            "params": {
-                              "color": "#4b7fcc"
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "D",
-                        "label_seq_id": 28
-                      }
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 111
+                        }
+                      ]
                     },
                     "children": [
                       {
@@ -439,255 +216,32 @@
                             "params": {
                               "color": "#e19039"
                             }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "D",
-                        "label_seq_id": 30
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
-                        },
-                        "children": [
+                          },
                           {
                             "kind": "color",
                             "params": {
-                              "color": "#e19039"
+                              "selector": {
+                                "type_symbol": "O"
+                              },
+                              "color": "#d1392c"
                             }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "D",
-                        "label_seq_id": 100
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
-                        },
-                        "children": [
+                          },
                           {
                             "kind": "color",
                             "params": {
-                              "color": "#e19039"
+                              "selector": {
+                                "type_symbol": "N"
+                              },
+                              "color": "#3454d1"
                             }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "D",
-                        "label_seq_id": 103
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
-                        },
-                        "children": [
+                          },
                           {
                             "kind": "color",
                             "params": {
-                              "color": "#e19039"
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "D",
-                        "label_seq_id": 104
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
-                        },
-                        "children": [
-                          {
-                            "kind": "color",
-                            "params": {
-                              "color": "#e19039"
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "D",
-                        "label_seq_id": 105
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
-                        },
-                        "children": [
-                          {
-                            "kind": "color",
-                            "params": {
-                              "color": "#e19039"
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "D",
-                        "label_seq_id": 106
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
-                        },
-                        "children": [
-                          {
-                            "kind": "color",
-                            "params": {
-                              "color": "#e19039"
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "D",
-                        "label_seq_id": 108
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
-                        },
-                        "children": [
-                          {
-                            "kind": "color",
-                            "params": {
-                              "color": "#e19039"
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "D",
-                        "label_seq_id": 109
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
-                        },
-                        "children": [
-                          {
-                            "kind": "color",
-                            "params": {
-                              "color": "#e19039"
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "D",
-                        "label_seq_id": 110
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
-                        },
-                        "children": [
-                          {
-                            "kind": "color",
-                            "params": {
-                              "color": "#e19039"
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "D",
-                        "label_seq_id": 111
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
-                        },
-                        "children": [
-                          {
-                            "kind": "color",
-                            "params": {
-                              "color": "#e19039"
+                              "selector": {
+                                "type_symbol": "S"
+                              },
+                              "color": "#e6b800"
                             }
                           }
                         ]
@@ -826,7 +380,7 @@
     ]
   },
   "metadata": {
-    "timestamp": "2026-07-04T03:24:11.334873+00:00",
+    "timestamp": "2026-07-04T11:54:58.181316+00:00",
     "version": "1.8"
   }
 }

@@ -47,10 +47,16 @@
                   {
                     "kind": "component",
                     "params": {
-                      "selector": {
-                        "label_asym_id": "B",
-                        "label_seq_id": 486
-                      }
+                      "selector": [
+                        {
+                          "label_asym_id": "B",
+                          "label_seq_id": 486
+                        },
+                        {
+                          "label_asym_id": "B",
+                          "label_seq_id": 489
+                        }
+                      ]
                     },
                     "children": [
                       {
@@ -64,30 +70,32 @@
                             "params": {
                               "color": "#4b7fcc"
                             }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "B",
-                        "label_seq_id": 489
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
-                        },
-                        "children": [
+                          },
                           {
                             "kind": "color",
                             "params": {
-                              "color": "#4b7fcc"
+                              "selector": {
+                                "type_symbol": "O"
+                              },
+                              "color": "#d1392c"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "N"
+                              },
+                              "color": "#3454d1"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "S"
+                              },
+                              "color": "#e6b800"
                             }
                           }
                         ]
@@ -97,10 +105,24 @@
                   {
                     "kind": "component",
                     "params": {
-                      "selector": {
-                        "label_asym_id": "E",
-                        "label_seq_id": 67
-                      }
+                      "selector": [
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 67
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 69
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 70
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 72
+                        }
+                      ]
                     },
                     "children": [
                       {
@@ -114,80 +136,32 @@
                             "params": {
                               "color": "#e19039"
                             }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "E",
-                        "label_seq_id": 69
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
-                        },
-                        "children": [
+                          },
                           {
                             "kind": "color",
                             "params": {
-                              "color": "#e19039"
+                              "selector": {
+                                "type_symbol": "O"
+                              },
+                              "color": "#d1392c"
                             }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "E",
-                        "label_seq_id": 70
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
-                        },
-                        "children": [
+                          },
                           {
                             "kind": "color",
                             "params": {
-                              "color": "#e19039"
+                              "selector": {
+                                "type_symbol": "N"
+                              },
+                              "color": "#3454d1"
                             }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "E",
-                        "label_seq_id": 72
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
-                        },
-                        "children": [
+                          },
                           {
                             "kind": "color",
                             "params": {
-                              "color": "#e19039"
+                              "selector": {
+                                "type_symbol": "S"
+                              },
+                              "color": "#e6b800"
                             }
                           }
                         ]
@@ -246,7 +220,7 @@
     ]
   },
   "metadata": {
-    "timestamp": "2026-07-04T03:24:43.923557+00:00",
+    "timestamp": "2026-07-04T11:54:58.303478+00:00",
     "version": "1.8"
   }
 }

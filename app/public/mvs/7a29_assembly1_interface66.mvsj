@@ -47,10 +47,12 @@
                   {
                     "kind": "component",
                     "params": {
-                      "selector": {
-                        "label_asym_id": "A",
-                        "label_seq_id": 408
-                      }
+                      "selector": [
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 408
+                        }
+                      ]
                     },
                     "children": [
                       {
@@ -64,6 +66,33 @@
                             "params": {
                               "color": "#4b7fcc"
                             }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "O"
+                              },
+                              "color": "#d1392c"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "N"
+                              },
+                              "color": "#3454d1"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "S"
+                              },
+                              "color": "#e6b800"
+                            }
                           }
                         ]
                       }
@@ -72,10 +101,16 @@
                   {
                     "kind": "component",
                     "params": {
-                      "selector": {
-                        "label_asym_id": "F",
-                        "label_seq_id": 62
-                      }
+                      "selector": [
+                        {
+                          "label_asym_id": "F",
+                          "label_seq_id": 62
+                        },
+                        {
+                          "label_asym_id": "F",
+                          "label_seq_id": 63
+                        }
+                      ]
                     },
                     "children": [
                       {
@@ -89,30 +124,32 @@
                             "params": {
                               "color": "#e19039"
                             }
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "component",
-                    "params": {
-                      "selector": {
-                        "label_asym_id": "F",
-                        "label_seq_id": 63
-                      }
-                    },
-                    "children": [
-                      {
-                        "kind": "representation",
-                        "params": {
-                          "type": "ball_and_stick"
-                        },
-                        "children": [
+                          },
                           {
                             "kind": "color",
                             "params": {
-                              "color": "#e19039"
+                              "selector": {
+                                "type_symbol": "O"
+                              },
+                              "color": "#d1392c"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "N"
+                              },
+                              "color": "#3454d1"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "S"
+                              },
+                              "color": "#e6b800"
                             }
                           }
                         ]
@@ -159,7 +196,7 @@
     ]
   },
   "metadata": {
-    "timestamp": "2026-07-04T03:24:39.289779+00:00",
+    "timestamp": "2026-07-04T11:54:58.291961+00:00",
     "version": "1.8"
   }
 }
