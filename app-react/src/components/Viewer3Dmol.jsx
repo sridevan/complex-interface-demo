@@ -21,6 +21,7 @@ export default function Viewer3Dmol({ pdbId, agResidues, abResidues, height = 48
   const hostRef = useRef(null)
   const viewerRef = useRef(null)
   const surfRef = useRef(null)
+  const ifaceSelRef = useRef(null)
   const showBgRef = useRef(true)
   const labelsRef = useRef([])
   const showLabelsRef = useRef(false)
@@ -70,6 +71,14 @@ export default function Viewer3Dmol({ pdbId, agResidues, abResidues, height = 48
     if (!v) return
     if (next) addResidueLabels(v); else clearResidueLabels(v)
   }
+  // Re-frame the camera on the interacting residues (after the user has rotated/zoomed away).
+  const recenter = () => {
+    const v = viewerRef.current, sel = ifaceSelRef.current
+    if (!v || !sel) return
+    v.zoomTo(sel, 250)
+    v.zoom(1.2)
+    v.render()
+  }
 
   useEffect(() => {
     let cancelled = false
@@ -93,6 +102,7 @@ export default function Viewer3Dmol({ pdbId, agResidues, abResidues, height = 48
         const abChains = [...new Set(abResidues.map((r) => r.chain))]
         const groups = [...groupByChain(agResidues), ...groupByChain(abResidues)]
         const ifaceSel = { or: groups.map((g) => ({ chain: g.chain, resi: g.resi })) }
+        ifaceSelRef.current = ifaceSel
 
         // A single soft-grey translucent surface for the surrounding structure ("the rest" as a
         // volume), restricted to the region around the interface so it stays fast. The coloured
@@ -144,6 +154,10 @@ export default function Viewer3Dmol({ pdbId, agResidues, abResidues, height = 48
       <div className="viewer-wrap" style={{ height }}>
         <div ref={hostRef} className="viewer" style={{ height }} />
         <div className="viewer-btns">
+          <button className="viewer-btn" onClick={recenter}
+                  title="Re-center the view on the interacting residues">
+            Center
+          </button>
           <button className="viewer-btn" onClick={toggleBg}
                   title="Toggle the surrounding structure (background)">
             {showBg ? 'Hide background' : 'Show background'}
