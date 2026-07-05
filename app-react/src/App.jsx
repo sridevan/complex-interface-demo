@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { loadAll } from './data.js'
 import DataTable from './components/DataTable.jsx'
 import Explorer from './components/Explorer.jsx'
+import ComplexOverview from './components/ComplexOverview.jsx'
 
 const COMPLEX_ID = 'PDB-CPX-140202'
-const TABS = ['Interface explorer', 'Data provenance']
+const TABS = ['Complex overview', 'Interface explorer', 'Data provenance']
 
 export default function App() {
   const [data, setData] = useState(null)
@@ -13,6 +14,8 @@ export default function App() {
   if (!data) return <div className="wrap">Loading…</div>
 
   const epitope = data.aggregated_antigen_epitope_contacts || []
+  const abImgt = data.aggregated_antibody_imgt_contacts || []
+  const regions = data.imgt_region_contribution || []
   const residue = data.residue_level_interactions || []
   const interfaces = data.interface_summary || []
   const anomalies = data.mapping_anomalies || []
@@ -60,8 +63,9 @@ export default function App() {
         ))}
       </div>
 
-      {tab === 0 && <Explorer interfaces={interfaces} residue={residue} epitope={epitope} />}
-      {tab === 1 && <DataNotes anomalies={anomalies} coverage={coverage} />}
+      {tab === 0 && <ComplexOverview epitope={epitope} abImgt={abImgt} regions={regions} residue={residue} />}
+      {tab === 1 && <Explorer interfaces={interfaces} residue={residue} />}
+      {tab === 2 && <DataNotes anomalies={anomalies} coverage={coverage} />}
     </div>
   )
 }

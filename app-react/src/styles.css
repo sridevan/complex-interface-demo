@@ -114,6 +114,36 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .sankey-tip .st-row { margin-bottom: 2px; }
 .sankey-tip .st-types { color: #cfd5dd; }
 
+/* ── Complex overview: ranked bar-tables ─────────────────────────────────────────────── */
+/* Value label to the LEFT on white, then a visual-only bar in a light track (epitope + paratope
+   ranked tables). Keeps text off the coloured fill so nothing is dark-on-dark. */
+.bar-cell { display: flex; align-items: center; gap: 8px; }
+.bar-num { min-width: 26px; text-align: right; font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.bar-track { position: relative; flex: 1 1 auto; min-width: 40px; height: 14px;
+  background: #eef1f4; border-radius: 3px; overflow: hidden; }
+.bar-fill { display: block; height: 100%; border-radius: 3px; }
+.bar-split { display: flex; height: 100%; border-radius: 3px; overflow: hidden; }
+.bar-split > span { display: block; height: 100%; }
+.bar-hl { color: var(--muted); font-size: 11px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+/* Small colour key used inline in a note ("■ heavy ■ light"). */
+.ck { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin: 0 4px 0 8px; vertical-align: middle; }
+/* IMGT region tag in the paratope table. */
+.rtag { display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: 11px; font-weight: 600; }
+/* Top-contacted antigen residue chips. */
+.epi-chips { white-space: normal; }
+.chip { display: inline-flex; align-items: center; gap: 3px; background: #eef2f7; border-radius: 10px;
+  padding: 1px 4px 1px 7px; font-size: 11px; margin: 1px 3px 1px 0; }
+.chip-n { background: #d8e0ea; color: var(--muted); border-radius: 8px; padding: 0 5px; font-size: 10px; }
+
+/* CDR / framework contribution bars */
+.rc-list { display: flex; flex-direction: column; gap: 7px; }
+.rc-row { display: grid; grid-template-columns: 92px 1fr 48px auto; align-items: center; gap: 10px; font-size: 12px; }
+.rc-name { font-weight: 600; }
+.rc-bar { background: #f0f2f5; border-radius: 4px; height: 14px; overflow: hidden; }
+.rc-fill { height: 100%; border-radius: 4px; }
+.rc-val { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+.rc-sub { color: var(--muted); white-space: nowrap; }
+
 /* Contact heatmap */
 .hm-wrap { max-height: 560px; overflow: auto; border: 1px solid var(--border); border-radius: 8px; }
 /* Fill the card width: fixed layout with a fixed row-header column; region + Σ columns share the rest. */

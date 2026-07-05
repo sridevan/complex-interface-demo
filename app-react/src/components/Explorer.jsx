@@ -1,44 +1,6 @@
 import React, { useMemo, useState } from 'react'
 import Viewer3Dmol from './Viewer3Dmol.jsx'
 import SankeyContacts from './SankeyContacts.jsx'
-import ContactHeatmap from './ContactHeatmap.jsx'
-import DataTable from './DataTable.jsx'
-
-// Residue columns sort by sequence position (antigen UniProt, antibody IMGT + insertion code),
-// which is how epitope/paratope residues are read — not alphabetically by the displayed label.
-const CONTACT_COLS = [
-  { key: 'antigen', label: 'Antigen residue', sortValue: (r) => r.antigen_uniprot_position ?? Infinity },
-  { key: 'antibody_residue', label: 'Antibody residue',
-    sortValue: (r) => (r.ab_pos ?? 9999) + (r.ab_ins ? (r.ab_ins.charCodeAt(0) - 64) / 100 : 0) },
-  { key: 'region', label: 'Antibody region' },
-  { key: 'contacts', label: 'Contacts', num: true },
-  { key: 'assemblies', label: 'Assemblies', num: true },
-]
-
-// Aggregate ONE chain type's contacts per (antigen residue, antibody IMGT residue). Antibody residue
-// is identified by residue name + IMGT position (its conserved cross-structure identity); region is
-// the IMGT region (CDR-H1/2/3, Framework-H, ...), constant for a given IMGT position.
-function contactTable(rows) {
-  const m = new Map()
-  for (const p of rows) {
-    if (p.antigen_uniprot_position == null) continue
-    const abres = p.antibody_imgt_position != null
-      ? `${p.antibody_residue_name}${p.antibody_imgt_position}${p.antibody_imgt_insertion_code || ''}`
-      : `${p.antibody_residue_name}${p.antibody_residue_author_number}*`  // * = IMGT-unmapped
-    const k = `${p.antigen_uniprot_position}|${p.antigen_residue_name}|${abres}`
-    if (!m.has(k)) m.set(k, {
-      antigen: `${p.antigen_residue_name}${p.antigen_uniprot_position}`,
-      antigen_uniprot_position: p.antigen_uniprot_position,
-      antibody_residue: abres, region: p.antibody_imgt_region,
-      ab_pos: p.antibody_imgt_position, ab_ins: p.antibody_imgt_insertion_code || '',
-      contacts: 0, asm: new Set(),
-    })
-    const e = m.get(k)
-    e.contacts += 1
-    e.asm.add(`${p.pdb_id}|${p.assembly_id}`)
-  }
-  return [...m.values()].map((e) => ({ ...e, assemblies: e.asm.size }))
-}
 
 const median = (arr) => {
   if (!arr.length) return null
@@ -68,14 +30,12 @@ function SelectorCard({ label, color, count, medBsa, active, onClick }) {
   )
 }
 
-export default function Explorer({ interfaces, residue, epitope }) {
+export default function Explorer({ interfaces, residue }) {
   const [chainType, setChainType] = useState('heavy')
   const [selKey, setSelKey] = useState(null)
   const [highlight, setHighlight] = useState(null)  // residue clicked in the Sankey -> highlight in 3D
-  const [epiFilter, setEpiFilter] = useState(null)  // antigen UniProt pos clicked in heatmap -> filter contact table
   const selectInstance = (k) => { setSelKey(k); setHighlight(null) }
-  const pickChain = (t) => { setChainType(t); setSelKey(null); setHighlight(null); setEpiFilter(null) }
-  const toggleEpi = (pos) => setEpiFilter((p) => (p === pos ? null : pos))
+  const pickChain = (t) => { setChainType(t); setSelKey(null); setHighlight(null) }
 
   const byType = useMemo(() => {
     const bySide = (t) => interfaces.filter((i) => i.antibody_chain_type === t)
@@ -119,14 +79,6 @@ export default function Explorer({ interfaces, residue, epitope }) {
     }
     return { ag: [...ag.values()], ab: [...ab.values()] }
   }, [sankeyRows])
-
-  // Row 3 shows ONLY the selected chain type's contacts (not heavy + light combined).
-  const typeResidue = useMemo(() => residue.filter((r) => r.antibody_chain_type === chainType), [residue, chainType])
-  const typeContactTable = useMemo(() => contactTable(typeResidue), [typeResidue])
-  const shownContactTable = useMemo(() => epiFilter == null ? typeContactTable
-    : typeContactTable.filter((r) => r.antigen_uniprot_position === epiFilter), [typeContactTable, epiFilter])
-  const epiLabel = epiFilter == null ? null
-    : (typeContactTable.find((r) => r.antigen_uniprot_position === epiFilter)?.antigen ?? `residue ${epiFilter}`)
 
   return (
     <>
@@ -192,25 +144,6 @@ export default function Explorer({ interfaces, residue, epitope }) {
             selected interface. <b>Click a node to highlight it in 3D.</b></p>
           <SankeyContacts rows={sankeyRows} onNodeClick={setHighlight} />
         </div>
-      </div>
-
-      {/* Row 3 — contact table + contact map, BOTH scoped to the selected heavy/light group */}
-      <div className="ex-row ex-row3">
-        <div className="card ex-cell">
-          <h2>Aggregated contact table</h2>
-          <p className="note">One row per epitope–paratope residue pair over <b>all {chainType}-chain
-            instances</b>. Sorted by contacts.</p>
-          {epiFilter != null && (
-            <div className="filter-chip">
-              Filtered to antigen residue <b>{epiLabel}</b>
-              <button onClick={() => setEpiFilter(null)}>clear ✕</button>
-            </div>
-          )}
-          <div className="ex-scroll">
-            <DataTable columns={CONTACT_COLS} rows={shownContactTable} initialSort="contacts" />
-          </div>
-        </div>
-        <ContactHeatmap residue={typeResidue} onSelect={toggleEpi} selected={epiFilter} chainType={chainType} />
       </div>
     </>
   )
