@@ -17,6 +17,12 @@ const PROPS = [
     help: 'Number of hydrogen bonds across the interface, per PISA.' },
   { key: 'number_salt_bridges', label: 'Salt bridges', unit: '', digits: 0, discrete: true,
     help: 'Number of salt bridges across the interface, per PISA.' },
+  { key: 'number_other_bonds', label: 'Other bonds', unit: '', digits: 0, discrete: true,
+    help: 'Other close interface contacts not classified as H-bond, salt bridge, disulfide or covalent (per PISA) — the bulk of interface atom contacts.' },
+  { key: 'number_disulfide_bonds', label: 'Disulfide bonds', unit: '', digits: 0, discrete: true,
+    help: 'Inter-chain disulfide bonds across the interface, per PISA (rare in antibody–antigen interfaces).' },
+  { key: 'number_covalent_bonds', label: 'Covalent bonds', unit: '', digits: 0, discrete: true,
+    help: 'Covalent bonds linking the two partners across the interface, per PISA (rare).' },
 ]
 
 const N_BINS = 12
@@ -44,6 +50,10 @@ function Bars({ bars, selIdx }) {
 // Distribution of the population with the selected interface's value marked.
 function Distribution({ clean, min, max, selected, discrete }) {
   if (clean.length < 2 || min == null) return <div className="ipd-nodata">not enough data</div>
+
+  // Every interface has the same value (e.g. 0 disulfide/covalent bonds): a distribution would be
+  // misleading, so state it plainly. Auto-renders real bars once any value differs.
+  if (max === min) return <div className="ipd-nodata">{Math.round(min)} in all {clean.length} interfaces</div>
 
   // Discrete: one bar per integer value. The highlighted bar IS the exact value — no marker line.
   if (discrete && (max - min) <= MAX_DISCRETE_SPAN) {
@@ -91,8 +101,9 @@ export default function InterfacePropertyDistributions({ instances, selected, ch
     <div className="card ex-cell">
       <h2>Interface property distributions</h2>
       <p className="note">PISA properties of the selected interface (orange marker) against all
-        {' '}<b>{chainType}-chain</b> interfaces in the complex (n = {instances.length}). Bars count
-        interfaces by value — energies/area are binned, bond counts show one bar per value.</p>
+        {' '}<b>{chainType}-chain</b> interfaces in the complex (n = {instances.length}), with the selected
+        interface highlighted. Small-range bond counts show one bar per value; energies, areas and wide
+        ranges are binned.</p>
       <div className="ipd-grid">
         {cards.map(({ p, clean, sel, min, max, pct }) => (
           <div key={p.key} className="ipd-card">
