@@ -57,14 +57,20 @@ function Distribution({ clean, min, max, selected, discrete }) {
   // misleading, so state it plainly. Auto-renders real bars once any value differs.
   if (max === min) return <div className="ipd-nodata">{Math.round(min)} in all {clean.length} interfaces</div>
 
-  // Discrete: one bar per integer value. The highlighted bar IS the exact value — no marker line.
+  // Discrete: one bar per integer value, with an orange marker line centred on the selected value's
+  // bar. The line (not just the highlighted bar) is essential because an outlier selection — e.g. 8
+  // salt bridges when almost all interfaces have 0-2 — has a ~1px-tall bar that's invisible on its own.
   if (discrete && (max - min) <= MAX_DISCRETE_SPAN) {
     const bars = new Array(max - min + 1).fill(0)
     for (const v of clean) bars[Math.round(v) - min]++
     const selIdx = selected == null ? -1 : Math.round(selected) - min
+    const bw = (W - GAP * (bars.length - 1)) / bars.length
+    const selX = selIdx < 0 ? null : selIdx * (bw + GAP) + bw / 2
     return (
       <svg className="ipd-svg" viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none">
         <Bars bars={bars} selIdx={selIdx} />
+        {selX != null && <line x1={selX} y1="0" x2={selX} y2={H} className="ipd-marker"
+          vectorEffect="non-scaling-stroke" />}
       </svg>
     )
   }
@@ -102,7 +108,7 @@ export default function InterfacePropertyDistributions({ instances, selected, ch
   return (
     <div className="card ex-cell">
       <h2>Interface property distributions</h2>
-      <p className="note">PISA properties of the selected interface (orange marker) against all
+      <p className="note">PISA properties of the selected interface (highlighted in orange) against all
         {' '}<b>{chainType}-chain</b> interfaces in the complex (n = {instances.length}), with the selected
         interface highlighted. Small-range bond counts show one bar per value; energies, areas and wide
         ranges are binned.</p>

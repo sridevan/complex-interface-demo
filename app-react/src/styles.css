@@ -188,7 +188,9 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .ipd-pct { font-size: 11px; margin-left: 6px; }
 .ipd-svg { width: 100%; height: 56px; display: block; }
 .ipd-bar { fill: #d3dae5; }
-.ipd-bar.sel { fill: var(--accent); }
+/* Selected interface highlighted in orange everywhere: the marker line on continuous charts, the
+   selected bar on discrete ones (salt bridges, H-bonds, etc.) — so "selected = orange" is consistent. */
+.ipd-bar.sel { fill: var(--antibody); }
 .ipd-marker { stroke: var(--antibody); stroke-width: 2; stroke-dasharray: 3 2; }
 .ipd-axis { display: flex; justify-content: space-between; font-size: 10px; color: var(--muted); margin-top: 3px;
   font-variant-numeric: tabular-nums; }
