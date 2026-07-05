@@ -116,9 +116,11 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .sankey-tip .st-row { margin-bottom: 2px; }
 .sankey-tip .st-types { color: #cfd5dd; }
 
-/* Column header carrying an explanatory native tooltip: signal it's hoverable. */
-th.hashelp { cursor: help; text-decoration: underline dotted; text-decoration-color: #b7bec8;
-  text-underline-offset: 3px; }
+/* "?" help badge next to a column header; carries an explanatory native title tooltip. */
+.hint { display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px;
+  margin-left: 5px; border-radius: 50%; background: #d8e0ea; color: #5a6472; font-size: 10px;
+  font-weight: 700; line-height: 1; cursor: help; vertical-align: middle; }
+.hint:hover { background: #c3ddf6; color: var(--accent); }
 
 /* ── Complex overview: ranked bar-tables ─────────────────────────────────────────────── */
 /* Value label to the LEFT on white, then a visual-only bar in a light track (epitope + paratope

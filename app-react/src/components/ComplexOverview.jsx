@@ -107,7 +107,8 @@ function EpitopeHotspots({ epitope }) {
         <table>
           <thead>
             <tr><th>Antigen residue</th>
-              <th className="hashelp" title={valHelp}>{metric === 'contacts' ? 'Contacts (H/L)' : 'Structures'}</th>
+              <th>{metric === 'contacts' ? 'Contacts (H/L)' : 'Structures'}
+                <span className="hint" title={valHelp}>?</span></th>
               <th className="num">Structures</th><th>Top antibody region</th></tr>
           </thead>
           <tbody>
