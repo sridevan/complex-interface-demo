@@ -1,6 +1,6 @@
 {
  "requested": 20,
- "processed": 30,
+ "processed": 96,
  "skipped": [
   {
    "entry": "7b18/assembly1",
@@ -318,7 +318,7 @@
  ],
  "total_rows": 5741,
  "contact_pairs": 1464,
- "unique_pdb_entries": 30,
+ "unique_pdb_entries": 96,
  "heavy_pairs": 1120,
  "light_pairs": 344,
  "anomaly_occurrences": 499,
