@@ -40,6 +40,7 @@ from common import (
     imgt_region,
     observed_residues,
 )
+from identify_chains import antigen_rows_from_anarcii
 
 log = get_logger("run_anarcii")
 
@@ -217,10 +218,14 @@ def main():
         chain_meta = json.load(fh)
 
     antibody_chains, mapping_rows = map_entry(pdb_id, args.assembly_id, cif_path, chain_meta)
+    # Antigen is derived from ANARCII's verdict (non-antibody protein chains), NOT from titles.
+    antigen_chains, _, _ = antigen_rows_from_anarcii(chain_meta, antibody_chains)
 
     os.makedirs(args.out_dir, exist_ok=True)
     with open(os.path.join(args.out_dir, "antibody_chains.json"), "w") as fh:
         json.dump(antibody_chains, fh, indent=1)
+    with open(os.path.join(args.out_dir, "antigen_chains.json"), "w") as fh:
+        json.dump(antigen_chains, fh, indent=1)
     with open(os.path.join(args.out_dir, "antibody_imgt_mapping.json"), "w") as fh:
         json.dump(mapping_rows, fh, indent=1)
 

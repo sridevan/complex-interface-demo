@@ -33,7 +33,7 @@ import build_mvs
 import fetch_complex_details as fcd
 from build_processed_dataset import build_buried_lookup, process_entry
 from common import PDBE_CIF_URL, PISA_SPLIT_DIR, get_logger, load_interfaces, pisa_split_mid
-from identify_chains import build_metadata, sifts_segments
+from identify_chains import antigen_rows_from_anarcii, build_metadata, sifts_segments
 from parse_pisa_interfaces import parse_interfaces
 from run_anarcii import get_model, map_entry
 
@@ -114,14 +114,10 @@ def main():
                     report["skipped"].append({"entry": tag, "reason": "cif_missing"})
                     continue
                 chain_meta = build_metadata(pdb_id, asm, antigen_acc=args.antigen_acc)
-                antigen_rows = [{"pdb_id": pdb_id, "assembly_id": str(asm),
-                                 "auth_asym_id": c["auth_asym_id"], "entity_id": c["entity_id"],
-                                 "antigen_uniprot_accession": c["uniprot_accession"],
-                                 "antigen_name": c["molecule_name"]}
-                                for c in chain_meta if c["role"] == "antigen"]
+                # ANARCII decides antibody-ness (all protein chains tested); derive antigen from it.
                 antibody_rows, mapping = map_entry(pdb_id, asm, cif, chain_meta, model=model)
-                antigen_auth = {c["auth_asym_id"] for c in antigen_rows}
-                antibody_auth = {r["auth_asym_id"] for r in antibody_rows if r.get("is_antibody")}
+                antigen_rows, antigen_auth, antibody_auth = antigen_rows_from_anarcii(
+                    chain_meta, antibody_rows, antigen_acc=args.antigen_acc)
                 antigen_sifts = sifts_segments(pdb_id, antigen_acc=args.antigen_acc)
                 pdb_cache[pdb_id] = (chain_meta, antigen_rows, antibody_rows, mapping,
                                      antigen_auth, antibody_auth, antigen_sifts)

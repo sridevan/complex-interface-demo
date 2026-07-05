@@ -180,6 +180,16 @@ def process_entry(records, antigen_rows, antibody_rows, chain_meta, mapping, bur
             # interaction
             "interaction_type": rec["interaction_type"], "distance": rec["distance"],
             "interface_area": rec["interface_area"], "buried_surface_area": buried,
+            # full PISA per-interface energetics + bond counts (from parse_interfaces.interface_props)
+            "solvation_energy": rec.get("solvation_energy"),
+            "stabilization_energy": rec.get("stabilization_energy"),
+            "p_value": rec.get("p_value"),
+            "number_interface_residues": rec.get("number_interface_residues"),
+            "number_hydrogen_bonds": rec.get("number_hydrogen_bonds"),
+            "number_salt_bridges": rec.get("number_salt_bridges"),
+            "number_disulfide_bonds": rec.get("number_disulfide_bonds"),
+            "number_covalent_bonds": rec.get("number_covalent_bonds"),
+            "number_other_bonds": rec.get("number_other_bonds"),
         }
         # ASSERTION: antibody-side residue must not sit on an antigen chain, and no antigen_*
         # field may carry a unp read from an antibody-chain residue.

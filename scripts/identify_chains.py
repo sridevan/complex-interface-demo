@@ -109,9 +109,11 @@ def build_metadata(pdb_id, assembly_id, antigen_acc="P0DTC2"):
         entity_id = m.get("entity_id")
         for ch in m.get("in_chains", []):
             acc, acc_name = unp.get(ch, (None, None))
-            name_l = (name or "").lower()
-            is_antigen = (acc == antigen_acc) or any(h in name_l for h in ANTIGEN_NAME_HINTS)
-            role = "antigen" if (is_antigen and is_protein) else ("antibody_candidate" if is_protein else "other")
+            # Antibody-ness is decided downstream by ANARCII (run_anarcii.map_entry) — the SOLE
+            # authority. Every protein chain is an ANARCII candidate; molecule titles are NOT used to
+            # pre-classify, because a nanobody named e.g. "Nanobody against SARS-CoV-2" would
+            # otherwise be mislabelled as antigen and never tested (see antigen_rows_from_anarcii).
+            role = "antibody_candidate" if is_protein else "other"
             chains.append({
                 "pdb_id": pdb_id, "assembly_id": str(assembly_id),
                 "auth_asym_id": ch, "entity_id": entity_id, "molecule_name": name,
@@ -123,6 +125,32 @@ def build_metadata(pdb_id, assembly_id, antigen_acc="P0DTC2"):
     return chains
 
 
+def antigen_rows_from_anarcii(chain_meta, antibody_chains, antigen_acc="P0DTC2"):
+    """Derive antigen chains AFTER ANARCII has decided antibody-ness.
+
+    ANARCII (via run_anarcii.map_entry -> antibody_chains) is the sole authority on whether a chain
+    is antibody-like; titles are never used for that. Antigen = a protein chain ANARCII did NOT call
+    an antibody that carries the antigen UniProt accession (chain-level SIFTS). The antigen name hint
+    is a fallback used ONLY among these confirmed non-antibody chains, so it can never misclassify an
+    antibody. Returns (antigen_rows, antigen_auth, antibody_auth).
+    """
+    antibody_auth = {c["auth_asym_id"] for c in antibody_chains if c.get("is_antibody")}
+    non_ab = [c for c in chain_meta
+              if c["role"] == "antibody_candidate" and c["auth_asym_id"] not in antibody_auth]
+
+    def _is_antigen(c):
+        name_l = (c.get("molecule_name") or "").lower()
+        return c.get("uniprot_accession") == antigen_acc or any(h in name_l for h in ANTIGEN_NAME_HINTS)
+
+    antigen = [c for c in non_ab if _is_antigen(c)]
+    rows = [{
+        "pdb_id": c["pdb_id"], "assembly_id": c["assembly_id"], "auth_asym_id": c["auth_asym_id"],
+        "entity_id": c["entity_id"], "antigen_uniprot_accession": c.get("uniprot_accession"),
+        "antigen_name": c.get("molecule_name"),
+    } for c in antigen]
+    return rows, {c["auth_asym_id"] for c in antigen}, antibody_auth
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--pdb-id", required=True)
@@ -132,25 +160,17 @@ def main():
     args = ap.parse_args()
 
     chains = build_metadata(args.pdb_id.lower(), args.assembly_id, antigen_acc=args.antigen_acc)
-    antigen = [c for c in chains if c["role"] == "antigen"]
     candidates = [c for c in chains if c["role"] == "antibody_candidate"]
-
-    antigen_chains = [{
-        "pdb_id": c["pdb_id"], "assembly_id": c["assembly_id"], "auth_asym_id": c["auth_asym_id"],
-        "entity_id": c["entity_id"], "antigen_uniprot_accession": c["uniprot_accession"],
-        "antigen_name": c["molecule_name"],
-    } for c in antigen]
 
     os.makedirs(args.out_dir, exist_ok=True)
     with open(os.path.join(args.out_dir, "chain_metadata.json"), "w") as fh:
         json.dump(chains, fh, indent=1)
-    with open(os.path.join(args.out_dir, "antigen_chains.json"), "w") as fh:
-        json.dump(antigen_chains, fh, indent=1)
 
     log.info("pdb=%s chains=%d protein=%d", args.pdb_id, len(chains),
              sum(1 for c in chains if c["is_protein"]))
-    log.info("antigen chains: %s", sorted(c["auth_asym_id"] for c in antigen))
-    log.info("antibody candidate chains: %s", sorted(c["auth_asym_id"] for c in candidates))
+    log.info("protein chains (all ANARCII candidates): %s", sorted(c["auth_asym_id"] for c in candidates))
+    log.info("antibody vs antigen split is determined by ANARCII downstream "
+             "(run_anarcii.map_entry + antigen_rows_from_anarcii), not from titles here.")
 
 
 if __name__ == "__main__":
