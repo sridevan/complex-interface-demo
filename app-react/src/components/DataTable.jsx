@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react'
+import Hint from './Hint.jsx'
 
-// Generic sortable table. `columns` = [{ key, label, num?, render?, sortValue? }].
+// Generic sortable table. `columns` = [{ key, label, num?, render?, sortValue?, help? }].
 // `sortValue(row)` overrides the value used for sorting (e.g. sort a residue label by its
 // numeric sequence position instead of its displayed string).
 export default function DataTable({ columns, rows, initialSort, initialDir = 'desc' }) {
@@ -39,6 +40,7 @@ export default function DataTable({ columns, rows, initialSort, initialDir = 'de
               <th key={c.key} className={(c.num ? 'num ' : '') + 'sortable'}
                   onClick={() => onSort(c.key)} title="Click to sort">
                 {c.label}
+                {c.help && <Hint text={c.help} />}
                 <span className={'sort-ind' + (sortKey === c.key ? ' active' : '')}>
                   {sortKey === c.key ? (dir === 'asc' ? '▲' : '▼') : '↕'}
                 </span>

@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react'
 import ContactHeatmap from './ContactHeatmap.jsx'
 import DataTable from './DataTable.jsx'
+import Hint from './Hint.jsx'
 import { REGION_COLORS, topRegions } from '../data.js'
 
 // ── The complex-level atlas: every antibody bound to the antigen, aggregated onto one normalised
@@ -42,8 +43,10 @@ const CONTACT_COLS = [
   { key: 'antibody_residue', label: 'Antibody residue',
     sortValue: (r) => (r.ab_pos ?? 9999) + (r.ab_ins ? (r.ab_ins.charCodeAt(0) - 64) / 100 : 0) },
   { key: 'region', label: 'Antibody region' },
-  { key: 'contacts', label: 'Contacts', num: true },
-  { key: 'assemblies', label: 'Assemblies', num: true },
+  { key: 'contacts', label: 'Contacts', num: true,
+    help: 'Residue-level contacts for this epitope–paratope residue pair, summed across every deposited complex (one per contacting instance).' },
+  { key: 'assemblies', label: 'Assemblies', num: true,
+    help: 'Number of distinct structural assemblies (PDB entry + assembly) in which this exact residue pair is in contact — de-biases redundant re-deposition.' },
 ]
 
 // Ranked-table bar: value label sits to the LEFT on white (always legible — never dark text on a
@@ -107,9 +110,9 @@ function EpitopeHotspots({ epitope }) {
         <table>
           <thead>
             <tr><th>Antigen residue</th>
-              <th>{metric === 'contacts' ? 'Contacts (H/L)' : 'Structures'}
-                <span className="hint" title={valHelp}>?</span></th>
-              <th className="num">Structures</th><th>Top antibody region</th></tr>
+              <th>{metric === 'contacts' ? 'Contacts (H/L)' : 'Structures'}<Hint text={valHelp} /></th>
+              <th className="num">Structures<Hint text="Distinct PDB structures in which any antibody contacts this antigen residue — de-biases redundant re-deposition of the same antibody." /></th>
+              <th>Top antibody region</th></tr>
           </thead>
           <tbody>
             {rows.map((r) => (
@@ -157,8 +160,10 @@ function ParatopeConvergence({ abImgt }) {
       <div className="ex-scroll">
         <table>
           <thead>
-            <tr><th>Antibody residue</th><th>Region</th><th>Antigen contacts</th>
-              <th className="num">Structures</th><th>Top contacted antigen residues</th></tr>
+            <tr><th>Antibody residue</th><th>Region</th>
+              <th>Antigen contacts<Hint text="Residue-level antigen contacts made by this antibody IMGT position, summed across every deposited complex — how often recognition converges here." /></th>
+              <th className="num">Structures<Hint text="Distinct structural assemblies in which this antibody position contacts the antigen." /></th>
+              <th>Top contacted antigen residues</th></tr>
           </thead>
           <tbody>
             {rows.map((r) => (
