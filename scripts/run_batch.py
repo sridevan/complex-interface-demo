@@ -183,11 +183,33 @@ def main():
     with open(os.path.join(args.out_dir, "mapping_anomalies.json"), "w") as fh:
         json.dump(all_anomalies, fh, indent=1)
 
+    # Natural-variant overlay: PDBe mutated_AA_or_NA (type == "Variant") on antigen interface
+    # residues. Pure membership intersection — cache the raw API data, join in build_aggregations.
+    try:
+        import fetch_mutations as fm
+        mutations = fm.fetch(sorted({r["pdb_id"] for r in all_rows}), chunk=50)
+        os.makedirs("data/raw/mutations", exist_ok=True)
+        with open("data/raw/mutations/mutations.json", "w") as fh:
+            json.dump(mutations, fh, indent=1)
+    except Exception as e:
+        log.warning("mutation fetch failed (%s) -> variant overlay empty", e)
+        mutations = {}
+    variant_index = agg.build_variant_index(all_rows, mutations)
+    log.info("antigen interface Variant substitutions: %d position(s)", len(variant_index))
+
+    # Glycan overlay: PDBe pre-computed glycan interactions (cached separately by
+    # fetch_glycan_interactions.py — one call per glycan, not run inline here). Membership join only.
+    glycans = agg.load_glycans("data/raw/glycans", {r["pdb_id"] for r in all_rows})
+    glycan_index = agg.build_glycan_index(all_rows, glycans)
+    log.info("antigen interface N-glycosylation sites: %d position(s)", len(glycan_index))
+
     # Aggregations over the combined dataset.
     pairs = agg.build_contact_pairs(all_rows)
     tables = {
         "residue_level_interactions.json": pairs,
-        "aggregated_antigen_epitope_contacts.json": agg.agg_antigen_epitope(pairs),
+        "aggregated_antigen_epitope_contacts.json": agg.agg_antigen_epitope(pairs, variant_index),
+        "antigen_interface_variants.json": agg.agg_antigen_interface_variants(variant_index),
+        "antigen_interface_glycans.json": agg.agg_antigen_interface_glycans(glycan_index),
         "frequency_contacts_by_heavy_light.json": agg.agg_frequency_heavy_light(pairs),
         "aggregated_antibody_imgt_contacts.json": agg.agg_antibody_imgt(pairs),
         "imgt_region_contribution.json": agg.agg_region_contribution(pairs),

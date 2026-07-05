@@ -17,6 +17,8 @@ export default function App() {
   const abImgt = data.aggregated_antibody_imgt_contacts || []
   const regions = data.imgt_region_contribution || []
   const residue = data.residue_level_interactions || []
+  const variants = data.antigen_interface_variants || []
+  const glycans = data.antigen_interface_glycans || []
   const interfaces = data.interface_summary || []
   const anomalies = data.mapping_anomalies || []
   const coverage = data.antigen_unp_coverage || []
@@ -63,7 +65,7 @@ export default function App() {
         ))}
       </div>
 
-      {tab === 0 && <ComplexOverview abImgt={abImgt} regions={regions} residue={residue} />}
+      {tab === 0 && <ComplexOverview abImgt={abImgt} regions={regions} residue={residue} variants={variants} glycans={glycans} />}
       {tab === 1 && <Explorer interfaces={interfaces} residue={residue} />}
       {tab === 2 && <DataNotes anomalies={anomalies} coverage={coverage} />}
     </div>

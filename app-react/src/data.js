@@ -4,6 +4,8 @@ const BASE = import.meta.env.BASE_URL || '/'
 export async function loadAll() {
   const names = [
     'aggregated_antigen_epitope_contacts',
+    'antigen_interface_variants',
+    'antigen_interface_glycans',
     'aggregated_antibody_imgt_contacts',
     'imgt_region_contribution',
     'residue_level_interactions',

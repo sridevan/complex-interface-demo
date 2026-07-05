@@ -1,5 +1,36 @@
 [
  {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 111,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "TRP",
+  "total_antigen_contacts": 55,
+  "assemblies_contacted": 5,
+  "unique_antigen_positions_contacted": 14,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "PRO337",
+    "count": 8
+   },
+   {
+    "value": "GLU340",
+    "count": 7
+   },
+   {
+    "value": "LEU335",
+    "count": 7
+   },
+   {
+    "value": "SER359",
+    "count": 7
+   },
+   {
+    "value": "CYS361",
+    "count": 6
+   }
+  ]
+ },
+ {
   "antibody_chain_type": "light",
   "antibody_imgt_position": 108,
   "antibody_imgt_region": "CDR-L3",
@@ -34,29 +65,29 @@
   "antibody_chain_type": "heavy",
   "antibody_imgt_position": 111,
   "antibody_imgt_region": "CDR-H3",
-  "antibody_residue_name": "TRP",
-  "total_antigen_contacts": 40,
-  "assemblies_contacted": 4,
-  "unique_antigen_positions_contacted": 14,
+  "antibody_residue_name": "SER",
+  "total_antigen_contacts": 45,
+  "assemblies_contacted": 6,
+  "unique_antigen_positions_contacted": 15,
   "most_common_contacted_antigen_residues": [
    {
-    "value": "PRO337",
+    "value": "PHE490",
     "count": 5
    },
    {
-    "value": "SER359",
+    "value": "TYR351",
     "count": 5
    },
    {
-    "value": "ASN360",
-    "count": 5
-   },
-   {
-    "value": "GLU340",
+    "value": "LEU492",
     "count": 4
    },
    {
-    "value": "LEU335",
+    "value": "GLU484",
+    "count": 4
+   },
+   {
+    "value": "ALA352",
     "count": 4
    }
   ]
@@ -66,12 +97,16 @@
   "antibody_imgt_position": 36,
   "antibody_imgt_region": "CDR-H1",
   "antibody_residue_name": "SER",
-  "total_antigen_contacts": 36,
-  "assemblies_contacted": 8,
-  "unique_antigen_positions_contacted": 12,
+  "total_antigen_contacts": 44,
+  "assemblies_contacted": 11,
+  "unique_antigen_positions_contacted": 15,
   "most_common_contacted_antigen_residues": [
    {
     "value": "THR470",
+    "count": 7
+   },
+   {
+    "value": "LEU335",
     "count": 6
    },
    {
@@ -79,15 +114,104 @@
     "count": 6
    },
    {
-    "value": "LEU335",
-    "count": 4
-   },
-   {
     "value": "TYR473",
     "count": 3
    },
    {
     "value": "GLY482",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 38,
+  "antibody_imgt_region": "CDR-L1",
+  "antibody_residue_name": "TYR",
+  "total_antigen_contacts": 40,
+  "assemblies_contacted": 11,
+  "unique_antigen_positions_contacted": 12,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "PHE486",
+    "count": 6
+   },
+   {
+    "value": "GLY485",
+    "count": 6
+   },
+   {
+    "value": "TYR489",
+    "count": 6
+   },
+   {
+    "value": "GLY381",
+    "count": 5
+   },
+   {
+    "value": "VAL483",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 57,
+  "antibody_imgt_region": "CDR-H2",
+  "antibody_residue_name": "TYR",
+  "total_antigen_contacts": 34,
+  "assemblies_contacted": 7,
+  "unique_antigen_positions_contacted": 9,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "TYR449",
+    "count": 6
+   },
+   {
+    "value": "LEU452",
+    "count": 6
+   },
+   {
+    "value": "LYS440",
+    "count": 6
+   },
+   {
+    "value": "LYS417",
+    "count": 4
+   },
+   {
+    "value": "TYR421",
+    "count": 4
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 112,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "TRP",
+  "total_antigen_contacts": 32,
+  "assemblies_contacted": 4,
+  "unique_antigen_positions_contacted": 9,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "VAL382",
+    "count": 6
+   },
+   {
+    "value": "SER383",
+    "count": 6
+   },
+   {
+    "value": "LEU390",
+    "count": 6
+   },
+   {
+    "value": "LYS386",
+    "count": 5
+   },
+   {
+    "value": "PHE392",
     "count": 3
    }
   ]
@@ -125,62 +249,186 @@
  },
  {
   "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 112,
-  "antibody_imgt_region": "CDR-H3",
-  "antibody_residue_name": "TRP",
-  "total_antigen_contacts": 29,
-  "assemblies_contacted": 2,
-  "unique_antigen_positions_contacted": 7,
+  "antibody_imgt_position": 37,
+  "antibody_imgt_region": "CDR-H1",
+  "antibody_residue_name": "TYR",
+  "total_antigen_contacts": 30,
+  "assemblies_contacted": 8,
+  "unique_antigen_positions_contacted": 12,
   "most_common_contacted_antigen_residues": [
    {
-    "value": "VAL382",
+    "value": "PHE490",
     "count": 6
    },
    {
-    "value": "SER383",
-    "count": 6
+    "value": "ALA475",
+    "count": 3
    },
    {
-    "value": "LEU390",
-    "count": 6
+    "value": "GLY476",
+    "count": 3
    },
    {
-    "value": "LYS386",
-    "count": 5
+    "value": "TYR473",
+    "count": 3
    },
    {
-    "value": "PHE392",
+    "value": "VAL445",
     "count": 3
    }
   ]
  },
  {
-  "antibody_chain_type": "light",
-  "antibody_imgt_position": 38,
-  "antibody_imgt_region": "CDR-L1",
-  "antibody_residue_name": "TYR",
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 62,
+  "antibody_imgt_region": "CDR-H2",
+  "antibody_residue_name": "PHE",
+  "total_antigen_contacts": 29,
+  "assemblies_contacted": 5,
+  "unique_antigen_positions_contacted": 12,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "PHE490",
+    "count": 6
+   },
+   {
+    "value": "THR333",
+    "count": 3
+   },
+   {
+    "value": "ILE332",
+    "count": 3
+   },
+   {
+    "value": "ASN334",
+    "count": 3
+   },
+   {
+    "value": "LEU335",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 111,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "PHE",
   "total_antigen_contacts": 27,
-  "assemblies_contacted": 6,
+  "assemblies_contacted": 4,
   "unique_antigen_positions_contacted": 6,
   "most_common_contacted_antigen_residues": [
    {
-    "value": "PHE486",
-    "count": 6
+    "value": "GLU340",
+    "count": 7
    },
    {
-    "value": "GLY485",
-    "count": 6
+    "value": "LYS356",
+    "count": 7
    },
    {
-    "value": "TYR489",
-    "count": 6
-   },
-   {
-    "value": "GLY381",
+    "value": "PRO337",
     "count": 5
    },
    {
-    "value": "VAL483",
+    "value": "ARG357",
+    "count": 5
+   },
+   {
+    "value": "VAL341",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 112,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "LEU",
+  "total_antigen_contacts": 26,
+  "assemblies_contacted": 3,
+  "unique_antigen_positions_contacted": 5,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "THR345",
+    "count": 8
+   },
+   {
+    "value": "ASN343",
+    "count": 8
+   },
+   {
+    "value": "GLU340",
+    "count": 8
+   },
+   {
+    "value": "ALA344",
+    "count": 1
+   },
+   {
+    "value": "ASP339",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 112,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "TYR",
+  "total_antigen_contacts": 26,
+  "assemblies_contacted": 5,
+  "unique_antigen_positions_contacted": 12,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "ARG493",
+    "count": 6
+   },
+   {
+    "value": "ASP405",
+    "count": 4
+   },
+   {
+    "value": "LYS150",
+    "count": 3
+   },
+   {
+    "value": "TYR501",
+    "count": 3
+   },
+   {
+    "value": "SER496",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 108,
+  "antibody_imgt_region": "CDR-L3",
+  "antibody_residue_name": "ASN",
+  "total_antigen_contacts": 25,
+  "assemblies_contacted": 4,
+  "unique_antigen_positions_contacted": 9,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "ASN437",
+    "count": 5
+   },
+   {
+    "value": "SER375",
+    "count": 4
+   },
+   {
+    "value": "ALA475",
+    "count": 3
+   },
+   {
+    "value": "PHE486",
+    "count": 3
+   },
+   {
+    "value": "ASN487",
     "count": 3
    }
   ]
@@ -214,31 +462,275 @@
  },
  {
   "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 111,
+  "antibody_imgt_position": 112,
   "antibody_imgt_region": "CDR-H3",
-  "antibody_residue_name": "SER",
-  "total_antigen_contacts": 22,
-  "assemblies_contacted": 2,
-  "unique_antigen_positions_contacted": 7,
+  "antibody_residue_name": "GLU",
+  "total_antigen_contacts": 23,
+  "assemblies_contacted": 8,
+  "unique_antigen_positions_contacted": 10,
   "most_common_contacted_antigen_residues": [
    {
-    "value": "PHE490",
+    "value": "LYS356",
     "count": 5
    },
    {
-    "value": "GLU484",
+    "value": "ASN354",
     "count": 4
    },
    {
-    "value": "GLN493",
+    "value": "ASN450",
+    "count": 4
+   },
+   {
+    "value": "TYR453",
     "count": 3
    },
    {
-    "value": "LEU492",
+    "value": "ARG346",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 112,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "ASP",
+  "total_antigen_contacts": 23,
+  "assemblies_contacted": 4,
+  "unique_antigen_positions_contacted": 10,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "GLY482",
     "count": 3
    },
    {
-    "value": "TYR489",
+    "value": "VAL483",
+    "count": 3
+   },
+   {
+    "value": "ARG493",
+    "count": 3
+   },
+   {
+    "value": "SER494",
+    "count": 3
+   },
+   {
+    "value": "LYS444",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 35,
+  "antibody_imgt_region": "CDR-H1",
+  "antibody_residue_name": "THR",
+  "total_antigen_contacts": 22,
+  "assemblies_contacted": 7,
+  "unique_antigen_positions_contacted": 7,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "ASN334",
+    "count": 8
+   },
+   {
+    "value": "LYS147",
+    "count": 3
+   },
+   {
+    "value": "HIS146",
+    "count": 3
+   },
+   {
+    "value": "TYR145",
+    "count": 3
+   },
+   {
+    "value": "ASN450",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 112,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "ILE",
+  "total_antigen_contacts": 22,
+  "assemblies_contacted": 3,
+  "unique_antigen_positions_contacted": 4,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "ASN343",
+    "count": 8
+   },
+   {
+    "value": "THR345",
+    "count": 8
+   },
+   {
+    "value": "ALA344",
+    "count": 5
+   },
+   {
+    "value": "ARG509",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 110,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "TRP",
+  "total_antigen_contacts": 22,
+  "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 10,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "GLY339",
+    "count": 3
+   },
+   {
+    "value": "PHE342",
+    "count": 3
+   },
+   {
+    "value": "LEU368",
+    "count": 3
+   },
+   {
+    "value": "VAL367",
+    "count": 3
+   },
+   {
+    "value": "ASP364",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 114,
+  "antibody_imgt_region": "CDR-L3",
+  "antibody_residue_name": "LEU",
+  "total_antigen_contacts": 22,
+  "assemblies_contacted": 6,
+  "unique_antigen_positions_contacted": 8,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "PHE377",
+    "count": 6
+   },
+   {
+    "value": "TYR449",
+    "count": 4
+   },
+   {
+    "value": "LYS378",
+    "count": 3
+   },
+   {
+    "value": "CYS379",
+    "count": 3
+   },
+   {
+    "value": "PRO384",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 109,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "TYR",
+  "total_antigen_contacts": 22,
+  "assemblies_contacted": 5,
+  "unique_antigen_positions_contacted": 11,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "GLN414",
+    "count": 5
+   },
+   {
+    "value": "ARG408",
+    "count": 4
+   },
+   {
+    "value": "LEU533",
+    "count": 2
+   },
+   {
+    "value": "ASN532",
+    "count": 2
+   },
+   {
+    "value": "LYS444",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 59,
+  "antibody_imgt_region": "CDR-H2",
+  "antibody_residue_name": "PHE",
+  "total_antigen_contacts": 21,
+  "assemblies_contacted": 4,
+  "unique_antigen_positions_contacted": 7,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "PRO412",
+    "count": 5
+   },
+   {
+    "value": "GLY413",
+    "count": 4
+   },
+   {
+    "value": "GLN414",
+    "count": 3
+   },
+   {
+    "value": "LYS528",
+    "count": 3
+   },
+   {
+    "value": "PRO527",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 111,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "GLY",
+  "total_antigen_contacts": 20,
+  "assemblies_contacted": 6,
+  "unique_antigen_positions_contacted": 6,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "GLU340",
+    "count": 7
+   },
+   {
+    "value": "TYR248",
+    "count": 3
+   },
+   {
+    "value": "ARG246",
+    "count": 3
+   },
+   {
+    "value": "GLY482",
+    "count": 3
+   },
+   {
+    "value": "ARG346",
     "count": 3
    }
   ]
@@ -276,33 +768,6 @@
  },
  {
   "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 57,
-  "antibody_imgt_region": "CDR-H2",
-  "antibody_residue_name": "TYR",
-  "total_antigen_contacts": 20,
-  "assemblies_contacted": 4,
-  "unique_antigen_positions_contacted": 4,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "TYR449",
-    "count": 6
-   },
-   {
-    "value": "LEU452",
-    "count": 6
-   },
-   {
-    "value": "LYS417",
-    "count": 4
-   },
-   {
-    "value": "TYR421",
-    "count": 4
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
   "antibody_imgt_position": 110,
   "antibody_imgt_region": "CDR-H3",
   "antibody_residue_name": "VAL",
@@ -329,6 +794,37 @@
    {
     "value": "TYR145",
     "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 107,
+  "antibody_imgt_region": "CDR-L3",
+  "antibody_residue_name": "TYR",
+  "total_antigen_contacts": 19,
+  "assemblies_contacted": 7,
+  "unique_antigen_positions_contacted": 8,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "ASP405",
+    "count": 4
+   },
+   {
+    "value": "SER477",
+    "count": 3
+   },
+   {
+    "value": "ARG346",
+    "count": 3
+   },
+   {
+    "value": "THR500",
+    "count": 3
+   },
+   {
+    "value": "LYS444",
+    "count": 2
    }
   ]
  },
@@ -396,28 +892,121 @@
  },
  {
   "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 111,
+  "antibody_imgt_position": 109,
   "antibody_imgt_region": "CDR-H3",
-  "antibody_residue_name": "PHE",
-  "total_antigen_contacts": 17,
-  "assemblies_contacted": 2,
-  "unique_antigen_positions_contacted": 4,
+  "antibody_residue_name": "GLN",
+  "total_antigen_contacts": 19,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 7,
   "most_common_contacted_antigen_residues": [
    {
-    "value": "ARG357",
+    "value": "GLY339",
+    "count": 3
+   },
+   {
+    "value": "CYS336",
+    "count": 3
+   },
+   {
+    "value": "PHE338",
+    "count": 3
+   },
+   {
+    "value": "LEU335",
+    "count": 3
+   },
+   {
+    "value": "VAL362",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 110,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "TYR",
+  "total_antigen_contacts": 19,
+  "assemblies_contacted": 4,
+  "unique_antigen_positions_contacted": 9,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "PHE490",
     "count": 5
    },
    {
-    "value": "GLU340",
-    "count": 4
+    "value": "LEU452",
+    "count": 3
    },
    {
-    "value": "PRO337",
-    "count": 4
+    "value": "ARG493",
+    "count": 3
    },
    {
-    "value": "LYS356",
-    "count": 4
+    "value": "TYR351",
+    "count": 2
+   },
+   {
+    "value": "LEU492",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 59,
+  "antibody_imgt_region": "CDR-H2",
+  "antibody_residue_name": "ASP",
+  "total_antigen_contacts": 18,
+  "assemblies_contacted": 3,
+  "unique_antigen_positions_contacted": 4,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "GLU471",
+    "count": 6
+   },
+   {
+    "value": "THR470",
+    "count": 6
+   },
+   {
+    "value": "ASN450",
+    "count": 3
+   },
+   {
+    "value": "LYS444",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 36,
+  "antibody_imgt_region": "CDR-L1",
+  "antibody_residue_name": "TYR",
+  "total_antigen_contacts": 17,
+  "assemblies_contacted": 4,
+  "unique_antigen_positions_contacted": 11,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "TYR505",
+    "count": 5
+   },
+   {
+    "value": "THR478",
+    "count": 2
+   },
+   {
+    "value": "LEU582",
+    "count": 2
+   },
+   {
+    "value": "ASP405",
+    "count": 1
+   },
+   {
+    "value": "ASN501",
+    "count": 1
    }
   ]
  },
@@ -454,32 +1043,24 @@
  },
  {
   "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 35,
-  "antibody_imgt_region": "CDR-H1",
-  "antibody_residue_name": "THR",
+  "antibody_imgt_position": 108,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "TYR",
   "total_antigen_contacts": 16,
-  "assemblies_contacted": 4,
-  "unique_antigen_positions_contacted": 5,
+  "assemblies_contacted": 3,
+  "unique_antigen_positions_contacted": 2,
   "most_common_contacted_antigen_residues": [
    {
-    "value": "ASN334",
+    "value": "ASN343",
+    "count": 8
+   },
+   {
+    "value": "GLY339",
     "count": 5
    },
    {
-    "value": "LYS147",
+    "value": "ASP339",
     "count": 3
-   },
-   {
-    "value": "HIS146",
-    "count": 3
-   },
-   {
-    "value": "TYR145",
-    "count": 3
-   },
-   {
-    "value": "ASN450",
-    "count": 2
    }
   ]
  },
@@ -487,26 +1068,18 @@
   "antibody_chain_type": "heavy",
   "antibody_imgt_position": 112,
   "antibody_imgt_region": "CDR-H3",
-  "antibody_residue_name": "LEU",
+  "antibody_residue_name": "SER",
   "total_antigen_contacts": 16,
-  "assemblies_contacted": 2,
-  "unique_antigen_positions_contacted": 4,
+  "assemblies_contacted": 3,
+  "unique_antigen_positions_contacted": 2,
   "most_common_contacted_antigen_residues": [
    {
     "value": "THR345",
-    "count": 5
-   },
-   {
-    "value": "ASN343",
-    "count": 5
-   },
-   {
-    "value": "GLU340",
-    "count": 5
+    "count": 8
    },
    {
     "value": "ALA344",
-    "count": 1
+    "count": 8
    }
   ]
  },
@@ -562,28 +1135,63 @@
  },
  {
   "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 112,
+  "antibody_imgt_position": 110,
   "antibody_imgt_region": "CDR-H3",
-  "antibody_residue_name": "ILE",
-  "total_antigen_contacts": 15,
-  "assemblies_contacted": 2,
-  "unique_antigen_positions_contacted": 4,
+  "antibody_residue_name": "ASP",
+  "total_antigen_contacts": 16,
+  "assemblies_contacted": 4,
+  "unique_antigen_positions_contacted": 7,
   "most_common_contacted_antigen_residues": [
    {
-    "value": "ASN343",
-    "count": 5
+    "value": "ARG408",
+    "count": 6
    },
    {
-    "value": "THR345",
-    "count": 5
-   },
-   {
-    "value": "ALA344",
+    "value": "ASP405",
     "count": 4
    },
    {
-    "value": "ARG509",
+    "value": "GLY404",
+    "count": 2
+   },
+   {
+    "value": "VAL407",
     "count": 1
+   },
+   {
+    "value": "ARG328",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 64,
+  "antibody_imgt_region": "CDR-H2",
+  "antibody_residue_name": "ASP",
+  "total_antigen_contacts": 16,
+  "assemblies_contacted": 3,
+  "unique_antigen_positions_contacted": 6,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "TYR489",
+    "count": 3
+   },
+   {
+    "value": "ASN487",
+    "count": 3
+   },
+   {
+    "value": "PHE486",
+    "count": 3
+   },
+   {
+    "value": "LYS440",
+    "count": 3
+   },
+   {
+    "value": "LYS444",
+    "count": 3
    }
   ]
  },
@@ -735,29 +1343,79 @@
   ]
  },
  {
-  "antibody_chain_type": "light",
-  "antibody_imgt_position": 114,
-  "antibody_imgt_region": "CDR-L3",
-  "antibody_residue_name": "LEU",
-  "total_antigen_contacts": 14,
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 111,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "TYR",
+  "total_antigen_contacts": 15,
   "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 7,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "GLY482",
+    "count": 3
+   },
+   {
+    "value": "ASN481",
+    "count": 3
+   },
+   {
+    "value": "VAL483",
+    "count": 2
+   },
+   {
+    "value": "LYS535",
+    "count": 2
+   },
+   {
+    "value": "LEU533",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 37,
+  "antibody_imgt_region": "CDR-L1",
+  "antibody_residue_name": "THR",
+  "total_antigen_contacts": 14,
+  "assemblies_contacted": 3,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "THR345",
+    "count": 7
+   },
+   {
+    "value": "LEU441",
+    "count": 7
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 108,
+  "antibody_imgt_region": "CDR-L3",
+  "antibody_residue_name": "ASP",
+  "total_antigen_contacts": 14,
+  "assemblies_contacted": 6,
   "unique_antigen_positions_contacted": 4,
   "most_common_contacted_antigen_residues": [
    {
-    "value": "PHE377",
-    "count": 6
+    "value": "ARG346",
+    "count": 7
    },
    {
-    "value": "LYS378",
+    "value": "LYS444",
     "count": 3
    },
    {
-    "value": "CYS379",
+    "value": "THR345",
     "count": 3
    },
    {
-    "value": "PRO384",
-    "count": 2
+    "value": "ASN450",
+    "count": 1
    }
   ]
  },
@@ -781,64 +1439,6 @@
    {
     "value": "THR385",
     "count": 2
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 111,
-  "antibody_imgt_region": "CDR-H3",
-  "antibody_residue_name": "GLY",
-  "total_antigen_contacts": 13,
-  "assemblies_contacted": 4,
-  "unique_antigen_positions_contacted": 4,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "GLU340",
-    "count": 4
-   },
-   {
-    "value": "TYR248",
-    "count": 3
-   },
-   {
-    "value": "ARG246",
-    "count": 3
-   },
-   {
-    "value": "GLY482",
-    "count": 3
-   }
-  ]
- },
- {
-  "antibody_chain_type": "light",
-  "antibody_imgt_position": 36,
-  "antibody_imgt_region": "CDR-L1",
-  "antibody_residue_name": "TYR",
-  "total_antigen_contacts": 13,
-  "assemblies_contacted": 3,
-  "unique_antigen_positions_contacted": 8,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "TYR505",
-    "count": 5
-   },
-   {
-    "value": "THR478",
-    "count": 2
-   },
-   {
-    "value": "ASP405",
-    "count": 1
-   },
-   {
-    "value": "ASN501",
-    "count": 1
-   },
-   {
-    "value": "ARG403",
-    "count": 1
    }
   ]
  },
@@ -898,64 +1498,6 @@
  },
  {
   "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 110,
-  "antibody_imgt_region": "CDR-H3",
-  "antibody_residue_name": "ASP",
-  "total_antigen_contacts": 13,
-  "assemblies_contacted": 3,
-  "unique_antigen_positions_contacted": 4,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "ARG408",
-    "count": 6
-   },
-   {
-    "value": "ASP405",
-    "count": 4
-   },
-   {
-    "value": "GLY404",
-    "count": 2
-   },
-   {
-    "value": "VAL407",
-    "count": 1
-   }
-  ]
- },
- {
-  "antibody_chain_type": "light",
-  "antibody_imgt_position": 108,
-  "antibody_imgt_region": "CDR-L3",
-  "antibody_residue_name": "ASN",
-  "total_antigen_contacts": 13,
-  "assemblies_contacted": 3,
-  "unique_antigen_positions_contacted": 5,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "ASN437",
-    "count": 5
-   },
-   {
-    "value": "SER375",
-    "count": 4
-   },
-   {
-    "value": "PHE374",
-    "count": 2
-   },
-   {
-    "value": "TYR508",
-    "count": 1
-   },
-   {
-    "value": "VAL503",
-    "count": 1
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
   "antibody_imgt_position": 109,
   "antibody_imgt_region": "CDR-H3",
   "antibody_residue_name": "ASN",
@@ -982,6 +1524,29 @@
    {
     "value": "GLU484",
     "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 109,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "GLY",
+  "total_antigen_contacts": 12,
+  "assemblies_contacted": 3,
+  "unique_antigen_positions_contacted": 3,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "LYS386",
+    "count": 6
+   },
+   {
+    "value": "SER443",
+    "count": 3
+   },
+   {
+    "value": "LYS444",
+    "count": 3
    }
   ]
  },
@@ -1062,6 +1627,37 @@
    },
    {
     "value": "SER383",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 110,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "GLY",
+  "total_antigen_contacts": 12,
+  "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 5,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "SER443",
+    "count": 3
+   },
+   {
+    "value": "LEU441",
+    "count": 3
+   },
+   {
+    "value": "ASN448",
+    "count": 3
+   },
+   {
+    "value": "LYS444",
+    "count": 2
+   },
+   {
+    "value": "GLU484",
     "count": 1
    }
   ]
@@ -1149,29 +1745,6 @@
  },
  {
   "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 59,
-  "antibody_imgt_region": "CDR-H2",
-  "antibody_residue_name": "PHE",
-  "total_antigen_contacts": 12,
-  "assemblies_contacted": 3,
-  "unique_antigen_positions_contacted": 3,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "PRO412",
-    "count": 5
-   },
-   {
-    "value": "GLY413",
-    "count": 4
-   },
-   {
-    "value": "GLN414",
-    "count": 3
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
   "antibody_imgt_position": 113,
   "antibody_imgt_region": "CDR-H3",
   "antibody_residue_name": "ASN",
@@ -1185,25 +1758,6 @@
    },
    {
     "value": "PHE490",
-    "count": 6
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 59,
-  "antibody_imgt_region": "CDR-H2",
-  "antibody_residue_name": "ASP",
-  "total_antigen_contacts": 12,
-  "assemblies_contacted": 2,
-  "unique_antigen_positions_contacted": 2,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "GLU471",
-    "count": 6
-   },
-   {
-    "value": "THR470",
     "count": 6
    }
   ]
@@ -1224,6 +1778,95 @@
    {
     "value": "GLY485",
     "count": 6
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 112,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "ARG",
+  "total_antigen_contacts": 12,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 6,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "ARG493",
+    "count": 3
+   },
+   {
+    "value": "TYR449",
+    "count": 3
+   },
+   {
+    "value": "SER496",
+    "count": 2
+   },
+   {
+    "value": "SER494",
+    "count": 2
+   },
+   {
+    "value": "TYR501",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 66,
+  "antibody_imgt_region": "Framework-H",
+  "antibody_residue_name": "ARG",
+  "total_antigen_contacts": 12,
+  "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 5,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "LEU441",
+    "count": 3
+   },
+   {
+    "value": "VAL445",
+    "count": 3
+   },
+   {
+    "value": "GLY447",
+    "count": 3
+   },
+   {
+    "value": "LYS444",
+    "count": 2
+   },
+   {
+    "value": "SER446",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 113,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "TRP",
+  "total_antigen_contacts": 12,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 4,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "THR345",
+    "count": 3
+   },
+   {
+    "value": "ARG346",
+    "count": 3
+   },
+   {
+    "value": "LEU441",
+    "count": 3
+   },
+   {
+    "value": "LYS440",
+    "count": 3
    }
   ]
  },
@@ -1310,6 +1953,29 @@
  },
  {
   "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 52,
+  "antibody_imgt_region": "Framework-H",
+  "antibody_residue_name": "TRP",
+  "total_antigen_contacts": 11,
+  "assemblies_contacted": 3,
+  "unique_antigen_positions_contacted": 3,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "TYR449",
+    "count": 6
+   },
+   {
+    "value": "GLY446",
+    "count": 3
+   },
+   {
+    "value": "PHE486",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
   "antibody_imgt_position": 64,
   "antibody_imgt_region": "CDR-H2",
   "antibody_residue_name": "TRP",
@@ -1368,96 +2034,85 @@
  },
  {
   "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 109,
-  "antibody_imgt_region": "CDR-H3",
-  "antibody_residue_name": "TYR",
-  "total_antigen_contacts": 11,
-  "assemblies_contacted": 3,
-  "unique_antigen_positions_contacted": 4,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "GLN414",
-    "count": 5
-   },
-   {
-    "value": "ARG408",
-    "count": 4
-   },
-   {
-    "value": "ALA411",
-    "count": 1
-   },
-   {
-    "value": "TYR380",
-    "count": 1
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 108,
-  "antibody_imgt_region": "CDR-H3",
-  "antibody_residue_name": "TYR",
-  "total_antigen_contacts": 10,
-  "assemblies_contacted": 2,
-  "unique_antigen_positions_contacted": 2,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "ASN343",
-    "count": 5
-   },
-   {
-    "value": "GLY339",
-    "count": 5
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 112,
-  "antibody_imgt_region": "CDR-H3",
+  "antibody_imgt_position": 26,
+  "antibody_imgt_region": "Framework-H",
   "antibody_residue_name": "SER",
-  "total_antigen_contacts": 10,
+  "total_antigen_contacts": 11,
   "assemblies_contacted": 2,
-  "unique_antigen_positions_contacted": 2,
+  "unique_antigen_positions_contacted": 6,
   "most_common_contacted_antigen_residues": [
    {
-    "value": "THR345",
-    "count": 5
-   },
-   {
-    "value": "ALA344",
-    "count": 5
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 112,
-  "antibody_imgt_region": "CDR-H3",
-  "antibody_residue_name": "GLU",
-  "total_antigen_contacts": 10,
-  "assemblies_contacted": 4,
-  "unique_antigen_positions_contacted": 5,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "LYS356",
-    "count": 4
-   },
-   {
-    "value": "TYR453",
+    "value": "TYR489",
     "count": 3
    },
    {
-    "value": "ASN354",
+    "value": "ASN487",
+    "count": 3
+   },
+   {
+    "value": "PHE486",
+    "count": 2
+   },
+   {
+    "value": "TYR449",
     "count": 1
    },
    {
-    "value": "LEU455",
+    "value": "GLY447",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 114,
+  "antibody_imgt_region": "CDR-L3",
+  "antibody_residue_name": "TYR",
+  "total_antigen_contacts": 11,
+  "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 3,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "PHE486",
+    "count": 5
+   },
+   {
+    "value": "THR478",
+    "count": 3
+   },
+   {
+    "value": "ASN487",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 38,
+  "antibody_imgt_region": "CDR-H1",
+  "antibody_residue_name": "TRP",
+  "total_antigen_contacts": 11,
+  "assemblies_contacted": 3,
+  "unique_antigen_positions_contacted": 5,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "LYS440",
+    "count": 6
+   },
+   {
+    "value": "LYS535",
+    "count": 2
+   },
+   {
+    "value": "LYS537",
     "count": 1
    },
    {
-    "value": "TYR505",
+    "value": "ASN536",
+    "count": 1
+   },
+   {
+    "value": "VAL534",
     "count": 1
    }
   ]
@@ -1514,6 +2169,64 @@
  },
  {
   "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 83,
+  "antibody_imgt_region": "Framework-H",
+  "antibody_residue_name": "SER",
+  "total_antigen_contacts": 10,
+  "assemblies_contacted": 5,
+  "unique_antigen_positions_contacted": 7,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "SER477",
+    "count": 3
+   },
+   {
+    "value": "ASN450",
+    "count": 2
+   },
+   {
+    "value": "TYR505",
+    "count": 1
+   },
+   {
+    "value": "GLU484",
+    "count": 1
+   },
+   {
+    "value": "GLY485",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 28,
+  "antibody_imgt_region": "CDR-H1",
+  "antibody_residue_name": "TYR",
+  "total_antigen_contacts": 10,
+  "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 4,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "SER247",
+    "count": 3
+   },
+   {
+    "value": "ARG246",
+    "count": 3
+   },
+   {
+    "value": "TYR248",
+    "count": 3
+   },
+   {
+    "value": "ASN532",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
   "antibody_imgt_position": 62,
   "antibody_imgt_region": "CDR-H2",
   "antibody_residue_name": "ASN",
@@ -1559,6 +2272,122 @@
    {
     "value": "TYR365",
     "count": 2
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 36,
+  "antibody_imgt_region": "CDR-H1",
+  "antibody_residue_name": "THR",
+  "total_antigen_contacts": 10,
+  "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 5,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "LEU335",
+    "count": 3
+   },
+   {
+    "value": "ASP364",
+    "count": 3
+   },
+   {
+    "value": "LEU452",
+    "count": 2
+   },
+   {
+    "value": "PHE490",
+    "count": 1
+   },
+   {
+    "value": "VAL367",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 113,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "ASP",
+  "total_antigen_contacts": 10,
+  "assemblies_contacted": 4,
+  "unique_antigen_positions_contacted": 4,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "GLY339",
+    "count": 3
+   },
+   {
+    "value": "ASN343",
+    "count": 3
+   },
+   {
+    "value": "ASN450",
+    "count": 3
+   },
+   {
+    "value": "LYS444",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 109,
+  "antibody_imgt_region": "CDR-L3",
+  "antibody_residue_name": "THR",
+  "total_antigen_contacts": 10,
+  "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 4,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "LEU335",
+    "count": 3
+   },
+   {
+    "value": "THR500",
+    "count": 3
+   },
+   {
+    "value": "ARG498",
+    "count": 3
+   },
+   {
+    "value": "SER446",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 36,
+  "antibody_imgt_region": "CDR-L1",
+  "antibody_residue_name": "SER",
+  "total_antigen_contacts": 9,
+  "assemblies_contacted": 5,
+  "unique_antigen_positions_contacted": 5,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "LEU441",
+    "count": 4
+   },
+   {
+    "value": "ASN437",
+    "count": 2
+   },
+   {
+    "value": "ASP428",
+    "count": 1
+   },
+   {
+    "value": "VAL503",
+    "count": 1
+   },
+   {
+    "value": "LYS440",
+    "count": 1
    }
   ]
  },
@@ -1664,25 +2493,6 @@
  },
  {
   "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 52,
-  "antibody_imgt_region": "Framework-H",
-  "antibody_residue_name": "TRP",
-  "total_antigen_contacts": 9,
-  "assemblies_contacted": 2,
-  "unique_antigen_positions_contacted": 2,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "TYR449",
-    "count": 6
-   },
-   {
-    "value": "GLY446",
-    "count": 3
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
   "antibody_imgt_position": 116,
   "antibody_imgt_region": "CDR-H3",
   "antibody_residue_name": "TRP",
@@ -1705,71 +2515,129 @@
   ]
  },
  {
-  "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 112,
-  "antibody_imgt_region": "CDR-H3",
-  "antibody_residue_name": "TYR",
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 83,
+  "antibody_imgt_region": "Framework-L",
+  "antibody_residue_name": "SER",
   "total_antigen_contacts": 9,
   "assemblies_contacted": 4,
-  "unique_antigen_positions_contacted": 4,
+  "unique_antigen_positions_contacted": 6,
   "most_common_contacted_antigen_residues": [
    {
-    "value": "ASP405",
-    "count": 4
+    "value": "THR376",
+    "count": 2
    },
    {
-    "value": "LYS150",
-    "count": 3
+    "value": "PHE377",
+    "count": 2
    },
    {
-    "value": "VAL503",
+    "value": "SER375",
+    "count": 2
+   },
+   {
+    "value": "TYR489",
     "count": 1
    },
    {
-    "value": "GLY504",
+    "value": "HIS505",
     "count": 1
    }
   ]
  },
  {
   "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 28,
+  "antibody_imgt_position": 66,
+  "antibody_imgt_region": "Framework-H",
+  "antibody_residue_name": "SER",
+  "total_antigen_contacts": 9,
+  "assemblies_contacted": 4,
+  "unique_antigen_positions_contacted": 3,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "PHE377",
+    "count": 5
+   },
+   {
+    "value": "PHE486",
+    "count": 3
+   },
+   {
+    "value": "PRO384",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 38,
   "antibody_imgt_region": "CDR-H1",
-  "antibody_residue_name": "TYR",
+  "antibody_residue_name": "ILE",
   "total_antigen_contacts": 9,
   "assemblies_contacted": 1,
   "unique_antigen_positions_contacted": 3,
   "most_common_contacted_antigen_residues": [
    {
-    "value": "SER247",
+    "value": "ALA475",
     "count": 3
    },
    {
-    "value": "ARG246",
+    "value": "GLY476",
     "count": 3
    },
    {
-    "value": "TYR248",
+    "value": "SER477",
     "count": 3
    }
   ]
  },
  {
-  "antibody_chain_type": "light",
-  "antibody_imgt_position": 37,
-  "antibody_imgt_region": "CDR-L1",
-  "antibody_residue_name": "THR",
-  "total_antigen_contacts": 8,
-  "assemblies_contacted": 2,
-  "unique_antigen_positions_contacted": 2,
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 57,
+  "antibody_imgt_region": "CDR-H2",
+  "antibody_residue_name": "PHE",
+  "total_antigen_contacts": 9,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 3,
   "most_common_contacted_antigen_residues": [
    {
-    "value": "THR345",
-    "count": 4
+    "value": "TYR489",
+    "count": 3
    },
    {
-    "value": "LEU441",
-    "count": 4
+    "value": "ALA475",
+    "count": 3
+   },
+   {
+    "value": "TYR473",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 24,
+  "antibody_imgt_region": "Framework-H",
+  "antibody_residue_name": "LYS",
+  "total_antigen_contacts": 9,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 4,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "PHE486",
+    "count": 3
+   },
+   {
+    "value": "ASN487",
+    "count": 2
+   },
+   {
+    "value": "SER477",
+    "count": 2
+   },
+   {
+    "value": "THR478",
+    "count": 2
    }
   ]
  },
@@ -1847,6 +2715,29 @@
   ]
  },
  {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 109,
+  "antibody_imgt_region": "CDR-L3",
+  "antibody_residue_name": "SER",
+  "total_antigen_contacts": 8,
+  "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 3,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "CYS379",
+    "count": 3
+   },
+   {
+    "value": "THR345",
+    "count": 3
+   },
+   {
+    "value": "TYR380",
+    "count": 2
+   }
+  ]
+ },
+ {
   "antibody_chain_type": "heavy",
   "antibody_imgt_position": 81,
   "antibody_imgt_region": "Framework-H",
@@ -1879,50 +2770,150 @@
  },
  {
   "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 111,
+  "antibody_imgt_position": 112,
   "antibody_imgt_region": "CDR-H3",
-  "antibody_residue_name": "TYR",
+  "antibody_residue_name": "GLY",
   "total_antigen_contacts": 8,
-  "assemblies_contacted": 1,
-  "unique_antigen_positions_contacted": 3,
+  "assemblies_contacted": 4,
+  "unique_antigen_positions_contacted": 7,
   "most_common_contacted_antigen_residues": [
    {
-    "value": "GLY482",
-    "count": 3
-   },
-   {
-    "value": "ASN481",
-    "count": 3
-   },
-   {
-    "value": "VAL483",
+    "value": "ARG346",
     "count": 2
+   },
+   {
+    "value": "SER349",
+    "count": 1
+   },
+   {
+    "value": "ASN450",
+    "count": 1
+   },
+   {
+    "value": "PHE347",
+    "count": 1
+   },
+   {
+    "value": "ALA348",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 59,
+  "antibody_imgt_region": "CDR-H2",
+  "antibody_residue_name": "ILE",
+  "total_antigen_contacts": 8,
+  "assemblies_contacted": 3,
+  "unique_antigen_positions_contacted": 4,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "PHE490",
+    "count": 4
+   },
+   {
+    "value": "ILE472",
+    "count": 2
+   },
+   {
+    "value": "THR470",
+    "count": 1
+   },
+   {
+    "value": "GLY482",
+    "count": 1
    }
   ]
  },
  {
   "antibody_chain_type": "light",
-  "antibody_imgt_position": 36,
+  "antibody_imgt_position": 37,
   "antibody_imgt_region": "CDR-L1",
-  "antibody_residue_name": "SER",
-  "total_antigen_contacts": 7,
-  "assemblies_contacted": 4,
+  "antibody_residue_name": "ASN",
+  "total_antigen_contacts": 8,
+  "assemblies_contacted": 2,
   "unique_antigen_positions_contacted": 4,
   "most_common_contacted_antigen_residues": [
    {
-    "value": "LEU441",
+    "value": "ASN417",
     "count": 3
    },
    {
-    "value": "ASN437",
+    "value": "LEU455",
     "count": 2
    },
    {
-    "value": "ASP428",
+    "value": "GLN506",
+    "count": 2
+   },
+   {
+    "value": "PHE456",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 111,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "ALA",
+  "total_antigen_contacts": 7,
+  "assemblies_contacted": 3,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "GLU340",
+    "count": 7
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 59,
+  "antibody_imgt_region": "CDR-H2",
+  "antibody_residue_name": "SER",
+  "total_antigen_contacts": 7,
+  "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 3,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "PHE490",
+    "count": 3
+   },
+   {
+    "value": "GLU324",
+    "count": 2
+   },
+   {
+    "value": "THR323",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 58,
+  "antibody_imgt_region": "CDR-H2",
+  "antibody_residue_name": "PRO",
+  "total_antigen_contacts": 7,
+  "assemblies_contacted": 3,
+  "unique_antigen_positions_contacted": 4,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "LYS150",
+    "count": 3
+   },
+   {
+    "value": "LYS440",
+    "count": 2
+   },
+   {
+    "value": "VAL483",
     "count": 1
    },
    {
-    "value": "VAL503",
+    "value": "GLU484",
     "count": 1
    }
   ]
@@ -1952,69 +2943,31 @@
  },
  {
   "antibody_chain_type": "light",
-  "antibody_imgt_position": 83,
+  "antibody_imgt_position": 55,
   "antibody_imgt_region": "Framework-L",
-  "antibody_residue_name": "SER",
-  "total_antigen_contacts": 7,
-  "assemblies_contacted": 3,
-  "unique_antigen_positions_contacted": 4,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "THR376",
-    "count": 2
-   },
-   {
-    "value": "PHE377",
-    "count": 2
-   },
-   {
-    "value": "SER375",
-    "count": 2
-   },
-   {
-    "value": "TYR489",
-    "count": 1
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 37,
-  "antibody_imgt_region": "CDR-H1",
   "antibody_residue_name": "TYR",
   "total_antigen_contacts": 7,
-  "assemblies_contacted": 3,
-  "unique_antigen_positions_contacted": 2,
+  "assemblies_contacted": 4,
+  "unique_antigen_positions_contacted": 5,
   "most_common_contacted_antigen_residues": [
    {
-    "value": "PHE490",
-    "count": 6
+    "value": "ASN343",
+    "count": 3
    },
    {
-    "value": "TYR489",
+    "value": "ASP364",
     "count": 1
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 112,
-  "antibody_imgt_region": "CDR-H3",
-  "antibody_residue_name": "ASP",
-  "total_antigen_contacts": 7,
-  "assemblies_contacted": 1,
-  "unique_antigen_positions_contacted": 3,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "GLY482",
-    "count": 3
    },
    {
-    "value": "VAL483",
-    "count": 3
+    "value": "ARG346",
+    "count": 1
    },
    {
-    "value": "GLU484",
+    "value": "TYR449",
+    "count": 1
+   },
+   {
+    "value": "ASN448",
     "count": 1
    }
   ]
@@ -2039,6 +2992,141 @@
    {
     "value": "THR470",
     "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 62,
+  "antibody_imgt_region": "CDR-H2",
+  "antibody_residue_name": "ASP",
+  "total_antigen_contacts": 7,
+  "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 4,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "LYS440",
+    "count": 3
+   },
+   {
+    "value": "LYS537",
+    "count": 2
+   },
+   {
+    "value": "THR323",
+    "count": 1
+   },
+   {
+    "value": "GLY502",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 34,
+  "antibody_imgt_region": "CDR-L1",
+  "antibody_residue_name": "SER",
+  "total_antigen_contacts": 7,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 5,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "SER555",
+    "count": 2
+   },
+   {
+    "value": "ILE584",
+    "count": 2
+   },
+   {
+    "value": "LYS557",
+    "count": 1
+   },
+   {
+    "value": "ASN556",
+    "count": 1
+   },
+   {
+    "value": "PHE559",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 38,
+  "antibody_imgt_region": "CDR-L1",
+  "antibody_residue_name": "TRP",
+  "total_antigen_contacts": 7,
+  "assemblies_contacted": 3,
+  "unique_antigen_positions_contacted": 4,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "ARG346",
+    "count": 4
+   },
+   {
+    "value": "LEU441",
+    "count": 1
+   },
+   {
+    "value": "TYR451",
+    "count": 1
+   },
+   {
+    "value": "THR345",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 109,
+  "antibody_imgt_region": "CDR-L3",
+  "antibody_residue_name": "ASN",
+  "total_antigen_contacts": 7,
+  "assemblies_contacted": 3,
+  "unique_antigen_positions_contacted": 4,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "LYS444",
+    "count": 4
+   },
+   {
+    "value": "SER443",
+    "count": 1
+   },
+   {
+    "value": "GLY447",
+    "count": 1
+   },
+   {
+    "value": "VAL445",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 110,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "ALA",
+  "total_antigen_contacts": 7,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 3,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "LYS440",
+    "count": 3
+   },
+   {
+    "value": "ASN439",
+    "count": 2
+   },
+   {
+    "value": "SER443",
+    "count": 2
    }
   ]
  },
@@ -2085,29 +3173,6 @@
   ]
  },
  {
-  "antibody_chain_type": "light",
-  "antibody_imgt_position": 107,
-  "antibody_imgt_region": "CDR-L3",
-  "antibody_residue_name": "TYR",
-  "total_antigen_contacts": 6,
-  "assemblies_contacted": 2,
-  "unique_antigen_positions_contacted": 3,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "ASP405",
-    "count": 4
-   },
-   {
-    "value": "TYR505",
-    "count": 1
-   },
-   {
-    "value": "ARG403",
-    "count": 1
-   }
-  ]
- },
- {
   "antibody_chain_type": "heavy",
   "antibody_imgt_position": 28,
   "antibody_imgt_region": "CDR-H1",
@@ -2147,21 +3212,6 @@
  },
  {
   "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 109,
-  "antibody_imgt_region": "CDR-H3",
-  "antibody_residue_name": "GLY",
-  "total_antigen_contacts": 6,
-  "assemblies_contacted": 2,
-  "unique_antigen_positions_contacted": 1,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "LYS386",
-    "count": 6
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
   "antibody_imgt_position": 38,
   "antibody_imgt_region": "CDR-H1",
   "antibody_residue_name": "ASP",
@@ -2177,20 +3227,20 @@
  },
  {
   "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 66,
-  "antibody_imgt_region": "Framework-H",
-  "antibody_residue_name": "SER",
+  "antibody_imgt_position": 59,
+  "antibody_imgt_region": "CDR-H2",
+  "antibody_residue_name": "GLU",
   "total_antigen_contacts": 6,
-  "assemblies_contacted": 3,
+  "assemblies_contacted": 2,
   "unique_antigen_positions_contacted": 2,
   "most_common_contacted_antigen_residues": [
    {
-    "value": "PHE377",
-    "count": 5
+    "value": "LYS150",
+    "count": 3
    },
    {
-    "value": "PRO384",
-    "count": 1
+    "value": "PHE456",
+    "count": 3
    }
   ]
  },
@@ -2328,6 +3378,151 @@
   ]
  },
  {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 31,
+  "antibody_imgt_region": "CDR-L1",
+  "antibody_residue_name": "TYR",
+  "total_antigen_contacts": 6,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "ASN481",
+    "count": 3
+   },
+   {
+    "value": "VAL483",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 114,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "LEU",
+  "total_antigen_contacts": 6,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "ASN343",
+    "count": 3
+   },
+   {
+    "value": "GLY339",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 66,
+  "antibody_imgt_region": "Framework-H",
+  "antibody_residue_name": "ASN",
+  "total_antigen_contacts": 6,
+  "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 3,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "PHE486",
+    "count": 3
+   },
+   {
+    "value": "ASN487",
+    "count": 2
+   },
+   {
+    "value": "TYR449",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 82,
+  "antibody_imgt_region": "Framework-H",
+  "antibody_residue_name": "GLU",
+  "total_antigen_contacts": 6,
+  "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "GLY482",
+    "count": 3
+   },
+   {
+    "value": "VAL483",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 36,
+  "antibody_imgt_region": "CDR-H1",
+  "antibody_residue_name": "TYR",
+  "total_antigen_contacts": 6,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "VAL445",
+    "count": 3
+   },
+   {
+    "value": "PRO499",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 114,
+  "antibody_imgt_region": "CDR-L3",
+  "antibody_residue_name": "PHE",
+  "total_antigen_contacts": 6,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "THR345",
+    "count": 3
+   },
+   {
+    "value": "LEU441",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 110,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "GLU",
+  "total_antigen_contacts": 6,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 4,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "LYS444",
+    "count": 3
+   },
+   {
+    "value": "ASN448",
+    "count": 1
+   },
+   {
+    "value": "ASP442",
+    "count": 1
+   },
+   {
+    "value": "SER443",
+    "count": 1
+   }
+  ]
+ },
+ {
   "antibody_chain_type": "heavy",
   "antibody_imgt_position": 29,
   "antibody_imgt_region": "CDR-H1",
@@ -2344,6 +3539,29 @@
  },
  {
   "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 35,
+  "antibody_imgt_region": "CDR-H1",
+  "antibody_residue_name": "SER",
+  "total_antigen_contacts": 5,
+  "assemblies_contacted": 3,
+  "unique_antigen_positions_contacted": 3,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "ASN450",
+    "count": 3
+   },
+   {
+    "value": "LYS458",
+    "count": 1
+   },
+   {
+    "value": "PHE490",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
   "antibody_imgt_position": 113,
   "antibody_imgt_region": "CDR-H3",
   "antibody_residue_name": "LEU",
@@ -2354,6 +3572,52 @@
    {
     "value": "PHE456",
     "count": 5
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 31,
+  "antibody_imgt_region": "CDR-L1",
+  "antibody_residue_name": "GLY",
+  "total_antigen_contacts": 5,
+  "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "THR500",
+    "count": 4
+   },
+   {
+    "value": "GLY502",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 116,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "ASP",
+  "total_antigen_contacts": 5,
+  "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 4,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "TYR449",
+    "count": 2
+   },
+   {
+    "value": "SER446",
+    "count": 1
+   },
+   {
+    "value": "VAL445",
+    "count": 1
+   },
+   {
+    "value": "LYS444",
+    "count": 1
    }
   ]
  },
@@ -2377,44 +3641,21 @@
   ]
  },
  {
-  "antibody_chain_type": "light",
-  "antibody_imgt_position": 109,
-  "antibody_imgt_region": "CDR-L3",
-  "antibody_residue_name": "SER",
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 107,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "ASP",
   "total_antigen_contacts": 5,
-  "assemblies_contacted": 1,
+  "assemblies_contacted": 2,
   "unique_antigen_positions_contacted": 2,
   "most_common_contacted_antigen_residues": [
    {
-    "value": "CYS379",
+    "value": "SER477",
     "count": 3
    },
    {
-    "value": "TYR380",
+    "value": "LYS386",
     "count": 2
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 58,
-  "antibody_imgt_region": "CDR-H2",
-  "antibody_residue_name": "PRO",
-  "total_antigen_contacts": 5,
-  "assemblies_contacted": 2,
-  "unique_antigen_positions_contacted": 3,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "LYS150",
-    "count": 3
-   },
-   {
-    "value": "VAL483",
-    "count": 1
-   },
-   {
-    "value": "GLU484",
-    "count": 1
    }
   ]
  },
@@ -2452,33 +3693,6 @@
    },
    {
     "value": "LEU452",
-    "count": 1
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 83,
-  "antibody_imgt_region": "Framework-H",
-  "antibody_residue_name": "SER",
-  "total_antigen_contacts": 5,
-  "assemblies_contacted": 3,
-  "unique_antigen_positions_contacted": 4,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "ASN450",
-    "count": 2
-   },
-   {
-    "value": "TYR505",
-    "count": 1
-   },
-   {
-    "value": "GLU484",
-    "count": 1
-   },
-   {
-    "value": "GLY485",
     "count": 1
    }
   ]
@@ -2550,49 +3764,23 @@
  },
  {
   "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 111,
-  "antibody_imgt_region": "CDR-H3",
-  "antibody_residue_name": "ALA",
-  "total_antigen_contacts": 4,
-  "assemblies_contacted": 2,
-  "unique_antigen_positions_contacted": 1,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "GLU340",
-    "count": 4
-   }
-  ]
- },
- {
-  "antibody_chain_type": "light",
-  "antibody_imgt_position": 108,
-  "antibody_imgt_region": "CDR-L3",
-  "antibody_residue_name": "ASP",
-  "total_antigen_contacts": 4,
-  "assemblies_contacted": 2,
-  "unique_antigen_positions_contacted": 1,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "ARG346",
-    "count": 4
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 35,
+  "antibody_imgt_position": 30,
   "antibody_imgt_region": "CDR-H1",
-  "antibody_residue_name": "SER",
-  "total_antigen_contacts": 4,
+  "antibody_residue_name": "PHE",
+  "total_antigen_contacts": 5,
   "assemblies_contacted": 2,
-  "unique_antigen_positions_contacted": 2,
+  "unique_antigen_positions_contacted": 3,
   "most_common_contacted_antigen_residues": [
    {
-    "value": "ASN450",
+    "value": "VAL445",
     "count": 3
    },
    {
-    "value": "LYS458",
+    "value": "THR500",
+    "count": 1
+   },
+   {
+    "value": "LYS440",
     "count": 1
    }
   ]
@@ -2770,6 +3958,166 @@
  },
  {
   "antibody_chain_type": "light",
+  "antibody_imgt_position": 65,
+  "antibody_imgt_region": "CDR-L2",
+  "antibody_residue_name": "SER",
+  "total_antigen_contacts": 4,
+  "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "THR345",
+    "count": 3
+   },
+   {
+    "value": "ASN417",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 66,
+  "antibody_imgt_region": "Framework-L",
+  "antibody_residue_name": "SER",
+  "total_antigen_contacts": 4,
+  "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "THR345",
+    "count": 3
+   },
+   {
+    "value": "TYR449",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 36,
+  "antibody_imgt_region": "CDR-H1",
+  "antibody_residue_name": "ARG",
+  "total_antigen_contacts": 4,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 4,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "GLU324",
+    "count": 1
+   },
+   {
+    "value": "ASN532",
+    "count": 1
+   },
+   {
+    "value": "SER530",
+    "count": 1
+   },
+   {
+    "value": "THR531",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 57,
+  "antibody_imgt_region": "CDR-H2",
+  "antibody_residue_name": "HIS",
+  "total_antigen_contacts": 4,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "LYS537",
+    "count": 2
+   },
+   {
+    "value": "THR323",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 108,
+  "antibody_imgt_region": "CDR-L3",
+  "antibody_residue_name": "ARG",
+  "total_antigen_contacts": 4,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "ASN556",
+    "count": 2
+   },
+   {
+    "value": "GLU554",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 31,
+  "antibody_imgt_region": "CDR-L1",
+  "antibody_residue_name": "ALA",
+  "total_antigen_contacts": 4,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "ASN556",
+    "count": 2
+   },
+   {
+    "value": "SER555",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 35,
+  "antibody_imgt_region": "CDR-H1",
+  "antibody_residue_name": "PRO",
+  "total_antigen_contacts": 4,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "THR345",
+    "count": 3
+   },
+   {
+    "value": "LEU441",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 35,
+  "antibody_imgt_region": "CDR-L1",
+  "antibody_residue_name": "ALA",
+  "total_antigen_contacts": 4,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "THR500",
+    "count": 2
+   },
+   {
+    "value": "GLY502",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
   "antibody_imgt_position": 38,
   "antibody_imgt_region": "CDR-L1",
   "antibody_residue_name": "SER",
@@ -2780,29 +4128,6 @@
    {
     "value": "THR345",
     "count": 3
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 110,
-  "antibody_imgt_region": "CDR-H3",
-  "antibody_residue_name": "TRP",
-  "total_antigen_contacts": 3,
-  "assemblies_contacted": 1,
-  "unique_antigen_positions_contacted": 3,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "LYS417",
-    "count": 1
-   },
-   {
-    "value": "TYR453",
-    "count": 1
-   },
-   {
-    "value": "TYR505",
-    "count": 1
    }
   ]
  },
@@ -2827,21 +4152,6 @@
  },
  {
   "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 59,
-  "antibody_imgt_region": "CDR-H2",
-  "antibody_residue_name": "SER",
-  "total_antigen_contacts": 3,
-  "assemblies_contacted": 1,
-  "unique_antigen_positions_contacted": 1,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "PHE490",
-    "count": 3
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
   "antibody_imgt_position": 111,
   "antibody_imgt_region": "CDR-H3",
   "antibody_residue_name": "ARG",
@@ -2852,6 +4162,25 @@
    {
     "value": "GLN493",
     "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 3,
+  "antibody_imgt_region": "Framework-H",
+  "antibody_residue_name": "GLN",
+  "total_antigen_contacts": 3,
+  "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "PHE486",
+    "count": 2
+   },
+   {
+    "value": "ASN450",
+    "count": 1
    }
   ]
  },
@@ -3050,21 +4379,6 @@
  },
  {
   "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 59,
-  "antibody_imgt_region": "CDR-H2",
-  "antibody_residue_name": "GLU",
-  "total_antigen_contacts": 3,
-  "assemblies_contacted": 1,
-  "unique_antigen_positions_contacted": 1,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "LYS150",
-    "count": 3
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
   "antibody_imgt_position": 56,
   "antibody_imgt_region": "CDR-H2",
   "antibody_residue_name": "PHE",
@@ -3173,48 +4487,6 @@
   ]
  },
  {
-  "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 36,
-  "antibody_imgt_region": "CDR-H1",
-  "antibody_residue_name": "THR",
-  "total_antigen_contacts": 3,
-  "assemblies_contacted": 1,
-  "unique_antigen_positions_contacted": 2,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "LEU452",
-    "count": 2
-   },
-   {
-    "value": "PHE490",
-    "count": 1
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 26,
-  "antibody_imgt_region": "Framework-H",
-  "antibody_residue_name": "SER",
-  "total_antigen_contacts": 3,
-  "assemblies_contacted": 1,
-  "unique_antigen_positions_contacted": 3,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "TYR449",
-    "count": 1
-   },
-   {
-    "value": "GLY447",
-    "count": 1
-   },
-   {
-    "value": "GLY446",
-    "count": 1
-   }
-  ]
- },
- {
   "antibody_chain_type": "light",
   "antibody_imgt_position": 34,
   "antibody_imgt_region": "CDR-L1",
@@ -3230,51 +4502,281 @@
   ]
  },
  {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 55,
+  "antibody_imgt_region": "Framework-H",
+  "antibody_residue_name": "ALA",
+  "total_antigen_contacts": 3,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "PHE486",
+    "count": 3
+   }
+  ]
+ },
+ {
   "antibody_chain_type": "light",
-  "antibody_imgt_position": 31,
+  "antibody_imgt_position": 33,
   "antibody_imgt_region": "CDR-L1",
-  "antibody_residue_name": "GLY",
-  "total_antigen_contacts": 2,
+  "antibody_residue_name": "ASN",
+  "total_antigen_contacts": 3,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "ASN481",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 116,
+  "antibody_imgt_region": "CDR-L3",
+  "antibody_residue_name": "TRP",
+  "total_antigen_contacts": 3,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "SER477",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 57,
+  "antibody_imgt_region": "CDR-H2",
+  "antibody_residue_name": "ILE",
+  "total_antigen_contacts": 3,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "LEU335",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 5,
+  "antibody_imgt_region": "Framework-H",
+  "antibody_residue_name": "VAL",
+  "total_antigen_contacts": 3,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "PHE486",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 84,
+  "antibody_imgt_region": "Framework-H",
+  "antibody_residue_name": "THR",
+  "total_antigen_contacts": 3,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "SER477",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 109,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "SER",
+  "total_antigen_contacts": 3,
+  "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "ASN450",
+    "count": 2
+   },
+   {
+    "value": "TYR449",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 56,
+  "antibody_imgt_region": "CDR-L2",
+  "antibody_residue_name": "ASP",
+  "total_antigen_contacts": 3,
+  "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "ARG346",
+    "count": 2
+   },
+   {
+    "value": "THR345",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 64,
+  "antibody_imgt_region": "CDR-H2",
+  "antibody_residue_name": "THR",
+  "total_antigen_contacts": 3,
+  "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "PHE486",
+    "count": 2
+   },
+   {
+    "value": "TYR449",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 111,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "HIS",
+  "total_antigen_contacts": 3,
   "assemblies_contacted": 1,
   "unique_antigen_positions_contacted": 2,
   "most_common_contacted_antigen_residues": [
    {
-    "value": "GLY502",
-    "count": 1
-   },
-   {
-    "value": "THR500",
-    "count": 1
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 116,
-  "antibody_imgt_region": "CDR-H3",
-  "antibody_residue_name": "ASP",
-  "total_antigen_contacts": 2,
-  "assemblies_contacted": 1,
-  "unique_antigen_positions_contacted": 1,
-  "most_common_contacted_antigen_residues": [
-   {
     "value": "TYR449",
     "count": 2
+   },
+   {
+    "value": "SER494",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 109,
+  "antibody_imgt_region": "CDR-L3",
+  "antibody_residue_name": "ILE",
+  "total_antigen_contacts": 3,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "ASN487",
+    "count": 3
    }
   ]
  },
  {
   "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 107,
-  "antibody_imgt_region": "CDR-H3",
-  "antibody_residue_name": "ASP",
-  "total_antigen_contacts": 2,
+  "antibody_imgt_position": 58,
+  "antibody_imgt_region": "CDR-H2",
+  "antibody_residue_name": "TRP",
+  "total_antigen_contacts": 3,
   "assemblies_contacted": 1,
   "unique_antigen_positions_contacted": 1,
   "most_common_contacted_antigen_residues": [
    {
-    "value": "LYS386",
+    "value": "LEU441",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 109,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "ALA",
+  "total_antigen_contacts": 3,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "LYS440",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 30,
+  "antibody_imgt_region": "CDR-L1",
+  "antibody_residue_name": "VAL",
+  "total_antigen_contacts": 3,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "THR500",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 108,
+  "antibody_imgt_region": "CDR-L3",
+  "antibody_residue_name": "THR",
+  "total_antigen_contacts": 3,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "THR500",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 114,
+  "antibody_imgt_region": "CDR-L3",
+  "antibody_residue_name": "THR",
+  "total_antigen_contacts": 3,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "SER446",
     "count": 2
+   },
+   {
+    "value": "VAL445",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 114,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "VAL",
+  "total_antigen_contacts": 3,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "LYS444",
+    "count": 2
+   },
+   {
+    "value": "SER446",
+    "count": 1
    }
   ]
  },
@@ -3305,6 +4807,25 @@
    {
     "value": "GLN493",
     "count": 2
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 107,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "GLY",
+  "total_antigen_contacts": 2,
+  "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "GLU484",
+    "count": 1
+   },
+   {
+    "value": "VAL445",
+    "count": 1
    }
   ]
  },
@@ -3514,6 +5035,119 @@
  },
  {
   "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 38,
+  "antibody_imgt_region": "CDR-H1",
+  "antibody_residue_name": "VAL",
+  "total_antigen_contacts": 2,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "LEU335",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 25,
+  "antibody_imgt_region": "Framework-H",
+  "antibody_residue_name": "ALA",
+  "total_antigen_contacts": 2,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "ASN487",
+    "count": 1
+   },
+   {
+    "value": "PHE486",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 56,
+  "antibody_imgt_region": "CDR-L2",
+  "antibody_residue_name": "GLY",
+  "total_antigen_contacts": 2,
+  "assemblies_contacted": 2,
+  "unique_antigen_positions_contacted": 2,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "THR345",
+    "count": 1
+   },
+   {
+    "value": "TYR449",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 66,
+  "antibody_imgt_region": "Framework-L",
+  "antibody_residue_name": "ASN",
+  "total_antigen_contacts": 2,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "ARG346",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 36,
+  "antibody_imgt_region": "CDR-L1",
+  "antibody_residue_name": "ARG",
+  "total_antigen_contacts": 2,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "TYR421",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 116,
+  "antibody_imgt_region": "CDR-L3",
+  "antibody_residue_name": "VAL",
+  "total_antigen_contacts": 2,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "VAL445",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 115,
+  "antibody_imgt_region": "CDR-L3",
+  "antibody_residue_name": "SER",
+  "total_antigen_contacts": 2,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "VAL445",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
   "antibody_imgt_position": 84,
   "antibody_imgt_region": "Framework-H",
   "antibody_residue_name": "LYS",
@@ -3568,36 +5202,6 @@
   "most_common_contacted_antigen_residues": [
    {
     "value": "ASN481",
-    "count": 1
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 3,
-  "antibody_imgt_region": "Framework-H",
-  "antibody_residue_name": "GLN",
-  "total_antigen_contacts": 1,
-  "assemblies_contacted": 1,
-  "unique_antigen_positions_contacted": 1,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "ASN450",
-    "count": 1
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 107,
-  "antibody_imgt_region": "CDR-H3",
-  "antibody_residue_name": "GLY",
-  "total_antigen_contacts": 1,
-  "assemblies_contacted": 1,
-  "unique_antigen_positions_contacted": 1,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "GLU484",
     "count": 1
    }
   ]
@@ -3679,21 +5283,6 @@
  },
  {
   "antibody_chain_type": "light",
-  "antibody_imgt_position": 55,
-  "antibody_imgt_region": "Framework-L",
-  "antibody_residue_name": "TYR",
-  "total_antigen_contacts": 1,
-  "assemblies_contacted": 1,
-  "unique_antigen_positions_contacted": 1,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "ASP364",
-    "count": 1
-   }
-  ]
- },
- {
-  "antibody_chain_type": "light",
   "antibody_imgt_position": 86,
   "antibody_imgt_region": "Framework-L",
   "antibody_residue_name": "GLU",
@@ -3763,21 +5352,6 @@
   "most_common_contacted_antigen_residues": [
    {
     "value": "PHE486",
-    "count": 1
-   }
-  ]
- },
- {
-  "antibody_chain_type": "heavy",
-  "antibody_imgt_position": 110,
-  "antibody_imgt_region": "CDR-H3",
-  "antibody_residue_name": "GLY",
-  "total_antigen_contacts": 1,
-  "assemblies_contacted": 1,
-  "unique_antigen_positions_contacted": 1,
-  "most_common_contacted_antigen_residues": [
-   {
-    "value": "GLU484",
     "count": 1
    }
   ]
@@ -3898,6 +5472,186 @@
   "most_common_contacted_antigen_residues": [
    {
     "value": "ARG408",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 27,
+  "antibody_imgt_region": "CDR-H1",
+  "antibody_residue_name": "ARG",
+  "total_antigen_contacts": 1,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "ALA475",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 64,
+  "antibody_imgt_region": "CDR-H2",
+  "antibody_residue_name": "GLU",
+  "total_antigen_contacts": 1,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "GLU619",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 108,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "ASP",
+  "total_antigen_contacts": 1,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "ASN532",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 37,
+  "antibody_imgt_region": "CDR-H1",
+  "antibody_residue_name": "PHE",
+  "total_antigen_contacts": 1,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "ASN532",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 30,
+  "antibody_imgt_region": "CDR-L1",
+  "antibody_residue_name": "SER",
+  "total_antigen_contacts": 1,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "ASN556",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 35,
+  "antibody_imgt_region": "CDR-L1",
+  "antibody_residue_name": "VAL",
+  "total_antigen_contacts": 1,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "PHE559",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 55,
+  "antibody_imgt_region": "Framework-H",
+  "antibody_residue_name": "ARG",
+  "total_antigen_contacts": 1,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "TYR449",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 63,
+  "antibody_imgt_region": "CDR-H2",
+  "antibody_residue_name": "SER",
+  "total_antigen_contacts": 1,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "THR500",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 29,
+  "antibody_imgt_region": "CDR-L1",
+  "antibody_residue_name": "ASP",
+  "total_antigen_contacts": 1,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "THR500",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 69,
+  "antibody_imgt_region": "Framework-L",
+  "antibody_residue_name": "SER",
+  "total_antigen_contacts": 1,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "PHE486",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_position": 70,
+  "antibody_imgt_region": "Framework-L",
+  "antibody_residue_name": "GLY",
+  "total_antigen_contacts": 1,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "PHE486",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_position": 108,
+  "antibody_imgt_region": "CDR-H3",
+  "antibody_residue_name": "GLY",
+  "total_antigen_contacts": 1,
+  "assemblies_contacted": 1,
+  "unique_antigen_positions_contacted": 1,
+  "most_common_contacted_antigen_residues": [
+   {
+    "value": "LYS444",
     "count": 1
    }
   ]

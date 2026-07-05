@@ -79,7 +79,153 @@ def build_contact_pairs(rows):
     return pairs
 
 
-def agg_antigen_epitope(pairs):
+def build_variant_index(rows, mutations):
+    """Antigen INTERFACE residues carrying a PDBe `Variant`-type mutation.
+
+    Pure membership intersection — no geometry. The antigen interface residue set comes from the
+    processed rows (already a PISA interface); `mutations` is the cached PDBe mutated_AA_or_NA data.
+    A mutation is joined to an interface residue by (pdb, entity, label seq id) — the frame-invariant
+    key both sides share. Only `type == "Variant"` is kept (escape/natural variants); engineered
+    mutations, sequence conflicts and expression tags are dropped. Antigen side only.
+
+    Returns {(acc, uniprot_pos): [ {label, from, to, structures:[pdb,...]}, ... ]}.
+    """
+    # (pdb, entity, label) -> (acc, uniprot_pos) for every antigen interface residue.
+    ag = {}
+    for r in rows:
+        pos = r.get("antigen_uniprot_position")
+        if pos is None:
+            continue
+        ag[(r["pdb_id"], r["antigen_entity_id"], r["antigen_residue_label_number"])] = \
+            (r["antigen_uniprot_accession"], pos)
+
+    hits = defaultdict(lambda: defaultdict(set))  # (acc,pos) -> label -> {pdb}
+    for pdb, recs in (mutations or {}).items():
+        for m in recs:
+            det = m.get("mutation_details") or {}
+            if det.get("type") != "Variant":
+                continue
+            key = (pdb, m.get("entity_id"), m.get("residue_number"))
+            hit = ag.get(key)
+            if hit is None:
+                continue  # mutation is not on an antigen interface residue
+            acc, pos = hit
+            label = f"{det.get('from')}{pos}{det.get('to')}"  # e.g. K417N (UniProt-numbered)
+            hits[(acc, pos)][label].add(pdb)
+
+    index = {}
+    for (acc, pos), labels in hits.items():
+        index[(acc, pos)] = [
+            {"label": lbl, "from": lbl[0], "to": lbl[-1], "structures": sorted(pdbs)}
+            for lbl, pdbs in sorted(labels.items())
+        ]
+    return index
+
+
+def agg_antigen_interface_variants(variant_index):
+    """Flat, standalone list of every Variant substitution on an antigen interface residue."""
+    out = []
+    for (acc, pos), variants in variant_index.items():
+        for v in variants:
+            out.append({
+                "antigen_uniprot_accession": acc, "antigen_uniprot_position": pos,
+                "label": v["label"], "from": v["from"], "to": v["to"],
+                "structures": v["structures"],
+            })
+    out.sort(key=lambda r: (r["antigen_uniprot_position"], r["label"]))
+    return out
+
+
+# Carbohydrate monomer chem_comp_ids — a residue with one of these is a glycan (not protein).
+SUGARS = {"NAG", "NDG", "BMA", "MAN", "FUC", "FUL", "GAL", "GLA", "SIA", "NGA", "A2G",
+          "BGC", "GLC", "XYP", "RAM", "GCU", "MAL", "KDN", "NGZ", "BM3", "BM7"}
+
+
+def load_glycans(glycan_dir, pdb_ids):
+    out = {}
+    for p in pdb_ids:
+        fp = os.path.join(glycan_dir, f"{p}.json")
+        if os.path.exists(fp):
+            recs = json.load(open(fp))
+            if recs:
+                out[p] = recs
+    return out
+
+
+def build_glycan_index(rows, glycans):
+    """Antigen INTERFACE residues that are N-glycosylation sites, from PDBe's PRE-COMPUTED glycan
+    interactions (bound_molecule_interactions). Pure membership — no geometry.
+
+    For each cached glycan we read the API's own interaction records: a `covalent` bond identifies
+    the glycosylation-site residue; any interaction with an antibody chain means the glycan also
+    contacts the paratope (the glycan-dependent-epitope signal PISA's protein-only interfaces miss).
+    A residue is kept iff its glycosylation site is itself an antigen interface residue.
+
+    Returns {(acc, uniprot_pos): {name, glyco_site_structures, contacts_paratope,
+             paratope_structures, paratope_contacts:[{glycan, antibody_residue, chain, interactions}]}}.
+    """
+    ab_ch, ag_ch, ag_res = defaultdict(set), defaultdict(set), {}
+    for r in rows:
+        p = r["pdb_id"]
+        ab_ch[p].add(r["antibody_auth_asym_id"])
+        ag_ch[p].add(r["antigen_auth_asym_id"])
+        if r.get("antigen_uniprot_position") is not None:
+            ag_res[(p, r["antigen_auth_asym_id"], r["antigen_residue_author_number"])] = \
+                (r["antigen_uniprot_accession"], r["antigen_uniprot_position"], r["antigen_residue_name"])
+
+    site = defaultdict(lambda: {"name": None, "glyco": set(), "para": set(), "contacts": defaultdict(set)})
+    for pdb, bms in glycans.items():
+        for bm in bms:
+            attach, ab_contacts = None, []
+            for it in bm.get("interactions", []):
+                b, e = it["begin"], it["end"]
+                types = tuple(it["interactions"]["atom_atom"])
+                for prot, other in ((e, b), (b, e)):
+                    # protein side must be a residue, the other side a sugar
+                    if prot["chem_comp_id"] in SUGARS or other["chem_comp_id"] not in SUGARS:
+                        continue
+                    c = prot["chain_id"]
+                    if c in ag_ch[pdb] and "covalent" in types:
+                        hit = ag_res.get((pdb, c, prot["author_residue_number"]))
+                        if hit:
+                            attach = hit                      # glyco-site is an interface residue
+                    if c in ab_ch[pdb]:
+                        ab_contacts.append((other["chem_comp_id"],
+                                            f"{prot['chem_comp_id']}{prot['author_residue_number']}", c, types))
+            if not attach:
+                continue
+            acc, pos, name = attach
+            s = site[(acc, pos)]
+            s["name"] = name
+            s["glyco"].add(pdb)
+            if ab_contacts:
+                s["para"].add(pdb)
+                for sug, res, c, types in ab_contacts:
+                    s["contacts"][(sug, res, c)].update(types)
+
+    index = {}
+    for (acc, pos), s in site.items():
+        index[(acc, pos)] = {
+            "antigen_residue_name": s["name"],
+            "glyco_site_structures": sorted(s["glyco"]),
+            "contacts_paratope": bool(s["para"]),
+            "paratope_structures": sorted(s["para"]),
+            "paratope_contacts": [{"glycan": sug, "antibody_residue": res, "chain": c,
+                                   "interactions": sorted(t)}
+                                  for (sug, res, c), t in sorted(s["contacts"].items())],
+        }
+    return index
+
+
+def agg_antigen_interface_glycans(glycan_index):
+    out = [{"antigen_uniprot_accession": acc, "antigen_uniprot_position": pos, **g}
+           for (acc, pos), g in glycan_index.items()]
+    out.sort(key=lambda r: r["antigen_uniprot_position"])
+    return out
+
+
+def agg_antigen_epitope(pairs, variant_index=None):
+    variant_index = variant_index or {}
     # Only aggregate residues with a UniProt position; unmapped ones can't be cross-structure
     # aggregated by position (they stay in the residue-level table, labelled unmapped).
     groups = defaultdict(list)
@@ -94,6 +240,7 @@ def agg_antigen_epitope(pairs):
         out.append({
             "antigen_uniprot_accession": acc, "antigen_uniprot_position": pos,
             "antigen_residue_name": name,
+            "variants": variant_index.get((acc, pos), []),
             "total_contacts": len(ps),
             "assemblies_contacted": len({(p["pdb_id"], p["assembly_id"]) for p in ps}),
             "pdb_entries_contacted": len({p["pdb_id"] for p in ps}),
@@ -213,6 +360,10 @@ def agg_interface_summary(rows):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--processed", default="data/processed/processed_antibody_antigen_interfaces.json")
+    ap.add_argument("--mutations", default="data/raw/mutations/mutations.json",
+                    help="Cached PDBe mutated_AA_or_NA data; absent/missing -> no variants (empty).")
+    ap.add_argument("--glycans", default="data/raw/glycans",
+                    help="Dir of cached PDBe glycan interactions; missing -> no glycan sites (empty).")
     ap.add_argument("--out-dir", default="data/processed")
     args = ap.parse_args()
 
@@ -220,13 +371,26 @@ def main():
     pairs = build_contact_pairs(rows)
     log.info("bond rows=%d -> contact pairs=%d", len(rows), len(pairs))
 
+    mutations = load(args.mutations) if os.path.exists(args.mutations) else {}
+    variant_index = build_variant_index(rows, mutations)
+    variant_rows = agg_antigen_interface_variants(variant_index)
+    log.info("antigen interface Variant substitutions: %d position(s), %d entries",
+             len(variant_index), len(variant_rows))
+
+    glycans = load_glycans(args.glycans, {r["pdb_id"] for r in rows})
+    glycan_index = build_glycan_index(rows, glycans)
+    glycan_rows = agg_antigen_interface_glycans(glycan_index)
+    log.info("antigen interface N-glycosylation sites: %d position(s)", len(glycan_rows))
+
     outputs = {
         "residue_level_interactions.json": pairs,
-        "aggregated_antigen_epitope_contacts.json": agg_antigen_epitope(pairs),
+        "aggregated_antigen_epitope_contacts.json": agg_antigen_epitope(pairs, variant_index),
         "frequency_contacts_by_heavy_light.json": agg_frequency_heavy_light(pairs),
         "aggregated_antibody_imgt_contacts.json": agg_antibody_imgt(pairs),
         "imgt_region_contribution.json": agg_region_contribution(pairs),
         "interface_summary.json": agg_interface_summary(rows),
+        "antigen_interface_variants.json": variant_rows,
+        "antigen_interface_glycans.json": glycan_rows,
     }
     os.makedirs(args.out_dir, exist_ok=True)
     for fname, data in outputs.items():

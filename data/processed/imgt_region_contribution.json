@@ -2,57 +2,65 @@
  {
   "antibody_chain_type": "heavy",
   "antibody_imgt_region": "CDR-H3",
-  "total_contacts": 506,
-  "percentage_of_total_contacts": 35.86,
-  "assemblies_contacted": 19,
-  "unique_antigen_positions_contacted": 74
- },
- {
-  "antibody_chain_type": "heavy",
-  "antibody_imgt_region": "Framework-H",
-  "total_contacts": 231,
-  "percentage_of_total_contacts": 16.37,
-  "assemblies_contacted": 15,
-  "unique_antigen_positions_contacted": 44
+  "total_contacts": 819,
+  "percentage_of_total_contacts": 37.23,
+  "assemblies_contacted": 30,
+  "unique_antigen_positions_contacted": 104
  },
  {
   "antibody_chain_type": "heavy",
   "antibody_imgt_region": "CDR-H2",
-  "total_contacts": 194,
-  "percentage_of_total_contacts": 13.75,
-  "assemblies_contacted": 16,
-  "unique_antigen_positions_contacted": 39
+  "total_contacts": 316,
+  "percentage_of_total_contacts": 14.36,
+  "assemblies_contacted": 26,
+  "unique_antigen_positions_contacted": 65
+ },
+ {
+  "antibody_chain_type": "heavy",
+  "antibody_imgt_region": "Framework-H",
+  "total_contacts": 296,
+  "percentage_of_total_contacts": 13.45,
+  "assemblies_contacted": 24,
+  "unique_antigen_positions_contacted": 48
  },
  {
   "antibody_chain_type": "heavy",
   "antibody_imgt_region": "CDR-H1",
-  "total_contacts": 182,
-  "percentage_of_total_contacts": 12.9,
-  "assemblies_contacted": 17,
-  "unique_antigen_positions_contacted": 37
+  "total_contacts": 271,
+  "percentage_of_total_contacts": 12.32,
+  "assemblies_contacted": 26,
+  "unique_antigen_positions_contacted": 56
  },
  {
   "antibody_chain_type": "light",
   "antibody_imgt_region": "CDR-L3",
-  "total_contacts": 162,
-  "percentage_of_total_contacts": 11.48,
-  "assemblies_contacted": 11,
-  "unique_antigen_positions_contacted": 29
+  "total_contacts": 262,
+  "percentage_of_total_contacts": 11.91,
+  "assemblies_contacted": 20,
+  "unique_antigen_positions_contacted": 51
  },
  {
   "antibody_chain_type": "light",
   "antibody_imgt_region": "CDR-L1",
-  "total_contacts": 100,
-  "percentage_of_total_contacts": 7.09,
-  "assemblies_contacted": 11,
-  "unique_antigen_positions_contacted": 26
+  "total_contacts": 175,
+  "percentage_of_total_contacts": 7.95,
+  "assemblies_contacted": 21,
+  "unique_antigen_positions_contacted": 46
  },
  {
   "antibody_chain_type": "light",
   "antibody_imgt_region": "Framework-L",
-  "total_contacts": 36,
-  "percentage_of_total_contacts": 2.55,
-  "assemblies_contacted": 4,
-  "unique_antigen_positions_contacted": 13
+  "total_contacts": 52,
+  "percentage_of_total_contacts": 2.36,
+  "assemblies_contacted": 8,
+  "unique_antigen_positions_contacted": 20
+ },
+ {
+  "antibody_chain_type": "light",
+  "antibody_imgt_region": "CDR-L2",
+  "total_contacts": 9,
+  "percentage_of_total_contacts": 0.41,
+  "assemblies_contacted": 5,
+  "unique_antigen_positions_contacted": 4
  }
 ]

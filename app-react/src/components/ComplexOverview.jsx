@@ -2,6 +2,8 @@ import React, { useMemo, useState } from 'react'
 import ContactHeatmap from './ContactHeatmap.jsx'
 import DataTable from './DataTable.jsx'
 import Hint from './Hint.jsx'
+import VariantBadge from './VariantBadge.jsx'
+import GlycanBadge from './GlycanBadge.jsx'
 import { REGION_COLORS } from '../data.js'
 
 // ── The complex-level atlas: every antibody bound to the antigen, aggregated onto one normalised
@@ -35,8 +37,12 @@ function contactTable(rows) {
   return [...m.values()].map((e) => ({ ...e, assemblies: e.asm.size }))
 }
 
-const CONTACT_COLS = [
-  { key: 'antigen', label: 'Antigen residue', sortValue: (r) => r.antigen_uniprot_position ?? Infinity },
+// CONTACT_COLS is a factory: the antigen column renders variant / glycan badges when that epitope
+// residue carries a natural Variant or is an N-glycosylation site (looked up by UniProt position).
+const contactCols = (variantMap, glycanMap) => [
+  { key: 'antigen', label: 'Antigen residue', sortValue: (r) => r.antigen_uniprot_position ?? Infinity,
+    render: (v, r) => (<>{v} <VariantBadge variants={variantMap[r.antigen_uniprot_position]} />
+      {' '}<GlycanBadge glycan={glycanMap[r.antigen_uniprot_position]} /></>) },
   { key: 'antibody_residue', label: 'Antibody residue',
     sortValue: (r) => (r.ab_pos ?? 9999) + (r.ab_ins ? (r.ab_ins.charCodeAt(0) - 64) / 100 : 0) },
   { key: 'region', label: 'Antibody region' },
@@ -139,11 +145,25 @@ function RegionContribution({ regions }) {
   )
 }
 
-export default function ComplexOverview({ abImgt, regions, residue }) {
+export default function ComplexOverview({ abImgt, regions, residue, variants = [], glycans = [] }) {
   // Epitope×paratope map + aggregated contact table, migrated from Explorer's row 3. Whole complex
   // (both chains) — the heatmap keeps its own value toggle; row-click filters the table (epiFilter).
   const [epiFilter, setEpiFilter] = useState(null)
   const toggleEpi = (pos) => setEpiFilter((p) => (p === pos ? null : pos))
+
+  // Natural variants keyed by antigen UniProt position — used to badge epitope residues in the
+  // contact table and heatmap. Empty until the dataset includes variant (non-Wuhan) structures.
+  const variantMap = useMemo(() => {
+    const m = {}
+    for (const v of variants) (m[v.antigen_uniprot_position] ||= []).push(v)
+    return m
+  }, [variants])
+  const glycanMap = useMemo(() => {
+    const m = {}
+    for (const g of glycans) m[g.antigen_uniprot_position] = g
+    return m
+  }, [glycans])
+  const CONTACT_COLS = useMemo(() => contactCols(variantMap, glycanMap), [variantMap, glycanMap])
 
   const contactRows = useMemo(() => contactTable(residue), [residue])
   const shown = useMemo(() => epiFilter == null ? contactRows
@@ -180,7 +200,7 @@ export default function ComplexOverview({ abImgt, regions, residue }) {
             <DataTable columns={CONTACT_COLS} rows={shown} initialSort="contacts" />
           </div>
         </div>
-        <ContactHeatmap residue={residue} onSelect={toggleEpi} selected={epiFilter} />
+        <ContactHeatmap residue={residue} onSelect={toggleEpi} selected={epiFilter} variants={variantMap} glycans={glycanMap} />
       </div>
     </>
   )

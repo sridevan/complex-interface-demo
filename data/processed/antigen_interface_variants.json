@@ -1,0 +1,107 @@
+[
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 339,
+  "label": "G339D",
+  "from": "G",
+  "to": "D",
+  "structures": [
+   "7xco"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 417,
+  "label": "K417N",
+  "from": "K",
+  "to": "N",
+  "structures": [
+   "7wtf"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 440,
+  "label": "N440K",
+  "from": "N",
+  "to": "K",
+  "structures": [
+   "7wpf",
+   "7xdb",
+   "7ycy"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 446,
+  "label": "G446S",
+  "from": "G",
+  "to": "S",
+  "structures": [
+   "7ycy"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 484,
+  "label": "E484A",
+  "from": "E",
+  "to": "A",
+  "structures": [
+   "7wtf"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 493,
+  "label": "Q493R",
+  "from": "Q",
+  "to": "R",
+  "structures": [
+   "7wtf"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 496,
+  "label": "G496S",
+  "from": "G",
+  "to": "S",
+  "structures": [
+   "7wtf"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 498,
+  "label": "Q498R",
+  "from": "Q",
+  "to": "R",
+  "structures": [
+   "7wtf",
+   "7ycy"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 501,
+  "label": "N501Y",
+  "from": "N",
+  "to": "Y",
+  "structures": [
+   "7wtf",
+   "7ycy",
+   "8dzh"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 505,
+  "label": "Y505H",
+  "from": "Y",
+  "to": "H",
+  "structures": [
+   "7ycy"
+  ]
+ }
+]

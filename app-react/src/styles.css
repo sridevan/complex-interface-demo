@@ -125,6 +125,22 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   font-weight: 400; line-height: 1.45; white-space: normal; text-align: left; padding: 8px 10px;
   border-radius: 6px; box-shadow: 0 2px 12px rgba(0,0,0,0.28); pointer-events: none; }
 
+/* Natural-variant badge on an antigen interface residue (e.g. K417N). Warm antibody-orange pill so
+   it reads as "biological annotation" distinct from the blue contact palette. */
+.vbadge { display: inline-flex; align-items: center; margin-left: 5px; padding: 0 6px; height: 15px;
+  border-radius: 8px; background: #fbe6cf; color: #9a5a12; font-size: 10px; font-weight: 700;
+  letter-spacing: 0.2px; cursor: help; vertical-align: middle; border: 1px solid #f0c99a;
+  white-space: nowrap; }
+.vbadge:hover { background: #f6d3a8; }
+
+/* N-glycosylation-site badge on an antigen interface residue. Green pill (glycan convention),
+   distinct from the orange variant badge, so the two annotation types never read as one. */
+.gbadge { display: inline-flex; align-items: center; margin-left: 5px; padding: 0 6px; height: 15px;
+  border-radius: 8px; background: #d9efd9; color: #2f7d32; font-size: 10px; font-weight: 700;
+  letter-spacing: 0.2px; cursor: help; vertical-align: middle; border: 1px solid #b6dfb6;
+  white-space: nowrap; }
+.gbadge:hover { background: #c4e6c4; }
+
 /* ── Complex overview: ranked bar-tables ─────────────────────────────────────────────── */
 /* Value label to the LEFT on white, then a visual-only bar in a light track (epitope + paratope
    ranked tables). Keeps text off the coloured fill so nothing is dark-on-dark. */
