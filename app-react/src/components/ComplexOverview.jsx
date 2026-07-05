@@ -6,6 +6,13 @@ import VariantBadge from './VariantBadge.jsx'
 import GlycanBadge from './GlycanBadge.jsx'
 import { REGION_COLORS } from '../data.js'
 
+// Antibody variable-domain region definitions (IMGT). Authoritative reference below.
+const REGION_REF_URL = 'https://www.imgt.org/IMGTScientificChart/Nomenclature/IMGT-FRCDRdefinition.html'
+const AB_REGION_HELP = 'Antibody variable-domain regions in IMGT numbering. CDR-1/2/3 are the '
+  + 'hypervariable, antigen-contacting loops (CDR-H3 is the most variable and usually dominates the '
+  + 'paratope); Framework regions are the conserved β-sheet scaffold. H = heavy chain, L = light '
+  + 'chain. Definitions: IMGT (imgt.org).'
+
 // ── The complex-level atlas: every antibody bound to the antigen, aggregated onto one normalised
 // view. Antigen residues by UniProt position, antibody residues by IMGT. Counts are STRUCTURAL
 // COVERAGE across deposited complexes (what has been solved), NOT immunodominance — the PDB is not a
@@ -45,7 +52,7 @@ const contactCols = (variantMap, glycanMap) => [
       {' '}<GlycanBadge glycan={glycanMap[r.antigen_uniprot_position]} /></>) },
   { key: 'antibody_residue', label: 'Ab residue',
     sortValue: (r) => (r.ab_pos ?? 9999) + (r.ab_ins ? (r.ab_ins.charCodeAt(0) - 64) / 100 : 0) },
-  { key: 'region', label: 'Ab region' },
+  { key: 'region', label: 'Ab region', help: AB_REGION_HELP },
   { key: 'contacts', label: 'Contacts', num: true,
     help: 'Residue-level contacts for this epitope–paratope residue pair, summed across every deposited complex (one per contacting instance).' },
   { key: 'assemblies', label: 'Assemblies', num: true,
@@ -84,8 +91,9 @@ function ParatopeConvergence({ abImgt }) {
   return (
     <div className="card ex-cell">
       <h2>Paratope convergence</h2>
-      <p className="note">Antibody residues (by IMGT position, coloured by region) ranked by how often they
-        contact the antigen across all complexes — where recognition converges.</p>
+      <p className="note">Antibody residues (by IMGT position, coloured by{' '}
+        <a href={REGION_REF_URL} target="_blank" rel="noopener noreferrer">IMGT region</a>) ranked by how
+        often they contact the antigen across all complexes — where recognition converges.</p>
       <div className="controls">
         <label>Chain</label>
         <span className="pill">
@@ -99,7 +107,7 @@ function ParatopeConvergence({ abImgt }) {
       <div className="ex-scroll">
         <table>
           <thead>
-            <tr><th>Ab residue</th><th>Ab region</th>
+            <tr><th>Ab residue</th><th>Ab region<Hint text={AB_REGION_HELP} /></th>
               <th>Ag contacts<Hint text="Residue-level antigen contacts made by this antibody IMGT position, summed across every deposited complex — how often recognition converges here." /></th>
               <th className="num">Structures<Hint text="Distinct structural assemblies in which this antibody position contacts the antigen." /></th>
               <th>Top contacted Ag residues</th></tr>
