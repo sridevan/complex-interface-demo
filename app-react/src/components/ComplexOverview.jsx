@@ -91,10 +91,10 @@ function ParatopeConvergence({ abImgt }) {
       <div className="ex-scroll">
         <table>
           <thead>
-            <tr><th>Antibody residue</th><th>Region</th>
-              <th>Antigen contacts<Hint text="Residue-level antigen contacts made by this antibody IMGT position, summed across every deposited complex — how often recognition converges here." /></th>
+            <tr><th>Ab residue</th><th>Ab region</th>
+              <th>Ag contacts<Hint text="Residue-level antigen contacts made by this antibody IMGT position, summed across every deposited complex — how often recognition converges here." /></th>
               <th className="num">Structures<Hint text="Distinct structural assemblies in which this antibody position contacts the antigen." /></th>
-              <th>Top contacted antigen residues</th></tr>
+              <th>Top contacted Ag residues</th></tr>
           </thead>
           <tbody>
             {rows.map((r) => (
