@@ -153,15 +153,15 @@ export default function ComplexOverview({ abImgt, regions, residue }) {
 
   return (
     <>
-      {/* Full-width stacked: region summary -> detailed paratope. The antigen-side ranking + heavy/
+      {/* Full-width stacked: detailed paratope -> region summary. The antigen-side ranking + heavy/
           light split now live in the contact map below (its Σ / ΣH / ΣL columns), so there's no
           separate epitope-hotspots table — it duplicated the map. */}
       <div className="ex-row">
-        <RegionContribution regions={regions} />
+        <ParatopeConvergence abImgt={abImgt} />
       </div>
 
       <div className="ex-row">
-        <ParatopeConvergence abImgt={abImgt} />
+        <RegionContribution regions={regions} />
       </div>
 
       {/* Migrated row 3 — epitope×paratope contact map linked to the aggregated contact table. */}
