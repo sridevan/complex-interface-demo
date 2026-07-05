@@ -116,6 +116,10 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .sankey-tip .st-row { margin-bottom: 2px; }
 .sankey-tip .st-types { color: #cfd5dd; }
 
+/* Column header carrying an explanatory native tooltip: signal it's hoverable. */
+th.hashelp { cursor: help; text-decoration: underline dotted; text-decoration-color: #b7bec8;
+  text-underline-offset: 3px; }
+
 /* ── Complex overview: ranked bar-tables ─────────────────────────────────────────────── */
 /* Value label to the LEFT on white, then a visual-only bar in a light track (epitope + paratope
    ranked tables). Keeps text off the coloured fill so nothing is dark-on-dark. */

@@ -84,6 +84,10 @@ function EpitopeHotspots({ epitope }) {
   const rows = useMemo(() => [...epitope].sort((a, b) => val(b) - val(a)), [epitope, metric])
   const max = Math.max(1, ...rows.map(val))
 
+  const valHelp = metric === 'contacts'
+    ? 'Residue-level antibody–antigen contacts at this antigen residue, summed across every deposited complex (one count per contacting antibody residue per structure). Bar length ∝ total; segments show the heavy-chain (H) vs light-chain (L) split.'
+    : 'Number of distinct PDB structures in which any antibody contacts this antigen residue — de-biases redundant re-deposition of the same antibody.'
+
   return (
     <div className="card ex-cell">
       <h2>Epitope hotspots</h2>
@@ -102,7 +106,8 @@ function EpitopeHotspots({ epitope }) {
       <div className="ex-scroll">
         <table>
           <thead>
-            <tr><th>Antigen residue</th><th>{metric === 'contacts' ? 'Contacts (H/L)' : 'Structures'}</th>
+            <tr><th>Antigen residue</th>
+              <th className="hashelp" title={valHelp}>{metric === 'contacts' ? 'Contacts (H/L)' : 'Structures'}</th>
               <th className="num">Structures</th><th>Top antibody region</th></tr>
           </thead>
           <tbody>
