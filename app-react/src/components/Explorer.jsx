@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react'
 import Viewer3Dmol from './Viewer3Dmol.jsx'
 import SankeyContacts from './SankeyContacts.jsx'
+import InterfacePropertyDistributions from './InterfacePropertyDistributions.jsx'
 
 const median = (arr) => {
   if (!arr.length) return null
@@ -144,6 +145,11 @@ export default function Explorer({ interfaces, residue }) {
             selected interface. <b>Click a node to highlight it in 3D.</b></p>
           <SankeyContacts rows={sankeyRows} onNodeClick={setHighlight} />
         </div>
+      </div>
+
+      {/* Row 3 — where the selected interface sits among its peers on each PISA property. */}
+      <div className="ex-row">
+        <InterfacePropertyDistributions instances={instances} selected={selected} chainType={chainType} />
       </div>
     </>
   )

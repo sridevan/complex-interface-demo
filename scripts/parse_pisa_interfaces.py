@@ -36,6 +36,38 @@ from common import (
 log = get_logger("parse_pisa")
 
 
+def _num(v):
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return None
+
+
+def _int(v):
+    try:
+        return int(v)
+    except (TypeError, ValueError):
+        return None
+
+
+def interface_props(itf):
+    """Per-interface PISA properties (constant across the interface's bond records): PISA energetics
+    (interface area / solvation & stabilisation energy / interface P-value) and bond/residue counts.
+    Emitted on every bond record so agg_interface_summary can read them from any row of the group."""
+    return {
+        "interface_area": _num(itf.get("interface_area")),
+        "solvation_energy": _num(itf.get("solvation_energy")),
+        "stabilization_energy": _num(itf.get("stabilization_energy")),
+        "p_value": _num(itf.get("p_value")),
+        "number_interface_residues": _int(itf.get("number_interface_residues")),
+        "number_hydrogen_bonds": _int(itf.get("number_hydrogen_bonds")),
+        "number_salt_bridges": _int(itf.get("number_salt_bridges")),
+        "number_disulfide_bonds": _int(itf.get("number_disulfide_bonds")),
+        "number_covalent_bonds": _int(itf.get("number_covalent_bonds")),
+        "number_other_bonds": _int(itf.get("number_other_bonds")),
+    }
+
+
 def parse_side(bd, s, i):
     """Extract one side (s in {1,2}) of bond i as a dict, using the confirmed §3a mapping."""
     return {
@@ -59,7 +91,7 @@ def parse_interfaces(pdb_id, block, pdb_complex_id=None):
 
     for itf in interfaces:
         interface_id = str(itf.get("interface_id"))
-        interface_area = itf.get("interface_area")
+        props = interface_props(itf)
         for bt in BOND_TYPES:
             bd = itf.get(bt)
             if not isinstance(bd, dict) or not bd:
@@ -76,7 +108,7 @@ def parse_interfaces(pdb_id, block, pdb_complex_id=None):
                     "pdb_id": pdb_id,
                     "assembly_id": assembly_id,
                     "interface_id": interface_id,
-                    "interface_area": interface_area,
+                    **props,
                     "interaction_type": INTERACTION_TYPE[bt],
                     "distance": arr_get(bd, "bond_distances", i),
                     "side1": side1,
