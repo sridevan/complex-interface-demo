@@ -2,16 +2,13 @@ import React, { useMemo, useState } from 'react'
 import ContactHeatmap from './ContactHeatmap.jsx'
 import DataTable from './DataTable.jsx'
 import Hint from './Hint.jsx'
-import { REGION_COLORS, topRegions } from '../data.js'
+import { REGION_COLORS } from '../data.js'
 
 // ── The complex-level atlas: every antibody bound to the antigen, aggregated onto one normalised
 // view. Antigen residues by UniProt position, antibody residues by IMGT. Counts are STRUCTURAL
 // COVERAGE across deposited complexes (what has been solved), NOT immunodominance — the PDB is not a
 // random sample. The contacts↔structures toggle is the de-bias: "structures" counts distinct PDB
 // entries so 200 re-depositions of one antibody don't dwarf a residue seen once each in 20.
-
-const ANTIGEN = '#4b7fcc'
-const ANTIBODY = '#e19039'
 
 // Aggregate ONE chain type's contacts per (antigen residue, antibody IMGT residue) — moved here from
 // Explorer with the row-3 aggregation. Antibody residue = name + IMGT position (its conserved
@@ -62,79 +59,7 @@ function Bar({ frac, color, children }) {
   )
 }
 
-// Two-segment bar (heavy | light): the split is shown by the coloured segments, not text on the bar.
-// Total on the left, exact H/L counts as muted text on the right — both on white.
-function SplitBar({ frac, heavy, light }) {
-  const tot = heavy + light || 1
-  return (
-    <div className="bar-cell">
-      <span className="bar-num">{heavy + light}</span>
-      <span className="bar-track">
-        <span className="bar-split" style={{ width: `${Math.max(2, frac * 100)}%` }}>
-          <span style={{ width: `${(heavy / tot) * 100}%`, background: ANTIBODY }} />
-          <span style={{ width: `${(light / tot) * 100}%`, background: ANTIGEN }} />
-        </span>
-      </span>
-      <span className="bar-hl">H{heavy} L{light}</span>
-    </div>
-  )
-}
-
-// ── Section 1: epitope hotspots ────────────────────────────────────────────────────────────────
-function EpitopeHotspots({ epitope }) {
-  const [metric, setMetric] = useState('contacts')  // 'contacts' | 'structures'
-  const val = (r) => metric === 'contacts' ? r.total_contacts : r.pdb_entries_contacted
-  const rows = useMemo(() => [...epitope].sort((a, b) => val(b) - val(a)), [epitope, metric])
-  const max = Math.max(1, ...rows.map(val))
-
-  const valHelp = metric === 'contacts'
-    ? 'Residue-level antibody–antigen contacts at this antigen residue, summed across every deposited complex (one count per contacting antibody residue per structure). Bar length ∝ total; segments show the heavy-chain (H) vs light-chain (L) split.'
-    : 'Number of distinct PDB structures in which any antibody contacts this antigen residue — de-biases redundant re-deposition of the same antibody.'
-
-  return (
-    <div className="card ex-cell">
-      <h2>Epitope hotspots</h2>
-      <p className="note">Antigen (spike) residues ranked by antibody contact across <b>all</b> deposited
-        complexes — structural coverage, not immunodominance. Bar split by chain:
-        <span className="ck" style={{ background: ANTIBODY }} />heavy
-        <span className="ck" style={{ background: ANTIGEN }} />light.</p>
-      <div className="controls">
-        <label>Rank by</label>
-        <span className="pill">
-          <button className={metric === 'contacts' ? 'active' : ''} onClick={() => setMetric('contacts')}>Contacts</button>
-          <button className={metric === 'structures' ? 'active' : ''} onClick={() => setMetric('structures')}>Structures</button>
-        </span>
-        <span className="rowcount">{rows.length} epitope residues</span>
-      </div>
-      <div className="ex-scroll">
-        <table>
-          <thead>
-            <tr><th>Antigen residue</th>
-              <th>{metric === 'contacts' ? 'Contacts (H/L)' : 'Structures'}<Hint text={valHelp} /></th>
-              <th className="num">Structures<Hint text="Distinct PDB structures in which any antibody contacts this antigen residue — de-biases redundant re-deposition of the same antibody." /></th>
-              <th>Top antibody region</th></tr>
-          </thead>
-          <tbody>
-            {rows.map((r) => (
-              <tr key={r.antigen_uniprot_position}>
-                <td><b>{r.antigen_residue_name}{r.antigen_uniprot_position}</b></td>
-                <td style={{ minWidth: 240, width: '32%' }}>
-                  {metric === 'contacts'
-                    ? <SplitBar frac={val(r) / max} heavy={r.heavy_chain_contacts || 0} light={r.light_chain_contacts || 0} />
-                    : <Bar frac={val(r) / max} color="#8b6fc4">{val(r)}</Bar>}
-                </td>
-                <td className="num">{r.pdb_entries_contacted}</td>
-                <td>{topRegions(r.most_common_antibody_imgt_regions)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  )
-}
-
-// ── Section 2: paratope convergence ────────────────────────────────────────────────────────────
+// ── Section 1: paratope convergence ────────────────────────────────────────────────────────────
 function ParatopeConvergence({ abImgt }) {
   const [side, setSide] = useState('all')  // 'all' | 'heavy' | 'light'
   const rows = useMemo(() => abImgt
@@ -187,7 +112,7 @@ function ParatopeConvergence({ abImgt }) {
   )
 }
 
-// ── Section 3: CDR / framework contribution ────────────────────────────────────────────────────
+// ── Section 2: CDR / framework contribution ────────────────────────────────────────────────────
 function RegionContribution({ regions }) {
   const rows = useMemo(() => [...regions]
     .sort((a, b) => b.percentage_of_total_contacts - a.percentage_of_total_contacts), [regions])
@@ -214,7 +139,7 @@ function RegionContribution({ regions }) {
   )
 }
 
-export default function ComplexOverview({ epitope, abImgt, regions, residue }) {
+export default function ComplexOverview({ abImgt, regions, residue }) {
   // Epitope×paratope map + aggregated contact table, migrated from Explorer's row 3. Whole complex
   // (both chains) — the heatmap keeps its own value toggle; row-click filters the table (epiFilter).
   const [epiFilter, setEpiFilter] = useState(null)
@@ -228,13 +153,9 @@ export default function ComplexOverview({ epitope, abImgt, regions, residue }) {
 
   return (
     <>
-      {/* Full-width stacked: antigen hotspots -> region summary -> detailed paratope. Each ranked
-          table + the chips need the horizontal room, and the compact CDR bars read better on their
-          own row than squeezed beside the wide table. */}
-      <div className="ex-row">
-        <EpitopeHotspots epitope={epitope} />
-      </div>
-
+      {/* Full-width stacked: region summary -> detailed paratope. The antigen-side ranking + heavy/
+          light split now live in the contact map below (its Σ / ΣH / ΣL columns), so there's no
+          separate epitope-hotspots table — it duplicated the map. */}
       <div className="ex-row">
         <RegionContribution regions={regions} />
       </div>

@@ -28,6 +28,8 @@ export default function ContactHeatmap({ residue, onSelect, selected, chainType 
   // Only the selected chain type's 4 IMGT regions (both blocks if no chainType given).
   const REGIONS = chainType === 'heavy' ? HEAVY_REGIONS
     : chainType === 'light' ? LIGHT_REGIONS : ALL_REGIONS
+  // Heavy/light subtotal columns only make sense when both chain blocks are shown (whole complex).
+  const showHL = REGIONS.some((r) => HEAVY_REGIONS.includes(r)) && REGIONS.some((r) => LIGHT_REGIONS.includes(r))
 
   // Build matrix: (antigen residue) x region -> { pairs, structures:Set }.
   const { rows, maxVal } = useMemo(() => {
@@ -54,6 +56,8 @@ export default function ContactHeatmap({ residue, onSelect, selected, chainType 
       ...row,
       values: Object.fromEntries(REGIONS.map((r) => [r, val(row.cells[r])])),
       rowTotal: REGIONS.reduce((s, r) => s + val(row.cells[r]), 0),
+      rowHeavy: REGIONS.reduce((s, r) => HEAVY_REGIONS.includes(r) ? s + val(row.cells[r]) : s, 0),
+      rowLight: REGIONS.reduce((s, r) => LIGHT_REGIONS.includes(r) ? s + val(row.cells[r]) : s, 0),
     }))
     const maxVal = Math.max(1, ...rows.flatMap((row) => REGIONS.map((r) => row.values[r])))
     return { rows, maxVal }
@@ -72,8 +76,9 @@ export default function ContactHeatmap({ residue, onSelect, selected, chainType 
   return (
     <div className="card">
       <h2>{title}</h2>
-      <p className="note">Antigen residue × antibody IMGT region, aggregated across all structures. Click a
-        row to filter the contact table (click again to clear).</p>
+      <p className="note">Antigen residue × antibody IMGT region, aggregated across all structures.
+        ΣH / ΣL / Σ = heavy / light / total contacts per residue. Click a row to filter the contact
+        table (click again to clear).</p>
       <div className="controls">
         <label>Value</label>
         <span className="pill">
@@ -102,7 +107,9 @@ export default function ContactHeatmap({ residue, onSelect, selected, chainType 
               {REGIONS.map((r) => (
                 <th key={r} className={'hm-col ' + (r.includes('-H') || r.endsWith('-H') ? 'hcol' : 'lcol')}>{SHORT[r]}</th>
               ))}
-              <th className="hm-col">Σ</th>
+              {showHL && <th className="hm-col hcol" title="Total heavy-chain contacts for this antigen residue (sum of the H columns).">ΣH</th>}
+              {showHL && <th className="hm-col lcol" title="Total light-chain contacts for this antigen residue (sum of the L columns).">ΣL</th>}
+              <th className="hm-col" title="Total contacts across all antibody regions.">Σ</th>
             </tr>
           </thead>
           <tbody>
@@ -123,6 +130,8 @@ export default function ContactHeatmap({ residue, onSelect, selected, chainType 
                     </td>
                   )
                 })}
+                {showHL && <td className="hm-cell hm-total">{row.rowHeavy}</td>}
+                {showHL && <td className="hm-cell hm-total">{row.rowLight}</td>}
                 <td className="hm-cell hm-total">{row.rowTotal}</td>
               </tr>
             ))}

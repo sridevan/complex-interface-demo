@@ -63,7 +63,7 @@ export default function App() {
         ))}
       </div>
 
-      {tab === 0 && <ComplexOverview epitope={epitope} abImgt={abImgt} regions={regions} residue={residue} />}
+      {tab === 0 && <ComplexOverview abImgt={abImgt} regions={regions} residue={residue} />}
       {tab === 1 && <Explorer interfaces={interfaces} residue={residue} />}
       {tab === 2 && <DataNotes anomalies={anomalies} coverage={coverage} />}
     </div>
