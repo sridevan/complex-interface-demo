@@ -23,9 +23,12 @@ h1 { font-size: 26px; margin: 0 0 4px; }
 .banner.info { background: #eaf2fb; border: 1px solid #c3ddf6; }
 
 .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 20px; }
-.metric { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+.metric { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px;
+  display: flex; flex-direction: column; }
 .metric .label { font-size: 12px; color: var(--muted); }
-.metric .value { font-size: 26px; font-weight: 600; margin-top: 4px; }
+/* Tiles stretch to equal height in the grid; margin-top:auto pushes every number to the bottom so
+   they align on one baseline regardless of whether the label wraps to one or two lines. */
+.metric .value { font-size: 26px; font-weight: 600; margin-top: auto; padding-top: 4px; }
 
 .tabs { display: flex; flex-wrap: wrap; gap: 4px; border-bottom: 1px solid var(--border); margin-bottom: 18px; }
 .tab { padding: 9px 14px; cursor: pointer; font-size: 14px; color: var(--muted); border-bottom: 2px solid transparent; }
