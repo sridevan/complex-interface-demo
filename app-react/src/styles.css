@@ -167,9 +167,9 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
 /* CDR / framework contribution bars */
 .rc-list { display: flex; flex-direction: column; gap: 7px; }
-/* Fixed-width bar column so every track is identical; the variable-length detail text takes the
-   flexible last column instead (previously `auto`, which made each bar a different width). */
-.rc-row { display: grid; grid-template-columns: 92px minmax(0, 260px) 48px 1fr; align-items: center; gap: 10px; font-size: 12px; }
+/* Detail-text column fixed (wide enough for the longest "N contacts · M epitope residues"); the bar
+   takes the flexible column so it fills the width and every track stays identical across rows. */
+.rc-row { display: grid; grid-template-columns: 92px 1fr 48px 240px; align-items: center; gap: 10px; font-size: 12px; }
 .rc-name { font-weight: 600; }
 .rc-bar { background: #f0f2f5; border-radius: 4px; height: 14px; overflow: hidden; }
 .rc-fill { height: 100%; border-radius: 4px; }
