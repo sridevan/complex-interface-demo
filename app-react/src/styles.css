@@ -158,7 +158,8 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 /* Small colour key used inline in a note ("■ heavy ■ light"). */
 .ck { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin: 0 4px 0 8px; vertical-align: middle; }
 /* IMGT region tag in the paratope table. */
-.rtag { display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: 11px; font-weight: 600; }
+.rtag { display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: 11px; font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, 0.08); }
 /* Top-contacted antigen residue chips. */
 .epi-chips { white-space: normal; }
 .chip { display: inline-flex; align-items: center; gap: 3px; background: #eef2f7; border-radius: 10px;

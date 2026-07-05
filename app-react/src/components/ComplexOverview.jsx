@@ -52,6 +52,14 @@ const contactCols = (variantMap, glycanMap) => [
     help: 'Number of distinct structural assemblies (PDB entry + assembly) in which this exact residue pair is in contact — de-biases redundant re-deposition.' },
 ]
 
+// White or dark text for a coloured chip, chosen by the background's perceived luminance (same
+// threshold as the contact heatmap) — so pale regions like Framework-H get dark, readable text.
+function chipInk(hex) {
+  const n = parseInt(hex.slice(1), 16)
+  const lum = 0.299 * ((n >> 16) & 255) + 0.587 * ((n >> 8) & 255) + 0.114 * (n & 255)
+  return lum > 150 ? '#1c2430' : '#ffffff'
+}
+
 // Ranked-table bar: value label sits to the LEFT on white (always legible — never dark text on a
 // dark bar), the bar itself is purely visual and sized to `frac` of the track.
 function Bar({ frac, color, children }) {
@@ -100,8 +108,8 @@ function ParatopeConvergence({ abImgt }) {
             {rows.map((r) => (
               <tr key={`${r.antibody_chain_type}|${r.antibody_imgt_position}|${r.antibody_residue_name}`}>
                 <td><b>{r.antibody_residue_name}{r.antibody_imgt_position}</b></td>
-                <td><span className="rtag" style={{ background: (REGION_COLORS[r.antibody_imgt_region] || '#ccc') + '33',
-                  color: REGION_COLORS[r.antibody_imgt_region] || '#555' }}>{r.antibody_imgt_region}</span></td>
+                <td><span className="rtag" style={{ background: REGION_COLORS[r.antibody_imgt_region] || '#8a94a6',
+                  color: chipInk(REGION_COLORS[r.antibody_imgt_region] || '#8a94a6') }}>{r.antibody_imgt_region}</span></td>
                 <td style={{ minWidth: 130 }}>
                   <Bar frac={r.total_antigen_contacts / max} color={REGION_COLORS[r.antibody_imgt_region] || '#999'}>
                     {r.total_antigen_contacts}</Bar>
