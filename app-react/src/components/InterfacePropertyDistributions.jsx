@@ -2,27 +2,29 @@ import React, { useMemo } from 'react'
 import Hint from './Hint.jsx'
 
 // PISA per-interface properties to profile. digits = decimal places for display / axis labels.
+// `desc` describes the value FOR THE SELECTED INTERFACE (a single {chain}-chain–antigen interface);
+// {chain} is filled with the active chain type. A common suffix explains the distribution/chart.
 const PROPS = [
   { key: 'interface_area', label: 'Buried surface area', unit: 'Å²', digits: 0,
-    help: 'PISA buried surface area (BSA): total area excluded from solvent when the interface forms. Larger = bigger interface.' },
+    desc: 'Buried surface area of the selected {chain} chain–antigen interface — area excluded from solvent on binding (PISA). Larger = bigger interface.' },
   { key: 'solvation_energy', label: 'Solvation energy ΔᵢG', unit: 'kcal/mol', digits: 1,
-    help: 'PISA solvation free-energy gain on interface formation. More negative = more hydrophobic burial driving binding.' },
+    desc: 'Solvation free-energy gain when the selected {chain} chain–antigen interface forms (PISA). More negative = more hydrophobic burial driving binding.' },
   { key: 'stabilization_energy', label: 'Stabilisation energy', unit: 'kcal/mol', digits: 1,
-    help: 'PISA stabilisation (dissociation) energy of the interface. More negative = a more stable interface.' },
+    desc: 'Stabilisation (dissociation) energy of the selected {chain} chain–antigen interface (PISA). More negative = a more stable interface.' },
   { key: 'p_value', label: 'Interface P-value', unit: '', digits: 2,
-    help: 'PISA interface specificity P-value. < 0.5 = interface more hydrophobic (specific) than a random patch of equal area; > 0.5 = less.' },
+    desc: 'Specificity P-value of the selected {chain} chain–antigen interface (PISA). < 0.5 = more hydrophobic/specific than a random patch of equal area; > 0.5 = less.' },
   { key: 'number_interface_residues', label: 'Interface residues', unit: '', digits: 0, discrete: true,
-    help: 'Number of residues (both partners) buried at the interface, per PISA.' },
+    desc: 'Residues buried at the selected {chain} chain–antigen interface, counting both partners (PISA).' },
   { key: 'number_hydrogen_bonds', label: 'Hydrogen bonds', unit: '', digits: 0, discrete: true,
-    help: 'Number of hydrogen bonds across the interface, per PISA.' },
+    desc: 'Hydrogen bonds between the {chain} chain and the antigen in the selected interface (PISA).' },
   { key: 'number_salt_bridges', label: 'Salt bridges', unit: '', digits: 0, discrete: true,
-    help: 'Number of salt bridges across the interface, per PISA.' },
+    desc: 'Salt bridges between the {chain} chain and the antigen in the selected interface (PISA).' },
   { key: 'number_other_bonds', label: 'Other bonds', unit: '', digits: 0, discrete: true,
-    help: 'Other close interface contacts not classified as H-bond, salt bridge, disulfide or covalent (per PISA) — the bulk of interface atom contacts.' },
+    desc: 'Other close contacts (not H-bond, salt bridge, disulfide or covalent) between the {chain} chain and the antigen in the selected interface (PISA) — the bulk of interface atom contacts.' },
   { key: 'number_disulfide_bonds', label: 'Disulfide bonds', unit: '', digits: 0, discrete: true,
-    help: 'Inter-chain disulfide bonds across the interface, per PISA (rare in antibody–antigen interfaces).' },
+    desc: 'Disulfide bonds between the {chain} chain and the antigen in the selected interface (PISA); rare.' },
   { key: 'number_covalent_bonds', label: 'Covalent bonds', unit: '', digits: 0, discrete: true,
-    help: 'Covalent bonds linking the two partners across the interface, per PISA (rare).' },
+    desc: 'Covalent bonds between the {chain} chain and the antigen in the selected interface (PISA); rare.' },
 ]
 
 const N_BINS = 12
@@ -107,7 +109,8 @@ export default function InterfacePropertyDistributions({ instances, selected, ch
       <div className="ipd-grid">
         {cards.map(({ p, clean, sel, min, max, pct }) => (
           <div key={p.key} className="ipd-card">
-            <div className="ipd-head"><span className="ipd-label">{p.label}</span><Hint text={p.help} /></div>
+            <div className="ipd-head"><span className="ipd-label">{p.label}</span>
+              <Hint text={`${p.desc.replaceAll('{chain}', chainType)} The chart shows how this compares across all ${chainType}-chain interfaces in the complex (n = ${instances.length}); the selected interface is highlighted.`} /></div>
             <div className="ipd-val">
               <b>{fmtNum(sel, p.digits)}</b>{p.unit ? ' ' + p.unit : ''}
               {pct != null && <span className="ipd-pct">{pct}ᵗʰ pct</span>}
