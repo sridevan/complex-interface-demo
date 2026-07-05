@@ -40,12 +40,12 @@ function contactTable(rows) {
 // CONTACT_COLS is a factory: the antigen column renders variant / glycan badges when that epitope
 // residue carries a natural Variant or is an N-glycosylation site (looked up by UniProt position).
 const contactCols = (variantMap, glycanMap) => [
-  { key: 'antigen', label: 'Antigen residue', sortValue: (r) => r.antigen_uniprot_position ?? Infinity,
+  { key: 'antigen', label: 'Ag residue', sortValue: (r) => r.antigen_uniprot_position ?? Infinity,
     render: (v, r) => (<>{v} <VariantBadge variants={variantMap[r.antigen_uniprot_position]} />
       {' '}<GlycanBadge glycan={glycanMap[r.antigen_uniprot_position]} /></>) },
-  { key: 'antibody_residue', label: 'Antibody residue',
+  { key: 'antibody_residue', label: 'Ab residue',
     sortValue: (r) => (r.ab_pos ?? 9999) + (r.ab_ins ? (r.ab_ins.charCodeAt(0) - 64) / 100 : 0) },
-  { key: 'region', label: 'Antibody region' },
+  { key: 'region', label: 'Ab region' },
   { key: 'contacts', label: 'Contacts', num: true,
     help: 'Residue-level contacts for this epitope–paratope residue pair, summed across every deposited complex (one per contacting instance).' },
   { key: 'assemblies', label: 'Assemblies', num: true,
