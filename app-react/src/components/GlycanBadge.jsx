@@ -14,13 +14,9 @@ export default function GlycanBadge({ glycan }) {
 
   const sites = glycan.glyco_site_structures || []
   const para = glycan.paratope_structures || []
-  const resSet = [...new Set((glycan.paratope_contacts || []).map((c) => c.antibody_residue))]
   const nStruct = (n) => `${n} structure${n === 1 ? '' : 's'}`
-  // Concise: when the glycan contacts the paratope, the structure list on that line already carries
-  // the "where", so don't repeat a separate glycosylated-in line (they're the same structures).
   const text = glycan.contacts_paratope
-    ? `N-glycosylation site (PDBe). Glycan contacts the paratope in ${nStruct(para.length)}: `
-      + `${para.join(', ')}.\nParatope residues: ${resSet.join(', ')}.`
+    ? `N-glycosylation site (PDBe). Glycan contacts the paratope in ${nStruct(para.length)}: ${para.join(', ')}.`
     : `N-glycosylation site (PDBe), glycosylated in ${nStruct(sites.length)}: ${sites.join(', ')}.`
 
   const show = () => {
