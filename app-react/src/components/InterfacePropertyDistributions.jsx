@@ -11,11 +11,11 @@ const PROPS = [
     help: 'PISA stabilisation (dissociation) energy of the interface. More negative = a more stable interface.' },
   { key: 'p_value', label: 'Interface P-value', unit: '', digits: 2,
     help: 'PISA interface specificity P-value. < 0.5 = interface more hydrophobic (specific) than a random patch of equal area; > 0.5 = less.' },
-  { key: 'number_interface_residues', label: 'Interface residues', unit: '', digits: 0,
+  { key: 'number_interface_residues', label: 'Interface residues', unit: '', digits: 0, discrete: true,
     help: 'Number of residues (both partners) buried at the interface, per PISA.' },
-  { key: 'number_hydrogen_bonds', label: 'Hydrogen bonds', unit: '', digits: 0,
+  { key: 'number_hydrogen_bonds', label: 'Hydrogen bonds', unit: '', digits: 0, discrete: true,
     help: 'Number of hydrogen bonds across the interface, per PISA.' },
-  { key: 'number_salt_bridges', label: 'Salt bridges', unit: '', digits: 0,
+  { key: 'number_salt_bridges', label: 'Salt bridges', unit: '', digits: 0, discrete: true,
     help: 'Number of salt bridges across the interface, per PISA.' },
 ]
 
@@ -26,25 +26,47 @@ function fmtNum(v, d) {
   return d === 0 ? Math.round(v).toLocaleString() : v.toFixed(d)
 }
 
-// Histogram of the population with the selected interface's value marked (highlighted bin + line).
-function Histogram({ clean, min, max, selected }) {
+const W = 240, H = 56, GAP = 2
+// A count property with a small integer range gets one bar per value (bond counts); anything else —
+// continuous energies/areas or a wide integer range — gets a binned histogram.
+const MAX_DISCRETE_SPAN = 24
+
+function Bars({ bars, selIdx }) {
+  const maxCount = Math.max(...bars, 1)
+  const bw = (W - GAP * (bars.length - 1)) / bars.length
+  return bars.map((c, i) => {
+    const h = (c / maxCount) * (H - 2)
+    return <rect key={i} x={i * (bw + GAP)} y={H - h} width={bw} height={h}
+      className={'ipd-bar' + (i === selIdx ? ' sel' : '')} />
+  })
+}
+
+// Distribution of the population with the selected interface's value marked.
+function Distribution({ clean, min, max, selected, discrete }) {
   if (clean.length < 2 || min == null) return <div className="ipd-nodata">not enough data</div>
+
+  // Discrete: one bar per integer value. The highlighted bar IS the exact value — no marker line.
+  if (discrete && (max - min) <= MAX_DISCRETE_SPAN) {
+    const bars = new Array(max - min + 1).fill(0)
+    for (const v of clean) bars[Math.round(v) - min]++
+    const selIdx = selected == null ? -1 : Math.round(selected) - min
+    return (
+      <svg className="ipd-svg" viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none">
+        <Bars bars={bars} selIdx={selIdx} />
+      </svg>
+    )
+  }
+
+  // Continuous: binned histogram + a precise marker line at the selected value (bins are ranges).
   const span = (max - min) || 1
   const binOf = (v) => Math.min(N_BINS - 1, Math.max(0, Math.floor(((v - min) / span) * N_BINS)))
   const bins = new Array(N_BINS).fill(0)
   for (const v of clean) bins[binOf(v)]++
-  const maxCount = Math.max(...bins, 1)
   const selBin = selected == null ? -1 : binOf(selected)
-  const W = 240, H = 56, gap = 2
-  const bw = (W - gap * (N_BINS - 1)) / N_BINS
   const selX = selected == null ? null : ((selected - min) / span) * W
   return (
     <svg className="ipd-svg" viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none">
-      {bins.map((c, i) => {
-        const h = (c / maxCount) * (H - 2)
-        return <rect key={i} x={i * (bw + gap)} y={H - h} width={bw} height={h}
-          className={'ipd-bar' + (i === selBin ? ' sel' : '')} />
-      })}
+      <Bars bars={bins} selIdx={selBin} />
       {selX != null && <line x1={selX} y1="0" x2={selX} y2={H} className="ipd-marker"
         vectorEffect="non-scaling-stroke" />}
     </svg>
@@ -69,8 +91,8 @@ export default function InterfacePropertyDistributions({ instances, selected, ch
     <div className="card ex-cell">
       <h2>Interface property distributions</h2>
       <p className="note">PISA properties of the selected interface (orange marker) against all
-        {' '}<b>{chainType}-chain</b> interfaces in the complex (n = {instances.length}). Each bar counts
-        interfaces in that value range.</p>
+        {' '}<b>{chainType}-chain</b> interfaces in the complex (n = {instances.length}). Bars count
+        interfaces by value — energies/area are binned, bond counts show one bar per value.</p>
       <div className="ipd-grid">
         {cards.map(({ p, clean, sel, min, max, pct }) => (
           <div key={p.key} className="ipd-card">
@@ -79,7 +101,7 @@ export default function InterfacePropertyDistributions({ instances, selected, ch
               <b>{fmtNum(sel, p.digits)}</b>{p.unit ? ' ' + p.unit : ''}
               {pct != null && <span className="ipd-pct">{pct}ᵗʰ pct</span>}
             </div>
-            <Histogram clean={clean} min={min} max={max} selected={sel} />
+            <Distribution clean={clean} min={min} max={max} selected={sel} discrete={p.discrete} />
             <div className="ipd-axis"><span>{fmtNum(min, p.digits)}</span><span>{fmtNum(max, p.digits)}</span></div>
           </div>
         ))}
