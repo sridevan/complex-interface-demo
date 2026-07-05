@@ -200,7 +200,7 @@ export default function ComplexOverview({ abImgt, regions, residue, variants = [
             <DataTable columns={CONTACT_COLS} rows={shown} initialSort="contacts" />
           </div>
         </div>
-        <ContactHeatmap residue={residue} onSelect={toggleEpi} selected={epiFilter} variants={variantMap} glycans={glycanMap} />
+        <ContactHeatmap residue={residue} onSelect={toggleEpi} selected={epiFilter} />
       </div>
     </>
   )

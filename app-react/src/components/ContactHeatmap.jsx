@@ -1,6 +1,4 @@
 import React, { useMemo, useState } from 'react'
-import VariantBadge from './VariantBadge.jsx'
-import GlycanBadge from './GlycanBadge.jsx'
 
 // Antibody IMGT regions in a fixed, readable order (heavy block then light block).
 const HEAVY_REGIONS = ['CDR-H1', 'CDR-H2', 'CDR-H3', 'Framework-H']
@@ -22,7 +20,7 @@ function cell(t) {
   return { bg: `rgb(${r},${g},${b})`, fg: lum < 150 ? '#ffffff' : '#2a2f36' }
 }
 
-export default function ContactHeatmap({ residue, onSelect, selected, chainType, variants = {}, glycans = {} }) {
+export default function ContactHeatmap({ residue, onSelect, selected, chainType }) {
   const [metric, setMetric] = useState('pairs')     // 'pairs' | 'structures' (both residue-pair based)
   const [sortBy, setSortBy] = useState('contacts')  // 'contacts' | 'position'
   const [hover, setHover] = useState(null)
@@ -119,7 +117,7 @@ export default function ContactHeatmap({ residue, onSelect, selected, chainType,
               <tr key={row.position} className={'selrow' + (row.position === selected ? ' sel' : '')}
                   onClick={() => onSelect?.(row.position)}
                   title="Click to filter the aggregated contact table to this antigen residue">
-                <td className="hm-rowhead">{row.residue}{row.position} <VariantBadge variants={variants[row.position]} /> <GlycanBadge glycan={glycans[row.position]} /></td>
+                <td className="hm-rowhead">{row.residue}{row.position}</td>
                 {REGIONS.map((r) => {
                   const v = row.values[r]
                   const c = cell(v / maxVal)
