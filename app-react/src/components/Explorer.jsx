@@ -89,10 +89,10 @@ export default function Explorer({ interfaces, residue }) {
           <h2>Interface selection</h2>
           <p className="note">Select an antibody chain type to explore.</p>
           <div className="selcards">
-            <SelectorCard label="Antigen–heavy chain" color="#e19039"
+            <SelectorCard label="Antigen - Antibody (heavy chain)" color="#e19039"
               count={stats.heavy.count} medBsa={stats.heavy.med}
               active={chainType === 'heavy'} onClick={() => pickChain('heavy')} />
-            <SelectorCard label="Antigen–light chain" color="#4b7fcc"
+            <SelectorCard label="Antigen - Antibody (light chain)" color="#4b7fcc"
               count={stats.light.count} medBsa={stats.light.med}
               active={chainType === 'light'} onClick={() => pickChain('light')} />
           </div>
