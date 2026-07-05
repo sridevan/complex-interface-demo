@@ -4,59 +4,59 @@
   "antigen_uniprot_position": 486,
   "antigen_residue_name": "PHE",
   "variants": [],
-  "total_contacts": 353,
-  "assemblies_contacted": 53,
-  "pdb_entries_contacted": 53,
-  "unique_antibody_chains": 160,
+  "total_contacts": 385,
+  "assemblies_contacted": 55,
+  "pdb_entries_contacted": 55,
+  "unique_antibody_chains": 172,
   "unique_antibody_imgt_positions": 46,
-  "heavy_chain_contacts": 207,
-  "light_chain_contacts": 146,
-  "heavy_chain_assemblies": 35,
-  "light_chain_assemblies": 37,
+  "heavy_chain_contacts": 233,
+  "light_chain_contacts": 152,
+  "heavy_chain_assemblies": 37,
+  "light_chain_assemblies": 39,
   "most_common_antibody_imgt_regions": [
    {
     "value": "Framework-H",
-    "count": 95
+    "count": 103
    },
    {
     "value": "CDR-L3",
-    "count": 88
+    "count": 94
    },
    {
     "value": "CDR-H3",
-    "count": 63
+    "count": 66
+   },
+   {
+    "value": "CDR-H2",
+    "count": 50
    },
    {
     "value": "CDR-L1",
     "count": 43
-   },
-   {
-    "value": "CDR-H2",
-    "count": 38
    }
   ],
   "most_common_heavy_chain_imgt_regions": [
    {
     "value": "Framework-H",
-    "count": 95
+    "count": 103
    },
    {
     "value": "CDR-H3",
-    "count": 63
+    "count": 66
    },
    {
     "value": "CDR-H2",
-    "count": 38
+    "count": 50
    },
    {
     "value": "CDR-H1",
-    "count": 6
+    "count": 9
    }
   ],
   "most_common_light_chain_imgt_regions": [
    {
     "value": "CDR-L3",
-    "count": 88
+    "count": 94
    },
    {
     "value": "CDR-L1",
@@ -82,23 +82,23 @@
     ]
    }
   ],
-  "total_contacts": 308,
-  "assemblies_contacted": 46,
-  "pdb_entries_contacted": 46,
-  "unique_antibody_chains": 131,
+  "total_contacts": 314,
+  "assemblies_contacted": 49,
+  "pdb_entries_contacted": 49,
+  "unique_antibody_chains": 135,
   "unique_antibody_imgt_positions": 33,
-  "heavy_chain_contacts": 254,
-  "light_chain_contacts": 54,
-  "heavy_chain_assemblies": 41,
-  "light_chain_assemblies": 18,
+  "heavy_chain_contacts": 259,
+  "light_chain_contacts": 55,
+  "heavy_chain_assemblies": 43,
+  "light_chain_assemblies": 19,
   "most_common_antibody_imgt_regions": [
    {
     "value": "CDR-H3",
-    "count": 116
+    "count": 120
    },
    {
     "value": "CDR-H2",
-    "count": 80
+    "count": 81
    },
    {
     "value": "CDR-L3",
@@ -116,11 +116,11 @@
   "most_common_heavy_chain_imgt_regions": [
    {
     "value": "CDR-H3",
-    "count": 116
+    "count": 120
    },
    {
     "value": "CDR-H2",
-    "count": 80
+    "count": 81
    },
    {
     "value": "Framework-H",
@@ -143,6 +143,10 @@
    {
     "value": "CDR-L1",
     "count": 1
+   },
+   {
+    "value": "CDR-L2",
+    "count": 1
    }
   ]
  },
@@ -151,19 +155,19 @@
   "antigen_uniprot_position": 489,
   "antigen_residue_name": "TYR",
   "variants": [],
-  "total_contacts": 272,
-  "assemblies_contacted": 44,
-  "pdb_entries_contacted": 44,
-  "unique_antibody_chains": 128,
+  "total_contacts": 283,
+  "assemblies_contacted": 46,
+  "pdb_entries_contacted": 46,
+  "unique_antibody_chains": 134,
   "unique_antibody_imgt_positions": 22,
-  "heavy_chain_contacts": 203,
+  "heavy_chain_contacts": 214,
   "light_chain_contacts": 69,
-  "heavy_chain_assemblies": 39,
+  "heavy_chain_assemblies": 41,
   "light_chain_assemblies": 19,
   "most_common_antibody_imgt_regions": [
    {
     "value": "CDR-H3",
-    "count": 163
+    "count": 168
    },
    {
     "value": "CDR-L1",
@@ -175,7 +179,7 @@
    },
    {
     "value": "CDR-H2",
-    "count": 17
+    "count": 23
    },
    {
     "value": "CDR-H1",
@@ -185,11 +189,11 @@
   "most_common_heavy_chain_imgt_regions": [
    {
     "value": "CDR-H3",
-    "count": 163
+    "count": 168
    },
    {
     "value": "CDR-H2",
-    "count": 17
+    "count": 23
    },
    {
     "value": "CDR-H1",
@@ -220,49 +224,49 @@
   "antigen_uniprot_position": 449,
   "antigen_residue_name": "TYR",
   "variants": [],
-  "total_contacts": 249,
-  "assemblies_contacted": 39,
-  "pdb_entries_contacted": 39,
-  "unique_antibody_chains": 91,
-  "unique_antibody_imgt_positions": 45,
-  "heavy_chain_contacts": 202,
-  "light_chain_contacts": 47,
-  "heavy_chain_assemblies": 32,
-  "light_chain_assemblies": 13,
+  "total_contacts": 280,
+  "assemblies_contacted": 43,
+  "pdb_entries_contacted": 43,
+  "unique_antibody_chains": 104,
+  "unique_antibody_imgt_positions": 46,
+  "heavy_chain_contacts": 223,
+  "light_chain_contacts": 57,
+  "heavy_chain_assemblies": 35,
+  "light_chain_assemblies": 16,
   "most_common_antibody_imgt_regions": [
    {
     "value": "CDR-H1",
-    "count": 92
+    "count": 93
    },
    {
     "value": "Framework-H",
-    "count": 57
+    "count": 62
    },
    {
     "value": "CDR-H3",
-    "count": 29
+    "count": 44
    },
    {
     "value": "CDR-L1",
-    "count": 21
+    "count": 23
    },
    {
-    "value": "CDR-H2",
-    "count": 16
+    "value": "CDR-L3",
+    "count": 19
    }
   ],
   "most_common_heavy_chain_imgt_regions": [
    {
     "value": "CDR-H1",
-    "count": 92
+    "count": 93
    },
    {
     "value": "Framework-H",
-    "count": 57
+    "count": 62
    },
    {
     "value": "CDR-H3",
-    "count": 29
+    "count": 44
    },
    {
     "value": "CDR-H2",
@@ -272,15 +276,15 @@
   "most_common_light_chain_imgt_regions": [
    {
     "value": "CDR-L1",
-    "count": 21
+    "count": 23
    },
    {
     "value": "CDR-L3",
-    "count": 16
+    "count": 19
    },
    {
     "value": "Framework-L",
-    "count": 9
+    "count": 14
    },
    {
     "value": "CDR-L2",
@@ -293,23 +297,23 @@
   "antigen_uniprot_position": 490,
   "antigen_residue_name": "PHE",
   "variants": [],
-  "total_contacts": 231,
-  "assemblies_contacted": 44,
-  "pdb_entries_contacted": 44,
-  "unique_antibody_chains": 99,
+  "total_contacts": 241,
+  "assemblies_contacted": 48,
+  "pdb_entries_contacted": 48,
+  "unique_antibody_chains": 108,
   "unique_antibody_imgt_positions": 24,
-  "heavy_chain_contacts": 228,
-  "light_chain_contacts": 3,
-  "heavy_chain_assemblies": 42,
-  "light_chain_assemblies": 3,
+  "heavy_chain_contacts": 235,
+  "light_chain_contacts": 6,
+  "heavy_chain_assemblies": 45,
+  "light_chain_assemblies": 4,
   "most_common_antibody_imgt_regions": [
    {
     "value": "CDR-H3",
-    "count": 101
+    "count": 104
    },
    {
     "value": "CDR-H2",
-    "count": 56
+    "count": 60
    },
    {
     "value": "CDR-H1",
@@ -320,18 +324,18 @@
     "count": 18
    },
    {
-    "value": "CDR-L1",
-    "count": 1
+    "value": "Framework-L",
+    "count": 4
    }
   ],
   "most_common_heavy_chain_imgt_regions": [
    {
     "value": "CDR-H3",
-    "count": 101
+    "count": 104
    },
    {
     "value": "CDR-H2",
-    "count": 56
+    "count": 60
    },
    {
     "value": "CDR-H1",
@@ -344,11 +348,11 @@
   ],
   "most_common_light_chain_imgt_regions": [
    {
-    "value": "CDR-L1",
-    "count": 1
+    "value": "Framework-L",
+    "count": 4
    },
    {
-    "value": "Framework-L",
+    "value": "CDR-L1",
     "count": 1
    }
   ]
@@ -367,19 +371,19 @@
     ]
    }
   ],
-  "total_contacts": 190,
-  "assemblies_contacted": 36,
-  "pdb_entries_contacted": 36,
-  "unique_antibody_chains": 92,
+  "total_contacts": 198,
+  "assemblies_contacted": 38,
+  "pdb_entries_contacted": 38,
+  "unique_antibody_chains": 97,
   "unique_antibody_imgt_positions": 26,
-  "heavy_chain_contacts": 170,
-  "light_chain_contacts": 20,
-  "heavy_chain_assemblies": 35,
-  "light_chain_assemblies": 5,
+  "heavy_chain_contacts": 176,
+  "light_chain_contacts": 22,
+  "heavy_chain_assemblies": 36,
+  "light_chain_assemblies": 6,
   "most_common_antibody_imgt_regions": [
    {
     "value": "CDR-H3",
-    "count": 108
+    "count": 114
    },
    {
     "value": "CDR-H1",
@@ -391,7 +395,7 @@
    },
    {
     "value": "CDR-L1",
-    "count": 12
+    "count": 14
    },
    {
     "value": "Framework-L",
@@ -401,7 +405,7 @@
   "most_common_heavy_chain_imgt_regions": [
    {
     "value": "CDR-H3",
-    "count": 108
+    "count": 114
    },
    {
     "value": "CDR-H1",
@@ -419,7 +423,7 @@
   "most_common_light_chain_imgt_regions": [
    {
     "value": "CDR-L1",
-    "count": 12
+    "count": 14
    },
    {
     "value": "Framework-L",
@@ -449,23 +453,23 @@
     ]
    }
   ],
-  "total_contacts": 179,
-  "assemblies_contacted": 28,
-  "pdb_entries_contacted": 28,
-  "unique_antibody_chains": 61,
+  "total_contacts": 189,
+  "assemblies_contacted": 30,
+  "pdb_entries_contacted": 30,
+  "unique_antibody_chains": 65,
   "unique_antibody_imgt_positions": 38,
-  "heavy_chain_contacts": 72,
-  "light_chain_contacts": 107,
-  "heavy_chain_assemblies": 14,
-  "light_chain_assemblies": 16,
+  "heavy_chain_contacts": 73,
+  "light_chain_contacts": 116,
+  "heavy_chain_assemblies": 15,
+  "light_chain_assemblies": 17,
   "most_common_antibody_imgt_regions": [
    {
     "value": "Framework-L",
-    "count": 64
+    "count": 73
    },
    {
     "value": "CDR-H3",
-    "count": 27
+    "count": 28
    },
    {
     "value": "CDR-L1",
@@ -483,7 +487,7 @@
   "most_common_heavy_chain_imgt_regions": [
    {
     "value": "CDR-H3",
-    "count": 27
+    "count": 28
    },
    {
     "value": "CDR-H2",
@@ -501,7 +505,7 @@
   "most_common_light_chain_imgt_regions": [
    {
     "value": "Framework-L",
-    "count": 64
+    "count": 73
    },
    {
     "value": "CDR-L1",
@@ -518,23 +522,23 @@
   "antigen_uniprot_position": 485,
   "antigen_residue_name": "GLY",
   "variants": [],
-  "total_contacts": 159,
-  "assemblies_contacted": 36,
-  "pdb_entries_contacted": 36,
-  "unique_antibody_chains": 93,
-  "unique_antibody_imgt_positions": 17,
-  "heavy_chain_contacts": 72,
-  "light_chain_contacts": 87,
-  "heavy_chain_assemblies": 28,
-  "light_chain_assemblies": 15,
+  "total_contacts": 165,
+  "assemblies_contacted": 38,
+  "pdb_entries_contacted": 38,
+  "unique_antibody_chains": 98,
+  "unique_antibody_imgt_positions": 18,
+  "heavy_chain_contacts": 76,
+  "light_chain_contacts": 89,
+  "heavy_chain_assemblies": 29,
+  "light_chain_assemblies": 16,
   "most_common_antibody_imgt_regions": [
    {
     "value": "CDR-L3",
-    "count": 69
+    "count": 71
    },
    {
     "value": "CDR-H3",
-    "count": 41
+    "count": 44
    },
    {
     "value": "CDR-L1",
@@ -546,13 +550,13 @@
    },
    {
     "value": "CDR-H2",
-    "count": 12
+    "count": 13
    }
   ],
   "most_common_heavy_chain_imgt_regions": [
    {
     "value": "CDR-H3",
-    "count": 41
+    "count": 44
    },
    {
     "value": "Framework-H",
@@ -560,7 +564,7 @@
    },
    {
     "value": "CDR-H2",
-    "count": 12
+    "count": 13
    },
    {
     "value": "CDR-H1",
@@ -570,7 +574,7 @@
   "most_common_light_chain_imgt_regions": [
    {
     "value": "CDR-L3",
-    "count": 69
+    "count": 71
    },
    {
     "value": "CDR-L1",
@@ -726,6 +730,75 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 487,
+  "antigen_residue_name": "ASN",
+  "variants": [],
+  "total_contacts": 131,
+  "assemblies_contacted": 31,
+  "pdb_entries_contacted": 31,
+  "unique_antibody_chains": 81,
+  "unique_antibody_imgt_positions": 28,
+  "heavy_chain_contacts": 65,
+  "light_chain_contacts": 66,
+  "heavy_chain_assemblies": 21,
+  "light_chain_assemblies": 18,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-L3",
+    "count": 51
+   },
+   {
+    "value": "CDR-H3",
+    "count": 35
+   },
+   {
+    "value": "Framework-H",
+    "count": 16
+   },
+   {
+    "value": "CDR-L1",
+    "count": 12
+   },
+   {
+    "value": "CDR-H1",
+    "count": 8
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 35
+   },
+   {
+    "value": "Framework-H",
+    "count": 16
+   },
+   {
+    "value": "CDR-H1",
+    "count": 8
+   },
+   {
+    "value": "CDR-H2",
+    "count": 5
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L3",
+    "count": 51
+   },
+   {
+    "value": "CDR-L1",
+    "count": 12
+   },
+   {
+    "value": "Framework-L",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
   "antigen_uniprot_position": 147,
   "antigen_residue_name": "LYS",
   "variants": [],
@@ -795,69 +868,69 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 487,
+  "antigen_uniprot_position": 450,
   "antigen_residue_name": "ASN",
   "variants": [],
   "total_contacts": 119,
-  "assemblies_contacted": 29,
-  "pdb_entries_contacted": 29,
-  "unique_antibody_chains": 74,
-  "unique_antibody_imgt_positions": 26,
-  "heavy_chain_contacts": 60,
-  "light_chain_contacts": 59,
-  "heavy_chain_assemblies": 19,
-  "light_chain_assemblies": 17,
+  "assemblies_contacted": 23,
+  "pdb_entries_contacted": 23,
+  "unique_antibody_chains": 54,
+  "unique_antibody_imgt_positions": 32,
+  "heavy_chain_contacts": 109,
+  "light_chain_contacts": 10,
+  "heavy_chain_assemblies": 22,
+  "light_chain_assemblies": 4,
   "most_common_antibody_imgt_regions": [
    {
-    "value": "CDR-L3",
-    "count": 44
-   },
-   {
     "value": "CDR-H3",
-    "count": 34
+    "count": 40
    },
    {
     "value": "Framework-H",
-    "count": 15
-   },
-   {
-    "value": "CDR-L1",
-    "count": 12
+    "count": 35
    },
    {
     "value": "CDR-H1",
-    "count": 7
+    "count": 19
+   },
+   {
+    "value": "CDR-H2",
+    "count": 15
+   },
+   {
+    "value": "CDR-L3",
+    "count": 5
    }
   ],
   "most_common_heavy_chain_imgt_regions": [
    {
     "value": "CDR-H3",
-    "count": 34
+    "count": 40
    },
    {
     "value": "Framework-H",
-    "count": 15
+    "count": 35
    },
    {
     "value": "CDR-H1",
-    "count": 7
+    "count": 19
    },
    {
     "value": "CDR-H2",
-    "count": 3
+    "count": 15
    }
   ],
   "most_common_light_chain_imgt_regions": [
    {
     "value": "CDR-L3",
-    "count": 44
+    "count": 5
    },
    {
     "value": "CDR-L1",
-    "count": 12
+    "count": 4
    },
    {
-    "value": "Framework-L",
+    "value": "CDR-L2",
     "count": 1
    }
   ]
@@ -933,6 +1006,140 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 346,
+  "antigen_residue_name": "ARG",
+  "variants": [],
+  "total_contacts": 115,
+  "assemblies_contacted": 15,
+  "pdb_entries_contacted": 15,
+  "unique_antibody_chains": 48,
+  "unique_antibody_imgt_positions": 19,
+  "heavy_chain_contacts": 67,
+  "light_chain_contacts": 48,
+  "heavy_chain_assemblies": 11,
+  "light_chain_assemblies": 12,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 41
+   },
+   {
+    "value": "CDR-H2",
+    "count": 23
+   },
+   {
+    "value": "CDR-L3",
+    "count": 21
+   },
+   {
+    "value": "CDR-L1",
+    "count": 12
+   },
+   {
+    "value": "CDR-L2",
+    "count": 11
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 41
+   },
+   {
+    "value": "CDR-H2",
+    "count": 23
+   },
+   {
+    "value": "CDR-H1",
+    "count": 3
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L3",
+    "count": 21
+   },
+   {
+    "value": "CDR-L1",
+    "count": 12
+   },
+   {
+    "value": "CDR-L2",
+    "count": 11
+   },
+   {
+    "value": "Framework-L",
+    "count": 4
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 455,
+  "antigen_residue_name": "LEU",
+  "variants": [],
+  "total_contacts": 114,
+  "assemblies_contacted": 32,
+  "pdb_entries_contacted": 32,
+  "unique_antibody_chains": 81,
+  "unique_antibody_imgt_positions": 14,
+  "heavy_chain_contacts": 90,
+  "light_chain_contacts": 24,
+  "heavy_chain_assemblies": 30,
+  "light_chain_assemblies": 9,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 63
+   },
+   {
+    "value": "CDR-H1",
+    "count": 14
+   },
+   {
+    "value": "CDR-L1",
+    "count": 11
+   },
+   {
+    "value": "CDR-H2",
+    "count": 11
+   },
+   {
+    "value": "Framework-L",
+    "count": 8
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 63
+   },
+   {
+    "value": "CDR-H1",
+    "count": 14
+   },
+   {
+    "value": "CDR-H2",
+    "count": 11
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L1",
+    "count": 11
+   },
+   {
+    "value": "Framework-L",
+    "count": 8
+   },
+   {
+    "value": "CDR-L2",
+    "count": 5
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
   "antigen_uniprot_position": 377,
   "antigen_residue_name": "PHE",
   "variants": [],
@@ -998,44 +1205,95 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 455,
-  "antigen_residue_name": "LEU",
+  "antigen_uniprot_position": 345,
+  "antigen_residue_name": "THR",
   "variants": [],
-  "total_contacts": 107,
-  "assemblies_contacted": 31,
-  "pdb_entries_contacted": 31,
-  "unique_antibody_chains": 76,
-  "unique_antibody_imgt_positions": 14,
-  "heavy_chain_contacts": 86,
-  "light_chain_contacts": 21,
-  "heavy_chain_assemblies": 29,
-  "light_chain_assemblies": 8,
+  "total_contacts": 108,
+  "assemblies_contacted": 17,
+  "pdb_entries_contacted": 17,
+  "unique_antibody_chains": 54,
+  "unique_antibody_imgt_positions": 15,
+  "heavy_chain_contacts": 55,
+  "light_chain_contacts": 53,
+  "heavy_chain_assemblies": 10,
+  "light_chain_assemblies": 13,
   "most_common_antibody_imgt_regions": [
    {
     "value": "CDR-H3",
-    "count": 59
+    "count": 47
    },
    {
-    "value": "CDR-H1",
-    "count": 14
-   },
-   {
-    "value": "CDR-H2",
-    "count": 11
+    "value": "CDR-L3",
+    "count": 27
    },
    {
     "value": "CDR-L1",
-    "count": 8
+    "count": 17
    },
    {
-    "value": "Framework-L",
-    "count": 8
+    "value": "CDR-L2",
+    "count": 6
+   },
+   {
+    "value": "CDR-H2",
+    "count": 5
    }
   ],
   "most_common_heavy_chain_imgt_regions": [
    {
     "value": "CDR-H3",
-    "count": 59
+    "count": 47
+   },
+   {
+    "value": "CDR-H2",
+    "count": 5
+   },
+   {
+    "value": "CDR-H1",
+    "count": 3
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L3",
+    "count": 27
+   },
+   {
+    "value": "CDR-L1",
+    "count": 17
+   },
+   {
+    "value": "CDR-L2",
+    "count": 6
+   },
+   {
+    "value": "Framework-L",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 456,
+  "antigen_residue_name": "PHE",
+  "variants": [],
+  "total_contacts": 106,
+  "assemblies_contacted": 27,
+  "pdb_entries_contacted": 27,
+  "unique_antibody_chains": 66,
+  "unique_antibody_imgt_positions": 16,
+  "heavy_chain_contacts": 82,
+  "light_chain_contacts": 24,
+  "heavy_chain_assemblies": 22,
+  "light_chain_assemblies": 10,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 57
+   },
+   {
+    "value": "CDR-L1",
+    "count": 15
    },
    {
     "value": "CDR-H1",
@@ -1043,21 +1301,39 @@
    },
    {
     "value": "CDR-H2",
-    "count": 11
+    "count": 6
+   },
+   {
+    "value": "CDR-L3",
+    "count": 6
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 57
+   },
+   {
+    "value": "CDR-H1",
+    "count": 14
+   },
+   {
+    "value": "CDR-H2",
+    "count": 6
    }
   ],
   "most_common_light_chain_imgt_regions": [
    {
     "value": "CDR-L1",
-    "count": 8
+    "count": 15
+   },
+   {
+    "value": "CDR-L3",
+    "count": 6
    },
    {
     "value": "Framework-L",
-    "count": 8
-   },
-   {
-    "value": "CDR-L2",
-    "count": 5
+    "count": 1
    }
   ]
  },
@@ -1123,71 +1399,6 @@
    {
     "value": "CDR-L3",
     "count": 3
-   }
-  ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 450,
-  "antigen_residue_name": "ASN",
-  "variants": [],
-  "total_contacts": 102,
-  "assemblies_contacted": 20,
-  "pdb_entries_contacted": 20,
-  "unique_antibody_chains": 47,
-  "unique_antibody_imgt_positions": 30,
-  "heavy_chain_contacts": 100,
-  "light_chain_contacts": 2,
-  "heavy_chain_assemblies": 20,
-  "light_chain_assemblies": 2,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "Framework-H",
-    "count": 35
-   },
-   {
-    "value": "CDR-H3",
-    "count": 31
-   },
-   {
-    "value": "CDR-H1",
-    "count": 19
-   },
-   {
-    "value": "CDR-H2",
-    "count": 15
-   },
-   {
-    "value": "CDR-L3",
-    "count": 1
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "Framework-H",
-    "count": 35
-   },
-   {
-    "value": "CDR-H3",
-    "count": 31
-   },
-   {
-    "value": "CDR-H1",
-    "count": 19
-   },
-   {
-    "value": "CDR-H2",
-    "count": 15
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "CDR-L3",
-    "count": 1
-   },
-   {
-    "value": "CDR-L1",
-    "count": 1
    }
   ]
  },
@@ -1262,139 +1473,62 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 345,
-  "antigen_residue_name": "THR",
+  "antigen_uniprot_position": 475,
+  "antigen_residue_name": "ALA",
   "variants": [],
-  "total_contacts": 98,
-  "assemblies_contacted": 14,
-  "pdb_entries_contacted": 14,
-  "unique_antibody_chains": 49,
-  "unique_antibody_imgt_positions": 15,
-  "heavy_chain_contacts": 55,
+  "total_contacts": 96,
+  "assemblies_contacted": 23,
+  "pdb_entries_contacted": 23,
+  "unique_antibody_chains": 51,
+  "unique_antibody_imgt_positions": 16,
+  "heavy_chain_contacts": 53,
   "light_chain_contacts": 43,
-  "heavy_chain_assemblies": 10,
+  "heavy_chain_assemblies": 13,
   "light_chain_assemblies": 10,
   "most_common_antibody_imgt_regions": [
    {
-    "value": "CDR-H3",
-    "count": 47
+    "value": "CDR-H1",
+    "count": 27
    },
    {
     "value": "CDR-L3",
-    "count": 21
+    "count": 22
+   },
+   {
+    "value": "CDR-H3",
+    "count": 22
    },
    {
     "value": "CDR-L1",
-    "count": 14
-   },
-   {
-    "value": "CDR-L2",
-    "count": 5
+    "count": 16
    },
    {
     "value": "CDR-H2",
-    "count": 5
+    "count": 3
    }
   ],
   "most_common_heavy_chain_imgt_regions": [
    {
+    "value": "CDR-H1",
+    "count": 27
+   },
+   {
     "value": "CDR-H3",
-    "count": 47
+    "count": 22
    },
    {
     "value": "CDR-H2",
-    "count": 5
-   },
-   {
-    "value": "CDR-H1",
     "count": 3
    }
   ],
   "most_common_light_chain_imgt_regions": [
    {
     "value": "CDR-L3",
-    "count": 21
+    "count": 22
    },
    {
     "value": "CDR-L1",
-    "count": 14
-   },
-   {
-    "value": "CDR-L2",
-    "count": 5
-   },
-   {
-    "value": "Framework-L",
-    "count": 3
-   }
-  ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 346,
-  "antigen_residue_name": "ARG",
-  "variants": [],
-  "total_contacts": 97,
-  "assemblies_contacted": 12,
-  "pdb_entries_contacted": 12,
-  "unique_antibody_chains": 39,
-  "unique_antibody_imgt_positions": 19,
-  "heavy_chain_contacts": 63,
-  "light_chain_contacts": 34,
-  "heavy_chain_assemblies": 9,
-  "light_chain_assemblies": 9,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "CDR-H3",
-    "count": 37
-   },
-   {
-    "value": "CDR-H2",
-    "count": 23
-   },
-   {
-    "value": "CDR-L3",
-    "count": 17
-   },
-   {
-    "value": "CDR-L1",
-    "count": 9
-   },
-   {
-    "value": "CDR-L2",
-    "count": 5
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "CDR-H3",
-    "count": 37
-   },
-   {
-    "value": "CDR-H2",
-    "count": 23
-   },
-   {
-    "value": "CDR-H1",
-    "count": 3
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "CDR-L3",
-    "count": 17
-   },
-   {
-    "value": "CDR-L1",
-    "count": 9
-   },
-   {
-    "value": "CDR-L2",
-    "count": 5
-   },
-   {
-    "value": "Framework-L",
-    "count": 3
+    "count": 16
    }
   ]
  },
@@ -1469,144 +1603,18 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 456,
-  "antigen_residue_name": "PHE",
-  "variants": [],
-  "total_contacts": 94,
-  "assemblies_contacted": 26,
-  "pdb_entries_contacted": 26,
-  "unique_antibody_chains": 60,
-  "unique_antibody_imgt_positions": 15,
-  "heavy_chain_contacts": 77,
-  "light_chain_contacts": 17,
-  "heavy_chain_assemblies": 21,
-  "light_chain_assemblies": 9,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "CDR-H3",
-    "count": 52
-   },
-   {
-    "value": "CDR-H1",
-    "count": 14
-   },
-   {
-    "value": "CDR-L1",
-    "count": 11
-   },
-   {
-    "value": "CDR-H2",
-    "count": 6
-   },
-   {
-    "value": "CDR-L3",
-    "count": 3
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "CDR-H3",
-    "count": 52
-   },
-   {
-    "value": "CDR-H1",
-    "count": 14
-   },
-   {
-    "value": "CDR-H2",
-    "count": 6
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "CDR-L1",
-    "count": 11
-   },
-   {
-    "value": "CDR-L3",
-    "count": 3
-   },
-   {
-    "value": "Framework-L",
-    "count": 1
-   }
-  ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 475,
-  "antigen_residue_name": "ALA",
-  "variants": [],
-  "total_contacts": 89,
-  "assemblies_contacted": 21,
-  "pdb_entries_contacted": 21,
-  "unique_antibody_chains": 46,
-  "unique_antibody_imgt_positions": 16,
-  "heavy_chain_contacts": 51,
-  "light_chain_contacts": 38,
-  "heavy_chain_assemblies": 12,
-  "light_chain_assemblies": 9,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "CDR-H1",
-    "count": 27
-   },
-   {
-    "value": "CDR-H3",
-    "count": 20
-   },
-   {
-    "value": "CDR-L3",
-    "count": 17
-   },
-   {
-    "value": "CDR-L1",
-    "count": 16
-   },
-   {
-    "value": "CDR-H2",
-    "count": 3
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "CDR-H1",
-    "count": 27
-   },
-   {
-    "value": "CDR-H3",
-    "count": 20
-   },
-   {
-    "value": "CDR-H2",
-    "count": 3
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "CDR-L3",
-    "count": 17
-   },
-   {
-    "value": "CDR-L1",
-    "count": 16
-   }
-  ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
   "antigen_uniprot_position": 494,
   "antigen_residue_name": "SER",
   "variants": [],
-  "total_contacts": 88,
-  "assemblies_contacted": 26,
-  "pdb_entries_contacted": 26,
-  "unique_antibody_chains": 53,
+  "total_contacts": 93,
+  "assemblies_contacted": 30,
+  "pdb_entries_contacted": 30,
+  "unique_antibody_chains": 58,
   "unique_antibody_imgt_positions": 22,
-  "heavy_chain_contacts": 82,
-  "light_chain_contacts": 6,
-  "heavy_chain_assemblies": 23,
-  "light_chain_assemblies": 4,
+  "heavy_chain_contacts": 84,
+  "light_chain_contacts": 9,
+  "heavy_chain_assemblies": 25,
+  "light_chain_assemblies": 6,
   "most_common_antibody_imgt_regions": [
    {
     "value": "CDR-H1",
@@ -1614,19 +1622,19 @@
    },
    {
     "value": "CDR-H3",
-    "count": 28
+    "count": 30
    },
    {
     "value": "CDR-H2",
     "count": 12
    },
    {
-    "value": "CDR-L3",
-    "count": 3
+    "value": "CDR-L1",
+    "count": 4
    },
    {
-    "value": "CDR-L1",
-    "count": 2
+    "value": "CDR-L3",
+    "count": 3
    }
   ],
   "most_common_heavy_chain_imgt_regions": [
@@ -1636,7 +1644,7 @@
    },
    {
     "value": "CDR-H3",
-    "count": 28
+    "count": 30
    },
    {
     "value": "CDR-H2",
@@ -1649,16 +1657,81 @@
   ],
   "most_common_light_chain_imgt_regions": [
    {
+    "value": "CDR-L1",
+    "count": 4
+   },
+   {
     "value": "CDR-L3",
     "count": 3
    },
    {
-    "value": "CDR-L1",
+    "value": "Framework-L",
     "count": 2
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 445,
+  "antigen_residue_name": "VAL",
+  "variants": [],
+  "total_contacts": 89,
+  "assemblies_contacted": 19,
+  "pdb_entries_contacted": 19,
+  "unique_antibody_chains": 50,
+  "unique_antibody_imgt_positions": 23,
+  "heavy_chain_contacts": 58,
+  "light_chain_contacts": 31,
+  "heavy_chain_assemblies": 15,
+  "light_chain_assemblies": 8,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-L3",
+    "count": 29
+   },
+   {
+    "value": "Framework-H",
+    "count": 23
+   },
+   {
+    "value": "CDR-H1",
+    "count": 16
+   },
+   {
+    "value": "CDR-H2",
+    "count": 15
+   },
+   {
+    "value": "CDR-H3",
+    "count": 4
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "Framework-H",
+    "count": 23
+   },
+   {
+    "value": "CDR-H1",
+    "count": 16
+   },
+   {
+    "value": "CDR-H2",
+    "count": 15
+   },
+   {
+    "value": "CDR-H3",
+    "count": 4
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L3",
+    "count": 29
    },
    {
     "value": "Framework-L",
-    "count": 1
+    "count": 2
    }
   ]
  },
@@ -1774,6 +1847,75 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 444,
+  "antigen_residue_name": "LYS",
+  "variants": [],
+  "total_contacts": 82,
+  "assemblies_contacted": 21,
+  "pdb_entries_contacted": 21,
+  "unique_antibody_chains": 44,
+  "unique_antibody_imgt_positions": 22,
+  "heavy_chain_contacts": 55,
+  "light_chain_contacts": 27,
+  "heavy_chain_assemblies": 14,
+  "light_chain_assemblies": 8,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 30
+   },
+   {
+    "value": "CDR-L3",
+    "count": 24
+   },
+   {
+    "value": "Framework-H",
+    "count": 11
+   },
+   {
+    "value": "CDR-H2",
+    "count": 10
+   },
+   {
+    "value": "CDR-H1",
+    "count": 4
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 30
+   },
+   {
+    "value": "Framework-H",
+    "count": 11
+   },
+   {
+    "value": "CDR-H2",
+    "count": 10
+   },
+   {
+    "value": "CDR-H1",
+    "count": 4
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L3",
+    "count": 24
+   },
+   {
+    "value": "Framework-L",
+    "count": 2
+   },
+   {
+    "value": "CDR-L1",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
   "antigen_uniprot_position": 145,
   "antigen_residue_name": "TYR",
   "variants": [],
@@ -1879,6 +2021,75 @@
    {
     "value": "CDR-L3",
     "count": 6
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 500,
+  "antigen_residue_name": "THR",
+  "variants": [],
+  "total_contacts": 76,
+  "assemblies_contacted": 16,
+  "pdb_entries_contacted": 16,
+  "unique_antibody_chains": 40,
+  "unique_antibody_imgt_positions": 27,
+  "heavy_chain_contacts": 39,
+  "light_chain_contacts": 37,
+  "heavy_chain_assemblies": 10,
+  "light_chain_assemblies": 8,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-L3",
+    "count": 17
+   },
+   {
+    "value": "Framework-H",
+    "count": 16
+   },
+   {
+    "value": "CDR-L1",
+    "count": 15
+   },
+   {
+    "value": "CDR-H2",
+    "count": 8
+   },
+   {
+    "value": "CDR-H3",
+    "count": 8
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "Framework-H",
+    "count": 16
+   },
+   {
+    "value": "CDR-H2",
+    "count": 8
+   },
+   {
+    "value": "CDR-H3",
+    "count": 8
+   },
+   {
+    "value": "CDR-H1",
+    "count": 7
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L3",
+    "count": 17
+   },
+   {
+    "value": "CDR-L1",
+    "count": 15
+   },
+   {
+    "value": "Framework-L",
+    "count": 5
    }
   ]
  },
@@ -2001,205 +2212,6 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 445,
-  "antigen_residue_name": "VAL",
-  "variants": [],
-  "total_contacts": 74,
-  "assemblies_contacted": 17,
-  "pdb_entries_contacted": 17,
-  "unique_antibody_chains": 45,
-  "unique_antibody_imgt_positions": 19,
-  "heavy_chain_contacts": 49,
-  "light_chain_contacts": 25,
-  "heavy_chain_assemblies": 14,
-  "light_chain_assemblies": 7,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "CDR-L3",
-    "count": 23
-   },
-   {
-    "value": "Framework-H",
-    "count": 21
-   },
-   {
-    "value": "CDR-H1",
-    "count": 14
-   },
-   {
-    "value": "CDR-H2",
-    "count": 12
-   },
-   {
-    "value": "CDR-H3",
-    "count": 2
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "Framework-H",
-    "count": 21
-   },
-   {
-    "value": "CDR-H1",
-    "count": 14
-   },
-   {
-    "value": "CDR-H2",
-    "count": 12
-   },
-   {
-    "value": "CDR-H3",
-    "count": 2
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "CDR-L3",
-    "count": 23
-   },
-   {
-    "value": "Framework-L",
-    "count": 2
-   }
-  ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 500,
-  "antigen_residue_name": "THR",
-  "variants": [],
-  "total_contacts": 74,
-  "assemblies_contacted": 15,
-  "pdb_entries_contacted": 15,
-  "unique_antibody_chains": 38,
-  "unique_antibody_imgt_positions": 26,
-  "heavy_chain_contacts": 39,
-  "light_chain_contacts": 35,
-  "heavy_chain_assemblies": 10,
-  "light_chain_assemblies": 7,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "Framework-H",
-    "count": 16
-   },
-   {
-    "value": "CDR-L1",
-    "count": 15
-   },
-   {
-    "value": "CDR-L3",
-    "count": 15
-   },
-   {
-    "value": "CDR-H2",
-    "count": 8
-   },
-   {
-    "value": "CDR-H3",
-    "count": 8
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "Framework-H",
-    "count": 16
-   },
-   {
-    "value": "CDR-H2",
-    "count": 8
-   },
-   {
-    "value": "CDR-H3",
-    "count": 8
-   },
-   {
-    "value": "CDR-H1",
-    "count": 7
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "CDR-L1",
-    "count": 15
-   },
-   {
-    "value": "CDR-L3",
-    "count": 15
-   },
-   {
-    "value": "Framework-L",
-    "count": 5
-   }
-  ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 444,
-  "antigen_residue_name": "LYS",
-  "variants": [],
-  "total_contacts": 73,
-  "assemblies_contacted": 19,
-  "pdb_entries_contacted": 19,
-  "unique_antibody_chains": 39,
-  "unique_antibody_imgt_positions": 21,
-  "heavy_chain_contacts": 53,
-  "light_chain_contacts": 20,
-  "heavy_chain_assemblies": 13,
-  "light_chain_assemblies": 7,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "CDR-H3",
-    "count": 30
-   },
-   {
-    "value": "CDR-L3",
-    "count": 18
-   },
-   {
-    "value": "CDR-H2",
-    "count": 10
-   },
-   {
-    "value": "Framework-H",
-    "count": 9
-   },
-   {
-    "value": "CDR-H1",
-    "count": 4
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "CDR-H3",
-    "count": 30
-   },
-   {
-    "value": "CDR-H2",
-    "count": 10
-   },
-   {
-    "value": "Framework-H",
-    "count": 9
-   },
-   {
-    "value": "CDR-H1",
-    "count": 4
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "CDR-L3",
-    "count": 18
-   },
-   {
-    "value": "Framework-L",
-    "count": 2
-   }
-  ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
   "antigen_uniprot_position": 482,
   "antigen_residue_name": "GLY",
   "variants": [],
@@ -2261,17 +2273,69 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 492,
+  "antigen_residue_name": "LEU",
+  "variants": [],
+  "total_contacts": 71,
+  "assemblies_contacted": 31,
+  "pdb_entries_contacted": 31,
+  "unique_antibody_chains": 59,
+  "unique_antibody_imgt_positions": 15,
+  "heavy_chain_contacts": 71,
+  "light_chain_contacts": 0,
+  "heavy_chain_assemblies": 31,
+  "light_chain_assemblies": 0,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 45
+   },
+   {
+    "value": "CDR-H2",
+    "count": 13
+   },
+   {
+    "value": "CDR-H1",
+    "count": 8
+   },
+   {
+    "value": "Framework-H",
+    "count": 5
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 45
+   },
+   {
+    "value": "CDR-H2",
+    "count": 13
+   },
+   {
+    "value": "CDR-H1",
+    "count": 8
+   },
+   {
+    "value": "Framework-H",
+    "count": 5
+   }
+  ],
+  "most_common_light_chain_imgt_regions": []
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
   "antigen_uniprot_position": 372,
   "antigen_residue_name": "ALA",
   "variants": [],
-  "total_contacts": 69,
-  "assemblies_contacted": 19,
-  "pdb_entries_contacted": 19,
-  "unique_antibody_chains": 44,
+  "total_contacts": 70,
+  "assemblies_contacted": 20,
+  "pdb_entries_contacted": 20,
+  "unique_antibody_chains": 45,
   "unique_antibody_imgt_positions": 16,
-  "heavy_chain_contacts": 27,
+  "heavy_chain_contacts": 28,
   "light_chain_contacts": 42,
-  "heavy_chain_assemblies": 10,
+  "heavy_chain_assemblies": 11,
   "light_chain_assemblies": 11,
   "most_common_antibody_imgt_regions": [
    {
@@ -2280,7 +2344,7 @@
    },
    {
     "value": "CDR-H3",
-    "count": 22
+    "count": 23
    },
    {
     "value": "Framework-L",
@@ -2298,7 +2362,7 @@
   "most_common_heavy_chain_imgt_regions": [
    {
     "value": "CDR-H3",
-    "count": 22
+    "count": 23
    },
    {
     "value": "CDR-H2",
@@ -2317,6 +2381,226 @@
    {
     "value": "CDR-L1",
     "count": 4
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 441,
+  "antigen_residue_name": "LEU",
+  "variants": [],
+  "total_contacts": 70,
+  "assemblies_contacted": 14,
+  "pdb_entries_contacted": 14,
+  "unique_antibody_chains": 39,
+  "unique_antibody_imgt_positions": 15,
+  "heavy_chain_contacts": 36,
+  "light_chain_contacts": 34,
+  "heavy_chain_assemblies": 6,
+  "light_chain_assemblies": 10,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-L1",
+    "count": 25
+   },
+   {
+    "value": "CDR-H3",
+    "count": 17
+   },
+   {
+    "value": "CDR-H2",
+    "count": 10
+   },
+   {
+    "value": "CDR-L3",
+    "count": 6
+   },
+   {
+    "value": "Framework-H",
+    "count": 5
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 17
+   },
+   {
+    "value": "CDR-H2",
+    "count": 10
+   },
+   {
+    "value": "Framework-H",
+    "count": 5
+   },
+   {
+    "value": "CDR-H1",
+    "count": 4
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L1",
+    "count": 25
+   },
+   {
+    "value": "CDR-L3",
+    "count": 6
+   },
+   {
+    "value": "Framework-L",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 405,
+  "antigen_residue_name": "ASP",
+  "variants": [],
+  "total_contacts": 69,
+  "assemblies_contacted": 27,
+  "pdb_entries_contacted": 27,
+  "unique_antibody_chains": 46,
+  "unique_antibody_imgt_positions": 22,
+  "heavy_chain_contacts": 44,
+  "light_chain_contacts": 25,
+  "heavy_chain_assemblies": 12,
+  "light_chain_assemblies": 15,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 20
+   },
+   {
+    "value": "Framework-H",
+    "count": 12
+   },
+   {
+    "value": "Framework-L",
+    "count": 12
+   },
+   {
+    "value": "CDR-L3",
+    "count": 11
+   },
+   {
+    "value": "CDR-H2",
+    "count": 9
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 20
+   },
+   {
+    "value": "Framework-H",
+    "count": 12
+   },
+   {
+    "value": "CDR-H2",
+    "count": 9
+   },
+   {
+    "value": "CDR-H1",
+    "count": 3
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "Framework-L",
+    "count": 12
+   },
+   {
+    "value": "CDR-L3",
+    "count": 11
+   },
+   {
+    "value": "CDR-L1",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 417,
+  "antigen_residue_name": "LYS",
+  "variants": [
+   {
+    "label": "K417N",
+    "from": "K",
+    "to": "N",
+    "structures": [
+     "7wtf"
+    ]
+   }
+  ],
+  "total_contacts": 69,
+  "assemblies_contacted": 19,
+  "pdb_entries_contacted": 19,
+  "unique_antibody_chains": 35,
+  "unique_antibody_imgt_positions": 16,
+  "heavy_chain_contacts": 26,
+  "light_chain_contacts": 43,
+  "heavy_chain_assemblies": 8,
+  "light_chain_assemblies": 12,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "Framework-L",
+    "count": 17
+   },
+   {
+    "value": "CDR-H3",
+    "count": 14
+   },
+   {
+    "value": "CDR-L2",
+    "count": 14
+   },
+   {
+    "value": "CDR-L1",
+    "count": 10
+   },
+   {
+    "value": "CDR-H2",
+    "count": 6
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 14
+   },
+   {
+    "value": "CDR-H2",
+    "count": 6
+   },
+   {
+    "value": "CDR-H1",
+    "count": 3
+   },
+   {
+    "value": "Framework-H",
+    "count": 1
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "Framework-L",
+    "count": 17
+   },
+   {
+    "value": "CDR-L2",
+    "count": 14
+   },
+   {
+    "value": "CDR-L1",
+    "count": 10
+   },
+   {
+    "value": "CDR-L3",
+    "count": 2
    }
   ]
  },
@@ -2380,127 +2664,6 @@
     "count": 3
    }
   ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 405,
-  "antigen_residue_name": "ASP",
-  "variants": [],
-  "total_contacts": 67,
-  "assemblies_contacted": 25,
-  "pdb_entries_contacted": 25,
-  "unique_antibody_chains": 44,
-  "unique_antibody_imgt_positions": 22,
-  "heavy_chain_contacts": 44,
-  "light_chain_contacts": 23,
-  "heavy_chain_assemblies": 12,
-  "light_chain_assemblies": 13,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "CDR-H3",
-    "count": 20
-   },
-   {
-    "value": "Framework-H",
-    "count": 12
-   },
-   {
-    "value": "Framework-L",
-    "count": 11
-   },
-   {
-    "value": "CDR-L3",
-    "count": 10
-   },
-   {
-    "value": "CDR-H2",
-    "count": 9
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "CDR-H3",
-    "count": 20
-   },
-   {
-    "value": "Framework-H",
-    "count": 12
-   },
-   {
-    "value": "CDR-H2",
-    "count": 9
-   },
-   {
-    "value": "CDR-H1",
-    "count": 3
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "Framework-L",
-    "count": 11
-   },
-   {
-    "value": "CDR-L3",
-    "count": 10
-   },
-   {
-    "value": "CDR-L1",
-    "count": 2
-   }
-  ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 492,
-  "antigen_residue_name": "LEU",
-  "variants": [],
-  "total_contacts": 67,
-  "assemblies_contacted": 29,
-  "pdb_entries_contacted": 29,
-  "unique_antibody_chains": 56,
-  "unique_antibody_imgt_positions": 15,
-  "heavy_chain_contacts": 67,
-  "light_chain_contacts": 0,
-  "heavy_chain_assemblies": 29,
-  "light_chain_assemblies": 0,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "CDR-H3",
-    "count": 44
-   },
-   {
-    "value": "CDR-H2",
-    "count": 11
-   },
-   {
-    "value": "CDR-H1",
-    "count": 7
-   },
-   {
-    "value": "Framework-H",
-    "count": 5
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "CDR-H3",
-    "count": 44
-   },
-   {
-    "value": "CDR-H2",
-    "count": 11
-   },
-   {
-    "value": "CDR-H1",
-    "count": 7
-   },
-   {
-    "value": "Framework-H",
-    "count": 5
-   }
-  ],
-  "most_common_light_chain_imgt_regions": []
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
@@ -2638,6 +2801,71 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 477,
+  "antigen_residue_name": "SER",
+  "variants": [],
+  "total_contacts": 64,
+  "assemblies_contacted": 14,
+  "pdb_entries_contacted": 14,
+  "unique_antibody_chains": 38,
+  "unique_antibody_imgt_positions": 17,
+  "heavy_chain_contacts": 49,
+  "light_chain_contacts": 15,
+  "heavy_chain_assemblies": 11,
+  "light_chain_assemblies": 6,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 25
+   },
+   {
+    "value": "Framework-H",
+    "count": 10
+   },
+   {
+    "value": "CDR-H1",
+    "count": 9
+   },
+   {
+    "value": "CDR-L3",
+    "count": 7
+   },
+   {
+    "value": "Framework-L",
+    "count": 4
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 25
+   },
+   {
+    "value": "Framework-H",
+    "count": 10
+   },
+   {
+    "value": "CDR-H1",
+    "count": 9
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L3",
+    "count": 7
+   },
+   {
+    "value": "Framework-L",
+    "count": 4
+   },
+   {
+    "value": "CDR-L1",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
   "antigen_uniprot_position": 481,
   "antigen_residue_name": "ASN",
   "variants": [],
@@ -2768,6 +2996,67 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 452,
+  "antigen_residue_name": "LEU",
+  "variants": [],
+  "total_contacts": 62,
+  "assemblies_contacted": 24,
+  "pdb_entries_contacted": 24,
+  "unique_antibody_chains": 50,
+  "unique_antibody_imgt_positions": 17,
+  "heavy_chain_contacts": 60,
+  "light_chain_contacts": 2,
+  "heavy_chain_assemblies": 23,
+  "light_chain_assemblies": 1,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 21
+   },
+   {
+    "value": "CDR-H2",
+    "count": 15
+   },
+   {
+    "value": "CDR-H1",
+    "count": 14
+   },
+   {
+    "value": "Framework-H",
+    "count": 9
+   },
+   {
+    "value": "CDR-L1",
+    "count": 2
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 21
+   },
+   {
+    "value": "CDR-H2",
+    "count": 15
+   },
+   {
+    "value": "CDR-H1",
+    "count": 14
+   },
+   {
+    "value": "Framework-H",
+    "count": 9
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L1",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
   "antigen_uniprot_position": 374,
   "antigen_residue_name": "PHE",
   "variants": [],
@@ -2833,134 +3122,48 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 417,
-  "antigen_residue_name": "LYS",
-  "variants": [
-   {
-    "label": "K417N",
-    "from": "K",
-    "to": "N",
-    "structures": [
-     "7wtf"
-    ]
-   }
-  ],
-  "total_contacts": 61,
-  "assemblies_contacted": 18,
-  "pdb_entries_contacted": 18,
-  "unique_antibody_chains": 32,
-  "unique_antibody_imgt_positions": 16,
-  "heavy_chain_contacts": 26,
-  "light_chain_contacts": 35,
-  "heavy_chain_assemblies": 8,
-  "light_chain_assemblies": 11,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "Framework-L",
-    "count": 16
-   },
-   {
-    "value": "CDR-H3",
-    "count": 14
-   },
-   {
-    "value": "CDR-L2",
-    "count": 11
-   },
-   {
-    "value": "CDR-H2",
-    "count": 6
-   },
-   {
-    "value": "CDR-L1",
-    "count": 6
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "CDR-H3",
-    "count": 14
-   },
-   {
-    "value": "CDR-H2",
-    "count": 6
-   },
-   {
-    "value": "CDR-H1",
-    "count": 3
-   },
-   {
-    "value": "Framework-H",
-    "count": 1
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "Framework-L",
-    "count": 16
-   },
-   {
-    "value": "CDR-L2",
-    "count": 11
-   },
-   {
-    "value": "CDR-L1",
-    "count": 6
-   },
-   {
-    "value": "CDR-L3",
-    "count": 2
-   }
-  ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 441,
-  "antigen_residue_name": "LEU",
+  "antigen_uniprot_position": 403,
+  "antigen_residue_name": "ARG",
   "variants": [],
   "total_contacts": 60,
-  "assemblies_contacted": 11,
-  "pdb_entries_contacted": 11,
-  "unique_antibody_chains": 32,
-  "unique_antibody_imgt_positions": 14,
-  "heavy_chain_contacts": 33,
-  "light_chain_contacts": 27,
-  "heavy_chain_assemblies": 5,
-  "light_chain_assemblies": 8,
+  "assemblies_contacted": 18,
+  "pdb_entries_contacted": 18,
+  "unique_antibody_chains": 37,
+  "unique_antibody_imgt_positions": 17,
+  "heavy_chain_contacts": 17,
+  "light_chain_contacts": 43,
+  "heavy_chain_assemblies": 7,
+  "light_chain_assemblies": 12,
   "most_common_antibody_imgt_regions": [
    {
+    "value": "Framework-L",
+    "count": 28
+   },
+   {
     "value": "CDR-L1",
-    "count": 18
-   },
-   {
-    "value": "CDR-H3",
-    "count": 16
-   },
-   {
-    "value": "CDR-H2",
     "count": 8
    },
    {
     "value": "CDR-L3",
+    "count": 7
+   },
+   {
+    "value": "CDR-H2",
     "count": 6
    },
    {
-    "value": "Framework-H",
-    "count": 5
+    "value": "CDR-H3",
+    "count": 4
    }
   ],
   "most_common_heavy_chain_imgt_regions": [
    {
-    "value": "CDR-H3",
-    "count": 16
-   },
-   {
     "value": "CDR-H2",
-    "count": 8
+    "count": 6
    },
    {
-    "value": "Framework-H",
-    "count": 5
+    "value": "CDR-H3",
+    "count": 4
    },
    {
     "value": "CDR-H1",
@@ -2969,16 +3172,81 @@
   ],
   "most_common_light_chain_imgt_regions": [
    {
+    "value": "Framework-L",
+    "count": 28
+   },
+   {
     "value": "CDR-L1",
-    "count": 18
+    "count": 8
    },
    {
     "value": "CDR-L3",
-    "count": 6
+    "count": 7
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 476,
+  "antigen_residue_name": "GLY",
+  "variants": [],
+  "total_contacts": 60,
+  "assemblies_contacted": 17,
+  "pdb_entries_contacted": 17,
+  "unique_antibody_chains": 43,
+  "unique_antibody_imgt_positions": 11,
+  "heavy_chain_contacts": 46,
+  "light_chain_contacts": 14,
+  "heavy_chain_assemblies": 11,
+  "light_chain_assemblies": 7,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 24
+   },
+   {
+    "value": "CDR-H1",
+    "count": 21
+   },
+   {
+    "value": "CDR-L3",
+    "count": 9
+   },
+   {
+    "value": "CDR-L1",
+    "count": 3
+   },
+   {
+    "value": "Framework-H",
+    "count": 1
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 24
+   },
+   {
+    "value": "CDR-H1",
+    "count": 21
+   },
+   {
+    "value": "Framework-H",
+    "count": 1
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L3",
+    "count": 9
+   },
+   {
+    "value": "CDR-L1",
+    "count": 3
    },
    {
     "value": "Framework-L",
-    "count": 3
+    "count": 1
    }
   ]
  },
@@ -3023,6 +3291,315 @@
    },
    {
     "value": "Framework-L",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 440,
+  "antigen_residue_name": "ASN",
+  "variants": [
+   {
+    "label": "N440K",
+    "from": "N",
+    "to": "K",
+    "structures": [
+     "7wpf",
+     "7xdb",
+     "7ycy"
+    ]
+   }
+  ],
+  "total_contacts": 58,
+  "assemblies_contacted": 15,
+  "pdb_entries_contacted": 15,
+  "unique_antibody_chains": 31,
+  "unique_antibody_imgt_positions": 16,
+  "heavy_chain_contacts": 45,
+  "light_chain_contacts": 13,
+  "heavy_chain_assemblies": 9,
+  "light_chain_assemblies": 6,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-H2",
+    "count": 33
+   },
+   {
+    "value": "Framework-H",
+    "count": 6
+   },
+   {
+    "value": "CDR-H3",
+    "count": 5
+   },
+   {
+    "value": "CDR-L1",
+    "count": 5
+   },
+   {
+    "value": "Framework-L",
+    "count": 5
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H2",
+    "count": 33
+   },
+   {
+    "value": "Framework-H",
+    "count": 6
+   },
+   {
+    "value": "CDR-H3",
+    "count": 5
+   },
+   {
+    "value": "CDR-H1",
+    "count": 1
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L1",
+    "count": 5
+   },
+   {
+    "value": "Framework-L",
+    "count": 5
+   },
+   {
+    "value": "CDR-L2",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 446,
+  "antigen_residue_name": "GLY",
+  "variants": [
+   {
+    "label": "G446S",
+    "from": "G",
+    "to": "S",
+    "structures": [
+     "7ycy"
+    ]
+   }
+  ],
+  "total_contacts": 58,
+  "assemblies_contacted": 18,
+  "pdb_entries_contacted": 18,
+  "unique_antibody_chains": 39,
+  "unique_antibody_imgt_positions": 19,
+  "heavy_chain_contacts": 47,
+  "light_chain_contacts": 11,
+  "heavy_chain_assemblies": 15,
+  "light_chain_assemblies": 4,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "Framework-H",
+    "count": 39
+   },
+   {
+    "value": "CDR-L3",
+    "count": 10
+   },
+   {
+    "value": "CDR-H1",
+    "count": 4
+   },
+   {
+    "value": "CDR-H3",
+    "count": 4
+   },
+   {
+    "value": "CDR-L1",
+    "count": 1
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "Framework-H",
+    "count": 39
+   },
+   {
+    "value": "CDR-H1",
+    "count": 4
+   },
+   {
+    "value": "CDR-H3",
+    "count": 4
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L3",
+    "count": 10
+   },
+   {
+    "value": "CDR-L1",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 498,
+  "antigen_residue_name": "GLN",
+  "variants": [
+   {
+    "label": "Q498R",
+    "from": "Q",
+    "to": "R",
+    "structures": [
+     "7wtf",
+     "7ycy"
+    ]
+   }
+  ],
+  "total_contacts": 58,
+  "assemblies_contacted": 20,
+  "pdb_entries_contacted": 20,
+  "unique_antibody_chains": 39,
+  "unique_antibody_imgt_positions": 24,
+  "heavy_chain_contacts": 39,
+  "light_chain_contacts": 19,
+  "heavy_chain_assemblies": 14,
+  "light_chain_assemblies": 8,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "Framework-H",
+    "count": 15
+   },
+   {
+    "value": "CDR-H1",
+    "count": 11
+   },
+   {
+    "value": "CDR-H3",
+    "count": 10
+   },
+   {
+    "value": "Framework-L",
+    "count": 8
+   },
+   {
+    "value": "CDR-L1",
+    "count": 6
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "Framework-H",
+    "count": 15
+   },
+   {
+    "value": "CDR-H1",
+    "count": 11
+   },
+   {
+    "value": "CDR-H3",
+    "count": 10
+   },
+   {
+    "value": "CDR-H2",
+    "count": 1
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "Framework-L",
+    "count": 8
+   },
+   {
+    "value": "CDR-L1",
+    "count": 6
+   },
+   {
+    "value": "CDR-L3",
+    "count": 5
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 501,
+  "antigen_residue_name": "ASN",
+  "variants": [
+   {
+    "label": "N501Y",
+    "from": "N",
+    "to": "Y",
+    "structures": [
+     "7wtf",
+     "7ycy",
+     "8dzh"
+    ]
+   }
+  ],
+  "total_contacts": 58,
+  "assemblies_contacted": 19,
+  "pdb_entries_contacted": 19,
+  "unique_antibody_chains": 36,
+  "unique_antibody_imgt_positions": 16,
+  "heavy_chain_contacts": 33,
+  "light_chain_contacts": 25,
+  "heavy_chain_assemblies": 12,
+  "light_chain_assemblies": 8,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-L1",
+    "count": 15
+   },
+   {
+    "value": "CDR-H3",
+    "count": 13
+   },
+   {
+    "value": "CDR-H2",
+    "count": 10
+   },
+   {
+    "value": "Framework-L",
+    "count": 7
+   },
+   {
+    "value": "CDR-H1",
+    "count": 5
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 13
+   },
+   {
+    "value": "CDR-H2",
+    "count": 10
+   },
+   {
+    "value": "CDR-H1",
+    "count": 5
+   },
+   {
+    "value": "Framework-H",
+    "count": 3
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L1",
+    "count": 15
+   },
+   {
+    "value": "Framework-L",
+    "count": 7
+   },
+   {
+    "value": "CDR-L3",
     "count": 3
    }
   ]
@@ -3090,211 +3667,62 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 403,
-  "antigen_residue_name": "ARG",
+  "antigen_uniprot_position": 421,
+  "antigen_residue_name": "TYR",
   "variants": [],
   "total_contacts": 57,
-  "assemblies_contacted": 16,
-  "pdb_entries_contacted": 16,
-  "unique_antibody_chains": 34,
-  "unique_antibody_imgt_positions": 16,
-  "heavy_chain_contacts": 16,
-  "light_chain_contacts": 41,
-  "heavy_chain_assemblies": 6,
-  "light_chain_assemblies": 11,
+  "assemblies_contacted": 12,
+  "pdb_entries_contacted": 12,
+  "unique_antibody_chains": 24,
+  "unique_antibody_imgt_positions": 9,
+  "heavy_chain_contacts": 45,
+  "light_chain_contacts": 12,
+  "heavy_chain_assemblies": 7,
+  "light_chain_assemblies": 5,
   "most_common_antibody_imgt_regions": [
    {
-    "value": "Framework-L",
-    "count": 26
+    "value": "CDR-H2",
+    "count": 33
    },
    {
-    "value": "CDR-L1",
+    "value": "CDR-H1",
     "count": 8
    },
    {
-    "value": "CDR-L3",
-    "count": 7
-   },
-   {
-    "value": "CDR-H2",
+    "value": "CDR-L1",
     "count": 6
    },
    {
-    "value": "CDR-H1",
-    "count": 4
+    "value": "Framework-L",
+    "count": 6
+   },
+   {
+    "value": "CDR-H3",
+    "count": 1
    }
   ],
   "most_common_heavy_chain_imgt_regions": [
    {
     "value": "CDR-H2",
-    "count": 6
+    "count": 33
    },
    {
     "value": "CDR-H1",
-    "count": 4
-   },
-   {
-    "value": "CDR-H3",
-    "count": 3
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "Framework-L",
-    "count": 26
-   },
-   {
-    "value": "CDR-L1",
     "count": 8
    },
    {
-    "value": "CDR-L3",
-    "count": 7
-   }
-  ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 476,
-  "antigen_residue_name": "GLY",
-  "variants": [],
-  "total_contacts": 57,
-  "assemblies_contacted": 16,
-  "pdb_entries_contacted": 16,
-  "unique_antibody_chains": 40,
-  "unique_antibody_imgt_positions": 11,
-  "heavy_chain_contacts": 43,
-  "light_chain_contacts": 14,
-  "heavy_chain_assemblies": 10,
-  "light_chain_assemblies": 7,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "CDR-H1",
-    "count": 21
-   },
-   {
     "value": "CDR-H3",
-    "count": 21
-   },
-   {
-    "value": "CDR-L3",
-    "count": 9
-   },
-   {
-    "value": "CDR-L1",
-    "count": 3
-   },
-   {
-    "value": "Framework-H",
-    "count": 1
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "CDR-H1",
-    "count": 21
-   },
-   {
-    "value": "CDR-H3",
-    "count": 21
-   },
-   {
-    "value": "Framework-H",
     "count": 1
    }
   ],
   "most_common_light_chain_imgt_regions": [
    {
-    "value": "CDR-L3",
-    "count": 9
-   },
-   {
     "value": "CDR-L1",
-    "count": 3
+    "count": 6
    },
    {
     "value": "Framework-L",
-    "count": 1
-   }
-  ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 501,
-  "antigen_residue_name": "ASN",
-  "variants": [
-   {
-    "label": "N501Y",
-    "from": "N",
-    "to": "Y",
-    "structures": [
-     "7wtf",
-     "7ycy",
-     "8dzh"
-    ]
-   }
-  ],
-  "total_contacts": 57,
-  "assemblies_contacted": 18,
-  "pdb_entries_contacted": 18,
-  "unique_antibody_chains": 35,
-  "unique_antibody_imgt_positions": 16,
-  "heavy_chain_contacts": 32,
-  "light_chain_contacts": 25,
-  "heavy_chain_assemblies": 11,
-  "light_chain_assemblies": 8,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "CDR-L1",
-    "count": 15
-   },
-   {
-    "value": "CDR-H3",
-    "count": 12
-   },
-   {
-    "value": "CDR-H2",
-    "count": 10
-   },
-   {
-    "value": "Framework-L",
-    "count": 7
-   },
-   {
-    "value": "CDR-H1",
-    "count": 5
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "CDR-H3",
-    "count": 12
-   },
-   {
-    "value": "CDR-H2",
-    "count": 10
-   },
-   {
-    "value": "CDR-H1",
-    "count": 5
-   },
-   {
-    "value": "Framework-H",
-    "count": 3
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "CDR-L1",
-    "count": 15
-   },
-   {
-    "value": "Framework-L",
-    "count": 7
-   },
-   {
-    "value": "CDR-L3",
-    "count": 3
+    "count": 6
    }
   ]
  },
@@ -3342,58 +3770,6 @@
     "count": 22
    }
   ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 452,
-  "antigen_residue_name": "LEU",
-  "variants": [],
-  "total_contacts": 55,
-  "assemblies_contacted": 21,
-  "pdb_entries_contacted": 21,
-  "unique_antibody_chains": 44,
-  "unique_antibody_imgt_positions": 17,
-  "heavy_chain_contacts": 55,
-  "light_chain_contacts": 0,
-  "heavy_chain_assemblies": 21,
-  "light_chain_assemblies": 0,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "CDR-H3",
-    "count": 16
-   },
-   {
-    "value": "CDR-H2",
-    "count": 15
-   },
-   {
-    "value": "CDR-H1",
-    "count": 14
-   },
-   {
-    "value": "Framework-H",
-    "count": 9
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "CDR-H3",
-    "count": 16
-   },
-   {
-    "value": "CDR-H2",
-    "count": 15
-   },
-   {
-    "value": "CDR-H1",
-    "count": 14
-   },
-   {
-    "value": "Framework-H",
-    "count": 9
-   }
-  ],
-  "most_common_light_chain_imgt_regions": []
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
@@ -3563,208 +3939,47 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 421,
-  "antigen_residue_name": "TYR",
+  "antigen_uniprot_position": 458,
+  "antigen_residue_name": "LYS",
   "variants": [],
-  "total_contacts": 53,
+  "total_contacts": 52,
   "assemblies_contacted": 11,
   "pdb_entries_contacted": 11,
-  "unique_antibody_chains": 21,
-  "unique_antibody_imgt_positions": 9,
-  "heavy_chain_contacts": 45,
-  "light_chain_contacts": 8,
-  "heavy_chain_assemblies": 7,
-  "light_chain_assemblies": 4,
+  "unique_antibody_chains": 25,
+  "unique_antibody_imgt_positions": 7,
+  "heavy_chain_contacts": 49,
+  "light_chain_contacts": 3,
+  "heavy_chain_assemblies": 11,
+  "light_chain_assemblies": 1,
   "most_common_antibody_imgt_regions": [
    {
     "value": "CDR-H2",
-    "count": 33
+    "count": 18
+   },
+   {
+    "value": "CDR-H3",
+    "count": 17
    },
    {
     "value": "CDR-H1",
-    "count": 8
-   },
-   {
-    "value": "CDR-L1",
-    "count": 4
-   },
-   {
-    "value": "Framework-L",
-    "count": 4
-   },
-   {
-    "value": "CDR-H3",
-    "count": 1
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "CDR-H2",
-    "count": 33
-   },
-   {
-    "value": "CDR-H1",
-    "count": 8
-   },
-   {
-    "value": "CDR-H3",
-    "count": 1
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "CDR-L1",
-    "count": 4
-   },
-   {
-    "value": "Framework-L",
-    "count": 4
-   }
-  ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 477,
-  "antigen_residue_name": "SER",
-  "variants": [],
-  "total_contacts": 53,
-  "assemblies_contacted": 13,
-  "pdb_entries_contacted": 13,
-  "unique_antibody_chains": 34,
-  "unique_antibody_imgt_positions": 15,
-  "heavy_chain_contacts": 39,
-  "light_chain_contacts": 14,
-  "heavy_chain_assemblies": 10,
-  "light_chain_assemblies": 5,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "CDR-H3",
-    "count": 15
-   },
-   {
-    "value": "Framework-H",
     "count": 10
-   },
-   {
-    "value": "CDR-H1",
-    "count": 9
-   },
-   {
-    "value": "CDR-L3",
-    "count": 6
-   },
-   {
-    "value": "Framework-L",
-    "count": 4
    }
   ],
   "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "CDR-H3",
-    "count": 15
-   },
-   {
-    "value": "Framework-H",
-    "count": 10
-   },
-   {
-    "value": "CDR-H1",
-    "count": 9
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "CDR-L3",
-    "count": 6
-   },
-   {
-    "value": "Framework-L",
-    "count": 4
-   },
-   {
-    "value": "CDR-L1",
-    "count": 3
-   }
-  ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 498,
-  "antigen_residue_name": "GLN",
-  "variants": [
-   {
-    "label": "Q498R",
-    "from": "Q",
-    "to": "R",
-    "structures": [
-     "7wtf",
-     "7ycy"
-    ]
-   }
-  ],
-  "total_contacts": 53,
-  "assemblies_contacted": 18,
-  "pdb_entries_contacted": 18,
-  "unique_antibody_chains": 36,
-  "unique_antibody_imgt_positions": 23,
-  "heavy_chain_contacts": 34,
-  "light_chain_contacts": 19,
-  "heavy_chain_assemblies": 12,
-  "light_chain_assemblies": 8,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "Framework-H",
-    "count": 15
-   },
-   {
-    "value": "CDR-H1",
-    "count": 9
-   },
-   {
-    "value": "Framework-L",
-    "count": 8
-   },
-   {
-    "value": "CDR-H3",
-    "count": 7
-   },
-   {
-    "value": "CDR-L1",
-    "count": 6
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "Framework-H",
-    "count": 15
-   },
-   {
-    "value": "CDR-H1",
-    "count": 9
-   },
-   {
-    "value": "CDR-H3",
-    "count": 7
-   },
    {
     "value": "CDR-H2",
-    "count": 1
+    "count": 18
+   },
+   {
+    "value": "CDR-H3",
+    "count": 17
+   },
+   {
+    "value": "CDR-H1",
+    "count": 10
    }
   ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "Framework-L",
-    "count": 8
-   },
-   {
-    "value": "CDR-L1",
-    "count": 6
-   },
-   {
-    "value": "CDR-L3",
-    "count": 5
-   }
-  ]
+  "most_common_light_chain_imgt_regions": []
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
@@ -3826,50 +4041,6 @@
     "count": 23
    }
   ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 458,
-  "antigen_residue_name": "LYS",
-  "variants": [],
-  "total_contacts": 50,
-  "assemblies_contacted": 10,
-  "pdb_entries_contacted": 10,
-  "unique_antibody_chains": 23,
-  "unique_antibody_imgt_positions": 7,
-  "heavy_chain_contacts": 47,
-  "light_chain_contacts": 3,
-  "heavy_chain_assemblies": 10,
-  "light_chain_assemblies": 1,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "CDR-H2",
-    "count": 18
-   },
-   {
-    "value": "CDR-H3",
-    "count": 15
-   },
-   {
-    "value": "CDR-H1",
-    "count": 10
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "CDR-H2",
-    "count": 18
-   },
-   {
-    "value": "CDR-H3",
-    "count": 15
-   },
-   {
-    "value": "CDR-H1",
-    "count": 10
-   }
-  ],
-  "most_common_light_chain_imgt_regions": []
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
@@ -3946,160 +4117,18 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 440,
-  "antigen_residue_name": "ASN",
-  "variants": [
-   {
-    "label": "N440K",
-    "from": "N",
-    "to": "K",
-    "structures": [
-     "7wpf",
-     "7xdb",
-     "7ycy"
-    ]
-   }
-  ],
-  "total_contacts": 48,
-  "assemblies_contacted": 13,
-  "pdb_entries_contacted": 13,
-  "unique_antibody_chains": 28,
-  "unique_antibody_imgt_positions": 15,
-  "heavy_chain_contacts": 37,
-  "light_chain_contacts": 11,
-  "heavy_chain_assemblies": 8,
-  "light_chain_assemblies": 5,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "CDR-H2",
-    "count": 25
-   },
-   {
-    "value": "Framework-H",
-    "count": 6
-   },
-   {
-    "value": "CDR-H3",
-    "count": 5
-   },
-   {
-    "value": "Framework-L",
-    "count": 5
-   },
-   {
-    "value": "CDR-L1",
-    "count": 3
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "CDR-H2",
-    "count": 25
-   },
-   {
-    "value": "Framework-H",
-    "count": 6
-   },
-   {
-    "value": "CDR-H3",
-    "count": 5
-   },
-   {
-    "value": "CDR-H1",
-    "count": 1
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "Framework-L",
-    "count": 5
-   },
-   {
-    "value": "CDR-L1",
-    "count": 3
-   },
-   {
-    "value": "CDR-L2",
-    "count": 3
-   }
-  ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 446,
-  "antigen_residue_name": "GLY",
-  "variants": [
-   {
-    "label": "G446S",
-    "from": "G",
-    "to": "S",
-    "structures": [
-     "7ycy"
-    ]
-   }
-  ],
-  "total_contacts": 46,
-  "assemblies_contacted": 16,
-  "pdb_entries_contacted": 16,
-  "unique_antibody_chains": 33,
-  "unique_antibody_imgt_positions": 15,
-  "heavy_chain_contacts": 38,
-  "light_chain_contacts": 8,
-  "heavy_chain_assemblies": 13,
-  "light_chain_assemblies": 3,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "Framework-H",
-    "count": 36
-   },
-   {
-    "value": "CDR-L3",
-    "count": 7
-   },
-   {
-    "value": "CDR-H1",
-    "count": 2
-   },
-   {
-    "value": "CDR-L1",
-    "count": 1
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "Framework-H",
-    "count": 36
-   },
-   {
-    "value": "CDR-H1",
-    "count": 2
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "CDR-L3",
-    "count": 7
-   },
-   {
-    "value": "CDR-L1",
-    "count": 1
-   }
-  ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
   "antigen_uniprot_position": 473,
   "antigen_residue_name": "TYR",
   "variants": [],
-  "total_contacts": 45,
-  "assemblies_contacted": 17,
-  "pdb_entries_contacted": 17,
-  "unique_antibody_chains": 32,
+  "total_contacts": 47,
+  "assemblies_contacted": 18,
+  "pdb_entries_contacted": 18,
+  "unique_antibody_chains": 34,
   "unique_antibody_imgt_positions": 10,
   "heavy_chain_contacts": 34,
-  "light_chain_contacts": 11,
+  "light_chain_contacts": 13,
   "heavy_chain_assemblies": 11,
-  "light_chain_assemblies": 7,
+  "light_chain_assemblies": 8,
   "most_common_antibody_imgt_regions": [
    {
     "value": "CDR-H1",
@@ -4110,11 +4139,11 @@
     "count": 9
    },
    {
-    "value": "CDR-H3",
-    "count": 6
+    "value": "CDR-L3",
+    "count": 8
    },
    {
-    "value": "CDR-L3",
+    "value": "CDR-H3",
     "count": 6
    },
    {
@@ -4139,11 +4168,72 @@
   "most_common_light_chain_imgt_regions": [
    {
     "value": "CDR-L3",
-    "count": 6
+    "count": 8
    },
    {
     "value": "CDR-L1",
     "count": 4
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 478,
+  "antigen_residue_name": "THR",
+  "variants": [],
+  "total_contacts": 47,
+  "assemblies_contacted": 15,
+  "pdb_entries_contacted": 15,
+  "unique_antibody_chains": 29,
+  "unique_antibody_imgt_positions": 13,
+  "heavy_chain_contacts": 13,
+  "light_chain_contacts": 34,
+  "heavy_chain_assemblies": 6,
+  "light_chain_assemblies": 9,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-L3",
+    "count": 22
+   },
+   {
+    "value": "CDR-L1",
+    "count": 11
+   },
+   {
+    "value": "Framework-H",
+    "count": 9
+   },
+   {
+    "value": "CDR-H3",
+    "count": 3
+   },
+   {
+    "value": "Framework-L",
+    "count": 1
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "Framework-H",
+    "count": 9
+   },
+   {
+    "value": "CDR-H3",
+    "count": 3
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L3",
+    "count": 22
+   },
+   {
+    "value": "CDR-L1",
+    "count": 11
+   },
+   {
+    "value": "Framework-L",
+    "count": 1
    }
   ]
  },
@@ -4260,67 +4350,6 @@
   "most_common_light_chain_imgt_regions": [
    {
     "value": "CDR-L1",
-    "count": 1
-   }
-  ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 478,
-  "antigen_residue_name": "THR",
-  "variants": [],
-  "total_contacts": 40,
-  "assemblies_contacted": 14,
-  "pdb_entries_contacted": 14,
-  "unique_antibody_chains": 26,
-  "unique_antibody_imgt_positions": 13,
-  "heavy_chain_contacts": 13,
-  "light_chain_contacts": 27,
-  "heavy_chain_assemblies": 6,
-  "light_chain_assemblies": 8,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "CDR-L3",
-    "count": 15
-   },
-   {
-    "value": "CDR-L1",
-    "count": 11
-   },
-   {
-    "value": "Framework-H",
-    "count": 9
-   },
-   {
-    "value": "CDR-H3",
-    "count": 3
-   },
-   {
-    "value": "Framework-L",
-    "count": 1
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "Framework-H",
-    "count": 9
-   },
-   {
-    "value": "CDR-H3",
-    "count": 3
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "CDR-L3",
-    "count": 15
-   },
-   {
-    "value": "CDR-L1",
-    "count": 11
-   },
-   {
-    "value": "Framework-L",
     "count": 1
    }
   ]
@@ -4509,6 +4538,59 @@
    {
     "value": "CDR-L2",
     "count": 1
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 499,
+  "antigen_residue_name": "PRO",
+  "variants": [],
+  "total_contacts": 37,
+  "assemblies_contacted": 12,
+  "pdb_entries_contacted": 12,
+  "unique_antibody_chains": 26,
+  "unique_antibody_imgt_positions": 10,
+  "heavy_chain_contacts": 33,
+  "light_chain_contacts": 4,
+  "heavy_chain_assemblies": 10,
+  "light_chain_assemblies": 2,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-H2",
+    "count": 18
+   },
+   {
+    "value": "CDR-H1",
+    "count": 8
+   },
+   {
+    "value": "Framework-H",
+    "count": 7
+   },
+   {
+    "value": "CDR-L3",
+    "count": 4
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H2",
+    "count": 18
+   },
+   {
+    "value": "CDR-H1",
+    "count": 8
+   },
+   {
+    "value": "Framework-H",
+    "count": 7
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L3",
+    "count": 4
    }
   ]
  },
@@ -4774,53 +4856,53 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 499,
-  "antigen_residue_name": "PRO",
+  "antigen_uniprot_position": 351,
+  "antigen_residue_name": "TYR",
   "variants": [],
   "total_contacts": 34,
-  "assemblies_contacted": 10,
-  "pdb_entries_contacted": 10,
-  "unique_antibody_chains": 23,
-  "unique_antibody_imgt_positions": 9,
+  "assemblies_contacted": 12,
+  "pdb_entries_contacted": 12,
+  "unique_antibody_chains": 24,
+  "unique_antibody_imgt_positions": 11,
   "heavy_chain_contacts": 32,
   "light_chain_contacts": 2,
-  "heavy_chain_assemblies": 9,
+  "heavy_chain_assemblies": 11,
   "light_chain_assemblies": 1,
   "most_common_antibody_imgt_regions": [
    {
-    "value": "CDR-H2",
-    "count": 17
-   },
-   {
-    "value": "CDR-H1",
-    "count": 8
-   },
-   {
     "value": "Framework-H",
-    "count": 7
+    "count": 15
    },
    {
-    "value": "CDR-L3",
+    "value": "CDR-H3",
+    "count": 13
+   },
+   {
+    "value": "CDR-H2",
+    "count": 4
+   },
+   {
+    "value": "CDR-L1",
     "count": 2
    }
   ],
   "most_common_heavy_chain_imgt_regions": [
    {
-    "value": "CDR-H2",
-    "count": 17
-   },
-   {
-    "value": "CDR-H1",
-    "count": 8
-   },
-   {
     "value": "Framework-H",
-    "count": 7
+    "count": 15
+   },
+   {
+    "value": "CDR-H3",
+    "count": 13
+   },
+   {
+    "value": "CDR-H2",
+    "count": 4
    }
   ],
   "most_common_light_chain_imgt_regions": [
    {
-    "value": "CDR-L3",
+    "value": "CDR-L1",
     "count": 2
    }
   ]
@@ -4994,54 +5076,70 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 351,
+  "antigen_uniprot_position": 453,
   "antigen_residue_name": "TYR",
   "variants": [],
-  "total_contacts": 31,
-  "assemblies_contacted": 11,
-  "pdb_entries_contacted": 11,
-  "unique_antibody_chains": 21,
+  "total_contacts": 32,
+  "assemblies_contacted": 15,
+  "pdb_entries_contacted": 15,
+  "unique_antibody_chains": 25,
   "unique_antibody_imgt_positions": 11,
-  "heavy_chain_contacts": 29,
-  "light_chain_contacts": 2,
-  "heavy_chain_assemblies": 10,
-  "light_chain_assemblies": 1,
+  "heavy_chain_contacts": 15,
+  "light_chain_contacts": 17,
+  "heavy_chain_assemblies": 7,
+  "light_chain_assemblies": 8,
   "most_common_antibody_imgt_regions": [
    {
-    "value": "Framework-H",
-    "count": 15
+    "value": "Framework-L",
+    "count": 9
    },
    {
     "value": "CDR-H3",
-    "count": 10
-   },
-   {
-    "value": "CDR-H2",
-    "count": 4
+    "count": 8
    },
    {
     "value": "CDR-L1",
+    "count": 4
+   },
+   {
+    "value": "CDR-L3",
+    "count": 3
+   },
+   {
+    "value": "CDR-H1",
     "count": 2
    }
   ],
   "most_common_heavy_chain_imgt_regions": [
    {
-    "value": "Framework-H",
-    "count": 15
+    "value": "CDR-H3",
+    "count": 8
    },
    {
-    "value": "CDR-H3",
-    "count": 10
+    "value": "CDR-H1",
+    "count": 2
    },
    {
     "value": "CDR-H2",
-    "count": 4
+    "count": 1
    }
   ],
   "most_common_light_chain_imgt_regions": [
    {
+    "value": "Framework-L",
+    "count": 9
+   },
+   {
     "value": "CDR-L1",
-    "count": 2
+    "count": 4
+   },
+   {
+    "value": "CDR-L3",
+    "count": 3
+   },
+   {
+    "value": "CDR-L2",
+    "count": 1
    }
   ]
  },
@@ -5083,48 +5181,48 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 453,
-  "antigen_residue_name": "TYR",
+  "antigen_uniprot_position": 504,
+  "antigen_residue_name": "GLY",
   "variants": [],
   "total_contacts": 30,
-  "assemblies_contacted": 14,
-  "pdb_entries_contacted": 14,
-  "unique_antibody_chains": 24,
-  "unique_antibody_imgt_positions": 9,
-  "heavy_chain_contacts": 15,
-  "light_chain_contacts": 15,
-  "heavy_chain_assemblies": 7,
-  "light_chain_assemblies": 7,
+  "assemblies_contacted": 20,
+  "pdb_entries_contacted": 20,
+  "unique_antibody_chains": 30,
+  "unique_antibody_imgt_positions": 14,
+  "heavy_chain_contacts": 18,
+  "light_chain_contacts": 12,
+  "heavy_chain_assemblies": 11,
+  "light_chain_assemblies": 11,
   "most_common_antibody_imgt_regions": [
    {
     "value": "CDR-H3",
-    "count": 8
-   },
-   {
-    "value": "Framework-L",
-    "count": 8
-   },
-   {
-    "value": "CDR-L1",
-    "count": 4
-   },
-   {
-    "value": "CDR-L3",
-    "count": 3
+    "count": 10
    },
    {
     "value": "CDR-H1",
+    "count": 7
+   },
+   {
+    "value": "CDR-L3",
+    "count": 5
+   },
+   {
+    "value": "Framework-L",
+    "count": 5
+   },
+   {
+    "value": "CDR-L1",
     "count": 2
    }
   ],
   "most_common_heavy_chain_imgt_regions": [
    {
     "value": "CDR-H3",
-    "count": 8
+    "count": 10
    },
    {
     "value": "CDR-H1",
-    "count": 2
+    "count": 7
    },
    {
     "value": "CDR-H2",
@@ -5133,16 +5231,16 @@
   ],
   "most_common_light_chain_imgt_regions": [
    {
+    "value": "CDR-L3",
+    "count": 5
+   },
+   {
     "value": "Framework-L",
-    "count": 8
+    "count": 5
    },
    {
     "value": "CDR-L1",
-    "count": 4
-   },
-   {
-    "value": "CDR-L3",
-    "count": 3
+    "count": 2
    }
   ]
  },
@@ -5253,66 +5351,107 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 504,
-  "antigen_residue_name": "GLY",
+  "antigen_uniprot_position": 479,
+  "antigen_residue_name": "PRO",
   "variants": [],
   "total_contacts": 28,
-  "assemblies_contacted": 18,
-  "pdb_entries_contacted": 18,
-  "unique_antibody_chains": 28,
-  "unique_antibody_imgt_positions": 13,
-  "heavy_chain_contacts": 18,
-  "light_chain_contacts": 10,
-  "heavy_chain_assemblies": 11,
+  "assemblies_contacted": 12,
+  "pdb_entries_contacted": 12,
+  "unique_antibody_chains": 20,
+  "unique_antibody_imgt_positions": 12,
+  "heavy_chain_contacts": 5,
+  "light_chain_contacts": 23,
+  "heavy_chain_assemblies": 3,
   "light_chain_assemblies": 9,
   "most_common_antibody_imgt_regions": [
    {
-    "value": "CDR-H3",
-    "count": 10
+    "value": "CDR-L1",
+    "count": 14
    },
    {
-    "value": "CDR-H1",
-    "count": 7
+    "value": "Framework-H",
+    "count": 5
+   },
+   {
+    "value": "CDR-L3",
+    "count": 5
+   },
+   {
+    "value": "Framework-L",
+    "count": 4
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "Framework-H",
+    "count": 5
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L1",
+    "count": 14
+   },
+   {
+    "value": "CDR-L3",
+    "count": 5
+   },
+   {
+    "value": "Framework-L",
+    "count": 4
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 488,
+  "antigen_residue_name": "CYS",
+  "variants": [],
+  "total_contacts": 28,
+  "assemblies_contacted": 14,
+  "pdb_entries_contacted": 14,
+  "unique_antibody_chains": 27,
+  "unique_antibody_imgt_positions": 9,
+  "heavy_chain_contacts": 18,
+  "light_chain_contacts": 10,
+  "heavy_chain_assemblies": 11,
+  "light_chain_assemblies": 6,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 17
+   },
+   {
+    "value": "CDR-L1",
+    "count": 6
    },
    {
     "value": "CDR-L3",
     "count": 4
    },
    {
-    "value": "Framework-L",
-    "count": 4
-   },
-   {
-    "value": "CDR-L1",
-    "count": 2
+    "value": "Framework-H",
+    "count": 1
    }
   ],
   "most_common_heavy_chain_imgt_regions": [
    {
     "value": "CDR-H3",
-    "count": 10
+    "count": 17
    },
    {
-    "value": "CDR-H1",
-    "count": 7
-   },
-   {
-    "value": "CDR-H2",
+    "value": "Framework-H",
     "count": 1
    }
   ],
   "most_common_light_chain_imgt_regions": [
    {
+    "value": "CDR-L1",
+    "count": 6
+   },
+   {
     "value": "CDR-L3",
     "count": 4
-   },
-   {
-    "value": "Framework-L",
-    "count": 4
-   },
-   {
-    "value": "CDR-L1",
-    "count": 2
    }
   ]
  },
@@ -5774,54 +5913,115 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 479,
-  "antigen_residue_name": "PRO",
+  "antigen_uniprot_position": 348,
+  "antigen_residue_name": "ALA",
   "variants": [],
   "total_contacts": 24,
-  "assemblies_contacted": 11,
-  "pdb_entries_contacted": 11,
-  "unique_antibody_chains": 17,
-  "unique_antibody_imgt_positions": 12,
-  "heavy_chain_contacts": 5,
-  "light_chain_contacts": 19,
-  "heavy_chain_assemblies": 3,
-  "light_chain_assemblies": 8,
+  "assemblies_contacted": 7,
+  "pdb_entries_contacted": 7,
+  "unique_antibody_chains": 15,
+  "unique_antibody_imgt_positions": 9,
+  "heavy_chain_contacts": 22,
+  "light_chain_contacts": 2,
+  "heavy_chain_assemblies": 6,
+  "light_chain_assemblies": 1,
   "most_common_antibody_imgt_regions": [
    {
-    "value": "CDR-L1",
-    "count": 11
+    "value": "CDR-H2",
+    "count": 16
    },
    {
-    "value": "Framework-H",
+    "value": "CDR-H3",
     "count": 5
    },
    {
-    "value": "Framework-L",
-    "count": 4
+    "value": "CDR-L1",
+    "count": 2
    },
    {
-    "value": "CDR-L3",
-    "count": 4
+    "value": "Framework-H",
+    "count": 1
    }
   ],
   "most_common_heavy_chain_imgt_regions": [
    {
-    "value": "Framework-H",
+    "value": "CDR-H2",
+    "count": 16
+   },
+   {
+    "value": "CDR-H3",
     "count": 5
+   },
+   {
+    "value": "Framework-H",
+    "count": 1
    }
   ],
   "most_common_light_chain_imgt_regions": [
    {
     "value": "CDR-L1",
-    "count": 11
-   },
-   {
-    "value": "Framework-L",
-    "count": 4
-   },
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 437,
+  "antigen_residue_name": "ASN",
+  "variants": [],
+  "total_contacts": 23,
+  "assemblies_contacted": 9,
+  "pdb_entries_contacted": 9,
+  "unique_antibody_chains": 15,
+  "unique_antibody_imgt_positions": 7,
+  "heavy_chain_contacts": 9,
+  "light_chain_contacts": 14,
+  "heavy_chain_assemblies": 5,
+  "light_chain_assemblies": 4,
+  "most_common_antibody_imgt_regions": [
    {
     "value": "CDR-L3",
-    "count": 4
+    "count": 12
+   },
+   {
+    "value": "CDR-H2",
+    "count": 7
+   },
+   {
+    "value": "CDR-L1",
+    "count": 2
+   },
+   {
+    "value": "CDR-H3",
+    "count": 1
+   },
+   {
+    "value": "Framework-H",
+    "count": 1
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H2",
+    "count": 7
+   },
+   {
+    "value": "CDR-H3",
+    "count": 1
+   },
+   {
+    "value": "Framework-H",
+    "count": 1
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L3",
+    "count": 12
+   },
+   {
+    "value": "CDR-L1",
+    "count": 2
    }
   ]
  },
@@ -5899,115 +6099,62 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 488,
-  "antigen_residue_name": "CYS",
+  "antigen_uniprot_position": 416,
+  "antigen_residue_name": "GLY",
   "variants": [],
-  "total_contacts": 23,
-  "assemblies_contacted": 12,
-  "pdb_entries_contacted": 12,
-  "unique_antibody_chains": 22,
+  "total_contacts": 22,
+  "assemblies_contacted": 13,
+  "pdb_entries_contacted": 13,
+  "unique_antibody_chains": 20,
   "unique_antibody_imgt_positions": 8,
-  "heavy_chain_contacts": 16,
-  "light_chain_contacts": 7,
-  "heavy_chain_assemblies": 10,
+  "heavy_chain_contacts": 13,
+  "light_chain_contacts": 9,
+  "heavy_chain_assemblies": 8,
   "light_chain_assemblies": 5,
   "most_common_antibody_imgt_regions": [
    {
-    "value": "CDR-H3",
-    "count": 15
+    "value": "Framework-H",
+    "count": 9
+   },
+   {
+    "value": "Framework-L",
+    "count": 5
+   },
+   {
+    "value": "CDR-H2",
+    "count": 4
    },
    {
     "value": "CDR-L1",
-    "count": 6
+    "count": 3
    },
    {
-    "value": "Framework-H",
-    "count": 1
-   },
-   {
-    "value": "CDR-L3",
+    "value": "CDR-L2",
     "count": 1
    }
   ],
   "most_common_heavy_chain_imgt_regions": [
    {
-    "value": "CDR-H3",
-    "count": 15
+    "value": "Framework-H",
+    "count": 9
    },
    {
-    "value": "Framework-H",
-    "count": 1
+    "value": "CDR-H2",
+    "count": 4
    }
   ],
   "most_common_light_chain_imgt_regions": [
    {
-    "value": "CDR-L1",
-    "count": 6
-   },
-   {
-    "value": "CDR-L3",
-    "count": 1
-   }
-  ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 437,
-  "antigen_residue_name": "ASN",
-  "variants": [],
-  "total_contacts": 22,
-  "assemblies_contacted": 8,
-  "pdb_entries_contacted": 8,
-  "unique_antibody_chains": 14,
-  "unique_antibody_imgt_positions": 6,
-  "heavy_chain_contacts": 8,
-  "light_chain_contacts": 14,
-  "heavy_chain_assemblies": 4,
-  "light_chain_assemblies": 4,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "CDR-L3",
-    "count": 12
-   },
-   {
-    "value": "CDR-H2",
-    "count": 6
+    "value": "Framework-L",
+    "count": 5
    },
    {
     "value": "CDR-L1",
-    "count": 2
+    "count": 3
    },
    {
-    "value": "CDR-H3",
+    "value": "CDR-L2",
     "count": 1
-   },
-   {
-    "value": "Framework-H",
-    "count": 1
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "CDR-H2",
-    "count": 6
-   },
-   {
-    "value": "CDR-H3",
-    "count": 1
-   },
-   {
-    "value": "Framework-H",
-    "count": 1
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "CDR-L3",
-    "count": 12
-   },
-   {
-    "value": "CDR-L1",
-    "count": 2
    }
   ]
  },
@@ -6200,59 +6347,6 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 348,
-  "antigen_residue_name": "ALA",
-  "variants": [],
-  "total_contacts": 21,
-  "assemblies_contacted": 6,
-  "pdb_entries_contacted": 6,
-  "unique_antibody_chains": 12,
-  "unique_antibody_imgt_positions": 8,
-  "heavy_chain_contacts": 19,
-  "light_chain_contacts": 2,
-  "heavy_chain_assemblies": 5,
-  "light_chain_assemblies": 1,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "CDR-H2",
-    "count": 16
-   },
-   {
-    "value": "CDR-H3",
-    "count": 2
-   },
-   {
-    "value": "CDR-L1",
-    "count": 2
-   },
-   {
-    "value": "Framework-H",
-    "count": 1
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "CDR-H2",
-    "count": 16
-   },
-   {
-    "value": "CDR-H3",
-    "count": 2
-   },
-   {
-    "value": "Framework-H",
-    "count": 1
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "CDR-L1",
-    "count": 2
-   }
-  ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
   "antigen_uniprot_position": 404,
   "antigen_residue_name": "GLY",
   "variants": [],
@@ -6306,54 +6400,172 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 416,
+  "antigen_uniprot_position": 447,
   "antigen_residue_name": "GLY",
   "variants": [],
   "total_contacts": 21,
   "assemblies_contacted": 12,
   "pdb_entries_contacted": 12,
-  "unique_antibody_chains": 19,
-  "unique_antibody_imgt_positions": 7,
-  "heavy_chain_contacts": 13,
-  "light_chain_contacts": 8,
+  "unique_antibody_chains": 21,
+  "unique_antibody_imgt_positions": 10,
+  "heavy_chain_contacts": 14,
+  "light_chain_contacts": 7,
   "heavy_chain_assemblies": 8,
   "light_chain_assemblies": 4,
   "most_common_antibody_imgt_regions": [
    {
     "value": "Framework-H",
-    "count": 9
+    "count": 13
    },
    {
-    "value": "Framework-L",
-    "count": 5
+    "value": "CDR-L3",
+    "count": 7
    },
    {
-    "value": "CDR-H2",
-    "count": 4
-   },
-   {
-    "value": "CDR-L1",
-    "count": 3
+    "value": "CDR-H3",
+    "count": 1
    }
   ],
   "most_common_heavy_chain_imgt_regions": [
    {
     "value": "Framework-H",
-    "count": 9
+    "count": 13
    },
    {
-    "value": "CDR-H2",
-    "count": 4
+    "value": "CDR-H3",
+    "count": 1
    }
   ],
   "most_common_light_chain_imgt_regions": [
    {
-    "value": "Framework-L",
-    "count": 5
+    "value": "CDR-L3",
+    "count": 7
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 448,
+  "antigen_residue_name": "ASN",
+  "variants": [],
+  "total_contacts": 21,
+  "assemblies_contacted": 10,
+  "pdb_entries_contacted": 10,
+  "unique_antibody_chains": 20,
+  "unique_antibody_imgt_positions": 11,
+  "heavy_chain_contacts": 15,
+  "light_chain_contacts": 6,
+  "heavy_chain_assemblies": 7,
+  "light_chain_assemblies": 5,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 11
+   },
+   {
+    "value": "Framework-H",
+    "count": 3
+   },
+   {
+    "value": "CDR-L3",
+    "count": 3
    },
    {
     "value": "CDR-L1",
+    "count": 2
+   },
+   {
+    "value": "Framework-L",
+    "count": 1
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 11
+   },
+   {
+    "value": "Framework-H",
     "count": 3
+   },
+   {
+    "value": "CDR-H2",
+    "count": 1
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L3",
+    "count": 3
+   },
+   {
+    "value": "CDR-L1",
+    "count": 2
+   },
+   {
+    "value": "Framework-L",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 457,
+  "antigen_residue_name": "ARG",
+  "variants": [],
+  "total_contacts": 20,
+  "assemblies_contacted": 8,
+  "pdb_entries_contacted": 8,
+  "unique_antibody_chains": 15,
+  "unique_antibody_imgt_positions": 5,
+  "heavy_chain_contacts": 18,
+  "light_chain_contacts": 2,
+  "heavy_chain_assemblies": 7,
+  "light_chain_assemblies": 2,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-H2",
+    "count": 11
+   },
+   {
+    "value": "CDR-H1",
+    "count": 4
+   },
+   {
+    "value": "Framework-H",
+    "count": 1
+   },
+   {
+    "value": "CDR-H3",
+    "count": 1
+   },
+   {
+    "value": "CDR-L1",
+    "count": 1
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H2",
+    "count": 11
+   },
+   {
+    "value": "CDR-H1",
+    "count": 4
+   },
+   {
+    "value": "Framework-H",
+    "count": 1
+   },
+   {
+    "value": "CDR-H3",
+    "count": 1
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L1",
+    "count": 1
    }
   ]
  },
@@ -6420,58 +6632,6 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 457,
-  "antigen_residue_name": "ARG",
-  "variants": [],
-  "total_contacts": 19,
-  "assemblies_contacted": 7,
-  "pdb_entries_contacted": 7,
-  "unique_antibody_chains": 14,
-  "unique_antibody_imgt_positions": 4,
-  "heavy_chain_contacts": 18,
-  "light_chain_contacts": 1,
-  "heavy_chain_assemblies": 7,
-  "light_chain_assemblies": 1,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "CDR-H2",
-    "count": 11
-   },
-   {
-    "value": "CDR-H1",
-    "count": 4
-   },
-   {
-    "value": "Framework-H",
-    "count": 1
-   },
-   {
-    "value": "CDR-H3",
-    "count": 1
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "CDR-H2",
-    "count": 11
-   },
-   {
-    "value": "CDR-H1",
-    "count": 4
-   },
-   {
-    "value": "Framework-H",
-    "count": 1
-   },
-   {
-    "value": "CDR-H3",
-    "count": 1
-   }
-  ],
-  "most_common_light_chain_imgt_regions": []
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
   "antigen_uniprot_position": 472,
   "antigen_residue_name": "ILE",
   "variants": [],
@@ -6521,6 +6681,51 @@
    }
   ],
   "most_common_light_chain_imgt_regions": []
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 474,
+  "antigen_residue_name": "GLN",
+  "variants": [],
+  "total_contacts": 19,
+  "assemblies_contacted": 10,
+  "pdb_entries_contacted": 10,
+  "unique_antibody_chains": 17,
+  "unique_antibody_imgt_positions": 4,
+  "heavy_chain_contacts": 10,
+  "light_chain_contacts": 9,
+  "heavy_chain_assemblies": 5,
+  "light_chain_assemblies": 5,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-L1",
+    "count": 6
+   },
+   {
+    "value": "CDR-H3",
+    "count": 5
+   },
+   {
+    "value": "CDR-H1",
+    "count": 4
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 5
+   },
+   {
+    "value": "CDR-H1",
+    "count": 4
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L1",
+    "count": 6
+   }
+  ]
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
@@ -6606,6 +6811,51 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 439,
+  "antigen_residue_name": "ASN",
+  "variants": [],
+  "total_contacts": 18,
+  "assemblies_contacted": 6,
+  "pdb_entries_contacted": 6,
+  "unique_antibody_chains": 12,
+  "unique_antibody_imgt_positions": 9,
+  "heavy_chain_contacts": 16,
+  "light_chain_contacts": 2,
+  "heavy_chain_assemblies": 6,
+  "light_chain_assemblies": 1,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-H2",
+    "count": 13
+   },
+   {
+    "value": "CDR-H3",
+    "count": 3
+   },
+   {
+    "value": "CDR-L1",
+    "count": 2
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H2",
+    "count": 13
+   },
+   {
+    "value": "CDR-H3",
+    "count": 3
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L1",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
   "antigen_uniprot_position": 443,
   "antigen_residue_name": "SER",
   "variants": [],
@@ -6651,99 +6901,46 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 447,
-  "antigen_residue_name": "GLY",
+  "antigen_uniprot_position": 347,
+  "antigen_residue_name": "PHE",
   "variants": [],
-  "total_contacts": 18,
-  "assemblies_contacted": 10,
-  "pdb_entries_contacted": 10,
-  "unique_antibody_chains": 18,
-  "unique_antibody_imgt_positions": 9,
-  "heavy_chain_contacts": 13,
-  "light_chain_contacts": 5,
-  "heavy_chain_assemblies": 7,
-  "light_chain_assemblies": 3,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "Framework-H",
-    "count": 13
-   },
-   {
-    "value": "CDR-L3",
-    "count": 5
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "Framework-H",
-    "count": 13
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "CDR-L3",
-    "count": 5
-   }
-  ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 448,
-  "antigen_residue_name": "ASN",
-  "variants": [],
-  "total_contacts": 18,
-  "assemblies_contacted": 8,
-  "pdb_entries_contacted": 8,
-  "unique_antibody_chains": 17,
-  "unique_antibody_imgt_positions": 9,
+  "total_contacts": 17,
+  "assemblies_contacted": 6,
+  "pdb_entries_contacted": 6,
+  "unique_antibody_chains": 10,
+  "unique_antibody_imgt_positions": 8,
   "heavy_chain_contacts": 15,
-  "light_chain_contacts": 3,
-  "heavy_chain_assemblies": 7,
-  "light_chain_assemblies": 3,
+  "light_chain_contacts": 2,
+  "heavy_chain_assemblies": 4,
+  "light_chain_assemblies": 2,
   "most_common_antibody_imgt_regions": [
    {
-    "value": "CDR-H3",
+    "value": "CDR-H2",
     "count": 11
    },
    {
-    "value": "Framework-H",
-    "count": 3
+    "value": "CDR-H3",
+    "count": 4
    },
    {
-    "value": "CDR-L3",
+    "value": "CDR-L1",
     "count": 2
-   },
-   {
-    "value": "Framework-L",
-    "count": 1
-   },
-   {
-    "value": "CDR-H2",
-    "count": 1
    }
   ],
   "most_common_heavy_chain_imgt_regions": [
    {
-    "value": "CDR-H3",
+    "value": "CDR-H2",
     "count": 11
    },
    {
-    "value": "Framework-H",
-    "count": 3
-   },
-   {
-    "value": "CDR-H2",
-    "count": 1
+    "value": "CDR-H3",
+    "count": 4
    }
   ],
   "most_common_light_chain_imgt_regions": [
    {
-    "value": "CDR-L3",
+    "value": "CDR-L1",
     "count": 2
-   },
-   {
-    "value": "Framework-L",
-    "count": 1
    }
   ]
  },
@@ -6789,51 +6986,6 @@
    {
     "value": "Framework-L",
     "count": 1
-   }
-  ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 474,
-  "antigen_residue_name": "GLN",
-  "variants": [],
-  "total_contacts": 17,
-  "assemblies_contacted": 9,
-  "pdb_entries_contacted": 9,
-  "unique_antibody_chains": 15,
-  "unique_antibody_imgt_positions": 4,
-  "heavy_chain_contacts": 8,
-  "light_chain_contacts": 9,
-  "heavy_chain_assemblies": 4,
-  "light_chain_assemblies": 5,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "CDR-L1",
-    "count": 6
-   },
-   {
-    "value": "CDR-H1",
-    "count": 4
-   },
-   {
-    "value": "CDR-H3",
-    "count": 3
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "CDR-H1",
-    "count": 4
-   },
-   {
-    "value": "CDR-H3",
-    "count": 3
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "CDR-L1",
-    "count": 6
    }
   ]
  },
@@ -6887,51 +7039,6 @@
    {
     "value": "CDR-L1",
     "count": 1
-   }
-  ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 439,
-  "antigen_residue_name": "ASN",
-  "variants": [],
-  "total_contacts": 15,
-  "assemblies_contacted": 5,
-  "pdb_entries_contacted": 5,
-  "unique_antibody_chains": 10,
-  "unique_antibody_imgt_positions": 7,
-  "heavy_chain_contacts": 13,
-  "light_chain_contacts": 2,
-  "heavy_chain_assemblies": 5,
-  "light_chain_assemblies": 1,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "CDR-H2",
-    "count": 10
-   },
-   {
-    "value": "CDR-H3",
-    "count": 3
-   },
-   {
-    "value": "CDR-L1",
-    "count": 2
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "CDR-H2",
-    "count": 10
-   },
-   {
-    "value": "CDR-H3",
-    "count": 3
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "CDR-L1",
-    "count": 2
    }
   ]
  },
@@ -7114,51 +7221,6 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 347,
-  "antigen_residue_name": "PHE",
-  "variants": [],
-  "total_contacts": 13,
-  "assemblies_contacted": 4,
-  "pdb_entries_contacted": 4,
-  "unique_antibody_chains": 6,
-  "unique_antibody_imgt_positions": 6,
-  "heavy_chain_contacts": 12,
-  "light_chain_contacts": 1,
-  "heavy_chain_assemblies": 3,
-  "light_chain_assemblies": 1,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "CDR-H2",
-    "count": 11
-   },
-   {
-    "value": "CDR-H3",
-    "count": 1
-   },
-   {
-    "value": "CDR-L1",
-    "count": 1
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "CDR-H2",
-    "count": 11
-   },
-   {
-    "value": "CDR-H3",
-    "count": 1
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "CDR-L1",
-    "count": 1
-   }
-  ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
   "antigen_uniprot_position": 367,
   "antigen_residue_name": "VAL",
   "variants": [],
@@ -7206,6 +7268,59 @@
    },
    {
     "value": "CDR-L3",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 409,
+  "antigen_residue_name": "GLN",
+  "variants": [],
+  "total_contacts": 13,
+  "assemblies_contacted": 8,
+  "pdb_entries_contacted": 8,
+  "unique_antibody_chains": 13,
+  "unique_antibody_imgt_positions": 5,
+  "heavy_chain_contacts": 8,
+  "light_chain_contacts": 5,
+  "heavy_chain_assemblies": 5,
+  "light_chain_assemblies": 3,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "Framework-H",
+    "count": 8
+   },
+   {
+    "value": "CDR-L1",
+    "count": 2
+   },
+   {
+    "value": "Framework-L",
+    "count": 2
+   },
+   {
+    "value": "CDR-L2",
+    "count": 1
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "Framework-H",
+    "count": 8
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L1",
+    "count": 2
+   },
+   {
+    "value": "Framework-L",
+    "count": 2
+   },
+   {
+    "value": "CDR-L2",
     "count": 1
    }
   ]
@@ -7318,51 +7433,6 @@
    }
   ],
   "most_common_light_chain_imgt_regions": []
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 409,
-  "antigen_residue_name": "GLN",
-  "variants": [],
-  "total_contacts": 12,
-  "assemblies_contacted": 7,
-  "pdb_entries_contacted": 7,
-  "unique_antibody_chains": 12,
-  "unique_antibody_imgt_positions": 4,
-  "heavy_chain_contacts": 8,
-  "light_chain_contacts": 4,
-  "heavy_chain_assemblies": 5,
-  "light_chain_assemblies": 2,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "Framework-H",
-    "count": 8
-   },
-   {
-    "value": "CDR-L1",
-    "count": 2
-   },
-   {
-    "value": "Framework-L",
-    "count": 2
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "Framework-H",
-    "count": 8
-   }
-  ],
-  "most_common_light_chain_imgt_regions": [
-   {
-    "value": "CDR-L1",
-    "count": 2
-   },
-   {
-    "value": "Framework-L",
-    "count": 2
-   }
-  ]
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
@@ -7801,6 +7871,43 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 442,
+  "antigen_residue_name": "ASP",
+  "variants": [],
+  "total_contacts": 10,
+  "assemblies_contacted": 5,
+  "pdb_entries_contacted": 5,
+  "unique_antibody_chains": 7,
+  "unique_antibody_imgt_positions": 6,
+  "heavy_chain_contacts": 8,
+  "light_chain_contacts": 2,
+  "heavy_chain_assemblies": 3,
+  "light_chain_assemblies": 2,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 8
+   },
+   {
+    "value": "CDR-L1",
+    "count": 2
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 8
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L1",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
   "antigen_uniprot_position": 28,
   "antigen_residue_name": "TYR",
   "variants": [],
@@ -8116,34 +8223,6 @@
     "count": 1
    }
   ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 442,
-  "antigen_residue_name": "ASP",
-  "variants": [],
-  "total_contacts": 8,
-  "assemblies_contacted": 3,
-  "pdb_entries_contacted": 3,
-  "unique_antibody_chains": 5,
-  "unique_antibody_imgt_positions": 4,
-  "heavy_chain_contacts": 8,
-  "light_chain_contacts": 0,
-  "heavy_chain_assemblies": 3,
-  "light_chain_assemblies": 0,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "CDR-H3",
-    "count": 8
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "CDR-H3",
-    "count": 8
-   }
-  ],
-  "most_common_light_chain_imgt_regions": []
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
@@ -9865,6 +9944,43 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 509,
+  "antigen_residue_name": "ARG",
+  "variants": [],
+  "total_contacts": 4,
+  "assemblies_contacted": 3,
+  "pdb_entries_contacted": 3,
+  "unique_antibody_chains": 4,
+  "unique_antibody_imgt_positions": 2,
+  "heavy_chain_contacts": 2,
+  "light_chain_contacts": 2,
+  "heavy_chain_assemblies": 2,
+  "light_chain_assemblies": 1,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 2
+   },
+   {
+    "value": "CDR-L1",
+    "count": 2
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H3",
+    "count": 2
+   }
+  ],
+  "most_common_light_chain_imgt_regions": [
+   {
+    "value": "CDR-L1",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
   "antigen_uniprot_position": 535,
   "antigen_residue_name": "LYS",
   "variants": [],
@@ -10861,6 +10977,34 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 438,
+  "antigen_residue_name": "SER",
+  "variants": [],
+  "total_contacts": 2,
+  "assemblies_contacted": 1,
+  "pdb_entries_contacted": 1,
+  "unique_antibody_chains": 2,
+  "unique_antibody_imgt_positions": 1,
+  "heavy_chain_contacts": 2,
+  "light_chain_contacts": 0,
+  "heavy_chain_assemblies": 1,
+  "light_chain_assemblies": 0,
+  "most_common_antibody_imgt_regions": [
+   {
+    "value": "CDR-H2",
+    "count": 2
+   }
+  ],
+  "most_common_heavy_chain_imgt_regions": [
+   {
+    "value": "CDR-H2",
+    "count": 2
+   }
+  ],
+  "most_common_light_chain_imgt_regions": []
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
   "antigen_uniprot_position": 462,
   "antigen_residue_name": "LYS",
   "variants": [],
@@ -10883,34 +11027,6 @@
    {
     "value": "Framework-H",
     "count": 1
-   }
-  ],
-  "most_common_light_chain_imgt_regions": []
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 509,
-  "antigen_residue_name": "ARG",
-  "variants": [],
-  "total_contacts": 2,
-  "assemblies_contacted": 2,
-  "pdb_entries_contacted": 2,
-  "unique_antibody_chains": 2,
-  "unique_antibody_imgt_positions": 1,
-  "heavy_chain_contacts": 2,
-  "light_chain_contacts": 0,
-  "heavy_chain_assemblies": 2,
-  "light_chain_assemblies": 0,
-  "most_common_antibody_imgt_regions": [
-   {
-    "value": "CDR-H3",
-    "count": 2
-   }
-  ],
-  "most_common_heavy_chain_imgt_regions": [
-   {
-    "value": "CDR-H3",
-    "count": 2
    }
   ],
   "most_common_light_chain_imgt_regions": []
