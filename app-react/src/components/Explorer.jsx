@@ -10,6 +10,9 @@ const median = (arr) => {
   return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2
 }
 const keyOf = (r) => `${r.pdb_id}|${r.assembly_id}|${r.interface_id}`
+const ifaceLabel = (r) => `${r.pdb_id}_${r.assembly_id}_${r.interface_id}`
+const SABDAB_URL = 'https://sabdab.opig.stats.ox.ac.uk/sabdab/'
+const sabKey = (r) => `${r.pdb_id}|${r.antibody_chain}|${r.antibody_chain_type}`
 
 const AA3TO1 = {
   ALA: 'A', ARG: 'R', ASN: 'N', ASP: 'D', CYS: 'C', GLU: 'E', GLN: 'Q', GLY: 'G', HIS: 'H',
@@ -31,7 +34,7 @@ function SelectorCard({ label, color, count, medBsa, active, onClick }) {
   )
 }
 
-export default function Explorer({ interfaces, residue }) {
+export default function Explorer({ interfaces, residue, sabdab = {} }) {
   const [chainType, setChainType] = useState('heavy')
   const [selKey, setSelKey] = useState(null)
   const [highlight, setHighlight] = useState(null)  // residue clicked in the Sankey -> highlight in 3D
@@ -115,24 +118,34 @@ export default function Explorer({ interfaces, residue }) {
         {/* Row 2, Col 1 — instances table */}
         <div className="card ex-cell">
           <h2>Interface instances</h2>
-          <p className="note">Sorted by buried surface area (BSA), largest first. Click a row to inspect it above.</p>
+          <p className="note">Interface ID is <code>pdb_asm_interface</code>. Antibody is the SAbDab2 ID
+            (identical variable-region sequence groups the same antibody across structures — click to open
+            its SAbDab2 page). Sorted by buried surface area (BSA), largest first; click a row to inspect it above.</p>
           <div className="table-scroll ex-scroll">
             <table>
               <thead>
-                <tr><th>PDB</th><th className="num">Asm</th><th className="num">Interface</th>
-                  <th>Ag chain</th><th>Ab chain</th><th className="num">BSA (Å²)</th>
+                <tr><th>Interface ID</th><th>Ag chain</th><th>Ab chain</th>
+                  <th>Antibody (SAbDab2)</th><th className="num">BSA (Å²)</th>
                   <th className="num">Residue contacts</th></tr>
               </thead>
               <tbody>
-                {instances.map((r) => (
+                {instances.map((r) => {
+                  const sab = sabdab[sabKey(r)]
+                  return (
                   <tr key={keyOf(r)} className={'selrow' + (selected && keyOf(r) === keyOf(selected) ? ' sel' : '')}
                       onClick={() => selectInstance(keyOf(r))}>
-                    <td>{r.pdb_id}</td><td className="num">{r.assembly_id}</td>
-                    <td className="num">{r.interface_id}</td><td>{r.antigen_chain}</td>
-                    <td>{r.antibody_chain}</td><td className="num">{Math.round(r.interface_area)}</td>
+                    <td><code>{ifaceLabel(r)}</code></td><td>{r.antigen_chain}</td>
+                    <td>{r.antibody_chain}</td>
+                    <td>{sab ? (
+                      <a href={SABDAB_URL + sab.sabdab_id} target="_blank" rel="noreferrer"
+                         onClick={(e) => e.stopPropagation()}
+                         title={[sab.ab_type, sab.heavy_subclass, sab.light_subclass].filter(Boolean).join(' · ')}>
+                        {sab.sabdab_id}</a>
+                    ) : '—'}</td>
+                    <td className="num">{Math.round(r.interface_area)}</td>
                     <td className="num">{r.residue_contacts}</td>
                   </tr>
-                ))}
+                )})}
               </tbody>
             </table>
           </div>

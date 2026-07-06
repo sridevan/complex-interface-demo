@@ -13,14 +13,18 @@ export async function loadAll() {
     'mapping_anomalies',
     'antigen_unp_coverage',
     'batch_report',
+    'sabdab2_ids',
   ]
+  // files that are keyed objects, not arrays — default to {} on miss
+  const objDefaults = new Set(['batch_report', 'sabdab2_ids'])
   const out = {}
   await Promise.all(names.map(async (n) => {
+    const empty = objDefaults.has(n) ? {} : []
     try {
       const r = await fetch(`${BASE}data/${n}.json`)
-      out[n] = r.ok ? await r.json() : (n === 'batch_report' ? {} : [])
+      out[n] = r.ok ? await r.json() : empty
     } catch {
-      out[n] = n === 'batch_report' ? {} : []
+      out[n] = empty
     }
   }))
   return out
