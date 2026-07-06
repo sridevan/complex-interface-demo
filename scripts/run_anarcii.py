@@ -44,6 +44,16 @@ from identify_chains import antigen_rows_from_anarcii
 
 log = get_logger("run_anarcii")
 
+# Length guard on the antibody test. ANARCII can spuriously number a short variable-domain-like
+# stretch inside a much LARGER chain (e.g. a spike protomer), which then gets mislabelled an
+# antibody — producing bogus antigen–antigen "interfaces" (seen in 7vq0/A, 6wpt/C, 7jv4/C, 7k8v/C).
+# Reject an ANARCII-positive chain whose observed length exceeds this. Calibrated for a spike antigen
+# (~950–1090 res): the largest REAL antibody chains in this set are far smaller — nanobody/VHH ~120,
+# scFv ~230, full IgG heavy ~450, and a 441-res bispecific scFv+light fusion (7yc5) — so 600 cleanly
+# separates every genuine antibody (<=441 here) from the mis-numbered spike protomers (>=952). Do NOT
+# lower toward antibody sizes: it would drop legitimate large constructs like 7yc5's bispecific.
+MAX_AB_CHAIN_LEN = 600
+
 
 def ensure_cif(pdb_id, cif_path):
     if os.path.exists(cif_path) and os.path.getsize(cif_path) > 0:
@@ -161,6 +171,12 @@ def map_entry(pdb_id, assembly_id, cif_path, chain_meta, model=None):
         raw = result["chain_type"] if result else None
         err = result["error"] if result else "no_sequence"
         is_ab = result is not None and err is None and raw in CHAIN_TYPE_COLLAPSE
+        if is_ab and len(obs) > MAX_AB_CHAIN_LEN:
+            log.warning("chain %s ANARCII-typed %s but %d observed residues > %d -> NOT antibody "
+                        "(long chain with a spurious variable-domain-like stretch; treat as antigen)",
+                        ch, raw, len(obs), MAX_AB_CHAIN_LEN)
+            is_ab = False
+            err = err or f"chain_too_long_{len(obs)}res"
         chain_type = CHAIN_TYPE_COLLAPSE.get(raw) if is_ab else None
         classification = chain_type if is_ab else "other"
         counts[classification if is_ab else "other"] += 1
