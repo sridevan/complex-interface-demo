@@ -579,18 +579,6 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 282,
-  "antigen_residue_name": "ASN",
-  "glyco_site_structures": [
-   "6wpt",
-   "7jv4"
-  ],
-  "contacts_paratope": false,
-  "paratope_structures": [],
-  "paratope_contacts": []
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
   "antigen_uniprot_position": 331,
   "antigen_residue_name": "ASN",
   "glyco_site_structures": [
@@ -1012,6 +1000,7 @@
     "antibody_residue": "ASP115",
     "chain": "H",
     "interactions": [
+     "hbond",
      "polar",
      "vdw",
      "vdw_clash",
@@ -1519,6 +1508,7 @@
     "interactions": [
      "hbond",
      "polar",
+     "vdw",
      "vdw_clash"
     ]
    },
@@ -1567,6 +1557,15 @@
      "carbonyl",
      "vdw",
      "vdw_clash",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ARG55",
+    "chain": "L",
+    "interactions": [
+     "vdw",
      "weak_polar"
     ]
    },
@@ -2256,6 +2255,7 @@
     "chain": "L",
     "interactions": [
      "hbond",
+     "hydrophobic",
      "polar",
      "vdw",
      "vdw_clash",
@@ -2337,30 +2337,5 @@
     ]
    }
   ]
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 709,
-  "antigen_residue_name": "ASN",
-  "glyco_site_structures": [
-   "6wpt",
-   "7jv4",
-   "7k8v"
-  ],
-  "contacts_paratope": false,
-  "paratope_structures": [],
-  "paratope_contacts": []
- },
- {
-  "antigen_uniprot_accession": "P0DTC2",
-  "antigen_uniprot_position": 1074,
-  "antigen_residue_name": "ASN",
-  "glyco_site_structures": [
-   "6wpt",
-   "7jv4"
-  ],
-  "contacts_paratope": false,
-  "paratope_structures": [],
-  "paratope_contacts": []
  }
 ]

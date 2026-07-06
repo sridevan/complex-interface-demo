@@ -747,6 +747,14 @@
   "resolution": 3.1,
   "method": "cryo-EM"
  },
+ "7tpr|1": {
+  "resolution": 2.39,
+  "method": "cryo-EM"
+ },
+ "7u0p|1": {
+  "resolution": 3.76,
+  "method": "cryo-EM"
+ },
  "7u0q|1": {
   "resolution": 3.86,
   "method": "cryo-EM"
@@ -1009,6 +1017,26 @@
  },
  "7ws5|1": {
   "resolution": 3.7,
+  "method": "cryo-EM"
+ },
+ "7wt7|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "7wt8|1": {
+  "resolution": 3.6,
+  "method": "cryo-EM"
+ },
+ "7wtf|1": {
+  "resolution": 3.0,
+  "method": "cryo-EM"
+ },
+ "7wti|1": {
+  "resolution": 3.8,
+  "method": "cryo-EM"
+ },
+ "7wtk|1": {
+  "resolution": 3.6,
   "method": "cryo-EM"
  },
  "7wuh|1": {
