@@ -164,7 +164,9 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
             {selected && selected.residue_contacts != null && <span className="h2-sub"> · {selected.residue_contacts} residue contacts</span>}</h2>
           <p className="note">Epitope (antigen) on the left, paratope (antibody) on the right, for the
             selected interface. <b>Click a node to highlight it in 3D.</b></p>
-          <SankeyContacts rows={sankeyRows} onNodeClick={setHighlight} />
+          <div className="sankey-scroll">
+            <SankeyContacts rows={sankeyRows} onNodeClick={setHighlight} />
+          </div>
         </div>
       </div>
 

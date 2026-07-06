@@ -84,7 +84,12 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 /* Row 1: narrow selector cards + wide Mol* viewer. Row 2: even 50/50 split. */
 .ex-row { display: grid; gap: 16px; margin-bottom: 16px; }
 .ex-row1 { grid-template-columns: minmax(240px, 0.75fr) 2fr; }
-.ex-row2 { grid-template-columns: minmax(240px, 0.72fr) 1.28fr; }
+.ex-row2 { grid-template-columns: 1fr 1fr; }
+/* both instances table + Sankey get identical dimensions; each scrolls internally so the
+   tall single-interface Sankey no longer balloons the row (mirrors the ex-row3 pattern). */
+.ex-row2 > .card { height: 600px; }
+.ex-row2 .ex-scroll { flex: 1 1 auto; min-height: 0; height: auto; max-height: none; }
+.sankey-scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
 /* Row 3: identical-size cards (same width via 1fr/1fr, same height via fixed height); the table
    and heatmap scroll areas flex to fill that height, so the heatmap uses all available space. */
 .ex-row3 { grid-template-columns: 1fr 1fr; }
