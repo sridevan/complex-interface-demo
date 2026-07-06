@@ -27,3 +27,6 @@ app-react/public/mvs/
 
 # session scratch logs
 scratch_logs/
+
+# 190MB bond-level intermediate — regenerable by run_batch, not read by the app
+data/processed/processed_antibody_antigen_interfaces.json
