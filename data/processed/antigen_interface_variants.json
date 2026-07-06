@@ -1,12 +1,275 @@
 [
  {
   "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 18,
+  "label": "L18F",
+  "from": "L",
+  "to": "F",
+  "structures": [
+   "7q9i"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 336,
+  "label": "G336D",
+  "from": "G",
+  "to": "D",
+  "structures": [
+   "7x6a"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 336,
+  "label": "G336H",
+  "from": "G",
+  "to": "H",
+  "structures": [
+   "7yqx"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
   "antigen_uniprot_position": 339,
   "label": "G339D",
   "from": "G",
   "to": "D",
   "structures": [
+   "7wjy",
+   "7wly",
    "7xco"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 339,
+  "label": "G339H",
+  "from": "G",
+  "to": "H",
+  "structures": [
+   "7yqy",
+   "7yqz"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 342,
+  "label": "R342T",
+  "from": "R",
+  "to": "T",
+  "structures": [
+   "9atr"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 346,
+  "label": "R346T",
+  "from": "R",
+  "to": "T",
+  "structures": [
+   "9ato",
+   "9atp"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 370,
+  "label": "S370F",
+  "from": "S",
+  "to": "F",
+  "structures": [
+   "8zc4"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 371,
+  "label": "S371F",
+  "from": "S",
+  "to": "F",
+  "structures": [
+   "8h07",
+   "9atr"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 371,
+  "label": "S371L",
+  "from": "S",
+  "to": "L",
+  "structures": [
+   "8h08",
+   "8hhz",
+   "8k5h"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 372,
+  "label": "S372F",
+  "from": "S",
+  "to": "F",
+  "structures": [
+   "8zbz",
+   "8zc0"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 373,
+  "label": "S373P",
+  "from": "S",
+  "to": "P",
+  "structures": [
+   "7xic",
+   "8h08",
+   "8k45",
+   "8k46",
+   "8k47",
+   "9l15"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 375,
+  "label": "S375F",
+  "from": "S",
+  "to": "F",
+  "structures": [
+   "7uz8",
+   "7we9",
+   "7wor",
+   "7wos",
+   "7wou",
+   "7wov",
+   "7wow",
+   "7xic",
+   "8h07",
+   "8h08",
+   "8hhz",
+   "8k45",
+   "8k46",
+   "8k47",
+   "9l15"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 376,
+  "label": "T376A",
+  "from": "T",
+  "to": "A",
+  "structures": [
+   "8k46",
+   "8k47"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 400,
+  "label": "D400N",
+  "from": "D",
+  "to": "N",
+  "structures": [
+   "8hpq",
+   "8xsd",
+   "8zc3",
+   "8zc4"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 402,
+  "label": "D402N",
+  "from": "D",
+  "to": "N",
+  "structures": [
+   "8hp9",
+   "8zbz",
+   "8zc0"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 403,
+  "label": "D403N",
+  "from": "D",
+  "to": "N",
+  "structures": [
+   "8j1v"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 403,
+  "label": "R403S",
+  "from": "R",
+  "to": "S",
+  "structures": [
+   "8zc3",
+   "8zc4"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 405,
+  "label": "D405N",
+  "from": "D",
+  "to": "N",
+  "structures": [
+   "7yvg",
+   "7yvo",
+   "7yvp",
+   "8gto",
+   "8k46",
+   "8k47",
+   "8xea",
+   "8yww"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 405,
+  "label": "R405S",
+  "from": "R",
+  "to": "S",
+  "structures": [
+   "8zbz",
+   "8zc0"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 412,
+  "label": "K412N",
+  "from": "K",
+  "to": "N",
+  "structures": [
+   "8hpq",
+   "8xsd"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 414,
+  "label": "K414N",
+  "from": "K",
+  "to": "N",
+  "structures": [
+   "8hp9"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 415,
+  "label": "K415N",
+  "from": "K",
+  "to": "N",
+  "structures": [
+   "8j1v"
   ]
  },
  {
@@ -16,7 +279,49 @@
   "from": "K",
   "to": "N",
   "structures": [
-   "7wtf"
+   "7q9g",
+   "7we9",
+   "7woq",
+   "7wor",
+   "7wos",
+   "7wov",
+   "7wow",
+   "7yve",
+   "7yvg",
+   "7yvn",
+   "7yvo",
+   "7yvp",
+   "8c2r",
+   "8h7l",
+   "8hc2",
+   "8hc3",
+   "8xea",
+   "8yww",
+   "8yz6",
+   "9l15",
+   "9loy"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 435,
+  "label": "N435K",
+  "from": "N",
+  "to": "K",
+  "structures": [
+   "8hpq"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 437,
+  "label": "N437K",
+  "from": "N",
+  "to": "K",
+  "structures": [
+   "7x6a",
+   "7yqx",
+   "8hp9"
   ]
  },
  {
@@ -26,9 +331,51 @@
   "from": "N",
   "to": "K",
   "structures": [
+   "7upl",
+   "7we8",
+   "7we9",
    "7wpf",
+   "7ws4",
+   "7ws5",
+   "7wwi",
+   "7wwj",
    "7xdb",
-   "7ycy"
+   "7xj6",
+   "7xj8",
+   "7xod",
+   "7ycy",
+   "7ycz",
+   "7yd0",
+   "7yqy",
+   "7yqz",
+   "7yve",
+   "7yvi",
+   "7yvk",
+   "7yvo",
+   "7yvp",
+   "8err",
+   "8gou",
+   "8gto",
+   "8gtp",
+   "8h07",
+   "8h08",
+   "8h3n",
+   "8hca",
+   "8hcb",
+   "8k45",
+   "8k46",
+   "8k47",
+   "9l15"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 445,
+  "label": "V445P",
+  "from": "V",
+  "to": "P",
+  "structures": [
+   "9l15"
   ]
  },
  {
@@ -38,7 +385,245 @@
   "from": "G",
   "to": "S",
   "structures": [
-   "7ycy"
+   "7we7",
+   "7we8",
+   "7we9",
+   "7whi",
+   "7whk",
+   "7wjy",
+   "7ws4",
+   "7ws5",
+   "7wwi",
+   "7wwj",
+   "7xj6",
+   "7xj8",
+   "7ycy",
+   "7ycz",
+   "7yd0",
+   "8h01",
+   "8hc9",
+   "8itu",
+   "8k45",
+   "8zby",
+   "9ato",
+   "9atp"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 447,
+  "label": "L447R",
+  "from": "L",
+  "to": "R",
+  "structures": [
+   "8zc3",
+   "8zc4"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 452,
+  "label": "L452R",
+  "from": "L",
+  "to": "R",
+  "structures": [
+   "7x7d",
+   "7yvi",
+   "8gto"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 456,
+  "label": "F456L",
+  "from": "F",
+  "to": "L",
+  "structures": [
+   "9l15",
+   "9lp0"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 460,
+  "label": "N460K",
+  "from": "N",
+  "to": "K",
+  "structures": [
+   "8xea",
+   "9loy",
+   "9lp0"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 472,
+  "label": "S472N",
+  "from": "S",
+  "to": "N",
+  "structures": [
+   "8hpq",
+   "8xi6",
+   "8xsd"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 473,
+  "label": "T473K",
+  "from": "T",
+  "to": "K",
+  "structures": [
+   "8hpq"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 474,
+  "label": "S474N",
+  "from": "S",
+  "to": "N",
+  "structures": [
+   "8hp9"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 475,
+  "label": "S475N",
+  "from": "S",
+  "to": "N",
+  "structures": [
+   "8j1v"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 475,
+  "label": "T475K",
+  "from": "T",
+  "to": "K",
+  "structures": [
+   "8hp9"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 476,
+  "label": "S476N",
+  "from": "S",
+  "to": "N",
+  "structures": [
+   "8keh"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 477,
+  "label": "S477N",
+  "from": "S",
+  "to": "N",
+  "structures": [
+   "7wea",
+   "7web",
+   "7wec",
+   "7woq",
+   "7wor",
+   "7wos",
+   "7wou",
+   "7wov",
+   "7wow",
+   "7xj6",
+   "7xj8",
+   "7yvo",
+   "7yvp",
+   "8c2r",
+   "8h07",
+   "8h08",
+   "8hc2",
+   "8hc3",
+   "8k5h",
+   "8xea",
+   "8yww",
+   "9l15",
+   "9loy",
+   "9lp0"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 477,
+  "label": "T477K",
+  "from": "T",
+  "to": "K",
+  "structures": [
+   "8keh"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 478,
+  "label": "T478K",
+  "from": "T",
+  "to": "K",
+  "structures": [
+   "7w9e",
+   "7wea",
+   "7web",
+   "7wec",
+   "7wos",
+   "7xj6",
+   "7xj8",
+   "8c2r",
+   "8hc9",
+   "8hca",
+   "8hcb",
+   "8k5h",
+   "8keo",
+   "9loy"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 479,
+  "label": "E479A",
+  "from": "E",
+  "to": "A",
+  "structures": [
+   "8zc3",
+   "8zc4"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 480,
+  "label": "E480A",
+  "from": "E",
+  "to": "A",
+  "structures": [
+   "9atr"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 481,
+  "label": "E481A",
+  "from": "E",
+  "to": "A",
+  "structures": [
+   "8hp9",
+   "8zbz",
+   "8zc0"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 481,
+  "label": "F481V",
+  "from": "F",
+  "to": "V",
+  "structures": [
+   "8zc4"
   ]
  },
  {
@@ -48,7 +633,93 @@
   "from": "E",
   "to": "A",
   "structures": [
-   "7wtf"
+   "7whk",
+   "7wos",
+   "8h07",
+   "8h08",
+   "8hc9",
+   "8hca",
+   "8hcb",
+   "8zby",
+   "9ato",
+   "9atp",
+   "9l15"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 484,
+  "label": "E484K",
+  "from": "E",
+  "to": "K",
+  "structures": [
+   "7q9j"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 485,
+  "label": "F485S",
+  "from": "F",
+  "to": "S",
+  "structures": [
+   "8keh"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 486,
+  "label": "F486P",
+  "from": "F",
+  "to": "P",
+  "structures": [
+   "8xea"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 486,
+  "label": "F486S",
+  "from": "F",
+  "to": "S",
+  "structures": [
+   "9atr"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 486,
+  "label": "F486V",
+  "from": "F",
+  "to": "V",
+  "structures": [
+   "7yvg",
+   "7yvo",
+   "7yvp",
+   "8h07",
+   "8k46"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 490,
+  "label": "F490S",
+  "from": "F",
+  "to": "S",
+  "structures": [
+   "9ato",
+   "9atp"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 490,
+  "label": "Q490R",
+  "from": "Q",
+  "to": "R",
+  "structures": [
+   "8hp9",
+   "8zbz"
   ]
  },
  {
@@ -58,7 +729,45 @@
   "from": "Q",
   "to": "R",
   "structures": [
-   "7wtf"
+   "7we7",
+   "7wea",
+   "7web",
+   "7wec",
+   "7whi",
+   "7whk",
+   "7woq",
+   "7wor",
+   "7wos",
+   "7wou",
+   "7wov",
+   "7wow",
+   "7ws4",
+   "7ws5",
+   "7xj6",
+   "7xj8",
+   "7xod",
+   "8c2r",
+   "8h08",
+   "8h7l",
+   "8hc2",
+   "8hc3",
+   "8hpq",
+   "8k45",
+   "8k5h",
+   "8keo",
+   "8xsd",
+   "8zby"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 495,
+  "label": "Q495R",
+  "from": "Q",
+  "to": "R",
+  "structures": [
+   "7x6a",
+   "8hp9"
   ]
  },
  {
@@ -68,7 +777,49 @@
   "from": "G",
   "to": "S",
   "structures": [
-   "7wtf"
+   "7woq",
+   "7wor",
+   "7wos",
+   "7wow",
+   "7ws4",
+   "7ws5",
+   "8c2r",
+   "8hc2"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 496,
+  "label": "N496Y",
+  "from": "N",
+  "to": "Y",
+  "structures": [
+   "8hpq",
+   "8xsd",
+   "8zc3",
+   "8zc4"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 496,
+  "label": "Q496R",
+  "from": "Q",
+  "to": "R",
+  "structures": [
+   "8j1v"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 498,
+  "label": "N498Y",
+  "from": "N",
+  "to": "Y",
+  "structures": [
+   "7q9p",
+   "8hp9",
+   "8zbz"
   ]
  },
  {
@@ -78,8 +829,44 @@
   "from": "Q",
   "to": "R",
   "structures": [
-   "7wtf",
-   "7ycy"
+   "7we7",
+   "7we9",
+   "7ws4",
+   "7ycy",
+   "7ycz",
+   "7yd0",
+   "7yve",
+   "7yvk",
+   "7yvp",
+   "8err",
+   "8gto",
+   "8gtp",
+   "8hc3",
+   "8k45",
+   "9l15"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 499,
+  "label": "N499Y",
+  "from": "N",
+  "to": "Y",
+  "structures": [
+   "8j1v"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 500,
+  "label": "Y500H",
+  "from": "Y",
+  "to": "H",
+  "structures": [
+   "8hpq",
+   "8xsd",
+   "8zc3",
+   "8zc4"
   ]
  },
  {
@@ -89,9 +876,58 @@
   "from": "N",
   "to": "Y",
   "structures": [
-   "7wtf",
+   "7q9g",
+   "7woq",
+   "7wor",
+   "7wos",
+   "7wou",
+   "7wov",
+   "7wow",
+   "7ws4",
    "7ycy",
-   "8dzh"
+   "7ycz",
+   "7yd0",
+   "7yvk",
+   "7yvn",
+   "7yvo",
+   "7yvp",
+   "8c2r",
+   "8dzh",
+   "8gto",
+   "8gtp",
+   "8h7l",
+   "8hc2",
+   "8hc3",
+   "8k45",
+   "8k46",
+   "8k47",
+   "8xea",
+   "8yww",
+   "8yz6",
+   "9l15",
+   "9loy",
+   "9lp0"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 502,
+  "label": "Y502H",
+  "from": "Y",
+  "to": "H",
+  "structures": [
+   "8hp9",
+   "8zc0"
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 503,
+  "label": "Y503H",
+  "from": "Y",
+  "to": "H",
+  "structures": [
+   "8j1v"
   ]
  },
  {
@@ -101,7 +937,30 @@
   "from": "Y",
   "to": "H",
   "structures": [
-   "7ycy"
+   "7whi",
+   "7whk",
+   "7woq",
+   "7wor",
+   "7wos",
+   "7wou",
+   "7wov",
+   "7wow",
+   "7ws4",
+   "7ws5",
+   "7ycy",
+   "7yvg",
+   "7yvn",
+   "7yvo",
+   "7yvp",
+   "8c2r",
+   "8gto",
+   "8hc2",
+   "8hc3",
+   "8xea",
+   "8yww",
+   "8yz6",
+   "9loy",
+   "9lp0"
   ]
  }
 ]

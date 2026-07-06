@@ -1,0 +1,518 @@
+{
+  "kind": "single",
+  "root": {
+    "kind": "root",
+    "children": [
+      {
+        "kind": "download",
+        "params": {
+          "url": "https://www.ebi.ac.uk/pdbe/entry-files/download/7wjy_updated.cif"
+        },
+        "children": [
+          {
+            "kind": "parse",
+            "params": {
+              "format": "mmcif"
+            },
+            "children": [
+              {
+                "kind": "structure",
+                "params": {
+                  "type": "assembly",
+                  "assembly_id": "1"
+                },
+                "children": [
+                  {
+                    "kind": "component",
+                    "params": {
+                      "selector": "polymer"
+                    },
+                    "children": [
+                      {
+                        "kind": "representation",
+                        "params": {
+                          "type": "cartoon"
+                        },
+                        "children": [
+                          {
+                            "kind": "color",
+                            "params": {
+                              "color": "#d0d0d0"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "component",
+                    "params": {
+                      "selector": [
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 336
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 337
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 343
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 344
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 345
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 348
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 349
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 350
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 351
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 353
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 444
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 445
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 446
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 447
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 463
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 466
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 467
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 479
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 480
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 487
+                        }
+                      ]
+                    },
+                    "children": [
+                      {
+                        "kind": "representation",
+                        "params": {
+                          "type": "ball_and_stick",
+                          "ignore_hydrogens": true,
+                          "size_factor": 0.2
+                        },
+                        "children": [
+                          {
+                            "kind": "color",
+                            "params": {
+                              "color": "#4b7fcc"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "O"
+                              },
+                              "color": "#d1392c"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "N"
+                              },
+                              "color": "#3454d1"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "S"
+                              },
+                              "color": "#e6b800"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "component",
+                    "params": {
+                      "selector": [
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 15
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 16
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 17
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 19
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 30
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 53
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 54
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 55
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 56
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 57
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 58
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 59
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 60
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 65
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 69
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 71
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 72
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 73
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 74
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 82
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 84
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 105
+                        }
+                      ]
+                    },
+                    "children": [
+                      {
+                        "kind": "representation",
+                        "params": {
+                          "type": "ball_and_stick",
+                          "ignore_hydrogens": true,
+                          "size_factor": 0.2
+                        },
+                        "children": [
+                          {
+                            "kind": "color",
+                            "params": {
+                              "color": "#e19039"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "O"
+                              },
+                              "color": "#d1392c"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "N"
+                              },
+                              "color": "#3454d1"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "S"
+                              },
+                              "color": "#e6b800"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "component",
+                    "params": {
+                      "selector": [
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 336
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 337
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 343
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 344
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 345
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 348
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 349
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 350
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 351
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 353
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 444
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 445
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 446
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 447
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 463
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 466
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 467
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 479
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 480
+                        },
+                        {
+                          "label_asym_id": "D",
+                          "label_seq_id": 487
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 15
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 16
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 17
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 19
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 30
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 53
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 54
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 55
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 56
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 57
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 58
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 59
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 60
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 65
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 69
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 71
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 72
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 73
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 74
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 82
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 84
+                        },
+                        {
+                          "label_asym_id": "E",
+                          "label_seq_id": 105
+                        }
+                      ]
+                    },
+                    "children": [
+                      {
+                        "kind": "focus",
+                        "params": {}
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "kind": "canvas",
+        "params": {
+          "background_color": "#ffffff"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "timestamp": "2026-07-06T09:03:21.695818+00:00",
+    "version": "1.8"
+  }
+}

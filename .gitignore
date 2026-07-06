@@ -24,3 +24,6 @@ app-react/public/mvs/
 *.swp
 .idea/
 .vscode/
+
+# session scratch logs
+scratch_logs/

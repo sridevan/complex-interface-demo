@@ -4,13 +4,192 @@
   "antigen_uniprot_position": 17,
   "antigen_residue_name": "ASN",
   "glyco_site_structures": [
-   "7l2e"
+   "7l2e",
+   "7mxp"
   ],
   "contacts_paratope": true,
   "paratope_structures": [
-   "7l2e"
+   "7l2e",
+   "7mxp"
   ],
   "paratope_contacts": [
+   {
+    "glycan": "FUC",
+    "antibody_residue": "LYS57",
+    "chain": "I",
+    "interactions": [
+     "hbond",
+     "polar"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "SER55",
+    "chain": "G",
+    "interactions": [
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "SER55",
+    "chain": "H",
+    "interactions": [
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "SER55",
+    "chain": "I",
+    "interactions": [
+     "weak_hbond"
+    ]
+   },
+   {
+    "glycan": "MAN",
+    "antibody_residue": "ARG66",
+    "chain": "H",
+    "interactions": [
+     "hbond",
+     "polar"
+    ]
+   },
+   {
+    "glycan": "MAN",
+    "antibody_residue": "GLN81",
+    "chain": "G",
+    "interactions": [
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "MAN",
+    "antibody_residue": "GLN81",
+    "chain": "H",
+    "interactions": [
+     "vdw_clash"
+    ]
+   },
+   {
+    "glycan": "MAN",
+    "antibody_residue": "GLN81",
+    "chain": "I",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw_clash"
+    ]
+   },
+   {
+    "glycan": "MAN",
+    "antibody_residue": "GLY65",
+    "chain": "H",
+    "interactions": [
+     "weak_hbond"
+    ]
+   },
+   {
+    "glycan": "MAN",
+    "antibody_residue": "PHE67",
+    "chain": "H",
+    "interactions": [
+     "vdw_clash",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "MAN",
+    "antibody_residue": "PHE67",
+    "chain": "I",
+    "interactions": [
+     "hbond",
+     "polar"
+    ]
+   },
+   {
+    "glycan": "MAN",
+    "antibody_residue": "THR68",
+    "chain": "G",
+    "interactions": [
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "MAN",
+    "antibody_residue": "THR68",
+    "chain": "H",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw_clash",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "MAN",
+    "antibody_residue": "THR68",
+    "chain": "I",
+    "interactions": [
+     "weak_hbond"
+    ]
+   },
+   {
+    "glycan": "MAN",
+    "antibody_residue": "THR82",
+    "chain": "G",
+    "interactions": [
+     "polar",
+     "vdw_clash"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ARG66",
+    "chain": "H",
+    "interactions": [
+     "hbond",
+     "hydrophobic",
+     "polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ASN56",
+    "chain": "H",
+    "interactions": [
+     "hydrophobic",
+     "weak_hbond"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ASN56",
+    "chain": "I",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "GLN81",
+    "chain": "G",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw_clash"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "GLN81",
+    "chain": "I",
+    "interactions": [
+     "hbond"
+    ]
+   },
    {
     "glycan": "NAG",
     "antibody_residue": "LYS57",
@@ -27,8 +206,11 @@
     "antibody_residue": "LYS57",
     "chain": "H",
     "interactions": [
+     "hbond",
      "hydrophobic",
+     "polar",
      "vdw",
+     "vdw_clash",
      "weak_hbond",
      "weak_polar"
     ]
@@ -38,10 +220,66 @@
     "antibody_residue": "LYS57",
     "chain": "I",
     "interactions": [
+     "hbond",
      "hydrophobic",
+     "polar",
      "vdw",
+     "vdw_clash",
      "weak_hbond",
      "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "PHE58",
+    "chain": "H",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "PHE58",
+    "chain": "I",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "SER55",
+    "chain": "G",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw_clash"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "SER55",
+    "chain": "I",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw_clash",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "THR82",
+    "chain": "G",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "THR82",
+    "chain": "H",
+    "interactions": [
+     "hydrophobic"
     ]
    },
    {
@@ -72,16 +310,119 @@
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 58,
+  "antigen_residue_name": "ASN",
+  "glyco_site_structures": [
+   "7yr1",
+   "8y4a"
+  ],
+  "contacts_paratope": false,
+  "paratope_structures": [],
+  "paratope_contacts": []
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
   "antigen_uniprot_position": 61,
   "antigen_residue_name": "ASN",
   "glyco_site_structures": [
-   "7lab"
+   "7lab",
+   "7sob",
+   "8g70",
+   "8g76",
+   "8g78",
+   "8ug9"
   ],
   "contacts_paratope": true,
   "paratope_structures": [
-   "7lab"
+   "7lab",
+   "7sob",
+   "8g70",
+   "8g76",
+   "8g78",
+   "8ug9"
   ],
   "paratope_contacts": [
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ALA74",
+    "chain": "I",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw",
+     "vdw_clash",
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ALA74",
+    "chain": "J",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw_clash"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ALA74",
+    "chain": "O",
+    "interactions": [
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ASN73",
+    "chain": "I",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ASN73",
+    "chain": "J",
+    "interactions": [
+     "weak_hbond"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ASN73",
+    "chain": "O",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw_clash",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ASN76",
+    "chain": "I",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw_clash",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ASN76",
+    "chain": "J",
+    "interactions": [
+     "weak_hbond"
+    ]
+   },
    {
     "glycan": "NAG",
     "antibody_residue": "GLY100",
@@ -90,19 +431,98 @@
      "polar",
      "vdw"
     ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "LYS75",
+    "chain": "I",
+    "interactions": [
+     "hbond"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "PHE29",
+    "chain": "I",
+    "interactions": [
+     "vdw",
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "PHE29",
+    "chain": "O",
+    "interactions": [
+     "vdw_clash",
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "SER75",
+    "chain": "C",
+    "interactions": [
+     "weak_hbond"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "SER75",
+    "chain": "F",
+    "interactions": [
+     "weak_hbond"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "SER75",
+    "chain": "M",
+    "interactions": [
+     "weak_hbond"
+    ]
    }
   ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 122,
+  "antigen_residue_name": "ASN",
+  "glyco_site_structures": [
+   "7uap"
+  ],
+  "contacts_paratope": false,
+  "paratope_structures": [],
+  "paratope_contacts": []
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 149,
+  "antigen_residue_name": "ASN",
+  "glyco_site_structures": [
+   "7mxp",
+   "7uap"
+  ],
+  "contacts_paratope": false,
+  "paratope_structures": [],
+  "paratope_contacts": []
  },
  {
   "antigen_uniprot_accession": "P0DTC2",
   "antigen_uniprot_position": 165,
   "antigen_residue_name": "ASN",
   "glyco_site_structures": [
-   "7fae"
+   "7fae",
+   "8g70",
+   "8hc4"
   ],
   "contacts_paratope": true,
   "paratope_structures": [
-   "7fae"
+   "7fae",
+   "8g70",
+   "8hc4"
   ],
   "paratope_contacts": [
    {
@@ -116,6 +536,305 @@
      "vdw_clash",
      "weak_polar"
     ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "GLY26",
+    "chain": "O",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw_clash",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "SER27",
+    "chain": "O",
+    "interactions": [
+     "vdw_clash",
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "SER69",
+    "chain": "E",
+    "interactions": [
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "SER69",
+    "chain": "O",
+    "interactions": [
+     "hbond",
+     "polar"
+    ]
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 282,
+  "antigen_residue_name": "ASN",
+  "glyco_site_structures": [
+   "6wpt",
+   "7jv4"
+  ],
+  "contacts_paratope": false,
+  "paratope_structures": [],
+  "paratope_contacts": []
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 331,
+  "antigen_residue_name": "ASN",
+  "glyco_site_structures": [
+   "9yok"
+  ],
+  "contacts_paratope": true,
+  "paratope_structures": [
+   "9yok"
+  ],
+  "paratope_contacts": [
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TYR62",
+    "chain": "E",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw_clash",
+     "weak_hbond",
+     "weak_polar"
+    ]
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 340,
+  "antigen_residue_name": "ASN",
+  "glyco_site_structures": [
+   "7yqx"
+  ],
+  "contacts_paratope": true,
+  "paratope_structures": [
+   "7yqx"
+  ],
+  "paratope_contacts": [
+   {
+    "glycan": "FUC",
+    "antibody_residue": "ALA56",
+    "chain": "G",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "ASP115",
+    "chain": "H",
+    "interactions": [
+     "hbond",
+     "hydrophobic",
+     "polar",
+     "vdw_clash",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "ASP115",
+    "chain": "I",
+    "interactions": [
+     "hbond",
+     "hydrophobic",
+     "polar",
+     "vdw_clash"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "LEU47",
+    "chain": "G",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "TYR100",
+    "chain": "I",
+    "interactions": [
+     "vdw"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "TYR50",
+    "chain": "G",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ARG55",
+    "chain": "F",
+    "interactions": [
+     "weak_hbond"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ARG55",
+    "chain": "G",
+    "interactions": [
+     "weak_hbond"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TYR50",
+    "chain": "F",
+    "interactions": [
+     "hydrophobic",
+     "vdw",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TYR50",
+    "chain": "G",
+    "interactions": [
+     "vdw",
+     "weak_hbond"
+    ]
+   }
+  ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 341,
+  "antigen_residue_name": "ASN",
+  "glyco_site_structures": [
+   "7wwl",
+   "7wwm"
+  ],
+  "contacts_paratope": true,
+  "paratope_structures": [
+   "7wwl",
+   "7wwm"
+  ],
+  "paratope_contacts": [
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ASP102",
+    "chain": "H",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ASP102",
+    "chain": "I",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ASP102",
+    "chain": "J",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TRP103",
+    "chain": "H",
+    "interactions": []
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TRP103",
+    "chain": "I",
+    "interactions": []
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TRP103",
+    "chain": "J",
+    "interactions": []
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TYR104",
+    "chain": "H",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw",
+     "vdw_clash",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TYR104",
+    "chain": "I",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw",
+     "vdw_clash",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TYR104",
+    "chain": "J",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw",
+     "vdw_clash",
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TYR105",
+    "chain": "H",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TYR105",
+    "chain": "I",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TYR105",
+    "chain": "J",
+    "interactions": [
+     "hydrophobic"
+    ]
    }
   ]
  },
@@ -128,8 +847,31 @@
    "6wpt",
    "7k43",
    "7k9j",
+   "7lxy",
+   "7lxz",
+   "7ly2",
+   "7m6e",
+   "7q6e",
    "7q9f",
-   "7xco"
+   "7q9m",
+   "7r8m",
+   "7r8n",
+   "7ru3",
+   "7so9",
+   "7upl",
+   "7upw",
+   "7upy",
+   "7uz6",
+   "7v2a",
+   "7xco",
+   "7yqz",
+   "8dlw",
+   "8f4p",
+   "8h07",
+   "8h08",
+   "9bj4",
+   "9uxd",
+   "9uxe"
   ],
   "contacts_paratope": true,
   "paratope_structures": [
@@ -137,10 +879,63 @@
    "6wpt",
    "7k43",
    "7k9j",
+   "7lxy",
+   "7lxz",
+   "7ly2",
+   "7m6e",
+   "7q6e",
    "7q9f",
-   "7xco"
+   "7q9m",
+   "7r8m",
+   "7r8n",
+   "7ru3",
+   "7so9",
+   "7upw",
+   "7upy",
+   "7v2a",
+   "7xco",
+   "7yqz",
+   "8dlw",
+   "8f4p",
+   "8h07",
+   "8h08",
+   "9uxd",
+   "9uxe"
   ],
   "paratope_contacts": [
+   {
+    "glycan": "FUC",
+    "antibody_residue": "ALA103",
+    "chain": "H",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "ALA103",
+    "chain": "J",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "ARG53",
+    "chain": "H",
+    "interactions": [
+     "vdw"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "ARG58",
+    "chain": "H",
+    "interactions": [
+     "hbond",
+     "hydrophobic"
+    ]
+   },
    {
     "glycan": "FUC",
     "antibody_residue": "ARG98",
@@ -217,12 +1012,49 @@
     "antibody_residue": "ASP115",
     "chain": "H",
     "interactions": [
-     "hbond",
      "polar",
      "vdw",
      "vdw_clash",
      "weak_hbond",
      "weak_polar"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "ASP115",
+    "chain": "I",
+    "interactions": [
+     "hbond",
+     "hydrophobic",
+     "polar"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "ASP115",
+    "chain": "J",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw_clash"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "ASP99",
+    "chain": "E",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "GLN64",
+    "chain": "H",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw_clash"
     ]
    },
    {
@@ -256,6 +1088,22 @@
      "polar",
      "vdw_clash",
      "weak_hbond"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "ILE107",
+    "chain": "H",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "ILE107",
+    "chain": "J",
+    "interactions": [
+     "hydrophobic"
     ]
    },
    {
@@ -308,8 +1156,34 @@
    },
    {
     "glycan": "FUC",
+    "antibody_residue": "PHE103",
+    "chain": "H",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "PHE103",
+    "chain": "J",
+    "interactions": [
+     "vdw",
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "FUC",
     "antibody_residue": "PHE105",
     "chain": "C",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "PHE105",
+    "chain": "E",
     "interactions": [
      "hydrophobic"
     ]
@@ -325,6 +1199,30 @@
    {
     "glycan": "FUC",
     "antibody_residue": "PHE105",
+    "chain": "H",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "PHE105",
+    "chain": "M",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "PHE107",
+    "chain": "E",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "PHE107",
     "chain": "H",
     "interactions": [
      "hydrophobic"
@@ -348,8 +1246,50 @@
    },
    {
     "glycan": "FUC",
+    "antibody_residue": "SER95",
+    "chain": "L",
+    "interactions": [
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "THR28",
+    "chain": "E",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "THR28",
+    "chain": "H",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "THR56",
+    "chain": "L",
+    "interactions": [
+     "vdw_clash",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "FUC",
     "antibody_residue": "TRP102",
     "chain": "E",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "TRP102",
+    "chain": "H",
     "interactions": [
      "hydrophobic"
     ]
@@ -396,10 +1336,46 @@
    },
    {
     "glycan": "FUC",
+    "antibody_residue": "TYR100",
+    "chain": "F",
+    "interactions": [
+     "hydrophobic",
+     "vdw",
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "TYR100",
+    "chain": "I",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "TYR100",
+    "chain": "J",
+    "interactions": [
+     "hydrophobic",
+     "weak_hbond"
+    ]
+   },
+   {
+    "glycan": "FUC",
     "antibody_residue": "TYR32",
     "chain": "D",
     "interactions": [
      "hbond",
+     "polar"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "TYR49",
+    "chain": "E",
+    "interactions": [
      "polar"
     ]
    },
@@ -425,6 +1401,16 @@
     "chain": "L",
     "interactions": [
      "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "TYR59",
+    "chain": "H",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw_clash"
     ]
    },
    {
@@ -466,6 +1452,47 @@
     ]
    },
    {
+    "glycan": "FUC",
+    "antibody_residue": "TYR99",
+    "chain": "D",
+    "interactions": [
+     "hbond",
+     "polar",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "TYR99",
+    "chain": "F",
+    "interactions": [
+     "polar",
+     "vdw",
+     "vdw_clash",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "TYR99",
+    "chain": "H",
+    "interactions": [
+     "polar",
+     "vdw",
+     "vdw_clash",
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "FUC",
+    "antibody_residue": "VAL2",
+    "chain": "E",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
     "glycan": "MAN",
     "antibody_residue": "GLY58",
     "chain": "D",
@@ -492,7 +1519,6 @@
     "interactions": [
      "hbond",
      "polar",
-     "vdw",
      "vdw_clash"
     ]
    },
@@ -525,11 +1551,84 @@
    },
    {
     "glycan": "NAG",
-    "antibody_residue": "ARG55",
-    "chain": "L",
+    "antibody_residue": "ALA102",
+    "chain": "E",
     "interactions": [
+     "hydrophobic",
+     "vdw_clash",
+     "weak_hbond"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ARG55",
+    "chain": "H",
+    "interactions": [
+     "carbonyl",
      "vdw",
+     "vdw_clash",
      "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ARG58",
+    "chain": "D",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw",
+     "vdw_clash"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ARG58",
+    "chain": "H",
+    "interactions": [
+     "hbond",
+     "polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ASN104",
+    "chain": "I",
+    "interactions": [
+     "vdw_clash",
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ASN28",
+    "chain": "E",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw_clash"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ASN28",
+    "chain": "H",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw",
+     "vdw_clash"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ASN28",
+    "chain": "J",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw_clash"
     ]
    },
    {
@@ -538,6 +1637,167 @@
     "chain": "H",
     "interactions": [
      "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "GLN96",
+    "chain": "D",
+    "interactions": [
+     "clash",
+     "hydrophobic",
+     "vdw",
+     "vdw_clash"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "GLN96",
+    "chain": "F",
+    "interactions": [
+     "vdw_clash"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "GLY104",
+    "chain": "D",
+    "interactions": [
+     "vdw",
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "GLY104",
+    "chain": "H",
+    "interactions": [
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "GLY104",
+    "chain": "J",
+    "interactions": [
+     "vdw",
+     "vdw_clash",
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "HIS104",
+    "chain": "I",
+    "interactions": [
+     "polar",
+     "vdw_clash",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "HIS104",
+    "chain": "N",
+    "interactions": [
+     "polar",
+     "vdw_clash",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "HIS104",
+    "chain": "Q",
+    "interactions": [
+     "polar",
+     "vdw_clash",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ILE105",
+    "chain": "E",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ILE105",
+    "chain": "H",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ILE105",
+    "chain": "J",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ILE106",
+    "chain": "H",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ILE106",
+    "chain": "J",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ILE107",
+    "chain": "D",
+    "interactions": [
+     "weak_hbond"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ILE107",
+    "chain": "H",
+    "interactions": [
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "ILE107",
+    "chain": "J",
+    "interactions": [
+     "vdw",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "LEU100",
+    "chain": "E",
+    "interactions": [
+     "hydrophobic",
+     "vdw_clash"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "LEU103",
+    "chain": "E",
+    "interactions": [
+     "vdw_clash"
     ]
    },
    {
@@ -575,10 +1835,122 @@
    },
    {
     "glycan": "NAG",
+    "antibody_residue": "PHE100",
+    "chain": "D",
+    "interactions": [
+     "hbond",
+     "hydrophobic",
+     "polar",
+     "vdw_clash",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "PHE100",
+    "chain": "F",
+    "interactions": [
+     "hbond",
+     "hydrophobic",
+     "polar",
+     "vdw_clash",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "PHE100",
+    "chain": "H",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw",
+     "vdw_clash",
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "PHE103",
+    "chain": "D",
+    "interactions": [
+     "hydrophobic",
+     "vdw_clash"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "PHE103",
+    "chain": "H",
+    "interactions": [
+     "carbonyl",
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "PHE103",
+    "chain": "J",
+    "interactions": [
+     "carbonyl",
+     "hbond",
+     "hydrophobic",
+     "polar",
+     "vdw_clash",
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "PHE107",
+    "chain": "E",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "PHE107",
+    "chain": "H",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "PHE107",
+    "chain": "J",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "PHE108",
+    "chain": "I",
+    "interactions": [
+     "vdw",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "SER30",
+    "chain": "C",
+    "interactions": [
+     "polar",
+     "vdw_clash"
+    ]
+   },
+   {
+    "glycan": "NAG",
     "antibody_residue": "SER30",
     "chain": "D",
     "interactions": [
      "polar",
+     "vdw_clash",
      "weak_polar"
     ]
    },
@@ -587,8 +1959,20 @@
     "antibody_residue": "SER30",
     "chain": "G",
     "interactions": [
+     "hbond",
      "polar",
+     "vdw",
      "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "SER30",
+    "chain": "K",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw_clash"
     ]
    },
    {
@@ -596,16 +1980,25 @@
     "antibody_residue": "SER30",
     "chain": "L",
     "interactions": [
+     "hbond",
      "polar",
+     "vdw_clash",
      "weak_polar"
     ]
    },
    {
     "glycan": "NAG",
     "antibody_residue": "SER31",
+    "chain": "C",
+    "interactions": []
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "SER31",
     "chain": "D",
     "interactions": [
-     "weak_hbond"
+     "weak_hbond",
+     "weak_polar"
     ]
    },
    {
@@ -619,9 +2012,25 @@
    {
     "glycan": "NAG",
     "antibody_residue": "SER31",
+    "chain": "K",
+    "interactions": []
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "SER31",
     "chain": "L",
     "interactions": [
-     "weak_hbond"
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "SER32",
+    "chain": "C",
+    "interactions": [
+     "vdw",
+     "weak_polar"
     ]
    },
    {
@@ -629,6 +2038,7 @@
     "antibody_residue": "SER32",
     "chain": "D",
     "interactions": [
+     "vdw",
      "vdw_clash",
      "weak_polar"
     ]
@@ -645,11 +2055,116 @@
    {
     "glycan": "NAG",
     "antibody_residue": "SER32",
+    "chain": "K",
+    "interactions": [
+     "vdw",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "SER32",
     "chain": "L",
     "interactions": [
      "vdw_clash",
      "weak_polar"
     ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "SER53",
+    "chain": "L",
+    "interactions": [
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "THR28",
+    "chain": "D",
+    "interactions": [
+     "vdw"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "THR56",
+    "chain": "F",
+    "interactions": [
+     "hbond",
+     "polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "THR56",
+    "chain": "L",
+    "interactions": [
+     "hbond",
+     "polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "THR57",
+    "chain": "F",
+    "interactions": [
+     "hbond",
+     "polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "THR57",
+    "chain": "K",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "THR57",
+    "chain": "L",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw_clash"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TRP105",
+    "chain": "I",
+    "interactions": [
+     "hydrophobic",
+     "vdw_clash"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TRP105",
+    "chain": "N",
+    "interactions": [
+     "hydrophobic",
+     "vdw_clash"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TRP105",
+    "chain": "Q",
+    "interactions": [
+     "hydrophobic",
+     "vdw_clash"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TRP108",
+    "chain": "M",
+    "interactions": []
    },
    {
     "glycan": "NAG",
@@ -669,12 +2184,58 @@
    },
    {
     "glycan": "NAG",
+    "antibody_residue": "TYR102",
+    "chain": "E",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TYR102",
+    "chain": "H",
+    "interactions": [
+     "hydrophobic"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TYR49",
+    "chain": "L",
+    "interactions": [
+     "hbond",
+     "polar",
+     "vdw_clash"
+    ]
+   },
+   {
+    "glycan": "NAG",
     "antibody_residue": "TYR50",
     "chain": "F",
     "interactions": [
      "hbond",
      "polar",
-     "weak_hbond"
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TYR50",
+    "chain": "G",
+    "interactions": [
+     "vdw",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TYR50",
+    "chain": "H",
+    "interactions": [
+     "hydrophobic",
+     "vdw",
+     "weak_polar"
     ]
    },
    {
@@ -685,6 +2246,7 @@
      "hbond",
      "polar",
      "vdw_clash",
+     "weak_hbond",
      "weak_polar"
     ]
    },
@@ -693,6 +2255,78 @@
     "antibody_residue": "TYR50",
     "chain": "L",
     "interactions": [
+     "hbond",
+     "polar",
+     "vdw",
+     "vdw_clash",
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TYR99",
+    "chain": "D",
+    "interactions": [
+     "weak_hbond"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TYR99",
+    "chain": "F",
+    "interactions": [
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "TYR99",
+    "chain": "H",
+    "interactions": [
+     "vdw_clash",
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "VAL105",
+    "chain": "D",
+    "interactions": [
+     "carbonyl",
+     "hbond",
+     "hydrophobic",
+     "polar",
+     "vdw",
+     "vdw_clash",
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "VAL105",
+    "chain": "H",
+    "interactions": [
+     "carbonyl",
+     "hbond",
+     "hydrophobic",
+     "polar",
+     "vdw",
+     "vdw_clash",
+     "weak_hbond",
+     "weak_polar"
+    ]
+   },
+   {
+    "glycan": "NAG",
+    "antibody_residue": "VAL105",
+    "chain": "J",
+    "interactions": [
+     "carbonyl",
+     "clash",
      "hbond",
      "hydrophobic",
      "polar",
@@ -703,5 +2337,30 @@
     ]
    }
   ]
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 709,
+  "antigen_residue_name": "ASN",
+  "glyco_site_structures": [
+   "6wpt",
+   "7jv4",
+   "7k8v"
+  ],
+  "contacts_paratope": false,
+  "paratope_structures": [],
+  "paratope_contacts": []
+ },
+ {
+  "antigen_uniprot_accession": "P0DTC2",
+  "antigen_uniprot_position": 1074,
+  "antigen_residue_name": "ASN",
+  "glyco_site_structures": [
+   "6wpt",
+   "7jv4"
+  ],
+  "contacts_paratope": false,
+  "paratope_structures": [],
+  "paratope_contacts": []
  }
 ]

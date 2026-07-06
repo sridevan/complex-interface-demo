@@ -1,0 +1,1494 @@
+{
+  "kind": "single",
+  "root": {
+    "kind": "root",
+    "children": [
+      {
+        "kind": "download",
+        "params": {
+          "url": "https://www.ebi.ac.uk/pdbe/entry-files/download/7jv4_updated.cif"
+        },
+        "children": [
+          {
+            "kind": "parse",
+            "params": {
+              "format": "mmcif"
+            },
+            "children": [
+              {
+                "kind": "structure",
+                "params": {
+                  "type": "assembly",
+                  "assembly_id": "1"
+                },
+                "children": [
+                  {
+                    "kind": "component",
+                    "params": {
+                      "selector": "polymer"
+                    },
+                    "children": [
+                      {
+                        "kind": "representation",
+                        "params": {
+                          "type": "cartoon"
+                        },
+                        "children": [
+                          {
+                            "kind": "color",
+                            "params": {
+                              "color": "#d0d0d0"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "component",
+                    "params": {
+                      "selector": [
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 57
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 59
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 60
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 61
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 62
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 219
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 243
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 244
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 249
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 301
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 756
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 759
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 774
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 775
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 776
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 777
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 778
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 781
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 784
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 806
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 807
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 808
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 809
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 811
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 815
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 816
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 874
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 878
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 880
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 881
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 882
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 883
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 884
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 885
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 888
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 891
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 892
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 902
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 905
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 909
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 911
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 913
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 914
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 915
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 916
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 917
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 919
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 923
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 926
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 931
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 932
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 933
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 936
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 937
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 982
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 985
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 986
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 994
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 997
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1001
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1002
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1003
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1004
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1013
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1024
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1028
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1032
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1038
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1046
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1049
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1050
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1053
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1054
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1058
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1130
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1160
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1163
+                        }
+                      ]
+                    },
+                    "children": [
+                      {
+                        "kind": "representation",
+                        "params": {
+                          "type": "ball_and_stick",
+                          "ignore_hydrogens": true,
+                          "size_factor": 0.2
+                        },
+                        "children": [
+                          {
+                            "kind": "color",
+                            "params": {
+                              "color": "#4b7fcc"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "O"
+                              },
+                              "color": "#d1392c"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "N"
+                              },
+                              "color": "#3454d1"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "S"
+                              },
+                              "color": "#e6b800"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "component",
+                    "params": {
+                      "selector": [
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 336
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 338
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 374
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 400
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 401
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 402
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 404
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 405
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 409
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 415
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 536
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 538
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 539
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 566
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 567
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 576
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 577
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 578
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 579
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 581
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 582
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 583
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 584
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 585
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 586
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 588
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 589
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 590
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 608
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 611
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 632
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 666
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 684
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 686
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 687
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 688
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 689
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 690
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 716
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 718
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 720
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 721
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 722
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 723
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 724
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 725
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 726
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 727
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 728
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 729
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 730
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 731
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 732
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 734
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 980
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 984
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 987
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 988
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 989
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1014
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1018
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1021
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1022
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1025
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1028
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1029
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1032
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1036
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1058
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1059
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1060
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1065
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1066
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1091
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1093
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1096
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1098
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1108
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1109
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1113
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1126
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1140
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1142
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1143
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1147
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1160
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1164
+                        }
+                      ]
+                    },
+                    "children": [
+                      {
+                        "kind": "representation",
+                        "params": {
+                          "type": "ball_and_stick",
+                          "ignore_hydrogens": true,
+                          "size_factor": 0.2
+                        },
+                        "children": [
+                          {
+                            "kind": "color",
+                            "params": {
+                              "color": "#e19039"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "O"
+                              },
+                              "color": "#d1392c"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "N"
+                              },
+                              "color": "#3454d1"
+                            }
+                          },
+                          {
+                            "kind": "color",
+                            "params": {
+                              "selector": {
+                                "type_symbol": "S"
+                              },
+                              "color": "#e6b800"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "component",
+                    "params": {
+                      "selector": [
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 57
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 59
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 60
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 61
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 62
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 219
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 243
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 244
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 249
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 301
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 756
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 759
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 774
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 775
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 776
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 777
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 778
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 781
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 784
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 806
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 807
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 808
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 809
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 811
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 815
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 816
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 874
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 878
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 880
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 881
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 882
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 883
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 884
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 885
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 888
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 891
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 892
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 902
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 905
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 909
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 911
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 913
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 914
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 915
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 916
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 917
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 919
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 923
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 926
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 931
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 932
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 933
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 936
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 937
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 982
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 985
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 986
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 994
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 997
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1001
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1002
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1003
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1004
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1013
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1024
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1028
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1032
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1038
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1046
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1049
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1050
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1053
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1054
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1058
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1130
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1160
+                        },
+                        {
+                          "label_asym_id": "A",
+                          "label_seq_id": 1163
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 336
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 338
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 374
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 400
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 401
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 402
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 404
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 405
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 409
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 415
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 536
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 538
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 539
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 566
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 567
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 576
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 577
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 578
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 579
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 581
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 582
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 583
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 584
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 585
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 586
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 588
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 589
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 590
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 608
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 611
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 632
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 666
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 684
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 686
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 687
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 688
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 689
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 690
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 716
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 718
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 720
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 721
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 722
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 723
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 724
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 725
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 726
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 727
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 728
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 729
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 730
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 731
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 732
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 734
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 980
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 984
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 987
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 988
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 989
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1014
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1018
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1021
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1022
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1025
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1028
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1029
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1032
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1036
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1058
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1059
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1060
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1065
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1066
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1091
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1093
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1096
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1098
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1108
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1109
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1113
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1126
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1140
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1142
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1143
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1147
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1160
+                        },
+                        {
+                          "label_asym_id": "C",
+                          "label_seq_id": 1164
+                        }
+                      ]
+                    },
+                    "children": [
+                      {
+                        "kind": "focus",
+                        "params": {}
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "kind": "canvas",
+        "params": {
+          "background_color": "#ffffff"
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "timestamp": "2026-07-06T06:51:41.749307+00:00",
+    "version": "1.8"
+  }
+}
