@@ -22,15 +22,26 @@ const AB_REGION_HELP = 'Antibody variable-domain regions in IMGT numbering. CDR-
 // ── Weighting ───────────────────────────────────────────────────────────────────────────────────
 // Every aggregate below is counted one of two ways, chosen by a single overview-level toggle:
 //   'all'      — one count per contacting instance (raw residue-pair occurrences; the PDB as-deposited)
-//   'antibody' — collapse by SAbDab2 ID: each distinct antibody counted once per bucket. This removes
-//                deposition redundancy (a mAb solved in 20 PDBs / many symmetry copies stops dominating).
+//   'antibody' — weight each distinct antibody (SAbDab2 ID) EQUALLY, removing deposition redundancy
+//                (a mAb solved in 20 PDBs / many symmetry copies stops dominating). What "equal weight"
+//                means depends on the quantity:
+//                  · ranked COUNTS (paratope positions, epitope pairs) -> distinct-antibody counts
+//                    (each antibody contributes 0/1 per bucket; redundancy-immune by construction).
+//                  · region-contribution SHARES (a % split across regions) -> the MEAN over antibodies
+//                    of each region's share of that antibody's own paratope. NOT summed membership:
+//                    summed membership measures breadth (how many antibodies touch a region at all) and
+//                    dilutes the dominant loop, whereas the mean-share is the redundancy-corrected DEPTH.
+//                    Empirically the mean-share leaves CDR-H3 / heavy-chain dominance ~unchanged from
+//                    'all' — that dominance is real, not a re-deposition artifact.
 // The 'all' numbers reproduce the precomputed pipeline aggregates exactly; 'antibody' is derived
 // client-side from the same residue-level pairs joined to the SAbDab2 lookup. See fetch_sabdab2_ids.py.
 const WEIGHTS = { all: 'All contacts', antibody: 'Per antibody (SAbDab2)' }
-const WEIGHT_HELP = 'How repeated structures of the SAME antibody are counted. “All contacts” counts '
+const WEIGHT_HELP = 'How repeated structures of the SAME antibody are counted. “All contacts” pools '
   + 'every deposited instance — so a mAb solved many times (or in many symmetry copies) dominates. '
-  + '“Per antibody” collapses by SAbDab2 ID, counting each distinct antibody once per row — removing '
-  + 'deposition redundancy. The PDB is not a random sample, so per-antibody is the fairer denominator.'
+  + '“Per antibody” weights each distinct antibody (SAbDab2 ID) equally, removing deposition redundancy: '
+  + 'ranked tables switch to distinct-antibody counts, and the region-contribution shares become the '
+  + 'mean over antibodies of each region’s share of its paratope (depth, not just how many antibodies '
+  + 'touch it). The PDB is not a random sample, so per-antibody is the fairer view.'
 
 // SAbDab2 antibody identity for a contact row; falls back to the per-instance key so an
 // unmatched chain still counts as its own antibody (never dropped, never over-merged).
@@ -115,10 +126,18 @@ function aggParatope(rows, lookup, weight) {
   }))
 }
 
-// Recompute CDR/framework region contribution client-side, honouring the weighting toggle. In 'all'
-// mode this reproduces imgt_region_contribution.json exactly (percentage over all mapped contacts).
+// Recompute CDR/framework region contribution client-side, honouring the weighting toggle.
+//   'all'      — % = region's share of ALL mapped contacts (contact volume). Reproduces
+//                imgt_region_contribution.json exactly.
+//   'antibody' — % = mean over distinct antibodies of (region's contacts / that antibody's total mapped
+//                contacts). Every antibody weighted equally regardless of how many times it was
+//                deposited — the redundancy-corrected DEPTH. (Deliberately NOT summed distinct-antibody
+//                membership, which measures breadth and dilutes the dominant loop.) `total_contacts`
+//                still reports the membership count as a companion breadth stat.
 function aggRegions(rows, lookup, weight) {
-  const m = new Map()
+  const m = new Map()                 // `${chain}|${region}` -> pooled stats
+  const abTotal = new Map()           // antibody -> its total mapped contacts
+  const abRegion = new Map()          // `${antibody} ${chain}|${region}` -> that antibody's contacts here
   for (const p of rows) {
     const rg = p.antibody_imgt_region
     if (!rg || rg === 'unmapped') continue
@@ -129,13 +148,30 @@ function aggRegions(rows, lookup, weight) {
     })
     const e = m.get(k)
     e.raw += 1
-    e.sab.add(sabId(lookup, p))
+    const ab = sabId(lookup, p)
+    e.sab.add(ab)
     if (p.antigen_uniprot_position != null) e.agpos.add(`${p.antigen_uniprot_accession}|${p.antigen_uniprot_position}`)
+    abTotal.set(ab, (abTotal.get(ab) || 0) + 1)
+    const ak = `${ab} ${k}`
+    abRegion.set(ak, (abRegion.get(ak) || 0) + 1)
+  }
+  // Depth-corrected mean share per region: Σ_antibodies (region contacts / antibody total), then / N.
+  // Antibodies absent from a region contribute 0, so the shares sum to ~100% across regions.
+  const nAb = abTotal.size || 1
+  const meanShareSum = new Map()
+  for (const [ak, c] of abRegion) {
+    const k = ak.slice(ak.indexOf(' ') + 1)
+    const ab = ak.slice(0, ak.indexOf(' '))
+    meanShareSum.set(k, (meanShareSum.get(k) || 0) + c / abTotal.get(ab))
   }
   const vals = [...m.values()].map((e) => ({ ...e, total_contacts: metricOf(e, weight),
     unique_antigen_positions_contacted: e.agpos.size }))
-  const denom = vals.reduce((s, r) => s + r.total_contacts, 0) || 1
-  return vals.map((r) => ({ ...r, percentage_of_total_contacts: Math.round(1000 * r.total_contacts / denom) / 10 }))
+  if (weight === 'antibody') {
+    return vals.map((r) => ({ ...r, percentage_of_total_contacts:
+      Math.round(1000 * (meanShareSum.get(`${r.antibody_chain_type}|${r.antibody_imgt_region}`) || 0) / nAb) / 10 }))
+  }
+  const denom = vals.reduce((s, r) => s + r.raw, 0) || 1
+  return vals.map((r) => ({ ...r, percentage_of_total_contacts: Math.round(1000 * r.raw / denom) / 10 }))
 }
 
 // White or dark text for a coloured chip, chosen by the background's perceived luminance (same
@@ -227,8 +263,8 @@ function RegionContribution({ regions, weight }) {
     <div className="card ex-cell">
       <h2>CDR &amp; framework contribution</h2>
       <p className="note">Share of antigen contacts by antibody region, {byAb
-        ? 'weighted per distinct antibody (SAbDab2) so redundant re-depositions don’t skew it'
-        : 'pooled across every complex'}. CDR-H3 typically dominates the paratope.</p>
+        ? 'with each distinct antibody (SAbDab2) weighted equally — the mean over antibodies of each region’s share of its own paratope, so redundant re-depositions don’t skew it (the count is how many antibodies use the region)'
+        : 'pooled across every complex'}. CDR-H3 typically dominates the paratope{byAb ? ', and stays dominant here — its lead is real, not a re-deposition artifact' : ''}.</p>
       <div className="rc-list">
         {rows.map((r) => (
           <div key={`${r.antibody_chain_type}|${r.antibody_imgt_region}`} className="rc-row">
