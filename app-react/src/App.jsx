@@ -27,14 +27,22 @@ export default function App() {
   const coverage = data.antigen_unp_coverage || []
   const report = data.batch_report || {}
 
-  // Multi-domain antibody constructs (tribody / bispecific / tandem scFv) carry >=2 variable domains;
-  // our single-domain ANARCII numbering conflates their paratope IMGT, so exclude their interfaces from
-  // the interface + paratope DISPLAYS (epitope side is fine; they stay in the dataset). See DataNotes.
+  // Two display rules keep the epitope/paratope views to genuine antibody recognition:
+  //  1. PARATOPE-ONLY: count only IMGT-mapped (variable-domain) antibody contacts. Contacts from
+  //     constant domains (Fab CH1/CL) or scaffolds/linkers (unmapped, antibody_imgt_position == null)
+  //     aren't recognition — drop them everywhere. Matches build_aggregations' epitope aggregators.
+  //  2. Multi-domain antibody constructs (>=2 variable domains) also get their interfaces hidden from
+  //     the instances table, since our single-domain numbering can't disambiguate their paratopes.
+  // Raw data keeps everything (see DataNotes). NB a geometric-span flag was evaluated to catch
+  // mis-numbered single-domain chains (e.g. 8w4f) but rejected: 8w4f is not separable from ~100 legit
+  // large/quaternary paratopes by any distance threshold, so it stays visible.
   const mdKeys = new Set(Object.keys(multidomain))
   const isMultiDomain = (pdb, chain) => mdKeys.has(`${pdb}|${chain}`)
+  const isParatope = (r) => r.antibody_imgt_position != null
   const interfacesShown = interfaces.filter((i) => !isMultiDomain(i.pdb_id, i.antibody_chain))
-  const residueShown = residue.filter((r) => !isMultiDomain(r.pdb_id, r.antibody_chain_id))
+  const residueShown = residue.filter((r) => isParatope(r) && !isMultiDomain(r.pdb_id, r.antibody_chain_id))
   const nMdInterfaces = interfaces.length - interfacesShown.length
+  const nNonParatope = residue.filter((r) => !isParatope(r) && r.antigen_uniprot_position != null).length
 
   const heavy = epitope.reduce((s, r) => s + (r.heavy_chain_contacts || 0), 0)
   const light = epitope.reduce((s, r) => s + (r.light_chain_contacts || 0), 0)
@@ -90,7 +98,7 @@ export default function App() {
 
       {tab === 0 && <ComplexOverview residue={residueShown} variants={variants} glycans={glycans} sabdab={sabdab} />}
       {tab === 1 && <Explorer interfaces={interfacesShown} residue={residueShown} sabdab={sabdab} quality={quality} />}
-      {tab === 2 && <DataNotes anomalies={anomalies} coverage={coverage} multidomain={multidomain} />}
+      {tab === 2 && <DataNotes anomalies={anomalies} coverage={coverage} multidomain={multidomain} nNonParatope={nNonParatope} />}
     </div>
   )
 }
@@ -99,7 +107,7 @@ const Metric = ({ label, value }) => (
   <div className="metric"><div className="label">{label}</div><div className="value">{value}</div></div>
 )
 
-function DataNotes({ anomalies, coverage, multidomain = {} }) {
+function DataNotes({ anomalies, coverage, multidomain = {}, nNonParatope = 0 }) {
   const mdRows = Object.entries(multidomain)
     .map(([k, v]) => ({ chain: k, pdb_id: k.split('|')[0], ab_chain: k.split('|')[1], ...v }))
   const mdCols = [
@@ -152,6 +160,18 @@ function DataNotes({ anomalies, coverage, multidomain = {} }) {
         {anomalies.length > 0
           ? <DataTable columns={anomalyCols} rows={anomalies} initialSort="occurrence_count" />
           : <p className="note">No anomalies detected.</p>}
+      </div>
+
+      <div className="card">
+        <h2>Paratope-only aggregation</h2>
+        <p className="note">
+          Epitope &amp; paratope aggregates count only <b>IMGT-mapped (variable-domain)</b> antibody
+          contacts. Contacts made by an antibody's <b>constant domain</b> (Fab CH1/CL) or a
+          <b> scaffold / linker</b> (e.g. a VHH trimerization tag) are structurally real but are not
+          antigen <i>recognition</i>, so they are excluded from the maps. <b>{nNonParatope}</b> such
+          non-paratope contacts (~1.7% of antigen contacts) are dropped; they remain in the
+          residue-level data, labelled <code>unmapped</code>.
+        </p>
       </div>
 
       <div className="card">

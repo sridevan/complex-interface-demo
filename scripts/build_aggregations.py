@@ -232,6 +232,8 @@ def agg_antigen_epitope(pairs, variant_index=None):
     for p in pairs:
         if p["antigen_uniprot_position"] is None:
             continue
+        if p["antibody_imgt_position"] is None:   # PARATOPE-ONLY: count only variable-domain contacts;
+            continue                              # drop constant-domain / scaffold (unmapped) contacts.
         groups[(p["antigen_uniprot_accession"], p["antigen_uniprot_position"], p["antigen_residue_name"])].append(p)
     out = []
     for (acc, pos, name), ps in groups.items():
@@ -261,6 +263,8 @@ def agg_frequency_heavy_light(pairs):
     groups = defaultdict(list)
     for p in pairs:
         if p["antigen_uniprot_position"] is None:
+            continue
+        if p["antibody_imgt_position"] is None:   # paratope-only (see agg_antigen_epitope)
             continue
         groups[(p["antigen_uniprot_accession"], p["antigen_uniprot_position"], p["antigen_residue_name"])].append(p)
     out = []
