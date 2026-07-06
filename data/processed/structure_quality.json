@@ -1,0 +1,1778 @@
+{
+ "6wps|1": {
+  "resolution": 3.1,
+  "method": "cryo-EM"
+ },
+ "6wpt|1": {
+  "resolution": 3.7,
+  "method": "cryo-EM"
+ },
+ "6xcm|1": {
+  "resolution": 3.42,
+  "method": "cryo-EM"
+ },
+ "6xcn|1": {
+  "resolution": 3.66,
+  "method": "cryo-EM"
+ },
+ "6z43|1": {
+  "resolution": 3.3,
+  "method": "cryo-EM"
+ },
+ "6zdg|1": {
+  "resolution": 4.7,
+  "method": "cryo-EM"
+ },
+ "6zdh|1": {
+  "resolution": 3.7,
+  "method": "cryo-EM"
+ },
+ "6zxn|1": {
+  "resolution": 2.93,
+  "method": "cryo-EM"
+ },
+ "7a25|1": {
+  "resolution": 3.06,
+  "method": "cryo-EM"
+ },
+ "7a29|1": {
+  "resolution": 2.94,
+  "method": "cryo-EM"
+ },
+ "7akd|1": {
+  "resolution": 4.0,
+  "method": "cryo-EM"
+ },
+ "7b18|1": {
+  "resolution": 2.62,
+  "method": "cryo-EM"
+ },
+ "7byr|1": {
+  "resolution": 3.84,
+  "method": "cryo-EM"
+ },
+ "7c2l|1": {
+  "resolution": 3.1,
+  "method": "cryo-EM"
+ },
+ "7cac|1": {
+  "resolution": 3.55,
+  "method": "cryo-EM"
+ },
+ "7cai|1": {
+  "resolution": 3.49,
+  "method": "cryo-EM"
+ },
+ "7cak|1": {
+  "resolution": 3.58,
+  "method": "cryo-EM"
+ },
+ "7chh|1": {
+  "resolution": 3.49,
+  "method": "cryo-EM"
+ },
+ "7cwl|1": {
+  "resolution": 3.8,
+  "method": "cryo-EM"
+ },
+ "7cwm|1": {
+  "resolution": 3.6,
+  "method": "cryo-EM"
+ },
+ "7cwn|1": {
+  "resolution": 3.2,
+  "method": "cryo-EM"
+ },
+ "7cws|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "7cwt|1": {
+  "resolution": 3.7,
+  "method": "cryo-EM"
+ },
+ "7cwu|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "7cyp|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "7d0b|1": {
+  "resolution": 3.9,
+  "method": "cryo-EM"
+ },
+ "7d0c|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "7d0d|1": {
+  "resolution": 3.8,
+  "method": "cryo-EM"
+ },
+ "7dcc|1": {
+  "resolution": 4.3,
+  "method": "cryo-EM"
+ },
+ "7dcx|1": {
+  "resolution": 5.9,
+  "method": "cryo-EM"
+ },
+ "7dd2|1": {
+  "resolution": 5.6,
+  "method": "cryo-EM"
+ },
+ "7dd8|1": {
+  "resolution": 7.5,
+  "method": "cryo-EM"
+ },
+ "7dk4|1": {
+  "resolution": 3.8,
+  "method": "cryo-EM"
+ },
+ "7dk5|1": {
+  "resolution": 13.5,
+  "method": "cryo-EM"
+ },
+ "7dk6|1": {
+  "resolution": 4.3,
+  "method": "cryo-EM"
+ },
+ "7dk7|1": {
+  "resolution": 9.7,
+  "method": "cryo-EM"
+ },
+ "7e3k|1": {
+  "resolution": 3.9,
+  "method": "cryo-EM"
+ },
+ "7e3l|1": {
+  "resolution": 3.6,
+  "method": "cryo-EM"
+ },
+ "7e5r|1": {
+  "resolution": 3.6,
+  "method": "cryo-EM"
+ },
+ "7e5s|1": {
+  "resolution": 3.6,
+  "method": "cryo-EM"
+ },
+ "7e8c|1": {
+  "resolution": 3.16,
+  "method": "cryo-EM"
+ },
+ "7e9n|1": {
+  "resolution": 3.69,
+  "method": "cryo-EM"
+ },
+ "7e9o|1": {
+  "resolution": 3.41,
+  "method": "cryo-EM"
+ },
+ "7e9q|1": {
+  "resolution": 3.65,
+  "method": "cryo-EM"
+ },
+ "7eh5|1": {
+  "resolution": 4.0,
+  "method": "cryo-EM"
+ },
+ "7ej4|1": {
+  "resolution": 3.6,
+  "method": "cryo-EM"
+ },
+ "7ej5|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "7enf|1": {
+  "resolution": 2.76,
+  "method": "cryo-EM"
+ },
+ "7epx|1": {
+  "resolution": 3.0,
+  "method": "cryo-EM"
+ },
+ "7fae|1": {
+  "resolution": 3.65,
+  "method": "cryo-EM"
+ },
+ "7faf|1": {
+  "resolution": 3.69,
+  "method": "cryo-EM"
+ },
+ "7fjo|1": {
+  "resolution": 3.34,
+  "method": "cryo-EM"
+ },
+ "7jv4|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "7jv6|1": {
+  "resolution": 3.0,
+  "method": "cryo-EM"
+ },
+ "7jvc|1": {
+  "resolution": 3.3,
+  "method": "cryo-EM"
+ },
+ "7jw0|1": {
+  "resolution": 4.3,
+  "method": "cryo-EM"
+ },
+ "7jwb|1": {
+  "resolution": 6.0,
+  "method": "cryo-EM"
+ },
+ "7k43|1": {
+  "resolution": 2.6,
+  "method": "cryo-EM"
+ },
+ "7k4n|1": {
+  "resolution": 3.3,
+  "method": "cryo-EM"
+ },
+ "7k8s|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "7k8t|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "7k8v|1": {
+  "resolution": 3.8,
+  "method": "cryo-EM"
+ },
+ "7k8w|1": {
+  "resolution": 3.6,
+  "method": "cryo-EM"
+ },
+ "7k8x|1": {
+  "resolution": 3.9,
+  "method": "cryo-EM"
+ },
+ "7k8y|1": {
+  "resolution": 4.4,
+  "method": "cryo-EM"
+ },
+ "7k8z|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "7k90|1": {
+  "resolution": 3.24,
+  "method": "cryo-EM"
+ },
+ "7k9h|1": {
+  "resolution": 3.2,
+  "method": "cryo-EM"
+ },
+ "7k9j|1": {
+  "resolution": 3.0,
+  "method": "cryo-EM"
+ },
+ "7kkk|1": {
+  "resolution": 3.03,
+  "method": "cryo-EM"
+ },
+ "7kkl|1": {
+  "resolution": 2.85,
+  "method": "cryo-EM"
+ },
+ "7kmk|1": {
+  "resolution": 4.2,
+  "method": "cryo-EM"
+ },
+ "7kml|1": {
+  "resolution": 3.8,
+  "method": "cryo-EM"
+ },
+ "7kqb|1": {
+  "resolution": 2.42,
+  "method": "cryo-EM"
+ },
+ "7kqe|1": {
+  "resolution": 2.88,
+  "method": "cryo-EM"
+ },
+ "7ks9|1": {
+  "resolution": 4.75,
+  "method": "cryo-EM"
+ },
+ "7ksg|1": {
+  "resolution": 3.33,
+  "method": "cryo-EM"
+ },
+ "7kxj|1": {
+  "resolution": 6.4,
+  "method": "cryo-EM"
+ },
+ "7kxk|1": {
+  "resolution": 5.0,
+  "method": "cryo-EM"
+ },
+ "7l02|1": {
+  "resolution": 3.2,
+  "method": "cryo-EM"
+ },
+ "7l06|1": {
+  "resolution": 3.3,
+  "method": "cryo-EM"
+ },
+ "7l09|1": {
+  "resolution": 3.1,
+  "method": "cryo-EM"
+ },
+ "7l2d|1": {
+  "resolution": 3.55,
+  "method": "cryo-EM"
+ },
+ "7l2e|1": {
+  "resolution": 2.97,
+  "method": "cryo-EM"
+ },
+ "7l2f|1": {
+  "resolution": 3.9,
+  "method": "cryo-EM"
+ },
+ "7l3n|1": {
+  "resolution": 3.27,
+  "method": "cryo-EM"
+ },
+ "7l56|1": {
+  "resolution": 3.6,
+  "method": "cryo-EM"
+ },
+ "7l57|1": {
+  "resolution": 5.87,
+  "method": "cryo-EM"
+ },
+ "7laa|1": {
+  "resolution": 3.42,
+  "method": "cryo-EM"
+ },
+ "7lab|1": {
+  "resolution": 2.97,
+  "method": "cryo-EM"
+ },
+ "7lcn|1": {
+  "resolution": 3.35,
+  "method": "cryo-EM"
+ },
+ "7ld1|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "7ljr|1": {
+  "resolution": 3.66,
+  "method": "cryo-EM"
+ },
+ "7lq7|1": {
+  "resolution": 3.4,
+  "method": "X-ray"
+ },
+ "7lqv|1": {
+  "resolution": 3.25,
+  "method": "cryo-EM"
+ },
+ "7lrt|1": {
+  "resolution": 3.54,
+  "method": "cryo-EM"
+ },
+ "7ls9|1": {
+  "resolution": 3.42,
+  "method": "cryo-EM"
+ },
+ "7lss|1": {
+  "resolution": 3.72,
+  "method": "cryo-EM"
+ },
+ "7lxy|1": {
+  "resolution": 2.2,
+  "method": "cryo-EM"
+ },
+ "7lxz|1": {
+  "resolution": 2.6,
+  "method": "cryo-EM"
+ },
+ "7ly2|1": {
+  "resolution": 2.5,
+  "method": "cryo-EM"
+ },
+ "7m6e|1": {
+  "resolution": 3.3,
+  "method": "cryo-EM"
+ },
+ "7m6f|1": {
+  "resolution": 3.9,
+  "method": "cryo-EM"
+ },
+ "7m6g|1": {
+  "resolution": 3.7,
+  "method": "cryo-EM"
+ },
+ "7m6h|1": {
+  "resolution": 4.0,
+  "method": "cryo-EM"
+ },
+ "7m6i|1": {
+  "resolution": 4.0,
+  "method": "cryo-EM"
+ },
+ "7mjh|1": {
+  "resolution": 2.66,
+  "method": "cryo-EM"
+ },
+ "7mjj|1": {
+  "resolution": 3.32,
+  "method": "cryo-EM"
+ },
+ "7mjk|1": {
+  "resolution": 2.73,
+  "method": "cryo-EM"
+ },
+ "7mkl|1": {
+  "resolution": 3.2,
+  "method": "cryo-EM"
+ },
+ "7mm0|1": {
+  "resolution": 3.15,
+  "method": "cryo-EM"
+ },
+ "7mw2|1": {
+  "resolution": 2.97,
+  "method": "cryo-EM"
+ },
+ "7mw3|1": {
+  "resolution": 3.15,
+  "method": "cryo-EM"
+ },
+ "7mw4|1": {
+  "resolution": 3.42,
+  "method": "cryo-EM"
+ },
+ "7mw5|1": {
+  "resolution": 3.42,
+  "method": "cryo-EM"
+ },
+ "7mw6|1": {
+  "resolution": 3.22,
+  "method": "cryo-EM"
+ },
+ "7mxp|1": {
+  "resolution": 4.46,
+  "method": "cryo-EM"
+ },
+ "7my2|1": {
+  "resolution": 2.65,
+  "method": "cryo-EM"
+ },
+ "7my3|1": {
+  "resolution": 2.9,
+  "method": "cryo-EM"
+ },
+ "7n0g|1": {
+  "resolution": 3.02,
+  "method": "cryo-EM"
+ },
+ "7n0h|1": {
+  "resolution": 3.34,
+  "method": "cryo-EM"
+ },
+ "7n5h|1": {
+  "resolution": 3.24,
+  "method": "cryo-EM"
+ },
+ "7n8h|1": {
+  "resolution": 2.3,
+  "method": "cryo-EM"
+ },
+ "7n9b|1": {
+  "resolution": 3.8,
+  "method": "cryo-EM"
+ },
+ "7n9c|1": {
+  "resolution": 3.71,
+  "method": "cryo-EM"
+ },
+ "7n9e|1": {
+  "resolution": 3.52,
+  "method": "cryo-EM"
+ },
+ "7n9t|1": {
+  "resolution": 3.18,
+  "method": "cryo-EM"
+ },
+ "7nd3|1": {
+  "resolution": 3.7,
+  "method": "cryo-EM"
+ },
+ "7nd4|1": {
+  "resolution": 3.6,
+  "method": "cryo-EM"
+ },
+ "7nd5|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "7nd6|1": {
+  "resolution": 7.3,
+  "method": "cryo-EM"
+ },
+ "7nd7|1": {
+  "resolution": 3.6,
+  "method": "cryo-EM"
+ },
+ "7nd8|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "7nd9|1": {
+  "resolution": 2.8,
+  "method": "cryo-EM"
+ },
+ "7nda|1": {
+  "resolution": 3.3,
+  "method": "cryo-EM"
+ },
+ "7ndb|1": {
+  "resolution": 4.6,
+  "method": "cryo-EM"
+ },
+ "7ndc|1": {
+  "resolution": 4.1,
+  "method": "cryo-EM"
+ },
+ "7ndd|1": {
+  "resolution": 4.2,
+  "method": "cryo-EM"
+ },
+ "7ntc|1": {
+  "resolution": 3.6,
+  "method": "cryo-EM"
+ },
+ "7oan|1": {
+  "resolution": 3.0,
+  "method": "cryo-EM"
+ },
+ "7p40|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "7p77|1": {
+  "resolution": 2.98,
+  "method": "cryo-EM"
+ },
+ "7p78|1": {
+  "resolution": 3.32,
+  "method": "cryo-EM"
+ },
+ "7p79|1": {
+  "resolution": 4.0,
+  "method": "cryo-EM"
+ },
+ "7p7a|1": {
+  "resolution": 4.76,
+  "method": "cryo-EM"
+ },
+ "7q0a|1": {
+  "resolution": 4.8,
+  "method": "cryo-EM"
+ },
+ "7q6e|1": {
+  "resolution": 2.7,
+  "method": "cryo-EM"
+ },
+ "7q9f|1": {
+  "resolution": 3.6,
+  "method": "cryo-EM"
+ },
+ "7q9g|1": {
+  "resolution": 3.3,
+  "method": "cryo-EM"
+ },
+ "7q9i|1": {
+  "resolution": 4.9,
+  "method": "cryo-EM"
+ },
+ "7q9j|1": {
+  "resolution": 4.0,
+  "method": "cryo-EM"
+ },
+ "7q9k|1": {
+  "resolution": 4.5,
+  "method": "cryo-EM"
+ },
+ "7q9m|1": {
+  "resolution": 3.7,
+  "method": "cryo-EM"
+ },
+ "7q9p|1": {
+  "resolution": 4.5,
+  "method": "cryo-EM"
+ },
+ "7r40|1": {
+  "resolution": 2.9,
+  "method": "cryo-EM"
+ },
+ "7r4i|1": {
+  "resolution": 3.2,
+  "method": "cryo-EM"
+ },
+ "7r4q|1": {
+  "resolution": 3.6,
+  "method": "cryo-EM"
+ },
+ "7r4r|1": {
+  "resolution": 3.9,
+  "method": "cryo-EM"
+ },
+ "7r8m|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "7r8n|1": {
+  "resolution": 3.55,
+  "method": "cryo-EM"
+ },
+ "7r8o|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "7ra8|1": {
+  "resolution": 3.1,
+  "method": "cryo-EM"
+ },
+ "7rbv|1": {
+  "resolution": 3.6,
+  "method": "cryo-EM"
+ },
+ "7rkv|1": {
+  "resolution": 3.45,
+  "method": "cryo-EM"
+ },
+ "7rq6|1": {
+  "resolution": 4.18,
+  "method": "cryo-EM"
+ },
+ "7ru3|1": {
+  "resolution": 3.3,
+  "method": "cryo-EM"
+ },
+ "7ru5|1": {
+  "resolution": 3.6,
+  "method": "cryo-EM"
+ },
+ "7rw2|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "7s0c|1": {
+  "resolution": 3.25,
+  "method": "cryo-EM"
+ },
+ "7s0d|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "7s6j|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "7s6k|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "7s6l|1": {
+  "resolution": 4.0,
+  "method": "cryo-EM"
+ },
+ "7sc1|1": {
+  "resolution": 3.2,
+  "method": "cryo-EM"
+ },
+ "7sn3|1": {
+  "resolution": 3.1,
+  "method": "cryo-EM"
+ },
+ "7so9|1": {
+  "resolution": 2.4,
+  "method": "cryo-EM"
+ },
+ "7sob|1": {
+  "resolution": 2.4,
+  "method": "cryo-EM"
+ },
+ "7soe|1": {
+  "resolution": 2.8,
+  "method": "cryo-EM"
+ },
+ "7swx|1": {
+  "resolution": 3.13,
+  "method": "cryo-EM"
+ },
+ "7t3m|1": {
+  "resolution": 3.0,
+  "method": "cryo-EM"
+ },
+ "7t5o|1": {
+  "resolution": 3.39,
+  "method": "cryo-EM"
+ },
+ "7tat|1": {
+  "resolution": 3.2,
+  "method": "cryo-EM"
+ },
+ "7tb8|1": {
+  "resolution": 2.83,
+  "method": "cryo-EM"
+ },
+ "7tca|1": {
+  "resolution": 3.85,
+  "method": "cryo-EM"
+ },
+ "7tcc|1": {
+  "resolution": 3.86,
+  "method": "cryo-EM"
+ },
+ "7tht|1": {
+  "resolution": 3.42,
+  "method": "cryo-EM"
+ },
+ "7tm0|1": {
+  "resolution": 3.1,
+  "method": "cryo-EM"
+ },
+ "7u0q|1": {
+  "resolution": 3.86,
+  "method": "cryo-EM"
+ },
+ "7u0x|1": {
+  "resolution": 3.82,
+  "method": "cryo-EM"
+ },
+ "7uap|1": {
+  "resolution": 2.8,
+  "method": "cryo-EM"
+ },
+ "7uar|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "7ukl|1": {
+  "resolution": 3.09,
+  "method": "cryo-EM"
+ },
+ "7ukm|1": {
+  "resolution": 3.03,
+  "method": "cryo-EM"
+ },
+ "7uow|1": {
+  "resolution": 4.4,
+  "method": "cryo-EM"
+ },
+ "7upl|1": {
+  "resolution": 4.1,
+  "method": "cryo-EM"
+ },
+ "7upw|1": {
+  "resolution": 2.7,
+  "method": "cryo-EM"
+ },
+ "7upy|1": {
+  "resolution": 3.1,
+  "method": "cryo-EM"
+ },
+ "7uz4|1": {
+  "resolution": 3.1,
+  "method": "cryo-EM"
+ },
+ "7uz5|1": {
+  "resolution": 3.2,
+  "method": "cryo-EM"
+ },
+ "7uz6|1": {
+  "resolution": 2.8,
+  "method": "cryo-EM"
+ },
+ "7uz7|1": {
+  "resolution": 2.9,
+  "method": "cryo-EM"
+ },
+ "7uz8|1": {
+  "resolution": 3.1,
+  "method": "cryo-EM"
+ },
+ "7uz9|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "7uza|1": {
+  "resolution": 3.1,
+  "method": "cryo-EM"
+ },
+ "7v23|1": {
+  "resolution": 2.96,
+  "method": "cryo-EM"
+ },
+ "7v26|1": {
+  "resolution": 3.85,
+  "method": "cryo-EM"
+ },
+ "7v2a|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "7vnc|1": {
+  "resolution": 3.7,
+  "method": "cryo-EM"
+ },
+ "7vnd|1": {
+  "resolution": 3.6,
+  "method": "cryo-EM"
+ },
+ "7vne|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "7vq0|1": {
+  "resolution": 3.03,
+  "method": "cryo-EM"
+ },
+ "7w9e|1": {
+  "resolution": 3.1,
+  "method": "cryo-EM"
+ },
+ "7wcd|1": {
+  "resolution": 3.3,
+  "method": "cryo-EM"
+ },
+ "7wch|1": {
+  "resolution": 3.19,
+  "method": "cryo-EM"
+ },
+ "7wcp|1": {
+  "resolution": 3.01,
+  "method": "cryo-EM"
+ },
+ "7wcz|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "7wd0|1": {
+  "resolution": 3.3,
+  "method": "cryo-EM"
+ },
+ "7wd7|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "7wd9|1": {
+  "resolution": 3.7,
+  "method": "cryo-EM"
+ },
+ "7wdf|1": {
+  "resolution": 3.9,
+  "method": "cryo-EM"
+ },
+ "7we7|1": {
+  "resolution": 3.8,
+  "method": "cryo-EM"
+ },
+ "7we8|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "7we9|1": {
+  "resolution": 3.6,
+  "method": "cryo-EM"
+ },
+ "7wea|1": {
+  "resolution": 3.3,
+  "method": "cryo-EM"
+ },
+ "7web|1": {
+  "resolution": 3.7,
+  "method": "cryo-EM"
+ },
+ "7wec|1": {
+  "resolution": 3.3,
+  "method": "cryo-EM"
+ },
+ "7whb|1": {
+  "resolution": 2.67,
+  "method": "cryo-EM"
+ },
+ "7whd|1": {
+  "resolution": 2.65,
+  "method": "cryo-EM"
+ },
+ "7whi|1": {
+  "resolution": 2.93,
+  "method": "cryo-EM"
+ },
+ "7whk|1": {
+  "resolution": 3.01,
+  "method": "cryo-EM"
+ },
+ "7wjy|1": {
+  "resolution": 3.24,
+  "method": "cryo-EM"
+ },
+ "7wk9|1": {
+  "resolution": 3.48,
+  "method": "cryo-EM"
+ },
+ "7wka|1": {
+  "resolution": 3.64,
+  "method": "cryo-EM"
+ },
+ "7wly|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "7wlz|1": {
+  "resolution": 2.98,
+  "method": "cryo-EM"
+ },
+ "7wo5|1": {
+  "resolution": 3.45,
+  "method": "cryo-EM"
+ },
+ "7woa|1": {
+  "resolution": 3.25,
+  "method": "cryo-EM"
+ },
+ "7wob|1": {
+  "resolution": 3.25,
+  "method": "cryo-EM"
+ },
+ "7woq|1": {
+  "resolution": 3.47,
+  "method": "cryo-EM"
+ },
+ "7wor|1": {
+  "resolution": 3.7,
+  "method": "cryo-EM"
+ },
+ "7wos|1": {
+  "resolution": 3.91,
+  "method": "cryo-EM"
+ },
+ "7wou|1": {
+  "resolution": 3.47,
+  "method": "cryo-EM"
+ },
+ "7wov|1": {
+  "resolution": 3.87,
+  "method": "cryo-EM"
+ },
+ "7wow|1": {
+  "resolution": 6.11,
+  "method": "cryo-EM"
+ },
+ "7wow|2": {
+  "resolution": 6.11,
+  "method": "cryo-EM"
+ },
+ "7wpd|1": {
+  "resolution": 3.18,
+  "method": "cryo-EM"
+ },
+ "7wpe|1": {
+  "resolution": 2.69,
+  "method": "cryo-EM"
+ },
+ "7wpf|1": {
+  "resolution": 2.92,
+  "method": "cryo-EM"
+ },
+ "7ws0|1": {
+  "resolution": 3.2,
+  "method": "cryo-EM"
+ },
+ "7ws1|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "7ws3|1": {
+  "resolution": 3.6,
+  "method": "cryo-EM"
+ },
+ "7ws4|1": {
+  "resolution": 3.7,
+  "method": "cryo-EM"
+ },
+ "7ws5|1": {
+  "resolution": 3.7,
+  "method": "cryo-EM"
+ },
+ "7wuh|1": {
+  "resolution": 4.7,
+  "method": "cryo-EM"
+ },
+ "7wwi|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "7wwj|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "7wwl|1": {
+  "resolution": 3.0,
+  "method": "cryo-EM"
+ },
+ "7wwm|1": {
+  "resolution": 2.8,
+  "method": "cryo-EM"
+ },
+ "7x08|1": {
+  "resolution": 2.7,
+  "method": "cryo-EM"
+ },
+ "7x6a|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "7x7d|1": {
+  "resolution": 2.92,
+  "method": "X-ray"
+ },
+ "7x7e|1": {
+  "resolution": 2.67,
+  "method": "X-ray"
+ },
+ "7x93|1": {
+  "resolution": 3.3,
+  "method": "cryo-EM"
+ },
+ "7xco|1": {
+  "resolution": 2.5,
+  "method": "cryo-EM"
+ },
+ "7xd2|1": {
+  "resolution": 3.3,
+  "method": "cryo-EM"
+ },
+ "7xdb|1": {
+  "resolution": 2.62,
+  "method": "cryo-EM"
+ },
+ "7xdk|1": {
+  "resolution": 3.2,
+  "method": "cryo-EM"
+ },
+ "7xdl|1": {
+  "resolution": 3.08,
+  "method": "cryo-EM"
+ },
+ "7xic|1": {
+  "resolution": 3.3,
+  "method": "cryo-EM"
+ },
+ "7xj6|1": {
+  "resolution": 3.29,
+  "method": "cryo-EM"
+ },
+ "7xj8|1": {
+  "resolution": 3.3,
+  "method": "cryo-EM"
+ },
+ "7xmx|1": {
+  "resolution": 3.62,
+  "method": "cryo-EM"
+ },
+ "7xmz|1": {
+  "resolution": 3.25,
+  "method": "cryo-EM"
+ },
+ "7xod|1": {
+  "resolution": 3.27,
+  "method": "cryo-EM"
+ },
+ "7xst|1": {
+  "resolution": 3.04,
+  "method": "cryo-EM"
+ },
+ "7xy3|1": {
+  "resolution": 4.6,
+  "method": "cryo-EM"
+ },
+ "7xy4|1": {
+  "resolution": 3.3,
+  "method": "cryo-EM"
+ },
+ "7y0n|1": {
+  "resolution": 3.8,
+  "method": "cryo-EM"
+ },
+ "7y71|1": {
+  "resolution": 3.12,
+  "method": "cryo-EM"
+ },
+ "7y7j|1": {
+  "resolution": 3.8,
+  "method": "cryo-EM"
+ },
+ "7yc5|1": {
+  "resolution": 3.1,
+  "method": "cryo-EM"
+ },
+ "7ycy|1": {
+  "resolution": 3.74,
+  "method": "cryo-EM"
+ },
+ "7ycz|1": {
+  "resolution": 3.24,
+  "method": "cryo-EM"
+ },
+ "7yd0|1": {
+  "resolution": 3.58,
+  "method": "cryo-EM"
+ },
+ "7ydy|1": {
+  "resolution": 4.75,
+  "method": "cryo-EM"
+ },
+ "7ye5|1": {
+  "resolution": 6.75,
+  "method": "cryo-EM"
+ },
+ "7ye9|1": {
+  "resolution": 4.17,
+  "method": "cryo-EM"
+ },
+ "7yh7|1": {
+  "resolution": 3.3,
+  "method": "cryo-EM"
+ },
+ "7yqx|1": {
+  "resolution": 3.72,
+  "method": "cryo-EM"
+ },
+ "7yqy|1": {
+  "resolution": 3.74,
+  "method": "cryo-EM"
+ },
+ "7yqz|1": {
+  "resolution": 3.84,
+  "method": "cryo-EM"
+ },
+ "7yr1|1": {
+  "resolution": 3.62,
+  "method": "cryo-EM"
+ },
+ "7yve|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "7yvg|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "7yvi|1": {
+  "resolution": 3.7,
+  "method": "cryo-EM"
+ },
+ "7yvk|1": {
+  "resolution": 3.2,
+  "method": "cryo-EM"
+ },
+ "7yvn|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "7yvo|1": {
+  "resolution": 3.3,
+  "method": "cryo-EM"
+ },
+ "7yvp|1": {
+  "resolution": 3.8,
+  "method": "cryo-EM"
+ },
+ "7zjl|1": {
+  "resolution": 2.6,
+  "method": "cryo-EM"
+ },
+ "8a94|1": {
+  "resolution": 2.4,
+  "method": "cryo-EM"
+ },
+ "8a95|1": {
+  "resolution": 2.64,
+  "method": "cryo-EM"
+ },
+ "8a99|1": {
+  "resolution": 2.5,
+  "method": "cryo-EM"
+ },
+ "8c2r|1": {
+  "resolution": 2.56,
+  "method": "cryo-EM"
+ },
+ "8cin|1": {
+  "resolution": 2.7,
+  "method": "cryo-EM"
+ },
+ "8csj|1": {
+  "resolution": 3.53,
+  "method": "cryo-EM"
+ },
+ "8cxn|1": {
+  "resolution": 2.9,
+  "method": "cryo-EM"
+ },
+ "8cxq|1": {
+  "resolution": 2.3,
+  "method": "cryo-EM"
+ },
+ "8cy6|1": {
+  "resolution": 3.2,
+  "method": "cryo-EM"
+ },
+ "8cy7|1": {
+  "resolution": 2.9,
+  "method": "cryo-EM"
+ },
+ "8cy9|1": {
+  "resolution": 2.9,
+  "method": "cryo-EM"
+ },
+ "8cya|1": {
+  "resolution": 2.7,
+  "method": "cryo-EM"
+ },
+ "8cyb|1": {
+  "resolution": 2.7,
+  "method": "cryo-EM"
+ },
+ "8cyc|1": {
+  "resolution": 2.9,
+  "method": "cryo-EM"
+ },
+ "8cyd|1": {
+  "resolution": 2.6,
+  "method": "cryo-EM"
+ },
+ "8d0z|1": {
+  "resolution": 3.7,
+  "method": "cryo-EM"
+ },
+ "8dlw|1": {
+  "resolution": 2.16,
+  "method": "cryo-EM"
+ },
+ "8dlx|1": {
+  "resolution": 2.45,
+  "method": "cryo-EM"
+ },
+ "8dlz|1": {
+  "resolution": 2.57,
+  "method": "cryo-EM"
+ },
+ "8dm3|1": {
+  "resolution": 2.37,
+  "method": "cryo-EM"
+ },
+ "8dt8|1": {
+  "resolution": 3.34,
+  "method": "cryo-EM"
+ },
+ "8dxs|1": {
+  "resolution": 3.76,
+  "method": "cryo-EM"
+ },
+ "8dzh|1": {
+  "resolution": 3.2,
+  "method": "cryo-EM"
+ },
+ "8dzi|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "8elj|1": {
+  "resolution": 3.6,
+  "method": "cryo-EM"
+ },
+ "8err|1": {
+  "resolution": 3.1,
+  "method": "cryo-EM"
+ },
+ "8eyg|1": {
+  "resolution": 3.73,
+  "method": "cryo-EM"
+ },
+ "8eyh|1": {
+  "resolution": 3.75,
+  "method": "cryo-EM"
+ },
+ "8f0g|1": {
+  "resolution": 3.35,
+  "method": "cryo-EM"
+ },
+ "8f4p|1": {
+  "resolution": 3.7,
+  "method": "cryo-EM"
+ },
+ "8g70|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "8g73|1": {
+  "resolution": 2.5,
+  "method": "cryo-EM"
+ },
+ "8g74|1": {
+  "resolution": 2.5,
+  "method": "cryo-EM"
+ },
+ "8g75|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "8g76|1": {
+  "resolution": 3.8,
+  "method": "cryo-EM"
+ },
+ "8g77|1": {
+  "resolution": 2.8,
+  "method": "cryo-EM"
+ },
+ "8g78|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "8g79|1": {
+  "resolution": 6.1,
+  "method": "cryo-EM"
+ },
+ "8g7a|1": {
+  "resolution": 3.3,
+  "method": "cryo-EM"
+ },
+ "8g7b|1": {
+  "resolution": 3.2,
+  "method": "cryo-EM"
+ },
+ "8g7c|1": {
+  "resolution": 4.1,
+  "method": "cryo-EM"
+ },
+ "8gdr|1": {
+  "resolution": 3.6,
+  "method": "cryo-EM"
+ },
+ "8gjm|1": {
+  "resolution": 2.8,
+  "method": "cryo-EM"
+ },
+ "8gnh|1": {
+  "resolution": 3.74,
+  "method": "cryo-EM"
+ },
+ "8gou|1": {
+  "resolution": 3.7,
+  "method": "cryo-EM"
+ },
+ "8gto|1": {
+  "resolution": 3.2,
+  "method": "cryo-EM"
+ },
+ "8gtp|1": {
+  "resolution": 3.1,
+  "method": "cryo-EM"
+ },
+ "8gtq|1": {
+  "resolution": 3.1,
+  "method": "cryo-EM"
+ },
+ "8h00|1": {
+  "resolution": 3.41,
+  "method": "cryo-EM"
+ },
+ "8h01|1": {
+  "resolution": 3.7,
+  "method": "cryo-EM"
+ },
+ "8h07|1": {
+  "resolution": 2.9,
+  "method": "cryo-EM"
+ },
+ "8h08|1": {
+  "resolution": 3.2,
+  "method": "cryo-EM"
+ },
+ "8h3n|1": {
+  "resolution": 2.73,
+  "method": "cryo-EM"
+ },
+ "8h7l|1": {
+  "resolution": 2.44,
+  "method": "cryo-EM"
+ },
+ "8hc2|1": {
+  "resolution": 6.21,
+  "method": "cryo-EM"
+ },
+ "8hc3|1": {
+  "resolution": 4.35,
+  "method": "cryo-EM"
+ },
+ "8hc4|1": {
+  "resolution": 3.54,
+  "method": "cryo-EM"
+ },
+ "8hc9|1": {
+  "resolution": 6.03,
+  "method": "cryo-EM"
+ },
+ "8hca|1": {
+  "resolution": 4.35,
+  "method": "cryo-EM"
+ },
+ "8hcb|1": {
+  "resolution": 4.18,
+  "method": "cryo-EM"
+ },
+ "8heb|1": {
+  "resolution": 3.53,
+  "method": "cryo-EM"
+ },
+ "8hec|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "8hgl|1": {
+  "resolution": 2.9,
+  "method": "cryo-EM"
+ },
+ "8hhx|1": {
+  "resolution": 3.62,
+  "method": "cryo-EM"
+ },
+ "8hhy|1": {
+  "resolution": 2.77,
+  "method": "cryo-EM"
+ },
+ "8hhz|1": {
+  "resolution": 4.28,
+  "method": "cryo-EM"
+ },
+ "8hlc|1": {
+  "resolution": 2.8,
+  "method": "cryo-EM"
+ },
+ "8hld|1": {
+  "resolution": 2.8,
+  "method": "cryo-EM"
+ },
+ "8hp9|1": {
+  "resolution": 2.75,
+  "method": "cryo-EM"
+ },
+ "8hpq|1": {
+  "resolution": 2.85,
+  "method": "cryo-EM"
+ },
+ "8hpv|1": {
+  "resolution": 2.65,
+  "method": "cryo-EM"
+ },
+ "8itu|1": {
+  "resolution": 3.68,
+  "method": "cryo-EM"
+ },
+ "8j1v|1": {
+  "resolution": 3.01,
+  "method": "cryo-EM"
+ },
+ "8k45|1": {
+  "resolution": 3.66,
+  "method": "cryo-EM"
+ },
+ "8k46|1": {
+  "resolution": 3.37,
+  "method": "cryo-EM"
+ },
+ "8k47|1": {
+  "resolution": 3.54,
+  "method": "cryo-EM"
+ },
+ "8k5h|1": {
+  "resolution": 3.22,
+  "method": "cryo-EM"
+ },
+ "8k9b|1": {
+  "resolution": 4.5,
+  "method": "cryo-EM"
+ },
+ "8k9j|1": {
+  "resolution": 6.6,
+  "method": "cryo-EM"
+ },
+ "8k9m|1": {
+  "resolution": 6.8,
+  "method": "cryo-EM"
+ },
+ "8keh|1": {
+  "resolution": 3.21,
+  "method": "cryo-EM"
+ },
+ "8keo|1": {
+  "resolution": 2.78,
+  "method": "cryo-EM"
+ },
+ "8keq|1": {
+  "resolution": 3.14,
+  "method": "cryo-EM"
+ },
+ "8ker|1": {
+  "resolution": 2.95,
+  "method": "cryo-EM"
+ },
+ "8khc|1": {
+  "resolution": 3.0,
+  "method": "cryo-EM"
+ },
+ "8q5y|1": {
+  "resolution": 2.6,
+  "method": "cryo-EM"
+ },
+ "8ug9|1": {
+  "resolution": 3.49,
+  "method": "cryo-EM"
+ },
+ "8vcr|1": {
+  "resolution": 3.0,
+  "method": "cryo-EM"
+ },
+ "8w4f|1": {
+  "resolution": 4.2,
+  "method": "cryo-EM"
+ },
+ "8wyj|1": {
+  "resolution": 3.1,
+  "method": "cryo-EM"
+ },
+ "8xbf|1": {
+  "resolution": 3.6,
+  "method": "cryo-EM"
+ },
+ "8xea|1": {
+  "resolution": 3.42,
+  "method": "cryo-EM"
+ },
+ "8xi6|1": {
+  "resolution": 2.3,
+  "method": "cryo-EM"
+ },
+ "8xki|1": {
+  "resolution": 3.2,
+  "method": "cryo-EM"
+ },
+ "8xsd|1": {
+  "resolution": 3.55,
+  "method": "cryo-EM"
+ },
+ "8xsl|1": {
+  "resolution": 3.2,
+  "method": "cryo-EM"
+ },
+ "8y4a|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "8y4c|1": {
+  "resolution": 3.75,
+  "method": "cryo-EM"
+ },
+ "8yby|1": {
+  "resolution": 4.4,
+  "method": "cryo-EM"
+ },
+ "8ybz|1": {
+  "resolution": 4.8,
+  "method": "cryo-EM"
+ },
+ "8ykg|1": {
+  "resolution": 3.28,
+  "method": "cryo-EM"
+ },
+ "8yro|1": {
+  "resolution": 3.27,
+  "method": "cryo-EM"
+ },
+ "8yrp|1": {
+  "resolution": 3.64,
+  "method": "cryo-EM"
+ },
+ "8yww|1": {
+  "resolution": 2.7,
+  "method": "cryo-EM"
+ },
+ "8yz5|1": {
+  "resolution": 3.93,
+  "method": "cryo-EM"
+ },
+ "8yz6|1": {
+  "resolution": 4.55,
+  "method": "cryo-EM"
+ },
+ "8zby|1": {
+  "resolution": 3.67,
+  "method": "cryo-EM"
+ },
+ "8zbz|1": {
+  "resolution": 4.71,
+  "method": "cryo-EM"
+ },
+ "8zc0|1": {
+  "resolution": 4.17,
+  "method": "cryo-EM"
+ },
+ "8zc3|1": {
+  "resolution": 4.69,
+  "method": "cryo-EM"
+ },
+ "8zc4|1": {
+  "resolution": 3.95,
+  "method": "cryo-EM"
+ },
+ "9aru|1": {
+  "resolution": 3.9,
+  "method": "cryo-EM"
+ },
+ "9ato|1": {
+  "resolution": 3.2,
+  "method": "cryo-EM"
+ },
+ "9atp|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "9atr|1": {
+  "resolution": 3.7,
+  "method": "cryo-EM"
+ },
+ "9au2|1": {
+  "resolution": 3.1,
+  "method": "cryo-EM"
+ },
+ "9bj3|1": {
+  "resolution": 3.04,
+  "method": "cryo-EM"
+ },
+ "9bj4|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "9c44|1": {
+  "resolution": 2.6,
+  "method": "cryo-EM"
+ },
+ "9co6|1": {
+  "resolution": 3.01,
+  "method": "cryo-EM"
+ },
+ "9co8|1": {
+  "resolution": 2.99,
+  "method": "cryo-EM"
+ },
+ "9dhy|1": {
+  "resolution": 2.7,
+  "method": "cryo-EM"
+ },
+ "9dsl|1": {
+  "resolution": 3.6,
+  "method": "cryo-EM"
+ },
+ "9fcm|1": {
+  "resolution": 1.94,
+  "method": "X-ray"
+ },
+ "9kzz|1": {
+  "resolution": 3.18,
+  "method": "cryo-EM"
+ },
+ "9l15|1": {
+  "resolution": 2.95,
+  "method": "cryo-EM"
+ },
+ "9ld2|1": {
+  "resolution": 3.73,
+  "method": "cryo-EM"
+ },
+ "9loy|1": {
+  "resolution": 2.66,
+  "method": "cryo-EM"
+ },
+ "9lp0|1": {
+  "resolution": 2.61,
+  "method": "cryo-EM"
+ },
+ "9ls3|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "9lyo|1": {
+  "resolution": 3.07,
+  "method": "cryo-EM"
+ },
+ "9mi3|1": {
+  "resolution": 3.23,
+  "method": "cryo-EM"
+ },
+ "9ml4|1": {
+  "resolution": 3.3,
+  "method": "cryo-EM"
+ },
+ "9ml5|1": {
+  "resolution": 3.4,
+  "method": "cryo-EM"
+ },
+ "9ml6|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "9ml7|1": {
+  "resolution": 3.2,
+  "method": "cryo-EM"
+ },
+ "9uxd|1": {
+  "resolution": 3.03,
+  "method": "cryo-EM"
+ },
+ "9uxe|1": {
+  "resolution": 3.17,
+  "method": "cryo-EM"
+ },
+ "9vls|1": {
+  "resolution": 4.14,
+  "method": "cryo-EM"
+ },
+ "9yok|1": {
+  "resolution": 3.56,
+  "method": "cryo-EM"
+ },
+ "9ypb|1": {
+  "resolution": 3.5,
+  "method": "cryo-EM"
+ },
+ "9ypr|1": {
+  "resolution": 3.46,
+  "method": "cryo-EM"
+ },
+ "9yyu|1": {
+  "resolution": 3.3,
+  "method": "cryo-EM"
+ },
+ "9zt7|1": {
+  "resolution": 3.11,
+  "method": "cryo-EM"
+ }
+}

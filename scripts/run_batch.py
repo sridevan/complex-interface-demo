@@ -30,6 +30,7 @@ import requests
 
 import build_aggregations as agg
 import build_mvs
+import build_structure_quality as bsq
 import fetch_complex_details as fcd
 from build_processed_dataset import build_buried_lookup, process_entry
 from common import PDBE_CIF_URL, PISA_SPLIT_DIR, get_logger, load_interfaces, pisa_split_mid
@@ -213,6 +214,12 @@ def main():
     for fname, data in tables.items():
         with open(os.path.join(args.out_dir, fname), "w") as fh:
             json.dump(data, fh, indent=1)
+
+    # Per-assembly experimental method + resolution (quality attribute), from the complex
+    # payload already in hand — joined to the assemblies we actually kept.
+    keep_keys = {f"{r['pdb_id']}|{r['assembly_id']}" for r in all_rows}
+    with open(os.path.join(args.out_dir, "structure_quality.json"), "w") as fh:
+        json.dump(bsq.build(assemblies, keep_keys=keep_keys), fh, indent=1)
 
     if args.build_mvs:
         with open("app/public/mvs/mvs_manifest.json", "w") as fh:
