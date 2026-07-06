@@ -1,0 +1,42 @@
+{
+ "7jwb|D": {
+  "n_variable_domains": 3,
+  "n_residues": 366
+ },
+ "7t3m|D": {
+  "n_variable_domains": 2,
+  "n_residues": 232
+ },
+ "7t3m|H": {
+  "n_variable_domains": 2,
+  "n_residues": 232
+ },
+ "7t3m|I": {
+  "n_variable_domains": 2,
+  "n_residues": 232
+ },
+ "7yc5|D": {
+  "n_variable_domains": 3,
+  "n_residues": 441
+ },
+ "7yc5|E": {
+  "n_variable_domains": 3,
+  "n_residues": 441
+ },
+ "7yc5|F": {
+  "n_variable_domains": 3,
+  "n_residues": 441
+ },
+ "8ykg|D": {
+  "n_variable_domains": 2,
+  "n_residues": 230
+ },
+ "8ykg|F": {
+  "n_variable_domains": 2,
+  "n_residues": 230
+ },
+ "8yww|H": {
+  "n_variable_domains": 2,
+  "n_residues": 245
+ }
+}

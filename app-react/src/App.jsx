@@ -22,9 +22,19 @@ export default function App() {
   const interfaces = data.interface_summary || []
   const sabdab = data.sabdab2_ids || {}
   const quality = data.structure_quality || {}
+  const multidomain = data.multidomain_antibody_chains || {}
   const anomalies = data.mapping_anomalies || []
   const coverage = data.antigen_unp_coverage || []
   const report = data.batch_report || {}
+
+  // Multi-domain antibody constructs (tribody / bispecific / tandem scFv) carry >=2 variable domains;
+  // our single-domain ANARCII numbering conflates their paratope IMGT, so exclude their interfaces from
+  // the interface + paratope DISPLAYS (epitope side is fine; they stay in the dataset). See DataNotes.
+  const mdKeys = new Set(Object.keys(multidomain))
+  const isMultiDomain = (pdb, chain) => mdKeys.has(`${pdb}|${chain}`)
+  const interfacesShown = interfaces.filter((i) => !isMultiDomain(i.pdb_id, i.antibody_chain))
+  const residueShown = residue.filter((r) => !isMultiDomain(r.pdb_id, r.antibody_chain_id))
+  const nMdInterfaces = interfaces.length - interfacesShown.length
 
   const heavy = epitope.reduce((s, r) => s + (r.heavy_chain_contacts || 0), 0)
   const light = epitope.reduce((s, r) => s + (r.light_chain_contacts || 0), 0)
@@ -53,6 +63,12 @@ export default function App() {
           detected and excluded by chain-based classification ({anomalies.length} distinct residue
           occurrences). See “Data provenance”.</div>
       )}
+      {nMdInterfaces > 0 && (
+        <div className="banner info">ℹ️ {nMdInterfaces} interface{nMdInterfaces > 1 ? 's' : ''} from{' '}
+          {mdKeys.size} multi-domain antibody chain{mdKeys.size > 1 ? 's' : ''} (tribody / bispecific /
+          tandem&nbsp;scFv) excluded from the interface &amp; paratope views — per-domain IMGT numbering is
+          unreliable for these. They remain in the dataset; see “Data provenance”.</div>
+      )}
 
       <div className="metrics">
         <Metric label="Assemblies processed" value={nAssemblies} />
@@ -72,9 +88,9 @@ export default function App() {
         ))}
       </div>
 
-      {tab === 0 && <ComplexOverview residue={residue} variants={variants} glycans={glycans} sabdab={sabdab} />}
-      {tab === 1 && <Explorer interfaces={interfaces} residue={residue} sabdab={sabdab} quality={quality} />}
-      {tab === 2 && <DataNotes anomalies={anomalies} coverage={coverage} />}
+      {tab === 0 && <ComplexOverview residue={residueShown} variants={variants} glycans={glycans} sabdab={sabdab} />}
+      {tab === 1 && <Explorer interfaces={interfacesShown} residue={residueShown} sabdab={sabdab} quality={quality} />}
+      {tab === 2 && <DataNotes anomalies={anomalies} coverage={coverage} multidomain={multidomain} />}
     </div>
   )
 }
@@ -83,7 +99,14 @@ const Metric = ({ label, value }) => (
   <div className="metric"><div className="label">{label}</div><div className="value">{value}</div></div>
 )
 
-function DataNotes({ anomalies, coverage }) {
+function DataNotes({ anomalies, coverage, multidomain = {} }) {
+  const mdRows = Object.entries(multidomain)
+    .map(([k, v]) => ({ chain: k, pdb_id: k.split('|')[0], ab_chain: k.split('|')[1], ...v }))
+  const mdCols = [
+    { key: 'pdb_id', label: 'PDB' }, { key: 'ab_chain', label: 'Ab chain' },
+    { key: 'n_variable_domains', label: 'Variable domains', num: true },
+    { key: 'n_residues', label: 'Chain length', num: true },
+  ]
   const anomalyCols = [
     { key: 'pdb_id', label: 'PDB' }, { key: 'interface_id', label: 'Itf' },
     { key: 'bond_type', label: 'Bond' }, { key: 'antibody_auth_asym_id', label: 'Ab chain' },
@@ -129,6 +152,21 @@ function DataNotes({ anomalies, coverage }) {
         {anomalies.length > 0
           ? <DataTable columns={anomalyCols} rows={anomalies} initialSort="occurrence_count" />
           : <p className="note">No anomalies detected.</p>}
+      </div>
+
+      <div className="card">
+        <h2>Multi-domain antibody chains (excluded from interface &amp; paratope views)</h2>
+        <p className="note">
+          IMGT numbering is defined <b>per variable domain</b> (positions 1–128). These chains carry
+          <b> ≥2 variable domains</b> (tribody / bispecific / tandem&nbsp;scFv), so our single-domain
+          ANARCII numbering conflates their paratope — their antibody-side IMGT positions are unreliable.
+          The epitope side (PISA contacts + antigen UniProt mapping) is unaffected. Their interfaces are
+          hidden from the interface and paratope <b>displays only</b>; the contacts remain in the dataset
+          (<code>multidomain_antibody_chains.json</code>). {mdRows.length} chain{mdRows.length === 1 ? '' : 's'} flagged.
+        </p>
+        {mdRows.length > 0
+          ? <DataTable columns={mdCols} rows={mdRows} initialSort="n_variable_domains" />
+          : <p className="note">No multi-domain antibody chains flagged.</p>}
       </div>
     </>
   )
