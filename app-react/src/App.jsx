@@ -21,6 +21,7 @@ export default function App() {
   const glycans = data.antigen_interface_glycans || []
   const interfaces = data.interface_summary || []
   const sabdab = data.sabdab2_ids || {}
+  const quality = data.structure_quality || {}
   const anomalies = data.mapping_anomalies || []
   const coverage = data.antigen_unp_coverage || []
   const report = data.batch_report || {}
@@ -33,6 +34,8 @@ export default function App() {
     .map((r) => `${r.antibody_chain_type}:${r.antibody_imgt_position}`)).size
   const anomalyOcc = anomalies.reduce((s, a) => s + (a.occurrence_count || 0), 0)
   const uniqueAntibodies = new Set(Object.values(sabdab).map((v) => v.sabdab_id)).size
+  const resVals = Object.values(quality).map((q) => q.resolution).filter((x) => x != null).sort((a, b) => a - b)
+  const medRes = resVals.length ? resVals[Math.floor(resVals.length / 2)] : null
 
   return (
     <div className="wrap">
@@ -56,6 +59,7 @@ export default function App() {
         <Metric label="PDB entries" value={nPdb} />
         <Metric label="Antibody–antigen interfaces" value={interfaces.length} />
         {uniqueAntibodies > 0 && <Metric label="Unique antibodies (SAbDab2)" value={uniqueAntibodies} />}
+        {medRes != null && <Metric label="Median resolution (Å)" value={medRes.toFixed(1)} />}
         <Metric label="Unique antigen residues" value={epitope.length} />
         <Metric label="Unique antibody IMGT positions" value={uniqueImgt} />
         <Metric label="Heavy-chain contacts" value={heavy} />
@@ -69,7 +73,7 @@ export default function App() {
       </div>
 
       {tab === 0 && <ComplexOverview residue={residue} variants={variants} glycans={glycans} sabdab={sabdab} />}
-      {tab === 1 && <Explorer interfaces={interfaces} residue={residue} sabdab={sabdab} />}
+      {tab === 1 && <Explorer interfaces={interfaces} residue={residue} sabdab={sabdab} quality={quality} />}
       {tab === 2 && <DataNotes anomalies={anomalies} coverage={coverage} />}
     </div>
   )
