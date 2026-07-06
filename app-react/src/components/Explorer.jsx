@@ -128,9 +128,8 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
             <table>
               <thead>
                 <tr><th>Interface ID</th><th>Ag chain</th><th>Ab chain</th>
-                  <th>Antibody (SAbDab2)</th><th className="num">Resolution (Å)</th>
-                  <th className="num">BSA (Å²)</th>
-                  <th className="num">Residue contacts</th></tr>
+                  <th>Antibody (SAbDab2)</th><th className="num">Res. (Å)</th>
+                  <th className="num">BSA (Å²)</th></tr>
               </thead>
               <tbody>
                 {instances.map((r) => {
@@ -152,7 +151,6 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
                         {q.method && q.method !== 'cryo-EM' ? ` · ${q.method}` : ''}</span>
                     ) : '—'}</td>
                     <td className="num">{Math.round(r.interface_area)}</td>
-                    <td className="num">{r.residue_contacts}</td>
                   </tr>
                 )})}
               </tbody>
@@ -162,7 +160,8 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
 
         {/* Row 2, Col 2 — Sankey for selected instance */}
         <div className="card ex-cell">
-          <h2>Paratope–epitope contacts{selected ? ` (${selected.pdb_id} interface ${selected.interface_id})` : ''}</h2>
+          <h2>Paratope–epitope contacts{selected ? ` (${selected.pdb_id} interface ${selected.interface_id})` : ''}
+            {selected && selected.residue_contacts != null && <span className="h2-sub"> · {selected.residue_contacts} residue contacts</span>}</h2>
           <p className="note">Epitope (antigen) on the left, paratope (antibody) on the right, for the
             selected interface. <b>Click a node to highlight it in 3D.</b></p>
           <SankeyContacts rows={sankeyRows} onNodeClick={setHighlight} />
