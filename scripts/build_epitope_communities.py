@@ -105,6 +105,14 @@ def main():
 
     R = json.load(open(args.processed))
     S = json.load(open(args.sabdab))
+    # PDBe structural domains per epitope position (data-driven, no hardcoded ontology). Optional:
+    # produced by fetch_antigen_domains.py; falls back to None labels if absent.
+    dom_path = os.path.join(os.path.dirname(args.processed), "antigen_domains.json")
+    pos_domain = json.load(open(dom_path)).get("position_domain", {}) if os.path.exists(dom_path) else {}
+
+    def pdbe_domain(pos_list):
+        labs = [pos_domain.get(str(p)) for p in pos_list if pos_domain.get(str(p))]
+        return Counter(labs).most_common(1)[0][0] if labs else None
 
     def abid(r):
         k = f"{r['pdb_id']}|{r['antibody_chain_id']}|{r['antibody_chain_type']}"
@@ -184,6 +192,7 @@ def main():
         communities_out.append({
             "id": ci, "size": len(members),
             "label": label_epitope(cons) if cons else "unassigned",
+            "pdbe_domain": pdbe_domain(list(cnt)),
             "dominant_domain": Counter(domain_of(p) for p in cnt).most_common(1)[0][0] if cnt else None,
             "consensus_positions": sorted(cons),
             "top_positions": [p for p, _ in cnt.most_common(8)],
@@ -204,6 +213,7 @@ def main():
             "x": round(float(emb[n, 0]), 3), "y": round(float(emb[n, 1]), 3),
             "n_epitope_positions": len(cnt),
             "top_positions": [int(p) for p, _ in cnt.most_common(6)],
+            "pdbe_domain": pdbe_domain(list(cnt)),
             "dominant_domain": Counter(domain_of(p) for p in cnt).most_common(1)[0][0] if cnt else None,
         })
 

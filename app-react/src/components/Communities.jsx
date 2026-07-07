@@ -66,11 +66,13 @@ export default function Communities({ data }) {
 
       <div className="card">
         <h2>Communities</h2>
-        <p className="note">Auto-labelled against known epitope classes; ranked by size. Escape column
-          lists consensus positions that are documented antibody-escape sites.</p>
+        <p className="note">Ranked by size. <b>Domain</b> is the structural domain of the community's
+          epitope residues, fetched live from <b>PDBe</b> (Pfam/CATH via SIFTS) on a representative
+          structure — no hardcoded ontology, so it generalises to any antigen. Escape column lists
+          consensus positions that are documented antibody-escape sites.</p>
         <div className="table-scroll">
           <table>
-            <thead><tr><th></th><th>Community</th><th className="num">Antibodies</th><th>Domain</th>
+            <thead><tr><th></th><th>Community</th><th className="num">Antibodies</th><th>PDBe domain</th>
               <th>Top epitope positions</th><th>Escape residues</th></tr></thead>
             <tbody>
               {big.map((c) => (
@@ -79,7 +81,7 @@ export default function Communities({ data }) {
                   <td><span className="dot" style={{ background: colorOf(c.id) }} /></td>
                   <td><b>{c.label}</b></td>
                   <td className="num">{c.size}</td>
-                  <td>{c.dominant_domain}</td>
+                  <td>{c.pdbe_domain || c.dominant_domain || '—'}</td>
                   <td>{(c.top_positions || []).join(', ')}</td>
                   <td>{(c.escape_positions || []).length ? c.escape_positions.join(', ') : '—'}</td>
                 </tr>

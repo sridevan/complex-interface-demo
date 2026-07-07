@@ -13,6 +13,7 @@
    "id": 0,
    "size": 137,
    "label": "Class 1 (RBM / ACE2)",
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD",
    "consensus_positions": [
     346,
@@ -104,6 +105,7 @@
    "id": 1,
    "size": 95,
    "label": "Class 3 (site V / S309)",
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD",
    "consensus_positions": [
     339,
@@ -199,6 +201,7 @@
    "id": 2,
    "size": 60,
    "label": "Class 4 (cryptic)",
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD",
    "consensus_positions": [
     335,
@@ -272,6 +275,7 @@
    "id": 3,
    "size": 43,
    "label": "NTD supersite",
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD",
    "consensus_positions": [
     14,
@@ -375,6 +379,7 @@
    "id": 4,
    "size": 4,
    "label": "S2 stem",
+   "pdbe_domain": null,
    "dominant_domain": "S2",
    "consensus_positions": [
     657,
@@ -428,6 +433,7 @@
    "id": 5,
    "size": 1,
    "label": "S2 stem",
+   "pdbe_domain": null,
    "dominant_domain": "S2",
    "consensus_positions": [
     969,
@@ -455,6 +461,7 @@
    "id": 6,
    "size": 1,
    "label": "S2 stem",
+   "pdbe_domain": null,
    "dominant_domain": "S2",
    "consensus_positions": [
     1188,
@@ -493,6 +500,7 @@
    "id": 7,
    "size": 1,
    "label": "S2 stem",
+   "pdbe_domain": null,
    "dominant_domain": "S2",
    "consensus_positions": [
     737,
@@ -673,6 +681,7 @@
     505,
     496
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -699,6 +708,7 @@
     498,
     501
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -724,6 +734,7 @@
     936,
     937
    ],
+   "pdbe_domain": null,
    "dominant_domain": "S2"
   },
   {
@@ -751,6 +762,7 @@
     379,
     369
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -778,6 +790,7 @@
     450,
     483
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -803,6 +816,7 @@
     489,
     483
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -830,6 +844,7 @@
     444,
     441
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -857,6 +872,7 @@
     489,
     494
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -884,6 +900,7 @@
     336,
     335
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "RBD"
   },
   {
@@ -911,6 +928,7 @@
     249,
     256
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -938,6 +956,7 @@
     144,
     251
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -965,6 +984,7 @@
     489,
     470
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -992,6 +1012,7 @@
     506,
     501
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1019,6 +1040,7 @@
     481,
     450
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1046,6 +1068,7 @@
     483,
     490
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1073,6 +1096,7 @@
     452,
     490
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1100,6 +1124,7 @@
     372,
     376
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1127,6 +1152,7 @@
     145,
     251
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -1154,6 +1180,7 @@
     458,
     500
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1181,6 +1208,7 @@
     374,
     372
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1208,6 +1236,7 @@
     470,
     340
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1235,6 +1264,7 @@
     487,
     486
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1262,6 +1292,7 @@
     473,
     489
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1289,6 +1320,7 @@
     475,
     455
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1315,6 +1347,7 @@
     487,
     478
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1342,6 +1375,7 @@
     505,
     405
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1369,6 +1403,7 @@
     450,
     451
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1396,6 +1431,7 @@
     478,
     455
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1423,6 +1459,7 @@
     477,
     485
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1450,6 +1487,7 @@
     493,
     449
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1477,6 +1515,7 @@
     246,
     150
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -1504,6 +1543,7 @@
     445,
     506
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1531,6 +1571,7 @@
     483,
     477
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1558,6 +1599,7 @@
     456,
     457
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1585,6 +1627,7 @@
     487,
     479
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1612,6 +1655,7 @@
     372,
     408
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1639,6 +1683,7 @@
     485,
     490
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1666,6 +1711,7 @@
     499,
     450
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1693,6 +1739,7 @@
     490,
     452
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1720,6 +1767,7 @@
     421,
     455
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1747,6 +1795,7 @@
     407,
     369
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1774,6 +1823,7 @@
     456,
     455
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1801,6 +1851,7 @@
     344,
     337
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1823,6 +1874,7 @@
    "top_positions": [
     345
    ],
+   "pdbe_domain": null,
    "dominant_domain": "RBD"
   },
   {
@@ -1850,6 +1902,7 @@
     339,
     334
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1877,6 +1930,7 @@
     375,
     404
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1904,6 +1958,7 @@
     486,
     458
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1931,6 +1986,7 @@
     500,
     403
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1958,6 +2014,7 @@
     456,
     486
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -1985,6 +2042,7 @@
     487,
     486
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2012,6 +2070,7 @@
     439,
     506
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2039,6 +2098,7 @@
     248,
     148
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -2066,6 +2126,7 @@
     477,
     493
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2093,6 +2154,7 @@
     449,
     490
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2120,6 +2182,7 @@
     493,
     485
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2147,6 +2210,7 @@
     486,
     487
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2174,6 +2238,7 @@
     487,
     456
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2201,6 +2266,7 @@
     449,
     492
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2228,6 +2294,7 @@
     158,
     247
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -2255,6 +2322,7 @@
     504,
     503
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2282,6 +2350,7 @@
     489,
     485
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2309,6 +2378,7 @@
     493,
     485
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2336,6 +2406,7 @@
     489,
     457
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2363,6 +2434,7 @@
     354,
     158
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2390,6 +2462,7 @@
     493,
     456
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2417,6 +2490,7 @@
     340,
     529
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2444,6 +2518,7 @@
     405,
     504
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2471,6 +2546,7 @@
     337,
     440
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2498,6 +2574,7 @@
     456,
     487
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2525,6 +2602,7 @@
     384,
     379
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2552,6 +2630,7 @@
     483,
     489
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2579,6 +2658,7 @@
     144,
     155
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -2606,6 +2686,7 @@
     455,
     489
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2633,6 +2714,7 @@
     364,
     477
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2660,6 +2742,7 @@
     378,
     380
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2687,6 +2770,7 @@
     345,
     441
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2712,6 +2796,7 @@
     504,
     501
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2739,6 +2824,7 @@
     466,
     468
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2766,6 +2852,7 @@
     385,
     377
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2793,6 +2880,7 @@
     373,
     489
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2815,6 +2903,7 @@
    "top_positions": [
     156
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -2839,6 +2928,7 @@
     486,
     485
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2866,6 +2956,7 @@
     485,
     490
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2893,6 +2984,7 @@
     144,
     251
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -2920,6 +3012,7 @@
     487,
     417
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2947,6 +3040,7 @@
     444,
     343
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -2974,6 +3068,7 @@
     384,
     377
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3001,6 +3096,7 @@
     408,
     351
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3028,6 +3124,7 @@
     367,
     364
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3055,6 +3152,7 @@
     408,
     384
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3082,6 +3180,7 @@
     485,
     493
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3109,6 +3208,7 @@
     83,
     88
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -3132,6 +3232,7 @@
     113,
     471
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -3159,6 +3260,7 @@
     26,
     269
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -3186,6 +3288,7 @@
     489,
     483
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3213,6 +3316,7 @@
     340,
     443
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3240,6 +3344,7 @@
     178,
     126
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -3267,6 +3372,7 @@
     486,
     479
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3294,6 +3400,7 @@
     244,
     148
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -3321,6 +3428,7 @@
     346,
     344
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3348,6 +3456,7 @@
     373,
     494
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3375,6 +3484,7 @@
     349,
     490
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3401,6 +3511,7 @@
     458,
     474
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3428,6 +3539,7 @@
     150,
     152
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -3455,6 +3567,7 @@
     449,
     452
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3482,6 +3595,7 @@
     253,
     145
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -3509,6 +3623,7 @@
     245,
     247
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -3536,6 +3651,7 @@
     449,
     485
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3563,6 +3679,7 @@
     421,
     460
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3590,6 +3707,7 @@
     486,
     493
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3617,6 +3735,7 @@
     484,
     492
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3644,6 +3763,7 @@
     376,
     408
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3671,6 +3791,7 @@
     248,
     158
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -3698,6 +3819,7 @@
     493,
     481
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3725,6 +3847,7 @@
     494,
     490
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3750,6 +3873,7 @@
     427,
     379
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3777,6 +3901,7 @@
     440,
     442
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3804,6 +3929,7 @@
     70,
     258
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -3831,6 +3957,7 @@
     346,
     345
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3855,6 +3982,7 @@
     377,
     376
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3882,6 +4010,7 @@
     375,
     503
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3909,6 +4038,7 @@
     498,
     444
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3936,6 +4066,7 @@
     475,
     456
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3963,6 +4094,7 @@
     493,
     417
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -3990,6 +4122,7 @@
     455,
     408
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4017,6 +4150,7 @@
     372,
     490
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4044,6 +4178,7 @@
     408,
     384
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4071,6 +4206,7 @@
     562,
     228
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -4098,6 +4234,7 @@
     441,
     438
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4125,6 +4262,7 @@
     439,
     499
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4152,6 +4290,7 @@
     150,
     178
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -4179,6 +4318,7 @@
     493,
     492
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4206,6 +4346,7 @@
     449,
     494
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4233,6 +4374,7 @@
     494,
     447
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4260,6 +4402,7 @@
     288,
     59
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -4287,6 +4430,7 @@
     495,
     443
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4314,6 +4458,7 @@
     561,
     170
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -4340,6 +4485,7 @@
     377,
     369
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4367,6 +4513,7 @@
     245,
     148
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -4394,6 +4541,7 @@
     449,
     440
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4421,6 +4569,7 @@
     383,
     374
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4448,6 +4597,7 @@
     458,
     489
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4475,6 +4625,7 @@
     174,
     224
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -4502,6 +4653,7 @@
     384,
     408
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4529,6 +4681,7 @@
     449,
     498
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4556,6 +4709,7 @@
     408,
     484
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4583,6 +4737,7 @@
     458,
     417
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4610,6 +4765,7 @@
     825,
     822
    ],
+   "pdbe_domain": null,
    "dominant_domain": "S2"
   },
   {
@@ -4637,6 +4793,7 @@
     493,
     490
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4664,6 +4821,7 @@
     374,
     384
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4691,6 +4849,7 @@
     412,
     380
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4718,6 +4877,7 @@
     451,
     494
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4745,6 +4905,7 @@
     64,
     97
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -4772,6 +4933,7 @@
     374,
     369
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4799,6 +4961,7 @@
     246,
     249
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -4824,6 +4987,7 @@
     150,
     147
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -4851,6 +5015,7 @@
     486,
     473
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4878,6 +5043,7 @@
     417,
     487
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4905,6 +5071,7 @@
     476,
     484
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4932,6 +5099,7 @@
     490,
     486
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4959,6 +5127,7 @@
     452,
     490
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -4986,6 +5155,7 @@
     485,
     490
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5013,6 +5183,7 @@
     144,
     248
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -5040,6 +5211,7 @@
     498,
     492
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5067,6 +5239,7 @@
     253,
     250
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -5094,6 +5267,7 @@
     490,
     485
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5116,6 +5290,7 @@
    "top_positions": [
     484
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5143,6 +5318,7 @@
     379,
     427
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5165,6 +5341,7 @@
    "top_positions": [
     345
    ],
+   "pdbe_domain": null,
    "dominant_domain": "RBD"
   },
   {
@@ -5192,6 +5369,7 @@
     415,
     475
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5219,6 +5397,7 @@
     452,
     484
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5246,6 +5425,7 @@
     408,
     374
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5273,6 +5453,7 @@
     490,
     468
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5300,6 +5481,7 @@
     354,
     482
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5327,6 +5509,7 @@
     499,
     439
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5354,6 +5537,7 @@
     444,
     445
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5381,6 +5565,7 @@
     493,
     505
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5408,6 +5593,7 @@
     483,
     493
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5435,6 +5621,7 @@
     474,
     491
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5462,6 +5649,7 @@
     498,
     440
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5489,6 +5677,7 @@
     415,
     486
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5516,6 +5705,7 @@
     441,
     439
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5543,6 +5733,7 @@
     341,
     437
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5570,6 +5761,7 @@
     483,
     481
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5597,6 +5789,7 @@
     408,
     486
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5624,6 +5817,7 @@
     500,
     509
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5651,6 +5845,7 @@
     554,
     324
    ],
+   "pdbe_domain": "Coronavirus spike glycoprotein S1, C-terminal",
    "dominant_domain": "linker"
   },
   {
@@ -5678,6 +5873,7 @@
     485,
     477
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5705,6 +5901,7 @@
     380,
     413
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5732,6 +5929,7 @@
     30,
     690
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "linker"
   },
   {
@@ -5759,6 +5957,7 @@
     475,
     486
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5786,6 +5985,7 @@
     456,
     475
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5813,6 +6013,7 @@
     444,
     445
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5840,6 +6041,7 @@
     448,
     441
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5867,6 +6069,7 @@
     370,
     375
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5894,6 +6097,7 @@
     445,
     346
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5921,6 +6125,7 @@
     452,
     490
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5948,6 +6153,7 @@
     354,
     352
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -5975,6 +6181,7 @@
     457,
     456
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6002,6 +6209,7 @@
     379,
     385
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6029,6 +6237,7 @@
     321,
     60
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -6056,6 +6265,7 @@
     450,
     490
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6083,6 +6293,7 @@
     502,
     503
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6110,6 +6321,7 @@
     440,
     503
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6137,6 +6349,7 @@
     494,
     484
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6164,6 +6377,7 @@
     345,
     439
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6191,6 +6405,7 @@
     455,
     486
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6218,6 +6433,7 @@
     348,
     468
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6245,6 +6461,7 @@
     470,
     481
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6272,6 +6489,7 @@
     505,
     477
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6299,6 +6517,7 @@
     503,
     496
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6326,6 +6545,7 @@
     487,
     489
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6353,6 +6573,7 @@
     357,
     490
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6380,6 +6601,7 @@
     475,
     489
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6407,6 +6629,7 @@
     501,
     456
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6434,6 +6657,7 @@
     494,
     490
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6461,6 +6685,7 @@
     355,
     463
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6488,6 +6713,7 @@
     377,
     408
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6515,6 +6741,7 @@
     421,
     487
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6542,6 +6769,7 @@
     377,
     370
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6569,6 +6797,7 @@
     517,
     426
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6596,6 +6825,7 @@
     485,
     456
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6623,6 +6853,7 @@
     462,
     464
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6650,6 +6881,7 @@
     354,
     470
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6677,6 +6909,7 @@
     536,
     583
    ],
+   "pdbe_domain": "Coronavirus spike glycoprotein S1, C-terminal",
    "dominant_domain": "linker"
   },
   {
@@ -6704,6 +6937,7 @@
     444,
     345
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6731,6 +6965,7 @@
     170,
     172
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -6758,6 +6993,7 @@
     444,
     452
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6785,6 +7021,7 @@
     489,
     458
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6812,6 +7049,7 @@
     345,
     441
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6839,6 +7077,7 @@
     440,
     444
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6866,6 +7105,7 @@
     445,
     448
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6893,6 +7133,7 @@
     447,
     499
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6920,6 +7161,7 @@
     417,
     478
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6947,6 +7189,7 @@
     508,
     378
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -6974,6 +7217,7 @@
     452,
     447
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7001,6 +7245,7 @@
     478,
     489
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7028,6 +7273,7 @@
     492,
     348
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7055,6 +7301,7 @@
     345,
     445
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7082,6 +7329,7 @@
     470,
     493
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7109,6 +7357,7 @@
     386,
     408
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7136,6 +7385,7 @@
     446,
     451
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7163,6 +7413,7 @@
     475,
     455
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7190,6 +7441,7 @@
     475,
     459
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7217,6 +7469,7 @@
     456,
     505
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7244,6 +7497,7 @@
     372,
     369
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7271,6 +7525,7 @@
     503,
     437
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7298,6 +7553,7 @@
     485,
     490
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7325,6 +7581,7 @@
     375,
     503
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7352,6 +7609,7 @@
     340,
     354
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7379,6 +7637,7 @@
     444,
     344
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7406,6 +7665,7 @@
     499,
     450
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7433,6 +7693,7 @@
     486,
     490
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7460,6 +7721,7 @@
     427,
     413
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7487,6 +7749,7 @@
     484,
     373
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7514,6 +7777,7 @@
     73,
     183
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -7541,6 +7805,7 @@
     333,
     487
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7568,6 +7833,7 @@
     485,
     475
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7595,6 +7861,7 @@
     430,
     520
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7622,6 +7889,7 @@
     421,
     486
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7649,6 +7917,7 @@
     450,
     499
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7676,6 +7945,7 @@
     487,
     489
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7703,6 +7973,7 @@
     372,
     365
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7730,6 +8001,7 @@
     458,
     456
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7757,6 +8029,7 @@
     489,
     476
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7784,6 +8057,7 @@
     348,
     490
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7811,6 +8085,7 @@
     445,
     444
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7838,6 +8113,7 @@
     504,
     497
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7865,6 +8141,7 @@
     479,
     489
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7892,6 +8169,7 @@
     440,
     439
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7919,6 +8197,7 @@
     487,
     485
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7946,6 +8225,7 @@
     384,
     379
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -7973,6 +8253,7 @@
     355,
     351
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8000,6 +8281,7 @@
     378,
     373
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8027,6 +8309,7 @@
     162,
     14
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -8054,6 +8337,7 @@
     489,
     479
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8081,6 +8365,7 @@
     408,
     414
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8108,6 +8393,7 @@
     452,
     440
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8135,6 +8421,7 @@
     456,
     485
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8162,6 +8449,7 @@
     819,
     820
    ],
+   "pdbe_domain": null,
    "dominant_domain": "S2"
   },
   {
@@ -8189,6 +8477,7 @@
     375,
     385
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8216,6 +8505,7 @@
     385,
     380
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8243,6 +8533,7 @@
     390,
     381
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8270,6 +8561,7 @@
     528,
     319
    ],
+   "pdbe_domain": "Coronavirus spike glycoprotein S1, C-terminal",
    "dominant_domain": "linker"
   },
   {
@@ -8297,6 +8589,7 @@
     456,
     479
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8324,6 +8617,7 @@
     155,
     156
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -8351,6 +8645,7 @@
     376,
     508
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8378,6 +8673,7 @@
     489,
     493
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8405,6 +8701,7 @@
     444,
     445
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8432,6 +8729,7 @@
     416,
     418
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8459,6 +8757,7 @@
     496,
     488
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8486,6 +8785,7 @@
     152,
     248
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -8513,6 +8813,7 @@
     413,
     491
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8540,6 +8841,7 @@
     382,
     376
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8567,6 +8869,7 @@
     345,
     346
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8594,6 +8897,7 @@
     984,
     985
    ],
+   "pdbe_domain": null,
    "dominant_domain": "S2"
   },
   {
@@ -8620,6 +8924,7 @@
     492,
     493
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8647,6 +8952,7 @@
     489,
     502
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8674,6 +8980,7 @@
     477,
     456
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8701,6 +9008,7 @@
     354,
     518
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8728,6 +9036,7 @@
     375,
     506
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8755,6 +9064,7 @@
     375,
     500
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8782,6 +9092,7 @@
     345,
     440
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8809,6 +9120,7 @@
     505,
     455
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8836,6 +9148,7 @@
     230,
     104
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -8863,6 +9176,7 @@
     264,
     524
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -8890,6 +9204,7 @@
     501,
     498
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8917,6 +9232,7 @@
     354,
     465
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8944,6 +9260,7 @@
     351,
     471
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -8971,6 +9288,7 @@
     237,
     83
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -8998,6 +9316,7 @@
     148,
     149
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -9025,6 +9344,7 @@
     480,
     489
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9052,6 +9372,7 @@
     479,
     441
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9079,6 +9400,7 @@
     495,
     449
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9106,6 +9428,7 @@
     450,
     482
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9133,6 +9456,7 @@
     210,
     184
    ],
+   "pdbe_domain": "Betacoronavirus-like spike glycoprotein S1, N-terminal",
    "dominant_domain": "NTD"
   },
   {
@@ -9160,6 +9484,7 @@
     452,
     496
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9187,6 +9512,7 @@
     380,
     381
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9214,6 +9540,7 @@
     499,
     503
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9241,6 +9568,7 @@
     484,
     444
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9268,6 +9596,7 @@
     808,
     810
    ],
+   "pdbe_domain": null,
    "dominant_domain": "S2"
   },
   {
@@ -9290,6 +9619,7 @@
    "top_positions": [
     446
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9317,6 +9647,7 @@
     453,
     504
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9344,6 +9675,7 @@
     412,
     380
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9371,6 +9703,7 @@
     1203,
     1205
    ],
+   "pdbe_domain": null,
    "dominant_domain": "S2"
   },
   {
@@ -9398,6 +9731,7 @@
     443,
     344
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9425,6 +9759,7 @@
     383,
     377
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9452,6 +9787,7 @@
     489,
     455
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9479,6 +9815,7 @@
     468,
     469
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9506,6 +9843,7 @@
     456,
     455
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9533,6 +9871,7 @@
     405,
     420
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9560,6 +9899,7 @@
     501,
     499
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9587,6 +9927,7 @@
     476,
     474
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9614,6 +9955,7 @@
     415,
     421
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9641,6 +9983,7 @@
     345,
     444
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9668,6 +10011,7 @@
     761,
     765
    ],
+   "pdbe_domain": null,
    "dominant_domain": "S2"
   },
   {
@@ -9695,6 +10039,7 @@
     453,
     486
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9722,6 +10067,7 @@
     375,
     374
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9749,6 +10095,7 @@
     505,
     493
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9776,6 +10123,7 @@
     381,
     428
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9803,6 +10151,7 @@
     493,
     489
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   },
   {
@@ -9830,6 +10179,7 @@
     448,
     445
    ],
+   "pdbe_domain": "Betacoronavirus spike glycoprotein S1, receptor binding",
    "dominant_domain": "RBD"
   }
  ]
