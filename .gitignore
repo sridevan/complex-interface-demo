@@ -30,3 +30,6 @@ scratch_logs/
 
 # 190MB bond-level intermediate — regenerable by run_batch, not read by the app
 data/processed/processed_antibody_antigen_interfaces.json
+
+# external data (Raybould et al. NAR 2021), re-downloadable
+paper/covabdab.csv
