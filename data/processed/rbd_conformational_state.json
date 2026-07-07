@@ -1,0 +1,6647 @@
+{
+ "6wps_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 21.4,
+    "state": "down"
+   },
+   "B": {
+    "radial": 21.4,
+    "state": "down"
+   },
+   "E": {
+    "radial": 21.4,
+    "state": "down"
+   }
+  }
+ },
+ "6wpt_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "6xcm_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "6xcn_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 40.5,
+    "state": "up"
+   },
+   "C": {
+    "radial": 40.5,
+    "state": "up"
+   },
+   "E": {
+    "radial": 40.5,
+    "state": "up"
+   }
+  }
+ },
+ "6z43_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 25.7,
+    "state": "down"
+   },
+   "B": {
+    "radial": 18.8,
+    "state": "down"
+   },
+   "C": {
+    "radial": 23.4,
+    "state": "down"
+   }
+  }
+ },
+ "6zdg_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "E": {
+    "radial": 17.8,
+    "state": "down"
+   },
+   "A": {
+    "radial": 15.8,
+    "state": "down"
+   },
+   "D": {
+    "radial": 33.5,
+    "state": "up"
+   }
+  }
+ },
+ "6zdh_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 48.9,
+    "state": "up"
+   },
+   "B": {
+    "radial": 49.2,
+    "state": "up"
+   },
+   "C": {
+    "radial": 50.1,
+    "state": "up"
+   }
+  }
+ },
+ "6zxn_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 27.0,
+    "state": "down"
+   },
+   "B": {
+    "radial": 24.3,
+    "state": "down"
+   },
+   "C": {
+    "radial": 18.7,
+    "state": "down"
+   }
+  }
+ },
+ "7a25_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 27.1,
+    "state": "down"
+   },
+   "B": {
+    "radial": 24.2,
+    "state": "down"
+   },
+   "C": {
+    "radial": 18.4,
+    "state": "down"
+   }
+  }
+ },
+ "7a29_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 29.2,
+    "state": "down"
+   },
+   "B": {
+    "radial": 34.0,
+    "state": "up"
+   },
+   "C": {
+    "radial": 22.9,
+    "state": "down"
+   }
+  }
+ },
+ "7akd_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7b18_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 35.8,
+    "state": "up"
+   },
+   "B": {
+    "radial": 32.0,
+    "state": "up"
+   },
+   "C": {
+    "radial": 32.0,
+    "state": "up"
+   }
+  }
+ },
+ "7byr_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7c2l_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 29.3,
+    "state": "down"
+   },
+   "B": {
+    "radial": 23.4,
+    "state": "down"
+   },
+   "C": {
+    "radial": 18.7,
+    "state": "down"
+   }
+  }
+ },
+ "7cac_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7cai_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 41.5,
+    "state": "up"
+   },
+   "B": {
+    "radial": 36.6,
+    "state": "up"
+   },
+   "C": {
+    "radial": 28.1,
+    "state": "down"
+   }
+  }
+ },
+ "7cak_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 46.4,
+    "state": "up"
+   },
+   "B": {
+    "radial": 46.5,
+    "state": "up"
+   },
+   "C": {
+    "radial": 46.3,
+    "state": "up"
+   }
+  }
+ },
+ "7chh_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 25.6,
+    "state": "down"
+   },
+   "B": {
+    "radial": 24.0,
+    "state": "down"
+   },
+   "C": {
+    "radial": 18.7,
+    "state": "down"
+   }
+  }
+ },
+ "7cwl_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 25.1,
+    "state": "down"
+   },
+   "B": {
+    "radial": 33.8,
+    "state": "up"
+   },
+   "C": {
+    "radial": 36.8,
+    "state": "up"
+   }
+  }
+ },
+ "7cwm_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 20.6,
+    "state": "down"
+   },
+   "B": {
+    "radial": 30.0,
+    "state": "up"
+   },
+   "C": {
+    "radial": 27.9,
+    "state": "down"
+   }
+  }
+ },
+ "7cwn_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 46.4,
+    "state": "up"
+   },
+   "B": {
+    "radial": 46.7,
+    "state": "up"
+   },
+   "C": {
+    "radial": 46.3,
+    "state": "up"
+   }
+  }
+ },
+ "7cws_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "O": {
+    "radial": 46.3,
+    "state": "up"
+   },
+   "Q": {
+    "radial": 46.3,
+    "state": "up"
+   },
+   "R": {
+    "radial": 46.5,
+    "state": "up"
+   }
+  }
+ },
+ "7cwt_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 36.2,
+    "state": "up"
+   },
+   "B": {
+    "radial": 32.2,
+    "state": "up"
+   },
+   "C": {
+    "radial": 25.3,
+    "state": "down"
+   }
+  }
+ },
+ "7cwu_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "B": {
+    "radial": 42.2,
+    "state": "up"
+   },
+   "C": {
+    "radial": 42.0,
+    "state": "up"
+   },
+   "A": {
+    "radial": 42.3,
+    "state": "up"
+   }
+  }
+ },
+ "7cyp_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 36.5,
+    "state": "up"
+   },
+   "B": {
+    "radial": 32.9,
+    "state": "up"
+   },
+   "C": {
+    "radial": 25.7,
+    "state": "down"
+   }
+  }
+ },
+ "7d0b_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7d0c_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7d0d_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7dcc_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "E": {
+    "radial": 50.5,
+    "state": "up"
+   },
+   "I": {
+    "radial": 44.2,
+    "state": "up"
+   },
+   "K": {
+    "radial": 42.7,
+    "state": "up"
+   }
+  }
+ },
+ "7dcx_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "D": {
+    "radial": 33.6,
+    "state": "up"
+   },
+   "K": {
+    "radial": 40.9,
+    "state": "up"
+   },
+   "C": {
+    "radial": 45.7,
+    "state": "up"
+   }
+  }
+ },
+ "7dd2_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "C": {
+    "radial": 42.7,
+    "state": "up"
+   },
+   "D": {
+    "radial": 28.8,
+    "state": "down"
+   },
+   "K": {
+    "radial": 41.1,
+    "state": "up"
+   }
+  }
+ },
+ "7dd8_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7dk4_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 36.5,
+    "state": "up"
+   },
+   "B": {
+    "radial": 39.1,
+    "state": "up"
+   },
+   "C": {
+    "radial": 26.0,
+    "state": "down"
+   }
+  }
+ },
+ "7dk5_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7dk6_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7dk7_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 35.5,
+    "state": "up"
+   },
+   "B": {
+    "radial": 33.6,
+    "state": "up"
+   },
+   "C": {
+    "radial": 31.7,
+    "state": "up"
+   }
+  }
+ },
+ "7e3k_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 39.3,
+    "state": "up"
+   },
+   "B": {
+    "radial": 36.5,
+    "state": "up"
+   },
+   "C": {
+    "radial": 41.1,
+    "state": "up"
+   }
+  }
+ },
+ "7e3l_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 38.5,
+    "state": "up"
+   },
+   "B": {
+    "radial": 36.6,
+    "state": "up"
+   },
+   "C": {
+    "radial": 40.1,
+    "state": "up"
+   }
+  }
+ },
+ "7e5r_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 45.6,
+    "state": "up"
+   },
+   "B": {
+    "radial": 45.5,
+    "state": "up"
+   },
+   "C": {
+    "radial": 45.3,
+    "state": "up"
+   }
+  }
+ },
+ "7e5s_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 24.5,
+    "state": "down"
+   },
+   "B": {
+    "radial": 42.1,
+    "state": "up"
+   },
+   "C": {
+    "radial": 44.1,
+    "state": "up"
+   }
+  }
+ },
+ "7e8c_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 42.8,
+    "state": "up"
+   },
+   "B": {
+    "radial": 40.7,
+    "state": "up"
+   },
+   "C": {
+    "radial": 41.4,
+    "state": "up"
+   }
+  }
+ },
+ "7e9n_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "B": {
+    "radial": 32.2,
+    "state": "up"
+   },
+   "A": {
+    "radial": 24.1,
+    "state": "down"
+   },
+   "C": {
+    "radial": 29.1,
+    "state": "down"
+   }
+  }
+ },
+ "7e9o_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "B": {
+    "radial": 38.8,
+    "state": "up"
+   },
+   "A": {
+    "radial": 34.6,
+    "state": "up"
+   },
+   "C": {
+    "radial": 34.3,
+    "state": "up"
+   }
+  }
+ },
+ "7e9q_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "B": {
+    "radial": 43.2,
+    "state": "up"
+   },
+   "A": {
+    "radial": 41.7,
+    "state": "up"
+   },
+   "C": {
+    "radial": 33.6,
+    "state": "up"
+   }
+  }
+ },
+ "7eh5_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 44.1,
+    "state": "up"
+   },
+   "B": {
+    "radial": 44.2,
+    "state": "up"
+   },
+   "C": {
+    "radial": 44.2,
+    "state": "up"
+   }
+  }
+ },
+ "7ej4_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 41.1,
+    "state": "up"
+   },
+   "B": {
+    "radial": 27.5,
+    "state": "down"
+   },
+   "C": {
+    "radial": 39.8,
+    "state": "up"
+   }
+  }
+ },
+ "7ej5_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 41.7,
+    "state": "up"
+   },
+   "B": {
+    "radial": 47.0,
+    "state": "up"
+   },
+   "C": {
+    "radial": 44.6,
+    "state": "up"
+   }
+  }
+ },
+ "7enf_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7epx_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7fae_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 29.6,
+    "state": "down"
+   },
+   "B": {
+    "radial": 34.5,
+    "state": "up"
+   },
+   "C": {
+    "radial": 23.4,
+    "state": "down"
+   }
+  }
+ },
+ "7faf_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 26.1,
+    "state": "down"
+   },
+   "B": {
+    "radial": 18.1,
+    "state": "down"
+   },
+   "C": {
+    "radial": 24.5,
+    "state": "down"
+   }
+  }
+ },
+ "7fjo_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 40.2,
+    "state": "up"
+   },
+   "B": {
+    "radial": 39.7,
+    "state": "up"
+   },
+   "C": {
+    "radial": 40.5,
+    "state": "up"
+   }
+  }
+ },
+ "7jv4_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 20.8,
+    "state": "down"
+   },
+   "B": {
+    "radial": 33.3,
+    "state": "up"
+   },
+   "C": {
+    "radial": 27.1,
+    "state": "down"
+   }
+  }
+ },
+ "7jv6_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7jvc_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 44.9,
+    "state": "up"
+   },
+   "B": {
+    "radial": 44.9,
+    "state": "up"
+   },
+   "E": {
+    "radial": 44.9,
+    "state": "up"
+   }
+  }
+ },
+ "7jw0_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 49.5,
+    "state": "up"
+   },
+   "B": {
+    "radial": 49.5,
+    "state": "up"
+   },
+   "E": {
+    "radial": 49.5,
+    "state": "up"
+   }
+  }
+ },
+ "7jwb_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 24.9,
+    "state": "down"
+   },
+   "B": {
+    "radial": 32.2,
+    "state": "up"
+   },
+   "C": {
+    "radial": 36.7,
+    "state": "up"
+   }
+  }
+ },
+ "7k43_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 19.1,
+    "state": "down"
+   },
+   "B": {
+    "radial": 19.1,
+    "state": "down"
+   },
+   "E": {
+    "radial": 19.1,
+    "state": "down"
+   }
+  }
+ },
+ "7k4n_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 36.6,
+    "state": "up"
+   },
+   "B": {
+    "radial": 36.6,
+    "state": "up"
+   },
+   "E": {
+    "radial": 36.6,
+    "state": "up"
+   }
+  }
+ },
+ "7k8s_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 20.0,
+    "state": "down"
+   },
+   "B": {
+    "radial": 20.7,
+    "state": "down"
+   },
+   "C": {
+    "radial": 20.7,
+    "state": "down"
+   }
+  }
+ },
+ "7k8t_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 25.4,
+    "state": "down"
+   },
+   "B": {
+    "radial": 32.3,
+    "state": "up"
+   },
+   "C": {
+    "radial": 22.3,
+    "state": "down"
+   }
+  }
+ },
+ "7k8v_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7k8w_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 18.4,
+    "state": "down"
+   },
+   "B": {
+    "radial": 29.5,
+    "state": "down"
+   },
+   "G": {
+    "radial": 24.3,
+    "state": "down"
+   }
+  }
+ },
+ "7k8x_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 28.5,
+    "state": "down"
+   },
+   "B": {
+    "radial": 22.0,
+    "state": "down"
+   },
+   "C": {
+    "radial": 35.0,
+    "state": "up"
+   }
+  }
+ },
+ "7k8y_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7k8z_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7k90_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 21.3,
+    "state": "down"
+   },
+   "B": {
+    "radial": 21.3,
+    "state": "down"
+   },
+   "C": {
+    "radial": 21.3,
+    "state": "down"
+   }
+  }
+ },
+ "7k9h_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 38.4,
+    "state": "up"
+   },
+   "B": {
+    "radial": 20.9,
+    "state": "down"
+   },
+   "C": {
+    "radial": 26.3,
+    "state": "down"
+   }
+  }
+ },
+ "7k9j_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 21.0,
+    "state": "down"
+   },
+   "B": {
+    "radial": 20.9,
+    "state": "down"
+   },
+   "C": {
+    "radial": 20.8,
+    "state": "down"
+   }
+  }
+ },
+ "7kkk_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 20.7,
+    "state": "down"
+   },
+   "C": {
+    "radial": 20.7,
+    "state": "down"
+   },
+   "E": {
+    "radial": 20.7,
+    "state": "down"
+   }
+  }
+ },
+ "7kkl_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 22.8,
+    "state": "down"
+   },
+   "C": {
+    "radial": 22.8,
+    "state": "down"
+   },
+   "D": {
+    "radial": 22.8,
+    "state": "down"
+   }
+  }
+ },
+ "7kmk_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7kml_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 40.3,
+    "state": "up"
+   },
+   "B": {
+    "radial": 40.3,
+    "state": "up"
+   },
+   "C": {
+    "radial": 40.3,
+    "state": "up"
+   }
+  }
+ },
+ "7kqb_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7kqe_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 45.5,
+    "state": "up"
+   },
+   "B": {
+    "radial": 43.9,
+    "state": "up"
+   },
+   "C": {
+    "radial": 48.1,
+    "state": "up"
+   }
+  }
+ },
+ "7ks9_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7ksg_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 34.4,
+    "state": "up"
+   },
+   "B": {
+    "radial": 30.9,
+    "state": "up"
+   },
+   "C": {
+    "radial": 33.4,
+    "state": "up"
+   }
+  }
+ },
+ "7kxj_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 35.3,
+    "state": "up"
+   },
+   "B": {
+    "radial": 42.5,
+    "state": "up"
+   },
+   "C": {
+    "radial": 37.0,
+    "state": "up"
+   }
+  }
+ },
+ "7kxk_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 42.0,
+    "state": "up"
+   },
+   "B": {
+    "radial": 44.5,
+    "state": "up"
+   },
+   "C": {
+    "radial": 23.6,
+    "state": "down"
+   }
+  }
+ },
+ "7l02_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7l06_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7l09_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7l2d_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7l2e_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 18.2,
+    "state": "down"
+   },
+   "B": {
+    "radial": 18.2,
+    "state": "down"
+   },
+   "C": {
+    "radial": 18.2,
+    "state": "down"
+   }
+  }
+ },
+ "7l2f_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 19.1,
+    "state": "down"
+   },
+   "B": {
+    "radial": 18.2,
+    "state": "down"
+   },
+   "C": {
+    "radial": 18.6,
+    "state": "down"
+   }
+  }
+ },
+ "7l3n_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7l56_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 22.4,
+    "state": "down"
+   },
+   "B": {
+    "radial": 23.5,
+    "state": "down"
+   },
+   "C": {
+    "radial": 22.4,
+    "state": "down"
+   }
+  }
+ },
+ "7l57_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7laa_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7lab_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 19.7,
+    "state": "down"
+   },
+   "B": {
+    "radial": 20.5,
+    "state": "down"
+   },
+   "C": {
+    "radial": 19.4,
+    "state": "down"
+   }
+  }
+ },
+ "7lcn_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "C": {
+    "radial": 19.8,
+    "state": "down"
+   },
+   "A": {
+    "radial": 19.5,
+    "state": "down"
+   },
+   "K": {
+    "radial": 21.0,
+    "state": "down"
+   }
+  }
+ },
+ "7ld1_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 38.4,
+    "state": "up"
+   },
+   "B": {
+    "radial": 38.3,
+    "state": "up"
+   },
+   "C": {
+    "radial": 38.0,
+    "state": "up"
+   }
+  }
+ },
+ "7ljr_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7lq7_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 31.2,
+    "state": "up"
+   },
+   "B": {
+    "radial": 30.2,
+    "state": "up"
+   },
+   "E": {
+    "radial": 1.3,
+    "state": "down"
+   }
+  }
+ },
+ "7lqv_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 17.7,
+    "state": "down"
+   },
+   "B": {
+    "radial": 26.7,
+    "state": "down"
+   },
+   "C": {
+    "radial": 24.0,
+    "state": "down"
+   }
+  }
+ },
+ "7lrt_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 38.3,
+    "state": "up"
+   },
+   "B": {
+    "radial": 43.4,
+    "state": "up"
+   },
+   "C": {
+    "radial": 39.5,
+    "state": "up"
+   }
+  }
+ },
+ "7ls9_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 18.3,
+    "state": "down"
+   },
+   "B": {
+    "radial": 18.3,
+    "state": "down"
+   },
+   "C": {
+    "radial": 18.3,
+    "state": "down"
+   }
+  }
+ },
+ "7lss_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7lxy_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 19.0,
+    "state": "down"
+   },
+   "B": {
+    "radial": 19.0,
+    "state": "down"
+   },
+   "J": {
+    "radial": 19.0,
+    "state": "down"
+   }
+  }
+ },
+ "7lxz_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 19.1,
+    "state": "down"
+   },
+   "B": {
+    "radial": 19.1,
+    "state": "down"
+   },
+   "K": {
+    "radial": 19.1,
+    "state": "down"
+   }
+  }
+ },
+ "7ly2_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 19.0,
+    "state": "down"
+   },
+   "B": {
+    "radial": 19.0,
+    "state": "down"
+   },
+   "J": {
+    "radial": 19.0,
+    "state": "down"
+   }
+  }
+ },
+ "7m6e_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 19.8,
+    "state": "down"
+   },
+   "B": {
+    "radial": 19.9,
+    "state": "down"
+   },
+   "E": {
+    "radial": 19.9,
+    "state": "down"
+   }
+  }
+ },
+ "7m6f_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7m6g_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7m6h_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 30.2,
+    "state": "up"
+   },
+   "B": {
+    "radial": 23.7,
+    "state": "down"
+   },
+   "C": {
+    "radial": 33.2,
+    "state": "up"
+   }
+  }
+ },
+ "7m6i_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 26.1,
+    "state": "down"
+   },
+   "B": {
+    "radial": 30.3,
+    "state": "up"
+   },
+   "C": {
+    "radial": 20.8,
+    "state": "down"
+   }
+  }
+ },
+ "7mjh_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 33.8,
+    "state": "up"
+   },
+   "B": {
+    "radial": 26.9,
+    "state": "down"
+   },
+   "C": {
+    "radial": 20.5,
+    "state": "down"
+   }
+  }
+ },
+ "7mjj_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7mjk_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 39.9,
+    "state": "up"
+   },
+   "B": {
+    "radial": 39.9,
+    "state": "up"
+   },
+   "C": {
+    "radial": 39.9,
+    "state": "up"
+   }
+  }
+ },
+ "7mkl_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7mm0_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7mw2_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 21.2,
+    "state": "down"
+   },
+   "C": {
+    "radial": 21.2,
+    "state": "down"
+   },
+   "B": {
+    "radial": 21.2,
+    "state": "down"
+   }
+  }
+ },
+ "7mw3_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "C": {
+    "radial": 35.4,
+    "state": "up"
+   },
+   "B": {
+    "radial": 29.4,
+    "state": "down"
+   },
+   "A": {
+    "radial": 22.1,
+    "state": "down"
+   }
+  }
+ },
+ "7mw4_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "C": {
+    "radial": 36.6,
+    "state": "up"
+   },
+   "A": {
+    "radial": 25.4,
+    "state": "down"
+   },
+   "B": {
+    "radial": 38.1,
+    "state": "up"
+   }
+  }
+ },
+ "7mw5_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "C": {
+    "radial": 39.3,
+    "state": "up"
+   },
+   "B": {
+    "radial": 41.0,
+    "state": "up"
+   },
+   "A": {
+    "radial": 27.8,
+    "state": "down"
+   }
+  }
+ },
+ "7mw6_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 39.7,
+    "state": "up"
+   },
+   "C": {
+    "radial": 36.3,
+    "state": "up"
+   },
+   "B": {
+    "radial": 36.5,
+    "state": "up"
+   }
+  }
+ },
+ "7mxp_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 20.1,
+    "state": "down"
+   },
+   "B": {
+    "radial": 21.1,
+    "state": "down"
+   },
+   "C": {
+    "radial": 19.7,
+    "state": "down"
+   }
+  }
+ },
+ "7my2_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "B": {
+    "radial": 37.1,
+    "state": "up"
+   },
+   "C": {
+    "radial": 40.9,
+    "state": "up"
+   },
+   "E": {
+    "radial": 41.9,
+    "state": "up"
+   }
+  }
+ },
+ "7my3_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 27.6,
+    "state": "down"
+   },
+   "C": {
+    "radial": 38.6,
+    "state": "up"
+   },
+   "B": {
+    "radial": 30.6,
+    "state": "up"
+   }
+  }
+ },
+ "7n0g_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 27.8,
+    "state": "down"
+   },
+   "B": {
+    "radial": 24.8,
+    "state": "down"
+   },
+   "C": {
+    "radial": 19.2,
+    "state": "down"
+   }
+  }
+ },
+ "7n0h_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7n5h_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 44.1,
+    "state": "up"
+   },
+   "B": {
+    "radial": 45.4,
+    "state": "up"
+   },
+   "C": {
+    "radial": 45.1,
+    "state": "up"
+   }
+  }
+ },
+ "7n8h_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 19.3,
+    "state": "down"
+   },
+   "F": {
+    "radial": 19.3,
+    "state": "down"
+   },
+   "K": {
+    "radial": 19.3,
+    "state": "down"
+   }
+  }
+ },
+ "7n9b_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 20.8,
+    "state": "down"
+   },
+   "B": {
+    "radial": 23.4,
+    "state": "down"
+   },
+   "C": {
+    "radial": 22.4,
+    "state": "down"
+   }
+  }
+ },
+ "7n9c_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7n9e_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7n9t_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 45.9,
+    "state": "up"
+   },
+   "B": {
+    "radial": 46.0,
+    "state": "up"
+   },
+   "C": {
+    "radial": 45.8,
+    "state": "up"
+   }
+  }
+ },
+ "7nd3_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7nd4_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 37.3,
+    "state": "up"
+   },
+   "B": {
+    "radial": 37.4,
+    "state": "up"
+   },
+   "C": {
+    "radial": 37.3,
+    "state": "up"
+   }
+  }
+ },
+ "7nd5_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7nd6_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7nd7_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 22.2,
+    "state": "down"
+   },
+   "B": {
+    "radial": 22.3,
+    "state": "down"
+   },
+   "C": {
+    "radial": 22.3,
+    "state": "down"
+   }
+  }
+ },
+ "7nd8_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7nd9_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7nda_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7ndb_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7ndc_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 20.4,
+    "state": "down"
+   },
+   "B": {
+    "radial": 20.4,
+    "state": "down"
+   },
+   "C": {
+    "radial": 20.4,
+    "state": "down"
+   }
+  }
+ },
+ "7ndd_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 19.1,
+    "state": "down"
+   },
+   "B": {
+    "radial": 26.3,
+    "state": "down"
+   },
+   "C": {
+    "radial": 24.4,
+    "state": "down"
+   }
+  }
+ },
+ "7ntc_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7oan_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 20.8,
+    "state": "down"
+   },
+   "B": {
+    "radial": 20.8,
+    "state": "down"
+   },
+   "C": {
+    "radial": 20.8,
+    "state": "down"
+   }
+  }
+ },
+ "7p40_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 36.8,
+    "state": "up"
+   },
+   "E": {
+    "radial": 36.9,
+    "state": "up"
+   },
+   "G": {
+    "radial": 36.8,
+    "state": "up"
+   }
+  }
+ },
+ "7p77_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "B": {
+    "radial": 37.0,
+    "state": "up"
+   },
+   "C": {
+    "radial": 39.2,
+    "state": "up"
+   },
+   "E": {
+    "radial": 39.1,
+    "state": "up"
+   }
+  }
+ },
+ "7p78_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "C": {
+    "radial": 37.9,
+    "state": "up"
+   },
+   "E": {
+    "radial": 41.1,
+    "state": "up"
+   },
+   "A": {
+    "radial": 25.0,
+    "state": "down"
+   }
+  }
+ },
+ "7p79_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "C": {
+    "radial": 38.1,
+    "state": "up"
+   },
+   "E": {
+    "radial": 40.8,
+    "state": "up"
+   },
+   "A": {
+    "radial": 25.0,
+    "state": "down"
+   }
+  }
+ },
+ "7p7a_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7q0a_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7q6e_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 21.3,
+    "state": "down"
+   },
+   "B": {
+    "radial": 23.5,
+    "state": "down"
+   },
+   "C": {
+    "radial": 21.7,
+    "state": "down"
+   }
+  }
+ },
+ "7q9f_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 23.3,
+    "state": "down"
+   },
+   "B": {
+    "radial": 22.0,
+    "state": "down"
+   },
+   "C": {
+    "radial": 21.9,
+    "state": "down"
+   }
+  }
+ },
+ "7q9g_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7q9i_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 19.4,
+    "state": "down"
+   },
+   "B": {
+    "radial": 27.2,
+    "state": "down"
+   },
+   "C": {
+    "radial": 26.2,
+    "state": "down"
+   }
+  }
+ },
+ "7q9j_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 37.3,
+    "state": "up"
+   },
+   "B": {
+    "radial": 36.1,
+    "state": "up"
+   },
+   "C": {
+    "radial": 40.3,
+    "state": "up"
+   }
+  }
+ },
+ "7q9k_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7q9m_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 26.4,
+    "state": "down"
+   },
+   "B": {
+    "radial": 26.0,
+    "state": "down"
+   },
+   "C": {
+    "radial": 18.6,
+    "state": "down"
+   }
+  }
+ },
+ "7q9p_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "B": {
+    "radial": 39.1,
+    "state": "up"
+   },
+   "C": {
+    "radial": 24.3,
+    "state": "down"
+   },
+   "A": {
+    "radial": 39.2,
+    "state": "up"
+   }
+  }
+ },
+ "7r40_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 41.3,
+    "state": "up"
+   },
+   "B": {
+    "radial": 41.3,
+    "state": "up"
+   },
+   "C": {
+    "radial": 41.3,
+    "state": "up"
+   }
+  }
+ },
+ "7r4i_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7r4q_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7r4r_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7r8m_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7r8n_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 21.7,
+    "state": "down"
+   },
+   "B": {
+    "radial": 21.7,
+    "state": "down"
+   },
+   "E": {
+    "radial": 21.7,
+    "state": "down"
+   }
+  }
+ },
+ "7r8o_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 19.3,
+    "state": "down"
+   },
+   "B": {
+    "radial": 19.2,
+    "state": "down"
+   },
+   "E": {
+    "radial": 19.3,
+    "state": "down"
+   }
+  }
+ },
+ "7ra8_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 40.7,
+    "state": "up"
+   },
+   "B": {
+    "radial": 40.7,
+    "state": "up"
+   },
+   "E": {
+    "radial": 40.7,
+    "state": "up"
+   }
+  }
+ },
+ "7rbv_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 21.4,
+    "state": "down"
+   },
+   "B": {
+    "radial": 21.5,
+    "state": "down"
+   },
+   "C": {
+    "radial": 21.3,
+    "state": "down"
+   }
+  }
+ },
+ "7rkv_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 46.4,
+    "state": "up"
+   },
+   "B": {
+    "radial": 46.3,
+    "state": "up"
+   },
+   "C": {
+    "radial": 46.4,
+    "state": "up"
+   }
+  }
+ },
+ "7rq6_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 20.4,
+    "state": "down"
+   },
+   "B": {
+    "radial": 20.4,
+    "state": "down"
+   },
+   "C": {
+    "radial": 20.4,
+    "state": "down"
+   }
+  }
+ },
+ "7ru3_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7ru5_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7rw2_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 18.6,
+    "state": "down"
+   },
+   "B": {
+    "radial": 18.6,
+    "state": "down"
+   },
+   "C": {
+    "radial": 18.6,
+    "state": "down"
+   }
+  }
+ },
+ "7s0c_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7s0d_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 29.1,
+    "state": "down"
+   },
+   "B": {
+    "radial": 23.3,
+    "state": "down"
+   },
+   "C": {
+    "radial": 18.1,
+    "state": "down"
+   }
+  }
+ },
+ "7s6j_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 22.5,
+    "state": "down"
+   },
+   "B": {
+    "radial": 22.5,
+    "state": "down"
+   },
+   "E": {
+    "radial": 22.5,
+    "state": "down"
+   }
+  }
+ },
+ "7s6k_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 22.9,
+    "state": "down"
+   },
+   "B": {
+    "radial": 22.9,
+    "state": "down"
+   },
+   "E": {
+    "radial": 22.9,
+    "state": "down"
+   }
+  }
+ },
+ "7s6l_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7sc1_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 40.6,
+    "state": "up"
+   },
+   "B": {
+    "radial": 40.5,
+    "state": "up"
+   },
+   "C": {
+    "radial": 40.6,
+    "state": "up"
+   }
+  }
+ },
+ "7sn3_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 39.5,
+    "state": "up"
+   },
+   "B": {
+    "radial": 38.0,
+    "state": "up"
+   },
+   "C": {
+    "radial": 35.9,
+    "state": "up"
+   }
+  }
+ },
+ "7so9_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 19.4,
+    "state": "down"
+   },
+   "F": {
+    "radial": 19.4,
+    "state": "down"
+   },
+   "K": {
+    "radial": 19.4,
+    "state": "down"
+   }
+  }
+ },
+ "7sob_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 22.3,
+    "state": "down"
+   },
+   "D": {
+    "radial": 22.3,
+    "state": "down"
+   },
+   "K": {
+    "radial": 22.3,
+    "state": "down"
+   }
+  }
+ },
+ "7soe_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 21.2,
+    "state": "down"
+   },
+   "C": {
+    "radial": 21.2,
+    "state": "down"
+   },
+   "F": {
+    "radial": 21.2,
+    "state": "down"
+   }
+  }
+ },
+ "7swx_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7t3m_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 45.0,
+    "state": "up"
+   },
+   "C": {
+    "radial": 45.0,
+    "state": "up"
+   },
+   "G": {
+    "radial": 45.0,
+    "state": "up"
+   }
+  }
+ },
+ "7t5o_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7tat_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7tb8_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 36.6,
+    "state": "up"
+   },
+   "B": {
+    "radial": 23.9,
+    "state": "down"
+   },
+   "C": {
+    "radial": 30.9,
+    "state": "up"
+   }
+  }
+ },
+ "7tca_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7tcc_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 39.3,
+    "state": "up"
+   },
+   "B": {
+    "radial": 36.2,
+    "state": "up"
+   },
+   "C": {
+    "radial": 38.3,
+    "state": "up"
+   }
+  }
+ },
+ "7tht_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "S": {
+    "radial": 20.6,
+    "state": "down"
+   },
+   "V": {
+    "radial": 28.7,
+    "state": "down"
+   },
+   "C": {
+    "radial": 25.3,
+    "state": "down"
+   }
+  }
+ },
+ "7tm0_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 28.0,
+    "state": "down"
+   },
+   "B": {
+    "radial": 30.7,
+    "state": "up"
+   },
+   "C": {
+    "radial": 18.2,
+    "state": "down"
+   }
+  }
+ },
+ "7tpr_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 22.7,
+    "state": "down"
+   },
+   "B": {
+    "radial": 29.6,
+    "state": "down"
+   },
+   "C": {
+    "radial": 39.1,
+    "state": "up"
+   }
+  }
+ },
+ "7u0p_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7u0q_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7u0x_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 47.6,
+    "state": "up"
+   },
+   "B": {
+    "radial": 44.5,
+    "state": "up"
+   },
+   "C": {
+    "radial": 49.6,
+    "state": "up"
+   }
+  }
+ },
+ "7uap_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 18.2,
+    "state": "down"
+   },
+   "B": {
+    "radial": 18.1,
+    "state": "down"
+   },
+   "C": {
+    "radial": 19.4,
+    "state": "down"
+   }
+  }
+ },
+ "7uar_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 27.2,
+    "state": "down"
+   },
+   "B": {
+    "radial": 23.7,
+    "state": "down"
+   },
+   "C": {
+    "radial": 19.0,
+    "state": "down"
+   }
+  }
+ },
+ "7ukl_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "B": {
+    "radial": 21.1,
+    "state": "down"
+   },
+   "C": {
+    "radial": 19.2,
+    "state": "down"
+   },
+   "A": {
+    "radial": 20.6,
+    "state": "down"
+   }
+  }
+ },
+ "7ukm_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "B": {
+    "radial": 20.6,
+    "state": "down"
+   },
+   "A": {
+    "radial": 21.2,
+    "state": "down"
+   },
+   "C": {
+    "radial": 20.3,
+    "state": "down"
+   }
+  }
+ },
+ "7uow_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7upl_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7upw_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 21.5,
+    "state": "down"
+   },
+   "B": {
+    "radial": 21.6,
+    "state": "down"
+   },
+   "C": {
+    "radial": 21.6,
+    "state": "down"
+   }
+  }
+ },
+ "7upy_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 27.5,
+    "state": "down"
+   },
+   "B": {
+    "radial": 26.5,
+    "state": "down"
+   },
+   "C": {
+    "radial": 18.1,
+    "state": "down"
+   }
+  }
+ },
+ "7uz4_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 47.4,
+    "state": "up"
+   },
+   "B": {
+    "radial": 46.5,
+    "state": "up"
+   },
+   "C": {
+    "radial": 49.5,
+    "state": "up"
+   }
+  }
+ },
+ "7uz5_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7uz6_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 21.4,
+    "state": "down"
+   },
+   "B": {
+    "radial": 21.4,
+    "state": "down"
+   },
+   "C": {
+    "radial": 21.1,
+    "state": "down"
+   }
+  }
+ },
+ "7uz7_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 51.4,
+    "state": "up"
+   },
+   "B": {
+    "radial": 51.5,
+    "state": "up"
+   },
+   "C": {
+    "radial": 51.2,
+    "state": "up"
+   }
+  }
+ },
+ "7uz8_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 50.5,
+    "state": "up"
+   },
+   "B": {
+    "radial": 50.5,
+    "state": "up"
+   },
+   "C": {
+    "radial": 50.5,
+    "state": "up"
+   }
+  }
+ },
+ "7uz9_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 52.4,
+    "state": "up"
+   },
+   "B": {
+    "radial": 51.6,
+    "state": "up"
+   },
+   "C": {
+    "radial": 44.0,
+    "state": "up"
+   }
+  }
+ },
+ "7uza_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7v23_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 29.3,
+    "state": "down"
+   },
+   "B": {
+    "radial": 23.8,
+    "state": "down"
+   },
+   "C": {
+    "radial": 19.2,
+    "state": "down"
+   }
+  }
+ },
+ "7v26_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 22.7,
+    "state": "down"
+   },
+   "C": {
+    "radial": 28.6,
+    "state": "down"
+   },
+   "E": {
+    "radial": 33.8,
+    "state": "up"
+   }
+  }
+ },
+ "7v2a_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 20.2,
+    "state": "down"
+   },
+   "B": {
+    "radial": 20.2,
+    "state": "down"
+   },
+   "C": {
+    "radial": 20.2,
+    "state": "down"
+   }
+  }
+ },
+ "7vnc_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7vnd_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7vne_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "C": {
+    "radial": 35.6,
+    "state": "up"
+   },
+   "A": {
+    "radial": 35.9,
+    "state": "up"
+   },
+   "B": {
+    "radial": 33.8,
+    "state": "up"
+   }
+  }
+ },
+ "7vq0_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 22.6,
+    "state": "down"
+   },
+   "B": {
+    "radial": 28.0,
+    "state": "down"
+   },
+   "C": {
+    "radial": 31.1,
+    "state": "up"
+   }
+  }
+ },
+ "7w9e_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7wcd_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "H": {
+    "radial": 19.4,
+    "state": "down"
+   },
+   "J": {
+    "radial": 19.4,
+    "state": "down"
+   },
+   "C": {
+    "radial": 19.4,
+    "state": "down"
+   }
+  }
+ },
+ "7wch_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 37.3,
+    "state": "up"
+   },
+   "B": {
+    "radial": 35.5,
+    "state": "up"
+   },
+   "G": {
+    "radial": 35.5,
+    "state": "up"
+   }
+  }
+ },
+ "7wcp_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 39.3,
+    "state": "up"
+   },
+   "B": {
+    "radial": 40.3,
+    "state": "up"
+   },
+   "C": {
+    "radial": 39.5,
+    "state": "up"
+   }
+  }
+ },
+ "7wcz_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7wd0_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7wd7_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 39.6,
+    "state": "up"
+   },
+   "B": {
+    "radial": 44.1,
+    "state": "up"
+   },
+   "C": {
+    "radial": 43.3,
+    "state": "up"
+   }
+  }
+ },
+ "7wd9_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 28.3,
+    "state": "down"
+   },
+   "C": {
+    "radial": 26.0,
+    "state": "down"
+   },
+   "B": {
+    "radial": 20.4,
+    "state": "down"
+   }
+  }
+ },
+ "7wdf_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7we7_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "D": {
+    "radial": 16.8,
+    "state": "down"
+   },
+   "E": {
+    "radial": 25.7,
+    "state": "down"
+   },
+   "G": {
+    "radial": 27.6,
+    "state": "down"
+   }
+  }
+ },
+ "7we8_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7we9_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 32.3,
+    "state": "up"
+   },
+   "B": {
+    "radial": 20.9,
+    "state": "down"
+   },
+   "F": {
+    "radial": 40.9,
+    "state": "up"
+   }
+  }
+ },
+ "7wea_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7web_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7wec_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 22.1,
+    "state": "down"
+   },
+   "B": {
+    "radial": 22.5,
+    "state": "down"
+   },
+   "C": {
+    "radial": 22.9,
+    "state": "down"
+   }
+  }
+ },
+ "7whb_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 37.7,
+    "state": "up"
+   },
+   "B": {
+    "radial": 37.8,
+    "state": "up"
+   },
+   "C": {
+    "radial": 37.7,
+    "state": "up"
+   }
+  }
+ },
+ "7whd_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 35.3,
+    "state": "up"
+   },
+   "B": {
+    "radial": 24.0,
+    "state": "down"
+   },
+   "C": {
+    "radial": 37.1,
+    "state": "up"
+   }
+  }
+ },
+ "7whi_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 39.0,
+    "state": "up"
+   },
+   "B": {
+    "radial": 21.6,
+    "state": "down"
+   },
+   "C": {
+    "radial": 39.8,
+    "state": "up"
+   }
+  }
+ },
+ "7whk_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 39.2,
+    "state": "up"
+   },
+   "B": {
+    "radial": 27.0,
+    "state": "down"
+   },
+   "C": {
+    "radial": 48.3,
+    "state": "up"
+   }
+  }
+ },
+ "7wjy_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7wk9_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7wka_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7wly_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7wlz_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7wo5_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 47.7,
+    "state": "up"
+   },
+   "B": {
+    "radial": 43.6,
+    "state": "up"
+   },
+   "C": {
+    "radial": 46.4,
+    "state": "up"
+   }
+  }
+ },
+ "7woa_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7wob_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 23.2,
+    "state": "down"
+   },
+   "C": {
+    "radial": 30.7,
+    "state": "up"
+   },
+   "E": {
+    "radial": 34.4,
+    "state": "up"
+   }
+  }
+ },
+ "7woq_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7wor_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7wos_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 29.7,
+    "state": "down"
+   },
+   "B": {
+    "radial": 37.5,
+    "state": "up"
+   },
+   "C": {
+    "radial": 38.0,
+    "state": "up"
+   }
+  }
+ },
+ "7wou_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7wov_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 42.5,
+    "state": "up"
+   },
+   "B": {
+    "radial": 39.8,
+    "state": "up"
+   },
+   "C": {
+    "radial": 42.2,
+    "state": "up"
+   }
+  }
+ },
+ "7wow_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 42.5,
+    "state": "up"
+   },
+   "B": {
+    "radial": 39.8,
+    "state": "up"
+   },
+   "C": {
+    "radial": 42.2,
+    "state": "up"
+   }
+  }
+ },
+ "7wow_2": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "J": {
+    "radial": 42.5,
+    "state": "up"
+   },
+   "K": {
+    "radial": 39.8,
+    "state": "up"
+   },
+   "L": {
+    "radial": 42.2,
+    "state": "up"
+   }
+  }
+ },
+ "7wpd_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7wpe_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7wpf_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 28.8,
+    "state": "down"
+   },
+   "B": {
+    "radial": 34.5,
+    "state": "up"
+   },
+   "C": {
+    "radial": 21.4,
+    "state": "down"
+   }
+  }
+ },
+ "7ws0_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 22.3,
+    "state": "down"
+   },
+   "B": {
+    "radial": 22.9,
+    "state": "down"
+   },
+   "C": {
+    "radial": 21.9,
+    "state": "down"
+   }
+  }
+ },
+ "7ws1_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 19.0,
+    "state": "down"
+   },
+   "B": {
+    "radial": 27.8,
+    "state": "down"
+   },
+   "C": {
+    "radial": 27.4,
+    "state": "down"
+   }
+  }
+ },
+ "7ws3_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 21.9,
+    "state": "down"
+   },
+   "B": {
+    "radial": 22.6,
+    "state": "down"
+   },
+   "C": {
+    "radial": 21.8,
+    "state": "down"
+   }
+  }
+ },
+ "7ws4_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7ws5_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 27.0,
+    "state": "down"
+   },
+   "B": {
+    "radial": 26.3,
+    "state": "down"
+   },
+   "C": {
+    "radial": 17.8,
+    "state": "down"
+   }
+  }
+ },
+ "7wt7_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7wt8_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7wtf_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "B": {
+    "radial": 35.8,
+    "state": "up"
+   },
+   "C": {
+    "radial": 39.4,
+    "state": "up"
+   },
+   "D": {
+    "radial": 38.0,
+    "state": "up"
+   }
+  }
+ },
+ "7wti_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 21.0,
+    "state": "down"
+   },
+   "B": {
+    "radial": 34.3,
+    "state": "up"
+   },
+   "C": {
+    "radial": 29.5,
+    "state": "down"
+   }
+  }
+ },
+ "7wtk_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "C": {
+    "radial": 28.6,
+    "state": "down"
+   },
+   "B": {
+    "radial": 22.7,
+    "state": "down"
+   },
+   "A": {
+    "radial": 37.9,
+    "state": "up"
+   }
+  }
+ },
+ "7wuh_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 37.5,
+    "state": "up"
+   },
+   "C": {
+    "radial": 37.0,
+    "state": "up"
+   },
+   "E": {
+    "radial": 36.6,
+    "state": "up"
+   }
+  }
+ },
+ "7wwi_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 24.3,
+    "state": "down"
+   },
+   "B": {
+    "radial": 22.0,
+    "state": "down"
+   },
+   "C": {
+    "radial": 17.8,
+    "state": "down"
+   }
+  }
+ },
+ "7wwj_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7wwl_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 23.8,
+    "state": "down"
+   },
+   "B": {
+    "radial": 23.2,
+    "state": "down"
+   },
+   "C": {
+    "radial": 23.4,
+    "state": "down"
+   }
+  }
+ },
+ "7wwm_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 37.1,
+    "state": "up"
+   },
+   "B": {
+    "radial": 28.9,
+    "state": "down"
+   },
+   "C": {
+    "radial": 26.4,
+    "state": "down"
+   }
+  }
+ },
+ "7x08_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 18.6,
+    "state": "down"
+   },
+   "B": {
+    "radial": 18.5,
+    "state": "down"
+   },
+   "C": {
+    "radial": 18.5,
+    "state": "down"
+   }
+  }
+ },
+ "7x6a_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 25.9,
+    "state": "down"
+   },
+   "B": {
+    "radial": 18.1,
+    "state": "down"
+   },
+   "D": {
+    "radial": 25.8,
+    "state": "down"
+   }
+  }
+ },
+ "7x7d_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "D": {
+    "radial": 12.0,
+    "state": "down"
+   },
+   "A": {
+    "radial": 7.0,
+    "state": "down"
+   },
+   "E": {
+    "radial": 19.0,
+    "state": "down"
+   }
+  }
+ },
+ "7x7e_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "C": {
+    "radial": 18.8,
+    "state": "down"
+   },
+   "D": {
+    "radial": 10.3,
+    "state": "down"
+   },
+   "F": {
+    "radial": 8.5,
+    "state": "down"
+   }
+  }
+ },
+ "7x93_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 3.7,
+    "state": "down"
+   },
+   "D": {
+    "radial": 17.2,
+    "state": "down"
+   },
+   "G": {
+    "radial": 13.7,
+    "state": "down"
+   }
+  }
+ },
+ "7xco_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 29.3,
+    "state": "down"
+   },
+   "B": {
+    "radial": 18.1,
+    "state": "down"
+   },
+   "C": {
+    "radial": 28.3,
+    "state": "down"
+   }
+  }
+ },
+ "7xd2_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 37.7,
+    "state": "up"
+   },
+   "B": {
+    "radial": 38.9,
+    "state": "up"
+   },
+   "C": {
+    "radial": 36.9,
+    "state": "up"
+   }
+  }
+ },
+ "7xdb_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 26.8,
+    "state": "down"
+   },
+   "C": {
+    "radial": 26.8,
+    "state": "down"
+   },
+   "B": {
+    "radial": 16.1,
+    "state": "down"
+   }
+  }
+ },
+ "7xdk_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 39.3,
+    "state": "up"
+   },
+   "B": {
+    "radial": 37.3,
+    "state": "up"
+   },
+   "C": {
+    "radial": 39.2,
+    "state": "up"
+   }
+  }
+ },
+ "7xdl_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 37.5,
+    "state": "up"
+   },
+   "B": {
+    "radial": 39.4,
+    "state": "up"
+   },
+   "C": {
+    "radial": 39.6,
+    "state": "up"
+   }
+  }
+ },
+ "7xic_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 43.9,
+    "state": "up"
+   },
+   "B": {
+    "radial": 41.3,
+    "state": "up"
+   },
+   "C": {
+    "radial": 38.5,
+    "state": "up"
+   }
+  }
+ },
+ "7xj6_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 27.5,
+    "state": "down"
+   },
+   "B": {
+    "radial": 26.7,
+    "state": "down"
+   },
+   "C": {
+    "radial": 17.5,
+    "state": "down"
+   }
+  }
+ },
+ "7xj8_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7xmx_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 43.9,
+    "state": "up"
+   },
+   "B": {
+    "radial": 41.2,
+    "state": "up"
+   },
+   "C": {
+    "radial": 43.1,
+    "state": "up"
+   }
+  }
+ },
+ "7xmz_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 37.2,
+    "state": "up"
+   },
+   "B": {
+    "radial": 33.3,
+    "state": "up"
+   },
+   "C": {
+    "radial": 37.6,
+    "state": "up"
+   }
+  }
+ },
+ "7xod_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 28.2,
+    "state": "down"
+   },
+   "B": {
+    "radial": 33.6,
+    "state": "up"
+   },
+   "C": {
+    "radial": 21.3,
+    "state": "down"
+   }
+  }
+ },
+ "7xst_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 34.8,
+    "state": "up"
+   },
+   "B": {
+    "radial": 39.5,
+    "state": "up"
+   },
+   "C": {
+    "radial": 44.5,
+    "state": "up"
+   }
+  }
+ },
+ "7xy3_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7xy4_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 23.5,
+    "state": "down"
+   },
+   "B": {
+    "radial": 19.5,
+    "state": "down"
+   },
+   "C": {
+    "radial": 24.7,
+    "state": "down"
+   }
+  }
+ },
+ "7y0n_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 37.0,
+    "state": "up"
+   },
+   "B": {
+    "radial": 37.0,
+    "state": "up"
+   },
+   "D": {
+    "radial": 37.0,
+    "state": "up"
+   }
+  }
+ },
+ "7y71_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7y7j_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7yc5_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 35.2,
+    "state": "up"
+   },
+   "B": {
+    "radial": 38.1,
+    "state": "up"
+   },
+   "C": {
+    "radial": 38.0,
+    "state": "up"
+   }
+  }
+ },
+ "7ycy_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 25.9,
+    "state": "down"
+   },
+   "B": {
+    "radial": 20.2,
+    "state": "down"
+   },
+   "C": {
+    "radial": 25.1,
+    "state": "down"
+   }
+  }
+ },
+ "7ycz_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 32.5,
+    "state": "up"
+   },
+   "B": {
+    "radial": 28.5,
+    "state": "down"
+   },
+   "C": {
+    "radial": 20.2,
+    "state": "down"
+   }
+  }
+ },
+ "7yd0_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 27.8,
+    "state": "down"
+   },
+   "B": {
+    "radial": 17.6,
+    "state": "down"
+   },
+   "C": {
+    "radial": 26.1,
+    "state": "down"
+   }
+  }
+ },
+ "7ydy_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7ye5_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 44.6,
+    "state": "up"
+   },
+   "B": {
+    "radial": 26.6,
+    "state": "down"
+   },
+   "C": {
+    "radial": 35.9,
+    "state": "up"
+   }
+  }
+ },
+ "7ye9_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 46.8,
+    "state": "up"
+   },
+   "B": {
+    "radial": 46.7,
+    "state": "up"
+   },
+   "C": {
+    "radial": 46.8,
+    "state": "up"
+   }
+  }
+ },
+ "7yh7_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 19.4,
+    "state": "down"
+   },
+   "B": {
+    "radial": 27.3,
+    "state": "down"
+   },
+   "C": {
+    "radial": 27.0,
+    "state": "down"
+   }
+  }
+ },
+ "7yqx_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7yqy_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 29.6,
+    "state": "down"
+   },
+   "B": {
+    "radial": 27.9,
+    "state": "down"
+   },
+   "C": {
+    "radial": 20.3,
+    "state": "down"
+   }
+  }
+ },
+ "7yqz_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7yr1_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 20.8,
+    "state": "down"
+   },
+   "B": {
+    "radial": 20.8,
+    "state": "down"
+   },
+   "C": {
+    "radial": 20.8,
+    "state": "down"
+   }
+  }
+ },
+ "7yve_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "C": {
+    "radial": 28.4,
+    "state": "down"
+   },
+   "B": {
+    "radial": 20.8,
+    "state": "down"
+   },
+   "A": {
+    "radial": 31.7,
+    "state": "up"
+   }
+  }
+ },
+ "7yvg_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 40.0,
+    "state": "up"
+   },
+   "B": {
+    "radial": 40.8,
+    "state": "up"
+   },
+   "C": {
+    "radial": 40.0,
+    "state": "up"
+   }
+  }
+ },
+ "7yvi_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "C": {
+    "radial": 26.1,
+    "state": "down"
+   },
+   "B": {
+    "radial": 16.9,
+    "state": "down"
+   },
+   "A": {
+    "radial": 25.0,
+    "state": "down"
+   }
+  }
+ },
+ "7yvk_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 32.5,
+    "state": "up"
+   },
+   "C": {
+    "radial": 28.6,
+    "state": "down"
+   },
+   "B": {
+    "radial": 21.4,
+    "state": "down"
+   }
+  }
+ },
+ "7yvn_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "C": {
+    "radial": 40.2,
+    "state": "up"
+   },
+   "B": {
+    "radial": 40.8,
+    "state": "up"
+   },
+   "A": {
+    "radial": 39.8,
+    "state": "up"
+   }
+  }
+ },
+ "7yvo_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7yvp_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "7zjl_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 26.9,
+    "state": "down"
+   },
+   "B": {
+    "radial": 27.2,
+    "state": "down"
+   },
+   "C": {
+    "radial": 20.1,
+    "state": "down"
+   }
+  }
+ },
+ "8a94_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 35.7,
+    "state": "up"
+   },
+   "B": {
+    "radial": 36.3,
+    "state": "up"
+   },
+   "C": {
+    "radial": 25.2,
+    "state": "down"
+   }
+  }
+ },
+ "8a95_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 32.0,
+    "state": "up"
+   },
+   "B": {
+    "radial": 27.3,
+    "state": "down"
+   },
+   "C": {
+    "radial": 21.5,
+    "state": "down"
+   }
+  }
+ },
+ "8a99_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 31.5,
+    "state": "up"
+   },
+   "B": {
+    "radial": 27.6,
+    "state": "down"
+   },
+   "C": {
+    "radial": 21.4,
+    "state": "down"
+   }
+  }
+ },
+ "8c2r_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8cin_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 19.6,
+    "state": "down"
+   },
+   "B": {
+    "radial": 19.6,
+    "state": "down"
+   },
+   "C": {
+    "radial": 19.6,
+    "state": "down"
+   }
+  }
+ },
+ "8csj_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 20.7,
+    "state": "down"
+   },
+   "B": {
+    "radial": 21.9,
+    "state": "down"
+   },
+   "C": {
+    "radial": 19.0,
+    "state": "down"
+   }
+  }
+ },
+ "8cxn_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 35.8,
+    "state": "up"
+   },
+   "B": {
+    "radial": 41.5,
+    "state": "up"
+   },
+   "C": {
+    "radial": 36.1,
+    "state": "up"
+   }
+  }
+ },
+ "8cxq_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 54.7,
+    "state": "up"
+   },
+   "B": {
+    "radial": 47.3,
+    "state": "up"
+   },
+   "C": {
+    "radial": 52.0,
+    "state": "up"
+   }
+  }
+ },
+ "8cy6_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 52.2,
+    "state": "up"
+   },
+   "B": {
+    "radial": 52.1,
+    "state": "up"
+   },
+   "C": {
+    "radial": 59.1,
+    "state": "up"
+   }
+  }
+ },
+ "8cy7_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 43.9,
+    "state": "up"
+   },
+   "B": {
+    "radial": 43.1,
+    "state": "up"
+   },
+   "C": {
+    "radial": 43.8,
+    "state": "up"
+   }
+  }
+ },
+ "8cy9_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 41.8,
+    "state": "up"
+   },
+   "B": {
+    "radial": 47.2,
+    "state": "up"
+   },
+   "C": {
+    "radial": 46.8,
+    "state": "up"
+   }
+  }
+ },
+ "8cya_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "B": {
+    "radial": 33.6,
+    "state": "up"
+   },
+   "A": {
+    "radial": 33.7,
+    "state": "up"
+   },
+   "C": {
+    "radial": 33.4,
+    "state": "up"
+   }
+  }
+ },
+ "8cyb_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8cyc_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 44.3,
+    "state": "up"
+   },
+   "B": {
+    "radial": 43.7,
+    "state": "up"
+   },
+   "C": {
+    "radial": 43.4,
+    "state": "up"
+   }
+  }
+ },
+ "8cyd_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 60.9,
+    "state": "up"
+   },
+   "B": {
+    "radial": 49.8,
+    "state": "up"
+   },
+   "C": {
+    "radial": 55.9,
+    "state": "up"
+   }
+  }
+ },
+ "8d0z_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8dlw_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 18.9,
+    "state": "down"
+   },
+   "B": {
+    "radial": 18.8,
+    "state": "down"
+   },
+   "E": {
+    "radial": 18.9,
+    "state": "down"
+   }
+  }
+ },
+ "8dlx_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8dlz_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8dm3_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 25.5,
+    "state": "down"
+   },
+   "B": {
+    "radial": 24.2,
+    "state": "down"
+   },
+   "C": {
+    "radial": 16.9,
+    "state": "down"
+   }
+  }
+ },
+ "8dt8_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8dxs_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 23.8,
+    "state": "down"
+   },
+   "B": {
+    "radial": 49.7,
+    "state": "up"
+   },
+   "C": {
+    "radial": 45.6,
+    "state": "up"
+   }
+  }
+ },
+ "8dzh_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "B": {
+    "radial": 27.2,
+    "state": "down"
+   },
+   "A": {
+    "radial": 17.3,
+    "state": "down"
+   },
+   "C": {
+    "radial": 26.2,
+    "state": "down"
+   }
+  }
+ },
+ "8dzi_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "C": {
+    "radial": 32.4,
+    "state": "up"
+   },
+   "A": {
+    "radial": 27.2,
+    "state": "down"
+   },
+   "E": {
+    "radial": 20.8,
+    "state": "down"
+   }
+  }
+ },
+ "8elj_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 20.1,
+    "state": "down"
+   },
+   "B": {
+    "radial": 20.1,
+    "state": "down"
+   },
+   "C": {
+    "radial": 20.1,
+    "state": "down"
+   }
+  }
+ },
+ "8err_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 20.3,
+    "state": "down"
+   },
+   "B": {
+    "radial": 33.8,
+    "state": "up"
+   },
+   "C": {
+    "radial": 27.8,
+    "state": "down"
+   }
+  }
+ },
+ "8eyg_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8eyh_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8f0g_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8f4p_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8g70_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 22.0,
+    "state": "down"
+   },
+   "B": {
+    "radial": 35.1,
+    "state": "up"
+   },
+   "D": {
+    "radial": 29.4,
+    "state": "down"
+   }
+  }
+ },
+ "8g73_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 24.0,
+    "state": "down"
+   },
+   "B": {
+    "radial": 30.9,
+    "state": "up"
+   },
+   "D": {
+    "radial": 37.7,
+    "state": "up"
+   }
+  }
+ },
+ "8g74_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8g75_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 27.1,
+    "state": "down"
+   },
+   "B": {
+    "radial": 36.3,
+    "state": "up"
+   },
+   "D": {
+    "radial": 39.3,
+    "state": "up"
+   }
+  }
+ },
+ "8g76_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 20.8,
+    "state": "down"
+   },
+   "B": {
+    "radial": 21.2,
+    "state": "down"
+   },
+   "D": {
+    "radial": 20.7,
+    "state": "down"
+   }
+  }
+ },
+ "8g77_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 20.7,
+    "state": "down"
+   },
+   "B": {
+    "radial": 20.7,
+    "state": "down"
+   },
+   "D": {
+    "radial": 20.6,
+    "state": "down"
+   }
+  }
+ },
+ "8g78_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8g79_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 19.1,
+    "state": "down"
+   },
+   "B": {
+    "radial": 3.5,
+    "state": "down"
+   },
+   "D": {
+    "radial": 15.8,
+    "state": "down"
+   }
+  }
+ },
+ "8g7a_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 20.6,
+    "state": "down"
+   },
+   "B": {
+    "radial": 35.5,
+    "state": "up"
+   },
+   "D": {
+    "radial": 26.4,
+    "state": "down"
+   }
+  }
+ },
+ "8g7b_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8g7c_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 26.2,
+    "state": "down"
+   },
+   "B": {
+    "radial": 34.9,
+    "state": "up"
+   },
+   "D": {
+    "radial": 31.8,
+    "state": "up"
+   }
+  }
+ },
+ "8gdr_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 18.8,
+    "state": "down"
+   },
+   "E": {
+    "radial": 20.0,
+    "state": "down"
+   },
+   "F": {
+    "radial": 20.6,
+    "state": "down"
+   }
+  }
+ },
+ "8gjm_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8gnh_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8gou_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8gto_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 18.4,
+    "state": "down"
+   },
+   "B": {
+    "radial": 23.0,
+    "state": "down"
+   },
+   "C": {
+    "radial": 22.5,
+    "state": "down"
+   }
+  }
+ },
+ "8gtp_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 22.5,
+    "state": "down"
+   },
+   "B": {
+    "radial": 30.2,
+    "state": "up"
+   },
+   "C": {
+    "radial": 36.4,
+    "state": "up"
+   }
+  }
+ },
+ "8gtq_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 38.5,
+    "state": "up"
+   },
+   "B": {
+    "radial": 40.7,
+    "state": "up"
+   },
+   "C": {
+    "radial": 41.3,
+    "state": "up"
+   }
+  }
+ },
+ "8h00_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 20.8,
+    "state": "down"
+   },
+   "B": {
+    "radial": 20.8,
+    "state": "down"
+   },
+   "C": {
+    "radial": 20.8,
+    "state": "down"
+   }
+  }
+ },
+ "8h01_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 22.3,
+    "state": "down"
+   },
+   "B": {
+    "radial": 31.1,
+    "state": "up"
+   },
+   "C": {
+    "radial": 25.3,
+    "state": "down"
+   }
+  }
+ },
+ "8h07_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 39.2,
+    "state": "up"
+   },
+   "B": {
+    "radial": 35.6,
+    "state": "up"
+   },
+   "C": {
+    "radial": 36.8,
+    "state": "up"
+   }
+  }
+ },
+ "8h08_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 39.7,
+    "state": "up"
+   },
+   "B": {
+    "radial": 35.5,
+    "state": "up"
+   },
+   "C": {
+    "radial": 36.8,
+    "state": "up"
+   }
+  }
+ },
+ "8h3n_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8h7l_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 36.8,
+    "state": "up"
+   },
+   "B": {
+    "radial": 37.0,
+    "state": "up"
+   },
+   "C": {
+    "radial": 37.1,
+    "state": "up"
+   }
+  }
+ },
+ "8hc2_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8hc3_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8hc4_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 42.4,
+    "state": "up"
+   },
+   "B": {
+    "radial": 44.2,
+    "state": "up"
+   },
+   "C": {
+    "radial": 48.6,
+    "state": "up"
+   }
+  }
+ },
+ "8hc9_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 19.9,
+    "state": "down"
+   },
+   "B": {
+    "radial": 19.9,
+    "state": "down"
+   },
+   "C": {
+    "radial": 19.9,
+    "state": "down"
+   }
+  }
+ },
+ "8hca_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 23.1,
+    "state": "down"
+   },
+   "B": {
+    "radial": 23.2,
+    "state": "down"
+   },
+   "C": {
+    "radial": 18.2,
+    "state": "down"
+   }
+  }
+ },
+ "8hcb_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 33.3,
+    "state": "up"
+   },
+   "B": {
+    "radial": 25.2,
+    "state": "down"
+   },
+   "C": {
+    "radial": 22.5,
+    "state": "down"
+   }
+  }
+ },
+ "8heb_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 37.1,
+    "state": "up"
+   },
+   "B": {
+    "radial": 37.0,
+    "state": "up"
+   },
+   "C": {
+    "radial": 37.0,
+    "state": "up"
+   }
+  }
+ },
+ "8hec_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 28.5,
+    "state": "down"
+   },
+   "B": {
+    "radial": 36.1,
+    "state": "up"
+   },
+   "C": {
+    "radial": 43.0,
+    "state": "up"
+   }
+  }
+ },
+ "8hgl_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 37.8,
+    "state": "up"
+   },
+   "B": {
+    "radial": 37.8,
+    "state": "up"
+   },
+   "E": {
+    "radial": 37.8,
+    "state": "up"
+   }
+  }
+ },
+ "8hhx_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8hhy_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 44.1,
+    "state": "up"
+   },
+   "B": {
+    "radial": 42.7,
+    "state": "up"
+   },
+   "C": {
+    "radial": 46.6,
+    "state": "up"
+   }
+  }
+ },
+ "8hhz_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 46.2,
+    "state": "up"
+   },
+   "B": {
+    "radial": 45.0,
+    "state": "up"
+   },
+   "C": {
+    "radial": 47.6,
+    "state": "up"
+   }
+  }
+ },
+ "8hlc_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 18.5,
+    "state": "down"
+   },
+   "B": {
+    "radial": 18.6,
+    "state": "down"
+   },
+   "C": {
+    "radial": 18.5,
+    "state": "down"
+   }
+  }
+ },
+ "8hld_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 26.8,
+    "state": "down"
+   },
+   "B": {
+    "radial": 24.5,
+    "state": "down"
+   },
+   "C": {
+    "radial": 18.9,
+    "state": "down"
+   }
+  }
+ },
+ "8hp9_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 38.4,
+    "state": "up"
+   },
+   "B": {
+    "radial": 40.2,
+    "state": "up"
+   },
+   "C": {
+    "radial": 39.8,
+    "state": "up"
+   }
+  }
+ },
+ "8hpq_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 38.5,
+    "state": "up"
+   },
+   "B": {
+    "radial": 40.3,
+    "state": "up"
+   },
+   "C": {
+    "radial": 39.9,
+    "state": "up"
+   }
+  }
+ },
+ "8hpv_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 39.7,
+    "state": "up"
+   },
+   "B": {
+    "radial": 42.4,
+    "state": "up"
+   },
+   "C": {
+    "radial": 41.5,
+    "state": "up"
+   }
+  }
+ },
+ "8itu_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 22.0,
+    "state": "down"
+   },
+   "B": {
+    "radial": 32.8,
+    "state": "up"
+   },
+   "C": {
+    "radial": 29.3,
+    "state": "down"
+   }
+  }
+ },
+ "8j1v_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 37.4,
+    "state": "up"
+   },
+   "B": {
+    "radial": 37.4,
+    "state": "up"
+   },
+   "E": {
+    "radial": 37.4,
+    "state": "up"
+   }
+  }
+ },
+ "8k45_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 27.2,
+    "state": "down"
+   },
+   "B": {
+    "radial": 28.3,
+    "state": "down"
+   },
+   "C": {
+    "radial": 44.1,
+    "state": "up"
+   }
+  }
+ },
+ "8k46_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 40.0,
+    "state": "up"
+   },
+   "B": {
+    "radial": 31.0,
+    "state": "up"
+   },
+   "C": {
+    "radial": 28.1,
+    "state": "down"
+   }
+  }
+ },
+ "8k47_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8k5h_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8k9b_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8k9j_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8k9m_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8keh_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "C": {
+    "radial": 28.7,
+    "state": "down"
+   },
+   "B": {
+    "radial": 60.0,
+    "state": "up"
+   },
+   "A": {
+    "radial": 54.4,
+    "state": "up"
+   }
+  }
+ },
+ "8keo_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "B": {
+    "radial": 39.2,
+    "state": "up"
+   },
+   "A": {
+    "radial": 33.9,
+    "state": "up"
+   },
+   "C": {
+    "radial": 38.5,
+    "state": "up"
+   }
+  }
+ },
+ "8keq_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8ker_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "C": {
+    "radial": 53.1,
+    "state": "up"
+   },
+   "A": {
+    "radial": 49.2,
+    "state": "up"
+   },
+   "B": {
+    "radial": 55.9,
+    "state": "up"
+   }
+  }
+ },
+ "8khc_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8q5y_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "D": {
+    "radial": 24.2,
+    "state": "down"
+   },
+   "E": {
+    "radial": 16.7,
+    "state": "down"
+   },
+   "C": {
+    "radial": 23.8,
+    "state": "down"
+   }
+  }
+ },
+ "8ug9_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 20.2,
+    "state": "down"
+   },
+   "B": {
+    "radial": 20.2,
+    "state": "down"
+   },
+   "C": {
+    "radial": 20.2,
+    "state": "down"
+   }
+  }
+ },
+ "8vcr_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8w4f_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 24.1,
+    "state": "down"
+   },
+   "B": {
+    "radial": 20.5,
+    "state": "down"
+   },
+   "C": {
+    "radial": 20.1,
+    "state": "down"
+   }
+  }
+ },
+ "8wyj_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 34.9,
+    "state": "up"
+   },
+   "B": {
+    "radial": 35.6,
+    "state": "up"
+   },
+   "C": {
+    "radial": 35.9,
+    "state": "up"
+   }
+  }
+ },
+ "8xbf_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8xea_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "D": {
+    "radial": 41.7,
+    "state": "up"
+   },
+   "E": {
+    "radial": 41.7,
+    "state": "up"
+   },
+   "F": {
+    "radial": 41.7,
+    "state": "up"
+   }
+  }
+ },
+ "8xi6_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 19.6,
+    "state": "down"
+   },
+   "B": {
+    "radial": 19.6,
+    "state": "down"
+   },
+   "C": {
+    "radial": 19.6,
+    "state": "down"
+   }
+  }
+ },
+ "8xki_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8xsd_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 47.4,
+    "state": "up"
+   },
+   "B": {
+    "radial": 49.7,
+    "state": "up"
+   },
+   "C": {
+    "radial": 42.2,
+    "state": "up"
+   }
+  }
+ },
+ "8xsl_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8y4a_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8y4c_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 49.2,
+    "state": "up"
+   },
+   "B": {
+    "radial": 49.2,
+    "state": "up"
+   },
+   "C": {
+    "radial": 49.2,
+    "state": "up"
+   }
+  }
+ },
+ "8yby_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8ybz_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 20.3,
+    "state": "down"
+   },
+   "B": {
+    "radial": 20.9,
+    "state": "down"
+   },
+   "C": {
+    "radial": 21.0,
+    "state": "down"
+   }
+  }
+ },
+ "8ykg_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8yro_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 46.9,
+    "state": "up"
+   },
+   "D": {
+    "radial": 48.3,
+    "state": "up"
+   },
+   "P": {
+    "radial": 48.4,
+    "state": "up"
+   }
+  }
+ },
+ "8yrp_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 48.1,
+    "state": "up"
+   },
+   "B": {
+    "radial": 22.7,
+    "state": "down"
+   },
+   "C": {
+    "radial": 51.9,
+    "state": "up"
+   }
+  }
+ },
+ "8yww_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 41.9,
+    "state": "up"
+   },
+   "B": {
+    "radial": 43.8,
+    "state": "up"
+   },
+   "C": {
+    "radial": 44.7,
+    "state": "up"
+   }
+  }
+ },
+ "8yz5_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "C": {
+    "radial": 34.1,
+    "state": "up"
+   },
+   "A": {
+    "radial": 25.3,
+    "state": "down"
+   },
+   "D": {
+    "radial": 39.7,
+    "state": "up"
+   }
+  }
+ },
+ "8yz6_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "8zby_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 18.8,
+    "state": "down"
+   },
+   "B": {
+    "radial": 18.8,
+    "state": "down"
+   },
+   "C": {
+    "radial": 18.9,
+    "state": "down"
+   }
+  }
+ },
+ "8zbz_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 23.7,
+    "state": "down"
+   },
+   "B": {
+    "radial": 27.4,
+    "state": "down"
+   },
+   "C": {
+    "radial": 18.6,
+    "state": "down"
+   }
+  }
+ },
+ "8zc0_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 32.1,
+    "state": "up"
+   },
+   "B": {
+    "radial": 29.6,
+    "state": "down"
+   },
+   "C": {
+    "radial": 21.4,
+    "state": "down"
+   }
+  }
+ },
+ "8zc3_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 23.7,
+    "state": "down"
+   },
+   "B": {
+    "radial": 27.6,
+    "state": "down"
+   },
+   "C": {
+    "radial": 18.8,
+    "state": "down"
+   }
+  }
+ },
+ "8zc4_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 32.3,
+    "state": "up"
+   },
+   "B": {
+    "radial": 29.8,
+    "state": "down"
+   },
+   "C": {
+    "radial": 21.6,
+    "state": "down"
+   }
+  }
+ },
+ "9aru_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 19.1,
+    "state": "down"
+   },
+   "B": {
+    "radial": 19.1,
+    "state": "down"
+   },
+   "C": {
+    "radial": 19.1,
+    "state": "down"
+   }
+  }
+ },
+ "9ato_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 32.4,
+    "state": "up"
+   },
+   "B": {
+    "radial": 21.7,
+    "state": "down"
+   },
+   "C": {
+    "radial": 28.0,
+    "state": "down"
+   }
+  }
+ },
+ "9atp_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 30.0,
+    "state": "up"
+   },
+   "B": {
+    "radial": 17.4,
+    "state": "down"
+   },
+   "C": {
+    "radial": 20.2,
+    "state": "down"
+   }
+  }
+ },
+ "9atr_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 29.8,
+    "state": "down"
+   },
+   "B": {
+    "radial": 20.3,
+    "state": "down"
+   },
+   "C": {
+    "radial": 33.4,
+    "state": "up"
+   }
+  }
+ },
+ "9au2_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "9bj3_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 32.5,
+    "state": "up"
+   },
+   "B": {
+    "radial": 32.4,
+    "state": "up"
+   },
+   "S": {
+    "radial": 32.5,
+    "state": "up"
+   }
+  }
+ },
+ "9bj4_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 21.4,
+    "state": "down"
+   },
+   "B": {
+    "radial": 21.3,
+    "state": "down"
+   },
+   "C": {
+    "radial": 21.4,
+    "state": "down"
+   }
+  }
+ },
+ "9c44_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 39.0,
+    "state": "up"
+   },
+   "B": {
+    "radial": 39.0,
+    "state": "up"
+   },
+   "C": {
+    "radial": 39.0,
+    "state": "up"
+   }
+  }
+ },
+ "9co6_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "B": {
+    "radial": 23.4,
+    "state": "down"
+   },
+   "C": {
+    "radial": 27.6,
+    "state": "down"
+   },
+   "A": {
+    "radial": 33.0,
+    "state": "up"
+   }
+  }
+ },
+ "9co8_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "B": {
+    "radial": 23.0,
+    "state": "down"
+   },
+   "C": {
+    "radial": 27.5,
+    "state": "down"
+   },
+   "A": {
+    "radial": 32.9,
+    "state": "up"
+   }
+  }
+ },
+ "9dhy_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "C": {
+    "radial": 21.0,
+    "state": "down"
+   },
+   "F": {
+    "radial": 20.9,
+    "state": "down"
+   },
+   "K": {
+    "radial": 21.1,
+    "state": "down"
+   }
+  }
+ },
+ "9dsl_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "9fcm_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "9kzz_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "C": {
+    "radial": 49.6,
+    "state": "up"
+   },
+   "B": {
+    "radial": 49.5,
+    "state": "up"
+   },
+   "A": {
+    "radial": 49.1,
+    "state": "up"
+   }
+  }
+ },
+ "9l15_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "C": {
+    "radial": 32.0,
+    "state": "up"
+   },
+   "B": {
+    "radial": 40.3,
+    "state": "up"
+   },
+   "A": {
+    "radial": 24.5,
+    "state": "down"
+   }
+  }
+ },
+ "9ld2_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "9loy_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "9lp0_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "9ls3_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 27.9,
+    "state": "down"
+   },
+   "B": {
+    "radial": 25.8,
+    "state": "down"
+   },
+   "C": {
+    "radial": 19.4,
+    "state": "down"
+   }
+  }
+ },
+ "9lyo_1": {
+  "state": "1-up",
+  "n_up": 1,
+  "n_down": 2,
+  "per_chain": {
+   "A": {
+    "radial": 34.2,
+    "state": "up"
+   },
+   "B": {
+    "radial": 23.6,
+    "state": "down"
+   },
+   "C": {
+    "radial": 29.2,
+    "state": "down"
+   }
+  }
+ },
+ "9mi3_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 20.0,
+    "state": "down"
+   },
+   "C": {
+    "radial": 20.0,
+    "state": "down"
+   },
+   "K": {
+    "radial": 20.3,
+    "state": "down"
+   }
+  }
+ },
+ "9ml4_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 50.4,
+    "state": "up"
+   },
+   "B": {
+    "radial": 43.2,
+    "state": "up"
+   },
+   "C": {
+    "radial": 48.3,
+    "state": "up"
+   }
+  }
+ },
+ "9ml5_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "9ml6_1": {
+  "state": "3-up (open)",
+  "n_up": 3,
+  "n_down": 0,
+  "per_chain": {
+   "A": {
+    "radial": 45.5,
+    "state": "up"
+   },
+   "B": {
+    "radial": 45.8,
+    "state": "up"
+   },
+   "C": {
+    "radial": 44.7,
+    "state": "up"
+   }
+  }
+ },
+ "9ml7_1": {
+  "state": "2-up",
+  "n_up": 2,
+  "n_down": 1,
+  "per_chain": {
+   "A": {
+    "radial": 24.3,
+    "state": "down"
+   },
+   "B": {
+    "radial": 36.4,
+    "state": "up"
+   },
+   "C": {
+    "radial": 30.4,
+    "state": "up"
+   }
+  }
+ },
+ "9uxd_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 20.6,
+    "state": "down"
+   },
+   "B": {
+    "radial": 20.1,
+    "state": "down"
+   },
+   "C": {
+    "radial": 21.3,
+    "state": "down"
+   }
+  }
+ },
+ "9uxe_1": {
+  "state": "closed (all-down)",
+  "n_up": 0,
+  "n_down": 3,
+  "per_chain": {
+   "A": {
+    "radial": 19.8,
+    "state": "down"
+   },
+   "B": {
+    "radial": 24.7,
+    "state": "down"
+   },
+   "C": {
+    "radial": 26.3,
+    "state": "down"
+   }
+  }
+ },
+ "9vls_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "9yok_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "9ypb_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "9ypr_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "9yyu_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ },
+ "9zt7_1": {
+  "state": "isolated_or_partial",
+  "n_up": null,
+  "n_down": null,
+  "per_chain": {}
+ }
+}
