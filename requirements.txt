@@ -4,3 +4,9 @@ pandas
 requests
 streamlit
 gemmi
+numpy
+scipy
+networkx
+
+# optional: 2-D embedding for build_epitope_communities.py (falls back to spectral/PCA if absent)
+umap-learn

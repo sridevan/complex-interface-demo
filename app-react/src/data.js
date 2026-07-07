@@ -16,9 +16,11 @@ export async function loadAll() {
     'sabdab2_ids',
     'structure_quality',
     'multidomain_antibody_chains',
+    'epitope_communities',
   ]
   // files that are keyed objects, not arrays — default to {} on miss
-  const objDefaults = new Set(['batch_report', 'sabdab2_ids', 'structure_quality', 'multidomain_antibody_chains'])
+  const objDefaults = new Set(['batch_report', 'sabdab2_ids', 'structure_quality',
+    'multidomain_antibody_chains', 'epitope_communities'])
   const out = {}
   await Promise.all(names.map(async (n) => {
     const empty = objDefaults.has(n) ? {} : []

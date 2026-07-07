@@ -3,9 +3,10 @@ import { loadAll } from './data.js'
 import DataTable from './components/DataTable.jsx'
 import Explorer from './components/Explorer.jsx'
 import ComplexOverview from './components/ComplexOverview.jsx'
+import Communities from './components/Communities.jsx'
 
 const COMPLEX_ID = 'PDB-CPX-140202'
-const TABS = ['Complex overview', 'Interface explorer', 'Data provenance']
+const TABS = ['Complex overview', 'Interface explorer', 'Epitope communities', 'Data provenance']
 
 export default function App() {
   const [data, setData] = useState(null)
@@ -98,7 +99,8 @@ export default function App() {
 
       {tab === 0 && <ComplexOverview residue={residueShown} variants={variants} glycans={glycans} sabdab={sabdab} />}
       {tab === 1 && <Explorer interfaces={interfacesShown} residue={residueShown} sabdab={sabdab} quality={quality} />}
-      {tab === 2 && <DataNotes anomalies={anomalies} coverage={coverage} multidomain={multidomain} nNonParatope={nNonParatope} />}
+      {tab === 2 && <Communities data={data.epitope_communities || {}} />}
+      {tab === 3 && <DataNotes anomalies={anomalies} coverage={coverage} multidomain={multidomain} nNonParatope={nNonParatope} />}
     </div>
   )
 }

@@ -1,0 +1,9836 @@
+{
+ "meta": {
+  "n_antibodies": 342,
+  "n_positions": 535,
+  "sigma": 8.0,
+  "threshold": 0.3,
+  "nmf_k": 8,
+  "embedding": "umap",
+  "reference_structure": "7a29/A"
+ },
+ "communities": [
+  {
+   "id": 0,
+   "size": 137,
+   "label": "Class 1 (RBM / ACE2)",
+   "dominant_domain": "RBD",
+   "consensus_positions": [
+    346,
+    351,
+    354,
+    355,
+    372,
+    373,
+    403,
+    405,
+    408,
+    415,
+    416,
+    417,
+    420,
+    421,
+    446,
+    449,
+    450,
+    452,
+    453,
+    455,
+    456,
+    457,
+    458,
+    460,
+    466,
+    468,
+    470,
+    471,
+    472,
+    473,
+    474,
+    475,
+    476,
+    477,
+    478,
+    479,
+    481,
+    482,
+    483,
+    484,
+    485,
+    486,
+    487,
+    488,
+    489,
+    490,
+    492,
+    493,
+    494,
+    496,
+    498,
+    500,
+    501,
+    505
+   ],
+   "top_positions": [
+    486,
+    489,
+    484,
+    493,
+    449,
+    490,
+    487,
+    456
+   ],
+   "escape_positions": [
+    346,
+    417,
+    446,
+    450,
+    452,
+    455,
+    456,
+    460,
+    472,
+    477,
+    478,
+    484,
+    486,
+    490,
+    493,
+    494,
+    501
+   ]
+  },
+  {
+   "id": 1,
+   "size": 95,
+   "label": "Class 3 (site V / S309)",
+   "dominant_domain": "RBD",
+   "consensus_positions": [
+    339,
+    340,
+    341,
+    342,
+    343,
+    344,
+    345,
+    346,
+    347,
+    348,
+    349,
+    351,
+    352,
+    354,
+    356,
+    373,
+    374,
+    403,
+    405,
+    417,
+    436,
+    437,
+    438,
+    439,
+    440,
+    441,
+    442,
+    443,
+    444,
+    445,
+    446,
+    447,
+    448,
+    449,
+    450,
+    451,
+    452,
+    466,
+    468,
+    470,
+    479,
+    482,
+    483,
+    484,
+    486,
+    489,
+    490,
+    492,
+    493,
+    494,
+    495,
+    496,
+    497,
+    498,
+    499,
+    500,
+    501,
+    502,
+    503,
+    505,
+    506
+   ],
+   "top_positions": [
+    444,
+    440,
+    346,
+    445,
+    500,
+    345,
+    449,
+    441
+   ],
+   "escape_positions": [
+    346,
+    417,
+    440,
+    444,
+    445,
+    446,
+    450,
+    452,
+    484,
+    486,
+    490,
+    493,
+    494,
+    501
+   ]
+  },
+  {
+   "id": 2,
+   "size": 60,
+   "label": "Class 4 (cryptic)",
+   "dominant_domain": "RBD",
+   "consensus_positions": [
+    335,
+    339,
+    343,
+    364,
+    367,
+    368,
+    369,
+    370,
+    371,
+    372,
+    373,
+    374,
+    375,
+    376,
+    377,
+    378,
+    379,
+    380,
+    381,
+    382,
+    383,
+    384,
+    385,
+    386,
+    390,
+    404,
+    405,
+    407,
+    408,
+    411,
+    412,
+    413,
+    414,
+    415,
+    427,
+    428,
+    429,
+    430,
+    437,
+    440,
+    486,
+    502,
+    503,
+    504,
+    505,
+    508,
+    516,
+    517,
+    518,
+    519,
+    527
+   ],
+   "top_positions": [
+    378,
+    375,
+    377,
+    408,
+    369,
+    376,
+    374,
+    384
+   ],
+   "escape_positions": [
+    440,
+    486
+   ]
+  },
+  {
+   "id": 3,
+   "size": 43,
+   "label": "NTD supersite",
+   "dominant_domain": "NTD",
+   "consensus_positions": [
+    14,
+    16,
+    17,
+    25,
+    26,
+    28,
+    29,
+    30,
+    59,
+    64,
+    71,
+    80,
+    82,
+    83,
+    85,
+    87,
+    88,
+    97,
+    104,
+    108,
+    113,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    152,
+    154,
+    155,
+    156,
+    157,
+    158,
+    170,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    182,
+    183,
+    207,
+    211,
+    213,
+    214,
+    218,
+    226,
+    227,
+    229,
+    236,
+    237,
+    245,
+    246,
+    247,
+    248,
+    249,
+    250,
+    251,
+    252,
+    253,
+    254,
+    256,
+    269,
+    323,
+    324,
+    532,
+    533,
+    535,
+    536,
+    537,
+    554,
+    555,
+    556,
+    561,
+    580,
+    581,
+    582,
+    583,
+    607,
+    608,
+    636
+   ],
+   "top_positions": [
+    147,
+    248,
+    145,
+    249,
+    246,
+    144,
+    146,
+    14
+   ],
+   "escape_positions": []
+  },
+  {
+   "id": 4,
+   "size": 4,
+   "label": "S2 stem",
+   "dominant_domain": "S2",
+   "consensus_positions": [
+    657,
+    702,
+    790,
+    791,
+    793,
+    794,
+    795,
+    806,
+    807,
+    808,
+    809,
+    810,
+    811,
+    813,
+    814,
+    815,
+    817,
+    818,
+    819,
+    820,
+    822,
+    823,
+    824,
+    825,
+    827,
+    828,
+    868,
+    872,
+    925,
+    928,
+    935,
+    936,
+    940,
+    941
+   ],
+   "top_positions": [
+    823,
+    815,
+    825,
+    822,
+    819,
+    814,
+    813,
+    820
+   ],
+   "escape_positions": []
+  },
+  {
+   "id": 5,
+   "size": 1,
+   "label": "S2 stem",
+   "dominant_domain": "S2",
+   "consensus_positions": [
+    969,
+    973,
+    982,
+    983,
+    984,
+    985,
+    988,
+    992
+   ],
+   "top_positions": [
+    983,
+    973,
+    992,
+    988,
+    984,
+    985,
+    982,
+    969
+   ],
+   "escape_positions": []
+  },
+  {
+   "id": 6,
+   "size": 1,
+   "label": "S2 stem",
+   "dominant_domain": "S2",
+   "consensus_positions": [
+    1188,
+    1192,
+    1193,
+    1194,
+    1195,
+    1196,
+    1197,
+    1198,
+    1199,
+    1200,
+    1201,
+    1202,
+    1203,
+    1204,
+    1205,
+    1206,
+    1209,
+    1210,
+    1211
+   ],
+   "top_positions": [
+    1201,
+    1196,
+    1199,
+    1192,
+    1203,
+    1205,
+    1209,
+    1195
+   ],
+   "escape_positions": []
+  },
+  {
+   "id": 7,
+   "size": 1,
+   "label": "S2 stem",
+   "dominant_domain": "S2",
+   "consensus_positions": [
+    737,
+    738,
+    739,
+    740,
+    747,
+    749,
+    750,
+    753,
+    754,
+    757,
+    761,
+    764,
+    765,
+    848,
+    849,
+    850,
+    853
+   ],
+   "top_positions": [
+    739,
+    737,
+    750,
+    849,
+    761,
+    765,
+    848,
+    753
+   ],
+   "escape_positions": []
+  }
+ ],
+ "archetypes": [
+  {
+   "id": 0,
+   "n_dominant": 28,
+   "label": "Class 2 (RBM / E484)",
+   "top_positions": [
+    484,
+    490,
+    483,
+    485,
+    470,
+    482,
+    489,
+    481
+   ]
+  },
+  {
+   "id": 1,
+   "n_dominant": 46,
+   "label": "Class 3 (site V / S309)",
+   "top_positions": [
+    444,
+    440,
+    445,
+    500,
+    441,
+    439,
+    443,
+    499
+   ]
+  },
+  {
+   "id": 2,
+   "n_dominant": 29,
+   "label": "Class 3 (site V / S309)",
+   "top_positions": [
+    345,
+    340,
+    343,
+    346,
+    441,
+    440,
+    344,
+    339
+   ]
+  },
+  {
+   "id": 3,
+   "n_dominant": 36,
+   "label": "Class 2 (RBM / E484)",
+   "top_positions": [
+    449,
+    493,
+    484,
+    494,
+    490,
+    373,
+    342,
+    446
+   ]
+  },
+  {
+   "id": 4,
+   "n_dominant": 47,
+   "label": "Class 3 (site V / S309)",
+   "top_positions": [
+    346,
+    450,
+    354,
+    468,
+    449,
+    470,
+    466,
+    351
+   ]
+  },
+  {
+   "id": 5,
+   "n_dominant": 46,
+   "label": "Class 1 (RBM / ACE2)",
+   "top_positions": [
+    486,
+    489,
+    487,
+    456,
+    484,
+    493,
+    485,
+    475
+   ]
+  },
+  {
+   "id": 6,
+   "n_dominant": 45,
+   "label": "Class 1 (RBM / ACE2)",
+   "top_positions": [
+    421,
+    505,
+    475,
+    456,
+    417,
+    489,
+    455,
+    415
+   ]
+  },
+  {
+   "id": 7,
+   "n_dominant": 65,
+   "label": "Class 4 (cryptic)",
+   "top_positions": [
+    378,
+    375,
+    376,
+    377,
+    408,
+    503,
+    369,
+    374
+   ]
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "sabdab2_H0000L030G",
+   "community": 1,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.141,
+    0.335,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.501,
+    0.022
+   ],
+   "x": 9.976,
+   "y": -1.651,
+   "n_epitope_positions": 5,
+   "top_positions": [
+    501,
+    500,
+    485,
+    505,
+    496
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0000L03GV",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.91,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.09,
+    0.0
+   ],
+   "x": 9.102,
+   "y": -0.51,
+   "n_epitope_positions": 5,
+   "top_positions": [
+    445,
+    500,
+    446,
+    498,
+    501
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H00G2L01N8",
+   "community": 4,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.531
+   ],
+   "x": 3.16,
+   "y": 0.196,
+   "n_epitope_positions": 4,
+   "top_positions": [
+    940,
+    941,
+    936,
+    937
+   ],
+   "dominant_domain": "S2"
+  },
+  {
+   "antibody": "sabdab2_H02BCL01WH",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.001,
+    0.0,
+    0.0,
+    0.999
+   ],
+   "x": 1.454,
+   "y": 5.885,
+   "n_epitope_positions": 25,
+   "top_positions": [
+    386,
+    383,
+    385,
+    381,
+    379,
+    369
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02BJL0000",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.418,
+    0.004,
+    0.0,
+    0.427,
+    0.144,
+    0.008,
+    0.0,
+    0.0
+   ],
+   "x": 7.262,
+   "y": 4.854,
+   "n_epitope_positions": 25,
+   "top_positions": [
+    484,
+    493,
+    449,
+    351,
+    450,
+    483
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02BXL01WZ",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.396,
+    0.0,
+    0.0,
+    0.006,
+    0.0,
+    0.598,
+    0.0,
+    0.0
+   ],
+   "x": 9.779,
+   "y": 9.98,
+   "n_epitope_positions": 4,
+   "top_positions": [
+    484,
+    486,
+    489,
+    483
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02C4L01X5",
+   "community": 1,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.335,
+    0.067,
+    0.203,
+    0.395,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.278,
+   "y": 0.302,
+   "n_epitope_positions": 19,
+   "top_positions": [
+    346,
+    449,
+    445,
+    450,
+    444,
+    441
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02C5L01X6",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.285,
+    0.021,
+    0.0,
+    0.48,
+    0.0,
+    0.16,
+    0.054,
+    0.0
+   ],
+   "x": 7.537,
+   "y": 4.575,
+   "n_epitope_positions": 14,
+   "top_positions": [
+    493,
+    484,
+    490,
+    486,
+    489,
+    494
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02CJL01XH",
+   "community": 2,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.717,
+    0.0,
+    0.0,
+    0.283,
+    0.0,
+    0.0
+   ],
+   "x": 5.326,
+   "y": -0.893,
+   "n_epitope_positions": 17,
+   "top_positions": [
+    338,
+    339,
+    340,
+    337,
+    336,
+    335
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02CXL01XT",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.742,
+   "y": 1.301,
+   "n_epitope_positions": 12,
+   "top_positions": [
+    145,
+    147,
+    248,
+    246,
+    249,
+    256
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H02CXL0215",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.87,
+   "y": 1.181,
+   "n_epitope_positions": 13,
+   "top_positions": [
+    147,
+    145,
+    248,
+    246,
+    144,
+    251
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H02CYL01HK",
+   "community": 0,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.819,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.163,
+    0.0,
+    0.018
+   ],
+   "x": 8.507,
+   "y": 7.982,
+   "n_epitope_positions": 24,
+   "top_positions": [
+    490,
+    484,
+    485,
+    483,
+    489,
+    470
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02D8L01Y2",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.526,
+    0.0,
+    0.107,
+    0.0,
+    0.0,
+    0.201,
+    0.165
+   ],
+   "x": 9.964,
+   "y": -1.793,
+   "n_epitope_positions": 17,
+   "top_positions": [
+    503,
+    502,
+    500,
+    440,
+    506,
+    501
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02DFL01Y8",
+   "community": 0,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.518,
+    0.059,
+    0.0,
+    0.248,
+    0.176,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.646,
+   "y": 7.027,
+   "n_epitope_positions": 15,
+   "top_positions": [
+    482,
+    449,
+    483,
+    484,
+    481,
+    450
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02DFL01YW",
+   "community": 0,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.505,
+    0.0,
+    0.0,
+    0.294,
+    0.201,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.713,
+   "y": 6.751,
+   "n_epitope_positions": 14,
+   "top_positions": [
+    484,
+    482,
+    450,
+    449,
+    483,
+    490
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02E0L0000",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.162,
+    0.006,
+    0.0,
+    0.622,
+    0.058,
+    0.115,
+    0.036,
+    0.0
+   ],
+   "x": 7.494,
+   "y": 4.235,
+   "n_epitope_positions": 20,
+   "top_positions": [
+    494,
+    449,
+    489,
+    493,
+    452,
+    490
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02E1L0000",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.035,
+    0.013,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.952
+   ],
+   "x": -0.064,
+   "y": 7.205,
+   "n_epitope_positions": 24,
+   "top_positions": [
+    378,
+    503,
+    369,
+    377,
+    372,
+    376
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02E6L01YV",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.986,
+    0.0,
+    0.0,
+    0.014
+   ],
+   "x": 4.259,
+   "y": 2.424,
+   "n_epitope_positions": 36,
+   "top_positions": [
+    14,
+    147,
+    138,
+    242,
+    145,
+    251
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H02E7L01YX",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.073,
+    0.0,
+    0.001,
+    0.0,
+    0.119,
+    0.806,
+    0.0
+   ],
+   "x": 12.107,
+   "y": 4.622,
+   "n_epitope_positions": 28,
+   "top_positions": [
+    505,
+    421,
+    455,
+    501,
+    458,
+    500
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02EBL01Z0",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.025,
+    0.0,
+    0.0,
+    0.005,
+    0.0,
+    0.036,
+    0.0,
+    0.934
+   ],
+   "x": 0.018,
+   "y": 7.054,
+   "n_epitope_positions": 40,
+   "top_positions": [
+    378,
+    375,
+    377,
+    408,
+    374,
+    372
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02ENL01Z9",
+   "community": 1,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.142,
+    0.0,
+    0.191,
+    0.0,
+    0.667,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 6.007,
+   "y": 3.183,
+   "n_epitope_positions": 36,
+   "top_positions": [
+    346,
+    450,
+    354,
+    348,
+    470,
+    340
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02ESL01ZD",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.263,
+    0.007,
+    0.0,
+    0.165,
+    0.0,
+    0.256,
+    0.31,
+    0.0
+   ],
+   "x": 8.439,
+   "y": 6.212,
+   "n_epitope_positions": 41,
+   "top_positions": [
+    489,
+    505,
+    484,
+    493,
+    487,
+    486
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02EVL01ZF",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.0,
+    0.007,
+    0.0,
+    0.0,
+    0.006,
+    0.749,
+    0.238,
+    0.0
+   ],
+   "x": 10.578,
+   "y": 9.85,
+   "n_epitope_positions": 12,
+   "top_positions": [
+    477,
+    486,
+    475,
+    476,
+    473,
+    489
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02F6L0274",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.022,
+    0.0,
+    0.0,
+    0.822,
+    0.157,
+    0.0
+   ],
+   "x": 9.93,
+   "y": 8.603,
+   "n_epitope_positions": 15,
+   "top_positions": [
+    486,
+    487,
+    478,
+    489,
+    475,
+    455
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02F6L02KR",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.984,
+    0.016,
+    0.0
+   ],
+   "x": 10.556,
+   "y": 10.001,
+   "n_epitope_positions": 5,
+   "top_positions": [
+    486,
+    475,
+    473,
+    487,
+    478
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02F8L01ZS",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.016,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.185,
+    0.799
+   ],
+   "x": -0.082,
+   "y": 7.408,
+   "n_epitope_positions": 71,
+   "top_positions": [
+    378,
+    369,
+    408,
+    377,
+    505,
+    405
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02FDL01ZZ",
+   "community": 1,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.285,
+    0.333,
+    0.0,
+    0.382,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.021,
+   "y": -0.583,
+   "n_epitope_positions": 16,
+   "top_positions": [
+    346,
+    444,
+    345,
+    441,
+    450,
+    451
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02FEL0201",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.079,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.687,
+    0.235,
+    0.0
+   ],
+   "x": 10.105,
+   "y": 8.77,
+   "n_epitope_positions": 15,
+   "top_positions": [
+    486,
+    476,
+    487,
+    475,
+    478,
+    455
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02FEL033Y",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.067,
+    0.016,
+    0.0,
+    0.0,
+    0.0,
+    0.82,
+    0.096,
+    0.0
+   ],
+   "x": 10.35,
+   "y": 9.726,
+   "n_epitope_positions": 12,
+   "top_positions": [
+    478,
+    487,
+    489,
+    486,
+    477,
+    485
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02FHL0000",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.282,
+    0.012,
+    0.0,
+    0.582,
+    0.108,
+    0.0,
+    0.017,
+    0.0
+   ],
+   "x": 7.44,
+   "y": 4.634,
+   "n_epitope_positions": 13,
+   "top_positions": [
+    484,
+    490,
+    450,
+    494,
+    493,
+    449
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02GNL020X",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.644,
+   "y": 1.234,
+   "n_epitope_positions": 13,
+   "top_positions": [
+    147,
+    145,
+    248,
+    152,
+    246,
+    150
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H02H0L0214",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.461,
+    0.0,
+    0.295,
+    0.0,
+    0.0,
+    0.147,
+    0.097
+   ],
+   "x": 9.793,
+   "y": -1.848,
+   "n_epitope_positions": 11,
+   "top_positions": [
+    500,
+    449,
+    498,
+    503,
+    445,
+    506
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02HAL021F",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.262,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.396,
+    0.342,
+    0.0
+   ],
+   "x": 10.082,
+   "y": 8.53,
+   "n_epitope_positions": 11,
+   "top_positions": [
+    458,
+    487,
+    475,
+    476,
+    483,
+    477
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02JDL0227",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.982,
+    0.018
+   ],
+   "x": 12.731,
+   "y": 5.186,
+   "n_epitope_positions": 27,
+   "top_positions": [
+    421,
+    505,
+    458,
+    473,
+    456,
+    457
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02JNL022D",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.0,
+    0.022,
+    0.0,
+    0.0,
+    0.0,
+    0.973,
+    0.0,
+    0.004
+   ],
+   "x": 10.591,
+   "y": 10.046,
+   "n_epitope_positions": 12,
+   "top_positions": [
+    486,
+    477,
+    478,
+    489,
+    487,
+    479
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02KXL01Z0",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.036,
+    0.0,
+    0.0,
+    0.0,
+    0.964
+   ],
+   "x": -0.152,
+   "y": 6.791,
+   "n_epitope_positions": 29,
+   "top_positions": [
+    378,
+    377,
+    375,
+    376,
+    372,
+    408
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02M1L0239",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.272,
+    0.0,
+    0.0,
+    0.436,
+    0.0,
+    0.292,
+    0.0,
+    0.0
+   ],
+   "x": 8.131,
+   "y": 6.8,
+   "n_epitope_positions": 14,
+   "top_positions": [
+    484,
+    486,
+    493,
+    449,
+    485,
+    490
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02M9L023G",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.969,
+    0.0,
+    0.031,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 8.786,
+   "y": -0.533,
+   "n_epitope_positions": 16,
+   "top_positions": [
+    440,
+    445,
+    444,
+    500,
+    499,
+    450
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02MFL0000",
+   "community": 1,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.0,
+    0.315,
+    0.0,
+    0.367,
+    0.317,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.582,
+   "y": 1.071,
+   "n_epitope_positions": 17,
+   "top_positions": [
+    446,
+    449,
+    450,
+    445,
+    490,
+    452
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02N6L0245",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.001,
+    0.0,
+    0.0,
+    0.138,
+    0.862,
+    0.0
+   ],
+   "x": 13.553,
+   "y": 6.025,
+   "n_epitope_positions": 19,
+   "top_positions": [
+    417,
+    458,
+    475,
+    415,
+    421,
+    455
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02N8L0247",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.004,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.996
+   ],
+   "x": -0.592,
+   "y": 7.898,
+   "n_epitope_positions": 23,
+   "top_positions": [
+    375,
+    376,
+    378,
+    503,
+    407,
+    369
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02NAL0248",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.105,
+    0.038,
+    0.0,
+    0.0,
+    0.0,
+    0.509,
+    0.348,
+    0.0
+   ],
+   "x": 8.695,
+   "y": 6.595,
+   "n_epitope_positions": 16,
+   "top_positions": [
+    489,
+    485,
+    486,
+    505,
+    456,
+    455
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02NQL024P",
+   "community": 1,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 5.622,
+   "y": -1.38,
+   "n_epitope_positions": 18,
+   "top_positions": [
+    340,
+    345,
+    343,
+    335,
+    344,
+    337
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02NQL02DW",
+   "community": 1,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 6.139,
+   "y": -1.798,
+   "n_epitope_positions": 1,
+   "top_positions": [
+    345
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02NQL03GW",
+   "community": 1,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.087,
+    0.693,
+    0.0,
+    0.22,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 5.914,
+   "y": -1.625,
+   "n_epitope_positions": 22,
+   "top_positions": [
+    346,
+    340,
+    345,
+    440,
+    339,
+    334
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02PBL0252",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.007,
+    0.073,
+    0.0,
+    0.0,
+    0.019,
+    0.901
+   ],
+   "x": -0.567,
+   "y": 7.865,
+   "n_epitope_positions": 15,
+   "top_positions": [
+    503,
+    374,
+    378,
+    408,
+    375,
+    404
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02QDL025Y",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.051,
+    0.0,
+    0.0,
+    0.0,
+    0.129,
+    0.798,
+    0.022
+   ],
+   "x": 12.286,
+   "y": 4.535,
+   "n_epitope_positions": 31,
+   "top_positions": [
+    505,
+    417,
+    421,
+    487,
+    486,
+    458
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02QJL0262",
+   "community": 1,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.0,
+    0.144,
+    0.0,
+    0.407,
+    0.0,
+    0.0,
+    0.387,
+    0.062
+   ],
+   "x": 10.155,
+   "y": -1.548,
+   "n_epitope_positions": 19,
+   "top_positions": [
+    505,
+    493,
+    498,
+    449,
+    500,
+    403
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02QKL0263",
+   "community": 0,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.794,
+    0.0,
+    0.0,
+    0.005,
+    0.0,
+    0.201,
+    0.0,
+    0.0
+   ],
+   "x": 8.724,
+   "y": 8.159,
+   "n_epitope_positions": 11,
+   "top_positions": [
+    484,
+    490,
+    485,
+    483,
+    456,
+    486
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02RXL0277",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.033,
+    0.0,
+    0.0,
+    0.0,
+    0.148,
+    0.796,
+    0.023
+   ],
+   "x": 12.11,
+   "y": 4.655,
+   "n_epitope_positions": 30,
+   "top_positions": [
+    505,
+    421,
+    475,
+    458,
+    487,
+    486
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02SHL01Y2",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.518,
+    0.0,
+    0.237,
+    0.0,
+    0.0,
+    0.149,
+    0.096
+   ],
+   "x": 9.753,
+   "y": -1.789,
+   "n_epitope_positions": 20,
+   "top_positions": [
+    449,
+    500,
+    503,
+    445,
+    439,
+    506
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02STL027Q",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.517,
+   "y": 1.616,
+   "n_epitope_positions": 15,
+   "top_positions": [
+    147,
+    251,
+    250,
+    247,
+    248,
+    148
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H02SYL027S",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.0,
+    0.209,
+    0.0,
+    0.0,
+    0.0,
+    0.705,
+    0.086,
+    0.0
+   ],
+   "x": 8.77,
+   "y": 7.433,
+   "n_epitope_positions": 19,
+   "top_positions": [
+    486,
+    489,
+    500,
+    475,
+    477,
+    493
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02TFL0000",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.179,
+    0.0,
+    0.0,
+    0.34,
+    0.0,
+    0.476,
+    0.005,
+    0.0
+   ],
+   "x": 8.434,
+   "y": 7.596,
+   "n_epitope_positions": 27,
+   "top_positions": [
+    489,
+    486,
+    487,
+    484,
+    449,
+    490
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02TGL0286",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.073,
+    0.0,
+    0.0,
+    0.029,
+    0.0,
+    0.635,
+    0.263,
+    0.0
+   ],
+   "x": 9.405,
+   "y": 7.782,
+   "n_epitope_positions": 10,
+   "top_positions": [
+    489,
+    486,
+    417,
+    456,
+    493,
+    485
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02TML028A",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.213,
+    0.787,
+    0.0
+   ],
+   "x": 13.379,
+   "y": 5.773,
+   "n_epitope_positions": 25,
+   "top_positions": [
+    417,
+    421,
+    505,
+    475,
+    486,
+    487
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02TSL028E",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.829,
+    0.171,
+    0.0
+   ],
+   "x": 10.187,
+   "y": 9.14,
+   "n_epitope_positions": 12,
+   "top_positions": [
+    486,
+    489,
+    475,
+    478,
+    487,
+    456
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02TTL028F",
+   "community": 0,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.59,
+    0.0,
+    0.0,
+    0.363,
+    0.047,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 8.037,
+   "y": 6.865,
+   "n_epitope_positions": 15,
+   "top_positions": [
+    484,
+    490,
+    493,
+    494,
+    449,
+    492
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02TVL028G",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.126,
+   "y": 2.334,
+   "n_epitope_positions": 21,
+   "top_positions": [
+    147,
+    249,
+    248,
+    250,
+    158,
+    247
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H02TXL028J",
+   "community": 1,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.42,
+    0.58
+   ],
+   "x": 10.626,
+   "y": -1.859,
+   "n_epitope_positions": 11,
+   "top_positions": [
+    505,
+    405,
+    403,
+    408,
+    504,
+    503
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02TZL028M",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.377,
+    0.022,
+    0.004,
+    0.178,
+    0.0,
+    0.386,
+    0.0,
+    0.033
+   ],
+   "x": 8.307,
+   "y": 7.679,
+   "n_epitope_positions": 27,
+   "top_positions": [
+    484,
+    486,
+    483,
+    493,
+    489,
+    485
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02VML0290",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.159,
+    0.0,
+    0.0,
+    0.073,
+    0.0,
+    0.705,
+    0.063,
+    0.0
+   ],
+   "x": 8.984,
+   "y": 8.254,
+   "n_epitope_positions": 7,
+   "top_positions": [
+    489,
+    486,
+    456,
+    484,
+    493,
+    485
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02VPL0292",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.024,
+    0.0,
+    0.0,
+    0.0,
+    0.199,
+    0.778,
+    0.0
+   ],
+   "x": 12.865,
+   "y": 5.968,
+   "n_epitope_positions": 23,
+   "top_positions": [
+    475,
+    421,
+    505,
+    487,
+    489,
+    457
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02VSL0000",
+   "community": 0,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.413,
+    0.0,
+    0.0,
+    0.0,
+    0.587,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 5.379,
+   "y": 3.116,
+   "n_epitope_positions": 16,
+   "top_positions": [
+    161,
+    162,
+    351,
+    484,
+    354,
+    158
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02W5L029F",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.361,
+    0.0,
+    0.0,
+    0.229,
+    0.022,
+    0.376,
+    0.012,
+    0.0
+   ],
+   "x": 8.451,
+   "y": 7.464,
+   "n_epitope_positions": 20,
+   "top_positions": [
+    486,
+    484,
+    490,
+    489,
+    493,
+    456
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02W7L029H",
+   "community": 2,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.753,
+    0.0,
+    0.0,
+    0.247,
+    0.0,
+    0.0
+   ],
+   "x": 5.251,
+   "y": -1.093,
+   "n_epitope_positions": 25,
+   "top_positions": [
+    364,
+    335,
+    333,
+    339,
+    340,
+    529
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02WDL029P",
+   "community": 1,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.013,
+    0.0,
+    0.0,
+    0.897,
+    0.09,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.644,
+   "y": 3.832,
+   "n_epitope_positions": 6,
+   "top_positions": [
+    449,
+    490,
+    494,
+    484,
+    405,
+    504
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02WML024P",
+   "community": 1,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.986,
+    0.0,
+    0.0,
+    0.014,
+    0.0,
+    0.0
+   ],
+   "x": 5.597,
+   "y": -1.386,
+   "n_epitope_positions": 33,
+   "top_positions": [
+    340,
+    345,
+    343,
+    339,
+    337,
+    440
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02WNL029S",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.112,
+    0.862,
+    0.026
+   ],
+   "x": 12.571,
+   "y": 4.984,
+   "n_epitope_positions": 26,
+   "top_positions": [
+    505,
+    421,
+    475,
+    455,
+    456,
+    487
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02X0L02A3",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.049,
+    0.951
+   ],
+   "x": 2.041,
+   "y": 6.301,
+   "n_epitope_positions": 22,
+   "top_positions": [
+    427,
+    408,
+    377,
+    380,
+    384,
+    379
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02X8L02AB",
+   "community": 0,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.661,
+    0.0,
+    0.0,
+    0.07,
+    0.0,
+    0.123,
+    0.0,
+    0.146
+   ],
+   "x": 8.247,
+   "y": 7.892,
+   "n_epitope_positions": 22,
+   "top_positions": [
+    484,
+    485,
+    490,
+    481,
+    483,
+    489
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02XBL02AD",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.001,
+    0.0,
+    0.0,
+    0.0,
+    0.999,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.745,
+   "y": 1.195,
+   "n_epitope_positions": 7,
+   "top_positions": [
+    148,
+    147,
+    145,
+    146,
+    144,
+    155
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H02XEL0000",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.249,
+    0.0,
+    0.0,
+    0.578,
+    0.0,
+    0.0,
+    0.172,
+    0.0
+   ],
+   "x": 7.643,
+   "y": 4.384,
+   "n_epitope_positions": 22,
+   "top_positions": [
+    493,
+    484,
+    449,
+    490,
+    455,
+    489
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02XGL02AG",
+   "community": 2,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.626,
+    0.0,
+    0.0,
+    0.374,
+    0.0,
+    0.0
+   ],
+   "x": 5.209,
+   "y": -1.079,
+   "n_epitope_positions": 26,
+   "top_positions": [
+    335,
+    339,
+    486,
+    343,
+    364,
+    477
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02XKL02AJ",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.017,
+    0.983
+   ],
+   "x": 1.872,
+   "y": 6.488,
+   "n_epitope_positions": 25,
+   "top_positions": [
+    408,
+    427,
+    377,
+    381,
+    378,
+    380
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02XRL02AP",
+   "community": 1,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.0,
+    0.149,
+    0.149,
+    0.359,
+    0.343,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.357,
+   "y": 0.19,
+   "n_epitope_positions": 15,
+   "top_positions": [
+    449,
+    346,
+    450,
+    509,
+    345,
+    441
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02Y0L02AW",
+   "community": 1,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.129,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.152,
+    0.72
+   ],
+   "x": 10.357,
+   "y": -1.89,
+   "n_epitope_positions": 4,
+   "top_positions": [
+    503,
+    502,
+    504,
+    501
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02Y3L02AY",
+   "community": 1,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.242,
+    0.0,
+    0.758,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 5.9,
+   "y": 3.046,
+   "n_epitope_positions": 14,
+   "top_positions": [
+    356,
+    346,
+    357,
+    340,
+    466,
+    468
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02YML02BB",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.01,
+    0.048,
+    0.0,
+    0.0,
+    0.0,
+    0.942
+   ],
+   "x": -0.595,
+   "y": 6.148,
+   "n_epitope_positions": 17,
+   "top_positions": [
+    370,
+    378,
+    437,
+    383,
+    385,
+    377
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02YPL02BD",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.002,
+    0.0,
+    0.029,
+    0.8,
+    0.0,
+    0.152,
+    0.0,
+    0.017
+   ],
+   "x": 8.15,
+   "y": 5.192,
+   "n_epitope_positions": 24,
+   "top_positions": [
+    449,
+    493,
+    484,
+    486,
+    373,
+    489
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02YQL02BE",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.313,
+    0.0,
+    0.0,
+    0.0,
+    0.687,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.155,
+   "y": 2.336,
+   "n_epitope_positions": 1,
+   "top_positions": [
+    156
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H02Z2L02BM",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.387,
+    0.0,
+    0.0,
+    0.042,
+    0.0,
+    0.571,
+    0.0,
+    0.0
+   ],
+   "x": 9.882,
+   "y": 9.87,
+   "n_epitope_positions": 3,
+   "top_positions": [
+    484,
+    486,
+    485
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02ZAL01HK",
+   "community": 0,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.426,
+    0.063,
+    0.0,
+    0.282,
+    0.0,
+    0.195,
+    0.0,
+    0.034
+   ],
+   "x": 8.137,
+   "y": 6.561,
+   "n_epitope_positions": 36,
+   "top_positions": [
+    493,
+    484,
+    489,
+    486,
+    485,
+    490
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02ZBL02BS",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.227,
+   "y": 2.091,
+   "n_epitope_positions": 22,
+   "top_positions": [
+    154,
+    249,
+    156,
+    147,
+    144,
+    251
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H02ZDL02BV",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.051,
+    0.0,
+    0.651,
+    0.297,
+    0.0
+   ],
+   "x": 9.155,
+   "y": 7.574,
+   "n_epitope_positions": 29,
+   "top_positions": [
+    486,
+    489,
+    456,
+    505,
+    487,
+    417
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02ZVL02C5",
+   "community": 1,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.337,
+    0.58,
+    0.0,
+    0.084,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 6.758,
+   "y": -1.757,
+   "n_epitope_positions": 20,
+   "top_positions": [
+    346,
+    440,
+    345,
+    443,
+    444,
+    343
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02ZWL0000",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.047,
+    0.099,
+    0.009,
+    0.0,
+    0.0,
+    0.061,
+    0.0,
+    0.784
+   ],
+   "x": -0.308,
+   "y": 7.772,
+   "n_epitope_positions": 36,
+   "top_positions": [
+    378,
+    503,
+    376,
+    375,
+    384,
+    377
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H02ZXL0000",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.15,
+    0.009,
+    0.0,
+    0.465,
+    0.158,
+    0.0,
+    0.174,
+    0.044
+   ],
+   "x": 8.267,
+   "y": 4.219,
+   "n_epitope_positions": 24,
+   "top_positions": [
+    493,
+    484,
+    505,
+    470,
+    408,
+    351
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0304L02CC",
+   "community": 2,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.665,
+    0.0,
+    0.0,
+    0.335,
+    0.0,
+    0.0
+   ],
+   "x": 5.195,
+   "y": -1.033,
+   "n_epitope_positions": 26,
+   "top_positions": [
+    486,
+    335,
+    339,
+    343,
+    367,
+    364
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0307L0000",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "x": 0.14,
+   "y": 7.149,
+   "n_epitope_positions": 23,
+   "top_positions": [
+    378,
+    375,
+    376,
+    380,
+    408,
+    384
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H030CL02CG",
+   "community": 0,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.462,
+    0.002,
+    0.0,
+    0.321,
+    0.078,
+    0.129,
+    0.0,
+    0.008
+   ],
+   "x": 7.889,
+   "y": 6.245,
+   "n_epitope_positions": 28,
+   "top_positions": [
+    484,
+    449,
+    483,
+    490,
+    485,
+    493
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H030FL02CK",
+   "community": 3,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.504,
+    0.0,
+    0.0,
+    0.0,
+    0.402,
+    0.0,
+    0.0,
+    0.094
+   ],
+   "x": 2.85,
+   "y": 0.956,
+   "n_epitope_positions": 24,
+   "top_positions": [
+    237,
+    87,
+    85,
+    236,
+    83,
+    88
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H030FL02JQ",
+   "community": 0,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.598,
+    0.0,
+    0.0,
+    0.0,
+    0.402,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 5.161,
+   "y": 3.054,
+   "n_epitope_positions": 2,
+   "top_positions": [
+    113,
+    471
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H030FL02QX",
+   "community": 3,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.493,
+    0.16,
+    0.0,
+    0.0,
+    0.108,
+    0.0,
+    0.15,
+    0.089
+   ],
+   "x": 2.862,
+   "y": 0.764,
+   "n_epitope_positions": 18,
+   "top_positions": [
+    85,
+    87,
+    236,
+    28,
+    26,
+    269
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H030HL02CN",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.263,
+    0.117,
+    0.0,
+    0.548,
+    0.0,
+    0.053,
+    0.019,
+    0.0
+   ],
+   "x": 7.927,
+   "y": 4.987,
+   "n_epitope_positions": 24,
+   "top_positions": [
+    449,
+    493,
+    484,
+    490,
+    489,
+    483
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0310L02CZ",
+   "community": 1,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.24,
+    0.733,
+    0.0,
+    0.027,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 6.639,
+   "y": -1.815,
+   "n_epitope_positions": 13,
+   "top_positions": [
+    345,
+    441,
+    346,
+    440,
+    340,
+    443
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0314L02D2",
+   "community": 3,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.097,
+   "y": 0.569,
+   "n_epitope_positions": 18,
+   "top_positions": [
+    173,
+    176,
+    175,
+    226,
+    178,
+    126
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H0316L02D4",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.102,
+    0.027,
+    0.0,
+    0.0,
+    0.0,
+    0.615,
+    0.255,
+    0.0
+   ],
+   "x": 10.805,
+   "y": 10.16,
+   "n_epitope_positions": 11,
+   "top_positions": [
+    475,
+    476,
+    478,
+    487,
+    486,
+    479
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H031JL02DD",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.154,
+    0.0,
+    0.0,
+    0.0,
+    0.846,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.307,
+   "y": 1.745,
+   "n_epitope_positions": 11,
+   "top_positions": [
+    145,
+    146,
+    149,
+    157,
+    244,
+    148
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H031NL02DF",
+   "community": 1,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.205,
+    0.794,
+    0.0,
+    0.001,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 6.415,
+   "y": -1.677,
+   "n_epitope_positions": 18,
+   "top_positions": [
+    343,
+    441,
+    345,
+    444,
+    346,
+    344
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H031ZL02DQ",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.001,
+    0.0,
+    0.072,
+    0.8,
+    0.0,
+    0.127,
+    0.0,
+    0.0
+   ],
+   "x": 8.141,
+   "y": 5.068,
+   "n_epitope_positions": 26,
+   "top_positions": [
+    449,
+    493,
+    484,
+    486,
+    373,
+    494
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0321L02DS",
+   "community": 1,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.222,
+    0.0,
+    0.0,
+    0.192,
+    0.586,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 6.355,
+   "y": 3.401,
+   "n_epitope_positions": 23,
+   "top_positions": [
+    470,
+    351,
+    346,
+    449,
+    349,
+    490
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0324L02CK",
+   "community": 0,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.534,
+    0.0,
+    0.0,
+    0.0,
+    0.397,
+    0.0,
+    0.07,
+    0.0
+   ],
+   "x": 8.862,
+   "y": 7.746,
+   "n_epitope_positions": 5,
+   "top_positions": [
+    471,
+    472,
+    470,
+    458,
+    474
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H032AL02DY",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.992,
+    0.0,
+    0.0,
+    0.008
+   ],
+   "x": 4.002,
+   "y": 0.969,
+   "n_epitope_positions": 23,
+   "top_positions": [
+    97,
+    71,
+    249,
+    185,
+    150,
+    152
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H032FL02E2",
+   "community": 0,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.453,
+    0.035,
+    0.0,
+    0.419,
+    0.0,
+    0.093,
+    0.0,
+    0.0
+   ],
+   "x": 7.745,
+   "y": 6.244,
+   "n_epitope_positions": 19,
+   "top_positions": [
+    494,
+    485,
+    493,
+    484,
+    449,
+    452
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H032RL02EA",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.119,
+   "y": 2.332,
+   "n_epitope_positions": 9,
+   "top_positions": [
+    252,
+    147,
+    14,
+    157,
+    253,
+    145
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H032WL02ED",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.97,
+    0.0,
+    0.0,
+    0.03
+   ],
+   "x": 3.6,
+   "y": 0.915,
+   "n_epitope_positions": 23,
+   "top_positions": [
+    185,
+    213,
+    69,
+    97,
+    245,
+    247
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H032XL02EE",
+   "community": 0,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.443,
+    0.004,
+    0.0,
+    0.241,
+    0.059,
+    0.254,
+    0.0,
+    0.0
+   ],
+   "x": 8.009,
+   "y": 7.435,
+   "n_epitope_positions": 24,
+   "top_positions": [
+    484,
+    486,
+    483,
+    490,
+    449,
+    485
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0333L02EJ",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.008,
+    0.0,
+    0.166,
+    0.792,
+    0.034
+   ],
+   "x": 12.511,
+   "y": 5.085,
+   "n_epitope_positions": 23,
+   "top_positions": [
+    505,
+    487,
+    455,
+    456,
+    421,
+    460
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0339L02EQ",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.137,
+    0.0,
+    0.0,
+    0.511,
+    0.0,
+    0.212,
+    0.019,
+    0.12
+   ],
+   "x": 8.258,
+   "y": 5.334,
+   "n_epitope_positions": 32,
+   "top_positions": [
+    449,
+    489,
+    484,
+    408,
+    486,
+    493
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H033AL0000",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.018,
+    0.0,
+    0.0,
+    0.767,
+    0.0,
+    0.1,
+    0.116,
+    0.0
+   ],
+   "x": 7.802,
+   "y": 4.301,
+   "n_epitope_positions": 18,
+   "top_positions": [
+    449,
+    494,
+    489,
+    493,
+    484,
+    492
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H033JL02EY",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.124,
+    0.876
+   ],
+   "x": -0.007,
+   "y": 7.381,
+   "n_epitope_positions": 30,
+   "top_positions": [
+    377,
+    378,
+    379,
+    375,
+    376,
+    408
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H033ML02F0",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.186,
+   "y": 2.206,
+   "n_epitope_positions": 22,
+   "top_positions": [
+    144,
+    156,
+    148,
+    246,
+    248,
+    158
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H033RL02F3",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.388,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.612,
+    0.0,
+    0.0
+   ],
+   "x": 9.724,
+   "y": 9.626,
+   "n_epitope_positions": 21,
+   "top_positions": [
+    486,
+    483,
+    484,
+    487,
+    493,
+    481
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0344L02FB",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.219,
+    0.0,
+    0.0,
+    0.537,
+    0.0,
+    0.244,
+    0.0,
+    0.0
+   ],
+   "x": 7.779,
+   "y": 5.919,
+   "n_epitope_positions": 17,
+   "top_positions": [
+    489,
+    484,
+    449,
+    486,
+    494,
+    490
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H034FL02FM",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "x": 2.227,
+   "y": 6.139,
+   "n_epitope_positions": 4,
+   "top_positions": [
+    413,
+    380,
+    427,
+    379
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H034NL02FT",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.856,
+    0.033,
+    0.095,
+    0.016,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 8.117,
+   "y": -0.633,
+   "n_epitope_positions": 10,
+   "top_positions": [
+    444,
+    441,
+    443,
+    445,
+    440,
+    442
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H034QL02FW",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.995,
+    0.0,
+    0.0,
+    0.005
+   ],
+   "x": 3.959,
+   "y": 1.178,
+   "n_epitope_positions": 21,
+   "top_positions": [
+    71,
+    183,
+    146,
+    259,
+    70,
+    258
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H034SL02FY",
+   "community": 1,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.232,
+    0.46,
+    0.208,
+    0.056,
+    0.0,
+    0.0,
+    0.045
+   ],
+   "x": 6.994,
+   "y": -1.914,
+   "n_epitope_positions": 24,
+   "top_positions": [
+    441,
+    444,
+    373,
+    440,
+    346,
+    345
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H034XL02G0",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "x": -0.766,
+   "y": 5.985,
+   "n_epitope_positions": 3,
+   "top_positions": [
+    369,
+    377,
+    376
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0351L0000",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.179,
+    0.041,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.781
+   ],
+   "x": -0.713,
+   "y": 8.041,
+   "n_epitope_positions": 18,
+   "top_positions": [
+    440,
+    372,
+    437,
+    378,
+    375,
+    503
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0352L02G4",
+   "community": 1,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.0,
+    0.336,
+    0.0,
+    0.535,
+    0.129,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.798,
+   "y": 0.808,
+   "n_epitope_positions": 17,
+   "top_positions": [
+    449,
+    445,
+    446,
+    450,
+    498,
+    444
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H035CL02GD",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.105,
+    0.0,
+    0.625,
+    0.271,
+    0.0
+   ],
+   "x": 9.567,
+   "y": 8.098,
+   "n_epitope_positions": 21,
+   "top_positions": [
+    486,
+    493,
+    478,
+    458,
+    475,
+    456
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H035GL02GH",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.014,
+    0.0,
+    0.076,
+    0.0,
+    0.141,
+    0.77,
+    0.0
+   ],
+   "x": 11.984,
+   "y": 4.45,
+   "n_epitope_positions": 29,
+   "top_positions": [
+    505,
+    421,
+    489,
+    487,
+    493,
+    417
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H035QL0000",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.232,
+    0.0,
+    0.28,
+    0.384,
+    0.104
+   ],
+   "x": 12.202,
+   "y": 5.36,
+   "n_epitope_positions": 32,
+   "top_positions": [
+    486,
+    456,
+    493,
+    489,
+    455,
+    408
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H035YL0000",
+   "community": 1,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.011,
+    0.101,
+    0.0,
+    0.491,
+    0.0,
+    0.217,
+    0.134,
+    0.047
+   ],
+   "x": 8.05,
+   "y": 4.648,
+   "n_epitope_positions": 25,
+   "top_positions": [
+    449,
+    486,
+    489,
+    493,
+    372,
+    490
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0361L02GT",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.008,
+    0.0,
+    0.0,
+    0.0,
+    0.992
+   ],
+   "x": -0.502,
+   "y": 6.192,
+   "n_epitope_positions": 15,
+   "top_positions": [
+    378,
+    375,
+    377,
+    370,
+    408,
+    384
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0363L02GV",
+   "community": 3,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.066,
+   "y": 0.181,
+   "n_epitope_positions": 24,
+   "top_positions": [
+    561,
+    226,
+    582,
+    577,
+    562,
+    228
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H036FL02H8",
+   "community": 1,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.342,
+    0.615,
+    0.0,
+    0.043,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.075,
+   "y": -1.817,
+   "n_epitope_positions": 8,
+   "top_positions": [
+    440,
+    345,
+    346,
+    439,
+    441,
+    438
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H036KL02HC",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 8.943,
+   "y": -0.71,
+   "n_epitope_positions": 13,
+   "top_positions": [
+    445,
+    500,
+    444,
+    440,
+    439,
+    499
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0375L02HS",
+   "community": 3,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.051,
+   "y": 0.807,
+   "n_epitope_positions": 23,
+   "top_positions": [
+    124,
+    123,
+    152,
+    183,
+    150,
+    178
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H037JL02J2",
+   "community": 0,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.482,
+    0.0,
+    0.0,
+    0.308,
+    0.014,
+    0.025,
+    0.0,
+    0.172
+   ],
+   "x": 8.286,
+   "y": 5.958,
+   "n_epitope_positions": 23,
+   "top_positions": [
+    483,
+    449,
+    484,
+    473,
+    493,
+    492
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H037KL0000",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.306,
+    0.015,
+    0.0,
+    0.48,
+    0.043,
+    0.0,
+    0.143,
+    0.012
+   ],
+   "x": 8.145,
+   "y": 4.332,
+   "n_epitope_positions": 44,
+   "top_positions": [
+    493,
+    484,
+    446,
+    490,
+    449,
+    494
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H037PL02J3",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.513,
+    0.0,
+    0.381,
+    0.106,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.717,
+   "y": 0.651,
+   "n_epitope_positions": 20,
+   "top_positions": [
+    444,
+    445,
+    449,
+    446,
+    494,
+    447
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H037VL02J7",
+   "community": 3,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.293,
+    0.0,
+    0.0,
+    0.707
+   ],
+   "x": 3.18,
+   "y": 0.476,
+   "n_epitope_positions": 28,
+   "top_positions": [
+    606,
+    287,
+    218,
+    293,
+    288,
+    59
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H037WL02J8",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.591,
+    0.0,
+    0.296,
+    0.0,
+    0.0,
+    0.113,
+    0.0
+   ],
+   "x": 8.17,
+   "y": 0.182,
+   "n_epitope_positions": 9,
+   "top_positions": [
+    497,
+    442,
+    498,
+    496,
+    495,
+    443
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0380L02JB",
+   "community": 3,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.039,
+   "y": 0.284,
+   "n_epitope_positions": 26,
+   "top_positions": [
+    173,
+    226,
+    182,
+    582,
+    561,
+    170
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H0381L029M",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "x": 1.432,
+   "y": 6.478,
+   "n_epitope_positions": 5,
+   "top_positions": [
+    379,
+    380,
+    378,
+    377,
+    369
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0387L02JH",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.047,
+   "y": 2.177,
+   "n_epitope_positions": 27,
+   "top_positions": [
+    248,
+    249,
+    147,
+    250,
+    245,
+    148
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H038BL02JN",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.718,
+    0.0,
+    0.192,
+    0.09,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 8.121,
+   "y": 0.334,
+   "n_epitope_positions": 17,
+   "top_positions": [
+    444,
+    445,
+    450,
+    447,
+    449,
+    440
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H038ML0000",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "x": 0.081,
+   "y": 7.073,
+   "n_epitope_positions": 25,
+   "top_positions": [
+    378,
+    379,
+    376,
+    375,
+    383,
+    374
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H038NL02CB",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.01,
+    0.167,
+    0.823,
+    0.0
+   ],
+   "x": 13.116,
+   "y": 5.633,
+   "n_epitope_positions": 25,
+   "top_positions": [
+    505,
+    421,
+    487,
+    475,
+    458,
+    489
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0392L02K3",
+   "community": 3,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 3.912,
+   "y": 0.588,
+   "n_epitope_positions": 22,
+   "top_positions": [
+    176,
+    173,
+    177,
+    172,
+    174,
+    224
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H0394L0000",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.005,
+    0.0,
+    0.0,
+    0.0,
+    0.995
+   ],
+   "x": -0.567,
+   "y": 6.304,
+   "n_epitope_positions": 17,
+   "top_positions": [
+    375,
+    369,
+    374,
+    376,
+    384,
+    408
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0395L0000",
+   "community": 1,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.18,
+    0.0,
+    0.207,
+    0.0,
+    0.0,
+    0.581,
+    0.032
+   ],
+   "x": 10.427,
+   "y": -1.446,
+   "n_epitope_positions": 31,
+   "top_positions": [
+    505,
+    500,
+    417,
+    403,
+    449,
+    498
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H039AL02K5",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.177,
+    0.0,
+    0.0,
+    0.38,
+    0.024,
+    0.219,
+    0.097,
+    0.103
+   ],
+   "x": 8.351,
+   "y": 5.86,
+   "n_epitope_positions": 34,
+   "top_positions": [
+    489,
+    449,
+    490,
+    486,
+    408,
+    484
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H039CL02K6",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.05,
+    0.0,
+    0.11,
+    0.841,
+    0.0
+   ],
+   "x": 12.984,
+   "y": 5.78,
+   "n_epitope_positions": 17,
+   "top_positions": [
+    505,
+    421,
+    475,
+    476,
+    458,
+    417
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H039JL02K8",
+   "community": 4,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 3.195,
+   "y": 0.118,
+   "n_epitope_positions": 13,
+   "top_positions": [
+    823,
+    815,
+    819,
+    827,
+    825,
+    822
+   ],
+   "dominant_domain": "S2"
+  },
+  {
+   "antibody": "sabdab2_H039KL02K9",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.148,
+    0.0,
+    0.008,
+    0.587,
+    0.017,
+    0.234,
+    0.0,
+    0.006
+   ],
+   "x": 8.118,
+   "y": 5.459,
+   "n_epitope_positions": 26,
+   "top_positions": [
+    449,
+    484,
+    486,
+    489,
+    493,
+    490
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H039SL02KE",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.01,
+    0.1,
+    0.0,
+    0.0,
+    0.0,
+    0.89
+   ],
+   "x": -0.938,
+   "y": 5.8,
+   "n_epitope_positions": 7,
+   "top_positions": [
+    369,
+    371,
+    372,
+    377,
+    374,
+    384
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H039ZL02KN",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.089,
+    0.911
+   ],
+   "x": 2.23,
+   "y": 6.369,
+   "n_epitope_positions": 19,
+   "top_positions": [
+    427,
+    408,
+    379,
+    413,
+    412,
+    380
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03A8L0000",
+   "community": 1,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.0,
+    0.056,
+    0.0,
+    0.663,
+    0.281,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.391,
+   "y": 2.988,
+   "n_epitope_positions": 18,
+   "top_positions": [
+    449,
+    450,
+    452,
+    493,
+    451,
+    494
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03AKL02M6",
+   "community": 3,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.265,
+    0.0,
+    0.0,
+    0.0,
+    0.175,
+    0.0,
+    0.0,
+    0.56
+   ],
+   "x": 3.202,
+   "y": 0.643,
+   "n_epitope_positions": 24,
+   "top_positions": [
+    214,
+    218,
+    28,
+    69,
+    64,
+    97
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H03BBL0000",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.006,
+    0.081,
+    0.0,
+    0.0,
+    0.0,
+    0.913
+   ],
+   "x": -0.51,
+   "y": 6.149,
+   "n_epitope_positions": 14,
+   "top_positions": [
+    372,
+    370,
+    377,
+    437,
+    374,
+    369
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03BDL02MV",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.492,
+   "y": 1.399,
+   "n_epitope_positions": 16,
+   "top_positions": [
+    251,
+    147,
+    248,
+    152,
+    246,
+    249
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H03BZL02N9",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.419,
+   "y": 1.054,
+   "n_epitope_positions": 4,
+   "top_positions": [
+    152,
+    151,
+    150,
+    147
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H03C2L02NA",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.014,
+    0.0,
+    0.0,
+    0.0,
+    0.142,
+    0.844,
+    0.0
+   ],
+   "x": 12.172,
+   "y": 4.675,
+   "n_epitope_positions": 28,
+   "top_positions": [
+    505,
+    421,
+    487,
+    475,
+    486,
+    473
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03CAL027S",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.082,
+    0.0,
+    0.0,
+    0.033,
+    0.0,
+    0.747,
+    0.138,
+    0.0
+   ],
+   "x": 9.487,
+   "y": 8.327,
+   "n_epitope_positions": 15,
+   "top_positions": [
+    486,
+    489,
+    475,
+    478,
+    417,
+    487
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03CPL02NR",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.052,
+    0.012,
+    0.0,
+    0.003,
+    0.0,
+    0.933,
+    0.0,
+    0.0
+   ],
+   "x": 9.95,
+   "y": 9.381,
+   "n_epitope_positions": 14,
+   "top_positions": [
+    486,
+    489,
+    487,
+    485,
+    476,
+    484
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03DDL0000",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.198,
+    0.0,
+    0.0,
+    0.521,
+    0.05,
+    0.231,
+    0.0,
+    0.0
+   ],
+   "x": 8.021,
+   "y": 6.672,
+   "n_epitope_positions": 18,
+   "top_positions": [
+    449,
+    489,
+    484,
+    493,
+    490,
+    486
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03DFL02P6",
+   "community": 1,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.0,
+    0.121,
+    0.0,
+    0.717,
+    0.162,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.575,
+   "y": 1.887,
+   "n_epitope_positions": 16,
+   "top_positions": [
+    449,
+    446,
+    447,
+    450,
+    452,
+    490
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03DML02P9",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.247,
+    0.0,
+    0.0,
+    0.484,
+    0.0,
+    0.27,
+    0.0,
+    0.0
+   ],
+   "x": 8.021,
+   "y": 7.083,
+   "n_epitope_positions": 13,
+   "top_positions": [
+    449,
+    484,
+    486,
+    489,
+    485,
+    490
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03DNL02PA",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 3.962,
+   "y": 2.124,
+   "n_epitope_positions": 11,
+   "top_positions": [
+    252,
+    253,
+    251,
+    247,
+    144,
+    248
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H03EBL0000",
+   "community": 1,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.089,
+    0.022,
+    0.06,
+    0.604,
+    0.021,
+    0.067,
+    0.128,
+    0.01
+   ],
+   "x": 8.315,
+   "y": 4.835,
+   "n_epitope_positions": 69,
+   "top_positions": [
+    449,
+    489,
+    490,
+    342,
+    498,
+    492
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03EJL02PX",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.098,
+   "y": 2.278,
+   "n_epitope_positions": 15,
+   "top_positions": [
+    248,
+    246,
+    14,
+    251,
+    253,
+    250
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H03EYL00RW",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.137,
+    0.0,
+    0.05,
+    0.547,
+    0.0,
+    0.26,
+    0.0,
+    0.006
+   ],
+   "x": 8.05,
+   "y": 5.711,
+   "n_epitope_positions": 23,
+   "top_positions": [
+    449,
+    484,
+    486,
+    489,
+    490,
+    485
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03F1L02Q5",
+   "community": 0,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.773,
+    0.0,
+    0.0,
+    0.227,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 9.549,
+   "y": 9.779,
+   "n_epitope_positions": 1,
+   "top_positions": [
+    484
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03FNL02QM",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "x": 1.464,
+   "y": 6.422,
+   "n_epitope_positions": 26,
+   "top_positions": [
+    384,
+    408,
+    380,
+    381,
+    379,
+    427
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03FZL02QW",
+   "community": 1,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 6.035,
+   "y": -1.741,
+   "n_epitope_positions": 1,
+   "top_positions": [
+    345
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03G8L02R0",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.072,
+    0.0,
+    0.0,
+    0.928,
+    0.0
+   ],
+   "x": 13.538,
+   "y": 5.674,
+   "n_epitope_positions": 6,
+   "top_positions": [
+    421,
+    476,
+    494,
+    487,
+    415,
+    475
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03H6L02RN",
+   "community": 1,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.055,
+    0.091,
+    0.0,
+    0.336,
+    0.518,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 6.46,
+   "y": 3.182,
+   "n_epitope_positions": 23,
+   "top_positions": [
+    351,
+    449,
+    450,
+    492,
+    452,
+    484
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03HEL0000",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.052,
+    0.014,
+    0.028,
+    0.0,
+    0.069,
+    0.0,
+    0.837
+   ],
+   "x": -0.557,
+   "y": 7.786,
+   "n_epitope_positions": 23,
+   "top_positions": [
+    503,
+    372,
+    376,
+    369,
+    408,
+    374
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03HKL0000",
+   "community": 0,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.374,
+    0.0,
+    0.0,
+    0.112,
+    0.515,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 5.97,
+   "y": 3.743,
+   "n_epitope_positions": 35,
+   "top_positions": [
+    449,
+    450,
+    482,
+    484,
+    490,
+    468
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03HNL02S0",
+   "community": 1,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.078,
+    0.0,
+    0.037,
+    0.012,
+    0.872,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 6.112,
+   "y": 3.046,
+   "n_epitope_positions": 22,
+   "top_positions": [
+    346,
+    348,
+    450,
+    347,
+    354,
+    482
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03HQL02S2",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.985,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.015,
+    0.0
+   ],
+   "x": 8.894,
+   "y": -0.647,
+   "n_epitope_positions": 17,
+   "top_positions": [
+    444,
+    445,
+    500,
+    440,
+    499,
+    439
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03HRL02S3",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.492,
+    0.386,
+    0.0,
+    0.122,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.372,
+   "y": -1.292,
+   "n_epitope_positions": 11,
+   "top_positions": [
+    440,
+    346,
+    441,
+    345,
+    444,
+    445
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03HSL02S4",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.015,
+    0.0,
+    0.0,
+    0.117,
+    0.0,
+    0.354,
+    0.514,
+    0.0
+   ],
+   "x": 12.772,
+   "y": 6.178,
+   "n_epitope_positions": 29,
+   "top_positions": [
+    486,
+    458,
+    489,
+    455,
+    493,
+    505
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03JFL02SN",
+   "community": 0,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.547,
+    0.0,
+    0.0,
+    0.133,
+    0.034,
+    0.285,
+    0.0,
+    0.0
+   ],
+   "x": 8.242,
+   "y": 7.6,
+   "n_epitope_positions": 29,
+   "top_positions": [
+    486,
+    484,
+    490,
+    485,
+    483,
+    493
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03JGL02SP",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.095,
+    0.0,
+    0.0,
+    0.15,
+    0.0,
+    0.641,
+    0.114,
+    0.0
+   ],
+   "x": 9.083,
+   "y": 8.124,
+   "n_epitope_positions": 10,
+   "top_positions": [
+    489,
+    486,
+    484,
+    493,
+    474,
+    491
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03JHL02SQ",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.483,
+    0.082,
+    0.172,
+    0.262,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.726,
+   "y": -0.291,
+   "n_epitope_positions": 14,
+   "top_positions": [
+    444,
+    346,
+    449,
+    441,
+    498,
+    440
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03JKL02SS",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.013,
+    0.296,
+    0.691,
+    0.0
+   ],
+   "x": 13.639,
+   "y": 6.314,
+   "n_epitope_positions": 18,
+   "top_positions": [
+    489,
+    421,
+    475,
+    456,
+    415,
+    486
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03JVL02SX",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.935,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.065,
+    0.0
+   ],
+   "x": 8.806,
+   "y": -0.534,
+   "n_epitope_positions": 34,
+   "top_positions": [
+    500,
+    444,
+    445,
+    440,
+    441,
+    439
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03JWL02SY",
+   "community": 1,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.106,
+    0.687,
+    0.204,
+    0.0,
+    0.0,
+    0.0,
+    0.002
+   ],
+   "x": 5.801,
+   "y": -1.488,
+   "n_epitope_positions": 17,
+   "top_positions": [
+    342,
+    340,
+    337,
+    343,
+    341,
+    437
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03JXL02SZ",
+   "community": 0,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.559,
+    0.0,
+    0.0,
+    0.376,
+    0.065,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.842,
+   "y": 6.689,
+   "n_epitope_positions": 16,
+   "top_positions": [
+    482,
+    484,
+    492,
+    449,
+    483,
+    481
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03JZL0000",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.003,
+    0.057,
+    0.0,
+    0.201,
+    0.0,
+    0.739
+   ],
+   "x": -0.461,
+   "y": 7.591,
+   "n_epitope_positions": 36,
+   "top_positions": [
+    372,
+    375,
+    503,
+    377,
+    408,
+    486
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03K0L02T1",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.91,
+    0.0,
+    0.064,
+    0.026,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 8.427,
+   "y": -0.436,
+   "n_epitope_positions": 16,
+   "top_positions": [
+    445,
+    444,
+    446,
+    499,
+    500,
+    509
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03K1L02T2",
+   "community": 3,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.022,
+    0.0,
+    0.385,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.593
+   ],
+   "x": 4.344,
+   "y": -0.311,
+   "n_epitope_positions": 25,
+   "top_positions": [
+    532,
+    537,
+    535,
+    323,
+    554,
+    324
+   ],
+   "dominant_domain": "linker"
+  },
+  {
+   "antibody": "sabdab2_H03K8L02T9",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.242,
+    0.0,
+    0.004,
+    0.0,
+    0.0,
+    0.754,
+    0.0,
+    0.0
+   ],
+   "x": 9.809,
+   "y": 9.719,
+   "n_epitope_positions": 20,
+   "top_positions": [
+    486,
+    489,
+    484,
+    487,
+    485,
+    477
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03KCL02TC",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "x": 1.648,
+   "y": 6.54,
+   "n_epitope_positions": 22,
+   "top_positions": [
+    377,
+    385,
+    378,
+    414,
+    380,
+    413
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03KGL0000",
+   "community": 3,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.272,
+    0.0,
+    0.0,
+    0.0,
+    0.2,
+    0.0,
+    0.0,
+    0.528
+   ],
+   "x": 3.051,
+   "y": 0.627,
+   "n_epitope_positions": 26,
+   "top_positions": [
+    607,
+    636,
+    59,
+    608,
+    30,
+    690
+   ],
+   "dominant_domain": "linker"
+  },
+  {
+   "antibody": "sabdab2_H03KKL02TH",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.187,
+    0.813,
+    0.0
+   ],
+   "x": 13.663,
+   "y": 6.032,
+   "n_epitope_positions": 22,
+   "top_positions": [
+    421,
+    455,
+    473,
+    489,
+    475,
+    486
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03KML02TJ",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.006,
+    0.746,
+    0.247,
+    0.0
+   ],
+   "x": 9.773,
+   "y": 8.306,
+   "n_epitope_positions": 16,
+   "top_positions": [
+    486,
+    489,
+    478,
+    487,
+    456,
+    475
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03KTL02TR",
+   "community": 1,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.167,
+    0.765,
+    0.0,
+    0.068,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 6.429,
+   "y": -1.632,
+   "n_epitope_positions": 14,
+   "top_positions": [
+    345,
+    346,
+    441,
+    343,
+    444,
+    445
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03KVL02TS",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.841,
+    0.049,
+    0.11,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 8.151,
+   "y": -0.713,
+   "n_epitope_positions": 16,
+   "top_positions": [
+    440,
+    444,
+    499,
+    449,
+    448,
+    441
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03M7L02V3",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.043,
+    0.0,
+    0.0,
+    0.0,
+    0.957
+   ],
+   "x": -0.729,
+   "y": 6.014,
+   "n_epitope_positions": 17,
+   "top_positions": [
+    378,
+    377,
+    369,
+    372,
+    370,
+    375
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03MCL02V6",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.474,
+    0.0,
+    0.17,
+    0.356,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.457,
+   "y": 0.354,
+   "n_epitope_positions": 23,
+   "top_positions": [
+    444,
+    450,
+    446,
+    449,
+    445,
+    346
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03MEL02V8",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.224,
+    0.038,
+    0.0,
+    0.556,
+    0.031,
+    0.142,
+    0.01,
+    0.0
+   ],
+   "x": 7.569,
+   "y": 5.002,
+   "n_epitope_positions": 27,
+   "top_positions": [
+    449,
+    484,
+    489,
+    493,
+    452,
+    490
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03MFL02V9",
+   "community": 1,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.043,
+    0.216,
+    0.0,
+    0.74,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 6.207,
+   "y": 2.869,
+   "n_epitope_positions": 23,
+   "top_positions": [
+    346,
+    450,
+    351,
+    345,
+    354,
+    352
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03MHL02VB",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.651,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.349,
+    0.0
+   ],
+   "x": 9.61,
+   "y": -0.968,
+   "n_epitope_positions": 12,
+   "top_positions": [
+    500,
+    421,
+    445,
+    440,
+    457,
+    456
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03MTL0000",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "x": 1.449,
+   "y": 6.088,
+   "n_epitope_positions": 16,
+   "top_positions": [
+    381,
+    386,
+    380,
+    383,
+    379,
+    385
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03N6L02VT",
+   "community": 3,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.684,
+    0.0,
+    0.0,
+    0.217,
+    0.0,
+    0.099
+   ],
+   "x": 2.77,
+   "y": 0.84,
+   "n_epitope_positions": 17,
+   "top_positions": [
+    25,
+    234,
+    80,
+    106,
+    321,
+    60
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H03NBL0000",
+   "community": 0,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.412,
+    0.038,
+    0.0,
+    0.023,
+    0.527,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 6.046,
+   "y": 3.638,
+   "n_epitope_positions": 37,
+   "top_positions": [
+    483,
+    484,
+    354,
+    468,
+    450,
+    490
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03NGL02W4",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.763,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.152,
+    0.084
+   ],
+   "x": 9.604,
+   "y": -1.474,
+   "n_epitope_positions": 28,
+   "top_positions": [
+    445,
+    500,
+    499,
+    440,
+    502,
+    503
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03NML02W8",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.747,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.171,
+    0.082
+   ],
+   "x": 9.664,
+   "y": -1.426,
+   "n_epitope_positions": 22,
+   "top_positions": [
+    445,
+    500,
+    499,
+    502,
+    440,
+    503
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03NTL02WC",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.56,
+    0.0,
+    0.324,
+    0.115,
+    0.0
+   ],
+   "x": 7.594,
+   "y": 4.987,
+   "n_epitope_positions": 21,
+   "top_positions": [
+    493,
+    486,
+    487,
+    449,
+    494,
+    484
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03NXL02WF",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.739,
+    0.227,
+    0.0,
+    0.035,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.805,
+   "y": -0.985,
+   "n_epitope_positions": 24,
+   "top_positions": [
+    444,
+    440,
+    445,
+    441,
+    345,
+    439
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03P0L02WJ",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.25,
+    0.75,
+    0.0
+   ],
+   "x": 13.299,
+   "y": 6.231,
+   "n_epitope_positions": 19,
+   "top_positions": [
+    421,
+    489,
+    456,
+    475,
+    455,
+    486
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03P5L0000",
+   "community": 1,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.002,
+    0.192,
+    0.805,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 6.008,
+   "y": 3.227,
+   "n_epitope_positions": 33,
+   "top_positions": [
+    346,
+    470,
+    449,
+    450,
+    348,
+    468
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03PZL02X6",
+   "community": 0,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.502,
+    0.037,
+    0.0,
+    0.173,
+    0.288,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.578,
+   "y": 6.611,
+   "n_epitope_positions": 28,
+   "top_positions": [
+    449,
+    482,
+    490,
+    483,
+    470,
+    481
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03Q2L02X9",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.108,
+    0.0,
+    0.137,
+    0.755,
+    0.0
+   ],
+   "x": 12.63,
+   "y": 5.296,
+   "n_epitope_positions": 28,
+   "top_positions": [
+    421,
+    493,
+    476,
+    458,
+    505,
+    477
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03Q4L02XB",
+   "community": 1,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.384,
+    0.0,
+    0.069,
+    0.0,
+    0.0,
+    0.407,
+    0.14
+   ],
+   "x": 10.09,
+   "y": -2.075,
+   "n_epitope_positions": 15,
+   "top_positions": [
+    500,
+    505,
+    501,
+    405,
+    503,
+    496
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03Q9L02XF",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.0,
+    0.025,
+    0.0,
+    0.0,
+    0.0,
+    0.843,
+    0.132,
+    0.0
+   ],
+   "x": 10.693,
+   "y": 10.098,
+   "n_epitope_positions": 12,
+   "top_positions": [
+    486,
+    478,
+    477,
+    475,
+    487,
+    489
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03QAL02XG",
+   "community": 0,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.082,
+    0.0,
+    0.0,
+    0.0,
+    0.91,
+    0.0,
+    0.008,
+    0.0
+   ],
+   "x": 5.721,
+   "y": 3.355,
+   "n_epitope_positions": 37,
+   "top_positions": [
+    355,
+    346,
+    466,
+    468,
+    357,
+    490
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03QPL02XP",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.0,
+    0.008,
+    0.0,
+    0.0,
+    0.0,
+    0.799,
+    0.193,
+    0.0
+   ],
+   "x": 10.143,
+   "y": 8.579,
+   "n_epitope_positions": 15,
+   "top_positions": [
+    486,
+    487,
+    478,
+    456,
+    475,
+    489
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03QVL02XS",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.052,
+    0.0,
+    0.0,
+    0.0,
+    0.086,
+    0.85,
+    0.012
+   ],
+   "x": 12.199,
+   "y": 4.56,
+   "n_epitope_positions": 35,
+   "top_positions": [
+    505,
+    421,
+    475,
+    417,
+    501,
+    456
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03QXL031V",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.182,
+    0.0,
+    0.01,
+    0.414,
+    0.0,
+    0.303,
+    0.032,
+    0.06
+   ],
+   "x": 8.211,
+   "y": 5.437,
+   "n_epitope_positions": 22,
+   "top_positions": [
+    484,
+    493,
+    489,
+    486,
+    494,
+    490
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03QYL02XV",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.333,
+    0.1,
+    0.352,
+    0.183,
+    0.032
+   ],
+   "x": 3.557,
+   "y": 5.375,
+   "n_epitope_positions": 23,
+   "top_positions": [
+    462,
+    458,
+    518,
+    428,
+    355,
+    463
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03QZL02XW",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "x": 0.978,
+   "y": 6.563,
+   "n_epitope_positions": 28,
+   "top_positions": [
+    385,
+    369,
+    378,
+    383,
+    377,
+    408
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03R1L02XY",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.288,
+    0.712,
+    0.0
+   ],
+   "x": 13.239,
+   "y": 6.51,
+   "n_epitope_positions": 16,
+   "top_positions": [
+    489,
+    456,
+    475,
+    473,
+    421,
+    487
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03R2L02XZ",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "x": 1.19,
+   "y": 6.142,
+   "n_epitope_positions": 25,
+   "top_positions": [
+    386,
+    383,
+    375,
+    381,
+    377,
+    370
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03RAL0000",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.055,
+    0.007,
+    0.073,
+    0.864
+   ],
+   "x": 3.196,
+   "y": 5.622,
+   "n_epitope_positions": 16,
+   "top_positions": [
+    428,
+    519,
+    516,
+    518,
+    517,
+    426
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03RDL0000",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.429,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.54,
+    0.03,
+    0.0
+   ],
+   "x": 9.647,
+   "y": 9.697,
+   "n_epitope_positions": 12,
+   "top_positions": [
+    489,
+    484,
+    487,
+    486,
+    485,
+    456
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03RHL0000",
+   "community": 2,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.038,
+    0.097,
+    0.349,
+    0.327,
+    0.189
+   ],
+   "x": 3.317,
+   "y": 5.543,
+   "n_epitope_positions": 30,
+   "top_positions": [
+    518,
+    519,
+    428,
+    517,
+    462,
+    464
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03RJL0000",
+   "community": 1,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.01,
+    0.103,
+    0.0,
+    0.307,
+    0.58,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 6.321,
+   "y": 3.096,
+   "n_epitope_positions": 32,
+   "top_positions": [
+    449,
+    450,
+    444,
+    490,
+    354,
+    470
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03RKL02Y6",
+   "community": 3,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.722,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.278
+   ],
+   "x": 4.271,
+   "y": -0.149,
+   "n_epitope_positions": 11,
+   "top_positions": [
+    535,
+    554,
+    582,
+    532,
+    536,
+    583
+   ],
+   "dominant_domain": "linker"
+  },
+  {
+   "antibody": "sabdab2_H03RWL02YD",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.476,
+    0.43,
+    0.058,
+    0.0,
+    0.0,
+    0.0,
+    0.036
+   ],
+   "x": 7.229,
+   "y": -1.984,
+   "n_epitope_positions": 15,
+   "top_positions": [
+    440,
+    441,
+    373,
+    346,
+    444,
+    345
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03RXL0000",
+   "community": 3,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.095,
+   "y": 0.195,
+   "n_epitope_positions": 36,
+   "top_positions": [
+    582,
+    226,
+    561,
+    173,
+    170,
+    172
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H03RZL02YF",
+   "community": 1,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.058,
+    0.184,
+    0.0,
+    0.173,
+    0.585,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 6.656,
+   "y": 2.955,
+   "n_epitope_positions": 31,
+   "top_positions": [
+    450,
+    346,
+    490,
+    449,
+    444,
+    452
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03S9L02YN",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.004,
+    0.0,
+    0.0,
+    0.021,
+    0.003,
+    0.339,
+    0.634,
+    0.0
+   ],
+   "x": 13.334,
+   "y": 6.441,
+   "n_epitope_positions": 24,
+   "top_positions": [
+    475,
+    486,
+    421,
+    455,
+    489,
+    458
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03SEL02YQ",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.642,
+    0.246,
+    0.024,
+    0.061,
+    0.003,
+    0.024,
+    0.0
+   ],
+   "x": 7.885,
+   "y": -0.848,
+   "n_epitope_positions": 35,
+   "top_positions": [
+    440,
+    444,
+    443,
+    500,
+    345,
+    441
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03SHL036P",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.783,
+    0.154,
+    0.0,
+    0.0,
+    0.0,
+    0.062,
+    0.0
+   ],
+   "x": 8.673,
+   "y": -0.655,
+   "n_epitope_positions": 19,
+   "top_positions": [
+    500,
+    445,
+    345,
+    439,
+    440,
+    444
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03SML02YX",
+   "community": 1,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.289,
+    0.621,
+    0.0,
+    0.09,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 6.828,
+   "y": -1.697,
+   "n_epitope_positions": 11,
+   "top_positions": [
+    345,
+    440,
+    346,
+    444,
+    445,
+    448
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03T4L02ZB",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.094,
+    0.528,
+    0.0,
+    0.13,
+    0.0,
+    0.0,
+    0.078,
+    0.17
+   ],
+   "x": 9.215,
+   "y": -1.711,
+   "n_epitope_positions": 28,
+   "top_positions": [
+    438,
+    503,
+    498,
+    501,
+    447,
+    499
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03T5L02ZC",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.731,
+    0.269,
+    0.0
+   ],
+   "x": 9.704,
+   "y": 8.325,
+   "n_epitope_positions": 14,
+   "top_positions": [
+    486,
+    485,
+    489,
+    475,
+    417,
+    478
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03T6L02ZD",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.002,
+    0.06,
+    0.0,
+    0.0,
+    0.0,
+    0.939
+   ],
+   "x": -0.288,
+   "y": 7.408,
+   "n_epitope_positions": 18,
+   "top_positions": [
+    372,
+    408,
+    371,
+    503,
+    508,
+    378
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03T7L02ZE",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.426,
+    0.0,
+    0.31,
+    0.265,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.646,
+   "y": 0.956,
+   "n_epitope_positions": 18,
+   "top_positions": [
+    444,
+    450,
+    446,
+    449,
+    452,
+    447
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03T9L02ZG",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.0,
+    0.048,
+    0.0,
+    0.0,
+    0.0,
+    0.94,
+    0.0,
+    0.012
+   ],
+   "x": 10.725,
+   "y": 10.213,
+   "n_epitope_positions": 11,
+   "top_positions": [
+    486,
+    479,
+    487,
+    477,
+    478,
+    489
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03TCL0000",
+   "community": 1,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.021,
+    0.0,
+    0.0,
+    0.214,
+    0.765,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 6.298,
+   "y": 3.266,
+   "n_epitope_positions": 21,
+   "top_positions": [
+    346,
+    470,
+    450,
+    449,
+    492,
+    348
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03TDL02ZK",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.476,
+    0.388,
+    0.0,
+    0.135,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.312,
+   "y": -1.208,
+   "n_epitope_positions": 10,
+   "top_positions": [
+    346,
+    444,
+    440,
+    441,
+    345,
+    445
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03TML0000",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.22,
+    0.032,
+    0.0,
+    0.348,
+    0.234,
+    0.008,
+    0.047,
+    0.111
+   ],
+   "x": 7.743,
+   "y": 4.848,
+   "n_epitope_positions": 28,
+   "top_positions": [
+    490,
+    449,
+    450,
+    487,
+    470,
+    493
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03TPL02ZQ",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "x": 0.903,
+   "y": 6.543,
+   "n_epitope_positions": 21,
+   "top_positions": [
+    369,
+    378,
+    380,
+    383,
+    386,
+    408
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03VAL0307",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.832,
+    0.031,
+    0.021,
+    0.026,
+    0.09,
+    0.0,
+    0.0
+   ],
+   "x": 8.325,
+   "y": -0.42,
+   "n_epitope_positions": 23,
+   "top_positions": [
+    445,
+    500,
+    444,
+    440,
+    446,
+    451
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03VKL030F",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.302,
+    0.698,
+    0.0
+   ],
+   "x": 12.93,
+   "y": 6.088,
+   "n_epitope_positions": 24,
+   "top_positions": [
+    421,
+    486,
+    505,
+    487,
+    475,
+    455
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03VML0000",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.008,
+    0.992,
+    0.0
+   ],
+   "x": 13.692,
+   "y": 5.836,
+   "n_epitope_positions": 10,
+   "top_positions": [
+    421,
+    455,
+    456,
+    489,
+    475,
+    459
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03VML030G",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.038,
+    0.0,
+    0.14,
+    0.822,
+    0.0
+   ],
+   "x": 13.524,
+   "y": 5.655,
+   "n_epitope_positions": 20,
+   "top_positions": [
+    421,
+    455,
+    489,
+    473,
+    456,
+    505
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03VZL030R",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "x": -0.882,
+   "y": 5.904,
+   "n_epitope_positions": 13,
+   "top_positions": [
+    378,
+    370,
+    377,
+    384,
+    372,
+    369
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03W1L030T",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.526,
+    0.275,
+    0.018,
+    0.0,
+    0.0,
+    0.0,
+    0.182
+   ],
+   "x": 7.543,
+   "y": -2.015,
+   "n_epitope_positions": 23,
+   "top_positions": [
+    440,
+    441,
+    439,
+    371,
+    503,
+    437
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03WCL0313",
+   "community": 0,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.518,
+    0.0,
+    0.0,
+    0.269,
+    0.038,
+    0.172,
+    0.002,
+    0.0
+   ],
+   "x": 8.145,
+   "y": 7.181,
+   "n_epitope_positions": 21,
+   "top_positions": [
+    484,
+    449,
+    489,
+    483,
+    485,
+    490
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03WDL0000",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.071,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.929
+   ],
+   "x": -0.299,
+   "y": 7.627,
+   "n_epitope_positions": 21,
+   "top_positions": [
+    378,
+    408,
+    376,
+    377,
+    375,
+    503
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03WQL031A",
+   "community": 1,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.145,
+    0.412,
+    0.034,
+    0.409,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 6.535,
+   "y": -1.373,
+   "n_epitope_positions": 19,
+   "top_positions": [
+    346,
+    345,
+    444,
+    449,
+    340,
+    354
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03WWL031E",
+   "community": 1,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.275,
+    0.663,
+    0.0,
+    0.062,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 6.506,
+   "y": -1.713,
+   "n_epitope_positions": 18,
+   "top_positions": [
+    345,
+    340,
+    441,
+    346,
+    444,
+    344
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03WXL031F",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.861,
+    0.0,
+    0.0,
+    0.0,
+    0.012,
+    0.127,
+    0.0
+   ],
+   "x": 9.217,
+   "y": -0.701,
+   "n_epitope_positions": 13,
+   "top_positions": [
+    500,
+    445,
+    444,
+    446,
+    499,
+    450
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03X6L031P",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.254,
+    0.0,
+    0.0,
+    0.59,
+    0.0,
+    0.155,
+    0.0,
+    0.0
+   ],
+   "x": 7.876,
+   "y": 7.404,
+   "n_epitope_positions": 8,
+   "top_positions": [
+    449,
+    484,
+    485,
+    487,
+    486,
+    490
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03XDL0000",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.003,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.997
+   ],
+   "x": 2.214,
+   "y": 6.197,
+   "n_epitope_positions": 25,
+   "top_positions": [
+    408,
+    378,
+    412,
+    380,
+    427,
+    413
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03XJL0000",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.09,
+    0.0,
+    0.043,
+    0.061,
+    0.0,
+    0.702,
+    0.0,
+    0.104
+   ],
+   "x": 9.368,
+   "y": 9.186,
+   "n_epitope_positions": 25,
+   "top_positions": [
+    486,
+    489,
+    487,
+    485,
+    484,
+    373
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03YRL032W",
+   "community": 3,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.262,
+    0.0,
+    0.0,
+    0.0,
+    0.181,
+    0.0,
+    0.0,
+    0.558
+   ],
+   "x": 3.421,
+   "y": 0.781,
+   "n_epitope_positions": 18,
+   "top_positions": [
+    214,
+    24,
+    72,
+    28,
+    73,
+    183
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H03ZKL033F",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.091,
+    0.0,
+    0.0,
+    0.787,
+    0.122,
+    0.0
+   ],
+   "x": 10.03,
+   "y": 9.032,
+   "n_epitope_positions": 18,
+   "top_positions": [
+    486,
+    489,
+    475,
+    476,
+    333,
+    487
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H03ZRL033K",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.451,
+    0.009,
+    0.016,
+    0.0,
+    0.0,
+    0.525,
+    0.0,
+    0.0
+   ],
+   "x": 10.023,
+   "y": 9.839,
+   "n_epitope_positions": 26,
+   "top_positions": [
+    484,
+    487,
+    486,
+    483,
+    485,
+    475
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0402L0000",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.046,
+    0.018,
+    0.059,
+    0.877
+   ],
+   "x": 3.181,
+   "y": 5.635,
+   "n_epitope_positions": 15,
+   "top_positions": [
+    519,
+    518,
+    517,
+    428,
+    430,
+    520
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0403L033V",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.083,
+    0.0,
+    0.0,
+    0.084,
+    0.0,
+    0.21,
+    0.371,
+    0.253
+   ],
+   "x": 13.092,
+   "y": 5.18,
+   "n_epitope_positions": 19,
+   "top_positions": [
+    414,
+    408,
+    415,
+    493,
+    421,
+    486
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H040BL0000",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.87,
+    0.051,
+    0.0,
+    0.066,
+    0.0,
+    0.013,
+    0.0
+   ],
+   "x": 8.556,
+   "y": -0.552,
+   "n_epitope_positions": 15,
+   "top_positions": [
+    500,
+    445,
+    440,
+    444,
+    450,
+    499
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H040PL0349",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.384,
+    0.616,
+    0.0
+   ],
+   "x": 9.595,
+   "y": 7.752,
+   "n_epitope_positions": 12,
+   "top_positions": [
+    455,
+    475,
+    456,
+    473,
+    487,
+    489
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H040ZL034F",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.015,
+    0.069,
+    0.0,
+    0.0,
+    0.0,
+    0.916
+   ],
+   "x": -0.903,
+   "y": 5.82,
+   "n_epitope_positions": 20,
+   "top_positions": [
+    377,
+    375,
+    366,
+    368,
+    372,
+    365
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0411L017T",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.003,
+    0.0,
+    0.19,
+    0.776,
+    0.03
+   ],
+   "x": 13.09,
+   "y": 5.769,
+   "n_epitope_positions": 28,
+   "top_positions": [
+    421,
+    455,
+    475,
+    487,
+    458,
+    456
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0411L03TC",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.022,
+    0.0,
+    0.0,
+    0.0,
+    0.076,
+    0.901,
+    0.0
+   ],
+   "x": 12.864,
+   "y": 5.706,
+   "n_epitope_positions": 25,
+   "top_positions": [
+    421,
+    475,
+    477,
+    415,
+    489,
+    476
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0412L034H",
+   "community": 1,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.125,
+    0.132,
+    0.743,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 6.065,
+   "y": 2.975,
+   "n_epitope_positions": 24,
+   "top_positions": [
+    346,
+    449,
+    354,
+    466,
+    348,
+    490
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H041AL034Q",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.458,
+    0.423,
+    0.0,
+    0.119,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.321,
+   "y": -1.312,
+   "n_epitope_positions": 12,
+   "top_positions": [
+    346,
+    440,
+    441,
+    345,
+    445,
+    444
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H041EL034T",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.174,
+    0.557,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.107,
+    0.163
+   ],
+   "x": 7.903,
+   "y": -1.82,
+   "n_epitope_positions": 18,
+   "top_positions": [
+    438,
+    439,
+    442,
+    341,
+    504,
+    497
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H041GL034W",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.0,
+    0.042,
+    0.0,
+    0.0,
+    0.0,
+    0.947,
+    0.004,
+    0.007
+   ],
+   "x": 10.475,
+   "y": 10.17,
+   "n_epitope_positions": 17,
+   "top_positions": [
+    486,
+    477,
+    487,
+    478,
+    479,
+    489
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H041QL0353",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.988,
+    0.0,
+    0.012,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 8.73,
+   "y": -0.582,
+   "n_epitope_positions": 12,
+   "top_positions": [
+    444,
+    499,
+    445,
+    500,
+    440,
+    439
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H042CL035H",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.198,
+    0.0,
+    0.0,
+    0.092,
+    0.0,
+    0.682,
+    0.028,
+    0.0
+   ],
+   "x": 8.872,
+   "y": 8.353,
+   "n_epitope_positions": 16,
+   "top_positions": [
+    489,
+    486,
+    484,
+    456,
+    487,
+    485
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H042JL0000",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "x": 1.292,
+   "y": 6.604,
+   "n_epitope_positions": 21,
+   "top_positions": [
+    378,
+    377,
+    380,
+    408,
+    384,
+    379
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0432L0000",
+   "community": 0,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.194,
+    0.0,
+    0.0,
+    0.096,
+    0.71,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 5.881,
+   "y": 3.525,
+   "n_epitope_positions": 23,
+   "top_positions": [
+    466,
+    450,
+    449,
+    468,
+    355,
+    351
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0433L0000",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.002,
+    0.053,
+    0.0,
+    0.0,
+    0.049,
+    0.896
+   ],
+   "x": -0.734,
+   "y": 8.027,
+   "n_epitope_positions": 13,
+   "top_positions": [
+    375,
+    408,
+    376,
+    374,
+    378,
+    373
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0438L0361",
+   "community": 3,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.803,
+    0.0,
+    0.0,
+    0.0,
+    0.197,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.565,
+   "y": 2.653,
+   "n_epitope_positions": 16,
+   "top_positions": [
+    160,
+    163,
+    161,
+    157,
+    162,
+    14
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H0439L0362",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.0,
+    0.032,
+    0.0,
+    0.0,
+    0.0,
+    0.959,
+    0.0,
+    0.008
+   ],
+   "x": 10.675,
+   "y": 10.115,
+   "n_epitope_positions": 10,
+   "top_positions": [
+    486,
+    477,
+    478,
+    487,
+    489,
+    479
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H043AL0000",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "x": 1.645,
+   "y": 6.48,
+   "n_epitope_positions": 21,
+   "top_positions": [
+    380,
+    384,
+    377,
+    378,
+    408,
+    414
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H043JL02ZE",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.551,
+    0.0,
+    0.311,
+    0.138,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.84,
+   "y": 0.578,
+   "n_epitope_positions": 16,
+   "top_positions": [
+    445,
+    444,
+    446,
+    449,
+    452,
+    440
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H043WL036G",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.057,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.921,
+    0.001,
+    0.021
+   ],
+   "x": 9.706,
+   "y": 9.539,
+   "n_epitope_positions": 12,
+   "top_positions": [
+    486,
+    489,
+    487,
+    484,
+    456,
+    485
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0459L037M",
+   "community": 4,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 3.081,
+   "y": 0.122,
+   "n_epitope_positions": 11,
+   "top_positions": [
+    815,
+    823,
+    825,
+    822,
+    819,
+    820
+   ],
+   "dominant_domain": "S2"
+  },
+  {
+   "antibody": "sabdab2_H045KL0000",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "x": 1.066,
+   "y": 6.73,
+   "n_epitope_positions": 25,
+   "top_positions": [
+    380,
+    378,
+    408,
+    383,
+    375,
+    385
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H046FL038B",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.037,
+    0.0,
+    0.0,
+    0.0,
+    0.963
+   ],
+   "x": -0.23,
+   "y": 7.276,
+   "n_epitope_positions": 24,
+   "top_positions": [
+    376,
+    369,
+    408,
+    375,
+    385,
+    380
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H046HL0000",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.057,
+    0.003,
+    0.067,
+    0.873
+   ],
+   "x": 3.176,
+   "y": 5.634,
+   "n_epitope_positions": 19,
+   "top_positions": [
+    430,
+    517,
+    519,
+    429,
+    390,
+    381
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0484L039J",
+   "community": 2,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.274,
+    0.0,
+    0.284,
+    0.0,
+    0.388,
+    0.0,
+    0.0,
+    0.054
+   ],
+   "x": 4.592,
+   "y": -0.561,
+   "n_epitope_positions": 17,
+   "top_positions": [
+    527,
+    532,
+    531,
+    529,
+    528,
+    319
+   ],
+   "dominant_domain": "linker"
+  },
+  {
+   "antibody": "sabdab2_H048ZL03A8",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.0,
+    0.014,
+    0.0,
+    0.0,
+    0.004,
+    0.742,
+    0.24,
+    0.0
+   ],
+   "x": 9.994,
+   "y": 8.674,
+   "n_epitope_positions": 13,
+   "top_positions": [
+    486,
+    473,
+    487,
+    475,
+    456,
+    479
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0490L03A9",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.002,
+    0.0,
+    0.0,
+    0.0,
+    0.998,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.216,
+   "y": 2.006,
+   "n_epitope_positions": 26,
+   "top_positions": [
+    147,
+    145,
+    248,
+    144,
+    155,
+    156
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H04AAL0000",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.09,
+    0.0,
+    0.147,
+    0.0,
+    0.0,
+    0.008,
+    0.755
+   ],
+   "x": -0.698,
+   "y": 8.038,
+   "n_epitope_positions": 39,
+   "top_positions": [
+    374,
+    503,
+    375,
+    377,
+    376,
+    508
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04BAL02ZF",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.007,
+    0.0,
+    0.0,
+    0.813,
+    0.18,
+    0.0
+   ],
+   "x": 10.134,
+   "y": 9.287,
+   "n_epitope_positions": 9,
+   "top_positions": [
+    487,
+    475,
+    486,
+    477,
+    489,
+    493
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04BYL03C4",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.831,
+    0.045,
+    0.121,
+    0.0,
+    0.0,
+    0.0,
+    0.002
+   ],
+   "x": 8.181,
+   "y": -1.329,
+   "n_epitope_positions": 31,
+   "top_positions": [
+    440,
+    495,
+    439,
+    442,
+    444,
+    445
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04BZL03C5",
+   "community": 0,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.461,
+    0.058,
+    0.0,
+    0.0,
+    0.171,
+    0.153,
+    0.149,
+    0.008
+   ],
+   "x": 12.37,
+   "y": 5.85,
+   "n_epitope_positions": 42,
+   "top_positions": [
+    484,
+    472,
+    470,
+    486,
+    416,
+    418
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04C8L03CD",
+   "community": 0,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.237,
+    0.108,
+    0.0,
+    0.085,
+    0.292,
+    0.045,
+    0.234,
+    0.0
+   ],
+   "x": 8.552,
+   "y": 4.272,
+   "n_epitope_positions": 29,
+   "top_positions": [
+    416,
+    450,
+    451,
+    493,
+    496,
+    488
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04CHL03CJ",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.664,
+   "y": 1.446,
+   "n_epitope_positions": 13,
+   "top_positions": [
+    147,
+    253,
+    251,
+    246,
+    152,
+    248
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H04DGL03D8",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.142,
+    0.162,
+    0.0,
+    0.0,
+    0.0,
+    0.053,
+    0.525,
+    0.118
+   ],
+   "x": 12.291,
+   "y": 5.306,
+   "n_epitope_positions": 24,
+   "top_positions": [
+    419,
+    453,
+    474,
+    415,
+    413,
+    491
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04DTL03DF",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "x": 1.338,
+   "y": 6.015,
+   "n_epitope_positions": 19,
+   "top_positions": [
+    383,
+    384,
+    385,
+    368,
+    382,
+    376
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04EYL03E4",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.659,
+    0.193,
+    0.055,
+    0.093,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.942,
+   "y": -0.73,
+   "n_epitope_positions": 20,
+   "top_positions": [
+    445,
+    444,
+    440,
+    499,
+    345,
+    346
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04F5L03EA",
+   "community": 5,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.03,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.97
+   ],
+   "x": 3.631,
+   "y": 0.403,
+   "n_epitope_positions": 8,
+   "top_positions": [
+    983,
+    973,
+    992,
+    988,
+    984,
+    985
+   ],
+   "dominant_domain": "S2"
+  },
+  {
+   "antibody": "sabdab2_H04GDL0000",
+   "community": 1,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.0,
+    0.04,
+    0.0,
+    0.881,
+    0.079,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.548,
+   "y": 2.875,
+   "n_epitope_positions": 5,
+   "top_positions": [
+    449,
+    445,
+    490,
+    492,
+    493
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04GDL03F8",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.102,
+    0.0,
+    0.083,
+    0.809,
+    0.006
+   ],
+   "x": 12.013,
+   "y": 4.36,
+   "n_epitope_positions": 20,
+   "top_positions": [
+    505,
+    477,
+    456,
+    501,
+    489,
+    502
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04H0L03FT",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.082,
+    0.913,
+    0.005
+   ],
+   "x": 12.398,
+   "y": 4.608,
+   "n_epitope_positions": 23,
+   "top_positions": [
+    505,
+    501,
+    476,
+    475,
+    477,
+    456
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04H6L03G0",
+   "community": 2,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.47,
+    0.296,
+    0.027,
+    0.206
+   ],
+   "x": 3.42,
+   "y": 5.421,
+   "n_epitope_positions": 24,
+   "top_positions": [
+    517,
+    461,
+    463,
+    427,
+    354,
+    518
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04J9L0000",
+   "community": 1,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.16,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.316,
+    0.524
+   ],
+   "x": 10.48,
+   "y": -2.052,
+   "n_epitope_positions": 18,
+   "top_positions": [
+    405,
+    501,
+    503,
+    502,
+    375,
+    506
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04J9L03GV",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.387,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.286,
+    0.327
+   ],
+   "x": 10.243,
+   "y": -1.952,
+   "n_epitope_positions": 16,
+   "top_positions": [
+    501,
+    503,
+    505,
+    502,
+    375,
+    500
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04KBL03HN",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.44,
+    0.201,
+    0.12,
+    0.239,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.428,
+   "y": 0.01,
+   "n_epitope_positions": 13,
+   "top_positions": [
+    444,
+    450,
+    346,
+    449,
+    345,
+    440
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04KRL03C5",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.307,
+    0.692,
+    0.001
+   ],
+   "x": 12.9,
+   "y": 5.997,
+   "n_epitope_positions": 30,
+   "top_positions": [
+    489,
+    421,
+    456,
+    486,
+    505,
+    455
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04NNL03K4",
+   "community": 3,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.143,
+    0.0,
+    0.413,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.443
+   ],
+   "x": 3.252,
+   "y": 0.935,
+   "n_epitope_positions": 28,
+   "top_positions": [
+    264,
+    621,
+    620,
+    25,
+    230,
+    104
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H04PNL03KX",
+   "community": 3,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.001,
+    0.0,
+    0.0,
+    0.999
+   ],
+   "x": 3.005,
+   "y": 0.775,
+   "n_epitope_positions": 19,
+   "top_positions": [
+    25,
+    229,
+    80,
+    230,
+    264,
+    524
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H04QPL03MM",
+   "community": 1,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.271,
+    0.0,
+    0.013,
+    0.0,
+    0.0,
+    0.666,
+    0.049
+   ],
+   "x": 11.983,
+   "y": 4.092,
+   "n_epitope_positions": 38,
+   "top_positions": [
+    500,
+    505,
+    421,
+    460,
+    501,
+    498
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04QQL03MN",
+   "community": 0,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.998,
+    0.001,
+    0.0,
+    0.001
+   ],
+   "x": 5.563,
+   "y": 3.621,
+   "n_epitope_positions": 20,
+   "top_positions": [
+    466,
+    468,
+    469,
+    470,
+    354,
+    465
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04RQL0000",
+   "community": 0,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.387,
+    0.0,
+    0.0,
+    0.286,
+    0.327,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 6.014,
+   "y": 3.897,
+   "n_epitope_positions": 19,
+   "top_positions": [
+    484,
+    482,
+    470,
+    494,
+    351,
+    471
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04WRL03RB",
+   "community": 3,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.186,
+    0.0,
+    0.0,
+    0.0,
+    0.814
+   ],
+   "x": 2.809,
+   "y": 0.954,
+   "n_epitope_positions": 20,
+   "top_positions": [
+    87,
+    236,
+    372,
+    28,
+    237,
+    83
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H04X8L03RP",
+   "community": 3,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 4.562,
+   "y": 1.112,
+   "n_epitope_positions": 11,
+   "top_positions": [
+    145,
+    147,
+    152,
+    248,
+    148,
+    149
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H04XHL0000",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.077,
+    0.134,
+    0.0,
+    0.045,
+    0.176,
+    0.569,
+    0.0,
+    0.0
+   ],
+   "x": 8.096,
+   "y": 7.403,
+   "n_epitope_positions": 22,
+   "top_positions": [
+    486,
+    466,
+    488,
+    446,
+    480,
+    489
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04YDL03SE",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.15,
+    0.642,
+    0.0,
+    0.102,
+    0.032,
+    0.075,
+    0.0,
+    0.0
+   ],
+   "x": 7.975,
+   "y": 0.642,
+   "n_epitope_positions": 56,
+   "top_positions": [
+    447,
+    444,
+    446,
+    445,
+    479,
+    441
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04YML03SJ",
+   "community": 1,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.0,
+    0.195,
+    0.0,
+    0.129,
+    0.0,
+    0.532,
+    0.13,
+    0.014
+   ],
+   "x": 7.885,
+   "y": 4.404,
+   "n_epitope_positions": 19,
+   "top_positions": [
+    486,
+    489,
+    498,
+    500,
+    495,
+    449
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04ZRL0000",
+   "community": 0,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.273,
+    0.0,
+    0.0,
+    0.176,
+    0.55,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 6.078,
+   "y": 3.634,
+   "n_epitope_positions": 31,
+   "top_positions": [
+    449,
+    470,
+    351,
+    484,
+    450,
+    482
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H04ZZL03TE",
+   "community": 3,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 3.377,
+   "y": 0.724,
+   "n_epitope_positions": 12,
+   "top_positions": [
+    209,
+    29,
+    211,
+    212,
+    210,
+    184
+   ],
+   "dominant_domain": "NTD"
+  },
+  {
+   "antibody": "sabdab2_H050NL03TZ",
+   "community": 1,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.0,
+    0.142,
+    0.0,
+    0.465,
+    0.332,
+    0.0,
+    0.061,
+    0.0
+   ],
+   "x": 7.631,
+   "y": 1.198,
+   "n_epitope_positions": 17,
+   "top_positions": [
+    450,
+    449,
+    498,
+    494,
+    452,
+    496
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0514L03VA",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "x": 1.37,
+   "y": 5.984,
+   "n_epitope_positions": 17,
+   "top_positions": [
+    385,
+    383,
+    384,
+    379,
+    380,
+    381
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H051AL03VH",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.653,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.105,
+    0.241
+   ],
+   "x": 9.7,
+   "y": -2.002,
+   "n_epitope_positions": 17,
+   "top_positions": [
+    500,
+    502,
+    440,
+    501,
+    499,
+    503
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H051EL0000",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.311,
+    0.347,
+    0.0,
+    0.234,
+    0.0,
+    0.064,
+    0.044,
+    0.0
+   ],
+   "x": 7.934,
+   "y": 4.212,
+   "n_epitope_positions": 35,
+   "top_positions": [
+    496,
+    493,
+    479,
+    495,
+    484,
+    444
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H051PL03VR",
+   "community": 4,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 3.047,
+   "y": 0.233,
+   "n_epitope_positions": 18,
+   "top_positions": [
+    795,
+    809,
+    814,
+    868,
+    808,
+    810
+   ],
+   "dominant_domain": "S2"
+  },
+  {
+   "antibody": "sabdab2_H054TL03BW",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.53,
+    0.0,
+    0.47,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 9.026,
+   "y": -0.241,
+   "n_epitope_positions": 1,
+   "top_positions": [
+    446
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0558L03Y9",
+   "community": 1,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.204,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.566,
+    0.23
+   ],
+   "x": 10.469,
+   "y": -1.739,
+   "n_epitope_positions": 21,
+   "top_positions": [
+    505,
+    503,
+    500,
+    501,
+    453,
+    504
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0573L03ZE",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.012,
+    0.987
+   ],
+   "x": 2.115,
+   "y": 6.15,
+   "n_epitope_positions": 21,
+   "top_positions": [
+    427,
+    408,
+    384,
+    428,
+    412,
+    380
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H058WL0000",
+   "community": 6,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 5.827,
+   "y": 1.079,
+   "n_epitope_positions": 19,
+   "top_positions": [
+    1201,
+    1196,
+    1199,
+    1192,
+    1203,
+    1205
+   ],
+   "dominant_domain": "S2"
+  },
+  {
+   "antibody": "sabdab2_H059RL0419",
+   "community": 1,
+   "nmf_dominant": 2,
+   "nmf_mixture": [
+    0.0,
+    0.333,
+    0.642,
+    0.0,
+    0.025,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.022,
+   "y": -1.519,
+   "n_epitope_positions": 14,
+   "top_positions": [
+    345,
+    440,
+    346,
+    444,
+    443,
+    344
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H05BJL042J",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "x": 1.757,
+   "y": 6.416,
+   "n_epitope_positions": 20,
+   "top_positions": [
+    380,
+    378,
+    381,
+    412,
+    383,
+    377
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H05BNL042M",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.048,
+    0.0,
+    0.0,
+    0.216,
+    0.007,
+    0.262,
+    0.467,
+    0.0
+   ],
+   "x": 12.465,
+   "y": 5.975,
+   "n_epitope_positions": 31,
+   "top_positions": [
+    486,
+    456,
+    490,
+    493,
+    489,
+    455
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H05BTL042S",
+   "community": 0,
+   "nmf_dominant": 4,
+   "nmf_mixture": [
+    0.26,
+    0.0,
+    0.0,
+    0.0,
+    0.665,
+    0.0,
+    0.075,
+    0.0
+   ],
+   "x": 5.45,
+   "y": 3.821,
+   "n_epitope_positions": 20,
+   "top_positions": [
+    471,
+    355,
+    466,
+    464,
+    468,
+    469
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H05DKL043Z",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.036,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.795,
+    0.167,
+    0.003
+   ],
+   "x": 9.162,
+   "y": 7.956,
+   "n_epitope_positions": 14,
+   "top_positions": [
+    489,
+    486,
+    519,
+    487,
+    456,
+    455
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H05DPL0442",
+   "community": 2,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.814,
+    0.186
+   ],
+   "x": 12.709,
+   "y": 4.792,
+   "n_epitope_positions": 19,
+   "top_positions": [
+    421,
+    415,
+    455,
+    505,
+    405,
+    420
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H05F5L0456",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.728,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.201,
+    0.072
+   ],
+   "x": 9.72,
+   "y": -1.686,
+   "n_epitope_positions": 15,
+   "top_positions": [
+    500,
+    445,
+    502,
+    505,
+    501,
+    499
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H05FNL045K",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0
+   ],
+   "x": 13.494,
+   "y": 6.4,
+   "n_epitope_positions": 18,
+   "top_positions": [
+    475,
+    421,
+    458,
+    473,
+    476,
+    474
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H05FPL045M",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.046,
+    0.0,
+    0.0,
+    0.0,
+    0.005,
+    0.0,
+    0.949,
+    0.0
+   ],
+   "x": 13.396,
+   "y": 5.475,
+   "n_epitope_positions": 25,
+   "top_positions": [
+    453,
+    458,
+    476,
+    475,
+    415,
+    421
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H05JSL0482",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.498,
+    0.411,
+    0.055,
+    0.0,
+    0.0,
+    0.006,
+    0.03
+   ],
+   "x": 7.399,
+   "y": -1.862,
+   "n_epitope_positions": 28,
+   "top_positions": [
+    440,
+    343,
+    441,
+    500,
+    345,
+    444
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H05KJL048M",
+   "community": 7,
+   "nmf_dominant": 0,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 3.409,
+   "y": 0.248,
+   "n_epitope_positions": 17,
+   "top_positions": [
+    739,
+    737,
+    750,
+    849,
+    761,
+    765
+   ],
+   "dominant_domain": "S2"
+  },
+  {
+   "antibody": "sabdab2_H05W8L04EB",
+   "community": 0,
+   "nmf_dominant": 6,
+   "nmf_mixture": [
+    0.026,
+    0.0,
+    0.0,
+    0.226,
+    0.0,
+    0.202,
+    0.546,
+    0.0
+   ],
+   "x": 12.535,
+   "y": 5.618,
+   "n_epitope_positions": 17,
+   "top_positions": [
+    493,
+    456,
+    403,
+    505,
+    453,
+    486
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H05W9L04EC",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "x": -0.43,
+   "y": 6.267,
+   "n_epitope_positions": 18,
+   "top_positions": [
+    369,
+    378,
+    377,
+    384,
+    375,
+    374
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H05YBL04FV",
+   "community": 0,
+   "nmf_dominant": 5,
+   "nmf_mixture": [
+    0.103,
+    0.0,
+    0.0,
+    0.155,
+    0.0,
+    0.554,
+    0.188,
+    0.0
+   ],
+   "x": 8.954,
+   "y": 7.686,
+   "n_epitope_positions": 15,
+   "top_positions": [
+    489,
+    486,
+    456,
+    485,
+    505,
+    493
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H05ZHL0000",
+   "community": 2,
+   "nmf_dominant": 7,
+   "nmf_mixture": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.103,
+    0.0,
+    0.058,
+    0.839
+   ],
+   "x": 3.25,
+   "y": 5.584,
+   "n_epitope_positions": 19,
+   "top_positions": [
+    519,
+    427,
+    518,
+    516,
+    381,
+    428
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H05ZWL0000",
+   "community": 0,
+   "nmf_dominant": 3,
+   "nmf_mixture": [
+    0.175,
+    0.0,
+    0.0,
+    0.756,
+    0.036,
+    0.03,
+    0.002,
+    0.0
+   ],
+   "x": 7.508,
+   "y": 4.567,
+   "n_epitope_positions": 21,
+   "top_positions": [
+    449,
+    494,
+    490,
+    484,
+    493,
+    489
+   ],
+   "dominant_domain": "RBD"
+  },
+  {
+   "antibody": "sabdab2_H0625L04J4",
+   "community": 1,
+   "nmf_dominant": 1,
+   "nmf_mixture": [
+    0.0,
+    0.468,
+    0.266,
+    0.0,
+    0.266,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "x": 7.51,
+   "y": -0.533,
+   "n_epitope_positions": 14,
+   "top_positions": [
+    450,
+    444,
+    345,
+    346,
+    448,
+    445
+   ],
+   "dominant_domain": "RBD"
+  }
+ ]
+}
