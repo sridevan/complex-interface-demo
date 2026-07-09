@@ -1,0 +1,2036 @@
+[
+ {
+  "agg_interface_id": "AI_131443_0001_0003",
+  "pdb_complex_id": "PDB-CPX-131443",
+  "chain_class_id_1": "CC_131443_0001",
+  "chain_class_id_2": "CC_131443_0003",
+  "component_label_1": "P01958-1",
+  "component_label_2": "P02062-1",
+  "instance_count": 19,
+  "median_bsa": 893.0,
+  "median_solvation_energy": -9.53,
+  "contact_summary": [
+   {
+    "residue_1": "ARG32",
+    "residue_2": "PHE122",
+    "bond_type": "hydrogen_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "ARG32",
+    "residue_2": "PHE122",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "ARG32",
+    "residue_2": "GLN127",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "HIS104",
+    "residue_2": "GLN131",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "SER108",
+    "residue_2": "GLN127",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "PRO115",
+    "residue_2": "ARG116",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "PHE118",
+    "residue_2": "ARG30",
+    "bond_type": "hydrogen_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "PHE118",
+    "residue_2": "ARG30",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "ARG32",
+    "residue_2": "PRO124",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "ARG32",
+    "residue_2": "THR123",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "LEU35",
+    "residue_2": "ALA128",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "HIS104",
+    "residue_2": "ASN108",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "ALA111",
+    "residue_2": "ARG116",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "VAL112",
+    "residue_2": "GLY119",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "THR119",
+    "residue_2": "ARG30",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "PRO120",
+    "residue_2": "ARG30",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "HIS123",
+    "residue_2": "ARG30",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "ARG32",
+    "residue_2": "GLN127",
+    "bond_type": "hydrogen_bond",
+    "frequency": 18
+   },
+   {
+    "residue_1": "PRO115",
+    "residue_2": "ARG116",
+    "bond_type": "hydrogen_bond",
+    "frequency": 18
+   },
+   {
+    "residue_1": "ASP127",
+    "residue_2": "TYR35",
+    "bond_type": "other_bond",
+    "frequency": 18
+   },
+   {
+    "residue_1": "PHE37",
+    "residue_2": "GLN131",
+    "bond_type": "other_bond",
+    "frequency": 18
+   },
+   {
+    "residue_1": "HIS104",
+    "residue_2": "VAL112",
+    "bond_type": "other_bond",
+    "frequency": 18
+   },
+   {
+    "residue_1": "SER108",
+    "residue_2": "ALA115",
+    "bond_type": "other_bond",
+    "frequency": 18
+   },
+   {
+    "residue_1": "ALA111",
+    "residue_2": "VAL112",
+    "bond_type": "other_bond",
+    "frequency": 18
+   },
+   {
+    "residue_1": "VAL112",
+    "residue_2": "ALA115",
+    "bond_type": "other_bond",
+    "frequency": 18
+   },
+   {
+    "residue_1": "PHE118",
+    "residue_2": "ARG116",
+    "bond_type": "other_bond",
+    "frequency": 18
+   },
+   {
+    "residue_1": "PHE118",
+    "residue_2": "VAL112",
+    "bond_type": "other_bond",
+    "frequency": 18
+   },
+   {
+    "residue_1": "HIS123",
+    "residue_2": "VAL34",
+    "bond_type": "other_bond",
+    "frequency": 18
+   },
+   {
+    "residue_1": "GLY36",
+    "residue_2": "ALA128",
+    "bond_type": "other_bond",
+    "frequency": 17
+   },
+   {
+    "residue_1": "VAL112",
+    "residue_2": "LYS120",
+    "bond_type": "other_bond",
+    "frequency": 17
+   },
+   {
+    "residue_1": "PRO120",
+    "residue_2": "VAL33",
+    "bond_type": "other_bond",
+    "frequency": 17
+   },
+   {
+    "residue_1": "PRO120",
+    "residue_2": "MET55",
+    "bond_type": "other_bond",
+    "frequency": 16
+   },
+   {
+    "residue_1": "HIS104",
+    "residue_2": "GLN131",
+    "bond_type": "hydrogen_bond",
+    "frequency": 15
+   },
+   {
+    "residue_1": "LEU35",
+    "residue_2": "PRO124",
+    "bond_type": "other_bond",
+    "frequency": 15
+   },
+   {
+    "residue_1": "HIS104",
+    "residue_2": "GLN127",
+    "bond_type": "other_bond",
+    "frequency": 15
+   },
+   {
+    "residue_1": "SER108",
+    "residue_2": "GLN127",
+    "bond_type": "hydrogen_bond",
+    "frequency": 14
+   },
+   {
+    "residue_1": "ASP127",
+    "residue_2": "TYR35",
+    "bond_type": "hydrogen_bond",
+    "frequency": 14
+   },
+   {
+    "residue_1": "SER108",
+    "residue_2": "VAL112",
+    "bond_type": "other_bond",
+    "frequency": 14
+   },
+   {
+    "residue_1": "ALA124",
+    "residue_2": "VAL34",
+    "bond_type": "other_bond",
+    "frequency": 14
+   },
+   {
+    "residue_1": "LEU35",
+    "residue_2": "GLU125",
+    "bond_type": "other_bond",
+    "frequency": 12
+   },
+   {
+    "residue_1": "ASP127",
+    "residue_2": "VAL34",
+    "bond_type": "other_bond",
+    "frequency": 11
+   },
+   {
+    "residue_1": "ALA111",
+    "residue_2": "ALA115",
+    "bond_type": "other_bond",
+    "frequency": 11
+   },
+   {
+    "residue_1": "GLU31",
+    "residue_2": "PRO124",
+    "bond_type": "other_bond",
+    "frequency": 5
+   },
+   {
+    "residue_1": "LYS128",
+    "residue_2": "VAL34",
+    "bond_type": "other_bond",
+    "frequency": 4
+   },
+   {
+    "residue_1": "LYS128",
+    "residue_2": "VAL34",
+    "bond_type": "hydrogen_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "HIS104",
+    "residue_2": "ASN108",
+    "bond_type": "hydrogen_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "HIS123",
+    "residue_2": "VAL112",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "HIS51",
+    "residue_2": "GLU125",
+    "bond_type": "salt_bridge",
+    "frequency": 3
+   },
+   {
+    "residue_1": "HIS51",
+    "residue_2": "GLU125",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "PHE37",
+    "residue_2": "ARG104",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "LEU101",
+    "residue_2": "ARG104",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "HIS113",
+    "residue_2": "LYS120",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "THR119",
+    "residue_2": "ARG30",
+    "bond_type": "hydrogen_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "GLU31",
+    "residue_2": "GLU125",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "CYS105",
+    "residue_2": "GLN127",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ALA124",
+    "residue_2": "VAL33",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "GLU28",
+    "residue_2": "LYS120",
+    "bond_type": "salt_bridge",
+    "frequency": 1
+   },
+   {
+    "residue_1": "GLU28",
+    "residue_2": "LYS120",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "LEU107",
+    "residue_2": "LEU112",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "SER108",
+    "residue_2": "LEU112",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ALA111",
+    "residue_2": "LEU112",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "PHE118",
+    "residue_2": "LEU112",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "HIS123",
+    "residue_2": "LEU112",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ASN116",
+    "residue_2": "ARG116",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "LYS100",
+    "residue_2": "ARG104",
+    "bond_type": "other_bond",
+    "frequency": 1
+   }
+  ]
+ },
+ {
+  "agg_interface_id": "AI_131443_0002_0004",
+  "pdb_complex_id": "PDB-CPX-131443",
+  "chain_class_id_1": "CC_131443_0002",
+  "chain_class_id_2": "CC_131443_0004",
+  "component_label_1": "P01958-2",
+  "component_label_2": "P02062-2",
+  "instance_count": 19,
+  "median_bsa": 882.0,
+  "median_solvation_energy": -9.19,
+  "contact_summary": [
+   {
+    "residue_1": "ARG32",
+    "residue_2": "PHE122",
+    "bond_type": "hydrogen_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "ARG32",
+    "residue_2": "PHE122",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "ARG32",
+    "residue_2": "GLN127",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "HIS104",
+    "residue_2": "GLN131",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "SER108",
+    "residue_2": "GLN127",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "PRO115",
+    "residue_2": "ARG116",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "PHE118",
+    "residue_2": "ARG30",
+    "bond_type": "hydrogen_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "PHE118",
+    "residue_2": "ARG30",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "ARG32",
+    "residue_2": "PRO124",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "ARG32",
+    "residue_2": "THR123",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "LEU35",
+    "residue_2": "ALA128",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "GLY36",
+    "residue_2": "ALA128",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "PHE37",
+    "residue_2": "GLN131",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "HIS104",
+    "residue_2": "ASN108",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "ALA111",
+    "residue_2": "ARG116",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "VAL112",
+    "residue_2": "GLY119",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "THR119",
+    "residue_2": "ARG30",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "PRO120",
+    "residue_2": "ARG30",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "HIS123",
+    "residue_2": "ARG30",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "HIS123",
+    "residue_2": "VAL34",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "ARG32",
+    "residue_2": "GLN127",
+    "bond_type": "hydrogen_bond",
+    "frequency": 18
+   },
+   {
+    "residue_1": "PRO115",
+    "residue_2": "ARG116",
+    "bond_type": "hydrogen_bond",
+    "frequency": 18
+   },
+   {
+    "residue_1": "HIS104",
+    "residue_2": "VAL112",
+    "bond_type": "other_bond",
+    "frequency": 18
+   },
+   {
+    "residue_1": "SER108",
+    "residue_2": "ALA115",
+    "bond_type": "other_bond",
+    "frequency": 18
+   },
+   {
+    "residue_1": "ALA111",
+    "residue_2": "VAL112",
+    "bond_type": "other_bond",
+    "frequency": 18
+   },
+   {
+    "residue_1": "VAL112",
+    "residue_2": "ALA115",
+    "bond_type": "other_bond",
+    "frequency": 18
+   },
+   {
+    "residue_1": "PHE118",
+    "residue_2": "ARG116",
+    "bond_type": "other_bond",
+    "frequency": 18
+   },
+   {
+    "residue_1": "PHE118",
+    "residue_2": "VAL112",
+    "bond_type": "other_bond",
+    "frequency": 18
+   },
+   {
+    "residue_1": "ASP127",
+    "residue_2": "TYR35",
+    "bond_type": "other_bond",
+    "frequency": 17
+   },
+   {
+    "residue_1": "HIS104",
+    "residue_2": "GLN127",
+    "bond_type": "other_bond",
+    "frequency": 16
+   },
+   {
+    "residue_1": "VAL112",
+    "residue_2": "LYS120",
+    "bond_type": "other_bond",
+    "frequency": 16
+   },
+   {
+    "residue_1": "PRO120",
+    "residue_2": "VAL33",
+    "bond_type": "other_bond",
+    "frequency": 16
+   },
+   {
+    "residue_1": "HIS104",
+    "residue_2": "GLN131",
+    "bond_type": "hydrogen_bond",
+    "frequency": 15
+   },
+   {
+    "residue_1": "SER108",
+    "residue_2": "GLN127",
+    "bond_type": "hydrogen_bond",
+    "frequency": 14
+   },
+   {
+    "residue_1": "ASP127",
+    "residue_2": "TYR35",
+    "bond_type": "hydrogen_bond",
+    "frequency": 14
+   },
+   {
+    "residue_1": "LEU35",
+    "residue_2": "PRO124",
+    "bond_type": "other_bond",
+    "frequency": 14
+   },
+   {
+    "residue_1": "SER108",
+    "residue_2": "VAL112",
+    "bond_type": "other_bond",
+    "frequency": 14
+   },
+   {
+    "residue_1": "PRO120",
+    "residue_2": "MET55",
+    "bond_type": "other_bond",
+    "frequency": 14
+   },
+   {
+    "residue_1": "ASP127",
+    "residue_2": "VAL34",
+    "bond_type": "other_bond",
+    "frequency": 14
+   },
+   {
+    "residue_1": "ALA124",
+    "residue_2": "VAL34",
+    "bond_type": "other_bond",
+    "frequency": 13
+   },
+   {
+    "residue_1": "LEU35",
+    "residue_2": "GLU125",
+    "bond_type": "other_bond",
+    "frequency": 13
+   },
+   {
+    "residue_1": "ALA111",
+    "residue_2": "ALA115",
+    "bond_type": "other_bond",
+    "frequency": 13
+   },
+   {
+    "residue_1": "HIS113",
+    "residue_2": "LYS120",
+    "bond_type": "other_bond",
+    "frequency": 4
+   },
+   {
+    "residue_1": "GLU31",
+    "residue_2": "PRO124",
+    "bond_type": "other_bond",
+    "frequency": 4
+   },
+   {
+    "residue_1": "HIS123",
+    "residue_2": "VAL112",
+    "bond_type": "other_bond",
+    "frequency": 4
+   },
+   {
+    "residue_1": "LYS128",
+    "residue_2": "VAL34",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "HIS104",
+    "residue_2": "ASN108",
+    "bond_type": "hydrogen_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "PHE37",
+    "residue_2": "ARG104",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "LEU101",
+    "residue_2": "ARG104",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "LYS128",
+    "residue_2": "VAL34",
+    "bond_type": "hydrogen_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "GLU31",
+    "residue_2": "GLU125",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "CYS105",
+    "residue_2": "GLN127",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ALA124",
+    "residue_2": "VAL33",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "HIS51",
+    "residue_2": "GLU125",
+    "bond_type": "salt_bridge",
+    "frequency": 2
+   },
+   {
+    "residue_1": "HIS51",
+    "residue_2": "GLU125",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "GLU28",
+    "residue_2": "LYS120",
+    "bond_type": "salt_bridge",
+    "frequency": 1
+   },
+   {
+    "residue_1": "GLU28",
+    "residue_2": "LYS120",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "THR119",
+    "residue_2": "ARG30",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "LEU107",
+    "residue_2": "LEU112",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "SER108",
+    "residue_2": "LEU112",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ALA111",
+    "residue_2": "LEU112",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "PHE118",
+    "residue_2": "LEU112",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "HIS123",
+    "residue_2": "LEU112",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ASN116",
+    "residue_2": "ARG116",
+    "bond_type": "other_bond",
+    "frequency": 1
+   }
+  ]
+ },
+ {
+  "agg_interface_id": "AI_131443_0001_0004",
+  "pdb_complex_id": "PDB-CPX-131443",
+  "chain_class_id_1": "CC_131443_0001",
+  "chain_class_id_2": "CC_131443_0004",
+  "component_label_1": "P01958-1",
+  "component_label_2": "P02062-2",
+  "instance_count": 19,
+  "median_bsa": 505.7,
+  "median_solvation_energy": -3.61,
+  "contact_summary": [
+   {
+    "residue_1": "THR42",
+    "residue_2": "ARG40",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "ASP95",
+    "residue_2": "ASN102",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "TYR43",
+    "residue_2": "ARG40",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "ARG93",
+    "residue_2": "TRP37",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "ASP95",
+    "residue_2": "TRP37",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "PRO96",
+    "residue_2": "TRP37",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "ARG93",
+    "residue_2": "ARG40",
+    "bond_type": "other_bond",
+    "frequency": 18
+   },
+   {
+    "residue_1": "ASP95",
+    "residue_2": "ASN102",
+    "bond_type": "hydrogen_bond",
+    "frequency": 17
+   },
+   {
+    "residue_1": "VAL97",
+    "residue_2": "ASP99",
+    "bond_type": "other_bond",
+    "frequency": 17
+   },
+   {
+    "residue_1": "ARG93",
+    "residue_2": "ASP43",
+    "bond_type": "salt_bridge",
+    "frequency": 16
+   },
+   {
+    "residue_1": "ARG93",
+    "residue_2": "ASP43",
+    "bond_type": "other_bond",
+    "frequency": 16
+   },
+   {
+    "residue_1": "THR42",
+    "residue_2": "HIS97",
+    "bond_type": "other_bond",
+    "frequency": 16
+   },
+   {
+    "residue_1": "TYR141",
+    "residue_2": "TRP37",
+    "bond_type": "other_bond",
+    "frequency": 15
+   },
+   {
+    "residue_1": "LEU92",
+    "residue_2": "ARG40",
+    "bond_type": "other_bond",
+    "frequency": 14
+   },
+   {
+    "residue_1": "ARG93",
+    "residue_2": "GLN39",
+    "bond_type": "other_bond",
+    "frequency": 14
+   },
+   {
+    "residue_1": "THR42",
+    "residue_2": "ARG40",
+    "bond_type": "hydrogen_bond",
+    "frequency": 13
+   },
+   {
+    "residue_1": "VAL97",
+    "residue_2": "GLU101",
+    "bond_type": "other_bond",
+    "frequency": 12
+   },
+   {
+    "residue_1": "ASP95",
+    "residue_2": "ASP99",
+    "bond_type": "other_bond",
+    "frequency": 11
+   },
+   {
+    "residue_1": "THR39",
+    "residue_2": "HIS97",
+    "bond_type": "other_bond",
+    "frequency": 9
+   },
+   {
+    "residue_1": "ARG93",
+    "residue_2": "PRO36",
+    "bond_type": "other_bond",
+    "frequency": 8
+   },
+   {
+    "residue_1": "VAL94",
+    "residue_2": "TRP37",
+    "bond_type": "other_bond",
+    "frequency": 6
+   },
+   {
+    "residue_1": "TYR141",
+    "residue_2": "PRO36",
+    "bond_type": "other_bond",
+    "frequency": 6
+   },
+   {
+    "residue_1": "ARG93",
+    "residue_2": "GLN39",
+    "bond_type": "hydrogen_bond",
+    "frequency": 4
+   },
+   {
+    "residue_1": "THR39",
+    "residue_2": "TYR145",
+    "bond_type": "other_bond",
+    "frequency": 4
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "LEU49",
+    "bond_type": "hydrogen_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "LEU49",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "GLN39",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "PRO36",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "LYS140",
+    "residue_2": "PRO36",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "ARG93",
+    "residue_2": "PRO36",
+    "bond_type": "hydrogen_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "VAL34",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "TYR35",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "GLN39",
+    "bond_type": "hydrogen_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "SER50",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "ASN50",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "VAL33",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "THR42",
+    "residue_2": "HIS97",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "LEU92",
+    "residue_2": "ARG40",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "TRP37",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "VAL34",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "VAL33",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "LYS41",
+    "residue_2": "CYS93",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "LYS41",
+    "residue_2": "CYS93",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ASN98",
+    "residue_2": "ASP99",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ASN98",
+    "residue_2": "ASP99",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "PRO38",
+    "residue_2": "HIS146",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "PRO38",
+    "residue_2": "TYR145",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "THR39",
+    "residue_2": "PRO100",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "THR42",
+    "residue_2": "VAL98",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "THR42",
+    "residue_2": "ASP99",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "TYR43",
+    "residue_2": "ASP99",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "PRO45",
+    "residue_2": "HIS97",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ASP95",
+    "residue_2": "LEU106",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ASP95",
+    "residue_2": "GLU101",
+    "bond_type": "other_bond",
+    "frequency": 1
+   }
+  ]
+ },
+ {
+  "agg_interface_id": "AI_131443_0002_0003",
+  "pdb_complex_id": "PDB-CPX-131443",
+  "chain_class_id_1": "CC_131443_0002",
+  "chain_class_id_2": "CC_131443_0003",
+  "component_label_1": "P01958-2",
+  "component_label_2": "P02062-1",
+  "instance_count": 19,
+  "median_bsa": 504.1,
+  "median_solvation_energy": -3.56,
+  "contact_summary": [
+   {
+    "residue_1": "THR42",
+    "residue_2": "ARG40",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "ASP95",
+    "residue_2": "ASN102",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "TYR43",
+    "residue_2": "ARG40",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "ASP95",
+    "residue_2": "TRP37",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "PRO96",
+    "residue_2": "TRP37",
+    "bond_type": "other_bond",
+    "frequency": 19
+   },
+   {
+    "residue_1": "ARG93",
+    "residue_2": "ARG40",
+    "bond_type": "other_bond",
+    "frequency": 18
+   },
+   {
+    "residue_1": "ASP95",
+    "residue_2": "ASN102",
+    "bond_type": "hydrogen_bond",
+    "frequency": 17
+   },
+   {
+    "residue_1": "ARG93",
+    "residue_2": "TRP37",
+    "bond_type": "other_bond",
+    "frequency": 17
+   },
+   {
+    "residue_1": "VAL97",
+    "residue_2": "ASP99",
+    "bond_type": "other_bond",
+    "frequency": 17
+   },
+   {
+    "residue_1": "ARG93",
+    "residue_2": "ASP43",
+    "bond_type": "salt_bridge",
+    "frequency": 16
+   },
+   {
+    "residue_1": "ARG93",
+    "residue_2": "ASP43",
+    "bond_type": "other_bond",
+    "frequency": 16
+   },
+   {
+    "residue_1": "THR42",
+    "residue_2": "HIS97",
+    "bond_type": "other_bond",
+    "frequency": 16
+   },
+   {
+    "residue_1": "TYR141",
+    "residue_2": "TRP37",
+    "bond_type": "other_bond",
+    "frequency": 15
+   },
+   {
+    "residue_1": "LEU92",
+    "residue_2": "ARG40",
+    "bond_type": "other_bond",
+    "frequency": 14
+   },
+   {
+    "residue_1": "ARG93",
+    "residue_2": "GLN39",
+    "bond_type": "other_bond",
+    "frequency": 13
+   },
+   {
+    "residue_1": "THR42",
+    "residue_2": "ARG40",
+    "bond_type": "hydrogen_bond",
+    "frequency": 12
+   },
+   {
+    "residue_1": "ASP95",
+    "residue_2": "ASP99",
+    "bond_type": "other_bond",
+    "frequency": 12
+   },
+   {
+    "residue_1": "VAL97",
+    "residue_2": "GLU101",
+    "bond_type": "other_bond",
+    "frequency": 12
+   },
+   {
+    "residue_1": "THR39",
+    "residue_2": "HIS97",
+    "bond_type": "other_bond",
+    "frequency": 10
+   },
+   {
+    "residue_1": "ARG93",
+    "residue_2": "PRO36",
+    "bond_type": "other_bond",
+    "frequency": 7
+   },
+   {
+    "residue_1": "TYR141",
+    "residue_2": "PRO36",
+    "bond_type": "other_bond",
+    "frequency": 6
+   },
+   {
+    "residue_1": "VAL94",
+    "residue_2": "TRP37",
+    "bond_type": "other_bond",
+    "frequency": 4
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "LEU49",
+    "bond_type": "hydrogen_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "LEU49",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "GLN39",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "THR39",
+    "residue_2": "TYR145",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "PRO36",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "LYS140",
+    "residue_2": "PRO36",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "ARG93",
+    "residue_2": "PRO36",
+    "bond_type": "hydrogen_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ARG93",
+    "residue_2": "GLN39",
+    "bond_type": "hydrogen_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "VAL34",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "TYR35",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "GLN39",
+    "bond_type": "hydrogen_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "SER50",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "ASN50",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "VAL33",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "THR39",
+    "residue_2": "HIS97",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "THR42",
+    "residue_2": "HIS97",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "LEU92",
+    "residue_2": "ARG40",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "VAL34",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "TRP37",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "VAL33",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "LYS41",
+    "residue_2": "CYS93",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "LYS41",
+    "residue_2": "CYS93",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ASN98",
+    "residue_2": "ASP99",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ASN98",
+    "residue_2": "ASP99",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "PRO38",
+    "residue_2": "HIS146",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "PRO38",
+    "residue_2": "TYR145",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "THR39",
+    "residue_2": "PRO100",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "THR42",
+    "residue_2": "VAL98",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "THR42",
+    "residue_2": "ASP99",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "TYR43",
+    "residue_2": "ASP99",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "PRO45",
+    "residue_2": "HIS97",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ASP95",
+    "residue_2": "GLU101",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ASP95",
+    "residue_2": "LEU106",
+    "bond_type": "other_bond",
+    "frequency": 1
+   }
+  ]
+ },
+ {
+  "agg_interface_id": "AI_131443_0001_0002",
+  "pdb_complex_id": "PDB-CPX-131443",
+  "chain_class_id_1": "CC_131443_0001",
+  "chain_class_id_2": "CC_131443_0002",
+  "component_label_1": "P01958-1",
+  "component_label_2": "P01958-2",
+  "instance_count": 18,
+  "median_bsa": 293.3,
+  "median_solvation_energy": -0.48,
+  "contact_summary": [
+   {
+    "residue_1": "TYR141",
+    "residue_2": "LYS128",
+    "bond_type": "other_bond",
+    "frequency": 12
+   },
+   {
+    "residue_1": "LYS128",
+    "residue_2": "TYR141",
+    "bond_type": "other_bond",
+    "frequency": 12
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "LYS128",
+    "bond_type": "other_bond",
+    "frequency": 11
+   },
+   {
+    "residue_1": "LYS128",
+    "residue_2": "ARG142",
+    "bond_type": "other_bond",
+    "frequency": 11
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "VAL2",
+    "bond_type": "other_bond",
+    "frequency": 7
+   },
+   {
+    "residue_1": "VAL2",
+    "residue_2": "ARG142",
+    "bond_type": "other_bond",
+    "frequency": 6
+   },
+   {
+    "residue_1": "SER139",
+    "residue_2": "VAL2",
+    "bond_type": "other_bond",
+    "frequency": 5
+   },
+   {
+    "residue_1": "VAL2",
+    "residue_2": "SER139",
+    "bond_type": "other_bond",
+    "frequency": 5
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "LEU3",
+    "bond_type": "other_bond",
+    "frequency": 5
+   },
+   {
+    "residue_1": "SER4",
+    "residue_2": "ARG142",
+    "bond_type": "other_bond",
+    "frequency": 5
+   },
+   {
+    "residue_1": "TYR141",
+    "residue_2": "VAL2",
+    "bond_type": "other_bond",
+    "frequency": 4
+   },
+   {
+    "residue_1": "LEU3",
+    "residue_2": "ARG142",
+    "bond_type": "other_bond",
+    "frequency": 4
+   },
+   {
+    "residue_1": "SER4",
+    "residue_2": "TYR141",
+    "bond_type": "other_bond",
+    "frequency": 4
+   },
+   {
+    "residue_1": "TYR141",
+    "residue_2": "SER4",
+    "bond_type": "other_bond",
+    "frequency": 4
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "SER4",
+    "bond_type": "other_bond",
+    "frequency": 4
+   },
+   {
+    "residue_1": "SER131",
+    "residue_2": "ARG142",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "SER131",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "VAL2",
+    "residue_2": "TYR141",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "LYS128",
+    "residue_2": "LYS140",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "THR135",
+    "residue_2": "VAL2",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "LYS100",
+    "residue_2": "LYS100",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "SER131",
+    "bond_type": "hydrogen_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "VAL2",
+    "residue_2": "SER139",
+    "bond_type": "hydrogen_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ASP127",
+    "residue_2": "ARG142",
+    "bond_type": "salt_bridge",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ASP127",
+    "residue_2": "ARG142",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "ASP127",
+    "bond_type": "salt_bridge",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "ASP127",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "SER132",
+    "residue_2": "ARG142",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "SER132",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "LYS140",
+    "residue_2": "LYS128",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "SER4",
+    "residue_2": "LYS140",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "SER4",
+    "residue_2": "ARG142",
+    "bond_type": "hydrogen_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "VAL2",
+    "residue_2": "THR135",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ASP7",
+    "residue_2": "ARG142",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "LYS128",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "LYS128",
+    "residue_2": "ARG142",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "SER131",
+    "residue_2": "ARG142",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "SER139",
+    "residue_2": "VAL2",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "TYR141",
+    "residue_2": "VAL2",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "VAL2",
+    "residue_2": "TYR141",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "VAL2",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "VAL2",
+    "residue_2": "ARG142",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "SER132",
+    "residue_2": "ARG142",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "SER132",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "SER4",
+    "residue_2": "TYR141",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "LYS128",
+    "residue_2": "LYS140",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "TYR141",
+    "residue_2": "SER4",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "SER4",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "LYS140",
+    "residue_2": "LYS128",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "SER139",
+    "residue_2": "LEU3",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "LEU3",
+    "residue_2": "SER139",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "ASP7",
+    "bond_type": "salt_bridge",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "ASP7",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ASP7",
+    "residue_2": "ARG142",
+    "bond_type": "salt_bridge",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "THR135",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ARG142",
+    "residue_2": "THR135",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "LYS140",
+    "residue_2": "SER4",
+    "bond_type": "other_bond",
+    "frequency": 1
+   }
+  ]
+ },
+ {
+  "agg_interface_id": "AI_131443_0003_0004",
+  "pdb_complex_id": "PDB-CPX-131443",
+  "chain_class_id_1": "CC_131443_0003",
+  "chain_class_id_2": "CC_131443_0004",
+  "component_label_1": "P02062-1",
+  "component_label_2": "P02062-2",
+  "instance_count": 17,
+  "median_bsa": 202.2,
+  "median_solvation_energy": 1.06,
+  "contact_summary": [
+   {
+    "residue_1": "HIS146",
+    "residue_2": "GLN2",
+    "bond_type": "other_bond",
+    "frequency": 10
+   },
+   {
+    "residue_1": "ASN139",
+    "residue_2": "HIS146",
+    "bond_type": "other_bond",
+    "frequency": 9
+   },
+   {
+    "residue_1": "GLN2",
+    "residue_2": "HIS146",
+    "bond_type": "other_bond",
+    "frequency": 9
+   },
+   {
+    "residue_1": "HIS146",
+    "residue_2": "ASN139",
+    "bond_type": "other_bond",
+    "frequency": 8
+   },
+   {
+    "residue_1": "HIS146",
+    "residue_2": "VAL2",
+    "bond_type": "other_bond",
+    "frequency": 8
+   },
+   {
+    "residue_1": "VAL2",
+    "residue_2": "HIS146",
+    "bond_type": "other_bond",
+    "frequency": 7
+   },
+   {
+    "residue_1": "LYS82",
+    "residue_2": "LYS82",
+    "bond_type": "other_bond",
+    "frequency": 3
+   },
+   {
+    "residue_1": "HIS146",
+    "residue_2": "VAL2",
+    "bond_type": "hydrogen_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "GLN2",
+    "residue_2": "TYR145",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "TYR145",
+    "residue_2": "GLN2",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "ALA135",
+    "residue_2": "HIS146",
+    "bond_type": "other_bond",
+    "frequency": 2
+   },
+   {
+    "residue_1": "HIS146",
+    "residue_2": "ASN139",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ASN139",
+    "residue_2": "HIS146",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "HIS146",
+    "residue_2": "GLN2",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "GLN2",
+    "residue_2": "HIS146",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "VAL2",
+    "residue_2": "HIS146",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "GLN2",
+    "residue_2": "TYR145",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "TYR145",
+    "residue_2": "GLN2",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "GLY136",
+    "residue_2": "HIS146",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "LYS144",
+    "residue_2": "GLN2",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "LYS144",
+    "residue_2": "GLN2",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "GLN2",
+    "residue_2": "LYS144",
+    "bond_type": "hydrogen_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "GLN2",
+    "residue_2": "LYS144",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ASN139",
+    "residue_2": "ASN139",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "HIS143",
+    "residue_2": "LYS82",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "LYS82",
+    "residue_2": "HIS143",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "HIS146",
+    "residue_2": "ALA135",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "GLU101",
+    "residue_2": "GLU101",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "LYS132",
+    "residue_2": "HIS146",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "HIS146",
+    "residue_2": "LYS132",
+    "bond_type": "other_bond",
+    "frequency": 1
+   },
+   {
+    "residue_1": "ARG104",
+    "residue_2": "ARG104",
+    "bond_type": "other_bond",
+    "frequency": 1
+   }
+  ]
+ }
+]

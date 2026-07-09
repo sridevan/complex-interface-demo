@@ -19,7 +19,8 @@ function groupByChain(residues) {
 const HL_COLOR = 0x12c9a6  // highlight teal for a Sankey-selected residue
 
 // residues: [{ chain: <author asym id>, resi: <author seq num> }]
-export default function Viewer3Dmol({ pdbId, agResidues, abResidues, highlight, onClearHighlight, height = 480 }) {
+// cifUrl: optional explicit mmCIF URL (e.g. a local assembly file); falls back to the PDBe entry CIF.
+export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, highlight, onClearHighlight, height = 480 }) {
   const hostRef = useRef(null)
   const viewerRef = useRef(null)
   const surfRef = useRef(null)
@@ -107,7 +108,8 @@ export default function Viewer3Dmol({ pdbId, agResidues, abResidues, highlight, 
     async function run() {
       const $3Dmol = window.$3Dmol
       if (!$3Dmol) { setErr('3Dmol failed to load from CDN (needs internet).'); return }
-      if (!pdbId) return
+      const url = cifUrl || (pdbId && CIF_URL(pdbId))
+      if (!url) return
       try {
         if (!viewerRef.current) {
           viewerRef.current = $3Dmol.createViewer(hostRef.current, { backgroundColor: 'white' })
@@ -115,7 +117,7 @@ export default function Viewer3Dmol({ pdbId, agResidues, abResidues, highlight, 
         const viewer = viewerRef.current
         viewer.clear()
         labelsRef.current = []  // clear() removes any existing labels
-        const cif = await fetch(CIF_URL(pdbId)).then((r) => r.text())
+        const cif = await fetch(url).then((r) => r.text())
         if (cancelled) return
         viewer.addModel(cif, 'cif')
         viewer.setStyle({}, {})  // nothing by default; show partners as volumes + interface sticks
@@ -166,7 +168,7 @@ export default function Viewer3Dmol({ pdbId, agResidues, abResidues, highlight, 
     }
     run()
     return () => { cancelled = true }
-  }, [pdbId, agResidues, abResidues])
+  }, [pdbId, cifUrl, agResidues, abResidues])
 
   // When a Sankey node is clicked, re-apply styles with the highlight and bring it into view.
   useEffect(() => {

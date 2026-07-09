@@ -91,10 +91,13 @@ function Distribution({ clean, min, max, selected, discrete }) {
   )
 }
 
-// Distribution of each interface property across the selected chain type's interfaces, with the
-// selected instance marked — the PISA "where does this interface sit in the population" view.
-export default function InterfacePropertyDistributions({ instances, selected, chainType }) {
-  const cards = useMemo(() => PROPS.map((p) => {
+// Distribution of each interface property across a population of interfaces, with the selected
+// instance marked — the PISA "where does this interface sit in the population" view. Defaults are
+// antibody–antigen (spike); `props`, `note` and `populationLabel` let other complexes reuse it.
+export default function InterfacePropertyDistributions({ instances, selected, chainType,
+  props = PROPS, title = 'Interface property distributions', note, populationLabel }) {
+  const popLabel = populationLabel || `${chainType}-chain interfaces in the complex`
+  const cards = useMemo(() => props.map((p) => {
     const clean = instances.map((r) => r[p.key]).filter((v) => v != null && !Number.isNaN(v))
     const sel = selected ? selected[p.key] : null
     const min = clean.length ? Math.min(...clean) : null
@@ -103,20 +106,22 @@ export default function InterfacePropertyDistributions({ instances, selected, ch
     const pct = (sel != null && clean.length)
       ? Math.round((clean.filter((v) => v <= sel).length / clean.length) * 100) : null
     return { p, clean, sel, min, max, pct }
-  }), [instances, selected])
+  }), [instances, selected, props])
 
   return (
     <div className="card ex-cell">
-      <h2>Interface property distributions</h2>
-      <p className="note">PISA properties of the selected interface (highlighted in orange) against all
-        {' '}<b>{chainType}-chain</b> interfaces in the complex (n = {instances.length}), with the selected
-        interface highlighted. Small-range bond counts show one bar per value; energies, areas and wide
-        ranges are binned.</p>
+      <h2>{title}</h2>
+      {note || (
+        <p className="note">PISA properties of the selected interface (highlighted in orange) against all
+          {' '}<b>{chainType}-chain</b> interfaces in the complex (n = {instances.length}), with the selected
+          interface highlighted. Small-range bond counts show one bar per value; energies, areas and wide
+          ranges are binned.</p>
+      )}
       <div className="ipd-grid">
         {cards.map(({ p, clean, sel, min, max, pct }) => (
           <div key={p.key} className="ipd-card">
             <div className="ipd-head"><span className="ipd-label">{p.label}</span>
-              <Hint text={`${p.desc.replaceAll('{chain}', chainType)} The chart shows how this compares across all ${chainType}-chain interfaces in the complex (n = ${instances.length}); the selected interface is highlighted.`} /></div>
+              <Hint text={`${p.desc.replaceAll('{chain}', chainType || '')} The chart shows how this compares across all ${popLabel} (n = ${instances.length}); the selected interface is highlighted.`} /></div>
             <div className="ipd-val">
               <b>{fmtNum(sel, p.digits)}</b>{p.unit ? ' ' + p.unit : ''}
               {pct != null && <span className="ipd-pct">{pct}ᵗʰ pct</span>}

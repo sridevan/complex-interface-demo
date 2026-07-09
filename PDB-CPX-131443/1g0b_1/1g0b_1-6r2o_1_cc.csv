@@ -1,0 +1,5 @@
+pdb_complex_id,asm_id1,asym_id1,asm_id2,asym_id2
+PDB-CPX-131443,1g0b_1,A,6r2o_1,C
+PDB-CPX-131443,1g0b_1,B,6r2o_1,D
+PDB-CPX-131443,1g0b_1,A-2,6r2o_1,A
+PDB-CPX-131443,1g0b_1,B-2,6r2o_1,B

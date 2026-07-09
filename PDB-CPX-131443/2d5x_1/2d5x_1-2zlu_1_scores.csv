@@ -1,0 +1,2 @@
+pdb_complex_id,asm_id1,asm_id2,length_structure_1,length_structure_2,aligned_length,rmsd,tm_score_1,tm_score_2
+PDB-CPX-131443,2d5x_1,2zlu_1,574,570,570,0.66,0.99,0.99

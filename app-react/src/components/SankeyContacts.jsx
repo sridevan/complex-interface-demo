@@ -28,7 +28,18 @@ const AA_CLASS = {
 // region palette above (hydrophobic uses sand rather than grey to avoid clashing with Framework).
 const AA_COLOR = { acidic: '#CC3311', basic: '#4477AA', polar: '#228833', hydrophobic: '#DDCC77', unknown: '#c9ced6' }
 
-function buildGraph(rows) {
+// Colour a residue node by amino-acid class (used for the antigen side, and for the right side too
+// when the partner isn't an IMGT-numbered antibody — e.g. a second protein chain in a homo/hetero-mer).
+function aaColor(resn) { return AA_COLOR[AA_CLASS[resn] || 'unknown'] }
+
+const AA3TO1 = {
+  ALA: 'A', ARG: 'R', ASN: 'N', ASP: 'D', CYS: 'C', GLU: 'E', GLN: 'Q', GLY: 'G', HIS: 'H',
+  ILE: 'I', LEU: 'L', LYS: 'K', MET: 'M', PHE: 'F', PRO: 'P', SER: 'S', THR: 'T', TRP: 'W',
+  TYR: 'Y', VAL: 'V', MSE: 'M', SEC: 'U', PYL: 'O',
+}
+
+function buildGraph(rows, rightColorBy = 'region', singleLetter = false) {
+  const rn = (resn) => singleLetter ? (AA3TO1[resn] || 'X') : resn
   const abIndex = new Map(), agIndex = new Map()
   const nodes = []
   const add = (key, make) => {
@@ -36,6 +47,7 @@ function buildGraph(rows) {
     if (!idx.has(key)) { idx.set(key, nodes.length); nodes.push(make()) }
     return (key.startsWith('ab:') ? abIndex : agIndex).get(key)
   }
+  const byAA = rightColorBy === 'aaclass'
   const linkMap = new Map()
   for (const r of rows) {
     const abKey = `ab:${r.antibody_chain_id}:${r.antibody_residue_author_number}:${r.antibody_residue_author_insertion_code || ''}`
@@ -43,15 +55,15 @@ function buildGraph(rows) {
     const abI = add(abKey, () => ({
       kind: 'ab',
       name: r.antibody_imgt_position != null
-        ? `${r.antibody_residue_name}${r.antibody_imgt_position}${r.antibody_imgt_insertion_code || ''}`
-        : `${r.antibody_residue_name}${r.antibody_residue_author_number}`,
-      color: abRegionColor(r.antibody_imgt_region),
-      sub: r.antibody_imgt_region || 'unmapped',
+        ? `${rn(r.antibody_residue_name)}${r.antibody_imgt_position}${r.antibody_imgt_insertion_code || ''}`
+        : `${rn(r.antibody_residue_name)}${r.antibody_residue_author_number}`,
+      color: byAA ? aaColor(r.antibody_residue_name) : abRegionColor(r.antibody_imgt_region),
+      sub: byAA ? (AA_CLASS[r.antibody_residue_name] || 'unknown') : (r.antibody_imgt_region || 'unmapped'),
       chain: r.antibody_chain_id, resi: r.antibody_residue_author_number,  // for 3D highlight
     }))
     const agI = add(agKey, () => {
       const cls = AA_CLASS[r.antigen_residue_name] || 'unknown'
-      return { kind: 'ag', name: `${r.antigen_residue_name}${r.antigen_uniprot_position}`,
+      return { kind: 'ag', name: `${rn(r.antigen_residue_name)}${r.antigen_uniprot_position}`,
                color: AA_COLOR[cls], sub: cls,
                chain: r.antigen_chain_id, resi: r.antigen_residue_author_number }  // for 3D highlight
     })
@@ -137,8 +149,9 @@ const LEGEND_AA = [['acidic', AA_COLOR.acidic], ['basic', AA_COLOR.basic],
 const LEGEND_REGION = [['CDR1', REGION_CLASS_COLOR.CDR1], ['CDR2', REGION_CLASS_COLOR.CDR2],
                        ['CDR3', REGION_CLASS_COLOR.CDR3], ['Framework', REGION_CLASS_COLOR.Framework]]
 
-export default function SankeyContacts({ rows, onNodeClick }) {
-  const data = useMemo(() => buildGraph(rows || []), [rows])
+export default function SankeyContacts({ rows, onNodeClick, leftLabel = 'antigen', rightLabel = 'antibody',
+                                         rightColorBy = 'region', singleLetter = false }) {
+  const data = useMemo(() => buildGraph(rows || [], rightColorBy, singleLetter), [rows, rightColorBy, singleLetter])
   // Give every node room: ~24px of vertical space per node on the busier side so thin (low-bond)
   // residues separate enough to read their labels.
   const height = Math.max(360, Math.max(
@@ -146,33 +159,55 @@ export default function SankeyContacts({ rows, onNodeClick }) {
     data.nodes.filter((n) => n.kind === 'ag').length) * 24)
 
   if (!rows || !rows.length) return <p className="note">No contacts for the selected instance.</p>
+  // Chain id(s) on each side of the selected instance, shown as a header above the columns.
+  const leftChains = [...new Set(rows.map((r) => r.antigen_chain_id).filter((x) => x != null))]
+  const rightChains = [...new Set(rows.map((r) => r.antibody_chain_id).filter((x) => x != null))]
+  const chainLabel = (cs) => cs.length ? `Chain ${cs.join(', ')}` : ''
   return (
-    <div>
-      <ResponsiveContainer width="100%" height={height}>
-        <Sankey
-          data={data}
-          node={<SankeyNode onNodeClick={onNodeClick} />}
-          nodePadding={14}
-          nodeWidth={12}
-          link={{ stroke: '#b9c0c9', strokeOpacity: 0.35 }}
-          margin={{ top: 8, bottom: 8, left: 70, right: 90 }}
-        >
-          <Tooltip content={<SankeyTooltip linkInfo={data.linkInfo} />} />
-        </Sankey>
-      </ResponsiveContainer>
+    <div className="sankey-contacts">
+      <div className="sankey-head">
+        <span className="l">{chainLabel(leftChains)}</span>
+        <span className="r">{chainLabel(rightChains)}</span>
+      </div>
+      <div className="sankey-chart-scroll">
+        <ResponsiveContainer width="100%" height={height}>
+          <Sankey
+            data={data}
+            node={<SankeyNode onNodeClick={onNodeClick} />}
+            nodePadding={14}
+            nodeWidth={12}
+            link={{ stroke: '#b9c0c9', strokeOpacity: 0.35 }}
+            margin={{ top: 8, bottom: 8, left: 70, right: 90 }}
+          >
+            <Tooltip content={<SankeyTooltip linkInfo={data.linkInfo} />} />
+          </Sankey>
+        </ResponsiveContainer>
+      </div>
       <div className="legend sankey-legend">
-        <div>
-          <b style={{ color: '#333' }}>antigen</b> (left) by residue class:
-          {LEGEND_AA.map(([k, c]) => (
-            <span key={k}><span className="dot" style={{ background: c }} />{k}</span>
-          ))}
-        </div>
-        <div>
-          <b style={{ color: '#333' }}>antibody</b> (right) by IMGT region:
-          {LEGEND_REGION.map(([k, c]) => (
-            <span key={k}><span className="dot" style={{ background: c }} />{k}</span>
-          ))}
-        </div>
+        {rightColorBy === 'aaclass' ? (
+          // Both sides share the residue-class palette — a single legend covers them.
+          <div>
+            Amino acids are colored by type:
+            {LEGEND_AA.map(([k, c]) => (
+              <span key={k}><span className="dot" style={{ background: c }} />{k}</span>
+            ))}
+          </div>
+        ) : (
+          <>
+            <div>
+              <b style={{ color: '#333' }}>{leftLabel}</b> (left) by residue class:
+              {LEGEND_AA.map(([k, c]) => (
+                <span key={k}><span className="dot" style={{ background: c }} />{k}</span>
+              ))}
+            </div>
+            <div>
+              <b style={{ color: '#333' }}>{rightLabel}</b> (right) by IMGT region:
+              {LEGEND_REGION.map(([k, c]) => (
+                <span key={k}><span className="dot" style={{ background: c }} />{k}</span>
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </div>
   )

@@ -18,6 +18,7 @@ data/intermediate/
 # Generated copies inside the React app (rebuilt by `npm run sync-data` on predev/prebuild)
 app-react/public/data/
 app-react/public/mvs/
+app-react/public/hemoglobin/
 
 # OS / editor
 .DS_Store

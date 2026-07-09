@@ -1,0 +1,34 @@
+[
+ {
+  "chain_class_id": "CC_131443_0001",
+  "pdb_complex_id": "PDB-CPX-131443",
+  "accession": "P01958",
+  "component_index": 1,
+  "component_label": "P01958-1",
+  "chain_order": 1
+ },
+ {
+  "chain_class_id": "CC_131443_0002",
+  "pdb_complex_id": "PDB-CPX-131443",
+  "accession": "P01958",
+  "component_index": 2,
+  "component_label": "P01958-2",
+  "chain_order": 2
+ },
+ {
+  "chain_class_id": "CC_131443_0003",
+  "pdb_complex_id": "PDB-CPX-131443",
+  "accession": "P02062",
+  "component_index": 1,
+  "component_label": "P02062-1",
+  "chain_order": 3
+ },
+ {
+  "chain_class_id": "CC_131443_0004",
+  "pdb_complex_id": "PDB-CPX-131443",
+  "accession": "P02062",
+  "component_index": 2,
+  "component_label": "P02062-2",
+  "chain_order": 4
+ }
+]

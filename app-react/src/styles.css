@@ -83,13 +83,21 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 /* Explorer dashboard */
 /* Row 1: narrow selector cards + wide Mol* viewer. Row 2: even 50/50 split. */
 .ex-row { display: grid; gap: 16px; margin-bottom: 16px; }
-.ex-row1 { grid-template-columns: minmax(240px, 0.75fr) 2fr; }
+.ex-row1 { grid-template-columns: minmax(280px, 1fr) 1.9fr; }
 .ex-row2 { grid-template-columns: 1fr 1fr; }
 /* both instances table + Sankey get identical dimensions; each scrolls internally so the
    tall single-interface Sankey no longer balloons the row (mirrors the ex-row3 pattern). */
 .ex-row2 > .card { height: 600px; }
 .ex-row2 .ex-scroll { flex: 1 1 auto; min-height: 0; height: auto; max-height: none; }
-.sankey-scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
+/* Sankey fills the card as a flex column: the diagram scrolls, the legend below stays pinned. */
+.sankey-scroll { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
+.sankey-contacts { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
+/* Chain-id headers centred over each node-bar column (Sankey margins: left 70, right 90, nodeWidth 12). */
+.sankey-head { flex: 0 0 auto; position: relative; height: 16px; margin-bottom: 4px;
+  font-weight: 600; font-size: 12px; color: #333; }
+.sankey-head .l { position: absolute; left: 76px; transform: translateX(-50%); white-space: nowrap; }
+.sankey-head .r { position: absolute; right: 84px; transform: translateX(50%); white-space: nowrap; }
+.sankey-chart-scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
 /* Row 3: identical-size cards (same width via 1fr/1fr, same height via fixed height); the table
    and heatmap scroll areas flex to fill that height, so the heatmap uses all available space. */
 .ex-row3 { grid-template-columns: 1fr 1fr; }
@@ -104,6 +112,68 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .selcard:hover { background: #f7f9fc; }
 .selcard.active { background: #f0f6ff; box-shadow: 0 0 0 2px var(--acc) inset; }
 .selcard-title { font-size: 13px; font-weight: 600; margin-bottom: 10px; }
+
+/* Component chips on the interface selector cards (one per UniProt component in the pair). */
+.hemo-chips { display: flex; align-items: center; gap: 6px; flex-wrap: nowrap; margin-bottom: 12px; }
+.comp-chip { display: inline-flex; align-items: center; gap: 5px; padding: 2px 8px; border-radius: 12px;
+  font-size: 12px; font-weight: 600; color: #1c2430; background: var(--chip-bg);
+  border: 1px solid var(--chip-bd); white-space: nowrap; }
+.comp-chip .comp-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--cc); flex: 0 0 auto; }
+.comp-chip .comp-gene { font-weight: 700; color: #1c2430; }
+.comp-chip .comp-acc { color: var(--muted); font-weight: 500; font-size: 10px; }
+.chip-x { color: var(--muted); font-size: 13px; flex: 0 0 auto; }
+
+/* Per-pair UniProt summary at the top of the page (one card per unique component accession). */
+.uni-summary { display: flex; gap: 12px; flex-wrap: wrap; margin: 6px 0 18px; }
+.uni-card { flex: 1 1 300px; min-width: 260px; border: 1px solid var(--border); border-radius: 10px;
+  padding: 10px 14px; background: #fff; }
+.uni-head { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.uni-acc { font-family: monospace; font-size: 12px; color: var(--accent); text-decoration: none; margin-left: auto; }
+.uni-acc:hover { text-decoration: underline; }
+.uni-name { font-weight: 600; font-size: 13px; }
+.uni-meta { font-size: 12px; color: var(--muted); margin-top: 1px; }
+.uni-func { font-size: 12px; color: var(--text); margin-top: 5px; line-height: 1.35; }
+.uni-more { border: none; background: none; padding: 0; color: var(--accent); font: inherit;
+  font-size: 12px; font-weight: 600; cursor: pointer; }
+.uni-more:hover { text-decoration: underline; }
+
+/* Contact-pair frequency bar (in the frequency table) */
+.freqbar { display: inline-block; width: 56px; height: 8px; background: #eef0f3; border-radius: 4px;
+  overflow: hidden; vertical-align: middle; margin-right: 6px; }
+.freqbar-fill { display: block; height: 100%; background: #c65a5a; }
+.freqbar-txt { font-size: 11px; color: var(--muted); }
+
+/* Residue × residue contact-map heatmap */
+.cm-wrap { overflow: auto; max-height: 520px; border: 1px solid var(--border); border-radius: 8px; }
+.cm-table { border-collapse: separate; border-spacing: 0; }
+.cm-corner { position: sticky; left: 0; top: 0; z-index: 3; background: #fff; }
+.cm-colhead { height: 66px; vertical-align: bottom; padding: 2px 0; text-align: center;
+  position: sticky; top: 0; background: #fff; z-index: 2; }
+.cm-colhead span { display: inline-block; writing-mode: vertical-rl; transform: rotate(180deg);
+  font-size: 10px; color: #444; white-space: nowrap; font-weight: 600; }
+.cm-rowhead { position: sticky; left: 0; background: #fff; z-index: 1; font-size: 11px; font-weight: 600;
+  padding: 2px 8px 2px 6px; white-space: nowrap; text-align: right; }
+.cm-cell { width: 22px; min-width: 22px; height: 22px; text-align: center; font-size: 10px;
+  border: 1px solid #eef0f3; }
+.cm-cell.cm-sel { outline: 2px solid #12c9a6; outline-offset: -2px; }
+.cm-foot { display: flex; align-items: center; gap: 8px; margin-top: 8px; font-size: 12px; flex-wrap: wrap; }
+.cm-legend-ramp { display: inline-block; width: 90px; height: 10px; border-radius: 3px;
+  background: linear-gradient(90deg, #f4f0fa, #3f007d); }
+.cm-hover { margin-left: auto; color: var(--text); font-weight: 500; }
+
+/* Axis titles (UniProt accession + suffix) around the contact map. */
+.cm-axis-x { text-align: center; font-weight: 700; font-size: 12px; color: var(--muted);
+  margin-bottom: 4px; padding-left: 56px; }
+.cm-mid { display: flex; min-height: 0; }
+.cm-axis-y { display: flex; align-items: center; flex: 0 0 auto; padding-right: 2px; }
+.cm-axis-y span { writing-mode: vertical-rl; transform: rotate(180deg); font-weight: 700;
+  font-size: 12px; color: var(--muted); white-space: nowrap; }
+
+/* Equal-height contact row: both cards fixed height; their scroll areas flex to fill. */
+.cm-row > .card { height: 560px; }
+.cm-row .cm-scroll { flex: 1 1 auto; min-height: 0; max-height: none; overflow-y: auto; }
+.cm-row .cm-mid { flex: 1 1 auto; min-height: 0; }
+.cm-mid .cm-wrap { flex: 1 1 auto; min-height: 0; max-height: none; }
 .selcard-stats { display: flex; gap: 18px; }
 .selcard-stats .v { font-size: 24px; font-weight: 700; }
 .selcard-stats .k { font-size: 11px; color: var(--muted); }
@@ -116,7 +186,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .filter-chip button:hover { background: #c3ddf6; }
 
 /* Sankey legend below the diagram */
-.sankey-legend { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border); text-align: center; }
+.sankey-legend { flex: 0 0 auto; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border); text-align: center; }
 
 /* Sankey ribbon/node tooltip */
 .sankey-tip { background: #1c2430; color: #fff; border-radius: 6px; padding: 8px 10px; font-size: 12px;
@@ -219,3 +289,15 @@ table.heatmap thead th { position: sticky; top: 0; background: #fbfcfd; z-index:
 .hm-legend { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); margin: 6px 0 10px; }
 .hm-ramp { display: inline-block; width: 160px; height: 12px; border-radius: 3px;
   background: linear-gradient(to right, #ffffff, #f4f0fa, #9a6fc4, #3f007d); border: 1px solid var(--border); }
+
+/* ---- landing page + complex routing ---- */
+.landing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; margin-top: 18px; }
+.landing-card { display: block; position: relative; overflow: hidden; text-decoration: none; color: inherit;
+  background: #fff; border: 1px solid #e3e7ee; border-radius: 10px; padding: 18px 18px 16px; transition: box-shadow .15s, transform .15s; }
+.landing-card:hover { box-shadow: 0 6px 22px rgba(30,50,90,.12); transform: translateY(-2px); }
+.landing-accent { position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+.landing-card h2 { margin: 6px 0 0; }
+.landing-go { margin-top: 12px; font-weight: 600; font-size: 14px; }
+.back-link { display: inline-block; margin: 4px 0 10px; color: #4b7fcc; text-decoration: none; font-size: 14px; }
+.back-link:hover { text-decoration: underline; }
+.filter-input { border: 1px solid #d4d9e2; border-radius: 6px; font-size: 13px; }

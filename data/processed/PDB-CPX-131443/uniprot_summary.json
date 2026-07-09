@@ -1,0 +1,20 @@
+{
+ "P01958": {
+  "accession": "P01958",
+  "name": "Hemoglobin subunit alpha",
+  "gene": "HBA",
+  "organism": "Equus caballus",
+  "length": 142,
+  "function": "Involved in oxygen transport from the lung to the various peripheral tissues. Hemopressin acts as an antagonist peptide of the cannabinoid receptor CNR1. Hemopressin-binding efficiently blocks cannabinoid receptor CNR1 and subsequent signaling.",
+  "subunit": "Heterotetramer of two alpha chains and two beta chains"
+ },
+ "P02062": {
+  "accession": "P02062",
+  "name": "Hemoglobin subunit beta",
+  "gene": "HBB",
+  "organism": "Equus caballus",
+  "length": 146,
+  "function": "Involved in oxygen transport from the lung to the various peripheral tissues.",
+  "subunit": "Heterotetramer of two alpha chains and two beta chains"
+ }
+}
