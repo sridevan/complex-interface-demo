@@ -14,7 +14,7 @@ const CMP = {
 
 // Aggregated residue–residue contact pairs for one interface group. Columns are click-to-sort; the
 // residue-number columns default ascending, Frequency defaults descending.
-export default function ContactPairTable({ pairs, total, leftLabel, rightLabel, selected, onSelect }) {
+export default function ContactPairTable({ pairs, total, leftLabel, rightLabel }) {
   const [sort, setSort] = useState({ key: 'freq', dir: 'desc' })
   const toggle = (key) => setSort((prev) => prev.key === key
     ? { key, dir: prev.dir === 'asc' ? 'desc' : 'asc' }
@@ -52,8 +52,7 @@ export default function ContactPairTable({ pairs, total, leftLabel, rightLabel, 
             const key = `${p.pos1}|${p.pos2}`
             const pct = total ? p.freq / total : 0
             return (
-              <tr key={key} className={'selrow' + (selected === key ? ' sel' : '')}
-                  onClick={() => onSelect && onSelect(p)} style={{ cursor: 'pointer' }}>
+              <tr key={key}>
                 <td>{p.res1}{p.pos1}</td>
                 <td>{p.res2}{p.pos2}</td>
                 <td>{p.bonds.map((b) => BOND_SHORT[b] || b).join(', ')}</td>

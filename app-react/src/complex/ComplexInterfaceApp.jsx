@@ -413,11 +413,9 @@ export default function ComplexInterfaceApp({ config = {} }) {
         <div className="card ex-cell">
           <h2>Contact pair frequency <span className="h2-sub">· {lab(current?.component_label_1)} ↔ {lab(current?.component_label_2)}</span></h2>
           <p className="note">Residue–residue contacts are aggregated across deposited instances of the selected
-            equivalent interface. Frequency indicates how often each residue pair is observed in contact. Select
-            a row to highlight the contact in the 3D view and contact frequency map.</p>
+            equivalent interface. Frequency indicates how often each residue pair is observed in contact.</p>
           <ContactPairTable pairs={pairAgg} total={current?.instance_count}
-            leftLabel={lab(current?.component_label_1)} rightLabel={lab(current?.component_label_2)}
-            selected={selPair} onSelect={onSelectPair} />
+            leftLabel={lab(current?.component_label_1)} rightLabel={lab(current?.component_label_2)} />
         </div>
         <div className="card ex-cell">
           <h2>Contact frequency map <span className="h2-sub">· {lab(current?.component_label_1)} × {lab(current?.component_label_2)}</span></h2>

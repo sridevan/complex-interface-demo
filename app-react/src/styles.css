@@ -184,10 +184,6 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .cm-sw { display: inline-block; width: 12px; height: 12px; border-radius: 2px; border: 1px solid var(--border); }
 .cm-sw-absent { background: #f0f1f3; }
 
-/* Contact-pair selection = teal across the pair table row, the map cell, and the 3D highlight, so one
-   colour tracks the same residue–residue contact everywhere (instance-row selection stays blue). */
-.cm-scroll .selrow.sel { background: #dff6f0; box-shadow: inset 3px 0 0 #12c9a6; }
-
 /* Section bands: give the page a spine — ① one deposited instance → ② aggregate across all instances. */
 .section-band { display: flex; align-items: flex-start; gap: 12px; margin: 28px 0 12px; }
 .section-num { flex: 0 0 auto; width: 26px; height: 26px; border-radius: 50%; background: var(--accent);
