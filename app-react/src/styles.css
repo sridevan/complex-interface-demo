@@ -137,6 +137,13 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   font-size: 12px; font-weight: 600; cursor: pointer; }
 .uni-more:hover { text-decoration: underline; }
 
+/* Sortable table-header cues */
+.th-sort { cursor: pointer; user-select: none; white-space: nowrap; }
+.th-sort:hover { color: var(--accent); }
+.th-sort .sort-ind { font-size: 9px; margin-left: 5px; color: #c2c8d0; }
+.th-sort.sorted { color: var(--text); }
+.th-sort.sorted .sort-ind { color: var(--accent); }
+
 /* Contact-pair frequency bar (in the frequency table) */
 .freqbar { display: inline-block; width: 56px; height: 8px; background: #eef0f3; border-radius: 4px;
   overflow: hidden; vertical-align: middle; margin-right: 6px; }
@@ -158,7 +165,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .cm-cell.cm-sel { outline: 2px solid #12c9a6; outline-offset: -1px; z-index: 1; position: relative; }
 .cm-foot { display: flex; align-items: center; gap: 8px; margin-top: 8px; font-size: 12px; flex-wrap: wrap; }
 .cm-legend-ramp { display: inline-block; width: 90px; height: 10px; border-radius: 3px;
-  border: 1px solid var(--border); background: linear-gradient(90deg, #deebf7, #08306b); }
+  border: 1px solid var(--border); background: linear-gradient(90deg, #f4f0fa, #3f007d); }
 .cm-hover { margin-left: auto; color: var(--text); font-weight: 500; }
 
 /* Axis titles (UniProt accession + suffix) around the contact map. */

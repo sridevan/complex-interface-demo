@@ -185,9 +185,6 @@ export default function HemoglobinApp() {
       <h1>Interface conservation across assemblies</h1>
       <p className="subtitle">PDB-CPX-131443 · <i>Equus caballus</i> · α₂β₂ · equivalent interfaces grouped
         across deposited assemblies</p>
-      <p className="note" style={{ maxWidth: 900 }}>This view compares equivalent interfaces across deposited
-        assemblies of the same complex. It summarises interface size, residue-level contacts, contact
-        conservation, and PISA-derived properties for each selected interface.</p>
 
       {/* UniProt summary for the two components of the currently selected interface pair. */}
       {current && (

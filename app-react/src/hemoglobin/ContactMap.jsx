@@ -7,14 +7,13 @@ const BOND_SHORT = {
 const ROWHEAD_W = 50   // px reserved for row residue labels (matches .cm-rowhead width)
 const COLHEAD_H = 54   // px reserved for rotated column residue labels (matches .cm-colhead height)
 
-// Single-hue sequential scale (white -> dark blue): white = not observed, darker = more frequently
-// observed across the deposited instances. A floor keeps even a single-instance contact a visible
-// pale blue (distinct from empty white). t in [0,1].
+// Same single-hue sequential ramp as the spike contact heatmap (white -> deep purple), sqrt-boosted
+// for low counts: white = not observed, darker = more frequently observed. t in [0,1].
 function cellColor(t) {
   if (t <= 0) return '#ffffff'
-  const k = 0.18 + 0.82 * Math.min(1, t)
+  const k = Math.sqrt(Math.min(1, t))
   const lerp = (a, b) => Math.round(a + (b - a) * k)
-  return `rgb(${lerp(222, 8)},${lerp(235, 48)},${lerp(247, 107)})`  // #deebf7 -> #08306b
+  return `rgb(${lerp(244, 63)},${lerp(240, 0)},${lerp(250, 125)})`  // #f4f0fa -> #3f007d
 }
 
 // Residue x residue contact-frequency map: chain-1 contacting residues on rows, chain-2 on columns,
@@ -92,9 +91,9 @@ export default function ContactMap({ pairs, total, leftLabel, rightLabel, select
         </div>
       </div>
       <div className="cm-foot">
+        <span className="note" style={{ margin: 0 }}>low</span>
         <span className="cm-legend-ramp" />
-        <span className="note" style={{ margin: 0 }}>
-          {total ? `1/${total} → ${total}/${total} instances` : 'Less frequent contacts → more frequent contacts'}</span>
+        <span className="note" style={{ margin: 0 }}>high</span>
       </div>
     </>
   )
