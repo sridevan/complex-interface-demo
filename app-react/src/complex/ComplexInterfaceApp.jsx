@@ -126,7 +126,7 @@ const INST_DEFAULT_DIR = { experimental_method: 'asc', resolution: 'asc', interf
 export default function ComplexInterfaceApp({ config = {} }) {
   // Everything else (complex id, organism, stoichiometry, component labels) is derived from the data,
   // so pointing this at another complex only needs a different basePath.
-  const { basePath = 'hemoglobin', title = 'Interface conservation across assemblies' } = config
+  const { basePath = 'hemoglobin', title = 'Aggregated Interface View' } = config
   const [data, setData] = useState(null)
   const [selAgg, setSelAgg] = useState(null)
   const [selInst, setSelInst] = useState(null)
@@ -265,9 +265,11 @@ export default function ComplexInterfaceApp({ config = {} }) {
 
   return (
     <div className="wrap">
-      <h1>{title}</h1>
+      <div className="page-head">
+        <h1>{title}</h1>
+        {complexId && <span className="complex-id">{complexId}</span>}
+      </div>
       <p className="subtitle">
-        {complexId && <>{complexId} · </>}
         {organisms.length > 0 && <><i>{organisms.join(', ')}</i> · </>}
         {stoich && <>{stoich} · </>}
         equivalent interfaces grouped across deposited assemblies</p>
