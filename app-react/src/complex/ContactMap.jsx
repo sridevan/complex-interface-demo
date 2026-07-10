@@ -19,9 +19,10 @@ function cellColor(t) {
 // Residue x residue contact-frequency map: chain-1 contacting residues on rows, chain-2 on columns,
 // each cell shaded by the fraction of the group's instances that contain that residue-residue contact.
 // Cells are sized to fill the card's map area (rectangular; adapts to each interface's row/col count).
-export default function ContactMap({ pairs, total, leftLabel, rightLabel, selected, onSelect }) {
+export default function ContactMap({ pairs, total, leftLabel, rightLabel }) {
   const wrapRef = useRef(null)
   const [cell, setCell] = useState({ w: 18, h: 16 })
+  const [tip, setTip] = useState(null)  // hover popup: { x, y, head, freq, types }
   const { rows, cols, grid } = useMemo(() => {
     const rowMap = new Map(), colMap = new Map(), grid = new Map()
     for (const p of pairs) {
@@ -50,6 +51,12 @@ export default function ContactMap({ pairs, total, leftLabel, rightLabel, select
 
   if (!pairs.length) return <p className="note">No contacts for this interface group.</p>
   const denom = total || Math.max(1, ...pairs.map((p) => p.freq))
+  const showTip = (e, p, r, c) => setTip({
+    x: e.clientX, y: e.clientY,
+    head: `${leftLabel} ${r.res}${r.pos} contacts ${rightLabel} ${c.res}${c.pos}`,
+    freq: `${p.freq}/${total}`,
+    types: p.bonds.map((b) => BOND_SHORT[b] || b).join(', '),
+  })
   return (
     <>
       {rightLabel && <div className="cm-axis-x">{rightLabel}</div>}
@@ -72,19 +79,16 @@ export default function ContactMap({ pairs, total, leftLabel, rightLabel, select
                   {cols.map((c) => {
                     const key = `${r.pos}|${c.pos}`
                     const p = grid.get(key)
-                    const title = p
-                      ? `${leftLabel} ${r.res}${r.pos} contacts ${rightLabel} ${c.res}${c.pos}`
-                        + `\nFrequency: ${p.freq}/${total}`
-                        + `\nContact type(s): ${p.bonds.map((b) => BOND_SHORT[b] || b).join(', ')}`
-                      : undefined
                     // Absent (no contact ever) reads as a neutral cell, distinct from a purple-tinted
-                    // "observed but rare" cell — so "never" and "seldom" are never confused.
+                    // "observed but rare" cell — so "never" and "seldom" are never confused. Hovering a
+                    // populated cell shows a styled details popup (no selection).
                     return (
-                      <td key={c.pos} className={'cm-cell' + (p ? '' : ' cm-absent') + (selected === key ? ' cm-sel' : '')}
+                      <td key={c.pos} className={'cm-cell' + (p ? '' : ' cm-absent')}
                           style={{ width: cell.w, height: cell.h,
-                                   ...(p ? { background: cellColor(p.freq / denom) } : null),
-                                   cursor: p ? 'pointer' : 'default' }}
-                          title={title} onClick={() => p && onSelect && onSelect(p)} />
+                                   ...(p ? { background: cellColor(p.freq / denom) } : null) }}
+                          onMouseEnter={p ? (e) => showTip(e, p, r, c) : undefined}
+                          onMouseMove={p ? (e) => showTip(e, p, r, c) : undefined}
+                          onMouseLeave={p ? () => setTip(null) : undefined} />
                     )
                   })}
                 </tr>
@@ -101,6 +105,19 @@ export default function ContactMap({ pairs, total, leftLabel, rightLabel, select
           <b>{total ?? denom}</b> instances
         </span>
       </div>
+      {tip && (() => {
+        // Position near the cursor; flip to the left when close to the right edge.
+        const s = { top: tip.y + 14 }
+        if (tip.x > window.innerWidth * 0.72) s.right = window.innerWidth - tip.x + 14
+        else s.left = tip.x + 14
+        return (
+          <div className="cm-tip" style={s}>
+            <div className="cm-tip-head">{tip.head}</div>
+            <div><span className="cm-tip-sub">Frequency:</span> {tip.freq}</div>
+            <div><span className="cm-tip-sub">Contact type(s):</span> {tip.types}</div>
+          </div>
+        )
+      })()}
     </>
   )
 }

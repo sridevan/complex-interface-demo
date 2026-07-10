@@ -131,7 +131,6 @@ export default function ComplexInterfaceApp({ config = {} }) {
   const [selAgg, setSelAgg] = useState(null)
   const [selInst, setSelInst] = useState(null)
   const [highlight, setHighlight] = useState(null)  // residue clicked in the Sankey -> highlight in 3D
-  const [selPair, setSelPair] = useState(null)      // contact pair selected in the table / map
   const [filter, setFilter] = useState('')
   const [instSort, setInstSort] = useState({ key: 'interface_area', dir: 'desc' })
   const toggleInst = (key) => setInstSort((prev) =>
@@ -253,15 +252,8 @@ export default function ComplexInterfaceApp({ config = {} }) {
     )
   }
 
-  const pickAgg = (id) => { setSelAgg(id); setSelInst(null); setHighlight(null); setSelPair(null) }
+  const pickAgg = (id) => { setSelAgg(id); setSelInst(null); setHighlight(null) }
   const selectInstance = (id) => { setSelInst(id); setHighlight(null) }
-  // Selecting a contact pair (table row or map cell): mark it and highlight its chain-1 residue in 3D.
-  const onSelectPair = (p) => {
-    setSelPair(`${p.pos1}|${p.pos2}`)
-    const m = instContacts.find((c) => c.unp_num_1 === p.pos1 && c.unp_num_2 === p.pos2)
-      || instContacts.find((c) => c.unp_num_1 === p.pos1)
-    if (m) setHighlight({ chain: m.asym_id_1, resi: m.auth_residue_number_1 })
-  }
 
   return (
     <div className="wrap">
@@ -421,10 +413,9 @@ export default function ComplexInterfaceApp({ config = {} }) {
           <h2>Contact frequency map <span className="h2-sub">· {lab(current?.component_label_1)} × {lab(current?.component_label_2)}</span></h2>
           <p className="note">Each cell represents a residue–residue contact between the selected component copies.
             Colour intensity indicates how often the contact is observed across deposited instances. Hover for
-            contact details; select a cell to highlight the contact.</p>
+            contact details.</p>
           <ContactMap pairs={pairAgg} total={current?.instance_count}
-            leftLabel={lab(current?.component_label_1)} rightLabel={lab(current?.component_label_2)}
-            selected={selPair} onSelect={onSelectPair} />
+            leftLabel={lab(current?.component_label_1)} rightLabel={lab(current?.component_label_2)} />
         </div>
       </div>
 

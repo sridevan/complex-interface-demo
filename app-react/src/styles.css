@@ -170,7 +170,12 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   font-size: 9px; font-weight: 400; color: #1a1a1a; line-height: 1; padding: 0 6px 0 4px;
   white-space: nowrap; text-align: right; overflow: hidden; }
 .cm-cell { padding: 0; border: 1px solid #eef0f3; box-sizing: border-box; }
-.cm-cell.cm-sel { outline: 2px solid #12c9a6; outline-offset: -1px; z-index: 1; position: relative; }
+/* Contact-map hover popup — same dark styling as the Sankey tip / hint popups (black bg, white text). */
+.cm-tip { position: fixed; z-index: 1000; pointer-events: none; background: #1c2430; color: #fff;
+  font-size: 12px; line-height: 1.45; padding: 8px 10px; border-radius: 6px; max-width: 280px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.28); }
+.cm-tip .cm-tip-head { font-weight: 600; margin-bottom: 4px; }
+.cm-tip .cm-tip-sub { color: #aab2bd; }
 .cm-foot { display: flex; align-items: center; gap: 8px; margin-top: 8px; font-size: 12px; flex-wrap: wrap; }
 .cm-legend-ramp { display: inline-block; width: 90px; height: 10px; border-radius: 3px;
   border: 1px solid var(--border); background: linear-gradient(90deg, #f4f0fa, #3f007d); }
