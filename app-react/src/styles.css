@@ -55,7 +55,8 @@ th { position: sticky; top: 0; z-index: 2; background: #fbfcfd; user-select: non
 /* Only click-sortable headers get the pointer + a persistent sort cue. */
 th.sortable { cursor: pointer; }
 th.sortable:hover { background: #eef2f7; }
-.sort-ind { margin-left: 5px; font-size: 10px; color: #c2c8d0; }   /* faint chevron = sortable */
+.sort-ind { display: inline-block; vertical-align: middle; margin-left: 5px; font-size: 12px;
+  color: #1a1a1a; font-weight: 700; line-height: 1; -webkit-text-stroke: 0.4px currentColor; }  /* crisp triangle = sortable */
 th.sortable:hover .sort-ind { color: var(--muted); }
 .sort-ind.active { color: var(--accent); }                          /* solid arrow = active sort */
 tbody tr:hover { background: #f4f7fb; }
@@ -140,7 +141,8 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 /* Sortable table-header cues */
 .th-sort { cursor: pointer; user-select: none; white-space: nowrap; }
 .th-sort:hover { color: var(--accent); }
-.th-sort .sort-ind { font-size: 9px; margin-left: 5px; color: #c2c8d0; }
+.th-sort .sort-ind { display: inline-block; vertical-align: middle; font-size: 12px; margin-left: 5px;
+  color: #1a1a1a; font-weight: 700; line-height: 1; -webkit-text-stroke: 0.4px currentColor; }
 .th-sort.sorted { color: var(--text); }
 .th-sort.sorted .sort-ind { color: var(--accent); }
 

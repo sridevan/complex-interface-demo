@@ -4,6 +4,7 @@ import SankeyContacts from '../components/SankeyContacts.jsx'
 import InterfacePropertyDistributions from '../components/InterfacePropertyDistributions.jsx'
 import ContactPairTable from './ContactPairTable.jsx'
 import ContactMap from './ContactMap.jsx'
+import Hint from '../components/Hint.jsx'
 import '../styles.css'
 
 // PISA per-interface properties to profile (generic wording — both partners are protein chains).
@@ -74,6 +75,14 @@ function UniFunction({ text, limit = 70 }) {
   )
 }
 
+// Sortable columns of the instances table. Nulls sort last under the column's default direction.
+const INST_CMP = {
+  experimental_method: (a, b) => (a.experimental_method || '').localeCompare(b.experimental_method || ''),
+  resolution: (a, b) => (a.resolution ?? Infinity) - (b.resolution ?? Infinity),
+  interface_area: (a, b) => (a.interface_area ?? -Infinity) - (b.interface_area ?? -Infinity),
+}
+const INST_DEFAULT_DIR = { experimental_method: 'asc', resolution: 'asc', interface_area: 'desc' }
+
 export default function HemoglobinApp() {
   const [data, setData] = useState(null)
   const [selAgg, setSelAgg] = useState(null)
@@ -81,6 +90,9 @@ export default function HemoglobinApp() {
   const [highlight, setHighlight] = useState(null)  // residue clicked in the Sankey -> highlight in 3D
   const [selPair, setSelPair] = useState(null)      // contact pair selected in the table / map
   const [filter, setFilter] = useState('')
+  const [instSort, setInstSort] = useState({ key: 'interface_area', dir: 'desc' })
+  const toggleInst = (key) => setInstSort((prev) =>
+    prev.key === key ? { key, dir: prev.dir === 'asc' ? 'desc' : 'asc' } : { key, dir: INST_DEFAULT_DIR[key] })
 
   useEffect(() => {
     Promise.all([load('aggregated_interface'), load('interface'), load('interface_contacts'),
@@ -95,6 +107,12 @@ export default function HemoglobinApp() {
   const instances = useMemo(() => !data ? [] : data.iface.filter((i) => i.agg_interface_id === selAgg)
     .sort((a, b) => (b.interface_area || 0) - (a.interface_area || 0)), [data, selAgg])
   const instance = instances.find((i) => i.interface_instance_id === selInst) || instances[0]
+
+  // Table display order (default = BSA desc, matching `instances`); does not affect default selection.
+  const shownInstances = useMemo(() => {
+    const s = instSort.dir === 'asc' ? 1 : -1
+    return [...instances].sort((a, b) => s * INST_CMP[instSort.key](a, b))
+  }, [instances, instSort])
 
   const instContacts = useMemo(() => (data && instance)
     ? data.contacts.filter((c) => c.interface_instance_id === instance.interface_instance_id) : [], [data, instance])
@@ -156,6 +174,17 @@ export default function HemoglobinApp() {
       a.component_label_1.toLowerCase().includes(q) || a.component_label_2.toLowerCase().includes(q)
   })
   const current = agg.find((a) => a.agg_interface_id === selAgg)
+
+  // Click-to-sort header for the instances table.
+  const SortTh = ({ label, k, className }) => {
+    const active = instSort.key === k
+    return (
+      <th className={(className ? className + ' ' : '') + 'th-sort' + (active ? ' sorted' : '')}
+          onClick={() => toggleInst(k)} title={`Sort by ${label}`}>
+        {label}<span className="sort-ind">{active ? (instSort.dir === 'asc' ? '▲' : '▼') : '↕'}</span>
+      </th>
+    )
+  }
 
   const compColors = buildCompColors([...new Set(agg.flatMap((a) => [a.component_label_1, a.component_label_2]))])
   const Chip = (label) => {
@@ -255,23 +284,27 @@ export default function HemoglobinApp() {
         <div className="card ex-cell">
           <h2>Interface instances <span className="h2-sub">· {current?.component_label_1} ↔ {current?.component_label_2}</span></h2>
           <p className="note">This table lists the deposited structure instances of the selected equivalent
-            interface. The instance ID follows the format <code>entry_assembly_interface</code>. Resolution
-            refers to the deposited structure resolution. Rows are sorted by buried surface area (BSA), largest
-            first. Click a row to update the 3D view and plots.</p>
+            interface. Resolution refers to the deposited structure resolution. Rows are sorted by buried
+            surface area (BSA), largest first; click the Method, Resolution or BSA header to re-sort. Click a
+            row to update the 3D view and plots.</p>
           <div className="table-scroll ex-scroll">
             <table>
               <thead>
-                <tr><th>Instance</th><th>Entry</th><th className="num">Assembly</th><th>Method</th>
-                  <th className="num">Resolution (Å)</th><th>Chain 1</th><th>Chain 2</th><th className="num">BSA (Å²)</th></tr>
+                <tr><th>Instance <Hint text="Instance ID format: <entry_id>_<assembly_id>_<interface_id> (e.g. 6r2o_1_1)." /></th><th>Entry</th><th className="num">Assembly</th>
+                  <SortTh label="Method" k="experimental_method" />
+                  <SortTh label="Resolution (Å)" k="resolution" className="num" />
+                  <th>Chain 1</th><th>Chain 2</th>
+                  <SortTh label="BSA (Å²)" k="interface_area" className="num" /></tr>
               </thead>
               <tbody>
-                {instances.map((i) => (
+                {shownInstances.map((i) => (
                   <tr key={i.interface_instance_id}
                       className={'selrow' + (instance && i.interface_instance_id === instance.interface_instance_id ? ' sel' : '')}
                       onClick={() => selectInstance(i.interface_instance_id)}>
+                    <td><code>{i.interface_instance_id}</code></td>
                     <td><a href={`https://www.ebi.ac.uk/pdbe/entry/pdb/${i.entry_id}`} target="_blank" rel="noreferrer"
-                           onClick={(e) => e.stopPropagation()}><code>{i.interface_instance_id}</code></a></td>
-                    <td>{i.entry_id}</td><td className="num">{i.assembly_id}</td>
+                           onClick={(e) => e.stopPropagation()}>{i.entry_id}</a></td>
+                    <td className="num">{i.assembly_id}</td>
                     <td><span title={i.experimental_method || ''}>{(i.experimental_method || '').replace('X-ray diffraction', 'X-ray')}</span></td>
                     <td className="num">{i.resolution ?? '—'}</td>
                     <td>{i.asym_id_1}</td><td>{i.asym_id_2}</td>
@@ -285,7 +318,7 @@ export default function HemoglobinApp() {
 
         {/* Row 2, Col 2 — Sankey for the selected instance */}
         <div className="card ex-cell">
-          <h2>Residue–residue contacts{instance && <span className="h2-sub"> · {instance.entry_id} interface {instance.interface_id}</span>}</h2>
+          <h2>Residue–residue contacts{instance && <span className="h2-sub"> · {instance.entry_id} assembly {instance.assembly_id}, interface {instance.interface_id}</span>}</h2>
           <p className="note">Residues from the first component are shown on the left and residues from the second
             component on the right. Residue labels use UniProt numbering. Click a residue or contact to highlight
             it in the 3D view.</p>
