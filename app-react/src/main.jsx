@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import Landing from './Landing.jsx'
-import HemoglobinApp from './hemoglobin/HemoglobinApp.jsx'
+import ComplexInterfaceApp from './complex/ComplexInterfaceApp.jsx'
 import './styles.css'
 
 function BackLink() {
@@ -17,7 +17,8 @@ function Root() {
     return () => window.removeEventListener('hashchange', h)
   }, [])
   if (route === '#spike') return <><BackLink /><App /></>
-  if (route === '#hemoglobin') return <><BackLink /><HemoglobinApp /></>
+  // Generic interface-conservation view; the horse-hemoglobin dataset is just one basePath.
+  if (route === '#hemoglobin') return <><BackLink /><ComplexInterfaceApp config={{ basePath: 'hemoglobin' }} /></>
   return <Landing />
 }
 

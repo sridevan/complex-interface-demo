@@ -8,7 +8,7 @@ import Hint from '../components/Hint.jsx'
 import '../styles.css'
 
 // PISA per-interface properties to profile (generic wording — both partners are protein chains).
-const HEMO_PROPS = [
+const PISA_PROPS = [
   { key: 'interface_area', label: 'Buried surface area', unit: 'Å²', digits: 0,
     desc: 'Buried surface area of the selected interface — area excluded from solvent on binding (PISA). Larger = bigger interface.' },
   { key: 'solvation_energy', label: 'Solvation energy ΔᵢG', unit: 'kcal/mol', digits: 1,
@@ -32,7 +32,9 @@ const HEMO_PROPS = [
 ]
 
 const BASE = import.meta.env.BASE_URL || '/'
-const load = (n) => fetch(`${BASE}hemoglobin/${n}.json`).then((r) => r.json())
+// Data is loaded from a per-complex folder under the public root (config.basePath), so the same
+// component serves any deposited complex, not just the horse-hemoglobin dataset.
+const load = (base, n) => fetch(`${BASE}${base}/${n}.json`).then((r) => r.json())
 const uniq = (a) => [...new Set(a)]
 
 const AA3TO1 = {
@@ -44,8 +46,8 @@ const one = (resn) => AA3TO1[resn] || 'X'
 // contact records store residue_1/2 as "<resname><num>" (e.g. "ARG32"); recover the bare 3-letter code.
 const bareRes = (s) => String(s || '').replace(/\d+$/, '')
 
-// Component chips are coloured by accession family (each UniProt accession gets a hue family; the
-// copy suffix -1/-2 picks a shade), so α1/α2 read as related blues and β1/β2 as related warms.
+// Component chips are coloured by accession family: each UniProt accession gets a hue family and the
+// copy suffix picks a shade, so copies of one component read as related tints.
 const COMP_FAMILIES = [['#3b6fb0', '#7aa5db'], ['#d1782e', '#eab07a'], ['#3f8f5a', '#84c397'], ['#8a5cb0', '#b79ad6']]
 function buildCompColors(labels) {
   const accs = [...new Set(labels.map((l) => l.split('-')[0]))].sort()
@@ -56,6 +58,44 @@ function buildCompColors(labels) {
     map[l] = fam[(parseInt(suf, 10) - 1 + fam.length) % fam.length]
   }
   return map
+}
+
+// ── Generic component nomenclature (no domain-specific labels) ─────────────────────────────
+// Subscript digits for the stoichiometry string (e.g. 2 -> ₂).
+const SUBSCRIPTS = '₀₁₂₃₄₅₆₇₈₉'
+const toSub = (n) => String(n).split('').map((d) => SUBSCRIPTS[+d] ?? d).join('')
+
+// Catalogue the component copies referenced by the aggregated interfaces: accession -> set of copy
+// suffixes (e.g. P01958 -> {"1","2"}). Drives copy-index labels and the complex stoichiometry.
+function componentCopies(agg) {
+  const copies = new Map()
+  for (const a of agg) {
+    for (const l of [a.component_label_1, a.component_label_2]) {
+      const [acc, suf] = String(l).split('-')
+      if (!copies.has(acc)) copies.set(acc, new Set())
+      copies.get(acc).add(suf)
+    }
+  }
+  return copies
+}
+
+// Human label for a component copy: gene (or accession) plus a copy index, but only when the
+// component has more than one copy — so single-copy components stay uncluttered. Generalises the
+// hemoglobin α1/α2 idea without hardcoding: "P01958-1" -> "HBA·1" (2 copies), lone chain -> "HBA".
+function compLabel(label, copies, uni) {
+  if (!label) return ''
+  const [acc, suf] = String(label).split('-')
+  const gene = (uni && uni[acc] && uni[acc].gene) || acc
+  return (copies.get(acc)?.size || 1) > 1 ? `${gene}·${suf}` : gene
+}
+
+// Complex composition string from the copy catalogue, e.g. "HBA₂HBB₂" (generic, no domain lookup).
+function stoichiometry(copies, uni) {
+  const gene = (acc) => (uni && uni[acc] && uni[acc].gene) || acc
+  return [...copies.entries()]
+    .sort((a, b) => gene(a[0]).localeCompare(gene(b[0])))
+    .map(([acc, set]) => `${gene(acc)}${set.size > 1 ? toSub(set.size) : ''}`)
+    .join('')
 }
 
 // Function blurb: show a preview up to `limit` chars (cut on a word boundary) with an inline
@@ -83,7 +123,10 @@ const INST_CMP = {
 }
 const INST_DEFAULT_DIR = { experimental_method: 'asc', resolution: 'asc', interface_area: 'desc' }
 
-export default function HemoglobinApp() {
+export default function ComplexInterfaceApp({ config = {} }) {
+  // Everything else (complex id, organism, stoichiometry, component labels) is derived from the data,
+  // so pointing this at another complex only needs a different basePath.
+  const { basePath = 'hemoglobin', title = 'Interface conservation across assemblies' } = config
   const [data, setData] = useState(null)
   const [selAgg, setSelAgg] = useState(null)
   const [selInst, setSelInst] = useState(null)
@@ -95,13 +138,14 @@ export default function HemoglobinApp() {
     prev.key === key ? { key, dir: prev.dir === 'asc' ? 'desc' : 'asc' } : { key, dir: INST_DEFAULT_DIR[key] })
 
   useEffect(() => {
-    Promise.all([load('aggregated_interface'), load('interface'), load('interface_contacts'),
-      load('complex_chain_class'), load('uniprot_summary')])
+    Promise.all([load(basePath, 'aggregated_interface'), load(basePath, 'interface'),
+      load(basePath, 'interface_contacts'), load(basePath, 'complex_chain_class'),
+      load(basePath, 'uniprot_summary')])
       .then(([agg, iface, contacts, classes, uni]) => {
         setData({ agg, iface, contacts, classes, uni })
         setSelAgg(agg[0]?.agg_interface_id)
       })
-  }, [])
+  }, [basePath])
 
   // all hooks must run unconditionally (data may be null on first render)
   const instances = useMemo(() => !data ? [] : data.iface.filter((i) => i.agg_interface_id === selAgg)
@@ -168,10 +212,20 @@ export default function HemoglobinApp() {
   if (!data) return <div className="wrap">Loading…</div>
 
   const agg = data.agg
+  // Derived, data-driven complex identity + generic component labeller.
+  const copies = componentCopies(agg)
+  const lab = (l) => compLabel(l, copies, data.uni)
+  const complexId = agg[0]?.pdb_complex_id
+  const organisms = [...new Set([...copies.keys()].map((acc) => data.uni?.[acc]?.organism).filter(Boolean))]
+  const stoich = stoichiometry(copies, data.uni)
   const aggShown = agg.filter((a) => {
     const q = filter.toLowerCase()
-    return !q || a.agg_interface_id.toLowerCase().includes(q) ||
-      a.component_label_1.toLowerCase().includes(q) || a.component_label_2.toLowerCase().includes(q)
+    if (!q) return true
+    // Match on raw label (accession + copy id), gene, and the display label, so the query works
+    // whether the user types "P01958", "HBA", or "HBA·1".
+    const hay = [a.agg_interface_id, a.component_label_1, a.component_label_2,
+      lab(a.component_label_1), lab(a.component_label_2)].join(' ').toLowerCase()
+    return hay.includes(q)
   })
   const current = agg.find((a) => a.agg_interface_id === selAgg)
 
@@ -189,12 +243,12 @@ export default function HemoglobinApp() {
   const compColors = buildCompColors([...new Set(agg.flatMap((a) => [a.component_label_1, a.component_label_2]))])
   const Chip = (label) => {
     const c = compColors[label] || '#888'
-    const gene = data.uni && data.uni[label.split('-')[0]] && data.uni[label.split('-')[0]].gene
+    const acc = label.split('-')[0]
     return (
       <span className="comp-chip" style={{ '--cc': c, '--chip-bg': c + '22', '--chip-bd': c + '66' }}>
         <span className="comp-dot" />
-        <span className="comp-gene">{gene || label}</span>
-        {gene && <span className="comp-acc">{label}</span>}
+        <span className="comp-gene">{lab(label)}</span>
+        <span className="comp-acc">{acc}</span>
       </span>
     )
   }
@@ -211,9 +265,12 @@ export default function HemoglobinApp() {
 
   return (
     <div className="wrap">
-      <h1>Interface conservation across assemblies</h1>
-      <p className="subtitle">PDB-CPX-131443 · <i>Equus caballus</i> · α₂β₂ · equivalent interfaces grouped
-        across deposited assemblies</p>
+      <h1>{title}</h1>
+      <p className="subtitle">
+        {complexId && <>{complexId} · </>}
+        {organisms.length > 0 && <><i>{organisms.join(', ')}</i> · </>}
+        {stoich && <>{stoich} · </>}
+        equivalent interfaces grouped across deposited assemblies</p>
 
       {/* UniProt summary for the two components of the currently selected interface pair. */}
       {current && (
@@ -243,7 +300,7 @@ export default function HemoglobinApp() {
           <p className="note">Each card represents an equivalent interface between two component copies. Select a
             card to explore the deposited instances of that interface. Cards are ranked by median buried surface
             area (BSA).</p>
-          <input className="filter-input" placeholder="Filter by component, accession, or copy ID…"
+          <input className="filter-input" placeholder="Filter by gene, accession, or copy…"
             value={filter} onChange={(e) => setFilter(e.target.value)}
             style={{ width: '100%', padding: '6px 8px', marginBottom: 8, boxSizing: 'border-box' }} />
           <div className="selcards" style={{ maxHeight: 440, overflow: 'auto' }}>
@@ -266,10 +323,10 @@ export default function HemoglobinApp() {
         <div className="card ex-cell">
           <h2>3D view of selected interface</h2>
           {instance && <p className="note" style={{ marginTop: 0 }}>{instance.entry_id} assembly {instance.assembly_id},
-            interface {instance.interface_id} · {current?.component_label_1} ↔ {current?.component_label_2}</p>}
+            interface {instance.interface_id} · {lab(current?.component_label_1)} ↔ {lab(current?.component_label_2)}</p>}
           <div className="legend" style={{ marginTop: 0 }}>
-            <span className="dot" style={{ background: '#4b7fcc' }} /> {current?.component_label_1}
-            <span className="dot" style={{ background: '#e19039' }} /> {current?.component_label_2}
+            <span className="dot" style={{ background: '#4b7fcc' }} /> {lab(current?.component_label_1)}
+            <span className="dot" style={{ background: '#e19039' }} /> {lab(current?.component_label_2)}
           </div>
           {instance
             ? <Viewer3Dmol cifUrl={`${BASE}hemoglobin/cif/${instance.entry_id}_${instance.assembly_id}.cif`}
@@ -282,7 +339,7 @@ export default function HemoglobinApp() {
       <div className="ex-row ex-row2">
         {/* Row 2, Col 1 — instances table */}
         <div className="card ex-cell">
-          <h2>Interface instances <span className="h2-sub">· {current?.component_label_1} ↔ {current?.component_label_2}</span></h2>
+          <h2>Interface instances <span className="h2-sub">· {lab(current?.component_label_1)} ↔ {lab(current?.component_label_2)}</span></h2>
           <p className="note">This table lists the deposited structure instances of the selected equivalent
             interface. Resolution refers to the deposited structure resolution. Rows are sorted by buried
             surface area (BSA), largest first; click the Method, Resolution or BSA header to re-sort. Click a
@@ -324,7 +381,7 @@ export default function HemoglobinApp() {
             it in the 3D view.</p>
           <div className="sankey-scroll">
             <SankeyContacts rows={sankeyRows} onNodeClick={setHighlight} rightColorBy="aaclass"
-              leftLabel={current?.component_label_1} rightLabel={current?.component_label_2} />
+              leftLabel={lab(current?.component_label_1)} rightLabel={lab(current?.component_label_2)} />
           </div>
         </div>
       </div>
@@ -332,29 +389,29 @@ export default function HemoglobinApp() {
       {/* Row 3 — aggregated residue–residue contacts: frequency table + residue×residue contact map. */}
       <div className="ex-row cm-row" style={{ gridTemplateColumns: '1fr 1fr' }}>
         <div className="card ex-cell">
-          <h2>Contact pair frequency <span className="h2-sub">· {current?.component_label_1} ↔ {current?.component_label_2}</span></h2>
+          <h2>Contact pair frequency <span className="h2-sub">· {lab(current?.component_label_1)} ↔ {lab(current?.component_label_2)}</span></h2>
           <p className="note">Residue–residue contacts are aggregated across deposited instances of the selected
             equivalent interface. Frequency indicates how often each residue pair is observed in contact. Select
             a row to highlight the contact in the 3D view and contact frequency map.</p>
           <ContactPairTable pairs={pairAgg} total={current?.instance_count}
-            leftLabel={current?.component_label_1} rightLabel={current?.component_label_2}
+            leftLabel={lab(current?.component_label_1)} rightLabel={lab(current?.component_label_2)}
             selected={selPair} onSelect={onSelectPair} />
         </div>
         <div className="card ex-cell">
-          <h2>Contact frequency map <span className="h2-sub">· {current?.component_label_1} × {current?.component_label_2}</span></h2>
+          <h2>Contact frequency map <span className="h2-sub">· {lab(current?.component_label_1)} × {lab(current?.component_label_2)}</span></h2>
           <p className="note">Each cell represents a residue–residue contact between the selected component copies.
             Colour intensity indicates how often the contact is observed across deposited instances. Hover for
             contact details; select a cell to highlight the contact.</p>
           <ContactMap pairs={pairAgg} total={current?.instance_count}
-            leftLabel={current?.component_label_1} rightLabel={current?.component_label_2}
+            leftLabel={lab(current?.component_label_1)} rightLabel={lab(current?.component_label_2)}
             selected={selPair} onSelect={onSelectPair} />
         </div>
       </div>
 
       {/* Row 4 — where the selected instance sits among its peers on each PISA property. */}
       <div className="ex-row">
-        <InterfacePropertyDistributions instances={instances} selected={instance} props={HEMO_PROPS}
-          populationLabel={`deposited instances of the ${current?.component_label_1} ↔ ${current?.component_label_2} equivalent interface`}
+        <InterfacePropertyDistributions instances={instances} selected={instance} props={PISA_PROPS}
+          populationLabel={`deposited instances of the ${lab(current?.component_label_1)} ↔ ${lab(current?.component_label_2)} equivalent interface`}
           note={(
             <p className="note">PISA-derived properties are shown for the selected interface instance relative to
               other deposited instances of the same equivalent interface. The selected instance is highlighted.
