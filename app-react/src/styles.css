@@ -147,10 +147,15 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 /* Sortable table-header cues */
 .th-sort { cursor: pointer; user-select: none; white-space: nowrap; }
 .th-sort:hover { color: var(--accent); }
-.th-sort .sort-ind { display: inline-block; vertical-align: middle; font-size: 12px; margin-left: 5px;
-  color: #1a1a1a; font-weight: 700; line-height: 1; -webkit-text-stroke: 0.4px currentColor; }
 .th-sort.sorted { color: var(--text); }
-.th-sort.sorted .sort-ind { color: var(--accent); }
+/* SVG sort indicator: label + arrows share a flex row, so the icon is pixel-centred with the text
+   (unlike a Unicode glyph, whose vertical metrics vary by font). Active direction = accent. */
+.th-inner { display: inline-flex; align-items: center; gap: 5px; }
+.sort-ic { flex: 0 0 auto; }
+.sort-ic path { fill: #c2c8d0; }
+.sort-ic path.on { fill: var(--accent); }
+.th-sort:hover .sort-ic path { fill: var(--muted); }
+.th-sort:hover .sort-ic path.on { fill: var(--accent); }
 
 /* Contact-pair frequency bar (in the frequency table) */
 .freqbar { display: inline-block; width: 56px; height: 8px; background: #eef0f3; border-radius: 4px;

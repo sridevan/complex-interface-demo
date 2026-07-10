@@ -4,6 +4,7 @@ import SankeyContacts from '../components/SankeyContacts.jsx'
 import InterfacePropertyDistributions from '../components/InterfacePropertyDistributions.jsx'
 import ContactPairTable from './ContactPairTable.jsx'
 import ContactMap from './ContactMap.jsx'
+import SortIcon from './SortIcon.jsx'
 import Hint from '../components/Hint.jsx'
 import '../styles.css'
 
@@ -234,7 +235,7 @@ export default function ComplexInterfaceApp({ config = {} }) {
     return (
       <th className={(className ? className + ' ' : '') + 'th-sort' + (active ? ' sorted' : '')}
           onClick={() => toggleInst(k)} title={`Sort by ${label}`}>
-        {label}<span className="sort-ind">{active ? (instSort.dir === 'asc' ? '▲' : '▼') : '↕'}</span>
+        <span className="th-inner">{label}<SortIcon dir={active ? instSort.dir : null} /></span>
       </th>
     )
   }

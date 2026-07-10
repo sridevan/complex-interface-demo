@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react'
+import SortIcon from './SortIcon.jsx'
 
 const BOND_SHORT = {
   hydrogen_bond: 'H-bond', salt_bridge: 'salt bridge', disulfide_bond: 'disulfide',
@@ -30,7 +31,7 @@ export default function ContactPairTable({ pairs, total, leftLabel, rightLabel }
     return (
       <th className={(className ? className + ' ' : '') + 'th-sort' + (active ? ' sorted' : '')}
           onClick={() => toggle(k)} title={`Sort by ${typeof label === 'string' ? label : 'this column'}`}>
-        {label}<span className="sort-ind">{active ? (sort.dir === 'asc' ? '▲' : '▼') : '↕'}</span>
+        <span className="th-inner">{label}<SortIcon dir={active ? sort.dir : null} /></span>
       </th>
     )
   }
