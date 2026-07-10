@@ -77,10 +77,13 @@ export default function ContactMap({ pairs, total, leftLabel, rightLabel, select
                         + `\nFrequency: ${p.freq}/${total}`
                         + `\nContact type(s): ${p.bonds.map((b) => BOND_SHORT[b] || b).join(', ')}`
                       : undefined
+                    // Absent (no contact ever) reads as a neutral cell, distinct from a purple-tinted
+                    // "observed but rare" cell — so "never" and "seldom" are never confused.
                     return (
-                      <td key={c.pos} className={'cm-cell' + (selected === key ? ' cm-sel' : '')}
+                      <td key={c.pos} className={'cm-cell' + (p ? '' : ' cm-absent') + (selected === key ? ' cm-sel' : '')}
                           style={{ width: cell.w, height: cell.h,
-                                   background: cellColor((p ? p.freq : 0) / denom), cursor: p ? 'pointer' : 'default' }}
+                                   ...(p ? { background: cellColor(p.freq / denom) } : null),
+                                   cursor: p ? 'pointer' : 'default' }}
                           title={title} onClick={() => p && onSelect && onSelect(p)} />
                     )
                   })}
@@ -91,9 +94,12 @@ export default function ContactMap({ pairs, total, leftLabel, rightLabel, select
         </div>
       </div>
       <div className="cm-foot">
-        <span className="note" style={{ margin: 0 }}>low</span>
-        <span className="cm-legend-ramp" />
-        <span className="note" style={{ margin: 0 }}>high</span>
+        <span className="cm-legend-item"><span className="cm-sw cm-sw-absent" /> not observed</span>
+        <span className="cm-legend-item cm-legend-scale">
+          observed in <b>1</b>
+          <span className="cm-legend-ramp" />
+          <b>{total ?? denom}</b> instances
+        </span>
       </div>
     </>
   )

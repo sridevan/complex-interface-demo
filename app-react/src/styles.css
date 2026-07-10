@@ -106,7 +106,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .ex-row3 .ex-scroll, .ex-row3 .hm-wrap { flex: 1 1 auto; min-height: 0; height: auto; max-height: none; }
 .ex-cell { margin-bottom: 0; display: flex; flex-direction: column; }
 .ex-scroll { max-height: 380px; overflow: auto; }
-@media (max-width: 900px) { .ex-row1, .ex-row2 { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .ex-row1, .ex-row2, .cm-row { grid-template-columns: 1fr; } }
 .selcards { display: grid; grid-template-columns: 1fr; gap: 12px; }  /* stacked vertically */
 .selcard { border: 1px solid var(--border); border-left: 4px solid var(--acc); border-radius: 8px;
   padding: 12px 14px; cursor: pointer; background: #fff; transition: background .12s, box-shadow .12s; }
@@ -170,6 +170,31 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   border: 1px solid var(--border); background: linear-gradient(90deg, #f4f0fa, #3f007d); }
 .cm-hover { margin-left: auto; color: var(--text); font-weight: 500; }
 
+/* Contact map: "not observed" cell (no contact ever) reads neutral, distinct from a purple "rare" cell. */
+.cm-cell.cm-absent { background: #f0f1f3; }
+/* Numeric legend below the map. */
+.cm-foot .cm-legend-item { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); }
+.cm-foot .cm-legend-scale b { color: var(--text); font-variant-numeric: tabular-nums; }
+.cm-sw { display: inline-block; width: 12px; height: 12px; border-radius: 2px; border: 1px solid var(--border); }
+.cm-sw-absent { background: #f0f1f3; }
+
+/* Contact-pair selection = teal across the pair table row, the map cell, and the 3D highlight, so one
+   colour tracks the same residue–residue contact everywhere (instance-row selection stays blue). */
+.cm-scroll .selrow.sel { background: #dff6f0; box-shadow: inset 3px 0 0 #12c9a6; }
+
+/* Section bands: give the page a spine — ① one deposited instance → ② aggregate across all instances. */
+.section-band { display: flex; align-items: flex-start; gap: 12px; margin: 28px 0 12px; }
+.section-num { flex: 0 0 auto; width: 26px; height: 26px; border-radius: 50%; background: var(--accent);
+  color: #fff; font-size: 14px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.section-title { font-size: 18px; margin: 2px 0 3px; font-weight: 600; }
+.section-sub { color: var(--muted); font-size: 13px; margin: 0; max-width: 78ch; line-height: 1.4; }
+
+/* Context bar: what the whole page is currently showing (interface + instance + count). */
+.context-bar { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0 0 18px; padding: 8px 12px;
+  background: #eef3fa; border: 1px solid #d6e3f3; border-radius: 8px; font-size: 13px; }
+.ctx-item { display: inline-flex; align-items: center; gap: 6px; }
+.ctx-k { font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); font-weight: 600; }
+
 /* Axis titles (UniProt accession + suffix) around the contact map. */
 .cm-axis-x { text-align: center; font-weight: 800; font-size: 14px; color: #e19039;
   letter-spacing: 0.3px; margin-bottom: 5px; padding-left: 56px; }
@@ -179,6 +204,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   font-size: 14px; color: #4b7fcc; letter-spacing: 0.3px; white-space: nowrap; }
 
 /* Equal-height contact row: both cards fixed height; their scroll areas flex to fill. */
+.cm-row { grid-template-columns: 1fr 1fr; }  /* in CSS (not inline) so the media query can collapse it */
 .cm-row > .card { height: 600px; }
 .cm-row .cm-scroll { flex: 1 1 auto; min-height: 0; max-height: none; overflow-y: auto; }
 .cm-row .cm-mid { flex: 1 1 auto; min-height: 0; }

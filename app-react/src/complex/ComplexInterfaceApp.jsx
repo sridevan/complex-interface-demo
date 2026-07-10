@@ -272,6 +272,15 @@ export default function ComplexInterfaceApp({ config = {} }) {
         {stoich && <>{stoich} · </>}
         equivalent interfaces grouped across deposited assemblies</p>
 
+      {/* Persistent "what am I looking at" bar tying every panel to the current interface + instance. */}
+      {current && (
+        <div className="context-bar">
+          <span className="ctx-item"><span className="ctx-k">Interface</span> {lab(current.component_label_1)} ↔ {lab(current.component_label_2)}</span>
+          {instance && <span className="ctx-item"><span className="ctx-k">Instance</span> {instance.entry_id} · assembly {instance.assembly_id} · interface {instance.interface_id}</span>}
+          <span className="ctx-item"><span className="ctx-k">Deposited instances</span> {current.instance_count}</span>
+        </div>
+      )}
+
       {/* UniProt summary for the two components of the currently selected interface pair. */}
       {current && (
         <div className="uni-summary">
@@ -292,6 +301,16 @@ export default function ComplexInterfaceApp({ config = {} }) {
           })}
         </div>
       )}
+
+      {/* Section 1 — everything here is scoped to ONE deposited instance. */}
+      <div className="section-band">
+        <span className="section-num">1</span>
+        <div>
+          <h2 className="section-title">Explore one deposited structure</h2>
+          <p className="section-sub">Pick an equivalent interface, then a deposited instance, to view its 3D
+            structure and residue-level contacts. Everything in this section reflects the one selected instance.</p>
+        </div>
+      </div>
 
       <div className="ex-row ex-row1">
         {/* Row 1, Col 1 — interface selector */}
@@ -376,9 +395,9 @@ export default function ComplexInterfaceApp({ config = {} }) {
         {/* Row 2, Col 2 — Sankey for the selected instance */}
         <div className="card ex-cell">
           <h2>Residue–residue contacts{instance && <span className="h2-sub"> · {instance.entry_id} assembly {instance.assembly_id}, interface {instance.interface_id}</span>}</h2>
-          <p className="note">Residues from the first component are shown on the left and residues from the second
-            component on the right. Residue labels use UniProt numbering. Click a residue or contact to highlight
-            it in the 3D view.</p>
+          <p className="note">For the selected instance: residues from the first component are shown on the left
+            and residues from the second component on the right. Residue labels use UniProt numbering. Click a
+            residue or contact to highlight it in the 3D view.</p>
           <div className="sankey-scroll">
             <SankeyContacts rows={sankeyRows} onNodeClick={setHighlight} rightColorBy="aaclass"
               leftLabel={lab(current?.component_label_1)} rightLabel={lab(current?.component_label_2)} />
@@ -386,8 +405,18 @@ export default function ComplexInterfaceApp({ config = {} }) {
         </div>
       </div>
 
+      {/* Section 2 — everything here is aggregated across ALL deposited instances of this interface. */}
+      <div className="section-band">
+        <span className="section-num">2</span>
+        <div>
+          <h2 className="section-title">Conservation across all {current?.instance_count} deposited structures</h2>
+          <p className="section-sub">How consistently each residue–residue contact and interface property recurs
+            across every deposited instance of this interface — independent of the single instance shown above.</p>
+        </div>
+      </div>
+
       {/* Row 3 — aggregated residue–residue contacts: frequency table + residue×residue contact map. */}
-      <div className="ex-row cm-row" style={{ gridTemplateColumns: '1fr 1fr' }}>
+      <div className="ex-row cm-row">
         <div className="card ex-cell">
           <h2>Contact pair frequency <span className="h2-sub">· {lab(current?.component_label_1)} ↔ {lab(current?.component_label_2)}</span></h2>
           <p className="note">Residue–residue contacts are aggregated across deposited instances of the selected
