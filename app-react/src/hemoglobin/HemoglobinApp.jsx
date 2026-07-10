@@ -182,9 +182,12 @@ export default function HemoglobinApp() {
 
   return (
     <div className="wrap">
-      <h1>Aggregated interfaces — Hemoglobin</h1>
-      <p className="subtitle">PDB-CPX-131443 · <i>Equus caballus</i> · α₂β₂ · interfaces grouped by equivalent
-        chain-class pairs across {uniq(data.iface.map((i) => `${i.entry_id}_${i.assembly_id}`)).length} assemblies</p>
+      <h1>Interface conservation across assemblies</h1>
+      <p className="subtitle">PDB-CPX-131443 · <i>Equus caballus</i> · α₂β₂ · equivalent interfaces grouped
+        across deposited assemblies</p>
+      <p className="note" style={{ maxWidth: 900 }}>This view compares equivalent interfaces across deposited
+        assemblies of the same complex. It summarises interface size, residue-level contacts, contact
+        conservation, and PISA-derived properties for each selected interface.</p>
 
       {/* UniProt summary for the two components of the currently selected interface pair. */}
       {current && (
@@ -199,7 +202,7 @@ export default function HemoglobinApp() {
                   <a className="uni-acc" href={`https://www.uniprot.org/uniprotkb/${acc}`} target="_blank" rel="noreferrer">{acc}</a>
                 </div>
                 <div className="uni-name">{u.name || acc}{u.gene ? ` · ${u.gene}` : ''}</div>
-                <div className="uni-meta"><i>{u.organism}</i>{u.length ? ` · ${u.length} aa` : ''}</div>
+                <div className="uni-meta"><i>{u.organism}</i>{u.length ? ` · ${u.length} amino acids` : ''}</div>
                 <UniFunction text={u.function} />
               </div>
             )
@@ -211,9 +214,10 @@ export default function HemoglobinApp() {
         {/* Row 1, Col 1 — interface selector */}
         <div className="card ex-cell">
           <h2>Interface selection</h2>
-          <p className="note">Each card is a chain-class pair (UniProt accession + copy suffix). Select one to
-            explore its instances. Cards are sorted by median buried surface area (BSA).</p>
-          <input className="filter-input" placeholder="Filter by component / ID…"
+          <p className="note">Each card represents an equivalent interface between two component copies. Select a
+            card to explore the deposited instances of that interface. Cards are ranked by median buried surface
+            area (BSA).</p>
+          <input className="filter-input" placeholder="Filter by component, accession, or copy ID…"
             value={filter} onChange={(e) => setFilter(e.target.value)}
             style={{ width: '100%', padding: '6px 8px', marginBottom: 8, boxSizing: 'border-box' }} />
           <div className="selcards" style={{ maxHeight: 440, overflow: 'auto' }}>
@@ -224,7 +228,7 @@ export default function HemoglobinApp() {
                   {Chip(a.component_label_1)}<span className="chip-x">↔</span>{Chip(a.component_label_2)}
                 </div>
                 <div className="selcard-stats">
-                  <div><div className="v">{a.instance_count}</div><div className="k">instances</div></div>
+                  <div><div className="v">{a.instance_count}</div><div className="k">deposited instances</div></div>
                   <div><div className="v">{a.median_bsa != null ? Math.round(a.median_bsa) : '—'}</div><div className="k">median BSA (Å²)</div></div>
                 </div>
               </div>
@@ -234,10 +238,12 @@ export default function HemoglobinApp() {
 
         {/* Row 1, Col 2 — 3Dmol viewer of the selected instance */}
         <div className="card ex-cell">
-          <h2>Interface 3D visualisation{instance ? ` (${instance.entry_id} interface ${instance.interface_id})` : ''}</h2>
+          <h2>3D view of selected interface</h2>
+          {instance && <p className="note" style={{ marginTop: 0 }}>{instance.entry_id} assembly {instance.assembly_id},
+            interface {instance.interface_id} · {current?.component_label_1} ↔ {current?.component_label_2}</p>}
           <div className="legend" style={{ marginTop: 0 }}>
             <span className="dot" style={{ background: '#4b7fcc' }} /> {current?.component_label_1}
-            <span className="dot" style={{ background: '#e19039' }} /> {current?.component_label_2} · assembly served locally
+            <span className="dot" style={{ background: '#e19039' }} /> {current?.component_label_2}
           </div>
           {instance
             ? <Viewer3Dmol cifUrl={`${BASE}hemoglobin/cif/${instance.entry_id}_${instance.assembly_id}.cif`}
@@ -250,15 +256,16 @@ export default function HemoglobinApp() {
       <div className="ex-row ex-row2">
         {/* Row 2, Col 1 — instances table */}
         <div className="card ex-cell">
-          <h2>Interface instances <span className="h2-sub">· {current?.component_label_1} ↔ {current?.component_label_2} ({instances.length})</span></h2>
-          <p className="note">All deposited instances of the selected chain-class pair. Instance ID is
-            <code> entry_assembly_interface</code>. Resolution is the deposited structure resolution (method on
-            hover). Sorted by BSA, largest first; click a row to inspect it above.</p>
+          <h2>Interface instances <span className="h2-sub">· {current?.component_label_1} ↔ {current?.component_label_2}</span></h2>
+          <p className="note">This table lists the deposited structure instances of the selected equivalent
+            interface. The instance ID follows the format <code>entry_assembly_interface</code>. Resolution
+            refers to the deposited structure resolution. Rows are sorted by buried surface area (BSA), largest
+            first. Click a row to update the 3D view and plots.</p>
           <div className="table-scroll ex-scroll">
             <table>
               <thead>
-                <tr><th>Instance</th><th>Entry</th><th className="num">Asm</th><th>Method</th>
-                  <th className="num">Res. (Å)</th><th>Chain 1</th><th>Chain 2</th><th className="num">BSA (Å²)</th></tr>
+                <tr><th>Instance</th><th>Entry</th><th className="num">Assembly</th><th>Method</th>
+                  <th className="num">Resolution (Å)</th><th>Chain 1</th><th>Chain 2</th><th className="num">BSA (Å²)</th></tr>
               </thead>
               <tbody>
                 {instances.map((i) => (
@@ -281,10 +288,10 @@ export default function HemoglobinApp() {
 
         {/* Row 2, Col 2 — Sankey for the selected instance */}
         <div className="card ex-cell">
-          <h2>Residue–residue contacts{instance ? ` (${instance.entry_id} interface ${instance.interface_id})` : ''}
-            {instance && <span className="h2-sub"> · {instContacts.length} contacts</span>}</h2>
-          <p className="note"><b>{current?.component_label_1}</b> on the left, <b>{current?.component_label_2}</b> on
-            the right, for the selected interface (UniProt numbering). <b>Click a node to highlight it in 3D.</b></p>
+          <h2>Residue–residue contacts{instance && <span className="h2-sub"> · {instance.entry_id} interface {instance.interface_id}</span>}</h2>
+          <p className="note">Residues from the first component are shown on the left and residues from the second
+            component on the right. Residue labels use UniProt numbering. Click a residue or contact to highlight
+            it in the 3D view.</p>
           <div className="sankey-scroll">
             <SankeyContacts rows={sankeyRows} onNodeClick={setHighlight} rightColorBy="aaclass"
               leftLabel={current?.component_label_1} rightLabel={current?.component_label_2} />
@@ -296,18 +303,18 @@ export default function HemoglobinApp() {
       <div className="ex-row cm-row" style={{ gridTemplateColumns: '1fr 1fr' }}>
         <div className="card ex-cell">
           <h2>Contact pair frequency <span className="h2-sub">· {current?.component_label_1} ↔ {current?.component_label_2}</span></h2>
-          <p className="note">Residue–residue contacts aggregated across the {current?.instance_count} instances of
-            this interface group; frequency = number of instances in which the pair contacts (UniProt numbering).
-            Click a row to highlight it in 3D and on the map.</p>
+          <p className="note">Residue–residue contacts are aggregated across deposited instances of the selected
+            equivalent interface. Frequency indicates how often each residue pair is observed in contact. Select
+            a row to highlight the contact in the 3D view and contact frequency map.</p>
           <ContactPairTable pairs={pairAgg} total={current?.instance_count}
             leftLabel={current?.component_label_1} rightLabel={current?.component_label_2}
             selected={selPair} onSelect={onSelectPair} />
         </div>
         <div className="card ex-cell">
-          <h2>Contact map <span className="h2-sub">· {current?.component_label_1} (rows) × {current?.component_label_2} (cols)</span></h2>
-          <p className="note">Every contacting residue of <b>{current?.component_label_1}</b> against every contacting
-            residue of <b>{current?.component_label_2}</b>. Cell shade / number = instances (of {current?.instance_count})
-            with that residue–residue contact. Hover for bond types; click to highlight.</p>
+          <h2>Contact frequency map <span className="h2-sub">· {current?.component_label_1} × {current?.component_label_2}</span></h2>
+          <p className="note">Each cell represents a residue–residue contact between the selected component copies.
+            Colour intensity indicates how often the contact is observed across deposited instances. Hover for
+            contact details; select a cell to highlight the contact.</p>
           <ContactMap pairs={pairAgg} total={current?.instance_count}
             leftLabel={current?.component_label_1} rightLabel={current?.component_label_2}
             selected={selPair} onSelect={onSelectPair} />
@@ -317,12 +324,12 @@ export default function HemoglobinApp() {
       {/* Row 4 — where the selected instance sits among its peers on each PISA property. */}
       <div className="ex-row">
         <InterfacePropertyDistributions instances={instances} selected={instance} props={HEMO_PROPS}
-          populationLabel={`instances of the ${current?.component_label_1} ↔ ${current?.component_label_2} interface group`}
+          populationLabel={`deposited instances of the ${current?.component_label_1} ↔ ${current?.component_label_2} equivalent interface`}
           note={(
-            <p className="note">PISA properties of the selected interface instance (highlighted in orange) against
-              all {instances.length} instances of the <b>{current?.component_label_1} ↔ {current?.component_label_2}</b> interface
-              group, with the selected instance highlighted. Small-range bond counts show one bar per value;
-              energies, areas and wide ranges are binned.</p>
+            <p className="note">PISA-derived properties are shown for the selected interface instance relative to
+              other deposited instances of the same equivalent interface. The selected instance is highlighted.
+              Discrete contact counts are shown as individual values; continuous properties such as energies and
+              areas are shown as binned distributions.</p>
           )} />
       </div>
     </div>

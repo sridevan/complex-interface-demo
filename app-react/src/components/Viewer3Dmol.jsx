@@ -187,16 +187,16 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, hig
         <div ref={hostRef} className="viewer" style={{ height }} />
         <div className="viewer-btns">
           <button className="viewer-btn" onClick={recenter}
-                  title="Re-center the view on the interacting residues">
-            Center
+                  title="Re-centre the view on the interacting residues">
+            Centre view
           </button>
           <button className="viewer-btn" onClick={toggleBg}
-                  title="Toggle the surrounding structure (background)">
-            {showBg ? 'Hide background' : 'Show background'}
+                  title="Toggle the surrounding assembly surface">
+            {showBg ? 'Hide assembly surface' : 'Show assembly surface'}
           </button>
           <button className="viewer-btn" onClick={toggleLabels}
                   title="Label the interacting residues (chain:resname+resnum)">
-            {showLabels ? 'Hide labels' : 'Show labels'}
+            {showLabels ? 'Hide residue labels' : 'Show residue labels'}
           </button>
         </div>
       </div>

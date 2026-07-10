@@ -16,7 +16,7 @@ export default function ContactPairTable({ pairs, total, leftLabel, rightLabel, 
     <div className="table-scroll cm-scroll">
       <table>
         <thead>
-          <tr><th>{leftLabel}</th><th>{rightLabel}</th><th>Bond types</th><th className="num">Frequency</th></tr>
+          <tr><th>{leftLabel}</th><th>{rightLabel}</th><th>Contact type(s)</th><th className="num">Frequency</th></tr>
         </thead>
         <tbody>
           {sorted.map((p) => {

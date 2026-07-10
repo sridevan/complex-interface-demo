@@ -10,10 +10,10 @@ const COMPLEXES = [
     accent: '#4b7fcc',
   },
   {
-    hash: '#hemoglobin', title: 'Horse hemoglobin — aggregated interfaces',
+    hash: '#hemoglobin', title: 'Horse hemoglobin — interface conservation',
     sub: 'PDB-CPX-131443 · Equus caballus · α₂β₂ heterotetramer',
-    body: 'Interfaces grouped by equivalent chain-class pairs (α1–β1, α1–β2, α1–α2, β1–β2 …) across all '
-      + 'deposited structures — selector, 3D viewer, instance table, and aggregated contact Sankey.',
+    body: 'Equivalent interfaces grouped across deposited assemblies — selector, 3D viewer, instance table, '
+      + 'residue–residue contacts, contact map, and PISA property distributions.',
     accent: '#c65a5a',
   },
 ]

@@ -187,7 +187,7 @@ export default function SankeyContacts({ rows, onNodeClick, leftLabel = 'antigen
         {rightColorBy === 'aaclass' ? (
           // Both sides share the residue-class palette — a single legend covers them.
           <div>
-            Amino acids are colored by type:
+            Amino acids are coloured by physicochemical class:
             {LEGEND_AA.map(([k, c]) => (
               <span key={k}><span className="dot" style={{ background: c }} />{k}</span>
             ))}
