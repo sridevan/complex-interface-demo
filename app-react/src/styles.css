@@ -189,12 +189,6 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .section-title { font-size: 18px; margin: 2px 0 3px; font-weight: 600; }
 .section-sub { color: var(--muted); font-size: 13px; margin: 0; max-width: 78ch; line-height: 1.4; }
 
-/* Context bar: what the whole page is currently showing (interface + instance + count). */
-.context-bar { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0 0 18px; padding: 8px 12px;
-  background: #eef3fa; border: 1px solid #d6e3f3; border-radius: 8px; font-size: 13px; }
-.ctx-item { display: inline-flex; align-items: center; gap: 6px; }
-.ctx-k { font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); font-weight: 600; }
-
 /* Axis titles (UniProt accession + suffix) around the contact map. */
 .cm-axis-x { text-align: center; font-weight: 800; font-size: 14px; color: #e19039;
   letter-spacing: 0.3px; margin-bottom: 5px; padding-left: 56px; }

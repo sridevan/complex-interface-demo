@@ -272,15 +272,6 @@ export default function ComplexInterfaceApp({ config = {} }) {
         {stoich && <>{stoich} · </>}
         equivalent interfaces grouped across deposited assemblies</p>
 
-      {/* Persistent "what am I looking at" bar tying every panel to the current interface + instance. */}
-      {current && (
-        <div className="context-bar">
-          <span className="ctx-item"><span className="ctx-k">Interface</span> {lab(current.component_label_1)} ↔ {lab(current.component_label_2)}</span>
-          {instance && <span className="ctx-item"><span className="ctx-k">Instance</span> {instance.entry_id} · assembly {instance.assembly_id} · interface {instance.interface_id}</span>}
-          <span className="ctx-item"><span className="ctx-k">Deposited instances</span> {current.instance_count}</span>
-        </div>
-      )}
-
       {/* UniProt summary for the two components of the currently selected interface pair. */}
       {current && (
         <div className="uni-summary">
