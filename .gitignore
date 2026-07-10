@@ -34,3 +34,7 @@ data/processed/processed_antibody_antigen_interfaces.json
 
 # external data (Raybould et al. NAR 2021), re-downloadable
 paper/covabdab.csv
+
+# Internal spec + paper — kept local, not published to the public repo
+spec_revised.md
+paper/

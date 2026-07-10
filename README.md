@@ -64,7 +64,6 @@ data/
   raw/, intermediate/     downloaded / regenerable (gitignored)
 app/                      Streamlit app + public/mvs (pre-built scenes)
 app-react/               Vite + React dashboard
-spec_revised.md          the source-of-truth spec
 ```
 
 ---
@@ -113,8 +112,7 @@ Requires network access to `ftp.ebi.ac.uk` (PISA) and `www.ebi.ac.uk` (PDBe/SIFT
   never derived from author numbers.
 - **VHH / nanobodies** are handled as heavy-only (ANARCII `chain_type` H). 6wps is a Fab.
 
-See `spec_revised.md` for the full specification and `data/samples/NOTES.md` for the verified
-PISA JSON structure.
+See `data/samples/NOTES.md` for the verified PISA JSON structure.
 
 ---
 
