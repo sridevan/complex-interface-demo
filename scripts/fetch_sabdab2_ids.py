@@ -32,7 +32,7 @@ import time
 import requests
 
 API = "https://sabdab.opig.stats.ox.ac.uk/api/download/search-summary"
-UA = "abag-interface-explorer (research; contact asridevan86@gmail.com)"
+UA = "complex-interface-demo (research; contact asridevan86@gmail.com)"
 
 
 def twelve(pdb):
