@@ -4,7 +4,7 @@ import SankeyContacts from '../components/SankeyContacts.jsx'
 import InterfacePropertyDistributions from '../components/InterfacePropertyDistributions.jsx'
 import ContactPairTable from './ContactPairTable.jsx'
 import ContactMap from './ContactMap.jsx'
-import SortIcon from './SortIcon.jsx'
+import SortIcon from '../components/SortIcon.jsx'
 import Hint from '../components/Hint.jsx'
 import '../styles.css'
 

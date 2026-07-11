@@ -58,13 +58,9 @@ th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--bor
 /* z-index keeps the sticky header above position:relative row content (e.g. overview bar cells),
    which would otherwise paint over the header as rows scroll under it. */
 th { position: sticky; top: 0; z-index: 2; background: #fbfcfd; user-select: none; font-weight: 600; }
-/* Only click-sortable headers get the pointer + a persistent sort cue. */
+/* Only click-sortable headers get the pointer + a persistent sort cue (SVG icon; see .sort-ic). */
 th.sortable { cursor: pointer; }
 th.sortable:hover { background: #eef2f7; }
-.sort-ind { display: inline-block; vertical-align: middle; margin-left: 5px; font-size: 12px;
-  color: #1a1a1a; font-weight: 700; line-height: 1; -webkit-text-stroke: 0.4px currentColor; }  /* crisp triangle = sortable */
-th.sortable:hover .sort-ind { color: var(--muted); }
-.sort-ind.active { color: var(--accent); }                          /* solid arrow = active sort */
 tbody tr:hover { background: #f4f7fb; }
 td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .tag { display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: 11px; font-weight: 600; }
@@ -151,11 +147,12 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 /* SVG sort indicator: label + arrows share a flex row, so the icon is pixel-centred with the text
    (unlike a Unicode glyph, whose vertical metrics vary by font). Active direction = accent. */
 .th-inner { display: inline-flex; align-items: center; gap: 5px; }
+.th-inner .hint { margin-left: 0; }       /* flex gap handles spacing; avoid the glyph-era margin */
 .sort-ic { flex: 0 0 auto; }
-.sort-ic path { fill: #c2c8d0; }
-.sort-ic path.on { fill: var(--accent); }
-.th-sort:hover .sort-ic path { fill: var(--muted); }
-.th-sort:hover .sort-ic path.on { fill: var(--accent); }
+.sort-ic path { fill: #1c2430; }          /* prominent black; both solid = sortable / unsorted */
+.sort-ic path.off { fill: #b6bcc6; }      /* the inactive direction in a sorted column, dimmed */
+.th-sort:hover .sort-ic path, .sortable:hover .sort-ic path { fill: var(--accent); }
+.th-sort:hover .sort-ic path.off, .sortable:hover .sort-ic path.off { fill: #bcd8f4; }
 
 /* Contact-pair frequency bar (in the frequency table) */
 .freqbar { display: inline-block; width: 56px; height: 8px; background: #eef0f3; border-radius: 4px;

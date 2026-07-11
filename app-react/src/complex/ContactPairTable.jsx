@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react'
-import SortIcon from './SortIcon.jsx'
+import SortIcon from '../components/SortIcon.jsx'
 
 const BOND_SHORT = {
   hydrogen_bond: 'H-bond', salt_bridge: 'salt bridge', disulfide_bond: 'disulfide',

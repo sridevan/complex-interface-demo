@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react'
 import Hint from './Hint.jsx'
+import SortIcon from './SortIcon.jsx'
 
 // Generic sortable table. `columns` = [{ key, label, num?, render?, sortValue?, help? }].
 // `sortValue(row)` overrides the value used for sorting (e.g. sort a residue label by its
@@ -39,10 +40,10 @@ export default function DataTable({ columns, rows, initialSort, initialDir = 'de
             {columns.map((c) => (
               <th key={c.key} className={(c.num ? 'num ' : '') + 'sortable'}
                   onClick={() => onSort(c.key)} title="Click to sort">
-                {c.label}
-                {c.help && <Hint text={c.help} />}
-                <span className={'sort-ind' + (sortKey === c.key ? ' active' : '')}>
-                  {sortKey === c.key ? (dir === 'asc' ? '▲' : '▼') : '↕'}
+                <span className="th-inner">
+                  {c.label}
+                  {c.help && <Hint text={c.help} />}
+                  <SortIcon dir={sortKey === c.key ? dir : null} />
                 </span>
               </th>
             ))}
