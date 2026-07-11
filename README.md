@@ -1,11 +1,18 @@
-# Antibody–antigen interface demo — PDB-CPX-140202
+# Complex interface demo
 
-A proof-of-concept pipeline **and** web app for displaying **aggregated antibody–antigen
-interface contacts** in the style of PDBe-KB Complexes, using the SARS-CoV-2 spike complex
-**`PDB-CPX-140202`** as the worked example.
+A proof-of-concept pipeline **and** web app for displaying **aggregated structural interfaces**
+in the style of PDBe-KB Complexes — grouping equivalent chain–chain interfaces across all
+deposited assemblies of a complex and profiling how their residue-level contacts are conserved.
 
-The core idea: make antibody–antigen interfaces comparable *across many structures* by
-normalising both sides to conserved coordinates —
+**Live demo:** https://sridevan.github.io/complex-interface-demo/ — GitHub Pages, auto-deployed
+from `main`. Two worked examples:
+
+- **Antibody–antigen** — SARS-CoV-2 spike, `PDB-CPX-140202` (the original pipeline, below).
+- **Protein homo-oligomer** — horse haemoglobin, `PDB-CPX-131443` (α₂β₂); a generic
+  *Aggregated Interface View* that is entirely data-driven and works for any complex.
+
+For the antibody–antigen case the core idea is to make interfaces comparable *across many
+structures* by normalising both sides to conserved coordinates —
 
 - **Antigen (spike)** residues → **UniProt position** (from PISA, with a SIFTS fallback).
 - **Antibody** residues → **IMGT position / region** (CDR-H1/2/3, CDR-L1/2/3, Framework-H/L)
@@ -20,9 +27,15 @@ region** and is dominated by **CDR-H3**.
 
 ## What it produces
 
-A React dashboard (Vite + Recharts, Mol\* from CDN) that reads the processed tables:
+A React dashboard (Vite + Recharts, 3Dmol.js from CDN). A landing page routes to the two demos:
 
-- **Interface explorer** — heavy/light selector cards (median interface BSA + instance count)
+- **Aggregated Interface View** (generic; the haemoglobin page) — works for *any* complex, driven
+  entirely by data. Interface-selector cards ranked by median BSA, a **3D viewer** of the selected
+  deposited instance, a per-instance residue–residue **Sankey**, and — aggregated across all
+  deposited instances of the interface — a **contact-frequency table + heatmap** (how often each
+  residue pair recurs) plus **PISA property distributions**. Complex id, organism, stoichiometry
+  and component labels are all derived from the data, so a second complex is just another dataset.
+- **Interface explorer** (antibody–antigen; the spike page) — heavy/light selector cards (median interface BSA + instance count)
   driving an instances table (sorted by BSA), an embedded **3D viewer**, a per-interface **Sankey**
   of epitope→paratope contacts (antigen coloured by residue class, antibody by IMGT region, with a
   hover breakdown of interaction types / distance), and an aggregated contact table + contact
@@ -63,7 +76,10 @@ data/
   processed/              processed dataset + aggregation tables (consumed by the apps)
   raw/, intermediate/     downloaded / regenerable (gitignored)
 app/                      Streamlit app + public/mvs (pre-built scenes)
-app-react/               Vite + React dashboard
+app-react/               Vite + React dashboard (landing page → the two demos)
+  src/complex/           generic Aggregated Interface View (data-driven; any complex)
+  src/components/        shared viewer, Sankey, tables, sort icon, etc.
+.github/workflows/       GitHub Pages deploy (build app-react/ + publish dist)
 ```
 
 ---
@@ -80,6 +96,12 @@ npm run dev            # predev copies data/processed + app/public/mvs into publ
 
 Open the printed local URL. The 3D viewer streams structures from PDBe, so it needs internet.
 The Streamlit alternative: `pip install -r requirements.txt && streamlit run app/app.py`.
+
+### Deploy (GitHub Pages)
+
+`npm run build` stages the committed demo data and outputs `app-react/dist`. Every push to `main`
+runs `.github/workflows/deploy.yml`, which builds and publishes that to GitHub Pages. The Vite
+`base` (`/complex-interface-demo/`) must match the repo name.
 
 ### Re-run the pipeline
 
@@ -121,7 +143,7 @@ See `data/samples/NOTES.md` for the verified PISA JSON structure.
 - **ANARCII** (`pip install anarcii`, ≥2.0.5) — transformer-based IMGT numbering. https://github.com/oxpig/ANARCII
 - **gemmi** — mmCIF parsing (observed residues). **molviewspec** — Mol\* scene generation.
 - **@nightingale-elements/nightingale-track-canvas** — PDBe-KB-style sequence feature track.
-- **Recharts** — charts + Sankey. **Mol\*** 5.x (CDN) — 3D interface viewer.
+- **Recharts** — charts + Sankey. **3Dmol.js** (CDN) — 3D interface viewer (Mol\* path kept as backup).
 
 ## Status
 
