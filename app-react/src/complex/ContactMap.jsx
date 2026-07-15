@@ -50,7 +50,7 @@ export default function ContactMap({ pairs, total, leftLabel, rightLabel }) {
   const denom = total || Math.max(1, ...pairs.map((p) => p.freq))
   const showTip = (e, p, r, c) => setTip({
     x: e.clientX, y: e.clientY,
-    head: `${leftLabel} ${r.res}${r.pos} contacts ${rightLabel} ${c.res}${c.pos}`,
+    res1: `${r.res}${r.pos}`, res2: `${c.res}${c.pos}`,
     freq: `${p.freq}/${total}`,
     types: orderedBondLabels(p.bonds).join(', '),
   })
@@ -109,7 +109,8 @@ export default function ContactMap({ pairs, total, leftLabel, rightLabel }) {
         else s.left = tip.x + 14
         return (
           <div className="cm-tip" style={s}>
-            <div className="cm-tip-head">{tip.head}</div>
+            {/* Pair formatted like the Sankey tooltip — residue (component); no chain id (aggregated). */}
+            <div className="cm-tip-head">{tip.res1} <span className="cm-tip-sub">({leftLabel})</span> — {tip.res2} <span className="cm-tip-sub">({rightLabel})</span></div>
             <div><span className="cm-tip-sub">Frequency:</span> {tip.freq}</div>
             <div><span className="cm-tip-sub">Contact type(s):</span> {tip.types}</div>
           </div>
