@@ -276,6 +276,9 @@ export default function ComplexInterfaceApp({ config = {} }) {
 
   const pickAgg = (id) => { setSelAgg(id); setSelInst(null); setHighlight(null) }
   const selectInstance = (id) => { setSelInst(id); setHighlight(null) }
+  // Click a Sankey residue to highlight it; click the same one again to clear the selection.
+  const toggleSankeyNode = (n) => setHighlight((cur) =>
+    cur && cur.chain === n.chain && cur.resi === n.resi ? null : n)
 
   // Instances-table filter: PDB id or experimental method, plus an optional resolution range (Å).
   const instMethods = [...new Set(instances.map((i) => i.experimental_method).filter(Boolean))].sort()
@@ -429,7 +432,7 @@ export default function ComplexInterfaceApp({ config = {} }) {
             and residues from the second component on the right. Residue labels use UniProt numbering. Click a
             residue to highlight it here and in the 3D view.</p>
           <div className="sankey-scroll">
-            <SankeyContacts rows={sankeyRows} onNodeClick={setHighlight} selected={highlight} rightColorBy="aaclass"
+            <SankeyContacts rows={sankeyRows} onNodeClick={toggleSankeyNode} selected={highlight} rightColorBy="aaclass"
               leftLabel={lab(current?.component_label_1)} rightLabel={lab(current?.component_label_2)} />
           </div>
         </div>
