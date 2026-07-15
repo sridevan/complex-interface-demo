@@ -278,6 +278,9 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, con
     restyle(v)
     if (highlight && highlight.chain != null && highlight.resi != null) {
       v.center({ chain: highlight.chain, resi: highlight.resi }, 350)
+    } else if (ifaceSelRef.current) {
+      // Highlight cleared (e.g. clicking the residue again) → reframe to the whole interface.
+      v.zoomTo(ifaceSelRef.current, 350); v.zoom(1.2)
     }
     v.render()
   }, [highlight])
