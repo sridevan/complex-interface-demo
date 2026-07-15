@@ -202,13 +202,9 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .cm-minfreq b { color: var(--text); font-variant-numeric: tabular-nums; min-width: 22px; }
 .cm-range-end { color: var(--muted); font-weight: 500; }
 .cm-controls-note { color: var(--muted); }
-/* Epitope × antibody-region map: few wide, horizontally-labelled region columns (not rotated). */
-.cm-colhead.erm-colhead { height: auto; vertical-align: middle; padding: 9px 4px; }
-.cm-colhead.erm-colhead span.erm-reg { writing-mode: horizontal-tb; transform: none; display: inline-block;
-  font-size: 11px; font-weight: 700; letter-spacing: .02em; padding: 3px 10px; border-radius: 999px;
-  background: color-mix(in srgb, var(--rc) 20%, transparent); color: var(--rc); }
-.erm-table td.cm-rowhead { width: 58px; }
-.erm-table td.erm-cell { width: 76px; height: 22px; }
+/* ContactHeatmap (epitope × paratope) reused in the Explorer Section 2: fill the fixed-height card + scroll. */
+.cm-row > .card { display: flex; flex-direction: column; }
+.cm-row .hm-wrap { flex: 1 1 auto; min-height: 0; max-height: none; }
 .cm-table { border-collapse: separate; border-spacing: 0; }
 .cm-corner { position: sticky; left: 0; top: 0; z-index: 3; background: #fff; width: 50px; }
 .cm-colhead { height: 54px; vertical-align: bottom; padding: 2px 0; text-align: center;

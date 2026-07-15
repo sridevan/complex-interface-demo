@@ -3,7 +3,7 @@ import Viewer3Dmol from './Viewer3Dmol.jsx'
 import SankeyContacts from './SankeyContacts.jsx'
 import InterfacePropertyDistributions from './InterfacePropertyDistributions.jsx'
 import ContactPairTable from '../complex/ContactPairTable.jsx'
-import EpitopeRegionMap from './EpitopeRegionMap.jsx'
+import ContactHeatmap from './ContactHeatmap.jsx'
 import { Pager } from './Pager.jsx'
 import SortIcon from './SortIcon.jsx'
 import Hint from './Hint.jsx'
@@ -60,6 +60,8 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
   const [resMax, setResMax] = useState('')
   const [instSort, setInstSort] = useState({ key: 'interface_area', dir: 'desc' })
   const [instPage, setInstPage] = useState(0)
+  const [epiSel, setEpiSel] = useState(null)  // antigen residue clicked in the heatmap -> filters the pair table
+  useEffect(() => { setEpiSel(null) }, [chainType])
   const selectInstance = (k) => { setSelKey(k); setHighlight(null) }
   const pickChain = (t) => { setChainType(t); setSelKey(null); setHighlight(null) }
   const toggleInst = (key) => setInstSort((p) => p.key === key
@@ -293,17 +295,13 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
           <h2>Contact pair frequency <span className="h2-sub">· antibody {sideName}</span></h2>
           <p className="note">Antigen residue (UniProt numbering) ↔ antibody residue (IMGT numbering) contacts,
             aggregated across all antibody {sideName} interfaces. Frequency indicates how often each pair is observed.
-            Contact types are listed strongest first; use the filter to show only pairs with a given interaction type.</p>
-          <ContactPairTable pairs={pairAgg.pairs} total={pairAgg.total} leftLabel={AG_LABEL} rightLabel={AB_LABEL} />
+            {epiSel != null ? ' Filtered to the antigen residue selected in the map — click it again to clear.'
+              : ' Contact types are listed strongest first; use the filter to show only pairs with a given interaction type.'}</p>
+          <ContactPairTable pairs={epiSel != null ? pairAgg.pairs.filter((p) => p.pos1 === epiSel) : pairAgg.pairs}
+            total={pairAgg.total} leftLabel={AG_LABEL} rightLabel={AB_LABEL} />
         </div>
-        <div className="card ex-cell">
-          <h2>Epitope × antibody-region map <span className="h2-sub">· antibody {sideName}</span></h2>
-          <p className="note">Epitope residues (rows) against the antibody's IMGT regions (columns) — individual
-            paratope positions are accumulated into their CDR / framework region. Each cell is shaded by the fraction
-            of antibody {sideName} interfaces in which that epitope residue contacts that region; residue-level detail
-            is in the table on the left.</p>
-          <EpitopeRegionMap residue={residue} chainType={chainType} total={pairAgg.total} leftLabel={AG_LABEL} />
-        </div>
+        <ContactHeatmap residue={residue} chainType={chainType} selected={epiSel}
+          onSelect={(pos) => setEpiSel((c) => (c === pos ? null : pos))} />
       </div>
 
       <div className="ex-row">
