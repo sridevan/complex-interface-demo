@@ -37,12 +37,15 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, con
   const labelsRef = useRef([])
   const showLabelsRef = useRef(false)
   const contactShapesRef = useRef([])
+  const hoverShapeRef = useRef(null)
+  const mouseRef = useRef({ x: 0, y: 0 })
   const showContactsRef = useRef(false)
   const showVdwRef = useRef(false)
   const [showBg, setShowBg] = useState(true)
   const [showLabels, setShowLabels] = useState(false)
   const [showContacts, setShowContacts] = useState(false)
   const [showVdw, setShowVdw] = useState(false)
+  const [contactTip, setContactTip] = useState(null)
   const [err, setErr] = useState(null)
 
   // Show/hide the grey context volume (background) without recomputing the surface.
@@ -67,6 +70,22 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, con
   const clearContacts = (v) => {
     for (const s of contactShapesRef.current) { try { v.removeShape(s) } catch { /* noop */ } }
     contactShapesRef.current = []
+    if (hoverShapeRef.current) { try { v.removeShape(hoverShapeRef.current) } catch { /* noop */ }; hoverShapeRef.current = null }
+    setContactTip(null)
+  }
+  // Hover a contact line → thicken/brighten it and pop up the interacting atoms + distance.
+  const onContactHover = (c, start, end, color) => {
+    const v = viewerRef.current; if (!v) return
+    if (hoverShapeRef.current) { try { v.removeShape(hoverShapeRef.current) } catch { /* noop */ } }
+    hoverShapeRef.current = v.addCylinder({ start, end, radius: c.type === 'other_bond' ? 0.09 : 0.13,
+      color, dashed: false, fromCap: 2, toCap: 2 })
+    v.render()
+    setContactTip({ x: mouseRef.current.x, y: mouseRef.current.y, c })
+  }
+  const onContactUnhover = () => {
+    const v = viewerRef.current
+    if (v && hoverShapeRef.current) { try { v.removeShape(hoverShapeRef.current) } catch { /* noop */ }; hoverShapeRef.current = null; v.render() }
+    setContactTip(null)
   }
   // Resolve a contact's two endpoints to real atoms. Use PISA's exact atom when present; if it is
   // missing (e.g. the structure has no hydrogens but PISA reported the donor H), fall back to the
@@ -105,9 +124,11 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, con
       const r = resolveEnds(v, c)
       if (!r) continue
       const vdw = c.type === 'other_bond'
+      const start = r.s, end = r.e, color = vdw ? VDW_COLOR : (BOND_COLOR[c.type] || '#888')
       contactShapesRef.current.push(v.addCylinder({
-        start: r.s, end: r.e, radius: vdw ? 0.04 : 0.07, color: vdw ? VDW_COLOR : (BOND_COLOR[c.type] || '#888'),
+        start, end, radius: vdw ? 0.04 : 0.07, color,
         dashed: true, dashLength: vdw ? 0.12 : 0.28, gapLength: vdw ? 0.2 : 0.16, fromCap: 1, toCap: 1,
+        hoverable: true, hover_callback: () => onContactHover(c, start, end, color), unhover_callback: onContactUnhover,
       }))
     }
     v.render()
@@ -267,7 +288,8 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, con
   return (
     <>
       <div className="viewer-wrap" style={{ height }}>
-        <div ref={hostRef} className="viewer" style={{ height }} />
+        <div ref={hostRef} className="viewer" style={{ height }}
+             onMouseMove={(e) => { mouseRef.current = { x: e.clientX, y: e.clientY } }} />
         <div className="viewer-btns">
           <button className="viewer-btn" onClick={recenter}
                   title="Re-centre the view on the interacting residues">
@@ -299,6 +321,19 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, con
             <div className="vl-note">vdW = one faint line per residue pair</div>
           </div>
         )}
+        {contactTip && (() => {
+          const c = contactTip.c
+          const s = { top: contactTip.y + 14 }
+          if (contactTip.x > window.innerWidth * 0.72) s.right = window.innerWidth - contactTip.x + 14
+          else s.left = contactTip.x + 14
+          return (
+            <div className="cm-tip" style={s}>
+              <div className="cm-tip-head">{c.type === 'other_bond' ? 'van der Waals contact' : BOND_LABEL[c.type]}</div>
+              <div>{c.res1} <b>{c.atom1}</b> — {c.res2} <b>{c.atom2}</b></div>
+              {c.distance != null && <div><span className="cm-tip-sub">distance</span> {c.distance} Å</div>}
+            </div>
+          )
+        })()}
       </div>
       {err && <p className="note" style={{ color: '#b1442f' }}>{err}</p>}
     </>

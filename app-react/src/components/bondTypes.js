@@ -6,10 +6,11 @@ export const BOND_LABEL = {
   covalent_bond: 'covalent bond', other_bond: 'other bond',
 }
 
-// Colours for the 3D contact-line overlay — distinct from the blue/orange chain colours and from
-// each other. "other" (van der Waals) uses a neutral grey since it isn't a specific bond.
+// Colours for the 3D contact-line overlay. Deliberately kept clear of everything else in the scene —
+// the blue/orange chains, the CPK heteroatoms (red O, blue N, yellow S) and the teal highlight — so
+// a contact line never reads as part of the structure. "other" (vdW) uses neutral grey.
 export const BOND_COLOR = {
-  hydrogen_bond: '#e8a400', salt_bridge: '#d24b9c', disulfide_bond: '#2e9e6b', covalent_bond: '#8a5cd0',
+  hydrogen_bond: '#e0218a', salt_bridge: '#1f9e5a', disulfide_bond: '#7c4dff', covalent_bond: '#a21caf',
 }
 export const VDW_COLOR = '#9aa3ad'
 

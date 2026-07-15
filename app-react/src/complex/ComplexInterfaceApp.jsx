@@ -197,8 +197,8 @@ export default function ComplexInterfaceApp({ config = {} }) {
     const specific = [], vdwByPair = new Map()
     for (const c of instContacts) {
       if (!c.atom_id_1 || !c.atom_id_2) continue
-      const rec = { chain1: c.asym_id_1, resi1: c.auth_residue_number_1, atom1: c.atom_id_1,
-        chain2: c.asym_id_2, resi2: c.auth_residue_number_2, atom2: c.atom_id_2,
+      const rec = { chain1: c.asym_id_1, resi1: c.auth_residue_number_1, atom1: c.atom_id_1, res1: c.residue_1,
+        chain2: c.asym_id_2, resi2: c.auth_residue_number_2, atom2: c.atom_id_2, res2: c.residue_2,
         type: c.bond_type, distance: c.distance }
       if (c.bond_type === 'other_bond') {
         const k = `${c.asym_id_1}:${c.auth_residue_number_1}-${c.asym_id_2}:${c.auth_residue_number_2}`
