@@ -22,6 +22,7 @@ function Root() {
   // CCT assemblies are fetched on demand from PDBe's model-server (chains/numbering verified to match
   // our contact data), so its CIFs aren't bundled — see remoteCif in ComplexInterfaceApp.
   if (route === '#cct') return <><BackLink /><ComplexInterfaceApp config={{ basePath: 'cct', remoteCif: true }} /></>
+  if (route === '#arp23') return <><BackLink /><ComplexInterfaceApp config={{ basePath: 'arp23' }} /></>
   return <Landing />
 }
 

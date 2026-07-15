@@ -1,0 +1,58 @@
+{
+ "A7MB62": {
+  "accession": "A7MB62",
+  "name": "Actin-related protein 2",
+  "gene": "ACTR2",
+  "organism": "Bos taurus",
+  "length": 394,
+  "function": "ATP-binding component of the Arp2/3 complex, a multiprotein complex that mediates actin polymerization upon stimulation by nucleation-promoting factor (NPF). The Arp2/3 complex mediates the formation of branched actin networks in the cytoplasm, providing the force for cell motility. Seems to contact the pointed end of the daughter actin filament. In podocytes, required for the formation of lamellipodia downstream of AVIL and PLCE1 regulation. In addition to its role in the cytoplasmic cytoskeleton, the Arp2/3 complex also promotes actin polymerization in the nucleus, thereby regulating gene transcription and repair of damaged DNA. The Arp2/3 complex promotes homologous recombination (HR) repair in response to DNA damage by promoting nuclear actin polymerization, leading to drive motility of double-strand breaks (DSBs)."
+ },
+ "P61157": {
+  "accession": "P61157",
+  "name": "Actin-related protein 3",
+  "gene": "ACTR3",
+  "organism": "Bos taurus",
+  "length": 418,
+  "function": "ATP-binding component of the Arp2/3 complex, a multiprotein complex that mediates actin polymerization upon stimulation by nucleation-promoting factor (NPF). The Arp2/3 complex mediates the formation of branched actin networks in the cytoplasm, providing the force for cell motility. Seems to contact the pointed end of the daughter actin filament. In podocytes, required for the formation of lamellipodia downstream of AVIL and PLCE1 regulation. In addition to its role in the cytoplasmic cytoskeleton, the Arp2/3 complex also promotes actin polymerization in the nucleus, thereby regulating gene transcription and repair of damaged DNA. The Arp2/3 complex promotes homologous recombination (HR) repair in response to DNA damage by promoting nuclear actin polymerization, leading to drive motility of double-strand breaks (DSBs). Plays a role in ciliogenesis."
+ },
+ "Q148J6": {
+  "accession": "Q148J6",
+  "name": "Actin-related protein 2/3 complex subunit 4",
+  "gene": "ARPC4",
+  "organism": "Bos taurus",
+  "length": 168,
+  "function": "Actin-binding component of the Arp2/3 complex, a multiprotein complex that mediates actin polymerization upon stimulation by nucleation-promoting factor (NPF). The Arp2/3 complex mediates the formation of branched actin networks in the cytoplasm, providing the force for cell motility. In addition to its role in the cytoplasmic cytoskeleton, the Arp2/3 complex also promotes actin polymerization in the nucleus, thereby regulating gene transcription and repair of damaged DNA. The Arp2/3 complex promotes homologous recombination (HR) repair in response to DNA damage by promoting nuclear actin polymerization, leading to drive motility of double-strand breaks (DSBs)."
+ },
+ "Q3MHR7": {
+  "accession": "Q3MHR7",
+  "name": "Actin-related protein 2/3 complex subunit 2",
+  "gene": "ARPC2",
+  "organism": "Bos taurus",
+  "length": 300,
+  "function": "Actin-binding component of the Arp2/3 complex, a multiprotein complex that mediates actin polymerization upon stimulation by nucleation-promoting factor (NPF). The Arp2/3 complex mediates the formation of branched actin networks in the cytoplasm, providing the force for cell motility. Seems to contact the mother actin filament. In addition to its role in the cytoplasmic cytoskeleton, the Arp2/3 complex also promotes actin polymerization in the nucleus, thereby regulating gene transcription and repair of damaged DNA. The Arp2/3 complex promotes homologous recombination (HR) repair in response to DNA damage by promoting nuclear actin polymerization, leading to drive motility of double-strand breaks (DSBs)."
+ },
+ "Q3SYX9": {
+  "accession": "Q3SYX9",
+  "name": "Actin-related protein 2/3 complex subunit 5",
+  "gene": "ARPC5",
+  "organism": "Bos taurus",
+  "length": 151,
+  "function": "Component of the Arp2/3 complex, a multiprotein complex that mediates actin polymerization upon stimulation by nucleation-promoting factor (NPF). The Arp2/3 complex mediates the formation of branched actin networks in the cytoplasm, providing the force for cell motility. In addition to its role in the cytoplasmic cytoskeleton, the Arp2/3 complex also promotes actin polymerization in the nucleus, thereby regulating gene transcription and repair of damaged DNA. The Arp2/3 complex promotes homologous recombination (HR) repair in response to DNA damage by promoting nuclear actin polymerization, leading to drive motility of double-strand breaks (DSBs)."
+ },
+ "Q3T035": {
+  "accession": "Q3T035",
+  "name": "Actin-related protein 2/3 complex subunit 3",
+  "gene": "ARPC3",
+  "organism": "Bos taurus",
+  "length": 178,
+  "function": "Component of the Arp2/3 complex, a multiprotein complex that mediates actin polymerization upon stimulation by nucleation-promoting factor (NPF). The Arp2/3 complex mediates the formation of branched actin networks in the cytoplasm, providing the force for cell motility. In addition to its role in the cytoplasmic cytoskeleton, the Arp2/3 complex also promotes actin polymerization in the nucleus, thereby regulating gene transcription and repair of damaged DNA. The Arp2/3 complex promotes homologous recombination (HR) repair in response to DNA damage by promoting nuclear actin polymerization, leading to drive motility of double-strand breaks (DSBs)."
+ },
+ "Q58CQ2": {
+  "accession": "Q58CQ2",
+  "name": "Actin-related protein 2/3 complex subunit 1B",
+  "gene": "ARPC1B",
+  "organism": "Bos taurus",
+  "length": 372,
+  "function": "Component of the Arp2/3 complex, a multiprotein complex that mediates actin polymerization upon stimulation by nucleation-promoting factor (NPF). The Arp2/3 complex mediates the formation of branched actin networks in the cytoplasm, providing the force for cell motility. In addition to its role in the cytoplasmic cytoskeleton, the Arp2/3 complex also promotes actin polymerization in the nucleus, thereby regulating gene transcription and repair of damaged DNA. The Arp2/3 complex promotes homologous recombination (HR) repair in response to DNA damage by promoting nuclear actin polymerization, leading to drive motility of double-strand breaks (DSBs)."
+ }
+}

@@ -24,6 +24,14 @@ const COMPLEXES = [
       + 'contacts, contact map, and PISA property distributions.',
     accent: '#3f8f5a',
   },
+  {
+    hash: '#arp23', title: 'Bovine Arp2/3 complex — interface conservation',
+    sub: 'PDB-CPX-110422 · Bos taurus · actin-related protein 2/3 complex (7 subunits)',
+    body: 'Equivalent subunit–subunit interfaces of the Arp2/3 actin-nucleation complex grouped across '
+      + 'deposited assemblies — selector, 3D viewer, instance table, residue–residue contacts, contact '
+      + 'map, and PISA property distributions.',
+    accent: '#7b5cd6',
+  },
 ]
 
 export default function Landing() {

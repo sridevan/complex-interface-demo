@@ -20,6 +20,7 @@ console.log('synced processed data + mvs scenes into public/')
 const COMPLEXES = [
   { cx: 'PDB-CPX-131443', name: 'hemoglobin', bundleCif: true },  // horse haemoglobin (α₂β₂)
   { cx: 'PDB-CPX-143265', name: 'cct', bundleCif: false },        // human CCT/TRiC chaperonin (16-mer)
+  { cx: 'PDB-CPX-110422', name: 'arp23', bundleCif: true },       // bovine Arp2/3 complex (7 subunits)
 ]
 for (const { cx, name, bundleCif } of COMPLEXES) {
   const srcDir = resolve(proc, cx)

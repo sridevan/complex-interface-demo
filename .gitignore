@@ -20,6 +20,7 @@ app-react/public/data/
 app-react/public/mvs/
 app-react/public/hemoglobin/
 app-react/public/cct/
+app-react/public/arp23/
 
 # OS / editor
 .DS_Store
