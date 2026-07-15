@@ -323,7 +323,8 @@ export default function ComplexInterfaceApp({ config = {} }) {
     <div className="wrap">
       <div className="page-head">
         <h1>{title}</h1>
-        {complexId && <span className="complex-id">{complexId}</span>}
+        {complexId && <a className="complex-id" href={`https://www.ebi.ac.uk/pdbe/pdbe-kb/complexes/${complexId}`}
+          target="_blank" rel="noreferrer" title="View this complex on PDBe-KB">{complexId}</a>}
         {organisms.length > 0 && <i className="page-organism">{organisms.join(', ')}</i>}
       </div>
 
