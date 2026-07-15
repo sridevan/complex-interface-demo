@@ -24,6 +24,7 @@ h1 { font-size: 26px; margin: 0 0 4px; }
   letter-spacing: 0.2px; color: var(--accent); background: #eaf2fb; border: 1px solid #bcd8f4;
   border-radius: 7px; padding: 4px 11px; line-height: 1.2; }
 .subtitle { color: var(--muted); margin: 0 0 20px; font-size: 14px; }
+.page-organism { color: var(--muted); font-size: 15px; }  /* species next to the complex id */
 .banner { padding: 10px 14px; border-radius: 8px; font-size: 13px; margin-bottom: 12px; }
 .banner.warn { background: #fef9e7; border: 1px solid #f5e0a3; }
 .banner.info { background: #eaf2fb; border: 1px solid #c3ddf6; }

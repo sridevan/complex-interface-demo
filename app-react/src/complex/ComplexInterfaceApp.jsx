@@ -260,7 +260,6 @@ export default function ComplexInterfaceApp({ config = {} }) {
   const lab = (l) => compLabel(l, copies, data.uni)
   const complexId = agg[0]?.pdb_complex_id
   const organisms = [...new Set([...copies.keys()].map((acc) => data.uni?.[acc]?.organism).filter(Boolean))]
-  const stoich = stoichiometry(copies, data.uni)
   const aggShown = agg.filter((a) => {
     const q = filter.toLowerCase()
     if (!q) return true
@@ -325,11 +324,8 @@ export default function ComplexInterfaceApp({ config = {} }) {
       <div className="page-head">
         <h1>{title}</h1>
         {complexId && <span className="complex-id">{complexId}</span>}
+        {organisms.length > 0 && <i className="page-organism">{organisms.join(', ')}</i>}
       </div>
-      <p className="subtitle">
-        {organisms.length > 0 && <><i>{organisms.join(', ')}</i> · </>}
-        {stoich && <>{stoich} · </>}
-        equivalent interfaces grouped across deposited assemblies</p>
 
       {/* UniProt summary for the two components of the currently selected interface pair. */}
       {current && (
