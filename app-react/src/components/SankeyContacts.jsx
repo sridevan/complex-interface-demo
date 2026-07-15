@@ -162,16 +162,8 @@ export default function SankeyContacts({ rows, onNodeClick, leftLabel = 'antigen
     data.nodes.filter((n) => n.kind === 'ag').length) * 24)
 
   if (!rows || !rows.length) return <p className="note">No contacts for the selected instance.</p>
-  // Chain id(s) on each side of the selected instance, shown as a header above the columns.
-  const leftChains = [...new Set(rows.map((r) => r.antigen_chain_id).filter((x) => x != null))]
-  const rightChains = [...new Set(rows.map((r) => r.antibody_chain_id).filter((x) => x != null))]
-  const chainLabel = (cs) => cs.length ? `Chain ${cs.join(', ')}` : ''
   return (
     <div className="sankey-contacts">
-      <div className="sankey-head">
-        <span className="l">{chainLabel(leftChains)}</span>
-        <span className="r">{chainLabel(rightChains)}</span>
-      </div>
       <div className="sankey-chart-scroll">
         <ResponsiveContainer width="100%" height={height}>
           <Sankey

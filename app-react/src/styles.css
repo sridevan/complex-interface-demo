@@ -107,11 +107,6 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 /* Sankey fills the card as a flex column: the diagram scrolls, the legend below stays pinned. */
 .sankey-scroll { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
 .sankey-contacts { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
-/* Chain-id headers centred over each node-bar column (Sankey margins: left 70, right 90, nodeWidth 12). */
-.sankey-head { flex: 0 0 auto; position: relative; height: 16px; margin-bottom: 4px;
-  font-weight: 600; font-size: 12px; color: #333; }
-.sankey-head .l { position: absolute; left: 76px; transform: translateX(-50%); white-space: nowrap; }
-.sankey-head .r { position: absolute; right: 84px; transform: translateX(50%); white-space: nowrap; }
 .sankey-chart-scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
 /* Row 3: identical-size cards (same width via 1fr/1fr, same height via fixed height); the table
    and heatmap scroll areas flex to fill that height, so the heatmap uses all available space. */
