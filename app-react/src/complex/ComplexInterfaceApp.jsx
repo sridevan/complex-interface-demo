@@ -129,6 +129,9 @@ const INST_PAGE_SIZE = 25   // instance rows per page (generic app — some comp
 // only means something with enough replicates. Below this, show a placeholder instead of a map/plots
 // that would read as "conserved" off a single structure (and avoid degenerate 1×N contact maps).
 const MIN_CONSERVATION_N = 3
+// Abbreviated experimental-method label shown in the instances table; the filter also matches this
+// so typing "EM" or "X-ray" works, not just the full method name.
+const shortMethod = (m) => (m || '').replace('X-ray diffraction', 'X-ray').replace('Electron microscopy', 'EM')
 
 export default function ComplexInterfaceApp({ config = {} }) {
   // Everything else (complex id, organism, stoichiometry, component labels) is derived from the data,
@@ -300,10 +303,10 @@ export default function ComplexInterfaceApp({ config = {} }) {
     cur && cur.chain === n.chain && cur.resi === n.resi ? null : n)
 
   // Instances-table filter: PDB id or experimental method, plus an optional resolution range (Å).
-  const instMethods = [...new Set(instances.map((i) => i.experimental_method).filter(Boolean))].sort()
+  const instMethods = [...new Set(instances.flatMap((i) => [i.experimental_method, shortMethod(i.experimental_method)]).filter(Boolean))].sort()
   const instQ = instFilter.trim().toLowerCase()
   const instRows = shownInstances.filter((i) => {
-    if (instQ && !`${i.entry_id || ''} ${i.experimental_method || ''}`.toLowerCase().includes(instQ)) return false
+    if (instQ && !`${i.entry_id || ''} ${i.experimental_method || ''} ${shortMethod(i.experimental_method)}`.toLowerCase().includes(instQ)) return false
     if (resMin !== '' && !(i.resolution != null && i.resolution >= +resMin)) return false
     if (resMax !== '' && !(i.resolution != null && i.resolution <= +resMax)) return false
     return true
@@ -438,7 +441,7 @@ export default function ComplexInterfaceApp({ config = {} }) {
                     <td><code>{i.interface_instance_id}</code></td>
                     <td><a href={`https://www.ebi.ac.uk/pdbe/entry/pdb/${i.entry_id}`} target="_blank" rel="noreferrer"
                            onClick={(e) => e.stopPropagation()}>{i.entry_id}</a></td>
-                    <td><span title={i.experimental_method || ''}>{(i.experimental_method || '').replace('X-ray diffraction', 'X-ray').replace('Electron microscopy', 'EM')}</span></td>
+                    <td><span title={i.experimental_method || ''}>{shortMethod(i.experimental_method)}</span></td>
                     <td className="num">{i.resolution ?? '—'}</td>
                     <td>{i.asym_id_1}</td><td>{i.asym_id_2}</td>
                     <td className="num">{i.interface_area != null ? Math.round(i.interface_area) : '—'}</td>
