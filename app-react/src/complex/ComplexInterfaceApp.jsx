@@ -25,7 +25,7 @@ const PISA_PROPS = [
   { key: 'number_salt_bridges', label: 'Salt bridges', unit: '', digits: 0, discrete: true,
     desc: 'Salt bridges across the selected interface (PISA).' },
   { key: 'number_other_bonds', label: 'Other bonds', unit: '', digits: 0, discrete: true,
-    desc: 'Other close contacts (not H-bond, salt bridge, disulfide or covalent) across the selected interface (PISA) — the bulk of interface atom contacts.' },
+    desc: 'Other close contacts (not a hydrogen bond, salt bridge, disulfide or covalent bond) across the selected interface (PISA) — the bulk of interface atom contacts.' },
   { key: 'number_disulfide_bonds', label: 'Disulfide bonds', unit: '', digits: 0, discrete: true,
     desc: 'Disulfide bonds across the selected interface (PISA); rare.' },
   { key: 'number_covalent_bonds', label: 'Covalent bonds', unit: '', digits: 0, discrete: true,
@@ -406,7 +406,8 @@ export default function ComplexInterfaceApp({ config = {} }) {
         <div className="card ex-cell">
           <h2>Contact pair frequency <span className="h2-sub">· {lab(current?.component_label_1)} ↔ {lab(current?.component_label_2)}</span></h2>
           <p className="note">Residue–residue contacts are aggregated across deposited instances of the selected
-            equivalent interface. Frequency indicates how often each residue pair is observed in contact.</p>
+            equivalent interface. Frequency indicates how often each residue pair is observed in contact. Contact
+            types are listed strongest first; use the filter to show only pairs with a given interaction type.</p>
           <ContactPairTable pairs={pairAgg} total={current?.instance_count}
             leftLabel={lab(current?.component_label_1)} rightLabel={lab(current?.component_label_2)} />
         </div>

@@ -20,7 +20,7 @@ const PROPS = [
   { key: 'number_salt_bridges', label: 'Salt bridges', unit: '', digits: 0, discrete: true,
     desc: 'Salt bridges between the {chain} chain and the antigen in the selected interface (PISA).' },
   { key: 'number_other_bonds', label: 'Other bonds', unit: '', digits: 0, discrete: true,
-    desc: 'Other close contacts (not H-bond, salt bridge, disulfide or covalent) between the {chain} chain and the antigen in the selected interface (PISA) — the bulk of interface atom contacts.' },
+    desc: 'Other close contacts (not a hydrogen bond, salt bridge, disulfide or covalent bond) between the {chain} chain and the antigen in the selected interface (PISA) — the bulk of interface atom contacts.' },
   { key: 'number_disulfide_bonds', label: 'Disulfide bonds', unit: '', digits: 0, discrete: true,
     desc: 'Disulfide bonds between the {chain} chain and the antigen in the selected interface (PISA); rare.' },
   { key: 'number_covalent_bonds', label: 'Covalent bonds', unit: '', digits: 0, discrete: true,

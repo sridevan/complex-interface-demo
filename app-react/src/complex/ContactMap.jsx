@@ -1,9 +1,6 @@
 import React, { useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { orderedBondLabels } from '../components/bondTypes.js'
 
-const BOND_SHORT = {
-  hydrogen_bond: 'H-bond', salt_bridge: 'salt bridge', disulfide_bond: 'disulfide',
-  covalent_bond: 'covalent', other_bond: 'other',
-}
 const ROWHEAD_W = 50   // px reserved for row residue labels (matches .cm-rowhead width)
 const COLHEAD_H = 54   // px reserved for rotated column residue labels (matches .cm-colhead height)
 
@@ -55,7 +52,7 @@ export default function ContactMap({ pairs, total, leftLabel, rightLabel }) {
     x: e.clientX, y: e.clientY,
     head: `${leftLabel} ${r.res}${r.pos} contacts ${rightLabel} ${c.res}${c.pos}`,
     freq: `${p.freq}/${total}`,
-    types: p.bonds.map((b) => BOND_SHORT[b] || b).join(', '),
+    types: orderedBondLabels(p.bonds).join(', '),
   })
   return (
     <>

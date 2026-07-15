@@ -160,6 +160,13 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .freqbar-fill { display: block; height: 100%; background: #c65a5a; }
 .freqbar-txt { font-size: 11px; color: var(--muted); }
 
+/* Interaction-type filter above the contact-pair table. */
+.cm-filter { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.cm-filter .filter-input { flex: 1 1 auto; padding: 6px 8px; box-sizing: border-box; }
+.cm-filter-clear { flex: 0 0 auto; border: none; background: none; color: var(--accent); font: inherit;
+  font-size: 12px; cursor: pointer; padding: 0 4px; }
+.cm-filter-clear:hover { text-decoration: underline; }
+
 /* Residue × residue contact-map heatmap */
 .cm-wrap { overflow: auto; max-height: 520px; border: 1px solid var(--border); border-radius: 8px; }
 .cm-table { border-collapse: separate; border-spacing: 0; }

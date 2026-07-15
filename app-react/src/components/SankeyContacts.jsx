@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react'
 import { Sankey, Tooltip, ResponsiveContainer, Layer, Rectangle } from 'recharts'
+import { bondLabel, bondRank } from './bondTypes.js'
 
 // Antibody (paratope) nodes are coloured by IMGT region CLASS. A single-instance Sankey is one
 // chain type, so we don't need the heavy/light hue split here — instead we give CDR1/2/3 and
@@ -89,10 +90,6 @@ function buildGraph(rows, rightColorBy = 'region', singleLetter = false) {
   return { nodes, links, linkInfo }
 }
 
-const TYPE_LABEL = {
-  hydrogen_bond: 'H-bond', salt_bridge: 'salt bridge', disulfide_bond: 'disulfide',
-  covalent_bond: 'covalent bond', other_bond: 'other contact',
-}
 
 // Custom tooltip: for a ribbon, break down the residue–residue contact; for a node, summarise it.
 // linkInfo (breakdown by residue-name key) is passed as a prop — Recharts preserves our own props
@@ -115,8 +112,8 @@ function SankeyTooltip({ active, payload, linkInfo }) {
         <div className="st-head">{agName} <span className="st-sub">({info.agClass})</span>
           {'  —  '}{abName} <span className="st-sub">({info.abRegion})</span></div>
         <div className="st-row"><b>{value}</b> bond{value === 1 ? '' : 's'}</div>
-        <div className="st-types">{Object.entries(info.types || {}).sort((a, b) => b[1] - a[1])
-          .map(([t, c]) => `${TYPE_LABEL[t] || t} ×${c}`).join(', ') || '—'}</div>
+        <div className="st-types">{Object.entries(info.types || {}).sort((a, b) => bondRank(a[0]) - bondRank(b[0]))
+          .map(([t, c]) => `${bondLabel(t)} ×${c}`).join(', ') || '—'}</div>
       </div>
     )
   }
