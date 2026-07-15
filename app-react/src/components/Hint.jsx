@@ -17,7 +17,7 @@ export default function Hint({ text }) {
   }
   const hide = () => setPos(null)
   return (
-    <span className="hint" ref={ref} tabIndex={0} role="note" aria-label={text}
+    <span className="hint" ref={ref} tabIndex={0} role="note" aria-label={typeof text === 'string' ? text : undefined}
           onMouseEnter={show} onMouseLeave={hide} onFocus={show} onBlur={hide}
           onClick={(e) => { e.stopPropagation(); e.preventDefault() }}>
       ?

@@ -249,6 +249,9 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .hint-pop { position: fixed; z-index: 1000; background: #1c2430; color: #fff; font-size: 12px;
   font-weight: 400; line-height: 1.45; white-space: normal; text-align: left; padding: 8px 10px;
   border-radius: 6px; box-shadow: 0 2px 12px rgba(0,0,0,0.28); pointer-events: none; }
+/* Definition list inside a hint popup (e.g. the contact-type legend). */
+.hint-pop .hint-list { margin: 5px 0 4px; padding-left: 15px; }
+.hint-pop .hint-list li { margin: 2px 0; }
 
 /* Natural-variant badge on an antigen interface residue (e.g. K417N). Warm antibody-orange pill so
    it reads as "biological annotation" distinct from the blue contact palette. */

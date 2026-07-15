@@ -1,6 +1,24 @@
 import React, { useMemo, useState } from 'react'
 import SortIcon from '../components/SortIcon.jsx'
+import Hint from '../components/Hint.jsx'
 import { bondRank, bondLabel, orderedBondLabels } from '../components/bondTypes.js'
+
+// PISA classifies every interface atom–atom contact into one of these types (this dataset only
+// contains hydrogen bonds, salt bridges and "other"; disulfide/covalent do not occur here).
+const BOND_TYPE_HELP = (
+  <>
+    Interaction type PISA assigns to each interface atom–atom contact:
+    <ul className="hint-list">
+      <li><b>hydrogen bond</b> — donor–acceptor hydrogen bond</li>
+      <li><b>salt bridge</b> — oppositely charged side chains (Asp/Glu ↔ Lys/Arg/His)</li>
+      <li><b>disulfide bond</b> — covalent S–S bond between cysteines</li>
+      <li><b>covalent bond</b> — other covalent link bridging the two chains</li>
+      <li><b>other bond</b> — a non-bonded van der Waals contact (atoms ≲4 Å) that doesn’t meet the
+        criteria above; these dominate most interfaces</li>
+    </ul>
+    A pair’s types are listed strongest first.
+  </>
+)
 
 // Comparators keyed by sortable column; each falls back to residue number for stable, readable ties.
 const CMP = {
@@ -60,7 +78,7 @@ export default function ContactPairTable({ pairs, total, leftLabel, rightLabel }
             <tr>
               <Th label={leftLabel} k="pos1" />
               <Th label={rightLabel} k="pos2" />
-              <th>Contact type(s)</th>
+              <th>Contact type(s) <Hint text={BOND_TYPE_HELP} /></th>
               <Th label="Frequency" k="freq" className="num" />
             </tr>
           </thead>
