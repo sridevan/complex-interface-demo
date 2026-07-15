@@ -19,7 +19,9 @@ function Root() {
   if (route === '#spike') return <><BackLink /><App /></>
   // Generic interface-conservation view; the horse-hemoglobin dataset is just one basePath.
   if (route === '#hemoglobin') return <><BackLink /><ComplexInterfaceApp config={{ basePath: 'hemoglobin' }} /></>
-  if (route === '#cct') return <><BackLink /><ComplexInterfaceApp config={{ basePath: 'cct' }} /></>
+  // CCT assemblies are fetched on demand from PDBe's model-server (chains/numbering verified to match
+  // our contact data), so its CIFs aren't bundled — see remoteCif in ComplexInterfaceApp.
+  if (route === '#cct') return <><BackLink /><ComplexInterfaceApp config={{ basePath: 'cct', remoteCif: true }} /></>
   return <Landing />
 }
 

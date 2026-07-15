@@ -26,7 +26,8 @@ const HL_COLOR = 0x12c9a6  // highlight teal for a Sankey-selected residue
 
 // residues: [{ chain: <author asym id>, resi: <author seq num> }]
 // cifUrl: optional explicit mmCIF URL (e.g. a local assembly file); falls back to the PDBe entry CIF.
-export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, contacts, highlight, onClearHighlight, height = 480 }) {
+// cifFallbackUrl: optional second URL tried if cifUrl fails (e.g. RCSB when PDBe model-server is down).
+export default function Viewer3Dmol({ pdbId, cifUrl, cifFallbackUrl, agResidues, abResidues, contacts, highlight, onClearHighlight, height = 480 }) {
   const hostRef = useRef(null)
   const viewerRef = useRef(null)
   const surfRef = useRef(null)
@@ -204,8 +205,9 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, con
     async function run() {
       const $3Dmol = window.$3Dmol
       if (!$3Dmol) { setErr('3Dmol failed to load from CDN (needs internet).'); return }
-      const url = cifUrl || (pdbId && CIF_URL(pdbId))
-      if (!url) return
+      const urls = [cifUrl, cifFallbackUrl].filter(Boolean)
+      if (!urls.length && pdbId) urls.push(CIF_URL(pdbId))
+      if (!urls.length) return
       try {
         if (!viewerRef.current) {
           viewerRef.current = $3Dmol.createViewer(hostRef.current, { backgroundColor: 'white' })
@@ -214,8 +216,19 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, con
         viewer.clear()
         labelsRef.current = []  // clear() removes any existing labels
         contactShapesRef.current = []  // …and any existing contact cylinders
-        const cif = await fetch(url).then((r) => r.text())
+        // Try each source in turn (primary, then fallback) so a single-service outage doesn't blank
+        // the viewer; give up only if every source fails.
+        let cif = null, lastErr = null
+        for (const u of urls) {
+          try {
+            const r = await fetch(u)
+            if (r.ok) { cif = await r.text(); break }
+            lastErr = `HTTP ${r.status}`
+          } catch (e) { lastErr = String(e) }
+          if (cancelled) return
+        }
         if (cancelled) return
+        if (cif == null) { setErr(`Could not load structure (${lastErr}).`); return }
         viewer.addModel(cif, 'cif')
         viewer.setStyle({}, {})  // nothing by default; show partners as volumes + interface sticks
 
@@ -269,7 +282,7 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, con
     }
     run()
     return () => { cancelled = true }
-  }, [pdbId, cifUrl, agResidues, abResidues, contacts])
+  }, [pdbId, cifUrl, cifFallbackUrl, agResidues, abResidues, contacts])
 
   // When a Sankey node is clicked, re-apply styles with the highlight and bring it into view.
   useEffect(() => {

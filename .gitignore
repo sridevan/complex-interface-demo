@@ -19,6 +19,7 @@ data/intermediate/
 app-react/public/data/
 app-react/public/mvs/
 app-react/public/hemoglobin/
+app-react/public/cct/
 
 # OS / editor
 .DS_Store

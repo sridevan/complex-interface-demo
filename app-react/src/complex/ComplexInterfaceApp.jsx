@@ -127,7 +127,16 @@ const INST_DEFAULT_DIR = { experimental_method: 'asc', resolution: 'asc', interf
 export default function ComplexInterfaceApp({ config = {} }) {
   // Everything else (complex id, organism, stoichiometry, component labels) is derived from the data,
   // so pointing this at another complex only needs a different basePath.
-  const { basePath = 'hemoglobin', title = 'Aggregated Interface View' } = config
+  const { basePath = 'hemoglobin', title = 'Aggregated Interface View', remoteCif = false } = config
+  // CIF source for the 3D viewer. When remoteCif is set, the assembly is fetched on demand from
+  // PDBe's model-server (biological assembly, author numbering) with RCSB as a fallback — so large
+  // assemblies stay out of the repo. Complexes whose deposited chains get relabelled by symmetry
+  // expansion (the on-the-fly auth ids wouldn't match our contact data) keep remoteCif off and load
+  // a bundled per-assembly CIF instead.
+  const cifSrc = (inst) => remoteCif
+    ? { cifUrl: `https://www.ebi.ac.uk/pdbe/model-server/v1/${inst.entry_id}/assembly?name=${inst.assembly_id}&encoding=cif`,
+        cifFallbackUrl: `https://files.rcsb.org/download/${inst.entry_id}-assembly${inst.assembly_id}.cif` }
+    : { cifUrl: `${BASE}${basePath}/cif/${inst.entry_id}_${inst.assembly_id}.cif` }
   const [data, setData] = useState(null)
   const [selAgg, setSelAgg] = useState(null)
   const [selInst, setSelInst] = useState(null)
@@ -370,7 +379,7 @@ export default function ComplexInterfaceApp({ config = {} }) {
             <span className="dot" style={{ background: '#e19039' }} /> {lab(current?.component_label_2)}
           </div>
           {instance
-            ? <Viewer3Dmol cifUrl={`${BASE}${basePath}/cif/${instance.entry_id}_${instance.assembly_id}.cif`}
+            ? <Viewer3Dmol {...cifSrc(instance)}
                 agResidues={iface.ag} abResidues={iface.ab} contacts={viewerContacts}
                 highlight={highlight} onClearHighlight={() => setHighlight(null)} height={480} />
             : <p className="note">No instance selected.</p>}
