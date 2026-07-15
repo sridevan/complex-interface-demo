@@ -3,8 +3,8 @@ import { orderedBondLabels } from '../components/bondTypes.js'
 
 const ROWHEAD_W = 50   // px reserved for row residue labels (matches .cm-rowhead width)
 const COLHEAD_H = 54   // px reserved for rotated column residue labels (matches .cm-colhead height)
-const MIN_CELL_W = 14  // smallest readable cell width  (matches the fit() clamp below)
-const MIN_CELL_H = 12  // smallest readable cell height (matches the fit() clamp below)
+const MIN_CELL_W = 16  // smallest readable cell width  (matches the fit() clamp below)
+const MIN_CELL_H = 14  // smallest readable cell height (matches the fit() clamp below)
 
 const axisSizes = (pairs) => {
   const r = new Set(), c = new Set()
@@ -29,8 +29,6 @@ export default function ContactMap({ pairs, total, leftLabel, rightLabel }) {
   const [cell, setCell] = useState({ w: 18, h: 16 })
   const [tip, setTip] = useState(null)  // hover popup: { x, y, head, freq, types }
 
-  // Highest contact frequency actually present (may be < total — few contacts recur in *every* instance).
-  const maxFreq = useMemo(() => pairs.reduce((m, p) => Math.max(m, p.freq), 1), [pairs])
   const full = useMemo(() => axisSizes(pairs), [pairs])
 
   // How many residues fit on each axis at the smallest readable cell size — measured from the actual map
@@ -51,26 +49,36 @@ export default function ContactMap({ pairs, total, leftLabel, rightLabel }) {
     return () => ro.disconnect()
   }, [])
 
-  // Show the control only when the full grid can't fit the measured viewport.
-  const needsFilter = !!capacity && (full.rows > capacity.maxRows || full.cols > capacity.maxCols)
-  // Auto-default: the lowest min-frequency whose grid fits the viewport on both axes (show as much as
-  // fits without scrolling). If even the most-conserved contacts overflow, land on maxFreq.
-  const autoMinFreq = useMemo(() => {
-    if (!needsFilter) return 1
-    for (let t = 2; t <= maxFreq; t++) {
-      const s = axisSizes(pairs.filter((p) => p.freq >= t))
-      if (s.rows <= capacity.maxRows && s.cols <= capacity.maxCols) return t
+  // The control (and any filtering) is only needed when the full grid can't fit the measured viewport.
+  const needsControl = !!capacity && (full.rows > capacity.maxRows || full.cols > capacity.maxCols)
+  // "detail" scales the residue budget relative to what fits the card: 1 = fill the card exactly,
+  // <1 = a tighter core (bigger cells), >1 = show more (scrolls). Reset per interface.
+  const [detail, setDetail] = useState(1)
+  useEffect(() => { setDetail(1) }, [pairs])
+
+  // Top-N fill: walk contacts most-frequent first, keeping each whose residues still fit the row/col
+  // budget. This fills the card with the most-conserved contacts and — unlike a discrete frequency
+  // threshold — has no granularity jumps, so the map is always well-filled. The kept residues then
+  // define the grid; we render every contact among them (denser, and truthful for what's on screen).
+  const fill = useMemo(() => {
+    if (!capacity) return null
+    const budgetRows = Math.max(4, Math.round(capacity.maxRows * detail))
+    const budgetCols = Math.max(4, Math.round(capacity.maxCols * detail))
+    const byFreq = [...pairs].sort((a, b) => b.freq - a.freq || a.pos1 - b.pos1 || a.pos2 - b.pos2)
+    const rowSet = new Set(), colSet = new Set()
+    for (const p of byFreq) {
+      const addR = rowSet.has(p.pos1) ? 0 : 1
+      const addC = colSet.has(p.pos2) ? 0 : 1
+      if (rowSet.size + addR > budgetRows || colSet.size + addC > budgetCols) continue
+      rowSet.add(p.pos1); colSet.add(p.pos2)
     }
-    return maxFreq
-  }, [pairs, needsFilter, maxFreq, capacity])
+    return { rowSet, colSet }
+  }, [pairs, capacity, detail])
 
-  const [minFreq, setMinFreq] = useState(1)
-  const userSet = useRef(false)  // once the user drags the slider, stop auto-overriding it
-  useEffect(() => { userSet.current = false }, [pairs])            // new interface → auto again
-  useEffect(() => { if (!userSet.current) setMinFreq(autoMinFreq) }, [autoMinFreq])
-  const onMinFreq = (v) => { userSet.current = true; setMinFreq(v) }
-
-  const shown = useMemo(() => pairs.filter((p) => p.freq >= minFreq), [pairs, minFreq])
+  const shown = useMemo(() => {
+    if (!needsControl || !fill) return pairs   // whole interface fits → show everything
+    return pairs.filter((p) => fill.rowSet.has(p.pos1) && fill.colSet.has(p.pos2))
+  }, [pairs, needsControl, fill])
   const { rows, cols, grid } = useMemo(() => {
     const rowMap = new Map(), colMap = new Map(), grid = new Map()
     for (const p of shown) {
@@ -87,8 +95,8 @@ export default function ContactMap({ pairs, total, leftLabel, rightLabel }) {
     const el = wrapRef.current
     if (!el || !rows.length || !cols.length) return
     const fit = () => {
-      const w = Math.max(14, Math.min(44, Math.floor((el.clientWidth - ROWHEAD_W) / cols.length)))
-      const h = Math.max(12, Math.min(40, Math.floor((el.clientHeight - COLHEAD_H) / rows.length)))
+      const w = Math.max(MIN_CELL_W, Math.min(44, Math.floor((el.clientWidth - ROWHEAD_W) / cols.length)))
+      const h = Math.max(MIN_CELL_H, Math.min(40, Math.floor((el.clientHeight - COLHEAD_H) / rows.length)))
       setCell({ w, h })
     }
     fit()
@@ -105,20 +113,20 @@ export default function ContactMap({ pairs, total, leftLabel, rightLabel }) {
     freq: `${p.freq}/${total}`,
     types: orderedBondLabels(p.bonds).join(', '),
   })
-  const hidden = pairs.length - shown.length
   return (
     <>
-      {needsFilter && (
+      {needsControl && (
         <div className="cm-controls">
           <label className="cm-minfreq">
-            <span>Min. frequency</span>
-            <input type="range" min={1} max={maxFreq} value={minFreq}
-                   onChange={(e) => onMinFreq(+e.target.value)} />
-            <b>≥{minFreq}</b>
+            <span>Contacts shown</span>
+            <span className="cm-range-end">fewer</span>
+            <input type="range" min={0.5} max={3} step={0.25} value={detail}
+                   onChange={(e) => setDetail(+e.target.value)} />
+            <span className="cm-range-end">more</span>
           </label>
           <span className="cm-controls-note">
-            {shown.length}/{pairs.length} pairs (seen in ≥{minFreq} of {total} instances)
-            {hidden > 0 && ` · ${hidden} rarer hidden — full list in the table`}
+            {shown.length} of {pairs.length} contacts · {rows.length}×{cols.length} most-conserved residues
+            {shown.length < pairs.length && ' · full list in the table'}
           </span>
         </div>
       )}
@@ -127,9 +135,7 @@ export default function ContactMap({ pairs, total, leftLabel, rightLabel }) {
         {leftLabel && <div className="cm-axis-y"><span>{leftLabel}</span></div>}
         <div className="cm-wrap" ref={wrapRef}>
           {!shown.length ? (
-            <p className="note" style={{ padding: 12, margin: 0 }}>
-              No contacts recur in ≥{minFreq} of {total} instances — lower the minimum frequency.
-            </p>
+            <p className="note" style={{ padding: 12, margin: 0 }}>No contacts for this interface group.</p>
           ) : (
           <table className="cm-table">
             <thead>

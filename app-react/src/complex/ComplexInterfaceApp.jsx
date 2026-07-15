@@ -482,10 +482,10 @@ export default function ComplexInterfaceApp({ config = {} }) {
             leftLabel={lab(current?.component_label_1)} rightLabel={lab(current?.component_label_2)} />
         </div>
         <div className="card ex-cell">
-          <h2>Contact frequency map <span className="h2-sub">· {lab(current?.component_label_1)} × {lab(current?.component_label_2)}</span></h2>
-          <p className="note">Each cell represents a residue–residue contact between the selected component copies.
-            Colour intensity indicates how often the contact is observed across deposited instances. Hover for
-            contact details.</p>
+          <h2>Conserved contact map <span className="h2-sub">· {lab(current?.component_label_1)} × {lab(current?.component_label_2)}</span></h2>
+          <p className="note">An overview of where the two component copies touch. Each cell is a residue–residue
+            contact, shaded by how often it recurs across deposited instances. For large interfaces the map shows
+            the most-conserved core that fits — use the slider to show more, or the table for the full list.</p>
           <ContactMap pairs={pairAgg} total={current?.instance_count}
             leftLabel={lab(current?.component_label_1)} rightLabel={lab(current?.component_label_2)} />
         </div>
