@@ -427,7 +427,7 @@ export default function ComplexInterfaceApp({ config = {} }) {
                 <tr><th>Instance <Hint text="Instance ID format: <pdb_id>_<assembly_id>_<interface_id> (e.g. 6r2o_1_1)." /></th><th>PDB ID</th>
                   <SortTh label="Method" k="experimental_method" />
                   <SortTh label="Res. (Å)" k="resolution" className="num" />
-                  <th>Chain 1</th><th>Chain 2</th>
+                  <th>Ch.1</th><th>Ch.2</th>
                   <SortTh label="BSA (Å²)" k="interface_area" className="num" /></tr>
               </thead>
               <tbody>
