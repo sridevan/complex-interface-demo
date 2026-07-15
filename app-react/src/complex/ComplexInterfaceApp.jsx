@@ -381,10 +381,10 @@ export default function ComplexInterfaceApp({ config = {} }) {
           <p className="note">This table lists the deposited structure instances of the selected equivalent
             interface. Resolution refers to the deposited structure resolution. Rows are sorted by buried
             surface area (BSA), largest first; click the Method, Resolution or BSA header to re-sort. Filter by
-            PDB id, method or a resolution range. Click a row to update the 3D view and plots.</p>
+            PDB ID, method or a resolution range. Click a row to update the 3D view and plots.</p>
           <div className="inst-filter">
             <input className="filter-input inst-filter-text" list="inst-methods" value={instFilter}
-              placeholder="Filter by PDB id or method…" onChange={(e) => setInstFilter(e.target.value)} />
+              placeholder="Filter by PDB ID or method…" onChange={(e) => setInstFilter(e.target.value)} />
             <datalist id="inst-methods">{instMethods.map((m) => <option key={m} value={m} />)}</datalist>
             <span className="inst-filter-res">Resolution
               <input type="number" step="0.1" min="0" className="filter-input res-in" placeholder="min"
@@ -396,7 +396,7 @@ export default function ComplexInterfaceApp({ config = {} }) {
           <div className="table-scroll ex-scroll">
             <table>
               <thead>
-                <tr><th>Instance <Hint text="Instance ID format: <entry_id>_<assembly_id>_<interface_id> (e.g. 6r2o_1_1)." /></th><th>Entry</th>
+                <tr><th>Instance <Hint text="Instance ID format: <pdb_id>_<assembly_id>_<interface_id> (e.g. 6r2o_1_1)." /></th><th>PDB ID</th>
                   <SortTh label="Method" k="experimental_method" />
                   <SortTh label="Resolution (Å)" k="resolution" className="num" />
                   <th>Chain 1</th><th>Chain 2</th>
