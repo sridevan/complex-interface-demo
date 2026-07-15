@@ -95,7 +95,7 @@ function buildGraph(rows, rightColorBy = 'region', singleLetter = false) {
 // Custom tooltip: for a ribbon, break down the residue–residue contact; for a node, summarise it.
 // linkInfo (breakdown by residue-name key) is passed as a prop — Recharts preserves our own props
 // while it strips custom fields off the link datum, so we look the breakdown up by name.
-function SankeyTooltip({ active, payload, linkInfo }) {
+function SankeyTooltip({ active, payload, linkInfo, leftLabel, rightLabel, byComponent }) {
   if (!active || !payload || !payload.length) return null
   const item = payload[0]
   const d = item.payload
@@ -110,8 +110,8 @@ function SankeyTooltip({ active, payload, linkInfo }) {
     const value = info.value ?? item.value
     return (
       <div className="sankey-tip">
-        <div className="st-head">{info.agChain != null ? `${info.agChain}:` : ''}{agName} <span className="st-sub">({info.agClass})</span>
-          {'  —  '}{info.abChain != null ? `${info.abChain}:` : ''}{abName} <span className="st-sub">({info.abRegion})</span></div>
+        <div className="st-head">{info.agChain != null ? `${info.agChain}:` : ''}{agName} <span className="st-sub">({byComponent ? leftLabel : info.agClass})</span>
+          {'  —  '}{info.abChain != null ? `${info.abChain}:` : ''}{abName} <span className="st-sub">({byComponent ? rightLabel : info.abRegion})</span></div>
         <div className="st-row"><b>{value}</b> bond{value === 1 ? '' : 's'}</div>
         <div className="st-types">{Object.entries(info.types || {}).sort((a, b) => bondRank(a[0]) - bondRank(b[0]))
           .map(([t, c]) => `${bondLabel(t)} ×${c}`).join(', ') || '—'}</div>
@@ -121,7 +121,8 @@ function SankeyTooltip({ active, payload, linkInfo }) {
   // Node hover — Recharts wraps a node as { x, y, …, payload: <node> }, so our custom fields
   // (chain, sub, name) live on d.payload, not d itself.
   const node = (d && d.payload) || {}
-  return <div className="sankey-tip"><b>{node.chain != null ? `${node.chain}:` : ''}{node.name || nameStr}</b>{node.sub ? ` (${node.sub})` : ''} · {item.value} bonds</div>
+  const sub = byComponent ? (node.kind === 'ag' ? leftLabel : rightLabel) : node.sub
+  return <div className="sankey-tip"><b>{node.chain != null ? `${node.chain}:` : ''}{node.name || nameStr}</b>{sub ? ` (${sub})` : ''} · {item.value} bonds</div>
 }
 
 function SankeyNode({ x, y, width, height, index, payload, onNodeClick, onMouseEnter, onMouseLeave, onMouseMove }) {
@@ -181,7 +182,7 @@ export default function SankeyContacts({ rows, onNodeClick, leftLabel = 'antigen
             link={{ stroke: '#b9c0c9', strokeOpacity: 0.35 }}
             margin={{ top: 8, bottom: 8, left: 70, right: 90 }}
           >
-            <Tooltip content={<SankeyTooltip linkInfo={data.linkInfo} />} />
+            <Tooltip content={<SankeyTooltip linkInfo={data.linkInfo} leftLabel={leftLabel} rightLabel={rightLabel} byComponent={rightColorBy === 'aaclass'} />} />
           </Sankey>
         </ResponsiveContainer>
       </div>
