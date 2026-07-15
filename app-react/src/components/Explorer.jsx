@@ -7,6 +7,13 @@ import ContactHeatmap from './ContactHeatmap.jsx'
 import { Pager } from './Pager.jsx'
 import SortIcon from './SortIcon.jsx'
 import Hint from './Hint.jsx'
+import { REGION_COLORS } from '../data.js'
+
+const REGION_SHORT = { 'CDR-H1': 'CDR1', 'CDR-H2': 'CDR2', 'CDR-H3': 'CDR3', 'Framework-H': 'FR',
+  'CDR-L1': 'CDR1', 'CDR-L2': 'CDR2', 'CDR-L3': 'CDR3', 'Framework-L': 'FR' }
+const RegionChip = ({ region }) => region
+  ? <span className="reg-chip" style={{ '--rc': REGION_COLORS[region] || '#888' }} title={region}>{REGION_SHORT[region] || region}</span>
+  : <span className="note">—</span>
 
 const COMPLEX_ID = 'PDB-CPX-140202'
 const INST_PAGE_SIZE = 25
@@ -137,12 +144,13 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
       const inst = `${r.pdb_id}|${r.assembly_id}|${r.interface_id}`; insts.add(inst)
       const k = `${r.antigen_uniprot_position}|${r.antibody_imgt_position}`
       if (!m.has(k)) m.set(k, { pos1: r.antigen_uniprot_position, res1: r.antigen_residue_name,
-        pos2: r.antibody_imgt_position, res2: r.antibody_residue_name, insts: new Set(), bonds: new Set() })
+        pos2: r.antibody_imgt_position, res2: r.antibody_residue_name, region: r.antibody_imgt_region,
+        insts: new Set(), bonds: new Set() })
       const e = m.get(k); e.insts.add(inst)
       for (const bt of Object.keys(r.interaction_types || {})) e.bonds.add(bt)
     }
     return { pairs: [...m.values()].map((e) => ({ pos1: e.pos1, res1: e.res1, pos2: e.pos2, res2: e.res2,
-      freq: e.insts.size, bonds: [...e.bonds] })), total: insts.size }
+      region: e.region, freq: e.insts.size, bonds: [...e.bonds] })), total: insts.size }
   }, [residue, chainType])
 
   const nAntibodies = new Set(Object.values(sabdab).map((v) => v.sabdab_id)).size
@@ -298,7 +306,8 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
             {epiSel != null ? ' Filtered to the antigen residue selected in the map — click it again to clear.'
               : ' Contact types are listed strongest first; use the filter to show only pairs with a given interaction type.'}</p>
           <ContactPairTable pairs={epiSel != null ? pairAgg.pairs.filter((p) => p.pos1 === epiSel) : pairAgg.pairs}
-            total={pairAgg.total} leftLabel={AG_LABEL} rightLabel={AB_LABEL} />
+            total={pairAgg.total} leftLabel={AG_LABEL} rightLabel={AB_LABEL}
+            extraCol={{ label: 'Ab region', render: (p) => <RegionChip region={p.region} /> }} />
         </div>
         <ContactHeatmap residue={residue} chainType={chainType} selected={epiSel}
           onSelect={(pos) => setEpiSel((c) => (c === pos ? null : pos))} />
