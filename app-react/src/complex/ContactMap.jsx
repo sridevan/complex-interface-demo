@@ -3,11 +3,8 @@ import { orderedBondLabels } from '../components/bondTypes.js'
 
 const ROWHEAD_W = 50   // px reserved for row residue labels (matches .cm-rowhead width)
 const COLHEAD_H = 54   // px reserved for rotated column residue labels (matches .cm-colhead height)
-// Above ~this many residues on a side the grid becomes an unreadable scroll-fest of sub-pixel cells.
-// Large interfaces (a third of CCT's) blow past it, so we filter to the more-conserved contacts until
-// the grid fits — the singletons that inflate it are also the least informative cells, and the full
-// ranked list is always in the adjacent contact-pair table.
-const AXIS_TARGET = 100
+const MIN_CELL_W = 14  // smallest readable cell width  (matches the fit() clamp below)
+const MIN_CELL_H = 12  // smallest readable cell height (matches the fit() clamp below)
 
 const axisSizes = (pairs) => {
   const r = new Set(), c = new Set()
@@ -34,22 +31,44 @@ export default function ContactMap({ pairs, total, leftLabel, rightLabel }) {
 
   // Highest contact frequency actually present (may be < total — few contacts recur in *every* instance).
   const maxFreq = useMemo(() => pairs.reduce((m, p) => Math.max(m, p.freq), 1), [pairs])
-  // Does the full (unfiltered) grid overflow the readable envelope? If not, no filter control is needed.
   const full = useMemo(() => axisSizes(pairs), [pairs])
-  const needsFilter = full.rows > AXIS_TARGET || full.cols > AXIS_TARGET
-  // Auto-default threshold: the lowest min-frequency whose grid fits AXIS_TARGET per side (show as much
-  // as stays readable). If even the most-conserved contacts overflow, land on maxFreq and let it scroll.
+
+  // How many residues fit on each axis at the smallest readable cell size — measured from the actual map
+  // viewport (the card, capped by .cm-wrap's max-height), not a fixed number. ResizeObserver keeps it
+  // current as the layout changes. Null until first measured.
+  const [capacity, setCapacity] = useState(null)
+  useLayoutEffect(() => {
+    const el = wrapRef.current
+    if (!el) return
+    const measure = () => {
+      const maxCols = Math.max(4, Math.floor((el.clientWidth - ROWHEAD_W) / MIN_CELL_W))
+      const maxRows = Math.max(4, Math.floor((el.clientHeight - COLHEAD_H) / MIN_CELL_H))
+      setCapacity((c) => (c && c.maxCols === maxCols && c.maxRows === maxRows) ? c : { maxCols, maxRows })
+    }
+    measure()
+    const ro = new ResizeObserver(measure)
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
+
+  // Show the control only when the full grid can't fit the measured viewport.
+  const needsFilter = !!capacity && (full.rows > capacity.maxRows || full.cols > capacity.maxCols)
+  // Auto-default: the lowest min-frequency whose grid fits the viewport on both axes (show as much as
+  // fits without scrolling). If even the most-conserved contacts overflow, land on maxFreq.
   const autoMinFreq = useMemo(() => {
     if (!needsFilter) return 1
     for (let t = 2; t <= maxFreq; t++) {
       const s = axisSizes(pairs.filter((p) => p.freq >= t))
-      if (s.rows <= AXIS_TARGET && s.cols <= AXIS_TARGET) return t
+      if (s.rows <= capacity.maxRows && s.cols <= capacity.maxCols) return t
     }
     return maxFreq
-  }, [pairs, needsFilter, maxFreq])
+  }, [pairs, needsFilter, maxFreq, capacity])
+
   const [minFreq, setMinFreq] = useState(1)
-  // Reset to the auto-default whenever the interface (its pairs) changes.
-  useEffect(() => { setMinFreq(autoMinFreq) }, [autoMinFreq])
+  const userSet = useRef(false)  // once the user drags the slider, stop auto-overriding it
+  useEffect(() => { userSet.current = false }, [pairs])            // new interface → auto again
+  useEffect(() => { if (!userSet.current) setMinFreq(autoMinFreq) }, [autoMinFreq])
+  const onMinFreq = (v) => { userSet.current = true; setMinFreq(v) }
 
   const shown = useMemo(() => pairs.filter((p) => p.freq >= minFreq), [pairs, minFreq])
   const { rows, cols, grid } = useMemo(() => {
@@ -94,7 +113,7 @@ export default function ContactMap({ pairs, total, leftLabel, rightLabel }) {
           <label className="cm-minfreq">
             <span>Min. frequency</span>
             <input type="range" min={1} max={maxFreq} value={minFreq}
-                   onChange={(e) => setMinFreq(+e.target.value)} />
+                   onChange={(e) => onMinFreq(+e.target.value)} />
             <b>≥{minFreq}</b>
           </label>
           <span className="cm-controls-note">
