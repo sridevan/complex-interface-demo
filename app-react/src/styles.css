@@ -228,6 +228,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
 /* Section bands: give the page a spine — ① one deposited instance → ② aggregate across all instances. */
 .section-band { display: flex; align-items: flex-start; gap: 12px; margin: 28px 0 12px; }
+.section-band.muted { opacity: 0.6; }  /* Section 2 withheld (too few instances to assess conservation) */
 .section-num { flex: 0 0 auto; width: 26px; height: 26px; border-radius: 50%; background: var(--accent);
   color: #fff; font-size: 14px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
 .section-title { font-size: 18px; margin: 2px 0 3px; font-weight: 600; }

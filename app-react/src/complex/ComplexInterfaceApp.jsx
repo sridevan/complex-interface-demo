@@ -125,6 +125,10 @@ const INST_CMP = {
 }
 const INST_DEFAULT_DIR = { experimental_method: 'asc', resolution: 'asc', interface_area: 'desc' }
 const INST_PAGE_SIZE = 25   // instance rows per page (generic app — some complexes have 100+ instances)
+// Section 2 measures how consistently contacts/properties recur ACROSS deposited structures, which
+// only means something with enough replicates. Below this, show a placeholder instead of a map/plots
+// that would read as "conserved" off a single structure (and avoid degenerate 1×N contact maps).
+const MIN_CONSERVATION_N = 3
 
 export default function ComplexInterfaceApp({ config = {} }) {
   // Everything else (complex id, organism, stoichiometry, component labels) is derived from the data,
@@ -373,7 +377,7 @@ export default function ComplexInterfaceApp({ config = {} }) {
                   {Chip(a.component_label_1)}<span className="chip-x">↔</span>{Chip(a.component_label_2)}
                 </div>
                 <div className="selcard-stats">
-                  <div><div className="v">{a.instance_count}</div><div className="k">deposited instances</div></div>
+                  <div><div className="v">{a.instance_count}</div><div className="k">deposited instance{a.instance_count === 1 ? '' : 's'}</div></div>
                   <div><div className="v">{a.median_bsa != null ? Math.round(a.median_bsa) : '—'}</div><div className="k">median BSA (Å²)</div></div>
                 </div>
               </div>
@@ -461,7 +465,21 @@ export default function ComplexInterfaceApp({ config = {} }) {
         </div>
       </div>
 
-      {/* Section 2 — everything here is aggregated across ALL deposited instances of this interface. */}
+      {/* Section 2 — aggregated across ALL deposited instances; only meaningful with enough replicates
+          (MIN_CONSERVATION_N), otherwise a placeholder explains why it's withheld. */}
+      {(current?.instance_count ?? 0) < MIN_CONSERVATION_N ? (
+        <div className="section-band muted">
+          <span className="section-num">2</span>
+          <div>
+            <h2 className="section-title">Conservation across deposited structures</h2>
+            <p className="section-sub">This equivalent interface appears in just {current?.instance_count} deposited
+              {current?.instance_count === 1 ? ' structure' : ' structures'} — at least {MIN_CONSERVATION_N} are
+              needed to show how consistently its contacts and properties recur. Explore the deposited
+              {current?.instance_count === 1 ? ' structure' : ' structures'} in the section above.</p>
+          </div>
+        </div>
+      ) : (
+      <>
       <div className="section-band">
         <span className="section-num">2</span>
         <div>
@@ -502,6 +520,8 @@ export default function ComplexInterfaceApp({ config = {} }) {
               areas are shown as binned distributions.</p>
           )} />
       </div>
+      </>
+      )}
     </div>
   )
 }

@@ -134,8 +134,14 @@ export default function ContactMap({ pairs, total, leftLabel, rightLabel }) {
       <div className="cm-mid">
         {leftLabel && <div className="cm-axis-y"><span>{leftLabel}</span></div>}
         <div className="cm-wrap" ref={wrapRef}>
-          {!shown.length ? (
-            <p className="note" style={{ padding: 12, margin: 0 }}>No contacts for this interface group.</p>
+          {(!shown.length || rows.length < 2 || cols.length < 2) ? (
+            // A single row or column isn't a 2-D map — one contact would balloon into a lone stripe.
+            // Point to the table, which lists these few contacts cleanly.
+            <p className="note" style={{ padding: 12, margin: 0 }}>
+              {!pairs.length
+                ? 'No contacts for this interface group.'
+                : `Too few contacting residues for a map — the ${pairs.length} contact${pairs.length === 1 ? ' is' : 's are'} listed in the table.`}
+            </p>
           ) : (
           <table className="cm-table">
             <thead>
