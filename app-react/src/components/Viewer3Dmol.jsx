@@ -5,6 +5,11 @@ const CIF_URL = (pdb) => `https://www.ebi.ac.uk/pdbe/entry-files/download/${pdb}
 
 const AG_CARBON = 0x4b7fcc  // antigen carbons – blue
 const AB_CARBON = 0xe19039  // antibody carbons – orange
+// Translucent per-chain surface tints (a light shade of each side's stick colour) so the two chain
+// bodies are distinguishable; kept pale so the brighter interface sticks still read on top.
+const AG_SURFACE = '#9cbde4'  // component-1 (blue) surface
+const AB_SURFACE = '#eec79a'  // component-2 (orange) surface
+const SURF_OPACITY = 0.42
 const CPK = { O: 0xd1392c, N: 0x3454d1, S: 0xe6b800, H: 0xeeeeee }
 
 // Colour scheme: carbons by side, heteroatoms by CPK (like histo.fyi's chemical read).
@@ -35,9 +40,12 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, hig
   const [err, setErr] = useState(null)
 
   // Show/hide the grey context volume (background) without recomputing the surface.
-  const applyBg = (v, surf, show) => {
-    if (!v || surf == null) return
-    try { v.setSurfaceMaterialStyle(surf, { opacity: show ? 0.3 : 0, color: '#dce0e6' }); v.render() } catch { /* noop */ }
+  const applyBg = (v, surfs, show) => {
+    if (!v || !surfs) return
+    for (const s of (Array.isArray(surfs) ? surfs : [{ surf: surfs, color: '#dce0e6' }])) {
+      try { v.setSurfaceMaterialStyle(s.surf, { opacity: show ? SURF_OPACITY : 0, color: s.color }) } catch { /* noop */ }
+    }
+    v.render()
   }
   const toggleBg = () => {
     const next = !showBgRef.current
@@ -128,14 +136,17 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, hig
         const ifaceSel = { or: groups.map((g) => ({ chain: g.chain, resi: g.resi })) }
         ifaceSelRef.current = ifaceSel
 
-        // A single soft-grey translucent surface for the surrounding structure ("the rest" as a
-        // volume), restricted to the region around the interface so it stays fast. The coloured
-        // sticks already convey antigen vs antibody, so a neutral volume reads cleanest.
-        const near = { within: { distance: 16, sel: ifaceSel } }
-        const surf = await viewer.addSurface($3Dmol.SurfaceType.VDW, { opacity: 0.3, color: '#dce0e6' }, near)
-        surfRef.current = surf
+        // Two translucent surfaces — one per side — each tinted a light shade of that side's colour,
+        // so the two chain bodies are distinguishable at a glance while the brighter interface sticks
+        // still read on top. Restricted to the region around the interface so it stays fast.
+        const near1 = { chain: agChains, within: { distance: 16, sel: ifaceSel } }
+        const near2 = { chain: abChains, within: { distance: 16, sel: ifaceSel } }
+        const surf1 = await viewer.addSurface($3Dmol.SurfaceType.VDW, { opacity: SURF_OPACITY, color: AG_SURFACE }, near1)
         if (cancelled) return
-        if (!showBgRef.current) applyBg(viewer, surf, false)  // respect the toggle across instances
+        const surf2 = await viewer.addSurface($3Dmol.SurfaceType.VDW, { opacity: SURF_OPACITY, color: AB_SURFACE }, near2)
+        surfRef.current = [{ surf: surf1, color: AG_SURFACE }, { surf: surf2, color: AB_SURFACE }]
+        if (cancelled) return
+        if (!showBgRef.current) applyBg(viewer, surfRef.current, false)  // respect the toggle across instances
 
         // Interacting residues as bright sticks on top (they sit forward of the translucent volumes),
         // plus the current highlight if a Sankey node is selected.
