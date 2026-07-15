@@ -191,6 +191,24 @@ export default function ComplexInterfaceApp({ config = {} }) {
     return { ag: [...ag.values()], ab: [...ab.values()] }
   }, [instContacts])
 
+  // Contact lines for the 3D overlay. Specific bonds: one line per atom–atom contact. vdW ("other"):
+  // collapse to one (shortest) line per residue pair so packing contacts don't become a hairball.
+  const viewerContacts = useMemo(() => {
+    const specific = [], vdwByPair = new Map()
+    for (const c of instContacts) {
+      if (!c.atom_id_1 || !c.atom_id_2) continue
+      const rec = { chain1: c.asym_id_1, resi1: c.auth_residue_number_1, atom1: c.atom_id_1,
+        chain2: c.asym_id_2, resi2: c.auth_residue_number_2, atom2: c.atom_id_2,
+        type: c.bond_type, distance: c.distance }
+      if (c.bond_type === 'other_bond') {
+        const k = `${c.asym_id_1}:${c.auth_residue_number_1}-${c.asym_id_2}:${c.auth_residue_number_2}`
+        const cur = vdwByPair.get(k)
+        if (!cur || (c.distance ?? 1e9) < (cur.distance ?? 1e9)) vdwByPair.set(k, rec)
+      } else specific.push(rec)
+    }
+    return { specific, vdw: [...vdwByPair.values()] }
+  }, [instContacts])
+
   // Aggregate residue–residue contacts across ALL instances of the selected interface group:
   // frequency = number of instances containing the (chain-1 residue, chain-2 residue) pair.
   const pairAgg = useMemo(() => {
@@ -335,7 +353,7 @@ export default function ComplexInterfaceApp({ config = {} }) {
           </div>
           {instance
             ? <Viewer3Dmol cifUrl={`${BASE}hemoglobin/cif/${instance.entry_id}_${instance.assembly_id}.cif`}
-                agResidues={iface.ag} abResidues={iface.ab}
+                agResidues={iface.ag} abResidues={iface.ab} contacts={viewerContacts}
                 highlight={highlight} onClearHighlight={() => setHighlight(null)} height={480} />
             : <p className="note">No instance selected.</p>}
         </div>

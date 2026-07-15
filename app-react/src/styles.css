@@ -75,6 +75,18 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .viewer-btn { padding: 5px 10px; font-size: 12px; background: #fff; border: 1px solid var(--border);
   border-radius: 6px; cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,0.14); }
 .viewer-btn:hover { background: #f0f3f7; }
+/* 3D contact-overlay legend (bottom-left of the viewer). */
+.viewer-legend { position: absolute; left: 8px; bottom: 8px; z-index: 5; background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.14); min-width: 150px; }
+.viewer-legend .vl-title { font-weight: 600; margin-bottom: 5px; }
+.viewer-legend .vl-row { display: flex; align-items: center; gap: 7px; margin: 3px 0; color: var(--text); }
+.viewer-legend .vl-muted { color: var(--muted); }
+.viewer-legend .vl-dash { width: 18px; height: 0; border-top: 3px dashed var(--c); flex: 0 0 auto; }
+.viewer-legend .vl-dash-vdw { border-top-width: 2px; }
+.viewer-legend .vl-check { cursor: pointer; margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--border); }
+.viewer-legend .vl-check input { margin: 0; }
+.viewer-legend .vl-note { color: var(--muted); font-size: 11px; margin-top: 3px; max-width: 160px; line-height: 1.35; }
 .selrow { cursor: pointer; }
 .selrow.sel { background: #eaf2fb; }
 .legend { font-size: 12px; color: var(--muted); margin: 8px 0; }

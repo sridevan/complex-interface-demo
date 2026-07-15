@@ -132,6 +132,9 @@ def main():
                     "asym_id_2": sb["label_asym_id"], "auth_residue_number_2": sb["author_residue_number"],
                     "residue_2": f"{sb['residue_name']}{sb['unp_num']}", "unp_num_2": sb["unp_num"],
                     "bond_type": r["interaction_type"],
+                    # Atom-level detail (drives the 3D contact-line overlay): the two contacting atoms
+                    # and their separation, oriented to match side 1 / side 2 above.
+                    "atom_id_1": sa["atom_id"], "atom_id_2": sb["atom_id"], "distance": r["distance"],
                 })
                 agg[agg_id]["contacts"][key][r["interaction_type"]].add(inst_id)
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { BOND_LABEL, BOND_COLOR, VDW_COLOR, bondRank } from './bondTypes.js'
 
 // PDBe updated mmCIF (author numbering matches the residue lists we pass in).
 const CIF_URL = (pdb) => `https://www.ebi.ac.uk/pdbe/entry-files/download/${pdb}_updated.cif`
@@ -25,7 +26,7 @@ const HL_COLOR = 0x12c9a6  // highlight teal for a Sankey-selected residue
 
 // residues: [{ chain: <author asym id>, resi: <author seq num> }]
 // cifUrl: optional explicit mmCIF URL (e.g. a local assembly file); falls back to the PDBe entry CIF.
-export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, highlight, onClearHighlight, height = 480 }) {
+export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, contacts, highlight, onClearHighlight, height = 480 }) {
   const hostRef = useRef(null)
   const viewerRef = useRef(null)
   const surfRef = useRef(null)
@@ -35,8 +36,13 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, hig
   const showBgRef = useRef(true)
   const labelsRef = useRef([])
   const showLabelsRef = useRef(false)
+  const contactShapesRef = useRef([])
+  const showContactsRef = useRef(false)
+  const showVdwRef = useRef(false)
   const [showBg, setShowBg] = useState(true)
   const [showLabels, setShowLabels] = useState(false)
+  const [showContacts, setShowContacts] = useState(false)
+  const [showVdw, setShowVdw] = useState(false)
   const [err, setErr] = useState(null)
 
   // Show/hide the grey context volume (background) without recomputing the surface.
@@ -52,6 +58,48 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, hig
     showBgRef.current = next
     setShowBg(next)
     applyBg(viewerRef.current, surfRef.current, next)
+  }
+
+  // ── Contact-line overlay ───────────────────────────────────────────────────────────────
+  // Draw each interface contact as a dashed cylinder between its two atoms. Specific bonds
+  // (H-bond, salt bridge, …) are coloured by type; van der Waals ("other") contacts are optional,
+  // drawn as one faint grey line per residue pair (endpoints = that pair's closest atom contact).
+  const clearContacts = (v) => {
+    for (const s of contactShapesRef.current) { try { v.removeShape(s) } catch { /* noop */ } }
+    contactShapesRef.current = []
+  }
+  const atomPos = (v, chain, resi, atom) => {
+    const model = v.getModel(); if (!model) return null
+    let a = model.selectedAtoms({ chain, resi, atom })
+    if (!a.length) a = model.selectedAtoms({ chain, resi })  // atom absent (e.g. no H) → residue centre
+    if (!a.length) return null
+    return { x: a[0].x, y: a[0].y, z: a[0].z }
+  }
+  const drawContacts = (v) => {
+    if (!v) return
+    clearContacts(v)
+    if (!showContactsRef.current || !contacts) { v.render(); return }
+    const lines = [...(contacts.specific || [])]
+    if (showVdwRef.current) lines.push(...(contacts.vdw || []))
+    for (const c of lines) {
+      const s = atomPos(v, c.chain1, c.resi1, c.atom1)
+      const e = atomPos(v, c.chain2, c.resi2, c.atom2)
+      if (!s || !e) continue
+      const vdw = c.type === 'other_bond'
+      contactShapesRef.current.push(v.addCylinder({
+        start: s, end: e, radius: vdw ? 0.04 : 0.07, color: vdw ? VDW_COLOR : (BOND_COLOR[c.type] || '#888'),
+        dashed: true, dashLength: vdw ? 0.12 : 0.28, gapLength: vdw ? 0.2 : 0.16, fromCap: 1, toCap: 1,
+      }))
+    }
+    v.render()
+  }
+  const toggleContacts = () => {
+    const n = !showContactsRef.current; showContactsRef.current = n; setShowContacts(n)
+    drawContacts(viewerRef.current)
+  }
+  const toggleVdw = () => {
+    const n = !showVdwRef.current; showVdwRef.current = n; setShowVdw(n)
+    drawContacts(viewerRef.current)
   }
 
   // Persistent residue labels (<chain>:<resname><resnum> (UNP|IMGT)) placed at each residue's CA.
@@ -125,6 +173,7 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, hig
         const viewer = viewerRef.current
         viewer.clear()
         labelsRef.current = []  // clear() removes any existing labels
+        contactShapesRef.current = []  // …and any existing contact cylinders
         const cif = await fetch(url).then((r) => r.text())
         if (cancelled) return
         viewer.addModel(cif, 'cif')
@@ -174,12 +223,13 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, hig
         viewer.zoom(1.2)  // push the interacting residues closer to the viewer
         viewer.render()
         if (showLabelsRef.current) addResidueLabels(viewer)  // respect the labels toggle across instances
+        drawContacts(viewer)  // respect the contacts toggle across instances
         setErr(null)
       } catch (e) { setErr(String(e)) }
     }
     run()
     return () => { cancelled = true }
-  }, [pdbId, cifUrl, agResidues, abResidues])
+  }, [pdbId, cifUrl, agResidues, abResidues, contacts])
 
   // When a Sankey node is clicked, re-apply styles with the highlight and bring it into view.
   useEffect(() => {
@@ -191,6 +241,9 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, hig
     }
     v.render()
   }, [highlight])
+
+  const presentTypes = [...new Set((contacts?.specific || []).map((c) => c.type))]
+    .sort((a, b) => bondRank(a) - bondRank(b))
 
   return (
     <>
@@ -209,7 +262,24 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, hig
                   title="Label the interacting residues (chain:resname+resnum)">
             {showLabels ? 'Hide residue labels' : 'Show residue labels'}
           </button>
+          <button className="viewer-btn" onClick={toggleContacts}
+                  title="Draw the interface contacts (H-bonds, salt bridges, …) as dashed lines">
+            {showContacts ? 'Hide contacts' : 'Show contacts'}
+          </button>
         </div>
+        {showContacts && (
+          <div className="viewer-legend">
+            <div className="vl-title">Interface contacts</div>
+            {presentTypes.length ? presentTypes.map((t) => (
+              <div key={t} className="vl-row"><span className="vl-dash" style={{ '--c': BOND_COLOR[t] }} />{BOND_LABEL[t]}</div>
+            )) : <div className="vl-row vl-muted">no specific bonds in this instance</div>}
+            <label className="vl-row vl-check">
+              <input type="checkbox" checked={showVdw} onChange={toggleVdw} />
+              <span className="vl-dash vl-dash-vdw" style={{ '--c': VDW_COLOR }} />van der Waals
+            </label>
+            <div className="vl-note">vdW = one faint line per residue pair</div>
+          </div>
+        )}
       </div>
       {err && <p className="note" style={{ color: '#b1442f' }}>{err}</p>}
     </>

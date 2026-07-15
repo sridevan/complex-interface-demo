@@ -6,6 +6,13 @@ export const BOND_LABEL = {
   covalent_bond: 'covalent bond', other_bond: 'other bond',
 }
 
+// Colours for the 3D contact-line overlay — distinct from the blue/orange chain colours and from
+// each other. "other" (van der Waals) uses a neutral grey since it isn't a specific bond.
+export const BOND_COLOR = {
+  hydrogen_bond: '#e8a400', salt_bridge: '#d24b9c', disulfide_bond: '#2e9e6b', covalent_bond: '#8a5cd0',
+}
+export const VDW_COLOR = '#9aa3ad'
+
 const BOND_ORDER = ['covalent_bond', 'disulfide_bond', 'salt_bridge', 'hydrogen_bond', 'other_bond']
 // Rank for sorting; unknown types fall to the end.
 export const bondRank = (b) => { const i = BOND_ORDER.indexOf(b); return i === -1 ? BOND_ORDER.length : i }

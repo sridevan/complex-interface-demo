@@ -75,6 +75,7 @@ def parse_side(bd, s, i):
         "residue_name": arr_get(bd, f"atom_site_{s}_residues", i),
         "author_residue_number": to_int(arr_get(bd, f"atom_site_{s}_seq_nums", i)),
         "author_insertion_code": blank_ins(arr_get(bd, f"atom_site_{s}_inscodes", i)),
+        "atom_id": (arr_get(bd, f"atom_site_{s}_label_atom_ids", i) or "").strip(),  # PDB atom name (e.g. NZ)
         "label_asym_id": arr_get(bd, f"atom_site_{s}_label_asym_ids", i),  # LABEL chain id
         "label_residue_number": to_int(arr_get(bd, f"atom_site_{s}_label_seq_ids", i)),
         "unp_acc": arr_get(bd, f"atom_site_{s}_unp_accs", i),         # UniProt acc (SPARSE/unreliable)
