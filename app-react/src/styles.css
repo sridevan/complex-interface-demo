@@ -182,6 +182,12 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
 /* Residue × residue contact-map heatmap */
 .cm-wrap { overflow: auto; max-height: 520px; border: 1px solid var(--border); border-radius: 8px; }
+/* Min-frequency filter shown only when the residue grid is too large to read unfiltered. */
+.cm-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; flex-wrap: wrap; font-size: 12px; }
+.cm-minfreq { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-weight: 600; }
+.cm-minfreq input[type=range] { width: 118px; accent-color: #7a3f9d; }
+.cm-minfreq b { color: var(--text); font-variant-numeric: tabular-nums; min-width: 22px; }
+.cm-controls-note { color: var(--muted); }
 .cm-table { border-collapse: separate; border-spacing: 0; }
 .cm-corner { position: sticky; left: 0; top: 0; z-index: 3; background: #fff; width: 50px; }
 .cm-colhead { height: 54px; vertical-align: bottom; padding: 2px 0; text-align: center;
