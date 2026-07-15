@@ -77,6 +77,9 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
 .viewer { width: 100%; height: 560px; border: 1px solid var(--border); border-radius: 8px; position: relative; overflow: hidden; }
 .viewer-wrap { position: relative; width: 100%; }
+/* Fullscreen: fill the screen and let the canvas host grow to match (overrides the inline height). */
+.viewer-wrap:fullscreen { height: 100vh !important; width: 100vw; background: #fff; }
+.viewer-wrap:fullscreen .viewer { height: 100% !important; border-radius: 0; }
 .viewer-btns { position: absolute; top: 8px; right: 8px; z-index: 5; display: flex; gap: 6px; }
 .viewer-btn { padding: 5px 10px; font-size: 12px; background: #fff; border: 1px solid var(--border);
   border-radius: 6px; cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,0.14); }

@@ -48,6 +48,26 @@ export default function Viewer3Dmol({ pdbId, cifUrl, cifFallbackUrl, agResidues,
   const [showVdw, setShowVdw] = useState(false)
   const [contactTip, setContactTip] = useState(null)
   const [err, setErr] = useState(null)
+  const frameRef = useRef(null)          // the .viewer-wrap element we put into fullscreen
+  const [isFull, setIsFull] = useState(false)
+
+  // Fullscreen the viewer frame (canvas + its controls). On enter/exit the WebGL canvas must be
+  // resized to the new box, else 3Dmol keeps rendering at the old dimensions.
+  const toggleFullscreen = () => {
+    const el = frameRef.current
+    if (!el) return
+    if (document.fullscreenElement) document.exitFullscreen?.()
+    else el.requestFullscreen?.()
+  }
+  useEffect(() => {
+    const onChange = () => {
+      setIsFull(document.fullscreenElement === frameRef.current)
+      const v = viewerRef.current
+      if (v) setTimeout(() => { try { v.resize(); v.render() } catch { /* noop */ } }, 80)
+    }
+    document.addEventListener('fullscreenchange', onChange)
+    return () => document.removeEventListener('fullscreenchange', onChange)
+  }, [])
 
   // Show/hide the grey context volume (background) without recomputing the surface.
   const applyBg = (v, surfs, show) => {
@@ -303,10 +323,14 @@ export default function Viewer3Dmol({ pdbId, cifUrl, cifFallbackUrl, agResidues,
 
   return (
     <>
-      <div className="viewer-wrap" style={{ height }}>
+      <div className="viewer-wrap" ref={frameRef} style={{ height }}>
         <div ref={hostRef} className="viewer" style={{ height }}
              onMouseMove={(e) => { mouseRef.current = { x: e.clientX, y: e.clientY } }} />
         <div className="viewer-btns">
+          <button className="viewer-btn" onClick={toggleFullscreen}
+                  title="View the structure fullscreen">
+            {isFull ? 'Exit fullscreen' : 'Fullscreen'}
+          </button>
           <button className="viewer-btn" onClick={recenter}
                   title="Re-centre the view on the interacting residues">
             Centre view
