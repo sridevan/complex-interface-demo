@@ -335,7 +335,8 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, con
               {isVdw
                 ? <div>{c.res1} — {c.res2}</div>
                 : <div>{c.res1} <b>{c.atom1}</b> — {c.res2} <b>{c.atom2}</b></div>}
-              {c.distance != null && <div><span className="cm-tip-sub">{isVdw ? 'closest approach' : 'distance'}</span> {c.distance} Å</div>}
+              {/* Distance is only meaningful for a specific bond (a defined atom pair), not for vdW. */}
+              {!isVdw && c.distance != null && <div><span className="cm-tip-sub">distance</span> {c.distance} Å</div>}
             </div>
           )
         })()}
