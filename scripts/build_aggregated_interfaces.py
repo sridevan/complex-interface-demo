@@ -81,7 +81,7 @@ def main():
         for r in recs:
             by_if[r["interface_id"]].append(r)
         for iid, brs in by_if.items():
-            chains = {s[k] for r in brs for s, k in ((r["side1"], "label_asym_id"), (r["side2"], "label_asym_id"))} - {None}
+            chains = {s[k] for r in brs for s, k in ((r["side1"], "chain_id"), (r["side2"], "chain_id"))} - {None}
             if len(chains) != 2:
                 continue
             cls = {c: inst.get((pdb, asm, c)) for c in chains}
@@ -122,14 +122,14 @@ def main():
                 agg[agg_id]["solv"].append(props["solvation_energy"])
             # residue-residue contacts, oriented A(class1) -> B(class2), UniProt numbering
             for r in brs:
-                sa, sb = (r["side1"], r["side2"]) if inst.get((pdb, asm, r["side1"]["label_asym_id"])) == classA \
+                sa, sb = (r["side1"], r["side2"]) if inst.get((pdb, asm, r["side1"]["chain_id"])) == classA \
                     else (r["side2"], r["side1"])
                 key = (sa["unp_num"], sa["residue_name"], sb["unp_num"], sb["residue_name"])
                 contacts.append({
                     "interface_instance_id": inst_id, "agg_interface_id": agg_id,
-                    "asym_id_1": sa["label_asym_id"], "auth_residue_number_1": sa["author_residue_number"],
+                    "asym_id_1": sa["chain_id"], "auth_residue_number_1": sa["author_residue_number"],
                     "residue_1": f"{sa['residue_name']}{sa['unp_num']}", "unp_num_1": sa["unp_num"],
-                    "asym_id_2": sb["label_asym_id"], "auth_residue_number_2": sb["author_residue_number"],
+                    "asym_id_2": sb["chain_id"], "auth_residue_number_2": sb["author_residue_number"],
                     "residue_2": f"{sb['residue_name']}{sb['unp_num']}", "unp_num_2": sb["unp_num"],
                     "bond_type": r["interaction_type"],
                     # Atom-level detail (drives the 3D contact-line overlay): the two contacting atoms

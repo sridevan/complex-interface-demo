@@ -370,7 +370,7 @@ export default function ComplexInterfaceApp({ config = {} }) {
             <span className="dot" style={{ background: '#e19039' }} /> {lab(current?.component_label_2)}
           </div>
           {instance
-            ? <Viewer3Dmol cifUrl={`${BASE}hemoglobin/cif/${instance.entry_id}_${instance.assembly_id}.cif`}
+            ? <Viewer3Dmol cifUrl={`${BASE}${basePath}/cif/${instance.entry_id}_${instance.assembly_id}.cif`}
                 agResidues={iface.ag} abResidues={iface.ab} contacts={viewerContacts}
                 highlight={highlight} onClearHighlight={() => setHighlight(null)} height={480} />
             : <p className="note">No instance selected.</p>}

@@ -19,6 +19,7 @@ function Root() {
   if (route === '#spike') return <><BackLink /><App /></>
   // Generic interface-conservation view; the horse-hemoglobin dataset is just one basePath.
   if (route === '#hemoglobin') return <><BackLink /><ComplexInterfaceApp config={{ basePath: 'hemoglobin' }} /></>
+  if (route === '#cct') return <><BackLink /><ComplexInterfaceApp config={{ basePath: 'cct' }} /></>
   return <Landing />
 }
 

@@ -1,0 +1,130 @@
+[
+ {
+  "chain_class_id": "CC_143265_0001",
+  "pdb_complex_id": "PDB-CPX-143265",
+  "accession": "P17987",
+  "component_index": 1,
+  "component_label": "P17987-1",
+  "chain_order": 1
+ },
+ {
+  "chain_class_id": "CC_143265_0002",
+  "pdb_complex_id": "PDB-CPX-143265",
+  "accession": "P17987",
+  "component_index": 2,
+  "component_label": "P17987-2",
+  "chain_order": 2
+ },
+ {
+  "chain_class_id": "CC_143265_0003",
+  "pdb_complex_id": "PDB-CPX-143265",
+  "accession": "P78371",
+  "component_index": 1,
+  "component_label": "P78371-1",
+  "chain_order": 3
+ },
+ {
+  "chain_class_id": "CC_143265_0004",
+  "pdb_complex_id": "PDB-CPX-143265",
+  "accession": "P78371",
+  "component_index": 2,
+  "component_label": "P78371-2",
+  "chain_order": 4
+ },
+ {
+  "chain_class_id": "CC_143265_0005",
+  "pdb_complex_id": "PDB-CPX-143265",
+  "accession": "P50991",
+  "component_index": 1,
+  "component_label": "P50991-1",
+  "chain_order": 5
+ },
+ {
+  "chain_class_id": "CC_143265_0006",
+  "pdb_complex_id": "PDB-CPX-143265",
+  "accession": "P50991",
+  "component_index": 2,
+  "component_label": "P50991-2",
+  "chain_order": 6
+ },
+ {
+  "chain_class_id": "CC_143265_0007",
+  "pdb_complex_id": "PDB-CPX-143265",
+  "accession": "P48643",
+  "component_index": 1,
+  "component_label": "P48643-1",
+  "chain_order": 7
+ },
+ {
+  "chain_class_id": "CC_143265_0008",
+  "pdb_complex_id": "PDB-CPX-143265",
+  "accession": "P48643",
+  "component_index": 2,
+  "component_label": "P48643-2",
+  "chain_order": 8
+ },
+ {
+  "chain_class_id": "CC_143265_0009",
+  "pdb_complex_id": "PDB-CPX-143265",
+  "accession": "Q99832",
+  "component_index": 1,
+  "component_label": "Q99832-1",
+  "chain_order": 9
+ },
+ {
+  "chain_class_id": "CC_143265_0010",
+  "pdb_complex_id": "PDB-CPX-143265",
+  "accession": "Q99832",
+  "component_index": 2,
+  "component_label": "Q99832-2",
+  "chain_order": 10
+ },
+ {
+  "chain_class_id": "CC_143265_0011",
+  "pdb_complex_id": "PDB-CPX-143265",
+  "accession": "P49368",
+  "component_index": 1,
+  "component_label": "P49368-1",
+  "chain_order": 11
+ },
+ {
+  "chain_class_id": "CC_143265_0012",
+  "pdb_complex_id": "PDB-CPX-143265",
+  "accession": "P49368",
+  "component_index": 2,
+  "component_label": "P49368-2",
+  "chain_order": 12
+ },
+ {
+  "chain_class_id": "CC_143265_0013",
+  "pdb_complex_id": "PDB-CPX-143265",
+  "accession": "P50990",
+  "component_index": 1,
+  "component_label": "P50990-1",
+  "chain_order": 13
+ },
+ {
+  "chain_class_id": "CC_143265_0014",
+  "pdb_complex_id": "PDB-CPX-143265",
+  "accession": "P50990",
+  "component_index": 2,
+  "component_label": "P50990-2",
+  "chain_order": 14
+ },
+ {
+  "chain_class_id": "CC_143265_0015",
+  "pdb_complex_id": "PDB-CPX-143265",
+  "accession": "P40227",
+  "component_index": 1,
+  "component_label": "P40227-1",
+  "chain_order": 15
+ },
+ {
+  "chain_class_id": "CC_143265_0016",
+  "pdb_complex_id": "PDB-CPX-143265",
+  "accession": "P40227",
+  "component_index": 2,
+  "component_label": "P40227-2",
+  "chain_order": 16
+ }
+]

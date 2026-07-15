@@ -1,0 +1,66 @@
+{
+ "P17987": {
+  "accession": "P17987",
+  "name": "T-complex protein 1 subunit alpha",
+  "gene": "TCP1",
+  "organism": "Homo sapiens",
+  "length": 556,
+  "function": "Component of the chaperonin-containing T-complex (TRiC), a molecular chaperone complex that assists the folding of actin, tubulin and other proteins upon ATP hydrolysis (PubMed:25467444, PubMed:36493755, PubMed:35449234, PubMed:37193829). The TRiC complex mediates the folding of WRAP53/TCAB1, thereby regulating telomere maintenance (PubMed:25467444). As part of the TRiC complex may play a role in the assembly of BBSome, a complex involved in ciliogenesis regulating transports vesicles to the cilia (PubMed:20080638)."
+ },
+ "P78371": {
+  "accession": "P78371",
+  "name": "T-complex protein 1 subunit beta",
+  "gene": "CCT2",
+  "organism": "Homo sapiens",
+  "length": 535,
+  "function": "Component of the chaperonin-containing T-complex (TRiC), a molecular chaperone complex that assists the folding of actin, tubulin and other proteins upon ATP hydrolysis (PubMed:25467444, PubMed:36493755, PubMed:35449234, PubMed:37193829). The TRiC complex mediates the folding of WRAP53/TCAB1, thereby regulating telomere maintenance (PubMed:25467444). As part of the TRiC complex may play a role in the assembly of BBSome, a complex involved in ciliogenesis regulating transports vesicles to the cilia (PubMed:20080638)."
+ },
+ "P50991": {
+  "accession": "P50991",
+  "name": "T-complex protein 1 subunit delta",
+  "gene": "CCT4",
+  "organism": "Homo sapiens",
+  "length": 539,
+  "function": "Component of the chaperonin-containing T-complex (TRiC), a molecular chaperone complex that assists the folding of actin, tubulin and other proteins upon ATP hydrolysis (PubMed:25467444, PubMed:36493755, PubMed:35449234, PubMed:37193829). The TRiC complex mediates the folding of WRAP53/TCAB1, thereby regulating telomere maintenance (PubMed:25467444). As part of the TRiC complex may play a role in the assembly of BBSome, a complex involved in ciliogenesis regulating transports vesicles to the cilia (PubMed:20080638)."
+ },
+ "P48643": {
+  "accession": "P48643",
+  "name": "T-complex protein 1 subunit epsilon",
+  "gene": "CCT5",
+  "organism": "Homo sapiens",
+  "length": 541,
+  "function": "Component of the chaperonin-containing T-complex (TRiC), a molecular chaperone complex that assists the folding of actin, tubulin and other proteins upon ATP hydrolysis (PubMed:25467444, PubMed:36493755, PubMed:35449234, PubMed:37193829). The TRiC complex mediates the folding of WRAP53/TCAB1, thereby regulating telomere maintenance (PubMed:25467444). As part of the TRiC complex may play a role in the assembly of BBSome, a complex involved in ciliogenesis regulating transports vesicles to the cilia (PubMed:20080638)."
+ },
+ "Q99832": {
+  "accession": "Q99832",
+  "name": "T-complex protein 1 subunit eta",
+  "gene": "CCT7",
+  "organism": "Homo sapiens",
+  "length": 543,
+  "function": "Component of the chaperonin-containing T-complex (TRiC), a molecular chaperone complex that assists the folding of actin, tubulin and other proteins upon ATP hydrolysis (PubMed:25467444, PubMed:36493755, PubMed:35449234, PubMed:37193829). The TRiC complex mediates the folding of WRAP53/TCAB1, thereby regulating telomere maintenance (PubMed:25467444)."
+ },
+ "P49368": {
+  "accession": "P49368",
+  "name": "T-complex protein 1 subunit gamma",
+  "gene": "CCT3",
+  "organism": "Homo sapiens",
+  "length": 545,
+  "function": "Component of the chaperonin-containing T-complex (TRiC), a molecular chaperone complex that assists the folding of actin, tubulin and other proteins upon ATP hydrolysis (PubMed:25467444, PubMed:36493755, PubMed:35449234, PubMed:37193829). The TRiC complex mediates the folding of WRAP53/TCAB1, thereby regulating telomere maintenance (PubMed:25467444). As part of the TRiC complex may play a role in the assembly of BBSome, a complex involved in ciliogenesis regulating transports vesicles to the cilia (PubMed:20080638)."
+ },
+ "P50990": {
+  "accession": "P50990",
+  "name": "T-complex protein 1 subunit theta",
+  "gene": "CCT8",
+  "organism": "Homo sapiens",
+  "length": 548,
+  "function": "Component of the chaperonin-containing T-complex (TRiC), a molecular chaperone complex that assists the folding of actin, tubulin and other proteins upon ATP hydrolysis (PubMed:25467444, PubMed:36493755, PubMed:35449234, PubMed:37193829). The TRiC complex mediates the folding of WRAP53/TCAB1, thereby regulating telomere maintenance (PubMed:25467444). As part of the TRiC complex may play a role in the assembly of BBSome, a complex involved in ciliogenesis regulating transports vesicles to the cilia (PubMed:20080638)."
+ },
+ "P40227": {
+  "accession": "P40227",
+  "name": "T-complex protein 1 subunit zeta",
+  "gene": "CCT6A",
+  "organism": "Homo sapiens",
+  "length": 531,
+  "function": "Component of the chaperonin-containing T-complex (TRiC), a molecular chaperone complex that assists the folding of actin, tubulin and other proteins upon ATP hydrolysis (PubMed:25467444, PubMed:36493755, PubMed:35449234, PubMed:37193829). The TRiC complex mediates the folding of WRAP53/TCAB1, thereby regulating telomere maintenance (PubMed:25467444)."
+ }
+}

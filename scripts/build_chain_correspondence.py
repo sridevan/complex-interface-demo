@@ -108,10 +108,13 @@ def main():
 
     # Map each representative chain to a UniProt accession via SIFTS on the deposited (base) chain.
     sifts = requests.get(SIFTS.format(pdb=rep["pdb_id"]), timeout=30).json()[rep["pdb_id"]]["UniProt"]
+    # Key by AUTH chain_id: cc.csv (and hence the chain instances + everything the interface data
+    # joins against) use auth chain ids, which differ from struct_asym/label ids when a structure's
+    # deposited auth labels aren't A,B,C… (e.g. CCT uses a,e,z). They coincide for haemoglobin.
     base_to_acc = {}
     for acc, info in sifts.items():
         for s in info["mappings"]:
-            base_to_acc[s.get("struct_asym_id")] = acc
+            base_to_acc[s.get("chain_id")] = acc
     chain_acc = {}
     for ch in rep_chains:
         acc = base_to_acc.get(base_chain(ch))

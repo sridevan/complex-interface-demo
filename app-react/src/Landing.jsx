@@ -16,6 +16,14 @@ const COMPLEXES = [
       + 'residue–residue contacts, contact map, and PISA property distributions.',
     accent: '#c65a5a',
   },
+  {
+    hash: '#cct', title: 'Human CCT/TRiC — interface conservation',
+    sub: 'PDB-CPX-143265 · Homo sapiens · chaperonin-containing T-complex (16-mer, 8 subunits)',
+    body: 'Equivalent CCT subunit–subunit interfaces grouped across deposited cryo-EM assemblies '
+      + '(antibody-bound structures excluded) — selector, 3D viewer, instance table, residue–residue '
+      + 'contacts, contact map, and PISA property distributions.',
+    accent: '#3f8f5a',
+  },
 ]
 
 export default function Landing() {

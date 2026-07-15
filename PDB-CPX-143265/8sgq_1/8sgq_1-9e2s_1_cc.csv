@@ -1,0 +1,17 @@
+pdb_complex_id,asm_id1,asym_id1,asm_id2,asym_id2
+PDB-CPX-143265,8sgq_1,z,9e2s_1,I
+PDB-CPX-143265,8sgq_1,Z,9e2s_1,i
+PDB-CPX-143265,8sgq_1,a,9e2s_1,G
+PDB-CPX-143265,8sgq_1,g,9e2s_1,H
+PDB-CPX-143265,8sgq_1,h,9e2s_1,C
+PDB-CPX-143265,8sgq_1,q,9e2s_1,B
+PDB-CPX-143265,8sgq_1,A,9e2s_1,g
+PDB-CPX-143265,8sgq_1,G,9e2s_1,h
+PDB-CPX-143265,8sgq_1,H,9e2s_1,c
+PDB-CPX-143265,8sgq_1,Q,9e2s_1,b
+PDB-CPX-143265,8sgq_1,B,9e2s_1,e
+PDB-CPX-143265,8sgq_1,D,9e2s_1,f
+PDB-CPX-143265,8sgq_1,E,9e2s_1,d
+PDB-CPX-143265,8sgq_1,b,9e2s_1,E
+PDB-CPX-143265,8sgq_1,d,9e2s_1,F
+PDB-CPX-143265,8sgq_1,e,9e2s_1,D
