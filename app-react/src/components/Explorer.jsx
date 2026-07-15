@@ -3,7 +3,7 @@ import Viewer3Dmol from './Viewer3Dmol.jsx'
 import SankeyContacts from './SankeyContacts.jsx'
 import InterfacePropertyDistributions from './InterfacePropertyDistributions.jsx'
 import ContactPairTable from '../complex/ContactPairTable.jsx'
-import ContactMap from '../complex/ContactMap.jsx'
+import EpitopeRegionMap from './EpitopeRegionMap.jsx'
 import { Pager } from './Pager.jsx'
 import SortIcon from './SortIcon.jsx'
 import Hint from './Hint.jsx'
@@ -145,7 +145,7 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
 
   const nAntibodies = new Set(Object.values(sabdab).map((v) => v.sabdab_id)).size
   const sideName = chainType === 'heavy' ? 'heavy chain' : 'light chain'
-  const AG_LABEL = 'Epitope · antigen', AB_LABEL = `Paratope · antibody ${sideName}`
+  const AG_LABEL = 'Ag residue', AB_LABEL = 'Ab residue'
 
   const SortTh = ({ label, k, className }) => {
     const active = instSort.key === k
@@ -268,10 +268,10 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
 
         {/* Sankey for selected instance */}
         <div className="card ex-cell">
-          <h2>Paratope–epitope contacts <span className="h2-sub">· {selected ? `${selected.pdb_id} interface ${selected.interface_id}` : '—'}
+          <h2>Antigen–antibody contacts <span className="h2-sub">· {selected ? `${selected.pdb_id} interface ${selected.interface_id}` : '—'}
             {selected && selected.residue_contacts != null ? ` · ${selected.residue_contacts} residue contacts` : ''}</span></h2>
-          <p className="note">For the selected interface: epitope (antigen, UniProt) on the left, paratope (antibody,
-            IMGT) on the right. Click a residue to highlight it here and in the 3D view; click it again to clear.</p>
+          <p className="note">For the selected interface: antigen residues (UniProt) on the left, antibody residues
+            (IMGT) on the right. Click a residue to highlight it here and in the 3D view; click it again to clear.</p>
           <div className="sankey-scroll">
             <SankeyContacts rows={sankeyRows} onNodeClick={setHighlight} selected={highlight} />
           </div>
@@ -290,18 +290,19 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
 
       <div className="ex-row cm-row">
         <div className="card ex-cell">
-          <h2>Contact pair frequency <span className="h2-sub">· {AG_LABEL} ↔ {AB_LABEL}</span></h2>
-          <p className="note">Epitope residue (UniProt) ↔ paratope position (IMGT) contacts aggregated across all
-            antibody {sideName} interfaces. Frequency indicates how often each pair is observed. Contact types are
-            listed strongest first; use the filter to show only pairs with a given interaction type.</p>
+          <h2>Contact pair frequency <span className="h2-sub">· antibody {sideName}</span></h2>
+          <p className="note">Antigen residue (UniProt numbering) ↔ antibody residue (IMGT numbering) contacts,
+            aggregated across all antibody {sideName} interfaces. Frequency indicates how often each pair is observed.
+            Contact types are listed strongest first; use the filter to show only pairs with a given interaction type.</p>
           <ContactPairTable pairs={pairAgg.pairs} total={pairAgg.total} leftLabel={AG_LABEL} rightLabel={AB_LABEL} />
         </div>
         <div className="card ex-cell">
-          <h2>Conserved contact map <span className="h2-sub">· {AG_LABEL} × {AB_LABEL}</span></h2>
-          <p className="note">Residue–residue contact map between epitope (antigen) and paratope (antibody). Each cell
-            is a contact, shaded by the fraction of antibody interfaces in which it is observed. For large interfaces
-            the map shows the most-conserved core that fits — use the slider to show more, or the table for the full list.</p>
-          <ContactMap pairs={pairAgg.pairs} total={pairAgg.total} leftLabel={AG_LABEL} rightLabel={AB_LABEL} />
+          <h2>Epitope × antibody-region map <span className="h2-sub">· antibody {sideName}</span></h2>
+          <p className="note">Epitope residues (rows) against the antibody's IMGT regions (columns) — individual
+            paratope positions are accumulated into their CDR / framework region. Each cell is shaded by the fraction
+            of antibody {sideName} interfaces in which that epitope residue contacts that region; residue-level detail
+            is in the table on the left.</p>
+          <EpitopeRegionMap residue={residue} chainType={chainType} total={pairAgg.total} leftLabel={AG_LABEL} />
         </div>
       </div>
 
