@@ -99,7 +99,9 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 /* Row 1: narrow selector cards + wide Mol* viewer. Row 2: even 50/50 split. */
 .ex-row { display: grid; gap: 16px; margin-bottom: 16px; }
 .ex-row1 { grid-template-columns: minmax(280px, 1fr) 1.9fr; }
-.ex-row2 { grid-template-columns: 1fr 1fr; }
+/* minmax(0,1fr) (not bare 1fr) so a wide table can't stretch its column past the equal half — it
+   scrolls inside its cell instead, keeping both cards the same width (and matching the cm-row). */
+.ex-row2 { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 /* both instances table + Sankey get identical dimensions; each scrolls internally so the
    tall single-interface Sankey no longer balloons the row (mirrors the ex-row3 pattern). */
 .ex-row2 > .card { height: 600px; }
@@ -113,7 +115,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .ex-row3 { grid-template-columns: 1fr 1fr; }
 .ex-row3 > .card { display: flex; flex-direction: column; height: 640px; }
 .ex-row3 .ex-scroll, .ex-row3 .hm-wrap { flex: 1 1 auto; min-height: 0; height: auto; max-height: none; }
-.ex-cell { margin-bottom: 0; display: flex; flex-direction: column; }
+.ex-cell { margin-bottom: 0; display: flex; flex-direction: column; min-width: 0; }
 .ex-scroll { max-height: 380px; overflow: auto; }
 @media (max-width: 900px) { .ex-row1, .ex-row2, .cm-row { grid-template-columns: 1fr; } }
 .selcards { display: grid; grid-template-columns: 1fr; gap: 12px; }  /* stacked vertically */
@@ -233,7 +235,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   font-size: 14px; color: #4b7fcc; letter-spacing: 0.3px; white-space: nowrap; }
 
 /* Equal-height contact row: both cards fixed height; their scroll areas flex to fill. */
-.cm-row { grid-template-columns: 1fr 1fr; }  /* in CSS (not inline) so the media query can collapse it */
+.cm-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }  /* in CSS (not inline) so the media query can collapse it */
 .cm-row > .card { height: 600px; }
 .cm-row .cm-scroll { flex: 1 1 auto; min-height: 0; max-height: none; overflow-y: auto; }
 .cm-row .cm-mid { flex: 1 1 auto; min-height: 0; }
