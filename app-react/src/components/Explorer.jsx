@@ -2,18 +2,11 @@ import React, { useEffect, useMemo, useState } from 'react'
 import Viewer3Dmol from './Viewer3Dmol.jsx'
 import SankeyContacts from './SankeyContacts.jsx'
 import InterfacePropertyDistributions from './InterfacePropertyDistributions.jsx'
-import ContactPairTable from '../complex/ContactPairTable.jsx'
 import ContactHeatmap from './ContactHeatmap.jsx'
+import { aggParatope, ParatopeConvergence } from './ComplexOverview.jsx'
 import { Pager } from './Pager.jsx'
 import SortIcon from './SortIcon.jsx'
 import Hint from './Hint.jsx'
-import { REGION_COLORS } from '../data.js'
-
-const REGION_SHORT = { 'CDR-H1': 'CDR1', 'CDR-H2': 'CDR2', 'CDR-H3': 'CDR3', 'Framework-H': 'FR',
-  'CDR-L1': 'CDR1', 'CDR-L2': 'CDR2', 'CDR-L3': 'CDR3', 'Framework-L': 'FR' }
-const RegionChip = ({ region }) => region
-  ? <span className="reg-chip" style={{ '--rc': REGION_COLORS[region] || '#888' }} title={region}>{REGION_SHORT[region] || region}</span>
-  : <span className="note">—</span>
 
 const COMPLEX_ID = 'PDB-CPX-140202'
 const INST_PAGE_SIZE = 25
@@ -133,29 +126,20 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
     return { ag: [...ag.values()], ab: [...ab.values()] }
   }, [sankeyRows])
 
-  // Section 2 — aggregate epitope×paratope contacts across ALL instances of the selected chain type.
-  // A "contact" is a (UniProt antigen residue, IMGT antibody position) pair; frequency = how many
-  // antibody interfaces show it. Paratope-only: both sides must be mapped.
-  const pairAgg = useMemo(() => {
-    const m = new Map(); const insts = new Set()
-    for (const r of residue) {
-      if (r.antibody_chain_type !== chainType) continue
-      if (r.antigen_uniprot_position == null || r.antibody_imgt_position == null) continue
-      const inst = `${r.pdb_id}|${r.assembly_id}|${r.interface_id}`; insts.add(inst)
-      const k = `${r.antigen_uniprot_position}|${r.antibody_imgt_position}`
-      if (!m.has(k)) m.set(k, { pos1: r.antigen_uniprot_position, res1: r.antigen_residue_name,
-        pos2: r.antibody_imgt_position, res2: r.antibody_residue_name, region: r.antibody_imgt_region,
-        insts: new Set(), bonds: new Set() })
-      const e = m.get(k); e.insts.add(inst)
-      for (const bt of Object.keys(r.interaction_types || {})) e.bonds.add(bt)
-    }
-    return { pairs: [...m.values()].map((e) => ({ pos1: e.pos1, res1: e.res1, pos2: e.pos2, res2: e.res2,
-      region: e.region, freq: e.insts.size, bonds: [...e.bonds] })), total: insts.size }
-  }, [residue, chainType])
+  // Section 2 — paratope convergence: antibody IMGT positions ranked by how often they contact the
+  // antigen, aggregated across ALL interfaces of the selected chain side. When an epitope residue is
+  // selected in the heatmap, re-aggregate over only the contacts to that residue.
+  const epiRows = useMemo(() => epiSel != null
+    ? residue.filter((r) => r.antigen_uniprot_position === epiSel) : residue, [residue, epiSel])
+  const abImgt = useMemo(() => aggParatope(epiRows, sabdab, 'all'), [epiRows, sabdab])
+  const epiLabel = useMemo(() => {
+    if (epiSel == null) return null
+    const r = residue.find((x) => x.antigen_uniprot_position === epiSel)
+    return r ? `${r.antigen_residue_name}${epiSel}` : `residue ${epiSel}`
+  }, [residue, epiSel])
 
   const nAntibodies = new Set(Object.values(sabdab).map((v) => v.sabdab_id)).size
   const sideName = chainType === 'heavy' ? 'heavy chain' : 'light chain'
-  const AG_LABEL = 'Ag residue', AB_LABEL = 'Ab residue'
 
   const SortTh = ({ label, k, className }) => {
     const active = instSort.key === k
@@ -292,23 +276,16 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
       <div className="section-band">
         <span className="section-num">2</span>
         <div>
-          <h2 className="section-title">Conservation across all antibodies</h2>
-          <p className="section-sub">How consistently each epitope–paratope contact recurs across every deposited
-            antibody {sideName} interface — independent of the single interface shown above.</p>
+          <h2 className="section-title">Where antibody recognition converges</h2>
+          <p className="section-sub">Aggregated across every deposited antibody {sideName} interface: which paratope
+            positions recur (left) and which epitope residues each antibody region engages (right). Click an epitope
+            residue in the map to see the paratope positions that contact it.</p>
         </div>
       </div>
 
       <div className="ex-row cm-row">
-        <div className="card ex-cell">
-          <h2>Contact pair frequency <span className="h2-sub">· antibody {sideName}</span></h2>
-          <p className="note">Antigen residue (UniProt numbering) ↔ antibody residue (IMGT numbering) contacts,
-            aggregated across all antibody {sideName} interfaces. Frequency indicates how often each pair is observed.
-            {epiSel != null ? ' Filtered to the antigen residue selected in the map — click it again to clear.'
-              : ' Contact types are listed strongest first; use the filter to show only pairs with a given interaction type.'}</p>
-          <ContactPairTable pairs={epiSel != null ? pairAgg.pairs.filter((p) => p.pos1 === epiSel) : pairAgg.pairs}
-            total={pairAgg.total} leftLabel={AG_LABEL} rightLabel={AB_LABEL}
-            extraCol={{ label: 'Ab region', render: (p) => <RegionChip region={p.region} /> }} />
-        </div>
+        <ParatopeConvergence abImgt={abImgt} weight="all" fixedSide={chainType}
+          epiFilter={epiLabel} onClearEpiFilter={() => setEpiSel(null)} />
         <ContactHeatmap residue={residue} chainType={chainType} selected={epiSel}
           onSelect={(pos) => setEpiSel((c) => (c === pos ? null : pos))} />
       </div>

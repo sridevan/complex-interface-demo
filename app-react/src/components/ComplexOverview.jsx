@@ -96,7 +96,7 @@ const contactCols = (variantMap, glycanMap, weight) => [
 
 // Recompute the paratope-convergence table (per antibody IMGT residue) client-side so it honours the
 // weighting toggle. In 'all' mode this reproduces aggregated_antibody_imgt_contacts.json exactly.
-function aggParatope(rows, lookup, weight) {
+export function aggParatope(rows, lookup, weight) {
   const m = new Map()
   for (const p of rows) {
     if (p.antibody_imgt_position == null) continue      // precomputed aggregate excludes unmapped
@@ -196,8 +196,9 @@ function Bar({ frac, color, children }) {
 }
 
 // ── Section 1: paratope convergence ────────────────────────────────────────────────────────────
-function ParatopeConvergence({ abImgt, weight }) {
-  const [side, setSide] = useState('all')  // 'all' | 'heavy' | 'light'
+export function ParatopeConvergence({ abImgt, weight, fixedSide, epiFilter, onClearEpiFilter }) {
+  const [sideState, setSide] = useState('all')  // 'all' | 'heavy' | 'light'
+  const side = fixedSide || sideState
   const rows = useMemo(() => abImgt
     .filter((r) => side === 'all' || r.antibody_chain_type === side)
     .sort((a, b) => b.total_antigen_contacts - a.total_antigen_contacts), [abImgt, side])
@@ -214,15 +215,21 @@ function ParatopeConvergence({ abImgt, weight }) {
         <a href={REGION_REF_URL} target="_blank" rel="noopener noreferrer">IMGT region</a>) ranked by how
         often they contact the antigen {byAb ? 'across distinct antibodies' : 'across all complexes'} — where recognition converges.</p>
       <div className="controls">
-        <label>Chain</label>
-        <span className="pill">
-          {['all', 'heavy', 'light'].map((s) => (
-            <button key={s} className={side === s ? 'active' : ''} onClick={() => setSide(s)}>
-              {s[0].toUpperCase() + s.slice(1)}</button>
-          ))}
-        </span>
+        {!fixedSide && <>
+          <label>Chain</label>
+          <span className="pill">
+            {['all', 'heavy', 'light'].map((s) => (
+              <button key={s} className={side === s ? 'active' : ''} onClick={() => setSide(s)}>
+                {s[0].toUpperCase() + s.slice(1)}</button>
+            ))}
+          </span>
+        </>}
         <span className="rowcount">{rows.length} IMGT positions</span>
       </div>
+      {epiFilter && (
+        <div className="filter-chip">Contacting antigen residue <b>{epiFilter}</b>
+          <button onClick={onClearEpiFilter}>clear ✕</button></div>
+      )}
       <div className="ex-scroll">
         <table>
           <thead>

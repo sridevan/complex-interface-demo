@@ -202,9 +202,9 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .cm-minfreq b { color: var(--text); font-variant-numeric: tabular-nums; min-width: 22px; }
 .cm-range-end { color: var(--muted); font-weight: 500; }
 .cm-controls-note { color: var(--muted); }
-/* ContactHeatmap (epitope × paratope) reused in the Explorer Section 2: fill the fixed-height card + scroll. */
+/* ContactHeatmap + ParatopeConvergence reused in the Explorer Section 2: fill the fixed-height card + scroll. */
 .cm-row > .card { display: flex; flex-direction: column; }
-.cm-row .hm-wrap { flex: 1 1 auto; min-height: 0; max-height: none; }
+.cm-row .hm-wrap, .cm-row .ex-scroll { flex: 1 1 auto; min-height: 0; max-height: none; }
 /* Antibody IMGT-region chip in the contact-pair table's "Ab region" column. */
 .reg-chip { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .02em; padding: 2px 8px;
   border-radius: 999px; background: color-mix(in srgb, var(--rc) 20%, transparent); color: var(--rc); }
