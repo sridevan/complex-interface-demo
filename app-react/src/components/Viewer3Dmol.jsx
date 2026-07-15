@@ -333,8 +333,8 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, con
               {/* vdW is a residue-level packing contact — no single atom pair is meaningful, so show
                   just the residues; specific bonds show the actual interacting atoms. */}
               {isVdw
-                ? <div>{c.res1} — {c.res2}</div>
-                : <div>{c.res1} <b>{c.atom1}</b> — {c.res2} <b>{c.atom2}</b></div>}
+                ? <div>{c.chain1}:{c.res1} — {c.chain2}:{c.res2}</div>
+                : <div>{c.chain1}:{c.res1} <b>{c.atom1}</b> — {c.chain2}:{c.res2} <b>{c.atom2}</b></div>}
               {/* Distance is only meaningful for a specific bond (a defined atom pair), not for vdW. */}
               {!isVdw && c.distance != null && <div><span className="cm-tip-sub">distance</span> {c.distance} Å</div>}
             </div>
