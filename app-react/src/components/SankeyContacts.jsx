@@ -85,6 +85,7 @@ function buildGraph(rows, rightColorBy = 'region', singleLetter = false) {
       value: info.value, types: info.types,
       minDist: isFinite(info.minDist) ? info.minDist : null,
       agClass: nodes[source].sub, abRegion: nodes[target].sub,
+      agChain: nodes[source].chain, abChain: nodes[target].chain,
     })
   }
   return { nodes, links, linkInfo }
@@ -109,8 +110,8 @@ function SankeyTooltip({ active, payload, linkInfo }) {
     const value = info.value ?? item.value
     return (
       <div className="sankey-tip">
-        <div className="st-head">{agName} <span className="st-sub">({info.agClass})</span>
-          {'  —  '}{abName} <span className="st-sub">({info.abRegion})</span></div>
+        <div className="st-head">{info.agChain != null ? `${info.agChain}:` : ''}{agName} <span className="st-sub">({info.agClass})</span>
+          {'  —  '}{info.abChain != null ? `${info.abChain}:` : ''}{abName} <span className="st-sub">({info.abRegion})</span></div>
         <div className="st-row"><b>{value}</b> bond{value === 1 ? '' : 's'}</div>
         <div className="st-types">{Object.entries(info.types || {}).sort((a, b) => bondRank(a[0]) - bondRank(b[0]))
           .map(([t, c]) => `${bondLabel(t)} ×${c}`).join(', ') || '—'}</div>
@@ -118,7 +119,7 @@ function SankeyTooltip({ active, payload, linkInfo }) {
     )
   }
   // Node hover
-  return <div className="sankey-tip"><b>{nameStr}</b>{d?.sub ? ` (${d.sub})` : ''} · {item.value} bonds</div>
+  return <div className="sankey-tip"><b>{d?.chain != null ? `${d.chain}:` : ''}{nameStr}</b>{d?.sub ? ` (${d.sub})` : ''} · {item.value} bonds</div>
 }
 
 function SankeyNode({ x, y, width, height, index, payload, onNodeClick }) {
