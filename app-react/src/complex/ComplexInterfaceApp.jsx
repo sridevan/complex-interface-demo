@@ -133,6 +133,9 @@ export default function ComplexInterfaceApp({ config = {} }) {
   const [selInst, setSelInst] = useState(null)
   const [highlight, setHighlight] = useState(null)  // residue clicked in the Sankey -> highlight in 3D
   const [filter, setFilter] = useState('')
+  const [instFilter, setInstFilter] = useState('')
+  const [resMin, setResMin] = useState('')
+  const [resMax, setResMax] = useState('')
   const [instSort, setInstSort] = useState({ key: 'interface_area', dir: 'desc' })
   const toggleInst = (key) => setInstSort((prev) =>
     prev.key === key ? { key, dir: prev.dir === 'asc' ? 'desc' : 'asc' } : { key, dir: INST_DEFAULT_DIR[key] })
@@ -274,6 +277,18 @@ export default function ComplexInterfaceApp({ config = {} }) {
   const pickAgg = (id) => { setSelAgg(id); setSelInst(null); setHighlight(null) }
   const selectInstance = (id) => { setSelInst(id); setHighlight(null) }
 
+  // Instances-table filter: PDB id or experimental method, plus an optional resolution range (Å).
+  const instMethods = [...new Set(instances.map((i) => i.experimental_method).filter(Boolean))].sort()
+  const instQ = instFilter.trim().toLowerCase()
+  const instRows = shownInstances.filter((i) => {
+    if (instQ && !`${i.entry_id || ''} ${i.experimental_method || ''}`.toLowerCase().includes(instQ)) return false
+    if (resMin !== '' && !(i.resolution != null && i.resolution >= +resMin)) return false
+    if (resMax !== '' && !(i.resolution != null && i.resolution <= +resMax)) return false
+    return true
+  })
+  const instFiltered = instQ !== '' || resMin !== '' || resMax !== ''
+  const clearInstFilters = () => { setInstFilter(''); setResMin(''); setResMax('') }
+
   return (
     <div className="wrap">
       <div className="page-head">
@@ -365,8 +380,19 @@ export default function ComplexInterfaceApp({ config = {} }) {
           <h2>Interface instances <span className="h2-sub">· {lab(current?.component_label_1)} ↔ {lab(current?.component_label_2)}</span></h2>
           <p className="note">This table lists the deposited structure instances of the selected equivalent
             interface. Resolution refers to the deposited structure resolution. Rows are sorted by buried
-            surface area (BSA), largest first; click the Method, Resolution or BSA header to re-sort. Click a
-            row to update the 3D view and plots.</p>
+            surface area (BSA), largest first; click the Method, Resolution or BSA header to re-sort. Filter by
+            PDB id, method or a resolution range. Click a row to update the 3D view and plots.</p>
+          <div className="inst-filter">
+            <input className="filter-input inst-filter-text" list="inst-methods" value={instFilter}
+              placeholder="Filter by PDB id or method…" onChange={(e) => setInstFilter(e.target.value)} />
+            <datalist id="inst-methods">{instMethods.map((m) => <option key={m} value={m} />)}</datalist>
+            <span className="inst-filter-res">Resolution
+              <input type="number" step="0.1" min="0" className="filter-input res-in" placeholder="min"
+                value={resMin} onChange={(e) => setResMin(e.target.value)} />–
+              <input type="number" step="0.1" min="0" className="filter-input res-in" placeholder="max"
+                value={resMax} onChange={(e) => setResMax(e.target.value)} />Å</span>
+            {instFiltered && <button className="cm-filter-clear" onClick={clearInstFilters}>clear</button>}
+          </div>
           <div className="table-scroll ex-scroll">
             <table>
               <thead>
@@ -377,7 +403,7 @@ export default function ComplexInterfaceApp({ config = {} }) {
                   <SortTh label="BSA (Å²)" k="interface_area" className="num" /></tr>
               </thead>
               <tbody>
-                {shownInstances.map((i) => (
+                {instRows.map((i) => (
                   <tr key={i.interface_instance_id}
                       className={'selrow' + (instance && i.interface_instance_id === instance.interface_instance_id ? ' sel' : '')}
                       onClick={() => selectInstance(i.interface_instance_id)}>
@@ -392,6 +418,7 @@ export default function ComplexInterfaceApp({ config = {} }) {
                 ))}
               </tbody>
             </table>
+            {instFiltered && !instRows.length && <p className="note" style={{ padding: '10px 2px 0' }}>No instances match these filters.</p>}
           </div>
         </div>
 

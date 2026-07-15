@@ -179,6 +179,12 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   font-size: 12px; cursor: pointer; padding: 0 4px; }
 .cm-filter-clear:hover { text-decoration: underline; }
 
+/* Instances-table filter (PDB id / method text + resolution range). */
+.inst-filter { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 8px; }
+.inst-filter .inst-filter-text { flex: 1 1 190px; padding: 6px 8px; box-sizing: border-box; }
+.inst-filter-res { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); white-space: nowrap; }
+.inst-filter .res-in { width: 60px; padding: 6px 6px; box-sizing: border-box; }
+
 /* Residue × residue contact-map heatmap */
 .cm-wrap { overflow: auto; max-height: 520px; border: 1px solid var(--border); border-radius: 8px; }
 .cm-table { border-collapse: separate; border-spacing: 0; }
