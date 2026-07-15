@@ -68,12 +68,32 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, con
     for (const s of contactShapesRef.current) { try { v.removeShape(s) } catch { /* noop */ } }
     contactShapesRef.current = []
   }
-  const atomPos = (v, chain, resi, atom) => {
+  // Resolve a contact's two endpoints to real atoms. Use PISA's exact atom when present; if it is
+  // missing (e.g. the structure has no hydrogens but PISA reported the donor H), fall back to the
+  // residue atom NEAREST the partner — so the line still lands on the contact, not a random atom.
+  const resolveEnds = (v, c) => {
     const model = v.getModel(); if (!model) return null
-    let a = model.selectedAtoms({ chain, resi, atom })
-    if (!a.length) a = model.selectedAtoms({ chain, resi })  // atom absent (e.g. no H) → residue centre
-    if (!a.length) return null
-    return { x: a[0].x, y: a[0].y, z: a[0].z }
+    const A = model.selectedAtoms({ chain: c.chain1, resi: c.resi1 })
+    const B = model.selectedAtoms({ chain: c.chain2, resi: c.resi2 })
+    if (!A.length || !B.length) return null
+    const heavy = (a) => a && a.elem !== 'H' && a.elem !== 'D'
+    const nearHeavy = (arr, to) => {
+      const pool = arr.filter(heavy), from = pool.length ? pool : arr
+      return from.reduce((best, a) => {
+        const d = (a.x - to.x) ** 2 + (a.y - to.y) ** 2 + (a.z - to.z) ** 2
+        return d < best.d ? { a, d } : best
+      }, { a: from[0], d: Infinity }).a
+    }
+    // PISA often names the donor HYDROGEN, but the sticks show only heavy atoms — so a line to an H
+    // floats off the visible stick. Snap each endpoint to its heavy atom (the N/O bearing the H): the
+    // nearest heavy atom of the residue to the partner. A heavy exact atom is used as-is; a missing
+    // atom uses the same nearest-heavy fallback.
+    const exA = A.find((a) => a.atom === c.atom1), exB = B.find((a) => a.atom === c.atom2)
+    const anchorB = heavy(exB) ? exB : (exB || B.find(heavy) || B[0])
+    const anchorA = heavy(exA) ? exA : (exA || A.find(heavy) || A[0])
+    const a = heavy(exA) ? exA : nearHeavy(A, anchorB)
+    const b = heavy(exB) ? exB : nearHeavy(B, anchorA)
+    return { s: { x: a.x, y: a.y, z: a.z }, e: { x: b.x, y: b.y, z: b.z } }
   }
   const drawContacts = (v) => {
     if (!v) return
@@ -82,12 +102,11 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, con
     const lines = [...(contacts.specific || [])]
     if (showVdwRef.current) lines.push(...(contacts.vdw || []))
     for (const c of lines) {
-      const s = atomPos(v, c.chain1, c.resi1, c.atom1)
-      const e = atomPos(v, c.chain2, c.resi2, c.atom2)
-      if (!s || !e) continue
+      const r = resolveEnds(v, c)
+      if (!r) continue
       const vdw = c.type === 'other_bond'
       contactShapesRef.current.push(v.addCylinder({
-        start: s, end: e, radius: vdw ? 0.04 : 0.07, color: vdw ? VDW_COLOR : (BOND_COLOR[c.type] || '#888'),
+        start: r.s, end: r.e, radius: vdw ? 0.04 : 0.07, color: vdw ? VDW_COLOR : (BOND_COLOR[c.type] || '#888'),
         dashed: true, dashLength: vdw ? 0.12 : 0.28, gapLength: vdw ? 0.2 : 0.16, fromCap: 1, toCap: 1,
       }))
     }
