@@ -118,16 +118,20 @@ function SankeyTooltip({ active, payload, linkInfo }) {
       </div>
     )
   }
-  // Node hover
-  return <div className="sankey-tip"><b>{d?.chain != null ? `${d.chain}:` : ''}{nameStr}</b>{d?.sub ? ` (${d.sub})` : ''} · {item.value} bonds</div>
+  // Node hover — Recharts wraps a node as { x, y, …, payload: <node> }, so our custom fields
+  // (chain, sub, name) live on d.payload, not d itself.
+  const node = (d && d.payload) || {}
+  return <div className="sankey-tip"><b>{node.chain != null ? `${node.chain}:` : ''}{node.name || nameStr}</b>{node.sub ? ` (${node.sub})` : ''} · {item.value} bonds</div>
 }
 
-function SankeyNode({ x, y, width, height, index, payload, onNodeClick }) {
+function SankeyNode({ x, y, width, height, index, payload, onNodeClick, onMouseEnter, onMouseLeave, onMouseMove }) {
   const isLeft = payload.kind === 'ag'   // antigen nodes are on the left
   const h = Math.max(height, 3)  // floor so 1-2 bond residues are still a visible bar
   const clickable = onNodeClick && payload.chain != null && payload.resi != null
   return (
-    <Layer key={`node-${index}`} style={{ cursor: clickable ? 'pointer' : 'default' }}
+    // Forward Recharts' hover handlers so the tooltip fires on node hover (a custom node otherwise drops them).
+    <Layer key={`node-${index}`} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} onMouseMove={onMouseMove}
+           style={{ cursor: clickable ? 'pointer' : 'default' }}
            onClick={clickable ? () => onNodeClick({ chain: payload.chain, resi: payload.resi, name: payload.name }) : undefined}>
       <Rectangle x={x} y={y} width={width} height={h} fill={payload.color} fillOpacity={0.95} />
       <text
