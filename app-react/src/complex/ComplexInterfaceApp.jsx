@@ -137,11 +137,9 @@ export default function ComplexInterfaceApp({ config = {} }) {
   // Everything else (complex id, organism, stoichiometry, component labels) is derived from the data,
   // so pointing this at another complex only needs a different basePath.
   const { basePath = 'hemoglobin', title = 'Aggregated Interface View', remoteCif = false } = config
-  // CIF source for the 3D viewer. When remoteCif is set, the assembly is fetched on demand from
-  // PDBe's model-server (biological assembly, author numbering) with RCSB as a fallback — so large
-  // assemblies stay out of the repo. Complexes whose deposited chains get relabelled by symmetry
-  // expansion (the on-the-fly auth ids wouldn't match our contact data) keep remoteCif off and load
-  // a bundled per-assembly CIF instead.
+  // CIF source for the 3D viewer. When remoteCif is set, the assembly is fetched on demand from RCSB
+  // (see cifSrc for why RCSB rather than PDBe) — so large assembly sets stay out of the repo. Otherwise
+  // load a bundled per-assembly CIF (used where the set is small enough to ship).
   // Remote assemblies come from RCSB, not PDBe's model-server: 3Dmol mis-parses the model-server's
   // SIFTS-annotated mmCIF (scatters atoms into a "." chain), whereas RCSB's assembly mmCIF parses
   // cleanly AND labels operator-generated copies with a hyphen (A-2) — matching our deposited data,

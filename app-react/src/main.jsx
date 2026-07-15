@@ -19,8 +19,7 @@ function Root() {
   if (route === '#spike') return <><BackLink /><App /></>
   // Generic interface-conservation view; the horse-hemoglobin dataset is just one basePath.
   if (route === '#hemoglobin') return <><BackLink /><ComplexInterfaceApp config={{ basePath: 'hemoglobin' }} /></>
-  // CCT assemblies are fetched on demand from PDBe's model-server (chains/numbering verified to match
-  // our contact data), so its CIFs aren't bundled — see remoteCif in ComplexInterfaceApp.
+  // CCT assemblies are fetched on demand from RCSB (see remoteCif/cifSrc), so its CIFs aren't bundled.
   if (route === '#cct') return <><BackLink /><ComplexInterfaceApp config={{ basePath: 'cct', remoteCif: true }} /></>
   if (route === '#arp23') return <><BackLink /><ComplexInterfaceApp config={{ basePath: 'arp23' }} /></>
   // Homodimer with 227 assemblies; CIFs (276MB) are fetched from RCSB at runtime (see remoteCif).
