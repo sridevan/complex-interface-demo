@@ -1,7 +1,10 @@
 import React, { useMemo, useState } from 'react'
 import SortIcon from '../components/SortIcon.jsx'
 import Hint from '../components/Hint.jsx'
+import { Pager, usePager } from '../components/Pager.jsx'
 import { bondRank, bondLabel, orderedBondLabels } from '../components/bondTypes.js'
+
+const PAGE_SIZE = 25
 
 // PISA classifies every interface atom–atom contact into one of these types (this dataset only
 // contains hydrogen bonds, salt bridges and "other"; disulfide/covalent do not occur here).
@@ -49,6 +52,8 @@ export default function ContactPairTable({ pairs, total, leftLabel, rightLabel }
 
   const q = typeFilter.trim().toLowerCase()
   const shown = q ? sorted.filter((p) => p.bonds.some((b) => bondLabel(b).toLowerCase().includes(q))) : sorted
+  // Page the (possibly hundreds of) rows; reset to page 1 when the interface, sort or filter changes.
+  const pg = usePager(shown, PAGE_SIZE, [pairs, sort.key, sort.dir, q])
 
   const Th = ({ label, k, className }) => {
     const active = sort.key === k
@@ -83,7 +88,7 @@ export default function ContactPairTable({ pairs, total, leftLabel, rightLabel }
             </tr>
           </thead>
           <tbody>
-            {shown.map((p) => {
+            {pg.pageItems.map((p) => {
               const key = `${p.pos1}|${p.pos2}`
               const pct = total ? p.freq / total : 0
               return (
@@ -102,6 +107,7 @@ export default function ContactPairTable({ pairs, total, leftLabel, rightLabel }
         </table>
         {q && !shown.length && <p className="note" style={{ padding: '10px 2px 0' }}>No pairs make a “{typeFilter.trim()}” interaction.</p>}
       </div>
+      <Pager {...pg} unit="pairs" />
     </>
   )
 }

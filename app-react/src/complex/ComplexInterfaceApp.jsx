@@ -4,6 +4,7 @@ import SankeyContacts from '../components/SankeyContacts.jsx'
 import InterfacePropertyDistributions from '../components/InterfacePropertyDistributions.jsx'
 import ContactPairTable from './ContactPairTable.jsx'
 import ContactMap from './ContactMap.jsx'
+import { Pager } from '../components/Pager.jsx'
 import SortIcon from '../components/SortIcon.jsx'
 import Hint from '../components/Hint.jsx'
 import '../styles.css'
@@ -123,6 +124,7 @@ const INST_CMP = {
   interface_area: (a, b) => (a.interface_area ?? -Infinity) - (b.interface_area ?? -Infinity),
 }
 const INST_DEFAULT_DIR = { experimental_method: 'asc', resolution: 'asc', interface_area: 'desc' }
+const INST_PAGE_SIZE = 25   // instance rows per page (generic app — some complexes have 100+ instances)
 
 export default function ComplexInterfaceApp({ config = {} }) {
   // Everything else (complex id, organism, stoichiometry, component labels) is derived from the data,
@@ -146,8 +148,12 @@ export default function ComplexInterfaceApp({ config = {} }) {
   const [resMin, setResMin] = useState('')
   const [resMax, setResMax] = useState('')
   const [instSort, setInstSort] = useState({ key: 'interface_area', dir: 'desc' })
+  const [instPage, setInstPage] = useState(0)
   const toggleInst = (key) => setInstSort((prev) =>
     prev.key === key ? { key, dir: prev.dir === 'asc' ? 'desc' : 'asc' } : { key, dir: INST_DEFAULT_DIR[key] })
+  // Reset the instances table to page 1 whenever its list is re-derived (interface, filter or sort).
+  // Declared here (before the loading-guard early return) to keep hook order stable.
+  useEffect(() => { setInstPage(0) }, [selAgg, instFilter, resMin, resMax, instSort.key, instSort.dir])
 
   useEffect(() => {
     Promise.all([load(basePath, 'aggregated_interface'), load(basePath, 'interface'),
@@ -300,6 +306,12 @@ export default function ComplexInterfaceApp({ config = {} }) {
   })
   const instFiltered = instQ !== '' || resMin !== '' || resMax !== ''
   const clearInstFilters = () => { setInstFilter(''); setResMin(''); setResMax('') }
+  // Page the instances table (plain slicing, not the usePager hook, since it sits after the
+  // loading-guard early return above — its page state lives in instPage at the top of the component).
+  const instPageCount = Math.max(1, Math.ceil(instRows.length / INST_PAGE_SIZE))
+  const instPageIdx = Math.min(instPage, instPageCount - 1)
+  const instFrom = instPageIdx * INST_PAGE_SIZE
+  const instPaged = instRows.slice(instFrom, instFrom + INST_PAGE_SIZE)
 
   return (
     <div className="wrap">
@@ -415,7 +427,7 @@ export default function ComplexInterfaceApp({ config = {} }) {
                   <SortTh label="BSA (Å²)" k="interface_area" className="num" /></tr>
               </thead>
               <tbody>
-                {instRows.map((i) => (
+                {instPaged.map((i) => (
                   <tr key={i.interface_instance_id}
                       className={'selrow' + (instance && i.interface_instance_id === instance.interface_instance_id ? ' sel' : '')}
                       onClick={() => selectInstance(i.interface_instance_id)}>
@@ -432,6 +444,8 @@ export default function ComplexInterfaceApp({ config = {} }) {
             </table>
             {instFiltered && !instRows.length && <p className="note" style={{ padding: '10px 2px 0' }}>No instances match these filters.</p>}
           </div>
+          <Pager page={instPageIdx} pageCount={instPageCount} setPage={setInstPage}
+                 from={instFrom} to={instFrom + instPaged.length} total={instRows.length} unit="instances" />
         </div>
 
         {/* Row 2, Col 2 — Sankey for the selected instance */}
