@@ -370,7 +370,7 @@ export default function ComplexInterfaceApp({ config = {} }) {
           <div className="table-scroll ex-scroll">
             <table>
               <thead>
-                <tr><th>Instance <Hint text="Instance ID format: <entry_id>_<assembly_id>_<interface_id> (e.g. 6r2o_1_1)." /></th><th>Entry</th><th className="num">Assembly</th>
+                <tr><th>Instance <Hint text="Instance ID format: <entry_id>_<assembly_id>_<interface_id> (e.g. 6r2o_1_1)." /></th><th>Entry</th>
                   <SortTh label="Method" k="experimental_method" />
                   <SortTh label="Resolution (Å)" k="resolution" className="num" />
                   <th>Chain 1</th><th>Chain 2</th>
@@ -384,7 +384,6 @@ export default function ComplexInterfaceApp({ config = {} }) {
                     <td><code>{i.interface_instance_id}</code></td>
                     <td><a href={`https://www.ebi.ac.uk/pdbe/entry/pdb/${i.entry_id}`} target="_blank" rel="noreferrer"
                            onClick={(e) => e.stopPropagation()}>{i.entry_id}</a></td>
-                    <td className="num">{i.assembly_id}</td>
                     <td><span title={i.experimental_method || ''}>{(i.experimental_method || '').replace('X-ray diffraction', 'X-ray')}</span></td>
                     <td className="num">{i.resolution ?? '—'}</td>
                     <td>{i.asym_id_1}</td><td>{i.asym_id_2}</td>
