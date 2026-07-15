@@ -326,11 +326,16 @@ export default function Viewer3Dmol({ pdbId, cifUrl, agResidues, abResidues, con
           const s = { top: contactTip.y + 14 }
           if (contactTip.x > window.innerWidth * 0.72) s.right = window.innerWidth - contactTip.x + 14
           else s.left = contactTip.x + 14
+          const isVdw = c.type === 'other_bond'
           return (
             <div className="cm-tip" style={s}>
-              <div className="cm-tip-head">{c.type === 'other_bond' ? 'van der Waals contact' : BOND_LABEL[c.type]}</div>
-              <div>{c.res1} <b>{c.atom1}</b> — {c.res2} <b>{c.atom2}</b></div>
-              {c.distance != null && <div><span className="cm-tip-sub">distance</span> {c.distance} Å</div>}
+              <div className="cm-tip-head">{isVdw ? 'van der Waals contact' : BOND_LABEL[c.type]}</div>
+              {/* vdW is a residue-level packing contact — no single atom pair is meaningful, so show
+                  just the residues; specific bonds show the actual interacting atoms. */}
+              {isVdw
+                ? <div>{c.res1} — {c.res2}</div>
+                : <div>{c.res1} <b>{c.atom1}</b> — {c.res2} <b>{c.atom2}</b></div>}
+              {c.distance != null && <div><span className="cm-tip-sub">{isVdw ? 'closest approach' : 'distance'}</span> {c.distance} Å</div>}
             </div>
           )
         })()}
