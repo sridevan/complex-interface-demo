@@ -1,58 +1,48 @@
 import React from 'react'
 import './styles.css'
 
+// Landing cards show only: complex name, oligomeric state, PDB Complex ID, interface type, open link.
+// `nProto` (subunit count) orders the protein–protein complexes; antibody–antigen is forced last.
 const COMPLEXES = [
-  {
-    hash: '#spike', title: 'SARS-CoV-2 spike — antibody–antigen interfaces',
-    sub: 'PDB-CPX-140202 · Homo sapiens antibodies × spike glycoprotein',
-    body: 'Aggregated antibody–antigen interfaces: epitope communities, binding modes, per-antibody '
-      + 'IMGT paratope, and conformational-state analysis across the spike antibody structurome.',
-    accent: '#4b7fcc',
-  },
-  {
-    hash: '#hemoglobin', title: 'Horse hemoglobin — interface conservation',
-    sub: 'PDB-CPX-131443 · Equus caballus · α₂β₂ heterotetramer',
-    body: 'Equivalent interfaces grouped across deposited assemblies — selector, 3D viewer, instance table, '
-      + 'residue–residue contacts, contact map, and PISA property distributions.',
-    accent: '#c65a5a',
-  },
-  {
-    hash: '#cct', title: 'Human CCT/TRiC — interface conservation',
-    sub: 'PDB-CPX-143265 · Homo sapiens · chaperonin-containing T-complex (16-mer, 8 subunits)',
-    body: 'Equivalent CCT subunit–subunit interfaces grouped across deposited cryo-EM assemblies '
-      + '(antibody-bound structures excluded) — selector, 3D viewer, instance table, residue–residue '
-      + 'contacts, contact map, and PISA property distributions.',
-    accent: '#3f8f5a',
-  },
-  {
-    hash: '#arp23', title: 'Bovine Arp2/3 complex — interface conservation',
-    sub: 'PDB-CPX-110422 · Bos taurus · actin-related protein 2/3 complex (7 subunits)',
-    body: 'Equivalent subunit–subunit interfaces of the Arp2/3 actin-nucleation complex grouped across '
-      + 'deposited assemblies — selector, 3D viewer, instance table, residue–residue contacts, contact '
-      + 'map, and PISA property distributions.',
-    accent: '#7b5cd6',
-  },
-  {
-    hash: '#pygm', title: 'Glycogen phosphorylase — homodimer interface',
-    sub: 'PDB-CPX-129188 · Oryctolagus cuniculus · muscle glycogen phosphorylase (PYGM) homodimer',
-    body: 'The single homodimer interface aggregated across 227 deposited assemblies — selector, 3D viewer, '
-      + 'paginated instance table, residue–residue contacts, contact map, and PISA property distributions.',
-    accent: '#c98a2b',
-  },
+  { hash: '#spike', name: 'SARS-CoV-2 spike glycoprotein', oligomer: 'Homotrimer',
+    cpxId: 'PDB-CPX-140202', interfaceType: 'antibody-antigen', nProto: 3, accent: '#4b7fcc' },
+  { hash: '#hemoglobin', name: 'Horse haemoglobin', oligomer: 'Heterotetramer (α₂β₂)',
+    cpxId: 'PDB-CPX-131443', interfaceType: 'protein-protein', nProto: 4, accent: '#c65a5a' },
+  { hash: '#cct', name: 'Human CCT / TRiC chaperonin', oligomer: 'Hetero-16-mer (8 subunits × 2)',
+    cpxId: 'PDB-CPX-143265', interfaceType: 'protein-protein', nProto: 16, accent: '#3f8f5a' },
+  { hash: '#arp23', name: 'Bovine Arp2/3 complex', oligomer: 'Heteroheptamer (7 subunits)',
+    cpxId: 'PDB-CPX-110422', interfaceType: 'protein-protein', nProto: 7, accent: '#7b5cd6' },
+  { hash: '#pygm', name: 'Rabbit glycogen phosphorylase', oligomer: 'Homodimer',
+    cpxId: 'PDB-CPX-129188', interfaceType: 'protein-protein', nProto: 2, accent: '#c98a2b' },
 ]
+const IFACE_LABEL = {
+  'protein-protein': 'Protein–protein interfaces',
+  'antibody-antigen': 'Antibody–antigen interfaces',
+}
 
 export default function Landing() {
+  const cards = [...COMPLEXES].sort((a, b) => {
+    const aAb = a.interfaceType === 'antibody-antigen'
+    const bAb = b.interfaceType === 'antibody-antigen'
+    if (aAb !== bAb) return aAb ? 1 : -1   // antibody–antigen cards last
+    return a.nProto - b.nProto              // others by oligomeric state (subunit count)
+  })
   return (
     <div className="wrap">
       <h1>PDBe-KB Complexes — aggregated interfaces</h1>
       <p className="subtitle">Choose a complex to explore its aggregated interface view.</p>
       <div className="landing-grid">
-        {COMPLEXES.map((c) => (
+        {cards.map((c) => (
           <a key={c.hash} href={c.hash} className="landing-card" style={{ '--acc': c.accent }}>
             <div className="landing-accent" style={{ background: c.accent }} />
-            <h2>{c.title}</h2>
-            <p className="subtitle" style={{ marginTop: 2 }}>{c.sub}</p>
-            <p className="note">{c.body}</p>
+            <h2>{c.name}</h2>
+            <dl className="lc-meta">
+              <div><dt>Oligomeric state</dt><dd>{c.oligomer}</dd></div>
+              <div><dt>PDB Complex ID</dt><dd className="mono">{c.cpxId}</dd></div>
+              <div><dt>Interface type</dt>
+                <dd><span className={'lc-pill ' + (c.interfaceType === 'antibody-antigen' ? 'ab' : 'pp')}>
+                  {IFACE_LABEL[c.interfaceType]}</span></dd></div>
+            </dl>
             <div className="landing-go" style={{ color: c.accent }}>Open interface view →</div>
           </a>
         ))}
