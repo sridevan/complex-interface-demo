@@ -504,9 +504,10 @@ export default function ComplexInterfaceApp({ config = {} }) {
         </div>
         <div className="card ex-cell">
           <h2>Conserved contact map <span className="h2-sub">· {lab(current?.component_label_1)} × {lab(current?.component_label_2)}</span></h2>
-          <p className="note">An overview of where the two component copies touch. Each cell is a residue–residue
-            contact, shaded by how often it recurs across deposited instances. For large interfaces the map shows
-            the most-conserved core that fits — use the slider to show more, or the table for the full list.</p>
+          <p className="note">Residue–residue contact map for the interface between the two component copies. Each
+            cell marks a contacting residue pair, shaded by the fraction of deposited instances in which the contact
+            is observed. For large interfaces only the most-conserved contacts that fit the panel are shown — use
+            the slider to reveal more, or the table for the complete list.</p>
           <ContactMap pairs={pairAgg} total={current?.instance_count}
             leftLabel={lab(current?.component_label_1)} rightLabel={lab(current?.component_label_2)} />
         </div>
