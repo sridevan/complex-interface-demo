@@ -125,23 +125,27 @@ function SankeyTooltip({ active, payload, linkInfo, leftLabel, rightLabel, byCom
   return <div className="sankey-tip"><b>{node.chain != null ? `${node.chain}:` : ''}{node.name || nameStr}</b>{sub ? ` (${sub})` : ''} · {item.value} bonds</div>
 }
 
-function SankeyNode({ x, y, width, height, index, payload, onNodeClick, onMouseEnter, onMouseLeave, onMouseMove }) {
+function SankeyNode({ x, y, width, height, index, payload, onNodeClick, selected, onMouseEnter, onMouseLeave, onMouseMove }) {
   const isLeft = payload.kind === 'ag'   // antigen nodes are on the left
   const h = Math.max(height, 3)  // floor so 1-2 bond residues are still a visible bar
   const clickable = onNodeClick && payload.chain != null && payload.resi != null
+  // Selected node (clicked → also highlighted in 3D) gets a teal outline + bold label.
+  const isSel = selected && payload.chain === selected.chain && payload.resi === selected.resi
   return (
     // Forward Recharts' hover handlers so the tooltip fires on node hover (a custom node otherwise drops them).
     <Layer key={`node-${index}`} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} onMouseMove={onMouseMove}
            style={{ cursor: clickable ? 'pointer' : 'default' }}
            onClick={clickable ? () => onNodeClick({ chain: payload.chain, resi: payload.resi, name: payload.name }) : undefined}>
-      <Rectangle x={x} y={y} width={width} height={h} fill={payload.color} fillOpacity={0.95} />
+      <Rectangle x={x} y={y} width={width} height={h} fill={payload.color} fillOpacity={0.95}
+                 stroke={isSel ? '#12c9a6' : undefined} strokeWidth={isSel ? 3 : 0} />
       <text
         x={isLeft ? x - 5 : x + width + 5}
         y={y + height / 2}
         textAnchor={isLeft ? 'end' : 'start'}
         dominantBaseline="middle"
         fontSize={10}
-        fill="#333"
+        fontWeight={isSel ? 700 : 400}
+        fill={isSel ? '#0b8a74' : '#333'}
       >{payload.name}</text>
     </Layer>
   )
@@ -152,7 +156,7 @@ const LEGEND_AA = [['acidic', AA_COLOR.acidic], ['basic', AA_COLOR.basic],
 const LEGEND_REGION = [['CDR1', REGION_CLASS_COLOR.CDR1], ['CDR2', REGION_CLASS_COLOR.CDR2],
                        ['CDR3', REGION_CLASS_COLOR.CDR3], ['Framework', REGION_CLASS_COLOR.Framework]]
 
-export default function SankeyContacts({ rows, onNodeClick, leftLabel = 'antigen', rightLabel = 'antibody',
+export default function SankeyContacts({ rows, onNodeClick, selected, leftLabel = 'antigen', rightLabel = 'antibody',
                                          rightColorBy = 'region', singleLetter = false }) {
   const data = useMemo(() => buildGraph(rows || [], rightColorBy, singleLetter), [rows, rightColorBy, singleLetter])
   // Give every node room: ~24px of vertical space per node on the busier side so thin (low-bond)
@@ -168,7 +172,7 @@ export default function SankeyContacts({ rows, onNodeClick, leftLabel = 'antigen
         <ResponsiveContainer width="100%" height={height}>
           <Sankey
             data={data}
-            node={<SankeyNode onNodeClick={onNodeClick} />}
+            node={<SankeyNode onNodeClick={onNodeClick} selected={selected} />}
             nodePadding={14}
             nodeWidth={12}
             link={{ stroke: '#b9c0c9', strokeOpacity: 0.35 }}

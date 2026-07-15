@@ -427,9 +427,9 @@ export default function ComplexInterfaceApp({ config = {} }) {
           <h2>Residue–residue contacts{instance && <span className="h2-sub"> · {instance.entry_id} assembly {instance.assembly_id}, interface {instance.interface_id}</span>}</h2>
           <p className="note">For the selected instance: residues from the first component are shown on the left
             and residues from the second component on the right. Residue labels use UniProt numbering. Click a
-            residue or contact to highlight it in the 3D view.</p>
+            residue to highlight it here and in the 3D view.</p>
           <div className="sankey-scroll">
-            <SankeyContacts rows={sankeyRows} onNodeClick={setHighlight} rightColorBy="aaclass"
+            <SankeyContacts rows={sankeyRows} onNodeClick={setHighlight} selected={highlight} rightColorBy="aaclass"
               leftLabel={lab(current?.component_label_1)} rightLabel={lab(current?.component_label_2)} />
           </div>
         </div>
