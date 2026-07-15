@@ -146,6 +146,10 @@ export default function ComplexInterfaceApp({ config = {} }) {
     ? { cifUrl: `https://www.ebi.ac.uk/pdbe/model-server/v1/${inst.entry_id}/assembly?name=${inst.assembly_id}&encoding=cif`,
         cifFallbackUrl: `https://files.rcsb.org/download/${inst.entry_id}-assembly${inst.assembly_id}.cif` }
     : { cifUrl: `${BASE}${basePath}/cif/${inst.entry_id}_${inst.assembly_id}.cif` }
+  // Viewer chain-id normaliser. The model-server labels operator-generated chain copies with an
+  // underscore (A_2) where our deposited data uses a hyphen (A-2); normalise so 3Dmol atom selections
+  // match the remotely-fetched assembly. Identity for bundled complexes and chains without a suffix.
+  const vChain = (c) => (remoteCif && c) ? String(c).replace('-', '_') : c
   const [data, setData] = useState(null)
   const [selAgg, setSelAgg] = useState(null)
   const [selInst, setSelInst] = useState(null)
@@ -203,12 +207,12 @@ export default function ComplexInterfaceApp({ config = {} }) {
     const ag = new Map(), ab = new Map()
     for (const c of instContacts) {
       ag.set(`${c.asym_id_1}|${c.auth_residue_number_1}`, {
-        chain: c.asym_id_1, resi: c.auth_residue_number_1,
+        chain: vChain(c.asym_id_1), resi: c.auth_residue_number_1,
         label: `${c.asym_id_1}:${bareRes(c.residue_1)}${c.unp_num_1 ?? c.auth_residue_number_1} (UNP)`,
         short: `${c.asym_id_1}:${one(bareRes(c.residue_1))}${c.unp_num_1 ?? c.auth_residue_number_1}`,
       })
       ab.set(`${c.asym_id_2}|${c.auth_residue_number_2}`, {
-        chain: c.asym_id_2, resi: c.auth_residue_number_2,
+        chain: vChain(c.asym_id_2), resi: c.auth_residue_number_2,
         label: `${c.asym_id_2}:${bareRes(c.residue_2)}${c.unp_num_2 ?? c.auth_residue_number_2} (UNP)`,
         short: `${c.asym_id_2}:${one(bareRes(c.residue_2))}${c.unp_num_2 ?? c.auth_residue_number_2}`,
       })
@@ -222,8 +226,8 @@ export default function ComplexInterfaceApp({ config = {} }) {
     const specific = [], vdwByPair = new Map()
     for (const c of instContacts) {
       if (!c.atom_id_1 || !c.atom_id_2) continue
-      const rec = { chain1: c.asym_id_1, resi1: c.auth_residue_number_1, atom1: c.atom_id_1, res1: c.residue_1,
-        chain2: c.asym_id_2, resi2: c.auth_residue_number_2, atom2: c.atom_id_2, res2: c.residue_2,
+      const rec = { chain1: vChain(c.asym_id_1), resi1: c.auth_residue_number_1, atom1: c.atom_id_1, res1: c.residue_1,
+        chain2: vChain(c.asym_id_2), resi2: c.auth_residue_number_2, atom2: c.atom_id_2, res2: c.residue_2,
         type: c.bond_type, distance: c.distance }
       if (c.bond_type === 'other_bond') {
         const k = `${c.asym_id_1}:${c.auth_residue_number_1}-${c.asym_id_2}:${c.auth_residue_number_2}`

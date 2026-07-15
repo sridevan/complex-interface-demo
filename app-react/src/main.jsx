@@ -23,6 +23,9 @@ function Root() {
   // our contact data), so its CIFs aren't bundled — see remoteCif in ComplexInterfaceApp.
   if (route === '#cct') return <><BackLink /><ComplexInterfaceApp config={{ basePath: 'cct', remoteCif: true }} /></>
   if (route === '#arp23') return <><BackLink /><ComplexInterfaceApp config={{ basePath: 'arp23' }} /></>
+  // Homodimer with 227 assemblies; CIFs (276MB) are fetched from the model-server (symmetry copies
+  // labelled A_2 there vs A-2 in our data — the viewer normalises the delimiter). See remoteCif.
+  if (route === '#pygm') return <><BackLink /><ComplexInterfaceApp config={{ basePath: 'pygm', remoteCif: true }} /></>
   return <Landing />
 }
 

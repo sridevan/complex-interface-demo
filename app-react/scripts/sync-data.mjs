@@ -21,6 +21,7 @@ const COMPLEXES = [
   { cx: 'PDB-CPX-131443', name: 'hemoglobin', bundleCif: true },  // horse haemoglobin (α₂β₂)
   { cx: 'PDB-CPX-143265', name: 'cct', bundleCif: false },        // human CCT/TRiC chaperonin (16-mer)
   { cx: 'PDB-CPX-110422', name: 'arp23', bundleCif: true },       // bovine Arp2/3 complex (7 subunits)
+  { cx: 'PDB-CPX-129188', name: 'pygm', bundleCif: false },        // rabbit glycogen phosphorylase homodimer (227 assemblies, remote CIFs)
 ]
 for (const { cx, name, bundleCif } of COMPLEXES) {
   const srcDir = resolve(proc, cx)

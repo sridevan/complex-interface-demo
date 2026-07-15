@@ -1,0 +1,10 @@
+{
+ "P00489": {
+  "accession": "P00489",
+  "name": "Glycogen phosphorylase, muscle form",
+  "gene": "PYGM",
+  "organism": "Oryctolagus cuniculus",
+  "length": 843,
+  "function": "Allosteric enzyme that catalyzes the rate-limiting step in glycogen catabolism, the phosphorolytic cleavage of glycogen to produce glucose-1-phosphate, and plays a central role in maintaining cellular and organismal glucose homeostasis."
+ }
+}

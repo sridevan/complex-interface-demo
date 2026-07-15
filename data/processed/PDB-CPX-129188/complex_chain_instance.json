@@ -1,0 +1,3180 @@
+[
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1a8i",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1a8i",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1axr",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1axr",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1bx3",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1bx3",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1c50",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1c50",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1c8k",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1c8k",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1c8l",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1c8l",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1e1y",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1e1y",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1fs4",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1fs4",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1ftq",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1ftq",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1ftw",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1ftw",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1fty",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1fty",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1fu4",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1fu4",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1fu7",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1fu7",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1fu8",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1fu8",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1gfz",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1gfz",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1gg8",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1gg8",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1ggn",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1ggn",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1gpa",
+  "assembly_id": "2",
+  "asym_id": "B",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1gpa",
+  "assembly_id": "2",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1gpa",
+  "assembly_id": "3",
+  "asym_id": "C",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1gpa",
+  "assembly_id": "3",
+  "asym_id": "D",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1gpb",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1gpb",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1gpy",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1gpy",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1h5u",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1h5u",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1hlf",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1hlf",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1k06",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1k06",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1k08",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1k08",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1kti",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1kti",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1kti",
+  "assembly_id": "3",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1kti",
+  "assembly_id": "3",
+  "asym_id": "A-3",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1lwn",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1lwn",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1lwo",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1lwo",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1noi",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1noi",
+  "assembly_id": "1",
+  "asym_id": "B",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1noi",
+  "assembly_id": "2",
+  "asym_id": "D",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1noi",
+  "assembly_id": "2",
+  "asym_id": "C",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1noj",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1noj",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1nok",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1nok",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1p29",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1p29",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1p2b",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1p2b",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1p2d",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1p2d",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1p2g",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1p2g",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1p4g",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1p4g",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1p4h",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1p4h",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1p4j",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1p4j",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1uzu",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1uzu",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1wut",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1wut",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1wuy",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1wuy",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1wv0",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1wv0",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1wv1",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1wv1",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1ww2",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1ww2",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1ww3",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1ww3",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1xc7",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1xc7",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1xl0",
+  "assembly_id": "2",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1xl0",
+  "assembly_id": "2",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1xl1",
+  "assembly_id": "2",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1xl1",
+  "assembly_id": "2",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1z62",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1z62",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1z6p",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1z6p",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1z6q",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "1z6q",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2amv",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2amv",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2amv",
+  "assembly_id": "3",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2amv",
+  "assembly_id": "3",
+  "asym_id": "A-3",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2f3p",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2f3p",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2f3q",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2f3q",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2f3s",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2f3s",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2f3u",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2f3u",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2fet",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2fet",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2fet",
+  "assembly_id": "3",
+  "asym_id": "A-3",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2fet",
+  "assembly_id": "3",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2ff5",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2ff5",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2ff5",
+  "assembly_id": "3",
+  "asym_id": "A-3",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2ff5",
+  "assembly_id": "3",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2ffr",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2ffr",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2g9q",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2g9q",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2g9r",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2g9r",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2g9u",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2g9u",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2g9v",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2g9v",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2gj4",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2gj4",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2gm9",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2gm9",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2gpa",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2gpa",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2gpb",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2gpb",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2gpn",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2gpn",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2ieg",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2ieg",
+  "assembly_id": "1",
+  "asym_id": "B",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2iei",
+  "assembly_id": "1",
+  "asym_id": "B",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2iei",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2off",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2off",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2pri",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2pri",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2prj",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2prj",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2pyd",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2pyd",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2pyi",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2pyi",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qlm",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qlm",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qln",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qln",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qn1",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qn1",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qn2",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qn2",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qn3",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qn3",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qn7",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qn7",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qn8",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qn8",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qn9",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qn9",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qnb",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qnb",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qrg",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qrg",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qrh",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qrh",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qrm",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qrm",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qrp",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qrp",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qrq",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2qrq",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2skc",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2skc",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2skd",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2skd",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2ske",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "2ske",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3amv",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3amv",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3bcr",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3bcr",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3bcs",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3bcs",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3bcu",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3bcu",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3bd6",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3bd6",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3bd7",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3bd7",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3bd8",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3bd8",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3bda",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3bda",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3cut",
+  "assembly_id": "2",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3cut",
+  "assembly_id": "2",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3cuu",
+  "assembly_id": "2",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3cuu",
+  "assembly_id": "2",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3cuw",
+  "assembly_id": "2",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3cuw",
+  "assembly_id": "2",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3e3l",
+  "assembly_id": "1",
+  "asym_id": "B",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3e3l",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3e3l",
+  "assembly_id": "2",
+  "asym_id": "C",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3e3l",
+  "assembly_id": "2",
+  "asym_id": "D",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3e3n",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3e3n",
+  "assembly_id": "1",
+  "asym_id": "B",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3e3n",
+  "assembly_id": "2",
+  "asym_id": "D",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3e3n",
+  "assembly_id": "2",
+  "asym_id": "C",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3e3n",
+  "assembly_id": "3",
+  "asym_id": "F",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3e3n",
+  "assembly_id": "3",
+  "asym_id": "E",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3e3n",
+  "assembly_id": "4",
+  "asym_id": "H",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3e3n",
+  "assembly_id": "4",
+  "asym_id": "G",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3e3o",
+  "assembly_id": "1",
+  "asym_id": "B",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3e3o",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3e3o",
+  "assembly_id": "2",
+  "asym_id": "D",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3e3o",
+  "assembly_id": "2",
+  "asym_id": "C",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3ebo",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3ebo",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3ebp",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3ebp",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3g2h",
+  "assembly_id": "2",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3g2h",
+  "assembly_id": "2",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3g2i",
+  "assembly_id": "2",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3g2i",
+  "assembly_id": "2",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3g2j",
+  "assembly_id": "2",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3g2j",
+  "assembly_id": "2",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3g2k",
+  "assembly_id": "2",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3g2k",
+  "assembly_id": "2",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3g2l",
+  "assembly_id": "2",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3g2l",
+  "assembly_id": "2",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3g2n",
+  "assembly_id": "2",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3g2n",
+  "assembly_id": "2",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3gpb",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3gpb",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3l79",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3l79",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3l7a",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3l7a",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3l7b",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3l7b",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3l7c",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3l7c",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3l7d",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3l7d",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3mqf",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3mqf",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3mrt",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3mrt",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3mrv",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3mrv",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3mrx",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3mrx",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3ms2",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3ms2",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3ms4",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3ms4",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3ms7",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3ms7",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3msc",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3msc",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3mt7",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3mt7",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3mt8",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3mt8",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3mt9",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3mt9",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3mta",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3mta",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3mtb",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3mtb",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3mtd",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3mtd",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3nc4",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3nc4",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3np7",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3np7",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3np9",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3np9",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3npa",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3npa",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3s0j",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3s0j",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3sym",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3sym",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3syr",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3syr",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3t3d",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3t3d",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3t3e",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3t3e",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3t3g",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3t3g",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3t3h",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3t3h",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3t3i",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3t3i",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3zcp",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3zcp",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3zcq",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3zcq",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3zcr",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3zcr",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3zcs",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3zcs",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3zct",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3zct",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3zcu",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3zcu",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3zcv",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "3zcv",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4ctm",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4ctm",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4ctn",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4ctn",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4cto",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4cto",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4ej2",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4ej2",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4eke",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4eke",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4eky",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4eky",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4el0",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4el0",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4el5",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4el5",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4gpb",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4gpb",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4mho",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4mho",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4mhs",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4mhs",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4mi3",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4mi3",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4mi6",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4mi6",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4mi9",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4mi9",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4mic",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4mic",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4mra",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4mra",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4yua",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "4yua",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5gpb",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5gpb",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5jtt",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5jtt",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5jtu",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5jtu",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5lrc",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5lrc",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5lrd",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5lrd",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5lrf",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5lrf",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5mem",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5mem",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5o50",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5o50",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5o52",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5o52",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5o54",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5o54",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5o56",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5o56",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5owy",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5owy",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5owz",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5owz",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5ox1",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5ox1",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5ox3",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5ox3",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5ox4",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "5ox4",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6f3j",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6f3j",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6f3l",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6f3l",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6f3r",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6f3r",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6f3s",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6f3s",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6f3u",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6f3u",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6gpb",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6gpb",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6qa6",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6qa6",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6qa7",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6qa7",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6qa8",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6qa8",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6r0h",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6r0h",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6r0i",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6r0i",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6s4h",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6s4h",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6s4k",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6s4k",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6s4o",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6s4o",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6s4p",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6s4p",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6s4r",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6s4r",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6s51",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6s51",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6s52",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6s52",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6y55",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6y55",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6y5c",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6y5c",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6y5o",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6y5o",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6yve",
+  "assembly_id": "1",
+  "asym_id": "AAA-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "6yve",
+  "assembly_id": "1",
+  "asym_id": "AAA",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "7onf",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "7onf",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "7p7d",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "7p7d",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "7q5i",
+  "assembly_id": "1",
+  "asym_id": "AAA",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "7q5i",
+  "assembly_id": "1",
+  "asym_id": "AAA-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "8bzs",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "8bzs",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "8gpb",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "8gpb",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "8qmu",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "8qmu",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "8r52",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "8r52",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "8r53",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "8r53",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "8r6v",
+  "assembly_id": "1",
+  "asym_id": "A-2",
+  "chain_class_id": "CC_129188_0001"
+ },
+ {
+  "pdb_complex_id": "PDB-CPX-129188",
+  "entry_id": "8r6v",
+  "assembly_id": "1",
+  "asym_id": "A",
+  "chain_class_id": "CC_129188_0002"
+ }
+]

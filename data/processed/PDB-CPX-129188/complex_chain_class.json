@@ -1,0 +1,18 @@
+[
+ {
+  "chain_class_id": "CC_129188_0001",
+  "pdb_complex_id": "PDB-CPX-129188",
+  "accession": "P00489",
+  "component_index": 1,
+  "component_label": "P00489-1",
+  "chain_order": 1
+ },
+ {
+  "chain_class_id": "CC_129188_0002",
+  "pdb_complex_id": "PDB-CPX-129188",
+  "accession": "P00489",
+  "component_index": 2,
+  "component_label": "P00489-2",
+  "chain_order": 2
+ }
+]

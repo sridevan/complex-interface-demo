@@ -32,6 +32,13 @@ const COMPLEXES = [
       + 'map, and PISA property distributions.',
     accent: '#7b5cd6',
   },
+  {
+    hash: '#pygm', title: 'Glycogen phosphorylase — homodimer interface',
+    sub: 'PDB-CPX-129188 · Oryctolagus cuniculus · muscle glycogen phosphorylase (PYGM) homodimer',
+    body: 'The single homodimer interface aggregated across 227 deposited assemblies — selector, 3D viewer, '
+      + 'paginated instance table, residue–residue contacts, contact map, and PISA property distributions.',
+    accent: '#c98a2b',
+  },
 ]
 
 export default function Landing() {
