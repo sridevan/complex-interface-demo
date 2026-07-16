@@ -108,7 +108,7 @@ export default function ContactHeatmap({ residue, onSelect, selected, chainType 
           </thead>
           <tbody>
             {sorted.map((row) => (
-              <tr key={row.position} className={'selrow' + (row.position === selected ? ' sel' : '')}
+              <tr key={`${row.position}|${row.residue}`} className={'selrow' + (row.position === selected ? ' sel' : '')}
                   onClick={() => onSelect?.(row.position)}
                   title="Click to filter the aggregated contact table to this antigen residue">
                 <td className="hm-rowhead">{row.residue}{row.position}</td>

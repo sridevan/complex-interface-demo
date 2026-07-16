@@ -3,7 +3,7 @@ import Viewer3Dmol from './Viewer3Dmol.jsx'
 import SankeyContacts from './SankeyContacts.jsx'
 import InterfacePropertyDistributions from './InterfacePropertyDistributions.jsx'
 import ContactHeatmap from './ContactHeatmap.jsx'
-import { aggParatope, ParatopeConvergence } from './ComplexOverview.jsx'
+import { aggParatope, ParatopeConvergence } from './Paratope.jsx'
 import { Pager } from './Pager.jsx'
 import SortIcon from './SortIcon.jsx'
 import Hint from './Hint.jsx'
@@ -38,13 +38,16 @@ const INST_CMP = {
 }
 const INST_DEFAULT_DIR = { experimental_method: 'asc', resolution: 'asc', interface_area: 'desc' }
 
-function SelectorCard({ label, sub, color, count, medBsa, active, onClick }) {
+function SelectorCard({ abLabel, count, medBsa, active, onClick }) {
   return (
-    <div className={'selcard' + (active ? ' active' : '')} onClick={onClick} style={{ '--acc': color, cursor: 'pointer' }}>
-      <div className="selcard-title"><span className="dot" style={{ background: color }} />{label}</div>
-      {sub && <div className="note" style={{ margin: '2px 0 8px', fontSize: 12 }}>{sub}</div>}
+    <div className={'selcard' + (active ? ' active' : '')} onClick={onClick} style={{ '--acc': AB_COLOR, cursor: 'pointer' }}>
+      <div className="hemo-chips">
+        <span className="chip"><span className="dot" style={{ background: AG_COLOR }} />Spike</span>
+        <span className="chip-x">↔</span>
+        <span className="chip"><span className="dot" style={{ background: AB_COLOR }} />{abLabel}</span>
+      </div>
       <div className="selcard-stats">
-        <div><div className="v">{count}</div><div className="k">interface{count === 1 ? '' : 's'}</div></div>
+        <div><div className="v">{count}</div><div className="k">deposited interface{count === 1 ? '' : 's'}</div></div>
         <div><div className="v">{medBsa != null ? Math.round(medBsa) : '—'}</div><div className="k">median BSA (Å²)</div></div>
       </div>
     </div>
@@ -188,10 +191,10 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
           <p className="note">Antibody–antigen interfaces split by which antibody chain contacts the antigen.
             Select a side; cards are ranked below by buried surface area (BSA).</p>
           <div className="selcards">
-            <SelectorCard label="Antibody heavy chain" sub="antigen ↔ VH" color={AB_COLOR}
-              count={stats.heavy.count} medBsa={stats.heavy.med} active={chainType === 'heavy'} onClick={() => pickChain('heavy')} />
-            <SelectorCard label="Antibody light chain" sub="antigen ↔ VL" color={AG_COLOR}
-              count={stats.light.count} medBsa={stats.light.med} active={chainType === 'light'} onClick={() => pickChain('light')} />
+            <SelectorCard abLabel="Antibody VH" count={stats.heavy.count} medBsa={stats.heavy.med}
+              active={chainType === 'heavy'} onClick={() => pickChain('heavy')} />
+            <SelectorCard abLabel="Antibody VL" count={stats.light.count} medBsa={stats.light.med}
+              active={chainType === 'light'} onClick={() => pickChain('light')} />
           </div>
         </div>
 
