@@ -77,8 +77,9 @@ export default function ContactHeatmap({ residue, onSelect, selected, chainType 
     <div className="card">
       <h2>{title}</h2>
       <p className="note">Antigen residue × antibody IMGT region, aggregated across all structures.
-        ΣH / ΣL / Σ = heavy / light / total contacts per residue. Click a row to filter the contact
-        table (click again to clear).</p>
+        ΣH / ΣL / Σ = heavy / light / total contacts per residue. Click a <b>region cell</b> to filter the
+        contact table to that residue × region; click the <b>residue name</b> or <b>Σ</b> for all its regions
+        (click again to clear).</p>
       <div className="controls">
         <label>Value</label>
         <span className="pill">
@@ -107,28 +108,35 @@ export default function ContactHeatmap({ residue, onSelect, selected, chainType 
             </tr>
           </thead>
           <tbody>
-            {sorted.map((row) => (
-              <tr key={`${row.position}|${row.residue}`} className={'selrow' + (row.position === selected ? ' sel' : '')}
-                  onClick={() => onSelect?.(row.position)}
-                  title="Click to filter the aggregated contact table to this antigen residue">
-                <td className="hm-rowhead">{row.residue}{row.position}</td>
+            {sorted.map((row) => {
+              const rowSel = selected && selected.pos === row.position
+              return (
+              <tr key={`${row.position}|${row.residue}`} className={'selrow' + (rowSel ? ' sel' : '')}>
+                <td className="hm-rowhead hm-click" onClick={() => onSelect?.(row.position, null)}
+                    title="Click to filter the contact table to all contacts of this antigen residue">{row.residue}{row.position}</td>
                 {REGIONS.map((r) => {
                   const v = row.values[r]
                   const c = cell(v / maxVal)
+                  const clickable = v > 0
+                  const cellSel = rowSel && selected.region === r
                   return (
-                    <td key={r} className="hm-cell"
+                    <td key={r} className={'hm-cell' + (clickable ? ' hm-click' : '') + (cellSel ? ' cellsel' : '')}
                         style={{ background: c.bg, color: c.fg }}
+                        onClick={clickable ? () => onSelect?.(row.position, r) : undefined}
                         onMouseEnter={() => setHover(`${row.residue}${row.position} × ${r}: ${v} ${metric === 'pairs' ? 'contact pairs' : 'structures'}`)}
-                        onMouseLeave={() => setHover(null)}>
+                        onMouseLeave={() => setHover(null)}
+                        title={clickable ? `Click to filter the contact table to ${row.residue}${row.position} × ${SHORT[r]} contacts` : undefined}>
                       {v > 0 ? v : ''}
                     </td>
                   )
                 })}
                 {showHL && <td className="hm-cell hm-total">{row.rowHeavy}</td>}
                 {showHL && <td className="hm-cell hm-total">{row.rowLight}</td>}
-                <td className="hm-cell hm-total">{row.rowTotal}</td>
+                <td className="hm-cell hm-total hm-click" onClick={() => onSelect?.(row.position, null)}
+                    title="Click to filter the contact table to all contacts of this antigen residue">{row.rowTotal}</td>
               </tr>
-            ))}
+              )
+            })}
           </tbody>
         </table>
       </div>

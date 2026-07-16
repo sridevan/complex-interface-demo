@@ -87,7 +87,7 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
   const [resMax, setResMax] = useState('')
   const [instSort, setInstSort] = useState({ key: 'interface_area', dir: 'desc' })
   const [instPage, setInstPage] = useState(0)
-  const [epiSel, setEpiSel] = useState(null)  // antigen residue clicked in the heatmap -> filters the pair table
+  const [epiSel, setEpiSel] = useState(null)  // { pos, region } clicked in the heatmap (region null = all) -> filters the pair table
   useEffect(() => { setEpiSel(null) }, [chainType])
   const selectInstance = (k) => { setSelKey(k); setHighlight(null) }
   const pickChain = (t) => { setChainType(t); setSelKey(null); setHighlight(null) }
@@ -170,13 +170,16 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
   // Section 2 — paratope convergence: antibody IMGT positions ranked by how often they contact the
   // antigen, aggregated across ALL interfaces of the selected chain side. When an epitope residue is
   // selected in the heatmap, re-aggregate over only the contacts to that residue.
-  const epiRows = useMemo(() => epiSel != null
-    ? residue.filter((r) => r.antigen_uniprot_position === epiSel) : residue, [residue, epiSel])
+  const epiRows = useMemo(() => epiSel
+    ? residue.filter((r) => r.antigen_uniprot_position === epiSel.pos
+        && (epiSel.region == null || r.antibody_imgt_region === epiSel.region))
+    : residue, [residue, epiSel])
   const abImgt = useMemo(() => aggParatope(epiRows, sabdab, 'all'), [epiRows, sabdab])
   const epiLabel = useMemo(() => {
-    if (epiSel == null) return null
-    const r = residue.find((x) => x.antigen_uniprot_position === epiSel)
-    return r ? `${r.antigen_residue_name}${epiSel}` : `residue ${epiSel}`
+    if (!epiSel) return null
+    const r = residue.find((x) => x.antigen_uniprot_position === epiSel.pos)
+    const res = r ? `${r.antigen_residue_name}${epiSel.pos}` : `residue ${epiSel.pos}`
+    return epiSel.region ? `${res} · ${epiSel.region}` : res
   }, [residue, epiSel])
 
   const nAntibodies = new Set(Object.values(sabdab).map((v) => v.sabdab_id)).size
@@ -333,7 +336,8 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
         <ParatopeConvergence abImgt={abImgt} weight="all" fixedSide={chainType}
           epiFilter={epiLabel} onClearEpiFilter={() => setEpiSel(null)} />
         <ContactHeatmap residue={residue} chainType={chainType} selected={epiSel}
-          onSelect={(pos) => setEpiSel((c) => (c === pos ? null : pos))} />
+          onSelect={(pos, region = null) => setEpiSel((c) =>
+            (c && c.pos === pos && c.region === region ? null : { pos, region }))} />
       </div>
 
       <div className="ex-row">
