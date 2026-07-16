@@ -214,10 +214,15 @@ function Bar({ frac, color, children }) {
 // ── Section 1: paratope convergence ────────────────────────────────────────────────────────────
 export function ParatopeConvergence({ abImgt, weight, fixedSide, epiFilter, onClearEpiFilter }) {
   const [sideState, setSide] = useState('all')  // 'all' | 'heavy' | 'light'
+  const [sortBy, setSortBy] = useState('contacts')  // 'contacts' | 'position'
   const side = fixedSide || sideState
-  const rows = useMemo(() => abImgt
-    .filter((r) => side === 'all' || r.antibody_chain_type === side)
-    .sort((a, b) => b.total_antigen_contacts - a.total_antigen_contacts), [abImgt, side])
+  const rows = useMemo(() => {
+    const f = abImgt.filter((r) => side === 'all' || r.antibody_chain_type === side)
+    const cmp = sortBy === 'position'
+      ? (a, b) => a.antibody_chain_type.localeCompare(b.antibody_chain_type) || a.antibody_imgt_position - b.antibody_imgt_position
+      : (a, b) => b.total_antigen_contacts - a.total_antigen_contacts
+    return [...f].sort(cmp)
+  }, [abImgt, side, sortBy])
   const max = Math.max(1, ...rows.map((r) => r.total_antigen_contacts))
   const byAb = weight === 'antibody'
   const contactHelp = byAb
@@ -241,6 +246,11 @@ export function ParatopeConvergence({ abImgt, weight, fixedSide, epiFilter, onCl
             ))}
           </span>
         </>}
+        <label style={{ marginLeft: fixedSide ? 0 : 10 }}>Sort</label>
+        <span className="pill">
+          <button className={sortBy === 'contacts' ? 'active' : ''} onClick={() => setSortBy('contacts')}>By contacts</button>
+          <button className={sortBy === 'position' ? 'active' : ''} onClick={() => setSortBy('position')}>By position</button>
+        </span>
         <span className="rowcount">{rows.length} IMGT positions</span>
       </div>
       {epiFilter && (
