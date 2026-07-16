@@ -254,10 +254,9 @@ export function ParatopeConvergence({ abImgt, weight, fixedSide, epiFilter, onCl
                   color: chipInk(REGION_COLORS[r.antibody_imgt_region] || '#8a94a6') }}>{r.antibody_imgt_region}</span></td>
                 <td className="conv-consensus">
                   <b>{r.consensus_residue || '—'}</b>
-                  {r.consensus_residue && <>
-                    <span className="conv-bar"><span className="conv-bar-fill" style={{ width: `${r.consensus_frac * 100}%` }} /></span>
-                    <span className="conv-sub">{Math.round(r.consensus_frac * 100)}% · {r.n_distinct_residues} aa</span>
-                  </>}
+                  {r.consensus_residue && (
+                    <span className="conv-sub"><b>{Math.round(r.consensus_frac * 100)}%</b> · {r.n_distinct_residues} aa</span>
+                  )}
                 </td>
                 <td style={{ minWidth: 130 }}>
                   <Bar frac={r.total_antigen_contacts / max} color={REGION_COLORS[r.antibody_imgt_region] || '#999'}>

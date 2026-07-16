@@ -206,12 +206,9 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 /* ContactHeatmap + ParatopeConvergence reused in the Explorer Section 2: fill the fixed-height card + scroll. */
 .cm-row > .card { display: flex; flex-direction: column; }
 .cm-row .hm-wrap, .cm-row .ex-scroll { flex: 1 1 auto; min-height: 0; max-height: none; }
-/* Paratope-convergence top-residue cell: bold AA + conservation bar + muted share/diversity. */
+/* Paratope-convergence top-residue cell: bold AA + muted share/diversity (share% bolded). */
 .conv-consensus { white-space: nowrap; }
 .conv-consensus > b { display: inline-block; min-width: 30px; }
-.conv-bar { display: inline-block; width: 46px; height: 7px; border-radius: 4px; background: #eef0f3;
-  vertical-align: middle; overflow: hidden; margin: 0 8px; }
-.conv-bar-fill { display: block; height: 100%; background: #7a3f9d; border-radius: 4px; }
 .conv-sub { color: var(--muted); font-size: 11.5px; }
 /* Sequence-conservation heatmap: 20 amino-acid rows × CDR IMGT-position columns. */
 table.seqmap { border-collapse: collapse; font-size: 11px; }
