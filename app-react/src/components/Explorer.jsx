@@ -27,7 +27,7 @@ const ifaceLabel = (r) => `${r.pdb_id}_${r.assembly_id}_${r.interface_id}`
 const SABDAB_URL = 'https://sabdab.opig.stats.ox.ac.uk/sabdab/'
 const sabKey = (r) => `${r.pdb_id}|${r.antibody_chain}|${r.antibody_chain_type}`
 const qualKey = (r) => `${r.pdb_id}|${r.assembly_id}`
-const shortMethod = (m) => (m || '').replace('X-ray diffraction', 'X-ray').replace('Electron microscopy', 'EM').replace('cryo-EM', 'cryo-EM')
+const shortMethod = (m) => (m || '').replace('X-ray diffraction', 'X-ray').replace('Electron microscopy', 'EM').replace('cryo-EM', 'EM')
 
 const AA3TO1 = { ALA: 'A', ARG: 'R', ASN: 'N', ASP: 'D', CYS: 'C', GLU: 'E', GLN: 'Q', GLY: 'G', HIS: 'H',
   ILE: 'I', LEU: 'L', LYS: 'K', MET: 'M', PHE: 'F', PRO: 'P', SER: 'S', THR: 'T', TRP: 'W', TYR: 'Y',
@@ -240,10 +240,10 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
         {/* instances table */}
         <div className="card ex-cell">
           <h2>Interface instances <span className="h2-sub">· antibody {sideName}</span></h2>
-          <p className="note">Deposited antibody–antigen interfaces for the selected chain side. Instance ID is
-            <code> pdb_asm_interface</code>. Antibody is the SAbDab2 ID (identical variable-region sequence groups the
-            same antibody). Resolution is the deposited structure resolution. Rows sort by BSA (largest first); click
-            Method, Res. or BSA to re-sort. Filter by PDB ID, method or a resolution range. Click a row to inspect it above.</p>
+          <p className="note">This table lists the deposited structure instances of the selected antibody chain side.
+            Resolution refers to the deposited structure resolution. Rows are sorted by buried surface area (BSA),
+            largest first; click the Method, Resolution or BSA header to re-sort. Filter by PDB ID, method or a
+            resolution range. Click a row to update the 3D view and plots.</p>
           <div className="inst-filter">
             <input className="filter-input inst-filter-text" list="abx-methods" value={instFilter}
               placeholder="Filter by PDB ID or method…" onChange={(e) => setInstFilter(e.target.value)} />
@@ -259,7 +259,7 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
                 <tr><th>Instance <Hint text="Instance ID format: <pdb_id>_<assembly_id>_<interface_id> (e.g. 6wps_1_7)." /></th><th>PDB ID</th>
                   <SortTh label="Method" k="experimental_method" />
                   <SortTh label="Res. (Å)" k="resolution" className="num" />
-                  <th>Ag</th><th>Ab</th><th>Antibody (SAbDab2)</th>
+                  <th>Ag</th><th>Ab</th><th>Antibody (SAbDab2)<Hint text="SAbDab2 antibody identifier: antibody chains sharing an identical variable-region sequence are grouped under one ID, so re-depositions of the same antibody carry the same identifier. Source: SAbDab (Oxford OPIG)." /></th>
                   <SortTh label="BSA (Å²)" k="interface_area" className="num" /></tr>
               </thead>
               <tbody>
