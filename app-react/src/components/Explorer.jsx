@@ -153,6 +153,20 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
     return { ag: [...ag.values()], ab: [...ab.values()] }
   }, [sankeyRows])
 
+  // Atom-level contact lines for the 3D overlay, filtered to residues actually shown as sticks.
+  // viewer_contacts.json carries every antibody–antigen bond from PISA, including ones to IMGT-unmapped
+  // (constant-domain / scaffold) residues that the paratope view drops — those would draw as lines to
+  // nothing, so keep only bonds whose BOTH endpoints are in the displayed variable-domain residue set.
+  const viewerContacts = useMemo(() => {
+    if (!selected) return null
+    const raw = contacts[keyOf(selected)]
+    if (!raw) return null
+    const agKeys = new Set(iface.ag.map((r) => `${r.chain}|${r.resi}`))
+    const abKeys = new Set(iface.ab.map((r) => `${r.chain}|${r.resi}`))
+    const keep = (l) => agKeys.has(`${l.chain1}|${l.resi1}`) && abKeys.has(`${l.chain2}|${l.resi2}`)
+    return { specific: (raw.specific || []).filter(keep), vdw: (raw.vdw || []).filter(keep) }
+  }, [contacts, selected, iface])
+
   // Section 2 — paratope convergence: antibody IMGT positions ranked by how often they contact the
   // antigen, aggregated across ALL interfaces of the selected chain side. When an epitope residue is
   // selected in the heatmap, re-aggregate over only the contacts to that residue.
@@ -234,7 +248,7 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
             <span className="dot" style={{ background: AB_COLOR }} /> {chainType === 'heavy' ? 'VH' : 'VL'}
           </div>
           {selected ? <Viewer3Dmol pdbId={selected.pdb_id} agResidues={iface.ag} abResidues={iface.ab}
-                                    contacts={selected ? contacts[keyOf(selected)] : null}
+                                    contacts={viewerContacts}
                                     highlight={highlight} onClearHighlight={() => setHighlight(null)} height={480} />
             : <p className="note">No interface selected.</p>}
         </div>
