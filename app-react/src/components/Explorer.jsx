@@ -196,7 +196,7 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
             <span className="chip"><span className="dot" style={{ background: AB_COLOR }} />Antibody</span>
           </div>
           <div className="uni-name">Antibodies (Fab / Fv){nAntibodies ? ` · ${nAntibodies} unique` : ''}</div>
-          <div className="uni-meta"><i>Homo sapiens</i> · residues by IMGT numbering (ANARCII), grouped by SAbDab2</div>
+          <div className="uni-meta"><i>Homo sapiens</i> · heavy (VH) + light (VL) chains · residues by IMGT numbering (ANARCII), grouped by SAbDab2</div>
           <UniFunc text={ANTIBODY_FUNC} />
         </div>
       </div>
