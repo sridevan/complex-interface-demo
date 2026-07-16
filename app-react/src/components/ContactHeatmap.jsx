@@ -93,12 +93,6 @@ export default function ContactHeatmap({ residue, onSelect, selected, chainType 
         <span className="rowcount">{sorted.length} antigen residues</span>
       </div>
 
-      <div className="hm-legend">
-        low
-        <span className="hm-ramp" />
-        high (max {maxVal} {metric === 'pairs' ? 'contact pairs' : 'structures'})
-      </div>
-
       <div className="hm-wrap">
         <table className="heatmap">
           <thead>
@@ -137,6 +131,11 @@ export default function ContactHeatmap({ residue, onSelect, selected, chainType 
             ))}
           </tbody>
         </table>
+      </div>
+      <div className="hm-legend">
+        low
+        <span className="hm-ramp" />
+        high (max {maxVal} {metric === 'pairs' ? 'contact pairs' : 'structures'})
       </div>
       {hover && <div className="nt-tip">{hover}</div>}
     </div>

@@ -215,16 +215,17 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 /* Sequence-conservation heatmap: 20 amino-acid rows × CDR IMGT-position columns. */
 table.seqmap { border-collapse: collapse; font-size: 11px; }
 .seqmap th, .seqmap td { border: 1px solid #eef1f4; padding: 0; }
-.seqmap-corner { position: sticky; left: 0; z-index: 3; background: #fff; width: 30px; }
-.seqmap-col { width: 24px; min-width: 24px; height: 46px; vertical-align: bottom; text-align: center;
+.seqmap-corner { position: sticky; left: 0; top: 0; z-index: 6; background: #fff; width: 30px; }
+.seqmap-region { position: sticky; top: 0; z-index: 5; height: 22px; box-sizing: border-box; text-align: center;
+  font-size: 10.5px; font-weight: 700; letter-spacing: .04em; padding: 3px 2px; border-color: #fff !important; }
+.seqmap-col { position: sticky; top: 22px; z-index: 4; background: #fff;
+  width: 24px; min-width: 24px; height: 46px; vertical-align: bottom; text-align: center;
   font-family: ui-monospace, Menlo, monospace; color: var(--muted); border-top-width: 3px; border-top-style: solid;
   writing-mode: vertical-rl; transform: rotate(180deg); padding: 3px 0; }
-.seqmap-aa { position: sticky; left: 0; z-index: 2; background: #fbfcfd; width: 30px; text-align: center;
+.seqmap-aa { position: sticky; left: 0; z-index: 3; background: #fbfcfd; width: 30px; text-align: center;
   font-family: ui-monospace, Menlo, monospace; font-weight: 700; padding: 2px 5px !important; }
 .seqmap-cell { width: 24px; min-width: 24px; height: 17px; }
 .seqmap-cell.cm-absent { background: #f6f7f9; }
-.seqmap-region { text-align: center; font-size: 10.5px; font-weight: 700; letter-spacing: .04em; padding: 3px 2px;
-  border-color: #fff !important; }
 .seq-axis-x { text-align: center; font-weight: 700; font-size: 12px; color: var(--muted); letter-spacing: .03em; margin: 2px 0 6px; }
 .seq-axis-y { display: flex; align-items: center; flex: 0 0 auto; padding-right: 4px; }
 .seq-axis-y span { writing-mode: vertical-rl; transform: rotate(180deg); font-weight: 700; font-size: 12px; color: var(--muted); letter-spacing: .03em; }
@@ -394,7 +395,7 @@ table.heatmap thead th { position: sticky; top: 0; background: #fbfcfd; z-index:
 .hm-cell { height: 20px; text-align: center; color: #2a2f36; font-variant-numeric: tabular-nums; }
 .hm-cell.hm-total { background: #f7f8fa; font-weight: 600; }
 .heatmap tbody tr:hover .hm-rowhead { background: #eaf2fb; }
-.hm-legend { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); margin: 6px 0 10px; }
+.hm-legend { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); margin: 10px 0 0; }
 .hm-ramp { display: inline-block; width: 160px; height: 12px; border-radius: 3px;
   background: linear-gradient(to right, #ffffff, #f4f0fa, #9a6fc4, #3f007d); border: 1px solid var(--border); }
 
