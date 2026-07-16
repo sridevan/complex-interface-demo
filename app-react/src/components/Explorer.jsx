@@ -172,15 +172,15 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
   // selected in the heatmap, re-aggregate over only the contacts to that residue.
   const epiRows = useMemo(() => epiSel
     ? residue.filter((r) => r.antigen_uniprot_position === epiSel.pos
+        && r.antigen_residue_name === epiSel.residue
         && (epiSel.region == null || r.antibody_imgt_region === epiSel.region))
     : residue, [residue, epiSel])
   const abImgt = useMemo(() => aggParatope(epiRows, sabdab, 'all'), [epiRows, sabdab])
   const epiLabel = useMemo(() => {
     if (!epiSel) return null
-    const r = residue.find((x) => x.antigen_uniprot_position === epiSel.pos)
-    const res = r ? `${r.antigen_residue_name}${epiSel.pos}` : `residue ${epiSel.pos}`
+    const res = `${epiSel.residue}${epiSel.pos}`
     return epiSel.region ? `${res} · ${epiSel.region}` : res
-  }, [residue, epiSel])
+  }, [epiSel])
 
   const nAntibodies = new Set(Object.values(sabdab).map((v) => v.sabdab_id)).size
   const sideName = chainType === 'heavy' ? 'heavy chain' : 'light chain'
@@ -336,8 +336,8 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
         <ParatopeConvergence abImgt={abImgt} weight="all" fixedSide={chainType}
           epiFilter={epiLabel} onClearEpiFilter={() => setEpiSel(null)} />
         <ContactHeatmap residue={residue} chainType={chainType} selected={epiSel}
-          onSelect={(pos, region = null) => setEpiSel((c) =>
-            (c && c.pos === pos && c.region === region ? null : { pos, region }))} />
+          onSelect={(pos, resn, region = null) => setEpiSel((c) =>
+            (c && c.pos === pos && c.residue === resn && c.region === region ? null : { pos, residue: resn, region }))} />
       </div>
 
       <div className="ex-row">

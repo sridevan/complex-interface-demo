@@ -109,10 +109,10 @@ export default function ContactHeatmap({ residue, onSelect, selected, chainType 
           </thead>
           <tbody>
             {sorted.map((row) => {
-              const rowSel = selected && selected.pos === row.position
+              const rowSel = selected && selected.pos === row.position && selected.residue === row.residue
               return (
               <tr key={`${row.position}|${row.residue}`} className={'selrow' + (rowSel ? ' sel' : '')}>
-                <td className="hm-rowhead hm-click" onClick={() => onSelect?.(row.position, null)}
+                <td className="hm-rowhead hm-click" onClick={() => onSelect?.(row.position, row.residue, null)}
                     title="Click to filter the contact table to all contacts of this antigen residue">{row.residue}{row.position}</td>
                 {REGIONS.map((r) => {
                   const v = row.values[r]
@@ -122,7 +122,7 @@ export default function ContactHeatmap({ residue, onSelect, selected, chainType 
                   return (
                     <td key={r} className={'hm-cell' + (clickable ? ' hm-click' : '') + (cellSel ? ' cellsel' : '')}
                         style={{ background: c.bg, color: c.fg }}
-                        onClick={clickable ? () => onSelect?.(row.position, r) : undefined}
+                        onClick={clickable ? () => onSelect?.(row.position, row.residue, r) : undefined}
                         onMouseEnter={() => setHover(`${row.residue}${row.position} × ${r}: ${v} ${metric === 'pairs' ? 'contact pairs' : 'structures'}`)}
                         onMouseLeave={() => setHover(null)}
                         title={clickable ? `Click to filter the contact table to ${row.residue}${row.position} × ${SHORT[r]} contacts` : undefined}>
@@ -132,7 +132,7 @@ export default function ContactHeatmap({ residue, onSelect, selected, chainType 
                 })}
                 {showHL && <td className="hm-cell hm-total">{row.rowHeavy}</td>}
                 {showHL && <td className="hm-cell hm-total">{row.rowLight}</td>}
-                <td className="hm-cell hm-total hm-click" onClick={() => onSelect?.(row.position, null)}
+                <td className="hm-cell hm-total hm-click" onClick={() => onSelect?.(row.position, row.residue, null)}
                     title="Click to filter the contact table to all contacts of this antigen residue">{row.rowTotal}</td>
               </tr>
               )
