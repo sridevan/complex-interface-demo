@@ -221,6 +221,8 @@ const ONE2THREE = { R: 'ARG', K: 'LYS', H: 'HIS', D: 'ASP', E: 'GLU', S: 'SER', 
 const AA_TEXT = { R: '#3a6bb0', K: '#3a6bb0', H: '#3a6bb0', D: '#c0341a', E: '#c0341a', S: '#1f7a2f', T: '#1f7a2f',
   N: '#1f7a2f', Q: '#1f7a2f', C: '#1f7a2f', Y: '#1f7a2f', G: '#8a7a1f', P: '#8a7a1f', A: '#8a7a1f', V: '#8a7a1f',
   I: '#8a7a1f', L: '#8a7a1f', M: '#8a7a1f', F: '#8a7a1f', W: '#8a7a1f' }
+const REGION_BAND = { 'CDR-H1': 'CDR1', 'CDR-H2': 'CDR2', 'CDR-H3': 'CDR3',
+  'CDR-L1': 'CDR1', 'CDR-L2': 'CDR2', 'CDR-L3': 'CDR3' }
 function seqCell(t) {
   if (t <= 0) return '#ffffff'
   const k = Math.sqrt(Math.min(1, t))
@@ -240,13 +242,34 @@ function ParatopeConservation({ abImgt, side }) {
     for (const [res, x] of c.abres) comp[res] = x.sab.size / total
     return { comp, total }
   }), [cols])
+  // Contiguous runs of the same region -> a spanning band above the position numbers.
+  const bands = useMemo(() => {
+    const g = []
+    for (const c of cols) {
+      const last = g[g.length - 1]
+      if (last && last.region === c.antibody_imgt_region) last.span++
+      else g.push({ region: c.antibody_imgt_region, span: 1 })
+    }
+    return g
+  }, [cols])
   if (!cols.length) return <p className="note">No CDR paratope positions for this chain side.</p>
   return (
+    <>
+    <div className="seq-axis-x">Antibody IMGT position (CDR) →</div>
+    <div className="cm-mid">
+    <div className="seq-axis-y"><span>Amino acid</span></div>
     <div className="hm-wrap seqmap-wrap">
       <table className="seqmap">
         <thead>
           <tr>
-            <th className="seqmap-corner" />
+            <th className="seqmap-corner" rowSpan={2} />
+            {bands.map((g, i) => (
+              <th key={i} colSpan={g.span} className="seqmap-region"
+                  style={{ background: REGION_COLORS[g.region] || '#8a94a6', color: chipInk(REGION_COLORS[g.region] || '#8a94a6') }}>
+                {REGION_BAND[g.region] || g.region}</th>
+            ))}
+          </tr>
+          <tr>
             {cols.map((c, i) => (
               <th key={i} className="seqmap-col" title={`IMGT ${c.antibody_imgt_position} · ${c.antibody_imgt_region} · ${grid[i].total} antibodies`}
                   style={{ borderTopColor: REGION_COLORS[c.antibody_imgt_region] || '#8a94a6' }}>{c.antibody_imgt_position}</th>
@@ -270,8 +293,15 @@ function ParatopeConservation({ abImgt, side }) {
           ))}
         </tbody>
       </table>
-      {tip && <div className="nt-tip">{tip}</div>}
     </div>
+    </div>
+    <div className="cm-foot">
+      <span className="cm-legend-item cm-legend-scale">
+        residue share at position <b>0%</b><span className="cm-legend-ramp" /><b>100%</b> of antibodies
+      </span>
+    </div>
+    {tip && <div className="nt-tip">{tip}</div>}
+    </>
   )
 }
 
