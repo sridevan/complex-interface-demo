@@ -346,6 +346,18 @@ table.seqmap { border-collapse: collapse; font-size: 11px; }
   border: 1px solid rgba(0, 0, 0, 0.08); }
 /* Top-contacted antigen residue chips. */
 .epi-chips { white-space: normal; }
+
+/* Compact paratope-convergence table so all 6 columns fit its half-width card with no horizontal
+   scroll: tighter cells, wrapping headers, a narrower contact bar, and a capped wrapping chip column. */
+.conv-table th, .conv-table td { padding: 5px 7px; }
+.conv-table th { white-space: normal; vertical-align: bottom; line-height: 1.2; }
+.conv-table .conv-agc { min-width: 84px; }
+.conv-table .bar-cell { gap: 6px; }
+.conv-table .bar-num { min-width: 22px; }
+.conv-table .bar-track { min-width: 26px; }
+.conv-table .epi-chips { max-width: 118px; }
+.conv-table .chip { font-size: 10px; padding: 1px 3px 1px 5px; margin: 1px 2px 1px 0; }
+.conv-table .chip-n { font-size: 9.5px; padding: 0 4px; }
 .chip { display: inline-flex; align-items: center; gap: 3px; background: #eef2f7; border-radius: 10px;
   padding: 1px 4px 1px 7px; font-size: 11px; margin: 1px 3px 1px 0; }
 .chip-n { background: #d8e0ea; color: var(--muted); border-radius: 8px; padding: 0 5px; font-size: 10px; }

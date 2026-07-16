@@ -238,13 +238,13 @@ export function ParatopeConvergence({ abImgt, weight, fixedSide, epiFilter, onCl
         <ParatopeConservation abImgt={abImgt} side={side} />
       ) : (
       <div className="ex-scroll">
-        <table>
+        <table className="conv-table">
           <thead>
             <tr><th>IMGT pos</th><th>Ab region<Hint text={AB_REGION_HELP} /></th>
-              <th>Top residue<Hint text="Most common antibody amino acid at this IMGT position across deposited antibodies. The bar is its share of contacts at the position — a long bar is a conserved position, a short bar with a high 'aa' count is hypervariable. Full per-position usage is in the Sequence conservation view." /></th>
+              <th>Top residue<Hint text="Most common antibody amino acid at this IMGT position across deposited antibodies. The share % shows how conserved the position is; a high 'aa' count means it is hypervariable. Full per-position usage is in the Sequence conservation view." /></th>
               <th>{byAb ? 'Antibodies' : 'Ag contacts'}<Hint text={contactHelp} /></th>
               <th className="num">Structures<Hint text="Distinct structural assemblies in which this antibody position contacts the antigen." /></th>
-              <th>Top contacted Ag residues</th></tr>
+              <th>Top Ag residues</th></tr>
           </thead>
           <tbody>
             {rows.map((r) => (
@@ -258,12 +258,12 @@ export function ParatopeConvergence({ abImgt, weight, fixedSide, epiFilter, onCl
                     <span className="conv-sub"><b>{Math.round(r.consensus_frac * 100)}%</b> · {r.n_distinct_residues} aa</span>
                   )}
                 </td>
-                <td style={{ minWidth: 130 }}>
+                <td className="conv-agc">
                   <Bar frac={r.total_antigen_contacts / max} color={REGION_COLORS[r.antibody_imgt_region] || '#999'}>
                     {r.total_antigen_contacts}</Bar>
                 </td>
                 <td className="num">{r.assemblies_contacted}</td>
-                <td className="epi-chips">{(r.most_common_contacted_antigen_residues || []).slice(0, 5)
+                <td className="epi-chips">{(r.most_common_contacted_antigen_residues || []).slice(0, 3)
                   .map((d) => <span key={d.value} className="chip">{d.value}<span className="chip-n">{d.count}</span></span>)}</td>
               </tr>
             ))}
