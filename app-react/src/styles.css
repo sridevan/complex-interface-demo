@@ -104,7 +104,8 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .legend .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin: 0 4px 0 10px; vertical-align: middle; }
 
 /* Small hover-tooltip line (used by the contact heatmap) */
-.nt-tip { font-size: 12px; color: var(--muted); margin-top: 6px; }
+.nt-tip { font-size: 12px; color: var(--muted); margin-top: 6px; min-height: 1.25em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 /* Explorer dashboard */
 /* Row 1: narrow selector cards + wide Mol* viewer. Row 2: even 50/50 split. */

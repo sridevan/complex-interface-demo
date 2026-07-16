@@ -300,7 +300,7 @@ function ParatopeConservation({ abImgt, side }) {
         residue share at position <b>0%</b><span className="cm-legend-ramp" /><b>100%</b> of antibodies
       </span>
     </div>
-    {tip && <div className="nt-tip">{tip}</div>}
+    <div className="nt-tip">{tip || ' '}</div>
     </>
   )
 }

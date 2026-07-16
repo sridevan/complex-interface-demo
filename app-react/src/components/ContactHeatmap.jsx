@@ -137,7 +137,7 @@ export default function ContactHeatmap({ residue, onSelect, selected, chainType 
         <span className="hm-ramp" />
         high (max {maxVal} {metric === 'pairs' ? 'contact pairs' : 'structures'})
       </div>
-      {hover && <div className="nt-tip">{hover}</div>}
+      <div className="nt-tip">{hover || ' '}</div>
     </div>
   )
 }
