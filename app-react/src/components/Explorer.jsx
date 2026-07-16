@@ -242,7 +242,7 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
       <div className="ex-row ex-row2">
         {/* instances table */}
         <div className="card ex-cell">
-          <h2>Interface instances <span className="h2-sub">· antibody {sideName}</span></h2>
+          <h2>Interface instances <span className="h2-sub">· {ANTIGEN.gene} ↔ {chainType === 'heavy' ? 'VH' : 'VL'}</span></h2>
           <p className="note">This table lists the deposited structure instances of the selected antibody chain side.
             Resolution refers to the deposited structure resolution. Rows are sorted by buried surface area (BSA),
             largest first; click the Method, Resolution or BSA header to re-sort. Filter by PDB ID, method or a
