@@ -33,9 +33,7 @@ const CMP = {
 // Aggregated residue–residue contact pairs for one interface group. Columns are click-to-sort; the
 // residue-number columns default ascending, Frequency defaults descending. An interaction-type filter
 // narrows the rows to pairs that make a given bond type.
-// extraCol (optional): { label, render(pair) } — an extra display column after the right residue
-// column (e.g. the antibody IMGT region in the antibody–antigen view). Generic complexes omit it.
-export default function ContactPairTable({ pairs, total, leftLabel, rightLabel, extraCol }) {
+export default function ContactPairTable({ pairs, total, leftLabel, rightLabel }) {
   const [sort, setSort] = useState({ key: 'freq', dir: 'desc' })
   const [typeFilter, setTypeFilter] = useState('')
   const toggle = (key) => setSort((prev) => prev.key === key
@@ -85,7 +83,6 @@ export default function ContactPairTable({ pairs, total, leftLabel, rightLabel, 
             <tr>
               <Th label={leftLabel} k="pos1" />
               <Th label={rightLabel} k="pos2" />
-              {extraCol && <th>{extraCol.label}</th>}
               <th>Contact type(s) <Hint text={BOND_TYPE_HELP} /></th>
               <Th label="Frequency" k="freq" className="num" />
             </tr>
@@ -98,7 +95,6 @@ export default function ContactPairTable({ pairs, total, leftLabel, rightLabel, 
                 <tr key={key}>
                   <td>{p.res1}{p.pos1}</td>
                   <td>{p.res2}{p.pos2}</td>
-                  {extraCol && <td>{extraCol.render(p)}</td>}
                   <td>{orderedBondLabels(p.bonds).join(', ')}</td>
                   <td className="num">
                     <span className="freqbar"><span className="freqbar-fill" style={{ width: `${pct * 100}%` }} /></span>
