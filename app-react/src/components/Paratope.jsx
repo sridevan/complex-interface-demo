@@ -242,9 +242,9 @@ export function ParatopeConvergence({ abImgt, weight, fixedSide, epiFilter, onCl
           <thead>
             <tr><th>IMGT pos</th><th>Ab region<Hint text={AB_REGION_HELP} /></th>
               <th>Top residue<Hint text="Most common antibody amino acid at this IMGT position across deposited antibodies. The share % shows how conserved the position is; a high 'aa' count means it is hypervariable. Full per-position usage is in the Sequence conservation view." /></th>
-              <th>{byAb ? 'Antibodies' : 'Ag contacts'}<Hint text={contactHelp} /></th>
+              <th>{byAb ? 'Antibodies' : 'Ag\u00a0contacts'}<Hint text={contactHelp} /></th>
               <th className="num">Structures<Hint text="Distinct structural assemblies in which this antibody position contacts the antigen." /></th>
-              <th>Top Ag residues</th></tr>
+              <th>Top&nbsp;Ag<br />residues</th></tr>
           </thead>
           <tbody>
             {rows.map((r) => (
