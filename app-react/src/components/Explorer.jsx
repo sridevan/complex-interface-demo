@@ -225,7 +225,10 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
         </div>
 
         <div className="card ex-cell">
-          <h2>3D view of selected interface <span className="h2-sub">· {selected ? `${selected.pdb_id} interface ${selected.interface_id}` : '—'}</span></h2>
+          <h2>3D view of selected interface</h2>
+          {selected && <p className="note" style={{ marginTop: 0 }}>
+            {selected.pdb_id} assembly {selected.assembly_id}, interface {selected.interface_id}<br />
+            {ANTIGEN.gene} ↔ {chainType === 'heavy' ? 'VH' : 'VL'}</p>}
           <div className="legend" style={{ marginTop: 0 }}>
             <span className="dot" style={{ background: AG_COLOR }} /> antigen
             <span className="dot" style={{ background: AB_COLOR }} /> antibody
