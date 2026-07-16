@@ -94,36 +94,52 @@ const contactCols = (variantMap, glycanMap, weight) => [
     help: 'Number of distinct structural assemblies (PDB entry + assembly) in which this exact residue pair is in contact — de-biases redundant re-deposition.' },
 ]
 
-// Recompute the paratope-convergence table (per antibody IMGT residue) client-side so it honours the
-// weighting toggle. In 'all' mode this reproduces aggregated_antibody_imgt_contacts.json exactly.
+// Recompute the paratope-convergence table client-side so it honours the weighting toggle.
+// Aggregated by antibody IMGT POSITION (not residue identity): convergence is a property of the
+// structurally-aligned position — the CDR positions are hypervariable (20+ amino acids at a single
+// CDR-H3 position), so keying on the residue would fragment the signal at exactly the positions that
+// matter. The amino acid is kept as a consensus (most-common residue at that position across deposited
+// antibodies) + a diversity count.
 export function aggParatope(rows, lookup, weight) {
   const m = new Map()
   for (const p of rows) {
     if (p.antibody_imgt_position == null) continue      // precomputed aggregate excludes unmapped
-    const k = `${p.antibody_chain_type}|${p.antibody_imgt_position}|${p.antibody_residue_name}`
+    const k = `${p.antibody_chain_type}|${p.antibody_imgt_position}`
     if (!m.has(k)) m.set(k, {
       antibody_chain_type: p.antibody_chain_type, antibody_imgt_position: p.antibody_imgt_position,
-      antibody_residue_name: p.antibody_residue_name, antibody_imgt_region: p.antibody_imgt_region,
-      raw: 0, sab: new Set(), asm: new Set(), agres: new Map(),
+      antibody_imgt_region: p.antibody_imgt_region,
+      raw: 0, sab: new Set(), asm: new Set(), agres: new Map(), abres: new Map(),
     })
     const e = m.get(k)
+    const ab = sabId(lookup, p)
     e.raw += 1
-    e.sab.add(sabId(lookup, p))
+    e.sab.add(ab)
     e.asm.add(`${p.pdb_id}|${p.assembly_id}`)
+    // amino-acid identity distribution at this position -> consensus residue
+    if (!e.abres.has(p.antibody_residue_name)) e.abres.set(p.antibody_residue_name, { raw: 0, sab: new Set() })
+    const bb = e.abres.get(p.antibody_residue_name); bb.raw += 1; bb.sab.add(ab)
     if (p.antigen_uniprot_position != null) {
       const av = `${p.antigen_residue_name}${p.antigen_uniprot_position}`
       if (!e.agres.has(av)) e.agres.set(av, { raw: 0, sab: new Set() })
-      const a = e.agres.get(av); a.raw += 1; a.sab.add(sabId(lookup, p))
+      const a = e.agres.get(av); a.raw += 1; a.sab.add(ab)
     }
   }
-  return [...m.values()].map((e) => ({
-    ...e,
-    total_antigen_contacts: metricOf(e, weight),
-    assemblies_contacted: e.asm.size,
-    most_common_contacted_antigen_residues: [...e.agres.entries()]
-      .map(([value, a]) => ({ value, count: weight === 'antibody' ? a.sab.size : a.raw }))
-      .sort((x, y) => y.count - x.count).slice(0, 5),
-  }))
+  return [...m.values()].map((e) => {
+    const cnt = (x) => weight === 'antibody' ? x.sab.size : x.raw
+    const abList = [...e.abres.entries()].map(([res, x]) => ({ res, n: cnt(x) })).sort((a, b) => b.n - a.n)
+    const abDenom = abList.reduce((s, x) => s + x.n, 0) || 1
+    return {
+      ...e,
+      total_antigen_contacts: metricOf(e, weight),
+      assemblies_contacted: e.asm.size,
+      consensus_residue: abList[0] ? abList[0].res : null,
+      consensus_frac: abList[0] ? abList[0].n / abDenom : 0,
+      n_distinct_residues: e.abres.size,
+      most_common_contacted_antigen_residues: [...e.agres.entries()]
+        .map(([value, a]) => ({ value, count: cnt(a) }))
+        .sort((x, y) => y.count - x.count).slice(0, 5),
+    }
+  })
 }
 
 // Recompute CDR/framework region contribution client-side, honouring the weighting toggle.
@@ -211,9 +227,10 @@ export function ParatopeConvergence({ abImgt, weight, fixedSide, epiFilter, onCl
   return (
     <div className="card ex-cell">
       <h2>Paratope convergence</h2>
-      <p className="note">Antibody residues (by IMGT position, coloured by{' '}
-        <a href={REGION_REF_URL} target="_blank" rel="noopener noreferrer">IMGT region</a>) ranked by how
-        often they contact the antigen {byAb ? 'across distinct antibodies' : 'across all complexes'} — where recognition converges.</p>
+      <p className="note">Antibody <a href={REGION_REF_URL} target="_blank" rel="noopener noreferrer">IMGT positions</a>
+        {' '}ranked by how often they contact the antigen {byAb ? 'across distinct antibodies' : 'across all complexes'} —
+        where recognition converges. <b>Consensus</b> is the most common amino acid at that position across deposited
+        antibodies (with its share and the number of distinct residues seen there).</p>
       <div className="controls">
         {!fixedSide && <>
           <label>Chain</label>
@@ -233,17 +250,20 @@ export function ParatopeConvergence({ abImgt, weight, fixedSide, epiFilter, onCl
       <div className="ex-scroll">
         <table>
           <thead>
-            <tr><th>Ab residue</th><th>Ab region<Hint text={AB_REGION_HELP} /></th>
+            <tr><th>IMGT pos</th><th>Ab region<Hint text={AB_REGION_HELP} /></th>
+              <th>Consensus<Hint text="Most common antibody amino acid at this IMGT position across deposited antibodies, its share of contacts at the position, and the number of distinct residues seen there. CDR positions are hypervariable — many amino acids at one position — so this is a consensus, not a fixed identity." /></th>
               <th>{byAb ? 'Antibodies' : 'Ag contacts'}<Hint text={contactHelp} /></th>
               <th className="num">Structures<Hint text="Distinct structural assemblies in which this antibody position contacts the antigen." /></th>
               <th>Top contacted Ag residues</th></tr>
           </thead>
           <tbody>
             {rows.map((r) => (
-              <tr key={`${r.antibody_chain_type}|${r.antibody_imgt_position}|${r.antibody_residue_name}`}>
-                <td><b>{r.antibody_residue_name}{r.antibody_imgt_position}</b></td>
+              <tr key={`${r.antibody_chain_type}|${r.antibody_imgt_position}`}>
+                <td><b>{r.antibody_imgt_position}</b></td>
                 <td><span className="rtag" style={{ background: REGION_COLORS[r.antibody_imgt_region] || '#8a94a6',
                   color: chipInk(REGION_COLORS[r.antibody_imgt_region] || '#8a94a6') }}>{r.antibody_imgt_region}</span></td>
+                <td className="conv-consensus"><b>{r.consensus_residue || '—'}</b>
+                  {r.consensus_residue && <span className="conv-sub"> {Math.round(r.consensus_frac * 100)}% · {r.n_distinct_residues} aa</span>}</td>
                 <td style={{ minWidth: 130 }}>
                   <Bar frac={r.total_antigen_contacts / max} color={REGION_COLORS[r.antibody_imgt_region] || '#999'}>
                     {r.total_antigen_contacts}</Bar>

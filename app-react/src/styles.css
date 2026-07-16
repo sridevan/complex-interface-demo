@@ -205,6 +205,9 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 /* ContactHeatmap + ParatopeConvergence reused in the Explorer Section 2: fill the fixed-height card + scroll. */
 .cm-row > .card { display: flex; flex-direction: column; }
 .cm-row .hm-wrap, .cm-row .ex-scroll { flex: 1 1 auto; min-height: 0; max-height: none; }
+/* Paratope-convergence consensus-residue cell: bold AA + muted share/diversity. */
+.conv-consensus { white-space: nowrap; }
+.conv-sub { color: var(--muted); font-size: 11.5px; }
 .cm-table { border-collapse: separate; border-spacing: 0; }
 .cm-corner { position: sticky; left: 0; top: 0; z-index: 3; background: #fff; width: 50px; }
 .cm-colhead { height: 54px; vertical-align: bottom; padding: 2px 0; text-align: center;
