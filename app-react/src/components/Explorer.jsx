@@ -10,8 +10,11 @@ import Hint from './Hint.jsx'
 
 const COMPLEX_ID = 'PDB-CPX-140202'
 const INST_PAGE_SIZE = 25
-const ANTIGEN = { name: 'SARS-CoV-2 spike glycoprotein', gene: 'S', acc: 'P0DTC2',
-  organism: 'SARS-CoV-2', note: 'Antigen · residues normalised by UniProt position (PISA)' }
+const ANTIGEN = { name: 'SARS-CoV-2 spike glycoprotein', gene: 'S', acc: 'P0DTC2', organism: 'SARS-CoV-2',
+  func: 'Class I viral fusion glycoprotein: the S1 subunit binds the host ACE2 receptor and the S2 subunit '
+    + 'drives viral–host membrane fusion, mediating SARS-CoV-2 cell entry — the principal target of neutralising antibodies.' }
+const ANTIBODY_FUNC = 'Adaptive immune recognition — the paired heavy/light variable domains (Fv) form the '
+  + 'paratope, whose CDR loops bind the antigen epitope.'
 const AB_COLOR = '#e19039', AG_COLOR = '#4b7fcc'
 
 const median = (arr) => {
@@ -38,17 +41,32 @@ const INST_CMP = {
 }
 const INST_DEFAULT_DIR = { experimental_method: 'asc', resolution: 'asc', interface_area: 'desc' }
 
-const CompChip = ({ color, gene }) => (
+const CompChip = ({ color, gene, acc }) => (
   <span className="comp-chip" style={{ '--cc': color, '--chip-bg': color + '22', '--chip-bd': color + '66' }}>
     <span className="comp-dot" /><span className="comp-gene">{gene}</span>
+    {acc && <span className="comp-acc">{acc}</span>}
   </span>
 )
+
+// Biological-function line with a "more" toggle, matching the protein–protein UniProt cards.
+function UniFunc({ text, limit = 90 }) {
+  const [open, setOpen] = useState(false)
+  if (!text) return null
+  if (text.length <= limit) return <div className="uni-func">{text}</div>
+  let cut = text.slice(0, limit)
+  const sp = cut.lastIndexOf(' ')
+  if (sp > limit * 0.5) cut = cut.slice(0, sp)
+  return (
+    <div className="uni-func">{open ? `${text} ` : `${cut}… `}
+      <button className="uni-more" onClick={() => setOpen(!open)}>{open ? 'less' : 'more'}</button></div>
+  )
+}
 
 function SelectorCard({ abLabel, count, medBsa, active, onClick }) {
   return (
     <div className={'selcard' + (active ? ' active' : '')} onClick={onClick} style={{ '--acc': AB_COLOR, cursor: 'pointer' }}>
       <div className="hemo-chips">
-        <CompChip color={AG_COLOR} gene="Spike" />
+        <CompChip color={AG_COLOR} gene={ANTIGEN.gene} acc={ANTIGEN.acc} />
         <span className="chip-x">↔</span>
         <CompChip color={AB_COLOR} gene={abLabel} />
       </div>
@@ -171,6 +189,7 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
           </div>
           <div className="uni-name">{ANTIGEN.name} · {ANTIGEN.gene}</div>
           <div className="uni-meta"><i>{ANTIGEN.organism}</i> · residues by UniProt position (PISA)</div>
+          <UniFunc text={ANTIGEN.func} />
         </div>
         <div className="uni-card">
           <div className="uni-head">
@@ -178,6 +197,7 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
           </div>
           <div className="uni-name">Antibodies (Fab / Fv){nAntibodies ? ` · ${nAntibodies} unique` : ''}</div>
           <div className="uni-meta"><i>Homo sapiens</i> · residues by IMGT numbering (ANARCII), grouped by SAbDab2</div>
+          <UniFunc text={ANTIBODY_FUNC} />
         </div>
       </div>
 
