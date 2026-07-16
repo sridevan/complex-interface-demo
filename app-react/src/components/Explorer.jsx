@@ -230,8 +230,8 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
             {selected.pdb_id} assembly {selected.assembly_id}, interface {selected.interface_id}
             {' · '}{ANTIGEN.gene} ↔ {chainType === 'heavy' ? 'VH' : 'VL'}</p>}
           <div className="legend" style={{ marginTop: 0 }}>
-            <span className="dot" style={{ background: AG_COLOR }} /> antigen
-            <span className="dot" style={{ background: AB_COLOR }} /> antibody
+            <span className="dot" style={{ background: AG_COLOR }} /> {ANTIGEN.gene}
+            <span className="dot" style={{ background: AB_COLOR }} /> {chainType === 'heavy' ? 'VH' : 'VL'}
           </div>
           {selected ? <Viewer3Dmol pdbId={selected.pdb_id} agResidues={iface.ag} abResidues={iface.ab}
                                     highlight={highlight} onClearHighlight={() => setHighlight(null)} height={480} />
