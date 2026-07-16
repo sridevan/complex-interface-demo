@@ -178,7 +178,7 @@ function ParatopeConservation({ abImgt, side }) {
   )
 }
 
-// ── Section 1: antibody convergence ────────────────────────────────────────────────────────────
+// ── Section 1: paratope convergence ────────────────────────────────────────────────────────────
 export function ParatopeConvergence({ abImgt, weight, fixedSide, epiFilter, onClearEpiFilter }) {
   const [sideState, setSide] = useState('all')  // 'all' | 'heavy' | 'light'
   const [sortBy, setSortBy] = useState('contacts')  // 'contacts' | 'position'
@@ -200,7 +200,7 @@ export function ParatopeConvergence({ abImgt, weight, fixedSide, epiFilter, onCl
 
   return (
     <div className="card ex-cell">
-      <h2>Antibody convergence</h2>
+      <h2>Paratope convergence</h2>
       <p className="note">Antibody <a href={REGION_REF_URL} target="_blank" rel="noopener noreferrer">IMGT positions</a>
         {' '}ranked by how often they contact the antigen {byAb ? 'across distinct antibodies' : 'across all complexes'} —
         where recognition converges. <b>Top residue</b> is the most common amino acid at each position (its share

@@ -153,7 +153,7 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
     return { ag: [...ag.values()], ab: [...ab.values()] }
   }, [sankeyRows])
 
-  // Section 2 — antibody convergence: antibody IMGT positions ranked by how often they contact the
+  // Section 2 — paratope convergence: antibody IMGT positions ranked by how often they contact the
   // antigen, aggregated across ALL interfaces of the selected chain side. When an epitope residue is
   // selected in the heatmap, re-aggregate over only the contacts to that residue.
   const epiRows = useMemo(() => epiSel != null
