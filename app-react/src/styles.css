@@ -205,9 +205,24 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 /* ContactHeatmap + ParatopeConvergence reused in the Explorer Section 2: fill the fixed-height card + scroll. */
 .cm-row > .card { display: flex; flex-direction: column; }
 .cm-row .hm-wrap, .cm-row .ex-scroll { flex: 1 1 auto; min-height: 0; max-height: none; }
-/* Paratope-convergence consensus-residue cell: bold AA + muted share/diversity. */
+/* Paratope-convergence top-residue cell: bold AA + conservation bar + muted share/diversity. */
 .conv-consensus { white-space: nowrap; }
+.conv-consensus > b { display: inline-block; min-width: 30px; }
+.conv-bar { display: inline-block; width: 46px; height: 7px; border-radius: 4px; background: #eef0f3;
+  vertical-align: middle; overflow: hidden; margin: 0 8px; }
+.conv-bar-fill { display: block; height: 100%; background: #7a3f9d; border-radius: 4px; }
 .conv-sub { color: var(--muted); font-size: 11.5px; }
+/* Sequence-conservation heatmap: 20 amino-acid rows × CDR IMGT-position columns. */
+table.seqmap { border-collapse: collapse; font-size: 11px; }
+.seqmap th, .seqmap td { border: 1px solid #eef1f4; padding: 0; }
+.seqmap-corner { position: sticky; left: 0; z-index: 3; background: #fff; width: 30px; }
+.seqmap-col { width: 24px; min-width: 24px; height: 46px; vertical-align: bottom; text-align: center;
+  font-family: ui-monospace, Menlo, monospace; color: var(--muted); border-top-width: 3px; border-top-style: solid;
+  writing-mode: vertical-rl; transform: rotate(180deg); padding: 3px 0; }
+.seqmap-aa { position: sticky; left: 0; z-index: 2; background: #fbfcfd; width: 30px; text-align: center;
+  font-family: ui-monospace, Menlo, monospace; font-weight: 700; padding: 2px 5px !important; }
+.seqmap-cell { width: 24px; min-width: 24px; height: 17px; }
+.seqmap-cell.cm-absent { background: #f6f7f9; }
 .cm-table { border-collapse: separate; border-spacing: 0; }
 .cm-corner { position: sticky; left: 0; top: 0; z-index: 3; background: #fff; width: 50px; }
 .cm-colhead { height: 54px; vertical-align: bottom; padding: 2px 0; text-align: center;

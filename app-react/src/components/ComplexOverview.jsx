@@ -211,10 +211,75 @@ function Bar({ frac, color, children }) {
   )
 }
 
+// ── Sequence-conservation heatmap (opt-in view of the paratope-convergence card) ────────────────
+// Amino-acid usage at each CDR IMGT position, per distinct antibody (so re-depositions don't skew
+// conservation). Rows = 20 amino acids grouped by physicochemical class; columns = CDR positions in
+// sequence order, banded by region. A pinned position shows one dark cell; a hypervariable one spreads.
+const AA1 = ['R', 'K', 'H', 'D', 'E', 'S', 'T', 'N', 'Q', 'C', 'G', 'P', 'A', 'V', 'I', 'L', 'M', 'F', 'W', 'Y']
+const ONE2THREE = { R: 'ARG', K: 'LYS', H: 'HIS', D: 'ASP', E: 'GLU', S: 'SER', T: 'THR', N: 'ASN', Q: 'GLN',
+  C: 'CYS', G: 'GLY', P: 'PRO', A: 'ALA', V: 'VAL', I: 'ILE', L: 'LEU', M: 'MET', F: 'PHE', W: 'TRP', Y: 'TYR' }
+const AA_TEXT = { R: '#3a6bb0', K: '#3a6bb0', H: '#3a6bb0', D: '#c0341a', E: '#c0341a', S: '#1f7a2f', T: '#1f7a2f',
+  N: '#1f7a2f', Q: '#1f7a2f', C: '#1f7a2f', Y: '#1f7a2f', G: '#8a7a1f', P: '#8a7a1f', A: '#8a7a1f', V: '#8a7a1f',
+  I: '#8a7a1f', L: '#8a7a1f', M: '#8a7a1f', F: '#8a7a1f', W: '#8a7a1f' }
+function seqCell(t) {
+  if (t <= 0) return '#ffffff'
+  const k = Math.sqrt(Math.min(1, t))
+  const lerp = (a, b) => Math.round(a + (b - a) * k)
+  return `rgb(${lerp(244, 63)},${lerp(240, 0)},${lerp(250, 125)})`
+}
+
+function ParatopeConservation({ abImgt, side }) {
+  const [tip, setTip] = useState(null)
+  const cols = useMemo(() => abImgt
+    .filter((r) => (side === 'all' || r.antibody_chain_type === side) && /CDR/.test(r.antibody_imgt_region || ''))
+    .sort((a, b) => a.antibody_chain_type.localeCompare(b.antibody_chain_type)
+      || a.antibody_imgt_position - b.antibody_imgt_position), [abImgt, side])
+  const grid = useMemo(() => cols.map((c) => {
+    const total = [...c.abres.values()].reduce((s, x) => s + x.sab.size, 0) || 1
+    const comp = {}
+    for (const [res, x] of c.abres) comp[res] = x.sab.size / total
+    return { comp, total }
+  }), [cols])
+  if (!cols.length) return <p className="note">No CDR paratope positions for this chain side.</p>
+  return (
+    <div className="hm-wrap seqmap-wrap">
+      <table className="seqmap">
+        <thead>
+          <tr>
+            <th className="seqmap-corner" />
+            {cols.map((c, i) => (
+              <th key={i} className="seqmap-col" title={`IMGT ${c.antibody_imgt_position} · ${c.antibody_imgt_region} · ${grid[i].total} antibodies`}
+                  style={{ borderTopColor: REGION_COLORS[c.antibody_imgt_region] || '#8a94a6' }}>{c.antibody_imgt_position}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {AA1.map((aa) => (
+            <tr key={aa}>
+              <td className="seqmap-aa" style={{ color: AA_TEXT[aa] }}>{aa}</td>
+              {cols.map((c, i) => {
+                const f = grid[i].comp[ONE2THREE[aa]] || 0
+                return (
+                  <td key={i} className={'seqmap-cell' + (f > 0 ? '' : ' cm-absent')}
+                      style={f > 0 ? { background: seqCell(f) } : null}
+                      onMouseEnter={f > 0 ? () => setTip(`${ONE2THREE[aa]} at IMGT ${c.antibody_imgt_position} (${c.antibody_imgt_region}): ${Math.round(f * 100)}% of ${grid[i].total} antibodies`) : undefined}
+                      onMouseLeave={f > 0 ? () => setTip(null) : undefined} />
+                )
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      {tip && <div className="nt-tip">{tip}</div>}
+    </div>
+  )
+}
+
 // ── Section 1: paratope convergence ────────────────────────────────────────────────────────────
 export function ParatopeConvergence({ abImgt, weight, fixedSide, epiFilter, onClearEpiFilter }) {
   const [sideState, setSide] = useState('all')  // 'all' | 'heavy' | 'light'
   const [sortBy, setSortBy] = useState('contacts')  // 'contacts' | 'position'
+  const [view, setView] = useState('table')  // 'table' | 'heatmap' (sequence conservation)
   const side = fixedSide || sideState
   const rows = useMemo(() => {
     const f = abImgt.filter((r) => side === 'all' || r.antibody_chain_type === side)
@@ -224,6 +289,7 @@ export function ParatopeConvergence({ abImgt, weight, fixedSide, epiFilter, onCl
     return [...f].sort(cmp)
   }, [abImgt, side, sortBy])
   const max = Math.max(1, ...rows.map((r) => r.total_antigen_contacts))
+  const nCdr = rows.filter((r) => /CDR/.test(r.antibody_imgt_region || '')).length
   const byAb = weight === 'antibody'
   const contactHelp = byAb
     ? 'Distinct antibodies (SAbDab2 ID) whose paratope includes this IMGT position — each antibody counted once, deposition redundancy removed.'
@@ -234,8 +300,9 @@ export function ParatopeConvergence({ abImgt, weight, fixedSide, epiFilter, onCl
       <h2>Paratope convergence</h2>
       <p className="note">Antibody <a href={REGION_REF_URL} target="_blank" rel="noopener noreferrer">IMGT positions</a>
         {' '}ranked by how often they contact the antigen {byAb ? 'across distinct antibodies' : 'across all complexes'} —
-        where recognition converges. <b>Consensus</b> is the most common amino acid at that position across deposited
-        antibodies (with its share and the number of distinct residues seen there).</p>
+        where recognition converges. <b>Top residue</b> is the most common amino acid at each position (its share
+        shows how conserved the position is); switch to <b>Sequence conservation</b> for the full amino-acid usage per
+        CDR position, weighted per distinct antibody.</p>
       <div className="controls">
         {!fixedSide && <>
           <label>Chain</label>
@@ -246,22 +313,32 @@ export function ParatopeConvergence({ abImgt, weight, fixedSide, epiFilter, onCl
             ))}
           </span>
         </>}
-        <label style={{ marginLeft: fixedSide ? 0 : 10 }}>Sort</label>
+        <label style={{ marginLeft: fixedSide ? 0 : 10 }}>View</label>
         <span className="pill">
-          <button className={sortBy === 'contacts' ? 'active' : ''} onClick={() => setSortBy('contacts')}>By contacts</button>
-          <button className={sortBy === 'position' ? 'active' : ''} onClick={() => setSortBy('position')}>By position</button>
+          <button className={view === 'table' ? 'active' : ''} onClick={() => setView('table')}>Ranked positions</button>
+          <button className={view === 'heatmap' ? 'active' : ''} onClick={() => setView('heatmap')}>Sequence conservation</button>
         </span>
-        <span className="rowcount">{rows.length} IMGT positions</span>
+        {view === 'table' && <>
+          <label style={{ marginLeft: 10 }}>Sort</label>
+          <span className="pill">
+            <button className={sortBy === 'contacts' ? 'active' : ''} onClick={() => setSortBy('contacts')}>By contacts</button>
+            <button className={sortBy === 'position' ? 'active' : ''} onClick={() => setSortBy('position')}>By position</button>
+          </span>
+        </>}
+        <span className="rowcount">{view === 'table' ? `${rows.length} IMGT positions` : `20 aa × ${nCdr} CDR positions`}</span>
       </div>
       {epiFilter && (
         <div className="filter-chip">Contacting antigen residue <b>{epiFilter}</b>
           <button onClick={onClearEpiFilter}>clear ✕</button></div>
       )}
+      {view === 'heatmap' ? (
+        <ParatopeConservation abImgt={abImgt} side={side} />
+      ) : (
       <div className="ex-scroll">
         <table>
           <thead>
             <tr><th>IMGT pos</th><th>Ab region<Hint text={AB_REGION_HELP} /></th>
-              <th>Consensus<Hint text="Most common antibody amino acid at this IMGT position across deposited antibodies, its share of contacts at the position, and the number of distinct residues seen there. CDR positions are hypervariable — many amino acids at one position — so this is a consensus, not a fixed identity." /></th>
+              <th>Top residue<Hint text="Most common antibody amino acid at this IMGT position across deposited antibodies. The bar is its share of contacts at the position — a long bar is a conserved position, a short bar with a high 'aa' count is hypervariable. Full per-position usage is in the Sequence conservation view." /></th>
               <th>{byAb ? 'Antibodies' : 'Ag contacts'}<Hint text={contactHelp} /></th>
               <th className="num">Structures<Hint text="Distinct structural assemblies in which this antibody position contacts the antigen." /></th>
               <th>Top contacted Ag residues</th></tr>
@@ -272,8 +349,13 @@ export function ParatopeConvergence({ abImgt, weight, fixedSide, epiFilter, onCl
                 <td><b>{r.antibody_imgt_position}</b></td>
                 <td><span className="rtag" style={{ background: REGION_COLORS[r.antibody_imgt_region] || '#8a94a6',
                   color: chipInk(REGION_COLORS[r.antibody_imgt_region] || '#8a94a6') }}>{r.antibody_imgt_region}</span></td>
-                <td className="conv-consensus"><b>{r.consensus_residue || '—'}</b>
-                  {r.consensus_residue && <span className="conv-sub"> {Math.round(r.consensus_frac * 100)}% · {r.n_distinct_residues} aa</span>}</td>
+                <td className="conv-consensus">
+                  <b>{r.consensus_residue || '—'}</b>
+                  {r.consensus_residue && <>
+                    <span className="conv-bar"><span className="conv-bar-fill" style={{ width: `${r.consensus_frac * 100}%` }} /></span>
+                    <span className="conv-sub">{Math.round(r.consensus_frac * 100)}% · {r.n_distinct_residues} aa</span>
+                  </>}
+                </td>
                 <td style={{ minWidth: 130 }}>
                   <Bar frac={r.total_antigen_contacts / max} color={REGION_COLORS[r.antibody_imgt_region] || '#999'}>
                     {r.total_antigen_contacts}</Bar>
@@ -286,6 +368,7 @@ export function ParatopeConvergence({ abImgt, weight, fixedSide, epiFilter, onCl
           </tbody>
         </table>
       </div>
+      )}
     </div>
   )
 }
