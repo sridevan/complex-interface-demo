@@ -41,11 +41,11 @@ export default function Viewer3Dmol({ pdbId, cifUrl, cifFallbackUrl, agResidues,
   const hoverShapeRef = useRef(null)
   const mouseRef = useRef({ x: 0, y: 0 })
   const showContactsRef = useRef(false)
-  const showVdwRef = useRef(false)
+  const showVdwRef = useRef(true)   // vdW ("other") contacts shown by default alongside specific bonds
   const [showBg, setShowBg] = useState(true)
   const [showLabels, setShowLabels] = useState(false)
   const [showContacts, setShowContacts] = useState(false)
-  const [showVdw, setShowVdw] = useState(false)
+  const [showVdw, setShowVdw] = useState(true)
   const [contactTip, setContactTip] = useState(null)
   const [err, setErr] = useState(null)
   const frameRef = useRef(null)          // the .viewer-wrap element we put into fullscreen
