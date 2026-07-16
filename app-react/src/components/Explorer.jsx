@@ -78,7 +78,7 @@ function SelectorCard({ abLabel, count, medBsa, active, onClick }) {
   )
 }
 
-export default function Explorer({ interfaces, residue, sabdab = {}, quality = {} }) {
+export default function Explorer({ interfaces, residue, sabdab = {}, quality = {}, contacts = {} }) {
   const [chainType, setChainType] = useState('heavy')
   const [selKey, setSelKey] = useState(null)
   const [highlight, setHighlight] = useState(null)
@@ -234,6 +234,7 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
             <span className="dot" style={{ background: AB_COLOR }} /> {chainType === 'heavy' ? 'VH' : 'VL'}
           </div>
           {selected ? <Viewer3Dmol pdbId={selected.pdb_id} agResidues={iface.ag} abResidues={iface.ab}
+                                    contacts={selected ? contacts[keyOf(selected)] : null}
                                     highlight={highlight} onClearHighlight={() => setHighlight(null)} height={480} />
             : <p className="note">No interface selected.</p>}
         </div>

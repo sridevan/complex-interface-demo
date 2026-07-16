@@ -9,6 +9,7 @@ export async function loadAll() {
     'aggregated_antibody_imgt_contacts',
     'imgt_region_contribution',
     'residue_level_interactions',
+    'viewer_contacts',
     'interface_summary',
     'mapping_anomalies',
     'antigen_unp_coverage',
@@ -20,7 +21,7 @@ export async function loadAll() {
   ]
   // files that are keyed objects, not arrays — default to {} on miss
   const objDefaults = new Set(['batch_report', 'sabdab2_ids', 'structure_quality',
-    'multidomain_antibody_chains', 'epitope_communities'])
+    'multidomain_antibody_chains', 'epitope_communities', 'viewer_contacts'])
   const out = {}
   await Promise.all(names.map(async (n) => {
     const empty = objDefaults.has(n) ? {} : []

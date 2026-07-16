@@ -17,6 +17,7 @@ export default function App() {
   const sabdab = data.sabdab2_ids || {}
   const quality = data.structure_quality || {}
   const multidomain = data.multidomain_antibody_chains || {}
+  const viewerContacts = data.viewer_contacts || {}
   const anomalies = data.mapping_anomalies || []
   const coverage = data.antigen_unp_coverage || []
 
@@ -45,7 +46,7 @@ export default function App() {
         ))}
       </div>
 
-      {tab === 0 && <Explorer interfaces={interfacesShown} residue={residueShown} sabdab={sabdab} quality={quality} />}
+      {tab === 0 && <Explorer interfaces={interfacesShown} residue={residueShown} sabdab={sabdab} quality={quality} contacts={viewerContacts} />}
       {tab === 1 && <DataNotes anomalies={anomalies} coverage={coverage} multidomain={multidomain} nNonParatope={nNonParatope} />}
     </div>
   )
