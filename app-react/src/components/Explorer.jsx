@@ -38,13 +38,19 @@ const INST_CMP = {
 }
 const INST_DEFAULT_DIR = { experimental_method: 'asc', resolution: 'asc', interface_area: 'desc' }
 
+const CompChip = ({ color, gene }) => (
+  <span className="comp-chip" style={{ '--cc': color, '--chip-bg': color + '22', '--chip-bd': color + '66' }}>
+    <span className="comp-dot" /><span className="comp-gene">{gene}</span>
+  </span>
+)
+
 function SelectorCard({ abLabel, count, medBsa, active, onClick }) {
   return (
     <div className={'selcard' + (active ? ' active' : '')} onClick={onClick} style={{ '--acc': AB_COLOR, cursor: 'pointer' }}>
       <div className="hemo-chips">
-        <span className="chip"><span className="dot" style={{ background: AG_COLOR }} />Spike</span>
+        <CompChip color={AG_COLOR} gene="Spike" />
         <span className="chip-x">↔</span>
-        <span className="chip"><span className="dot" style={{ background: AB_COLOR }} />{abLabel}</span>
+        <CompChip color={AB_COLOR} gene={abLabel} />
       </div>
       <div className="selcard-stats">
         <div><div className="v">{count}</div><div className="k">deposited interface{count === 1 ? '' : 's'}</div></div>

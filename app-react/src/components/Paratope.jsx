@@ -96,8 +96,6 @@ const ONE2THREE = { R: 'ARG', K: 'LYS', H: 'HIS', D: 'ASP', E: 'GLU', S: 'SER', 
 const AA_TEXT = { R: '#3a6bb0', K: '#3a6bb0', H: '#3a6bb0', D: '#c0341a', E: '#c0341a', S: '#1f7a2f', T: '#1f7a2f',
   N: '#1f7a2f', Q: '#1f7a2f', C: '#1f7a2f', Y: '#1f7a2f', G: '#8a7a1f', P: '#8a7a1f', A: '#8a7a1f', V: '#8a7a1f',
   I: '#8a7a1f', L: '#8a7a1f', M: '#8a7a1f', F: '#8a7a1f', W: '#8a7a1f' }
-const REGION_BAND = { 'CDR-H1': 'CDR1', 'CDR-H2': 'CDR2', 'CDR-H3': 'CDR3',
-  'CDR-L1': 'CDR1', 'CDR-L2': 'CDR2', 'CDR-L3': 'CDR3' }
 function seqCell(t) {
   if (t <= 0) return '#ffffff'
   const k = Math.sqrt(Math.min(1, t))
@@ -141,7 +139,7 @@ function ParatopeConservation({ abImgt, side }) {
             {bands.map((g, i) => (
               <th key={i} colSpan={g.span} className="seqmap-region"
                   style={{ background: REGION_COLORS[g.region] || '#8a94a6', color: chipInk(REGION_COLORS[g.region] || '#8a94a6') }}>
-                {REGION_BAND[g.region] || g.region}</th>
+                {g.region}</th>
             ))}
           </tr>
           <tr>
