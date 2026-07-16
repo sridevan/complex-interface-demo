@@ -294,7 +294,7 @@ export default function Explorer({ interfaces, residue, sabdab = {}, quality = {
 
         {/* Sankey for selected instance */}
         <div className="card ex-cell">
-          <h2>Antigen–antibody contacts <span className="h2-sub">· {selected ? `${selected.pdb_id} interface ${selected.interface_id}` : '—'}
+          <h2>Antigen–antibody contacts <span className="h2-sub">· {selected ? `${selected.pdb_id} assembly ${selected.assembly_id}, interface ${selected.interface_id}` : '—'}
             {selected && selected.residue_contacts != null ? ` · ${selected.residue_contacts} residue contacts` : ''}</span></h2>
           <p className="note">For the selected interface: antigen residues (UniProt numbering) on the left, antibody residues
             (IMGT numbering) on the right. Click a residue to highlight it here and in the 3D view; click it again to clear.</p>
