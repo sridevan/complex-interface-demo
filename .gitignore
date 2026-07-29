@@ -28,6 +28,15 @@ app-react/public/pygm/
 *.swp
 .idea/
 .vscode/
+.claude/
+
+# 579MB / 78k files of raw pygm pipeline output. Unlike the other PDB-CPX-*
+# dirs (which are committed), pygm is bundleCif:false in sync-data.mjs, so the
+# viewer fetches its assemblies from PDBe/RCSB at runtime and never reads this.
+PDB-CPX-129188/
+
+# one-off spike output, not read by the pipeline or the app
+spike_zernike.txt
 
 # session scratch logs
 scratch_logs/
