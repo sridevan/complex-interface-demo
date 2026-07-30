@@ -45,3 +45,21 @@ for (const { cx, name, bundleCif } of COMPLEXES) {
   }
   console.log(`synced ${cx} data${bundleCif ? ' + assembly CIFs' : ' (CIFs fetched at runtime)'} into public/${name}/`)
 }
+
+// Instance-similarity pages: one dataset JSON (pairwise shape scores + metadata) plus the
+// per-assembly CIFs, already superposed onto the reference assembly by
+// scripts/build_instance_similarity.py.
+const SIMILARITY = [
+  { cx: 'PDB-CPX-131443', name: 'hemoglobin-similarity' },   // horse haemoglobin, 20 assemblies
+]
+for (const { cx, name } of SIMILARITY) {
+  const srcJson = resolve(proc, cx, 'instance_similarity.json')
+  if (!existsSync(srcJson)) continue
+  const pub = resolve(here, '..', 'public', name)
+  const pubCif = resolve(pub, 'assemblies')
+  mkdirSync(pubCif, { recursive: true })
+  cpSync(srcJson, resolve(pub, 'instance_similarity.json'))
+  const srcCif = resolve(proc, cx, 'assemblies')
+  if (existsSync(srcCif)) cpSync(srcCif, pubCif, { recursive: true })
+  console.log(`synced ${cx} instance-similarity data into public/${name}/`)
+}

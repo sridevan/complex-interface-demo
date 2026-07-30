@@ -1,0 +1,1245 @@
+{
+ "complex_id": "PDB-CPX-131443",
+ "reference_assembly": "1ns9_1",
+ "method": {
+  "score_type": "combined",
+  "linkage": "average",
+  "cut_mode": "auto_gap",
+  "n_clusters": 5,
+  "source": "pdbe_complex_clustering/clustering.py (notebook defaults)",
+  "coordinate_source": "PDBe model server assembly coordinates"
+ },
+ "assemblies": [
+  {
+   "assembly_id": "1g0b_1",
+   "pdb_id": "1g0b",
+   "structure_title": "CARBONMONOXY LIGANDED EQUINE HEMOGLOBIN PH 8.5",
+   "resolution": 1.9,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "mean_dissimilarity": 0.4569,
+   "transform": {
+    "rotation": [
+     0.9999997637,
+     0.0,
+     -0.0006875219,
+     -0.0,
+     1.0,
+     -0.0,
+     0.0006875219,
+     0.0,
+     0.9999997637
+    ],
+    "translation": [
+     -44.7324318341,
+     -0.9426376307,
+     -25.5682605677
+    ],
+    "source": "1g0b_1-1ns9_1_transform.txt",
+    "derivation": "direct"
+   },
+   "validation": {
+    "n_matched": 574,
+    "rmsd_applied": 0.346,
+    "rmsd_tmalign": 0.35,
+    "aligned_length": 574,
+    "numbering": "label"
+   }
+  },
+  {
+   "assembly_id": "1ibe_1",
+   "pdb_id": "1ibe",
+   "structure_title": "DEOXY-HAEMOGLOBIN TRAPPED IN THE HIGH-AFFINITY (R) STATE",
+   "resolution": 1.8,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "mean_dissimilarity": 0.4851,
+   "transform": {
+    "rotation": [
+     0.9999998573,
+     0.0,
+     0.0005341829,
+     -0.0,
+     1.0,
+     0.0,
+     -0.0005341829,
+     -0.0,
+     0.9999998573
+    ],
+    "translation": [
+     -44.2790942482,
+     -1.0166923077,
+     -25.4368504941
+    ],
+    "source": "1ibe_1-1ns9_1_transform.txt",
+    "derivation": "direct"
+   },
+   "validation": {
+    "n_matched": 574,
+    "rmsd_applied": 0.552,
+    "rmsd_tmalign": 0.55,
+    "aligned_length": 574,
+    "numbering": "label"
+   }
+  },
+  {
+   "assembly_id": "1iwh_1",
+   "pdb_id": "1iwh",
+   "structure_title": "Crystal Structure of Horse Carbonmonoxyhemoglobin-Bezafibrate Complex at 1.55A Resolution: A Novel Allosteric Binding Site in R-State Hemoglobin",
+   "resolution": 1.55,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "mean_dissimilarity": 0.4945,
+   "transform": {
+    "rotation": [
+     0.0,
+     -0.9999978849,
+     0.0020567601,
+     -1.0,
+     -0.0,
+     -0.0,
+     0.0,
+     -0.0020567601,
+     -0.9999978849
+    ],
+    "translation": [
+     107.317358981,
+     43.7510559441,
+     86.9659100013
+    ],
+    "source": "1iwh_1-1ns9_1_transform.txt",
+    "derivation": "direct"
+   },
+   "validation": {
+    "n_matched": 574,
+    "rmsd_applied": 0.7,
+    "rmsd_tmalign": 0.7,
+    "aligned_length": 574,
+    "numbering": "label"
+   }
+  },
+  {
+   "assembly_id": "1ns6_1",
+   "pdb_id": "1ns6",
+   "structure_title": "The 2.1A Structure of Horse (alpha hemichrome/beta met) Hemoglobin at pH 5.4",
+   "resolution": 2.05,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "mean_dissimilarity": 0.5149,
+   "transform": {
+    "rotation": [
+     0.9999818525,
+     -0.0001053203,
+     0.0060235915,
+     0.0001044142,
+     0.9999999832,
+     0.0001507347,
+     -0.0060236072,
+     -0.000150103,
+     0.9999818466
+    ],
+    "translation": [
+     -0.0083768698,
+     -0.3602682935,
+     0.0062204724
+    ],
+    "source": "1ns6_1-1ns9_1_transform.txt",
+    "derivation": "direct"
+   },
+   "validation": {
+    "n_matched": 574,
+    "rmsd_applied": 1.146,
+    "rmsd_tmalign": 1.15,
+    "aligned_length": 574,
+    "numbering": "label"
+   }
+  },
+  {
+   "assembly_id": "1ns9_1",
+   "pdb_id": "1ns9",
+   "structure_title": "The 1.6A Structure of Horse Methemoglobin at pH 7.1",
+   "resolution": 1.6,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "mean_dissimilarity": 0.4507,
+   "transform": {
+    "rotation": [
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "translation": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "source": null,
+    "derivation": "identity"
+   },
+   "validation": {
+    "n_matched": 0,
+    "rmsd_applied": null,
+    "rmsd_tmalign": null,
+    "aligned_length": null,
+    "numbering": "label"
+   }
+  },
+  {
+   "assembly_id": "1y8h_1",
+   "pdb_id": "1y8h",
+   "structure_title": "HORSE METHEMOGLOBIN LOW SALT, PH 7.0",
+   "resolution": 3.1,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "mean_dissimilarity": 0.5036,
+   "transform": {
+    "rotation": [
+     0.8587972253,
+     -0.4238727747,
+     -0.2877484955,
+     0.5121961883,
+     0.6982456871,
+     0.5001080135,
+     -0.0110630254,
+     -0.5768750569,
+     0.8167574782
+    ],
+    "translation": [
+     29.600903527,
+     -90.3925680912,
+     13.7804539171
+    ],
+    "source": "1ns9_1-1y8h_1_transform.txt",
+    "derivation": "inverted"
+   },
+   "validation": {
+    "n_matched": 574,
+    "rmsd_applied": 1.174,
+    "rmsd_tmalign": 1.17,
+    "aligned_length": 574,
+    "numbering": "label"
+   }
+  },
+  {
+   "assembly_id": "1y8i_1",
+   "pdb_id": "1y8i",
+   "structure_title": "Horse methemoglobin low salt, PH 7.0 (98% relative humidity)",
+   "resolution": 2.6,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "mean_dissimilarity": 0.4671,
+   "transform": {
+    "rotation": [
+     0.8606364249,
+     -0.4181555544,
+     -0.2906043297,
+     0.5091784013,
+     0.6993813181,
+     0.5016005657,
+     -0.0065038235,
+     -0.5796651656,
+     0.8148288139
+    ],
+    "translation": [
+     28.4220934891,
+     -88.918561886,
+     12.6748473744
+    ],
+    "source": "1ns9_1-1y8i_1_transform.txt",
+    "derivation": "inverted"
+   },
+   "validation": {
+    "n_matched": 574,
+    "rmsd_applied": 1.055,
+    "rmsd_tmalign": 1.05,
+    "aligned_length": 574,
+    "numbering": "label"
+   }
+  },
+  {
+   "assembly_id": "1y8k_1",
+   "pdb_id": "1y8k",
+   "structure_title": "Horse methemoglobin low salt, PH 7.0 (88% relative humidity)",
+   "resolution": 2.3,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "mean_dissimilarity": 0.4738,
+   "transform": {
+    "rotation": [
+     0.8592623174,
+     -0.4225590685,
+     -0.2882916987,
+     0.5114516509,
+     0.6995006281,
+     0.4991152975,
+     -0.0092454709,
+     -0.5763182324,
+     0.8171730638
+    ],
+    "translation": [
+     28.3766260534,
+     -88.2559059811,
+     12.191613062
+    ],
+    "source": "1ns9_1-1y8k_1_transform.txt",
+    "derivation": "inverted"
+   },
+   "validation": {
+    "n_matched": 574,
+    "rmsd_applied": 1.125,
+    "rmsd_tmalign": 1.12,
+    "aligned_length": 574,
+    "numbering": "label"
+   }
+  },
+  {
+   "assembly_id": "2d5x_1",
+   "pdb_id": "2d5x",
+   "structure_title": "Crystal structure of carbonmonoxy horse hemoglobin complexed with L35",
+   "resolution": 1.45,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "mean_dissimilarity": 0.4912,
+   "transform": {
+    "rotation": [
+     -0.0,
+     0.9999972994,
+     -0.0023240356,
+     -1.0,
+     -0.0,
+     -0.0,
+     -0.0,
+     0.0023240356,
+     0.9999972994
+    ],
+    "translation": [
+     -53.6197407802,
+     12.4216923077,
+     -43.6327320188
+    ],
+    "source": "1ns9_1-2d5x_1_transform.txt",
+    "derivation": "inverted"
+   },
+   "validation": {
+    "n_matched": 574,
+    "rmsd_applied": 0.698,
+    "rmsd_tmalign": 0.7,
+    "aligned_length": 574,
+    "numbering": "label"
+   }
+  },
+  {
+   "assembly_id": "2dhb_1",
+   "pdb_id": "2dhb",
+   "structure_title": "THREE DIMENSIONAL FOURIER SYNTHESIS OF HORSE DEOXYHAEMOGLOBIN AT 2.8 ANGSTROMS RESOLUTION",
+   "resolution": 2.8,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "mean_dissimilarity": 0.5472,
+   "transform": {
+    "rotation": [
+     -0.9757091086,
+     0.0001219757,
+     -0.2190701269,
+     -3.46049e-05,
+     -0.9999999183,
+     -0.0004026626,
+     -0.2190701581,
+     -0.0003853007,
+     0.9757090331
+    ],
+    "translation": [
+     -0.0042609388,
+     -0.3888740845,
+     0.0059730684
+    ],
+    "source": "1ns9_1-2dhb_1_transform.txt",
+    "derivation": "inverted"
+   },
+   "validation": {
+    "n_matched": 574,
+    "rmsd_applied": 2.384,
+    "rmsd_tmalign": 2.38,
+    "aligned_length": 574,
+    "numbering": "label"
+   }
+  },
+  {
+   "assembly_id": "2mhb_1",
+   "pdb_id": "2mhb",
+   "structure_title": "THE STRUCTURE OF HORSE METHAEMOGLOBIN AT 2.0 ANGSTROMS RESOLUTION",
+   "resolution": 2,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "mean_dissimilarity": 0.4901,
+   "transform": {
+    "rotation": [
+     -0.9999999922,
+     -0.0,
+     0.0001250022,
+     -0.0,
+     1.0,
+     -0.0,
+     -0.0001250022,
+     -0.0,
+     -0.9999999922
+    ],
+    "translation": [
+     0.0,
+     -0.0435944056,
+     0.0
+    ],
+    "source": "1ns9_1-2mhb_1_transform.txt",
+    "derivation": "inverted"
+   },
+   "validation": {
+    "n_matched": 574,
+    "rmsd_applied": 0.563,
+    "rmsd_tmalign": 0.56,
+    "aligned_length": 574,
+    "numbering": "label"
+   }
+  },
+  {
+   "assembly_id": "2zlt_1",
+   "pdb_id": "2zlt",
+   "structure_title": "Horse methemoglobin high salt, pH 7.0",
+   "resolution": 1.9,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "mean_dissimilarity": 0.4821,
+   "transform": {
+    "rotation": [
+     -0.9999995284,
+     -0.0,
+     -0.0009711339,
+     -0.0,
+     1.0,
+     0.0,
+     0.0009711339,
+     0.0,
+     -0.9999995284
+    ],
+    "translation": [
+     0.0,
+     -0.1525629371,
+     0.0
+    ],
+    "source": "1ns9_1-2zlt_1_transform.txt",
+    "derivation": "inverted"
+   },
+   "validation": {
+    "n_matched": 572,
+    "rmsd_applied": 0.367,
+    "rmsd_tmalign": 0.37,
+    "aligned_length": 572,
+    "numbering": "label"
+   }
+  },
+  {
+   "assembly_id": "2zlu_1",
+   "pdb_id": "2zlu",
+   "structure_title": "Horse methemoglobin high salt, pH 7.0 (88% relative humidity)",
+   "resolution": 2,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "mean_dissimilarity": 0.46,
+   "transform": {
+    "rotation": [
+     -0.9999998102,
+     0.0,
+     -0.0006161457,
+     0.0,
+     1.0,
+     0.0,
+     0.0006161457,
+     0.0,
+     -0.9999998102
+    ],
+    "translation": [
+     0.0,
+     -0.1996982456,
+     0.0
+    ],
+    "source": "1ns9_1-2zlu_1_transform.txt",
+    "derivation": "inverted"
+   },
+   "validation": {
+    "n_matched": 570,
+    "rmsd_applied": 0.391,
+    "rmsd_tmalign": 0.39,
+    "aligned_length": 570,
+    "numbering": "label"
+   }
+  },
+  {
+   "assembly_id": "2zlv_1",
+   "pdb_id": "2zlv",
+   "structure_title": "Horse methemoglobin high salt, pH 7.0 (79% relative humidity)",
+   "resolution": 2,
+   "exp_method": "x-ray",
+   "cluster_id": 5,
+   "mean_dissimilarity": 0.5668,
+   "transform": {
+    "rotation": [
+     0.4588902392,
+     -0.0,
+     0.8884929647,
+     -0.0,
+     -1.0,
+     -0.0,
+     0.8884929647,
+     -0.0,
+     -0.4588902392
+    ],
+    "translation": [
+     -37.7380129251,
+     30.5756630037,
+     -20.6922226181
+    ],
+    "source": "1ns9_1-2zlv_1_transform.txt",
+    "derivation": "inverted"
+   },
+   "validation": {
+    "n_matched": 546,
+    "rmsd_applied": 0.533,
+    "rmsd_tmalign": 0.53,
+    "aligned_length": 546,
+    "numbering": "label"
+   }
+  },
+  {
+   "assembly_id": "2zlw_1",
+   "pdb_id": "2zlw",
+   "structure_title": "Horse methemoglobin high salt, pH 7.0 (75% relative humidity)",
+   "resolution": 2.9,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "mean_dissimilarity": 0.4595,
+   "transform": {
+    "rotation": [
+     0.999999884,
+     -0.0004060194,
+     -0.0002591675,
+     0.0004060806,
+     0.9999998897,
+     0.0002360162,
+     0.0002590717,
+     -0.0002361214,
+     0.9999999386
+    ],
+    "translation": [
+     9.8170776922,
+     -0.6131626576,
+     -25.1903425755
+    ],
+    "source": "1ns9_1-2zlw_1_transform.txt",
+    "derivation": "inverted"
+   },
+   "validation": {
+    "n_matched": 574,
+    "rmsd_applied": 0.537,
+    "rmsd_tmalign": 0.54,
+    "aligned_length": 574,
+    "numbering": "label"
+   }
+  },
+  {
+   "assembly_id": "5c6e_1",
+   "pdb_id": "5c6e",
+   "structure_title": "Joint X-ray/neutron structure of equine cyanomet hemoglobin in R state",
+   "resolution": 1.7,
+   "exp_method": "x-ray",
+   "cluster_id": 3,
+   "mean_dissimilarity": 0.8433,
+   "transform": {
+    "rotation": [
+     0.9999996234,
+     -0.0,
+     -0.0008679131,
+     0.0,
+     1.0,
+     -0.0,
+     0.0008679131,
+     0.0,
+     0.9999996234
+    ],
+    "translation": [
+     -44.7162815004,
+     -0.8734773519,
+     -25.6193194966
+    ],
+    "source": "1ns9_1-5c6e_1_transform.txt",
+    "derivation": "inverted"
+   },
+   "validation": {
+    "n_matched": 574,
+    "rmsd_applied": 0.322,
+    "rmsd_tmalign": 0.32,
+    "aligned_length": 574,
+    "numbering": "label"
+   }
+  },
+  {
+   "assembly_id": "6r2o_1",
+   "pdb_id": "6r2o",
+   "structure_title": "Hemoglobin structure from serial crystallography with a 3D-printed nozzle.",
+   "resolution": 2.46,
+   "exp_method": "x-ray",
+   "cluster_id": 4,
+   "mean_dissimilarity": 0.7406,
+   "transform": {
+    "rotation": [
+     0.8613840153,
+     -0.4166053048,
+     -0.2906158945,
+     0.5079028818,
+     0.6982627832,
+     0.5044439992,
+     -0.0072277827,
+     -0.5821246479,
+     0.8130674348
+    ],
+    "translation": [
+     28.1656249684,
+     -88.5115670766,
+     13.408176698
+    ],
+    "source": "1ns9_1-6r2o_1_transform.txt",
+    "derivation": "inverted"
+   },
+   "validation": {
+    "n_matched": 572,
+    "rmsd_applied": 1.143,
+    "rmsd_tmalign": 1.14,
+    "aligned_length": 572,
+    "numbering": "label"
+   }
+  },
+  {
+   "assembly_id": "6sva_1",
+   "pdb_id": "6sva",
+   "structure_title": "Multicrystal structure of equine Haemoglobin at room temperature using a multilayer monochromator.",
+   "resolution": 1.92,
+   "exp_method": "x-ray",
+   "cluster_id": 2,
+   "mean_dissimilarity": 0.8062,
+   "transform": {
+    "rotation": [
+     0.9999997011,
+     0.0,
+     0.0007731824,
+     -0.0,
+     1.0,
+     -0.0,
+     -0.0007731824,
+     0.0,
+     0.9999997011
+    ],
+    "translation": [
+     9.784801021,
+     -16.7829122807,
+     -25.4815730527
+    ],
+    "source": "1ns9_1-6sva_1_transform.txt",
+    "derivation": "inverted"
+   },
+   "validation": {
+    "n_matched": 570,
+    "rmsd_applied": 0.292,
+    "rmsd_tmalign": 0.29,
+    "aligned_length": 570,
+    "numbering": "label"
+   }
+  },
+  {
+   "assembly_id": "8puq_1",
+   "pdb_id": "8puq",
+   "structure_title": "MetHemoglobin structure from serial synchrotron crystallography with fixed target",
+   "resolution": 1.95,
+   "exp_method": "x-ray",
+   "cluster_id": 2,
+   "mean_dissimilarity": 0.7813,
+   "transform": {
+    "rotation": [
+     0.9999995952,
+     0.000495562,
+     0.000750966,
+     -0.0004965357,
+     0.9999990357,
+     0.0012969292,
+     -0.0007503226,
+     -0.0012973015,
+     0.999998877
+    ],
+    "translation": [
+     9.8061732785,
+     -16.7953019649,
+     -25.5125093952
+    ],
+    "source": "1ns9_1-8puq_1_transform.txt",
+    "derivation": "inverted"
+   },
+   "validation": {
+    "n_matched": 570,
+    "rmsd_applied": 0.333,
+    "rmsd_tmalign": 0.33,
+    "aligned_length": 570,
+    "numbering": "label"
+   }
+  },
+  {
+   "assembly_id": "8pur_1",
+   "pdb_id": "8pur",
+   "structure_title": "DexyHemoglobin structure from serial synchrotron crystallography with fixed target",
+   "resolution": 1.85,
+   "exp_method": "x-ray",
+   "cluster_id": 2,
+   "mean_dissimilarity": 0.8045,
+   "transform": {
+    "rotation": [
+     0.9999997344,
+     0.0,
+     -0.000728866,
+     -0.0,
+     1.0,
+     -0.0,
+     0.000728866,
+     0.0,
+     0.9999997344
+    ],
+    "translation": [
+     -44.3113620553,
+     -1.0295909091,
+     -25.5873038424
+    ],
+    "source": "1ns9_1-8pur_1_transform.txt",
+    "derivation": "inverted"
+   },
+   "validation": {
+    "n_matched": 572,
+    "rmsd_applied": 0.42,
+    "rmsd_tmalign": 0.42,
+    "aligned_length": 572,
+    "numbering": "label"
+   }
+  }
+ ],
+ "heatmap": {
+  "order": [
+   "2zlv_1",
+   "2dhb_1",
+   "1ns6_1",
+   "1iwh_1",
+   "2d5x_1",
+   "2zlw_1",
+   "1ibe_1",
+   "1ns9_1",
+   "1g0b_1",
+   "2zlu_1",
+   "2zlt_1",
+   "2mhb_1",
+   "1y8k_1",
+   "1y8i_1",
+   "1y8h_1",
+   "6r2o_1",
+   "6sva_1",
+   "8puq_1",
+   "8pur_1",
+   "5c6e_1"
+  ],
+  "ordering": "tree-penalised path-length seriation (matrix only, pre-clustering)",
+  "dendrogram_order": [
+   "2zlv_1",
+   "2dhb_1",
+   "1ns6_1",
+   "1iwh_1",
+   "2d5x_1",
+   "1y8h_1",
+   "1y8i_1",
+   "1y8k_1",
+   "2zlt_1",
+   "2zlu_1",
+   "2mhb_1",
+   "2zlw_1",
+   "1ibe_1",
+   "1g0b_1",
+   "1ns9_1",
+   "5c6e_1",
+   "6r2o_1",
+   "6sva_1",
+   "8puq_1",
+   "8pur_1"
+  ],
+  "labels": [
+   "1g0b_1",
+   "1ibe_1",
+   "1iwh_1",
+   "1ns6_1",
+   "1ns9_1",
+   "1y8h_1",
+   "1y8i_1",
+   "1y8k_1",
+   "2d5x_1",
+   "2dhb_1",
+   "2mhb_1",
+   "2zlt_1",
+   "2zlu_1",
+   "2zlv_1",
+   "2zlw_1",
+   "5c6e_1",
+   "6r2o_1",
+   "6sva_1",
+   "8puq_1",
+   "8pur_1"
+  ],
+  "matrix": [
+   [
+    0.0,
+    0.225076,
+    0.31127,
+    0.371504,
+    0.191408,
+    0.385377,
+    0.320405,
+    0.324058,
+    0.315662,
+    0.406123,
+    0.273058,
+    0.262293,
+    0.224907,
+    0.412229,
+    0.239924,
+    0.933098,
+    0.821418,
+    0.896113,
+    0.860907,
+    0.90635
+   ],
+   [
+    0.225076,
+    0.0,
+    0.345176,
+    0.40533,
+    0.239125,
+    0.395443,
+    0.324302,
+    0.320556,
+    0.351133,
+    0.437217,
+    0.297328,
+    0.355098,
+    0.305063,
+    0.421443,
+    0.241346,
+    0.965702,
+    0.815745,
+    0.944745,
+    0.906511,
+    0.920624
+   ],
+   [
+    0.31127,
+    0.345176,
+    0.0,
+    0.320261,
+    0.292689,
+    0.397166,
+    0.347188,
+    0.328527,
+    0.190425,
+    0.390151,
+    0.349237,
+    0.356018,
+    0.33285,
+    0.437337,
+    0.304505,
+    0.993089,
+    0.852668,
+    0.940793,
+    0.944792,
+    0.960458
+   ],
+   [
+    0.371504,
+    0.40533,
+    0.320261,
+    0.0,
+    0.349325,
+    0.39309,
+    0.357944,
+    0.352774,
+    0.313147,
+    0.402586,
+    0.410678,
+    0.386024,
+    0.373203,
+    0.447224,
+    0.359017,
+    0.953068,
+    0.832202,
+    0.940243,
+    0.893698,
+    0.921126
+   ],
+   [
+    0.191408,
+    0.239125,
+    0.292689,
+    0.349325,
+    0.0,
+    0.351786,
+    0.295867,
+    0.294661,
+    0.306816,
+    0.400192,
+    0.257995,
+    0.283981,
+    0.25233,
+    0.416123,
+    0.226018,
+    0.938203,
+    0.800826,
+    0.902344,
+    0.874412,
+    0.889029
+   ],
+   [
+    0.385377,
+    0.395443,
+    0.397166,
+    0.39309,
+    0.351786,
+    0.0,
+    0.248004,
+    0.307561,
+    0.396801,
+    0.452693,
+    0.384315,
+    0.387814,
+    0.3745,
+    0.472857,
+    0.339845,
+    0.923624,
+    0.784157,
+    0.863992,
+    0.850206,
+    0.858973
+   ],
+   [
+    0.320405,
+    0.324302,
+    0.347188,
+    0.357944,
+    0.295867,
+    0.248004,
+    0.0,
+    0.231972,
+    0.348092,
+    0.427432,
+    0.320264,
+    0.35964,
+    0.319734,
+    0.466163,
+    0.290311,
+    0.889159,
+    0.757855,
+    0.868616,
+    0.834846,
+    0.867568
+   ],
+   [
+    0.324058,
+    0.320556,
+    0.328527,
+    0.352774,
+    0.294661,
+    0.307561,
+    0.231972,
+    0.0,
+    0.322833,
+    0.417012,
+    0.303843,
+    0.357009,
+    0.326545,
+    0.44169,
+    0.303737,
+    0.925919,
+    0.785077,
+    0.881944,
+    0.866213,
+    0.910427
+   ],
+   [
+    0.315662,
+    0.351133,
+    0.190425,
+    0.313147,
+    0.306816,
+    0.396801,
+    0.348092,
+    0.322833,
+    0.0,
+    0.406026,
+    0.350595,
+    0.369048,
+    0.340704,
+    0.450201,
+    0.304068,
+    0.958639,
+    0.832637,
+    0.922134,
+    0.921734,
+    0.931344
+   ],
+   [
+    0.406123,
+    0.437217,
+    0.390151,
+    0.402586,
+    0.400192,
+    0.452693,
+    0.427432,
+    0.417012,
+    0.406026,
+    0.0,
+    0.426897,
+    0.407512,
+    0.408189,
+    0.484521,
+    0.411555,
+    0.938373,
+    0.835603,
+    0.915409,
+    0.889329,
+    0.940496
+   ],
+   [
+    0.273058,
+    0.297328,
+    0.349237,
+    0.410678,
+    0.257995,
+    0.384315,
+    0.320264,
+    0.303843,
+    0.350595,
+    0.426897,
+    0.0,
+    0.322135,
+    0.297178,
+    0.454867,
+    0.310471,
+    0.944598,
+    0.827693,
+    0.93396,
+    0.903258,
+    0.942609
+   ],
+   [
+    0.262293,
+    0.355098,
+    0.356018,
+    0.386024,
+    0.283981,
+    0.387814,
+    0.35964,
+    0.357009,
+    0.369048,
+    0.407512,
+    0.322135,
+    0.0,
+    0.182251,
+    0.443382,
+    0.311838,
+    0.921352,
+    0.836291,
+    0.879319,
+    0.857922,
+    0.880767
+   ],
+   [
+    0.224907,
+    0.305063,
+    0.33285,
+    0.373203,
+    0.25233,
+    0.3745,
+    0.319734,
+    0.326545,
+    0.340704,
+    0.408189,
+    0.297178,
+    0.182251,
+    0.0,
+    0.415873,
+    0.290066,
+    0.904876,
+    0.769504,
+    0.879816,
+    0.859112,
+    0.883313
+   ],
+   [
+    0.412229,
+    0.421443,
+    0.437337,
+    0.447224,
+    0.416123,
+    0.472857,
+    0.466163,
+    0.44169,
+    0.450201,
+    0.484521,
+    0.454867,
+    0.443382,
+    0.415873,
+    0.0,
+    0.408997,
+    0.966951,
+    0.819061,
+    0.945361,
+    0.927405,
+    0.938416
+   ],
+   [
+    0.239924,
+    0.241346,
+    0.304505,
+    0.359017,
+    0.226018,
+    0.339845,
+    0.290311,
+    0.303737,
+    0.304068,
+    0.411555,
+    0.310471,
+    0.311838,
+    0.290066,
+    0.408997,
+    0.0,
+    0.926688,
+    0.779447,
+    0.876588,
+    0.905257,
+    0.901071
+   ],
+   [
+    0.933098,
+    0.965702,
+    0.993089,
+    0.953068,
+    0.938203,
+    0.923624,
+    0.889159,
+    0.925919,
+    0.958639,
+    0.938373,
+    0.944598,
+    0.921352,
+    0.904876,
+    0.966951,
+    0.926688,
+    0.0,
+    0.520101,
+    0.506986,
+    0.441489,
+    0.471336
+   ],
+   [
+    0.821418,
+    0.815745,
+    0.852668,
+    0.832202,
+    0.800826,
+    0.784157,
+    0.757855,
+    0.785077,
+    0.832637,
+    0.835603,
+    0.827693,
+    0.836291,
+    0.769504,
+    0.819061,
+    0.779447,
+    0.520101,
+    0.0,
+    0.487456,
+    0.451148,
+    0.463184
+   ],
+   [
+    0.896113,
+    0.944745,
+    0.940793,
+    0.940243,
+    0.902344,
+    0.863992,
+    0.868616,
+    0.881944,
+    0.922134,
+    0.915409,
+    0.93396,
+    0.879319,
+    0.879816,
+    0.945361,
+    0.876588,
+    0.506986,
+    0.487456,
+    0.0,
+    0.345058,
+    0.387306
+   ],
+   [
+    0.860907,
+    0.906511,
+    0.944792,
+    0.893698,
+    0.874412,
+    0.850206,
+    0.834846,
+    0.866213,
+    0.921734,
+    0.889329,
+    0.903258,
+    0.857922,
+    0.859112,
+    0.927405,
+    0.905257,
+    0.441489,
+    0.451148,
+    0.345058,
+    0.0,
+    0.311746
+   ],
+   [
+    0.90635,
+    0.920624,
+    0.960458,
+    0.921126,
+    0.889029,
+    0.858973,
+    0.867568,
+    0.910427,
+    0.931344,
+    0.940496,
+    0.942609,
+    0.880767,
+    0.883313,
+    0.938416,
+    0.901071,
+    0.471336,
+    0.463184,
+    0.387306,
+    0.311746,
+    0.0
+   ]
+  ]
+ }
+}

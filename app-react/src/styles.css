@@ -435,3 +435,107 @@ table.heatmap thead th { position: sticky; top: 0; background: #fbfcfd; z-index:
 .back-link { display: inline-block; margin: 4px 0 10px; color: #4b7fcc; text-decoration: none; font-size: 14px; }
 .back-link:hover { text-decoration: underline; }
 .filter-input { border: 1px solid #d4d9e2; border-radius: 6px; font-size: 13px; }
+
+/* ---- assembly-instance similarity page ---- */
+/* Row 1: the instances table, full width. Row 2: heatmap and viewer side by side in equal-width
+   columns. minmax(0,…) so the 20-column heatmap scrolls internally instead of stretching its track;
+   the grid's default `align-items: stretch` makes the two row-2 cards end flush. */
+.cs-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; }
+.cs-instances { grid-column: 1 / -1; margin-bottom: 0; }
+.cs-heatmap { grid-column: 1; margin-bottom: 0; }
+.cs-viewer { grid-column: 2; margin-bottom: 0; }
+/* Column flexboxes so each card's content area absorbs the leftover height rather than leaving the
+   shorter card padded out (same pattern as .cm-row above). */
+.cs-heatmap, .cs-viewer { display: flex; flex-direction: column; }
+.cs-hm { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
+@media (max-width: 980px) {
+  .cs-grid { grid-template-columns: minmax(0, 1fr); }
+  .cs-instances, .cs-heatmap, .cs-viewer { grid-column: 1; }
+}
+
+/* Capped so 20 rows can't push the heatmap and viewer below the fold. */
+.cs-instances-scroll { overflow: auto; max-height: 460px; }
+.cs-tbl { font-size: 12.5px; }
+.cs-tbl td { vertical-align: top; }
+/* width:100% + max-width:0 makes this the flexible column: it takes whatever the fixed
+   columns leave and ellipsises, rather than truncating at an arbitrary pixel cap. */
+.cs-title { width: 100%; max-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cs-row-on { background: #f2f7fd; }
+.cs-check-col { width: 34px; text-align: center; }
+/* Colour chip repeated wherever a structure is named, so identity is never carried by colour alone. */
+.cs-swatch { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 6px;
+  vertical-align: baseline; flex: 0 0 auto; }
+.cs-notice { margin: 0 0 14px; padding: 8px 12px; border-radius: 6px; font-size: 13px;
+  background: #fdf3e3; color: #8a5a10; border: 1px solid #f0dcb8; }
+
+.cs-hm-scroll { overflow: auto; flex: 1 1 auto; min-height: 0; border: 1px solid var(--border);
+  border-radius: 8px; }
+.cs-hm-table { border-collapse: separate; border-spacing: 0; width: auto; }
+.cs-hm-corner { position: sticky; left: 0; top: 0; z-index: 3; background: #fff; }
+.cs-hm-colhead { height: 66px; vertical-align: bottom; padding: 2px 0; background: #fff;
+  position: sticky; top: 0; z-index: 2; font-size: 11px; }
+.cs-hm-colhead span { display: inline-block; writing-mode: vertical-rl; transform: rotate(180deg);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.cs-hm-rowhead { position: sticky; left: 0; background: #fff; z-index: 1; padding: 0 8px 0 6px;
+  text-align: left; white-space: nowrap; font-size: 11px; font-weight: 500;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.cs-hm-cell { width: 22px; height: 22px; padding: 0; border: 1px solid #eef0f3; box-sizing: border-box;
+  text-align: center; vertical-align: middle; }
+/* Tick marking a displayed structure on its own diagonal cell. White with a dark shadow so it holds
+   up against both ends of the viridis ramp. */
+.cs-hm-check { display: block; font-size: 12px; line-height: 1; color: #fff; font-weight: 700;
+  text-shadow: 0 0 2px rgba(0, 0, 0, .85); pointer-events: none; }
+.cs-hm-live:hover { outline: 2px solid #ffffff; outline-offset: -2px; }
+/* Both triangles render at full saturation: the matrix is symmetric, so dimming one half would make
+   the same value read as two different magnitudes. Clickability is signalled by the cursor and the
+   hover outline instead. */
+.cs-hm-foot { margin-top: 10px; }
+/* Colourbar with its label beneath, so the ramp itself stays uninterrupted. `margin: 0 auto`
+   centres the fixed-width block within the card rather than leaving it hard against the left edge. */
+.cs-hm-legend { font-size: 11px; color: var(--muted); max-width: 260px; margin: 0 auto; }
+/* Continuous ramp drawn as abutting segments, so it reads as one gradient bar. */
+.cs-hm-ramp { display: flex; width: 100%; height: 11px; border: 1px solid #e2e5ea; }
+.cs-hm-ramp i { flex: 1 1 auto; }
+.cs-hm-legend-caps { margin-top: 3px; text-align: center; white-space: nowrap; }
+.cs-tip-act { margin-top: 5px; color: #9fd0ff; font-size: 11px; }
+.cs-tip-title { margin: 2px 0 4px; max-width: 300px; line-height: 1.35; }
+
+.cs-legend { max-height: 140px; overflow: auto; }
+.cs-legend .vl-row { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; }
+.cs-empty { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 0 18%; color: var(--muted); font-size: 13px; line-height: 1.5;
+  pointer-events: none; }
+.cs-loading { position: absolute; top: 10px; left: 12px; font-size: 12px; color: var(--muted); }
+
+/* Landing sections (one per category of view) */
+.landing-section { margin-top: 30px; }
+.landing-section h2 { font-size: 15px; margin: 0; text-transform: uppercase; letter-spacing: .05em;
+  color: var(--muted); }
+.landing-section p { margin: 5px 0 0; font-size: 13px; color: var(--muted); }
+
+/* Order indicator + reset, so returning to the similarity ordering is a visible control rather
+   than a third click the user has to be told about. */
+.cs-toolbar { display: flex; align-items: baseline; gap: 12px; margin: 0 0 8px; font-size: 12px;
+  color: var(--muted); }
+.cs-order b { color: var(--text); font-weight: 600; }
+.cs-linkbtn { border: none; background: none; color: var(--accent); font: inherit; cursor: pointer;
+  padding: 0; text-decoration: underline; text-underline-offset: 2px; }
+.cs-linkbtn:hover { color: var(--text); }
+
+/* Selection count in the 3D view heading: makes the cap visible before it is hit. */
+.cs-count { margin-left: 10px; font-size: 12px; font-weight: 600; color: var(--muted);
+  background: #eef1f5; border-radius: 999px; padding: 2px 9px; vertical-align: middle; }
+.cs-clear-inline { margin-left: 10px; font-size: 12px; font-weight: 400; vertical-align: middle; }
+
+/* Fatal load failure — distinct from the amber .cs-notice, which is a routine limit warning. */
+.cs-error { padding: 14px 16px; border-radius: 8px; font-size: 14px; line-height: 1.5;
+  background: #fdecea; color: #8a2018; border: 1px solid #f3c4bd; }
+.cs-error code { background: rgba(0,0,0,.06); border-radius: 4px; padding: 1px 5px; }
+
+/* Visually hidden but announced — the checkbox column's header. */
+.cs-sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* Keyboard focus for heatmap cells must read against both ends of the viridis ramp. */
+.cs-hm-live:focus-visible { outline: 3px solid #ffffff; outline-offset: -3px;
+  box-shadow: 0 0 0 2px #1c2430; }
