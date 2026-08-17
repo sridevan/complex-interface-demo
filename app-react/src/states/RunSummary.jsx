@@ -22,6 +22,13 @@ export default function RunSummary({ data, metricKeys }) {
   const noRes = A.filter((a) => a.resolution == null).length
   const res = A.map((a) => a.resolution).filter((r) => r != null).sort((a, b) => a - b)
   const methods = methodCounts(A)
+  // The bare word "Shape" names nothing a reader can check, so the panel uses the dataset's own
+  // label for it ("Shape (combined Zernike + spectral)") rather than restating the composition
+  // here, which would drift from the builder. TM-score and RMSD keep short names: their dataset
+  // labels are long ("Backbone RMSD after superposition (US-align)") and what goes into them is
+  // already in the measure info icon.
+  const M = (data.heatmap && data.heatmap.metrics) || {}
+  const nameOf = (k) => (k === 'shape' && M.shape && M.shape.label) || METRIC_NAME[k]
   const missing = metricKeys.length < 2 ? ['TM-score', 'Shape'].filter(
     (x) => !metricKeys.map((k) => METRIC_NAME[k]).includes(x)) : []
 
@@ -68,7 +75,10 @@ export default function RunSummary({ data, metricKeys }) {
       {cov && (
         <div className="rs-section">
           <div className="rs-section-label">Measure coverage</div>
-          {['shape', 'tmscore', 'rmsd'].map((k) => {
+          {/* TM-score first as the measure a page opens on, then RMSD which annotates every pair
+              regardless of the one selected, then Shape as the fallback. Fixed rather than sorted
+              by coverage, so the rows do not reshuffle between complexes. */}
+          {['tmscore', 'rmsd', 'shape'].map((k) => {
             const c = cov.metrics?.[k]
             if (!c) return null
             const frac = pairs ? Math.min(1, c.pairs / pairs) : 0
@@ -76,13 +86,13 @@ export default function RunSummary({ data, metricKeys }) {
             return (
               <div key={k} className={'rs-measure' + (shown ? '' : ' rs-off')}>
                 <div className="rs-measure-head">
-                  <span className="rs-measure-name">{METRIC_NAME[k]}</span>
+                  <span className="rs-measure-name">{nameOf(k)}</span>
                   <span className="rs-measure-state">
                     {shown ? (k === 'rmsd' ? 'on hover' : 'shown') : 'not shown'}
                   </span>
                 </div>
                 <div className="rs-meter" role="img"
-                     aria-label={`${METRIC_NAME[k]}: ${num(c.pairs)} of ${num(pairs)} comparisons`}>
+                     aria-label={`${nameOf(k)}: ${num(c.pairs)} of ${num(pairs)} comparisons`}>
                   <span className="rs-meter-fill" style={{ width: `${frac * 100}%` }} />
                 </div>
                 <div className="rs-measure-cov">
