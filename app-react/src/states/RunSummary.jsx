@@ -75,10 +75,14 @@ export default function RunSummary({ data, metricKeys }) {
       {cov && (
         <div className="rs-section">
           <div className="rs-section-label">Measure coverage</div>
-          {/* TM-score first as the measure a page opens on, then RMSD which annotates every pair
-              regardless of the one selected, then Shape as the fallback. Fixed rather than sorted
-              by coverage, so the rows do not reshuffle between complexes. */}
-          {['tmscore', 'rmsd', 'shape'].map((k) => {
+          {/* TM-score first as the measure a page opens on, then Shape as the fallback. RMSD has
+              no meter of its own: US-align writes it into the same scores row as TM-score, so its
+              coverage is identical by construction (verified on all eight datasets, including the
+              sparse one at 4,431 of 57,970 for both). A second bar with the same number would read
+              as a second measurement. It is named on the TM-score row instead, so the reader still
+              learns it exists and rides on hover. Fixed order rather than sorted by coverage, so
+              the rows do not reshuffle between complexes. */}
+          {['tmscore', 'shape'].map((k) => {
             const c = cov.metrics?.[k]
             if (!c) return null
             const frac = pairs ? Math.min(1, c.pairs / pairs) : 0
@@ -98,6 +102,8 @@ export default function RunSummary({ data, metricKeys }) {
                 <div className="rs-measure-cov">
                   {frac >= 1 ? `all ${num(pairs)} comparisons`
                              : `${num(c.pairs)} of ${num(pairs)} comparisons`}
+                  {k === 'tmscore' && cov.metrics?.rmsd && (
+                    <span className="rs-note"> · backbone RMSD from the same run, on hover</span>)}
                 </div>
               </div>
             )
