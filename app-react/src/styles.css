@@ -651,7 +651,7 @@ table.heatmap thead th { position: sticky; top: 0; background: #fbfcfd; z-index:
   padding: 0; text-decoration: underline; text-underline-offset: 2px; }
 .cs-linkbtn:hover { color: var(--text); }
 
-/* Selection count in the 3D view heading: makes the cap visible before it is hit. */
+/* Selection count in the superposition-view heading: makes the cap visible before it is hit. */
 .cs-count { margin-left: 10px; font-size: 12px; font-weight: 600; color: var(--muted);
   background: #eef1f5; border-radius: 999px; padding: 2px 9px; vertical-align: middle; }
 .cs-clear-inline { margin-left: 10px; font-size: 12px; font-weight: 400; vertical-align: middle; }

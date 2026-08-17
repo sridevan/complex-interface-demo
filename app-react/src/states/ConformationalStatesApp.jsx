@@ -472,7 +472,11 @@ export default function ConformationalStatesApp({ config }) {
 
         <div className="card cs-viewer">
           <h2>
-            3D view {helpHint(VIEWER_HELP)}
+            {/* "Superposition view", not "3D view": every structure here is laid onto a common
+                reference, which is the whole point of the panel and the reason differences in it
+                are real rather than placement. The other pages' "3D view of selected interface"
+                shows one structure, so it keeps its own name. */}
+            Superposition view {helpHint(VIEWER_HELP)}
             <span className="cs-count" title={`Up to ${MAX_SHOWN} instances can be superposed`}>
               {shown.length} of {MAX_SHOWN}
             </span>
