@@ -61,3 +61,6 @@ paper/covabdab.csv
 # Internal spec + paper — kept local, not published to the public repo
 spec_revised.md
 paper/
+# Internal PDBe design documents. Same rule as the spec: this repo serves a public GitHub Pages
+# demo, so these stay on disk and out of history.
+*.pdf
