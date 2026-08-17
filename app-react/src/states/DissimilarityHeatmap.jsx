@@ -6,11 +6,17 @@ import { methodLabel } from './methods'
 export const HEATMAP_HELP = [
   ['Reading it', 'Each cell is one pairwise comparison. The diagonal is grey because it is an '
     + 'instance against itself: always zero, and not a measurement.'],
-  ['Ordering', 'Rows and columns are ordered so that alike instances sit next to each other, '
-    + 'which is what makes blocks appear. The instances table above uses the same order. Each '
-    + 'measure has its own ordering, so switching measure reorders both.'],
-  ['Selecting', 'Click a diagonal cell to show that structure in 3D, or a cell below the diagonal '
-    + 'to superpose that pair. Click again to remove.'],
+  // The most consequential caveat on the page. Blocks are produced by the ordering alone, and a
+  // reader who assumes a clustering step will read a cut that was never made. Clustering IS
+  // computed upstream (auto_gap returns k=4 on ATCase against a true k=2, k=18 on human
+  // haemoglobin) and is deliberately not drawn, so the help must not imply otherwise.
+  ['Ordering', 'Rows and columns are placed by tree-penalised path-length seriation, which puts '
+    + 'similar instances next to each other so that blocks emerge. No clustering is applied and no '
+    + 'boundaries are drawn: a block is a feature of the ordering, not an assignment, and where one '
+    + 'ends is your call. The instances table above uses the same order, and each measure is '
+    + 'seriated separately, so switching measure reorders both.'],
+  ['Selecting', 'Click a diagonal cell to add that instance to the superposition view, or a cell '
+    + 'below the diagonal to add both of a pair. Click again to remove.'],
   ['Zooming in', 'Press anywhere in the matrix and drag up or down to narrow it, and the table, to '
     + 'that block. Drag again to go deeper. Colours stay fixed to the full set while you do, so a '
     + 'shade means the same thing however far in you are. Use the + and − controls above the '
