@@ -28,13 +28,22 @@
    "ligands": [
     {
      "comp": "MG",
-     "copies": 4
+     "copies": 4,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "PAH",
-     "copies": 2
+     "copies": 2,
+     "name": "PHOSPHONOACETOHYDROXAMIC ACID"
     }
    ],
+   "mutations": [
+    {
+     "label": "I241V",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.7212159052,
@@ -69,13 +78,22 @@
    "ligands": [
     {
      "comp": "CL",
-     "copies": 2
+     "copies": 2,
+     "name": "CHLORIDE ION"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "I241V",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.5442301357,
@@ -110,13 +128,26 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "PAH",
-     "copies": 2
+     "copies": 2,
+     "name": "PHOSPHONOACETOHYDROXAMIC ACID"
     }
    ],
+   "mutations": [
+    {
+     "label": "K84S",
+     "type": "Conflict"
+    },
+    {
+     "label": "I241V",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.1003109873,
@@ -151,13 +182,50 @@
    "ligands": [
     {
      "comp": "MG",
-     "copies": 4
+     "copies": 4,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "PAH",
-     "copies": 2
+     "copies": 2,
+     "name": "PHOSPHONOACETOHYDROXAMIC ACID"
     }
    ],
+   "mutations": [
+    {
+     "label": "S39A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "I241V",
+     "type": "Conflict"
+    },
+    {
+     "label": "S539A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "I741V",
+     "type": "Conflict"
+    },
+    {
+     "label": "S1039A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "I1241V",
+     "type": "Conflict"
+    },
+    {
+     "label": "S1539A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "I1741V",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      1.0,
@@ -192,13 +260,50 @@
    "ligands": [
     {
      "comp": "MG",
-     "copies": 4
+     "copies": 4,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "PAH",
-     "copies": 2
+     "copies": 2,
+     "name": "PHOSPHONOACETOHYDROXAMIC ACID"
     }
    ],
+   "mutations": [
+    {
+     "label": "S39A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "I241V",
+     "type": "Conflict"
+    },
+    {
+     "label": "S539A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "I741V",
+     "type": "Conflict"
+    },
+    {
+     "label": "S1039A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "I1241V",
+     "type": "Conflict"
+    },
+    {
+     "label": "S1539A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "I1741V",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999883851,
@@ -233,17 +338,31 @@
    "ligands": [
     {
      "comp": "F",
-     "copies": 2
+     "copies": 2,
+     "name": "FLUORIDE ION"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "PO4",
-     "copies": 2
+     "copies": 2,
+     "name": "PHOSPHATE ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "K84S",
+     "type": "Conflict"
+    },
+    {
+     "label": "I241V",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.1000765604,
@@ -278,17 +397,27 @@
    "ligands": [
     {
      "comp": "MG",
-     "copies": 4
+     "copies": 4,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "2PG",
-     "copies": 2
+     "copies": 2,
+     "name": "2-PHOSPHOGLYCERIC ACID"
     },
     {
      "comp": "PEP",
-     "copies": 2
+     "copies": 2,
+     "name": "PHOSPHOENOLPYRUVATE"
     }
    ],
+   "mutations": [
+    {
+     "label": "I241V",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.7238916764,
@@ -323,13 +452,34 @@
    "ligands": [
     {
      "comp": "MG",
-     "copies": 4
+     "copies": 4,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "2PG",
-     "copies": 2
+     "copies": 2,
+     "name": "2-PHOSPHOGLYCERIC ACID"
     }
    ],
+   "mutations": [
+    {
+     "label": "E168Q",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "I241V",
+     "type": "Conflict"
+    },
+    {
+     "label": "E668Q",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "I741V",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.3979163539,
@@ -364,13 +514,34 @@
    "ligands": [
     {
      "comp": "MG",
-     "copies": 4
+     "copies": 4,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "PEP",
-     "copies": 2
+     "copies": 2,
+     "name": "PHOSPHOENOLPYRUVATE"
     }
    ],
+   "mutations": [
+    {
+     "label": "E211Q",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "I241V",
+     "type": "Conflict"
+    },
+    {
+     "label": "E711Q",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "I741V",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.3997083264,
@@ -405,25 +576,37 @@
    "ligands": [
     {
      "comp": "MG",
-     "copies": 4
+     "copies": 4,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "K",
-     "copies": 2
+     "copies": 2,
+     "name": "POTASSIUM ION"
     },
     {
      "comp": "PEP",
-     "copies": 2
+     "copies": 2,
+     "name": "PHOSPHOENOLPYRUVATE"
     },
     {
      "comp": "2PG",
-     "copies": 1
+     "copies": 1,
+     "name": "2-PHOSPHOGLYCERIC ACID"
     },
     {
      "comp": "CL",
-     "copies": 1
+     "copies": 1,
+     "name": "CHLORIDE ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "I241V",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9367574683,
@@ -458,21 +641,32 @@
    "ligands": [
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "2PG",
-     "copies": 1
+     "copies": 1,
+     "name": "2-PHOSPHOGLYCERIC ACID"
     },
     {
      "comp": "LI",
-     "copies": 1
+     "copies": 1,
+     "name": "LITHIUM ION"
     },
     {
      "comp": "PEP",
-     "copies": 1
+     "copies": 1,
+     "name": "PHOSPHOENOLPYRUVATE"
     }
    ],
+   "mutations": [
+    {
+     "label": "I241V",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.999951881,
@@ -507,13 +701,26 @@
    "ligands": [
     {
      "comp": "MG",
-     "copies": 5
+     "copies": 5,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "PEP",
-     "copies": 2
+     "copies": 2,
+     "name": "PHOSPHOENOLPYRUVATE"
     }
    ],
+   "mutations": [
+    {
+     "label": "S39N",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "D321R",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9998918862,
@@ -548,13 +755,30 @@
    "ligands": [
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "PEP",
-     "copies": 2
+     "copies": 2,
+     "name": "PHOSPHOENOLPYRUVATE"
     }
    ],
+   "mutations": [
+    {
+     "label": "S39N",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "Q167K",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "D321R",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.5251192088,
@@ -589,13 +813,30 @@
    "ligands": [
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "PEP",
-     "copies": 2
+     "copies": 2,
+     "name": "PHOSPHOENOLPYRUVATE"
     }
    ],
+   "mutations": [
+    {
+     "label": "S39N",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "Q167K",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "D321R",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.5246278214,
@@ -630,13 +871,30 @@
    "ligands": [
     {
      "comp": "2PG",
-     "copies": 2
+     "copies": 2,
+     "name": "2-PHOSPHOGLYCERIC ACID"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "S39N",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "I241I",
+     "type": "See remark 999"
+    },
+    {
+     "label": "D321A",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.1809223629,
@@ -671,13 +929,30 @@
    "ligands": [
     {
      "comp": "2PG",
-     "copies": 2
+     "copies": 2,
+     "name": "2-PHOSPHOGLYCERIC ACID"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "S39N",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "I241I",
+     "type": "See remark 999"
+    },
+    {
+     "label": "D321A",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.3039636174,
@@ -712,13 +987,30 @@
    "ligands": [
     {
      "comp": "MG",
-     "copies": 3
+     "copies": 3,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "2PG",
-     "copies": 2
+     "copies": 2,
+     "name": "2-PHOSPHOGLYCERIC ACID"
     }
    ],
+   "mutations": [
+    {
+     "label": "S39A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "D321A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "SNoneA",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.999812991,
@@ -753,13 +1045,30 @@
    "ligands": [
     {
      "comp": "MG",
-     "copies": 4
+     "copies": 4,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "2PG",
-     "copies": 2
+     "copies": 2,
+     "name": "2-PHOSPHOGLYCERIC ACID"
     }
    ],
+   "mutations": [
+    {
+     "label": "S39A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "D321A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "SNoneA",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9998243903,
@@ -794,13 +1103,26 @@
    "ligands": [
     {
      "comp": "MG",
-     "copies": 10
+     "copies": 10,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "2PG",
-     "copies": 2
+     "copies": 2,
+     "name": "2-PHOSPHOGLYCERIC ACID"
     }
    ],
+   "mutations": [
+    {
+     "label": "D321A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "D321A",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9997733239,
@@ -835,9 +1157,21 @@
    "ligands": [
     {
      "comp": "SO4",
-     "copies": 2
+     "copies": 2,
+     "name": "SULFATE ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "K84S",
+     "type": "Conflict"
+    },
+    {
+     "label": "I241V",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.1000581153,
@@ -872,13 +1206,26 @@
    "ligands": [
     {
      "comp": "SO4",
-     "copies": 2
+     "copies": 2,
+     "name": "SULFATE ION"
     },
     {
      "comp": "ZN",
-     "copies": 2
+     "copies": 2,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "K84S",
+     "type": "Conflict"
+    },
+    {
+     "label": "I241V",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.1001444649,
@@ -913,13 +1260,26 @@
    "ligands": [
     {
      "comp": "2PG",
-     "copies": 2
+     "copies": 2,
+     "name": "2-PHOSPHOGLYCERIC ACID"
     },
     {
      "comp": "CA",
-     "copies": 2
+     "copies": 2,
+     "name": "CALCIUM ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "K84S",
+     "type": "Conflict"
+    },
+    {
+     "label": "I241V",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.1004674385,
@@ -954,13 +1314,26 @@
    "ligands": [
     {
      "comp": "PGA",
-     "copies": 2
+     "copies": 2,
+     "name": "2-PHOSPHOGLYCOLIC ACID"
     },
     {
      "comp": "ZN",
-     "copies": 2
+     "copies": 2,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "K84S",
+     "type": "Conflict"
+    },
+    {
+     "label": "I241V",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.1000319721,
@@ -995,13 +1368,26 @@
    "ligands": [
     {
      "comp": "2PG",
-     "copies": 2
+     "copies": 2,
+     "name": "2-PHOSPHOGLYCERIC ACID"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "K84S",
+     "type": "Conflict"
+    },
+    {
+     "label": "I241V",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.0995519572,

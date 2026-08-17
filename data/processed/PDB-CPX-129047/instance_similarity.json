@@ -29,13 +29,42 @@
    "ligands": [
     {
      "comp": "AFP",
-     "copies": 4
+     "copies": 4,
+     "name": "1,6-di-O-phosphono-alpha-D-fructofuranose"
     },
     {
      "comp": "SO4",
-     "copies": 4
+     "copies": 4,
+     "name": "SULFATE ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "Y38F",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q102K",
+     "type": "Conflict"
+    },
+    {
+     "label": "K103Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "G133L",
+     "type": "Conflict"
+    },
+    {
+     "label": "L281I",
+     "type": "Conflict"
+    },
+    {
+     "label": "I285L",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.5957256215,
@@ -70,13 +99,42 @@
    "ligands": [
     {
      "comp": "AFP",
-     "copies": 4
+     "copies": 4,
+     "name": "1,6-di-O-phosphono-alpha-D-fructofuranose"
     },
     {
      "comp": "SO4",
-     "copies": 4
+     "copies": 4,
+     "name": "SULFATE ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "Y38F",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q102K",
+     "type": "Conflict"
+    },
+    {
+     "label": "K103Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "G133L",
+     "type": "Conflict"
+    },
+    {
+     "label": "L281I",
+     "type": "Conflict"
+    },
+    {
+     "label": "I285L",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999387637,
@@ -111,9 +169,12 @@
    "ligands": [
     {
      "comp": "NO3",
-     "copies": 8
+     "copies": 8,
+     "name": "NITRATE ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.7720991178,
@@ -148,9 +209,12 @@
    "ligands": [
     {
      "comp": "SO4",
-     "copies": 8
+     "copies": 8,
+     "name": "SULFATE ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.5950168132,
@@ -185,9 +249,12 @@
    "ligands": [
     {
      "comp": "SO4",
-     "copies": 8
+     "copies": 8,
+     "name": "SULFATE ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999999279,
@@ -222,13 +289,38 @@
    "ligands": [
     {
      "comp": "SO4",
-     "copies": 8
+     "copies": 8,
+     "name": "SULFATE ION"
     },
     {
      "comp": "GOL",
-     "copies": 4
+     "copies": 4,
+     "name": "GLYCEROL"
     }
    ],
+   "mutations": [
+    {
+     "label": "S55E",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "N56D",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "E164K",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "D223N",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "A224K",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.595011143,
@@ -263,13 +355,38 @@
    "ligands": [
     {
      "comp": "SO4",
-     "copies": 8
+     "copies": 8,
+     "name": "SULFATE ION"
     },
     {
      "comp": "GOL",
-     "copies": 5
+     "copies": 5,
+     "name": "GLYCEROL"
     }
    ],
+   "mutations": [
+    {
+     "label": "S55E",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "N56D",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "E164K",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "D223N",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "A224K",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999607302,
@@ -304,13 +421,17 @@
    "ligands": [
     {
      "comp": "SO4",
-     "copies": 4
+     "copies": 4,
+     "name": "SULFATE ION"
     },
     {
      "comp": "FBP",
-     "copies": 2
+     "copies": 2,
+     "name": "1,6-di-O-phosphono-beta-D-fructofuranose"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.5950926938,
@@ -345,13 +466,17 @@
    "ligands": [
     {
      "comp": "SO4",
-     "copies": 4
+     "copies": 4,
+     "name": "SULFATE ION"
     },
     {
      "comp": "FBP",
-     "copies": 2
+     "copies": 2,
+     "name": "1,6-di-O-phosphono-beta-D-fructofuranose"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999319508,
@@ -386,13 +511,38 @@
    "ligands": [
     {
      "comp": "SO4",
-     "copies": 6
+     "copies": 6,
+     "name": "SULFATE ION"
     },
     {
      "comp": "PYR",
-     "copies": 2
+     "copies": 2,
+     "name": "PYRUVIC ACID"
     }
    ],
+   "mutations": [
+    {
+     "label": "S55E",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "N56D",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "E164K",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "D223N",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "A224K",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.5958735778,
@@ -427,13 +577,38 @@
    "ligands": [
     {
      "comp": "SO4",
-     "copies": 6
+     "copies": 6,
+     "name": "SULFATE ION"
     },
     {
      "comp": "PYR",
-     "copies": 2
+     "copies": 2,
+     "name": "PYRUVIC ACID"
     }
    ],
+   "mutations": [
+    {
+     "label": "S55E",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "N56D",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "E164K",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "D223N",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "A224K",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9998952924,
@@ -468,9 +643,12 @@
    "ligands": [
     {
      "comp": "SO4",
-     "copies": 8
+     "copies": 8,
+     "name": "SULFATE ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.5949810894,
@@ -505,9 +683,12 @@
    "ligands": [
     {
      "comp": "SO4",
-     "copies": 8
+     "copies": 8,
+     "name": "SULFATE ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      1.0,

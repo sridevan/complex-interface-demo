@@ -863,6 +863,98 @@ def pdbe_post(endpoint, pdb_ids):
         return json.load(r)
 
 
+def pdbe_post_lenient(endpoint, pdb_ids, chunk=60):
+    """pdbe_post, batched, treating "no records" as an empty result rather than a failure.
+
+    Needed for the annotation endpoints. `modified_AA_or_NA` answers a whole 60-entry batch with a
+    404 when none of them carry modified residues, and answers a single entry with
+    {"message": "Requested endpoint does not contain any data"} rather than the list shape the
+    other endpoints return. Without this, one silent 404 drops sixty entries' annotations.
+    """
+    out = {}
+    for i in range(0, len(pdb_ids), chunk):
+        batch = pdb_ids[i:i + chunk]
+        try:
+            got = pdbe_post(endpoint, batch)
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                continue                      # nothing in this batch carries the annotation
+            raise
+        if isinstance(got, dict) and "message" not in got:
+            out.update(got)
+    return out
+
+
+def ligand_names(codes, cache_path=os.path.join("data", "processed", "ligand_names.json")):
+    """Chemical component id -> name, e.g. CMO -> 'CARBON MONOXIDE'.
+
+    Cached in the repo and shared across complexes: the codes recur (HEM, CMO, OXY appear in every
+    haemoglobin set), the names never change, and caching keeps a rebuild offline-repeatable.
+    """
+    cache = {}
+    if os.path.exists(cache_path):
+        with open(cache_path) as fh:
+            cache = json.load(fh)
+    missing = sorted(set(codes) - set(cache))
+    # Batched, like the entry endpoints: /pdb/compound/summary/ accepts a POSTed comma-separated
+    # list, so a complex with 90 distinct ligands costs one request rather than 90.
+    url = f"{PDBE_API.replace('/pdb/entry', '/pdb/compound')}/summary/"
+    for i in range(0, len(missing), 200):
+        batch = missing[i:i + 200]
+        got = {}
+        try:
+            req = urllib.request.Request(url, data=",".join(batch).encode(),
+                                         headers={"accept": "application/json",
+                                                  "content-type": "text/plain"})
+            with urllib.request.urlopen(req, timeout=120) as r:
+                got = json.load(r)
+        except Exception:
+            pass
+        for code in batch:
+            rec = (got.get(code) or [{}])[0]
+            cache[code] = (rec.get("name") or "").strip() or None   # unknown: shown by id alone
+    if missing:
+        os.makedirs(os.path.dirname(cache_path), exist_ok=True)
+        with open(cache_path, "w") as fh:
+            json.dump(dict(sorted(cache.items())), fh, indent=1)
+    return cache
+
+
+def entry_annotations(pdb_ids):
+    """Per-entry sequence annotations that give a selected block its chemical identity.
+
+    Both come from PDBe as structured records, so nothing here parses a title. Mutations carry a
+    `type`, which matters: on human haemoglobin V1M appears 144 times and is an expression
+    artefact, while E6V (24x) is sickle-cell. Reporting them as one count would be meaningless.
+    """
+    mutated = pdbe_post_lenient("mutated_AA_or_NA", pdb_ids)
+    modified = pdbe_post_lenient("modified_AA_or_NA", pdb_ids)
+    out = {}
+    for pid in pdb_ids:
+        muts = []
+        for rec in mutated.get(pid, []):
+            det = rec.get("mutation_details") or {}
+            if not det.get("from") or not det.get("to"):
+                continue
+            muts.append({"label": f"{det['from']}{rec.get('author_residue_number')}{det['to']}",
+                         "chain": rec.get("chain_id"), "type": det.get("type")})
+        mods = []
+        for rec in modified.get(pid, []):
+            if isinstance(rec, dict) and rec.get("chem_comp_id"):
+                mods.append({"comp": rec["chem_comp_id"], "chain": rec.get("chain_id")})
+        # Deduplicate: an assembly repeats each entity, so the same substitution appears once per
+        # copy and would otherwise be counted several times over.
+        seen, uniq = set(), []
+        for m in muts:
+            key = (m["label"], m["type"])
+            if key not in seen:
+                seen.add(key)
+                uniq.append({"label": m["label"], "type": m["type"]})
+        out[pid] = {"mutations": uniq,
+                    "modified": sorted({m["comp"] for m in mods})}
+    return out
+
+
 def entry_metadata(pdb_ids):
     """{pdb_id: {structure_title, resolution, exp_method}} from the PDBe entry API."""
     pdb_ids = sorted(set(pdb_ids))
@@ -1001,7 +1093,14 @@ def main():
         raise SystemExit(f"reference {ref} is not one of the clustered assemblies")
     print(f"reference: {ref}" + (f"  (medoid is {medoid})" if ref != medoid else "  (medoid)"))
 
+    entry_ids = sorted({a.rsplit("_", 1)[0] for a in labels})
     meta = entry_metadata([a.rsplit("_", 1)[0] for a in labels])
+    # Sequence annotations, so a selected block can be described by what is actually bound to it
+    # and what differs in its sequence rather than by anything read out of a title.
+    annot = entry_annotations(entry_ids)
+    print(f"annotations: {sum(1 for v in annot.values() if v['mutations'])} of {len(entry_ids)} "
+          f"entries carry mutations, "
+          f"{sum(1 for v in annot.values() if v['modified'])} carry modified residues")
 
     assemblies = []
     for asm in labels:
@@ -1020,6 +1119,10 @@ def main():
             "superposes_with_reference": any(asm in g and ref in g for g in groups),
             "mean_dissimilarity": round(float(mean_dist[labels.index(asm)]), 4),
             "ligands": ligands_of(cached),
+            # Per-ENTRY annotations, repeated onto each of that entry's assemblies. Both are
+            # structured PDBe records; nothing here is inferred from a title.
+            "mutations": annot.get(pdb_id, {}).get("mutations", []),
+            "modified": annot.get(pdb_id, {}).get("modified", []),
             # Row-major 3x3 rotation + translation, applied as X = R.x + t.
             "transform": {"rotation": [round(v, 10) for v in R.flatten().tolist()],
                           "translation": [round(v, 10) for v in t.tolist()],
@@ -1027,6 +1130,16 @@ def main():
                           "derivation": kind},
         }
         assemblies.append(rec)
+
+    # Chemical names for every ligand code in this complex, so a block summary can say "carbon
+    # monoxide" rather than "CMO". Fetched once and cached in the repo across complexes.
+    names = ligand_names({l["comp"] for rec in assemblies for l in rec["ligands"]}
+                         | {c for rec in assemblies for c in rec["modified"]})
+    for rec in assemblies:
+        for l in rec["ligands"]:
+            if names.get(l["comp"]):
+                l["name"] = names[l["comp"]]
+        rec["modified"] = [{"comp": c, "name": names.get(c)} for c in rec["modified"]]
 
     # Validation runs only once every superposed file is written -- each assembly is
     # measured against the reference's own superposed file.

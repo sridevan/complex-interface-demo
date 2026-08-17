@@ -44,25 +44,32 @@
    "ligands": [
     {
      "comp": "NAG",
-     "copies": 8
+     "copies": 8,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "HG",
-     "copies": 6
+     "copies": 6,
+     "name": "MERCURY (II) ION"
     },
     {
      "comp": "ZN",
-     "copies": 4
+     "copies": 4,
+     "name": "ZINC ION"
     },
     {
      "comp": "RET",
-     "copies": 2
+     "copies": 2,
+     "name": "RETINAL"
     },
     {
      "comp": "MAN",
-     "copies": 1
+     "copies": 1,
+     "name": "alpha-D-mannopyranose"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.5819550201,
@@ -97,29 +104,37 @@
    "ligands": [
     {
      "comp": "C8E",
-     "copies": 12
+     "copies": 12,
+     "name": "(HYDROXYETHYLOXY)TRI(ETHYLOXY)OCTANE"
     },
     {
      "comp": "NAG",
-     "copies": 8
+     "copies": 8,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "BMA",
-     "copies": 4
+     "copies": 4,
+     "name": "beta-D-mannopyranose"
     },
     {
      "comp": "PLM",
-     "copies": 4
+     "copies": 4,
+     "name": "PALMITIC ACID"
     },
     {
      "comp": "LDA",
-     "copies": 3
+     "copies": 3,
+     "name": "LAURYL DIMETHYLAMINE-N-OXIDE"
     },
     {
      "comp": "ACE",
-     "copies": 2
+     "copies": 2,
+     "name": "ACETYL GROUP"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.9549304689,
@@ -154,29 +169,37 @@
    "ligands": [
     {
      "comp": "NAG",
-     "copies": 8
+     "copies": 8,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "BNG",
-     "copies": 7
+     "copies": 7,
+     "name": "nonyl beta-D-glucopyranoside"
     },
     {
      "comp": "ZN",
-     "copies": 7
+     "copies": 7,
+     "name": "ZINC ION"
     },
     {
      "comp": "HG",
-     "copies": 6
+     "copies": 6,
+     "name": "MERCURY (II) ION"
     },
     {
      "comp": "HTO",
-     "copies": 6
+     "copies": 6,
+     "name": "HEPTANE-1,2,3-TRIOL"
     },
     {
      "comp": "PLM",
-     "copies": 3
+     "copies": 3,
+     "name": "PALMITIC ACID"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.5661480698,
@@ -211,29 +234,37 @@
    "ligands": [
     {
      "comp": "NAG",
-     "copies": 8
+     "copies": 8,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "BNG",
-     "copies": 7
+     "copies": 7,
+     "name": "nonyl beta-D-glucopyranoside"
     },
     {
      "comp": "ZN",
-     "copies": 7
+     "copies": 7,
+     "name": "ZINC ION"
     },
     {
      "comp": "HG",
-     "copies": 6
+     "copies": 6,
+     "name": "MERCURY (II) ION"
     },
     {
      "comp": "HTO",
-     "copies": 6
+     "copies": 6,
+     "name": "HEPTANE-1,2,3-TRIOL"
     },
     {
      "comp": "PLM",
-     "copies": 3
+     "copies": 3,
+     "name": "PALMITIC ACID"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.0875108102,
@@ -268,29 +299,37 @@
    "ligands": [
     {
      "comp": "NAG",
-     "copies": 8
+     "copies": 8,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "BNG",
-     "copies": 7
+     "copies": 7,
+     "name": "nonyl beta-D-glucopyranoside"
     },
     {
      "comp": "ZN",
-     "copies": 7
+     "copies": 7,
+     "name": "ZINC ION"
     },
     {
      "comp": "HG",
-     "copies": 6
+     "copies": 6,
+     "name": "MERCURY (II) ION"
     },
     {
      "comp": "PLM",
-     "copies": 5
+     "copies": 5,
+     "name": "PALMITIC ACID"
     },
     {
      "comp": "HTO",
-     "copies": 4
+     "copies": 4,
+     "name": "HEPTANE-1,2,3-TRIOL"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.886723678,
@@ -325,29 +364,37 @@
    "ligands": [
     {
      "comp": "NAG",
-     "copies": 8
+     "copies": 8,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "BNG",
-     "copies": 7
+     "copies": 7,
+     "name": "nonyl beta-D-glucopyranoside"
     },
     {
      "comp": "ZN",
-     "copies": 7
+     "copies": 7,
+     "name": "ZINC ION"
     },
     {
      "comp": "HG",
-     "copies": 6
+     "copies": 6,
+     "name": "MERCURY (II) ION"
     },
     {
      "comp": "PLM",
-     "copies": 5
+     "copies": 5,
+     "name": "PALMITIC ACID"
     },
     {
      "comp": "HTO",
-     "copies": 4
+     "copies": 4,
+     "name": "HEPTANE-1,2,3-TRIOL"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.7579887355,
@@ -382,29 +429,37 @@
    "ligands": [
     {
      "comp": "NAG",
-     "copies": 8
+     "copies": 8,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "ZN",
-     "copies": 7
+     "copies": 7,
+     "name": "ZINC ION"
     },
     {
      "comp": "HG",
-     "copies": 6
+     "copies": 6,
+     "name": "MERCURY (II) ION"
     },
     {
      "comp": "PLM",
-     "copies": 6
+     "copies": 6,
+     "name": "PALMITIC ACID"
     },
     {
      "comp": "HTG",
-     "copies": 4
+     "copies": 4,
+     "name": "heptyl 1-thio-beta-D-glucopyranoside"
     },
     {
      "comp": "ACE",
-     "copies": 2
+     "copies": 2,
+     "name": "ACETYL GROUP"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.6100555522,
@@ -439,29 +494,37 @@
    "ligands": [
     {
      "comp": "NAG",
-     "copies": 8
+     "copies": 8,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "ZN",
-     "copies": 7
+     "copies": 7,
+     "name": "ZINC ION"
     },
     {
      "comp": "HG",
-     "copies": 6
+     "copies": 6,
+     "name": "MERCURY (II) ION"
     },
     {
      "comp": "PLM",
-     "copies": 6
+     "copies": 6,
+     "name": "PALMITIC ACID"
     },
     {
      "comp": "HTG",
-     "copies": 4
+     "copies": 4,
+     "name": "heptyl 1-thio-beta-D-glucopyranoside"
     },
     {
      "comp": "ACE",
-     "copies": 2
+     "copies": 2,
+     "name": "ACETYL GROUP"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.7337753167,
@@ -496,29 +559,37 @@
    "ligands": [
     {
      "comp": "NAG",
-     "copies": 8
+     "copies": 8,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "ZN",
-     "copies": 7
+     "copies": 7,
+     "name": "ZINC ION"
     },
     {
      "comp": "HG",
-     "copies": 6
+     "copies": 6,
+     "name": "MERCURY (II) ION"
     },
     {
      "comp": "PLM",
-     "copies": 6
+     "copies": 6,
+     "name": "PALMITIC ACID"
     },
     {
      "comp": "HTG",
-     "copies": 4
+     "copies": 4,
+     "name": "heptyl 1-thio-beta-D-glucopyranoside"
     },
     {
      "comp": "ACE",
-     "copies": 2
+     "copies": 2,
+     "name": "ACETYL GROUP"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.6073910779,
@@ -553,29 +624,37 @@
    "ligands": [
     {
      "comp": "NAG",
-     "copies": 8
+     "copies": 8,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "ZN",
-     "copies": 7
+     "copies": 7,
+     "name": "ZINC ION"
     },
     {
      "comp": "HG",
-     "copies": 6
+     "copies": 6,
+     "name": "MERCURY (II) ION"
     },
     {
      "comp": "PLM",
-     "copies": 6
+     "copies": 6,
+     "name": "PALMITIC ACID"
     },
     {
      "comp": "HTG",
-     "copies": 4
+     "copies": 4,
+     "name": "heptyl 1-thio-beta-D-glucopyranoside"
     },
     {
      "comp": "ACE",
-     "copies": 2
+     "copies": 2,
+     "name": "ACETYL GROUP"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.0945080803,
@@ -610,17 +689,31 @@
    "ligands": [
     {
      "comp": "ACE",
-     "copies": 2
+     "copies": 2,
+     "name": "ACETYL GROUP"
     },
     {
      "comp": "NAG",
-     "copies": 2
+     "copies": 2,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "RET",
-     "copies": 2
+     "copies": 2,
+     "name": "RETINAL"
     }
    ],
+   "mutations": [
+    {
+     "label": "N2C",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "D282C",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.6958274939,
@@ -655,29 +748,37 @@
    "ligands": [
     {
      "comp": "NAG",
-     "copies": 8
+     "copies": 8,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "ZN",
-     "copies": 7
+     "copies": 7,
+     "name": "ZINC ION"
     },
     {
      "comp": "HG",
-     "copies": 6
+     "copies": 6,
+     "name": "MERCURY (II) ION"
     },
     {
      "comp": "PLM",
-     "copies": 6
+     "copies": 6,
+     "name": "PALMITIC ACID"
     },
     {
      "comp": "HTG",
-     "copies": 4
+     "copies": 4,
+     "name": "heptyl 1-thio-beta-D-glucopyranoside"
     },
     {
      "comp": "ACE",
-     "copies": 2
+     "copies": 2,
+     "name": "ACETYL GROUP"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.7557370959,
@@ -712,29 +813,37 @@
    "ligands": [
     {
      "comp": "NAG",
-     "copies": 8
+     "copies": 8,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "ZN",
-     "copies": 7
+     "copies": 7,
+     "name": "ZINC ION"
     },
     {
      "comp": "HG",
-     "copies": 6
+     "copies": 6,
+     "name": "MERCURY (II) ION"
     },
     {
      "comp": "PLM",
-     "copies": 6
+     "copies": 6,
+     "name": "PALMITIC ACID"
     },
     {
      "comp": "HTG",
-     "copies": 4
+     "copies": 4,
+     "name": "heptyl 1-thio-beta-D-glucopyranoside"
     },
     {
      "comp": "ACE",
-     "copies": 2
+     "copies": 2,
+     "name": "ACETYL GROUP"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.6553792602,
@@ -769,21 +878,27 @@
    "ligands": [
     {
      "comp": "NAG",
-     "copies": 8
+     "copies": 8,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "BGL",
-     "copies": 6
+     "copies": 6,
+     "name": "2-O-octyl-beta-D-glucopyranose"
     },
     {
      "comp": "BMA",
-     "copies": 4
+     "copies": 4,
+     "name": "beta-D-mannopyranose"
     },
     {
      "comp": "PLM",
-     "copies": 2
+     "copies": 2,
+     "name": "PALMITIC ACID"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      1.0,
@@ -818,29 +933,37 @@
    "ligands": [
     {
      "comp": "NAG",
-     "copies": 8
+     "copies": 8,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "ZN",
-     "copies": 7
+     "copies": 7,
+     "name": "ZINC ION"
     },
     {
      "comp": "HG",
-     "copies": 6
+     "copies": 6,
+     "name": "MERCURY (II) ION"
     },
     {
      "comp": "HTG",
-     "copies": 4
+     "copies": 4,
+     "name": "heptyl 1-thio-beta-D-glucopyranoside"
     },
     {
      "comp": "PLM",
-     "copies": 4
+     "copies": 4,
+     "name": "PALMITIC ACID"
     },
     {
      "comp": "4E6",
-     "copies": 2
+     "copies": 2,
+     "name": "(4E,6E)-hexadeca-1,4,6-triene"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.755329353,
@@ -875,29 +998,37 @@
    "ligands": [
     {
      "comp": "NAG",
-     "copies": 8
+     "copies": 8,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "BOG",
-     "copies": 4
+     "copies": 4,
+     "name": "octyl beta-D-glucopyranoside"
     },
     {
      "comp": "BMA",
-     "copies": 2
+     "copies": 2,
+     "name": "beta-D-mannopyranose"
     },
     {
      "comp": "MAN",
-     "copies": 2
+     "copies": 2,
+     "name": "alpha-D-mannopyranose"
     },
     {
      "comp": "PLM",
-     "copies": 2
+     "copies": 2,
+     "name": "PALMITIC ACID"
     },
     {
      "comp": "RET",
-     "copies": 2
+     "copies": 2,
+     "name": "RETINAL"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.5001875784,
@@ -932,29 +1063,50 @@
    "ligands": [
     {
      "comp": "NAG",
-     "copies": 4
+     "copies": 4,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "ACE",
-     "copies": 2
+     "copies": 2,
+     "name": "ACETYL GROUP"
     },
     {
      "comp": "ACT",
-     "copies": 2
+     "copies": 2,
+     "name": "ACETATE ION"
     },
     {
      "comp": "BMA",
-     "copies": 2
+     "copies": 2,
+     "name": "beta-D-mannopyranose"
     },
     {
      "comp": "BOG",
-     "copies": 2
+     "copies": 2,
+     "name": "octyl beta-D-glucopyranoside"
     },
     {
      "comp": "MAN",
-     "copies": 2
+     "copies": 2,
+     "name": "alpha-D-mannopyranose"
     }
    ],
+   "mutations": [
+    {
+     "label": "N2C",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "G90D",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "D282C",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.999995011,
@@ -989,29 +1141,37 @@
    "ligands": [
     {
      "comp": "BOG",
-     "copies": 6
+     "copies": 6,
+     "name": "octyl beta-D-glucopyranoside"
     },
     {
      "comp": "NAG",
-     "copies": 4
+     "copies": 4,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "PLM",
-     "copies": 4
+     "copies": 4,
+     "name": "PALMITIC ACID"
     },
     {
      "comp": "SO4",
-     "copies": 4
+     "copies": 4,
+     "name": "SULFATE ION"
     },
     {
      "comp": "BMA",
-     "copies": 2
+     "copies": 2,
+     "name": "beta-D-mannopyranose"
     },
     {
      "comp": "MAN",
-     "copies": 2
+     "copies": 2,
+     "name": "alpha-D-mannopyranose"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999808387,
@@ -1046,29 +1206,46 @@
    "ligands": [
     {
      "comp": "BOG",
-     "copies": 10
+     "copies": 10,
+     "name": "octyl beta-D-glucopyranoside"
     },
     {
      "comp": "MAN",
-     "copies": 4
+     "copies": 4,
+     "name": "alpha-D-mannopyranose"
     },
     {
      "comp": "NAG",
-     "copies": 4
+     "copies": 4,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "ACE",
-     "copies": 2
+     "copies": 2,
+     "name": "ACETYL GROUP"
     },
     {
      "comp": "BMA",
-     "copies": 2
+     "copies": 2,
+     "name": "beta-D-mannopyranose"
     },
     {
      "comp": "DO5",
-     "copies": 2
+     "copies": 2,
+     "name": "(2~{R},3~{R})-2-(4-chlorophenyl)-3-oxidanyl-1-spiro[1,3-benzodioxole-2,4'-piperidine]-1'-yl-butan-1-one"
     }
    ],
+   "mutations": [
+    {
+     "label": "N2C",
+     "type": "Conflict"
+    },
+    {
+     "label": "D282C",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9998277102,
@@ -1101,6 +1278,8 @@
    "superposes_with_reference": true,
    "mean_dissimilarity": 0.6582,
    "ligands": [],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.5248277825,
@@ -1135,29 +1314,37 @@
    "ligands": [
     {
      "comp": "OLC",
-     "copies": 13
+     "copies": 13,
+     "name": "(2R)-2,3-dihydroxypropyl (9Z)-octadec-9-enoate"
     },
     {
      "comp": "NAG",
-     "copies": 6
+     "copies": 6,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "ACE",
-     "copies": 2
+     "copies": 2,
+     "name": "ACETYL GROUP"
     },
     {
      "comp": "PLM",
-     "copies": 2
+     "copies": 2,
+     "name": "PALMITIC ACID"
     },
     {
      "comp": "RET",
-     "copies": 2
+     "copies": 2,
+     "name": "RETINAL"
     },
     {
      "comp": "DAO",
-     "copies": 1
+     "copies": 1,
+     "name": "LAURIC ACID"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.4656813927,
@@ -1192,29 +1379,37 @@
    "ligands": [
     {
      "comp": "OLC",
-     "copies": 13
+     "copies": 13,
+     "name": "(2R)-2,3-dihydroxypropyl (9Z)-octadec-9-enoate"
     },
     {
      "comp": "NAG",
-     "copies": 6
+     "copies": 6,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "ACE",
-     "copies": 2
+     "copies": 2,
+     "name": "ACETYL GROUP"
     },
     {
      "comp": "PLM",
-     "copies": 2
+     "copies": 2,
+     "name": "PALMITIC ACID"
     },
     {
      "comp": "RET",
-     "copies": 2
+     "copies": 2,
+     "name": "RETINAL"
     },
     {
      "comp": "DAO",
-     "copies": 1
+     "copies": 1,
+     "name": "LAURIC ACID"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.4659889041,
@@ -1249,29 +1444,37 @@
    "ligands": [
     {
      "comp": "OLC",
-     "copies": 13
+     "copies": 13,
+     "name": "(2R)-2,3-dihydroxypropyl (9Z)-octadec-9-enoate"
     },
     {
      "comp": "NAG",
-     "copies": 6
+     "copies": 6,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "ACE",
-     "copies": 2
+     "copies": 2,
+     "name": "ACETYL GROUP"
     },
     {
      "comp": "PLM",
-     "copies": 2
+     "copies": 2,
+     "name": "PALMITIC ACID"
     },
     {
      "comp": "RET",
-     "copies": 2
+     "copies": 2,
+     "name": "RETINAL"
     },
     {
      "comp": "DAO",
-     "copies": 1
+     "copies": 1,
+     "name": "LAURIC ACID"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.5924832162,
@@ -1306,29 +1509,37 @@
    "ligands": [
     {
      "comp": "OLC",
-     "copies": 13
+     "copies": 13,
+     "name": "(2R)-2,3-dihydroxypropyl (9Z)-octadec-9-enoate"
     },
     {
      "comp": "NAG",
-     "copies": 6
+     "copies": 6,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "ACE",
-     "copies": 2
+     "copies": 2,
+     "name": "ACETYL GROUP"
     },
     {
      "comp": "PLM",
-     "copies": 2
+     "copies": 2,
+     "name": "PALMITIC ACID"
     },
     {
      "comp": "RET",
-     "copies": 2
+     "copies": 2,
+     "name": "RETINAL"
     },
     {
      "comp": "DAO",
-     "copies": 1
+     "copies": 1,
+     "name": "LAURIC ACID"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.5964745015,
@@ -1363,29 +1574,37 @@
    "ligands": [
     {
      "comp": "OLC",
-     "copies": 13
+     "copies": 13,
+     "name": "(2R)-2,3-dihydroxypropyl (9Z)-octadec-9-enoate"
     },
     {
      "comp": "NAG",
-     "copies": 6
+     "copies": 6,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "ACE",
-     "copies": 2
+     "copies": 2,
+     "name": "ACETYL GROUP"
     },
     {
      "comp": "PLM",
-     "copies": 2
+     "copies": 2,
+     "name": "PALMITIC ACID"
     },
     {
      "comp": "RET",
-     "copies": 2
+     "copies": 2,
+     "name": "RETINAL"
     },
     {
      "comp": "DAO",
-     "copies": 1
+     "copies": 1,
+     "name": "LAURIC ACID"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.5924446232,
@@ -1420,21 +1639,27 @@
    "ligands": [
     {
      "comp": "NAG",
-     "copies": 9
+     "copies": 9,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "MAN",
-     "copies": 4
+     "copies": 4,
+     "name": "alpha-D-mannopyranose"
     },
     {
      "comp": "BMA",
-     "copies": 3
+     "copies": 3,
+     "name": "beta-D-mannopyranose"
     },
     {
      "comp": "RET",
-     "copies": 2
+     "copies": 2,
+     "name": "RETINAL"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.5706790559,
@@ -1469,17 +1694,22 @@
    "ligands": [
     {
      "comp": "NAG",
-     "copies": 9
+     "copies": 9,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "MAN",
-     "copies": 4
+     "copies": 4,
+     "name": "alpha-D-mannopyranose"
     },
     {
      "comp": "BMA",
-     "copies": 3
+     "copies": 3,
+     "name": "beta-D-mannopyranose"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.5569685412,
@@ -1514,17 +1744,22 @@
    "ligands": [
     {
      "comp": "NAG",
-     "copies": 9
+     "copies": 9,
+     "name": "2-acetamido-2-deoxy-beta-D-glucopyranose"
     },
     {
      "comp": "MAN",
-     "copies": 4
+     "copies": 4,
+     "name": "alpha-D-mannopyranose"
     },
     {
      "comp": "BMA",
-     "copies": 3
+     "copies": 3,
+     "name": "beta-D-mannopyranose"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.5565755184,

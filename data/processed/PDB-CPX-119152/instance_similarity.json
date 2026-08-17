@@ -29,9 +29,29 @@
    "ligands": [
     {
      "comp": "K",
-     "copies": 20
+     "copies": 20,
+     "name": "POTASSIUM ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "TNoneA",
+     "type": "Conflict"
+    },
+    {
+     "label": "P370S",
+     "type": "Conflict"
+    },
+    {
+     "label": "S371N",
+     "type": "Conflict"
+    },
+    {
+     "label": "T372S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.9998954742,
@@ -66,13 +86,34 @@
    "ligands": [
     {
      "comp": "K",
-     "copies": 24
+     "copies": 24,
+     "name": "POTASSIUM ION"
     },
     {
      "comp": "P8P",
-     "copies": 4
+     "copies": 4,
+     "name": "(2R)-3-{[(R)-hydroxy(phosphonooxy)phosphoryl]oxy}propane-1,2-diyl dioctanoate"
     }
    ],
+   "mutations": [
+    {
+     "label": "TNoneA",
+     "type": "Conflict"
+    },
+    {
+     "label": "P370S",
+     "type": "Conflict"
+    },
+    {
+     "label": "S371N",
+     "type": "Conflict"
+    },
+    {
+     "label": "T372S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.9999490304,
@@ -107,13 +148,38 @@
    "ligands": [
     {
      "comp": "K",
-     "copies": 24
+     "copies": 24,
+     "name": "POTASSIUM ION"
     },
     {
      "comp": "PIO",
-     "copies": 4
+     "copies": 4,
+     "name": "[(2R)-2-octanoyloxy-3-[oxidanyl-[(1R,2R,3S,4R,5R,6S)-2,3,6-tris(oxidanyl)-4,5-diphosphonooxy-cyclohexyl]oxy-phosphoryl]oxy-propyl] octanoate"
     }
    ],
+   "mutations": [
+    {
+     "label": "TNoneA",
+     "type": "Conflict"
+    },
+    {
+     "label": "R186A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "P370S",
+     "type": "Conflict"
+    },
+    {
+     "label": "S371N",
+     "type": "Conflict"
+    },
+    {
+     "label": "T372S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.0100017735,
@@ -148,13 +214,38 @@
    "ligands": [
     {
      "comp": "K",
-     "copies": 16
+     "copies": 16,
+     "name": "POTASSIUM ION"
     },
     {
      "comp": "PIO",
-     "copies": 4
+     "copies": 4,
+     "name": "[(2R)-2-octanoyloxy-3-[oxidanyl-[(1R,2R,3S,4R,5R,6S)-2,3,6-tris(oxidanyl)-4,5-diphosphonooxy-cyclohexyl]oxy-phosphoryl]oxy-propyl] octanoate"
     }
    ],
+   "mutations": [
+    {
+     "label": "TNoneA",
+     "type": "Conflict"
+    },
+    {
+     "label": "I223L",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "P370S",
+     "type": "Conflict"
+    },
+    {
+     "label": "S371N",
+     "type": "Conflict"
+    },
+    {
+     "label": "T372S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      1.0,
@@ -189,13 +280,34 @@
    "ligands": [
     {
      "comp": "K",
-     "copies": 16
+     "copies": 16,
+     "name": "POTASSIUM ION"
     },
     {
      "comp": "PIO",
-     "copies": 4
+     "copies": 4,
+     "name": "[(2R)-2-octanoyloxy-3-[oxidanyl-[(1R,2R,3S,4R,5R,6S)-2,3,6-tris(oxidanyl)-4,5-diphosphonooxy-cyclohexyl]oxy-phosphoryl]oxy-propyl] octanoate"
     }
    ],
+   "mutations": [
+    {
+     "label": "TNoneA",
+     "type": "Conflict"
+    },
+    {
+     "label": "P370S",
+     "type": "Conflict"
+    },
+    {
+     "label": "S371N",
+     "type": "Conflict"
+    },
+    {
+     "label": "T372S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999985385,
@@ -230,9 +342,33 @@
    "ligands": [
     {
      "comp": "K",
-     "copies": 20
+     "copies": 20,
+     "name": "POTASSIUM ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "TNoneA",
+     "type": "Conflict"
+    },
+    {
+     "label": "I223L",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "P370S",
+     "type": "Conflict"
+    },
+    {
+     "label": "S371N",
+     "type": "Conflict"
+    },
+    {
+     "label": "T372S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.0102252305,
@@ -267,13 +403,22 @@
    "ligands": [
     {
      "comp": "K",
-     "copies": 36
+     "copies": 36,
+     "name": "POTASSIUM ION"
     },
     {
      "comp": "DMU",
-     "copies": 4
+     "copies": 4,
+     "name": "DECYL-BETA-D-MALTOPYRANOSIDE"
     }
    ],
+   "mutations": [
+    {
+     "label": "K62W",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9997454372,
@@ -308,17 +453,27 @@
    "ligands": [
     {
      "comp": "K",
-     "copies": 32
+     "copies": 32,
+     "name": "POTASSIUM ION"
     },
     {
      "comp": "DMU",
-     "copies": 4
+     "copies": 4,
+     "name": "DECYL-BETA-D-MALTOPYRANOSIDE"
     },
     {
      "comp": "PIO",
-     "copies": 4
+     "copies": 4,
+     "name": "[(2R)-2-octanoyloxy-3-[oxidanyl-[(1R,2R,3S,4R,5R,6S)-2,3,6-tris(oxidanyl)-4,5-diphosphonooxy-cyclohexyl]oxy-phosphoryl]oxy-propyl] octanoate"
     }
    ],
+   "mutations": [
+    {
+     "label": "K62W",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.0255899375,
@@ -353,17 +508,31 @@
    "ligands": [
     {
      "comp": "K",
-     "copies": 24
+     "copies": 24,
+     "name": "POTASSIUM ION"
     },
     {
      "comp": "LMT",
-     "copies": 4
+     "copies": 4,
+     "name": "DODECYL-BETA-D-MALTOSIDE"
     },
     {
      "comp": "PIO",
-     "copies": 4
+     "copies": 4,
+     "name": "[(2R)-2-octanoyloxy-3-[oxidanyl-[(1R,2R,3S,4R,5R,6S)-2,3,6-tris(oxidanyl)-4,5-diphosphonooxy-cyclohexyl]oxy-phosphoryl]oxy-propyl] octanoate"
     }
    ],
+   "mutations": [
+    {
+     "label": "K62W",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "G178D",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.006287141,
@@ -398,9 +567,12 @@
    "ligands": [
     {
      "comp": "K",
-     "copies": 24
+     "copies": 24,
+     "name": "POTASSIUM ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.0049467043,
@@ -435,9 +607,21 @@
    "ligands": [
     {
      "comp": "K",
-     "copies": 20
+     "copies": 20,
+     "name": "POTASSIUM ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "KNoneW",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "G178D",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.0072142619,

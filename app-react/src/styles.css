@@ -654,6 +654,27 @@ table.heatmap thead th { position: sticky; top: 0; background: #fbfcfd; z-index:
 .cs-hm-caption { margin: 6px 0 0; font-size: 11px; color: var(--muted); text-align: center; }
 
 
+/* Block summary: a full-width card below the heatmap/viewer row, present only while drilled in. */
+.cs-blocksummary { grid-column: 1 / -1; margin-bottom: 0; }
+.bs-grid { display: flex; flex-direction: column; gap: 9px; font-size: 13px; }
+.bs-row { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 12px;
+  align-items: baseline; }
+.bs-key { color: var(--muted); font-weight: 600; font-size: 12px; }
+.bs-val { line-height: 1.6; }
+/* Secondary clauses (caveats, ranges, exclusions) sit quieter than the numbers they qualify. */
+.bs-note { color: var(--muted); }
+/* One chip per enriched or depleted value. The arrow carries the direction as well as the colour,
+   so it does not rely on colour alone. */
+.bs-chip { display: inline-flex; align-items: baseline; gap: 5px; margin: 0 6px 4px 0;
+  padding: 2px 9px; border-radius: 11px; font-size: 12px; border: 1px solid; white-space: nowrap; }
+/* The chemical name, quieter than the code it expands and than the numbers it precedes. */
+.bs-lig-name { opacity: .8; font-style: italic; }
+.bs-nums { opacity: .95; }
+.bs-up { background: #eaf5ee; border-color: #bcdfc8; color: #1f6b3a; }
+.bs-up::before { content: '▲ '; font-size: 9px; }
+.bs-down { background: #fdefe9; border-color: #f2cdba; color: #9a4a1c; }
+.bs-down::before { content: '▼ '; font-size: 9px; }
+
 /* Says the matrix is showing a drilled-in range rather than everything — the matrix looks the
    same either way, so the state has to be stated rather than inferred. */
 .cs-zoomed { background: #eef4fb; border: 1px solid #cfe0f3; border-radius: 6px;

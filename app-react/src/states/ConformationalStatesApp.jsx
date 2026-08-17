@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import DissimilarityHeatmap, { HEATMAP_HELP } from './DissimilarityHeatmap.jsx'
+import BlockSummary from './BlockSummary.jsx'
 import Hint from '../components/Hint.jsx'
 import SuperpositionViewer from './SuperpositionViewer.jsx'
 import SortIcon from '../components/SortIcon.jsx'
@@ -465,6 +466,18 @@ export default function ConformationalStatesApp({ config }) {
           {notice && <p className="cs-notice">{notice}</p>}
           <SuperpositionViewer basePath={basePath} entries={shown} height={panelSize} />
         </div>
+
+        {/* Only once a block has been drilled into. A full-width card below the two columns, so it
+            costs nothing when absent and does not disturb the matched heights of the heatmap and
+            the viewer. */}
+        {zoom && (
+          <BlockSummary block={shownOrder} assemblies={data.assemblies}
+                        labels={data.heatmap.labels} matrix={hm.matrix}
+                        cellLabel={hm.cell_label} rmsd={rmsdOf}
+                        metricName={METRIC_NAME[metric] || metric}
+                        onClear={() => setZoom(null)}
+                        rangeLabel={`Rows ${zoom.from + 1}–${zoom.to + 1} of the matrix.`} />
+        )}
       </div>
     </div>
   )

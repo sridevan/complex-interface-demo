@@ -31,13 +31,42 @@
    "ligands": [
     {
      "comp": "PAL",
-     "copies": 6
+     "copies": 6,
+     "name": "N-(PHOSPHONACETYL)-L-ASPARTIC ACID"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "R54A",
+     "type": "Conflict"
+    },
+    {
+     "label": "E60Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "E147Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q149E",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q196E",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q8G",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9972462155,
@@ -72,17 +101,43 @@
    "ligands": [
     {
      "comp": "MLI",
-     "copies": 6
+     "copies": 6,
+     "name": "MALONATE ION"
     },
     {
      "comp": "PCT",
-     "copies": 6
+     "copies": 6,
+     "name": "PHOSPHONOACETAMIDE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "E60Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "E147Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q149E",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q196E",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q8G",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.942858277,
@@ -117,13 +172,26 @@
    "ligands": [
     {
      "comp": "PAL",
-     "copies": 6
+     "copies": 6,
+     "name": "N-(PHOSPHONACETYL)-L-ASPARTIC ACID"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "E147Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q196E",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.5636458108,
@@ -158,9 +226,17 @@
    "ligands": [
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "P268A",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.99133673,
@@ -195,13 +271,22 @@
    "ligands": [
     {
      "comp": "PAL",
-     "copies": 6
+     "copies": 6,
+     "name": "N-(PHOSPHONACETYL)-L-ASPARTIC ACID"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "P268A",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.5621920128,
@@ -236,13 +321,22 @@
    "ligands": [
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     },
     {
      "comp": "PAL",
-     "copies": 3
+     "copies": 3,
+     "name": "N-(PHOSPHONACETYL)-L-ASPARTIC ACID"
     }
    ],
+   "mutations": [
+    {
+     "label": "R105A",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9659335041,
@@ -277,13 +371,38 @@
    "ligands": [
     {
      "comp": "MLT",
-     "copies": 12
+     "copies": 12,
+     "name": "D-MALATE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "E60Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "E147Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q149E",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q196E",
+     "type": "Conflict"
+    },
+    {
+     "label": "T82A",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999997973,
@@ -318,13 +437,17 @@
    "ligands": [
     {
      "comp": "PAL",
-     "copies": 6
+     "copies": 6,
+     "name": "N-(PHOSPHONACETYL)-L-ASPARTIC ACID"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.5048664593,
@@ -359,17 +482,22 @@
    "ligands": [
     {
      "comp": "FLC",
-     "copies": 6
+     "copies": 6,
+     "name": "CITRATE ANION"
     },
     {
      "comp": "PO4",
-     "copies": 6
+     "copies": 6,
+     "name": "PHOSPHATE ION"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.572063197,
@@ -404,17 +532,22 @@
    "ligands": [
     {
      "comp": "NCD",
-     "copies": 6
+     "copies": 6,
+     "name": "N-CARBAMOYL-L-ASPARTATE"
     },
     {
      "comp": "PO4",
-     "copies": 6
+     "copies": 6,
+     "name": "PHOSPHATE ION"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.6095562482,
@@ -449,13 +582,17 @@
    "ligands": [
     {
      "comp": "CTP",
-     "copies": 6
+     "copies": 6,
+     "name": "CYTIDINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999999892,
@@ -490,13 +627,17 @@
    "ligands": [
     {
      "comp": "CTP",
-     "copies": 6
+     "copies": 6,
+     "name": "CYTIDINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.5000495475,
@@ -531,13 +672,17 @@
    "ligands": [
     {
      "comp": "CTP",
-     "copies": 6
+     "copies": 6,
+     "name": "CYTIDINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.4998591202,
@@ -572,13 +717,17 @@
    "ligands": [
     {
      "comp": "CTP",
-     "copies": 6
+     "copies": 6,
+     "name": "CYTIDINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.499935243,
@@ -613,13 +762,17 @@
    "ligands": [
     {
      "comp": "CTP",
-     "copies": 6
+     "copies": 6,
+     "name": "CYTIDINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.4999335405,
@@ -654,13 +807,17 @@
    "ligands": [
     {
      "comp": "CTP",
-     "copies": 6
+     "copies": 6,
+     "name": "CYTIDINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.5000505664,
@@ -695,13 +852,17 @@
    "ligands": [
     {
      "comp": "CTP",
-     "copies": 6
+     "copies": 6,
+     "name": "CYTIDINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.4997737455,
@@ -736,13 +897,17 @@
    "ligands": [
     {
      "comp": "CTP",
-     "copies": 6
+     "copies": 6,
+     "name": "CYTIDINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.4999820543,
@@ -777,13 +942,17 @@
    "ligands": [
     {
      "comp": "CTP",
-     "copies": 6
+     "copies": 6,
+     "name": "CYTIDINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      1.0,
@@ -818,13 +987,22 @@
    "ligands": [
     {
      "comp": "MLI",
-     "copies": 6
+     "copies": 6,
+     "name": "MALONATE ION"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "K244N",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.3836368084,
@@ -859,13 +1037,26 @@
    "ligands": [
     {
      "comp": "PAL",
-     "copies": 6
+     "copies": 6,
+     "name": "N-(PHOSPHONACETYL)-L-ASPARTIC ACID"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "E50A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "M1M",
+     "type": "Initiating methionine"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9971715992,
@@ -900,13 +1091,26 @@
    "ligands": [
     {
      "comp": "PCT",
-     "copies": 6
+     "copies": 6,
+     "name": "PHOSPHONOACETAMIDE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "E50A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "M1M",
+     "type": "Initiating methionine"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999998558,
@@ -941,21 +1145,36 @@
    "ligands": [
     {
      "comp": "CTP",
-     "copies": 6
+     "copies": 6,
+     "name": "CYTIDINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "MLI",
-     "copies": 6
+     "copies": 6,
+     "name": "MALONATE ION"
     },
     {
      "comp": "PCT",
-     "copies": 6
+     "copies": 6,
+     "name": "PHOSPHONOACETAMIDE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "E50A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "M1M",
+     "type": "Initiating methionine"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999984093,
@@ -990,13 +1209,26 @@
    "ligands": [
     {
      "comp": "PAL",
-     "copies": 6
+     "copies": 6,
+     "name": "N-(PHOSPHONACETYL)-L-ASPARTIC ACID"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "Q137A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "M1M",
+     "type": "Initiating methionine"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.5632591959,
@@ -1031,13 +1263,22 @@
    "ligands": [
     {
      "comp": "CTP",
-     "copies": 6
+     "copies": 6,
+     "name": "CYTIDINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "MNoneM",
+     "type": "Initiating methionine"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9647052903,
@@ -1072,21 +1313,32 @@
    "ligands": [
     {
      "comp": "CP",
-     "copies": 12
+     "copies": 12,
+     "name": "PHOSPHORIC ACID MONO(FORMAMIDE)ESTER"
     },
     {
      "comp": "CTP",
-     "copies": 6
+     "copies": 6,
+     "name": "CYTIDINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     },
     {
      "comp": "NA",
-     "copies": 3
+     "copies": 3,
+     "name": "SODIUM ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "MNoneM",
+     "type": "Initiating methionine"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.5012780233,
@@ -1121,13 +1373,26 @@
    "ligands": [
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     },
     {
      "comp": "PCT",
-     "copies": 3
+     "copies": 3,
+     "name": "PHOSPHONOACETAMIDE"
     }
    ],
+   "mutations": [
+    {
+     "label": "D236A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "MNoneM",
+     "type": "Initiating methionine"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9394583127,
@@ -1162,17 +1427,22 @@
    "ligands": [
     {
      "comp": "AL0",
-     "copies": 6
+     "copies": 6,
+     "name": "3-[HYDROXY(NITROSO)AMINO]-L-ALANINE"
     },
     {
      "comp": "CP",
-     "copies": 6
+     "copies": 6,
+     "name": "PHOSPHORIC ACID MONO(FORMAMIDE)ESTER"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.9912152098,
@@ -1207,17 +1477,43 @@
    "ligands": [
     {
      "comp": "GLC",
-     "copies": 12
+     "copies": 12,
+     "name": "alpha-D-glucopyranose"
     },
     {
      "comp": "PCT",
-     "copies": 6
+     "copies": 6,
+     "name": "PHOSPHONOACETAMIDE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "E60Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "E147Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q149E",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q196E",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q8G",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9971633281,
@@ -1252,9 +1548,133 @@
    "ligands": [
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "K7S",
+     "type": "Conflict"
+    },
+    {
+     "label": "E60Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "E86Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "D90N",
+     "type": "Conflict"
+    },
+    {
+     "label": "E147Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q149E",
+     "type": "Conflict"
+    },
+    {
+     "label": "D153N",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q196E",
+     "type": "Conflict"
+    },
+    {
+     "label": "N234B",
+     "type": "Conflict"
+    },
+    {
+     "label": "V240L",
+     "type": "Conflict"
+    },
+    {
+     "label": "L241V",
+     "type": "Conflict"
+    },
+    {
+     "label": "D248G",
+     "type": "Conflict"
+    },
+    {
+     "label": "A254M",
+     "type": "Conflict"
+    },
+    {
+     "label": "M256A",
+     "type": "Conflict"
+    },
+    {
+     "label": "D4N",
+     "type": "Conflict"
+    },
+    {
+     "label": "N5D",
+     "type": "Conflict"
+    },
+    {
+     "label": "E10A",
+     "type": "Conflict"
+    },
+    {
+     "label": "A11E",
+     "type": "Conflict"
+    },
+    {
+     "label": "D19N",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q24E",
+     "type": "Conflict"
+    },
+    {
+     "label": "D39Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q40D",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q70E",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q73E",
+     "type": "Conflict"
+    },
+    {
+     "label": "D87N",
+     "type": "Conflict"
+    },
+    {
+     "label": "N88D",
+     "type": "Conflict"
+    },
+    {
+     "label": "D104I",
+     "type": "Conflict"
+    },
+    {
+     "label": "N105D",
+     "type": "Conflict"
+    },
+    {
+     "label": "N111D",
+     "type": "Conflict"
+    },
+    {
+     "label": "N131D",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.6098960915,
@@ -1289,17 +1709,22 @@
    "ligands": [
     {
      "comp": "CTP",
-     "copies": 6
+     "copies": 6,
+     "name": "CYTIDINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "EOP",
-     "copies": 6
+     "copies": 6,
+     "name": "{ETHANE-1,2-DIYLBIS[IMINO(2-OXOETHANE-2,1-DIYL)]}BIS(PHOSPHONIC ACID)"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999989434,
@@ -1334,17 +1759,22 @@
    "ligands": [
     {
      "comp": "CTP",
-     "copies": 6
+     "copies": 6,
+     "name": "CYTIDINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "EOB",
-     "copies": 6
+     "copies": 6,
+     "name": "{1,3-PHENYLENEBIS[IMINO(2-OXOETHANE-2,1-DIYL)]}BIS(PHOSPHONIC ACID)"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.5215332434,
@@ -1379,17 +1809,22 @@
    "ligands": [
     {
      "comp": "CTP",
-     "copies": 6
+     "copies": 6,
+     "name": "CYTIDINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "EOZ",
-     "copies": 6
+     "copies": 6,
+     "name": "3,5-BIS[(PHOSPHONOACETYL)AMINO]BENZOIC ACID"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.999968906,
@@ -1424,13 +1859,17 @@
    "ligands": [
     {
      "comp": "6PR",
-     "copies": 6
+     "copies": 6,
+     "name": "(S)-4-AMINO-4-OXO-3-(2-PHOSPHONOACETAMIDO)BUTANOIC ACID"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9409547445,
@@ -1465,21 +1904,36 @@
    "ligands": [
     {
      "comp": "ASP",
-     "copies": 9
+     "copies": 9,
+     "name": "ASPARTIC ACID"
     },
     {
      "comp": "PCT",
-     "copies": 6
+     "copies": 6,
+     "name": "PHOSPHONOACETAMIDE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     },
     {
      "comp": "PO4",
-     "copies": 3
+     "copies": 3,
+     "name": "PHOSPHATE ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "D236A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "MNoneM",
+     "type": "Initiating methionine"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9402765152,
@@ -1514,21 +1968,32 @@
    "ligands": [
     {
      "comp": "1IP",
-     "copies": 6
+     "copies": 6,
+     "name": "N~2~-(PHOSPHONOACETYL)-L-ASPARAGINE"
     },
     {
      "comp": "MAE",
-     "copies": 6
+     "copies": 6,
+     "name": "MALEIC ACID"
     },
     {
      "comp": "MPD",
-     "copies": 6
+     "copies": 6,
+     "name": "(4S)-2-METHYL-2,4-PENTANEDIOL"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "M1M",
+     "type": "Initiating methionine"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.7611137108,
@@ -1563,9 +2028,17 @@
    "ligands": [
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "D19A",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.500868091,
@@ -1600,9 +2073,17 @@
    "ligands": [
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "H20A",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999999967,
@@ -1637,13 +2118,38 @@
    "ligands": [
     {
      "comp": "PCT",
-     "copies": 6
+     "copies": 6,
+     "name": "PHOSPHONOACETAMIDE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "E60Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "E147Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q149E",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q196E",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q8G",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999999146,
@@ -1678,9 +2184,12 @@
    "ligands": [
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.6099409591,
@@ -1715,13 +2224,26 @@
    "ligands": [
     {
      "comp": "PO4",
-     "copies": 12
+     "copies": 12,
+     "name": "PHOSPHATE ION"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "C47A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "A241C",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9340999458,
@@ -1756,13 +2278,26 @@
    "ligands": [
     {
      "comp": "PO4",
-     "copies": 12
+     "copies": 12,
+     "name": "PHOSPHATE ION"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "C47A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "A241C",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9917370278,
@@ -1797,13 +2332,38 @@
    "ligands": [
     {
      "comp": "ATP",
-     "copies": 6
+     "copies": 6,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "E60Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "E147Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q149E",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q196E",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q8G",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.496195838,
@@ -1838,9 +2398,21 @@
    "ligands": [
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "K164E",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "E239K",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.9946662583,
@@ -1875,17 +2447,22 @@
    "ligands": [
     {
      "comp": "PAL",
-     "copies": 6
+     "copies": 6,
+     "name": "N-(PHOSPHONACETYL)-L-ASPARTIC ACID"
     },
     {
      "comp": "UTP",
-     "copies": 6
+     "copies": 6,
+     "name": "URIDINE 5'-TRIPHOSPHATE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.762519175,
@@ -1920,17 +2497,22 @@
    "ligands": [
     {
      "comp": "DCP",
-     "copies": 6
+     "copies": 6,
+     "name": "2'-DEOXYCYTIDINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     },
     {
      "comp": "PO4",
-     "copies": 3
+     "copies": 3,
+     "name": "PHOSPHATE ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999864833,
@@ -1965,13 +2547,17 @@
    "ligands": [
     {
      "comp": "CTP",
-     "copies": 6
+     "copies": 6,
+     "name": "CYTIDINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.505343749,
@@ -2006,21 +2592,27 @@
    "ligands": [
     {
      "comp": "DCP",
-     "copies": 6
+     "copies": 6,
+     "name": "2'-DEOXYCYTIDINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 6
+     "copies": 6,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "UTP",
-     "copies": 6
+     "copies": 6,
+     "name": "URIDINE 5'-TRIPHOSPHATE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.4962778097,
@@ -2055,21 +2647,27 @@
    "ligands": [
     {
      "comp": "CTP",
-     "copies": 6
+     "copies": 6,
+     "name": "CYTIDINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 6
+     "copies": 6,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "UTP",
-     "copies": 6
+     "copies": 6,
+     "name": "URIDINE 5'-TRIPHOSPHATE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9667853431,
@@ -2104,13 +2702,38 @@
    "ligands": [
     {
      "comp": "CTP",
-     "copies": 6
+     "copies": 6,
+     "name": "CYTIDINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "E60Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "E147Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q149E",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q196E",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q8G",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.4956412538,
@@ -2145,9 +2768,33 @@
    "ligands": [
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "E60Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "E147Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q149E",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q196E",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q8G",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.4969173486,
@@ -2182,9 +2829,17 @@
    "ligands": [
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "G166P",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.3820790981,
@@ -2219,9 +2874,21 @@
    "ligands": [
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "G128A",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "G130A",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.3820980093,
@@ -2256,9 +2923,12 @@
    "ligands": [
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.9914065782,
@@ -2293,21 +2963,48 @@
    "ligands": [
     {
      "comp": "GLC",
-     "copies": 12
+     "copies": 12,
+     "name": "alpha-D-glucopyranose"
     },
     {
      "comp": "PCT",
-     "copies": 6
+     "copies": 6,
+     "name": "PHOSPHONOACETAMIDE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     },
     {
      "comp": "ATP",
-     "copies": 3
+     "copies": 3,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [
+    {
+     "label": "E60Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "E147Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q149E",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q196E",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q8G",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.4298030955,
@@ -2342,21 +3039,48 @@
    "ligands": [
     {
      "comp": "GLC",
-     "copies": 12
+     "copies": 12,
+     "name": "alpha-D-glucopyranose"
     },
     {
      "comp": "CTP",
-     "copies": 6
+     "copies": 6,
+     "name": "CYTIDINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "PCT",
-     "copies": 6
+     "copies": 6,
+     "name": "PHOSPHONOACETAMIDE"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "E60Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "E147Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q149E",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q196E",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q8G",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9969895599,
@@ -2391,13 +3115,38 @@
    "ligands": [
     {
      "comp": "PAL",
-     "copies": 6
+     "copies": 6,
+     "name": "N-(PHOSPHONACETYL)-L-ASPARTIC ACID"
     },
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "E60Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "E147Q",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q149E",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q196E",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q8G",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.4317081136,
@@ -2432,9 +3181,17 @@
    "ligands": [
     {
      "comp": "ZN",
-     "copies": 6
+     "copies": 6,
+     "name": "ZINC ION"
     }
    ],
+   "mutations": [
+    {
+     "label": "Y165F",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.5971085519,

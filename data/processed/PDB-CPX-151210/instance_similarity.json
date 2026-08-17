@@ -29,17 +29,22 @@
    "ligands": [
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.9574379406,
@@ -74,21 +79,27 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9987367662,
@@ -123,21 +134,27 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9988500423,
@@ -172,21 +189,27 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9984704369,
@@ -221,21 +244,27 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.998829271,
@@ -270,21 +299,27 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9987241664,
@@ -319,21 +354,27 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9979878431,
@@ -368,21 +409,27 @@
    "ligands": [
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.9663351076,
@@ -417,21 +464,27 @@
    "ligands": [
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "DGI",
-     "copies": 2
+     "copies": 2,
+     "name": "2'-DEOXYGUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9992455563,
@@ -466,25 +519,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "DGI",
-     "copies": 2
+     "copies": 2,
+     "name": "2'-DEOXYGUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9995485892,
@@ -519,25 +579,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "DGI",
-     "copies": 2
+     "copies": 2,
+     "name": "2'-DEOXYGUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9992132932,
@@ -572,25 +639,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "DGI",
-     "copies": 2
+     "copies": 2,
+     "name": "2'-DEOXYGUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9992440438,
@@ -625,25 +699,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "DGI",
-     "copies": 2
+     "copies": 2,
+     "name": "2'-DEOXYGUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9992385688,
@@ -678,25 +759,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "DGI",
-     "copies": 2
+     "copies": 2,
+     "name": "2'-DEOXYGUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9994122529,
@@ -731,25 +819,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "DGI",
-     "copies": 2
+     "copies": 2,
+     "name": "2'-DEOXYGUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9996114886,
@@ -784,25 +879,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "DGI",
-     "copies": 2
+     "copies": 2,
+     "name": "2'-DEOXYGUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9994728197,
@@ -837,25 +939,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "DGI",
-     "copies": 2
+     "copies": 2,
+     "name": "2'-DEOXYGUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9996239975,
@@ -890,25 +999,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "DGI",
-     "copies": 2
+     "copies": 2,
+     "name": "2'-DEOXYGUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9989527667,
@@ -943,21 +1059,27 @@
    "ligands": [
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9873555297,
@@ -992,25 +1114,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9831916943,
@@ -1045,25 +1174,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9890619328,
@@ -1098,25 +1234,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.992183858,
@@ -1151,25 +1294,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9845206234,
@@ -1204,25 +1354,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9901139531,
@@ -1257,25 +1414,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9873811858,
@@ -1310,25 +1474,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9856275262,
@@ -1363,25 +1534,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9915676245,
@@ -1416,25 +1594,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      1.0,
@@ -1469,25 +1654,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.999822548,
@@ -1522,25 +1714,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.9678897029,
@@ -1575,25 +1774,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9991777878,
@@ -1628,25 +1834,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9990628401,
@@ -1681,25 +1894,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999436219,
@@ -1734,25 +1954,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.979147717,
@@ -1787,25 +2014,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.998978884,
@@ -1840,25 +2074,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999867132,
@@ -1893,25 +2134,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9988176903,
@@ -1946,25 +2194,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.99983441,
@@ -1999,25 +2254,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9996577912,
@@ -2052,25 +2314,32 @@
    "ligands": [
     {
      "comp": "MN",
-     "copies": 4
+     "copies": 4,
+     "name": "MANGANESE (II) ION"
     },
     {
      "comp": "ATP",
-     "copies": 2
+     "copies": 2,
+     "name": "ADENOSINE-5'-TRIPHOSPHATE"
     },
     {
      "comp": "GDP",
-     "copies": 2
+     "copies": 2,
+     "name": "GUANOSINE-5'-DIPHOSPHATE"
     },
     {
      "comp": "MG",
-     "copies": 2
+     "copies": 2,
+     "name": "MAGNESIUM ION"
     },
     {
      "comp": "TTP",
-     "copies": 2
+     "copies": 2,
+     "name": "THYMIDINE-5'-TRIPHOSPHATE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.999015453,

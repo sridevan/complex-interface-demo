@@ -30,13 +30,26 @@
    "ligands": [
     {
      "comp": "CMO",
-     "copies": 4
+     "copies": 4,
+     "name": "CARBON MONOXIDE"
     },
     {
      "comp": "HEM",
-     "copies": 4
+     "copies": 4,
+     "name": "PROTOPORPHYRIN IX CONTAINING FE"
     }
    ],
+   "mutations": [
+    {
+     "label": "N82D",
+     "type": "See remark 999"
+    },
+    {
+     "label": "D85N",
+     "type": "See remark 999"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999997637,
@@ -71,9 +84,25 @@
    "ligands": [
     {
      "comp": "HEM",
-     "copies": 4
+     "copies": 4,
+     "name": "PROTOPORPHYRIN IX CONTAINING FE"
     }
    ],
+   "mutations": [
+    {
+     "label": "Y24F",
+     "type": "Variant"
+    },
+    {
+     "label": "N82D",
+     "type": "Conflict"
+    },
+    {
+     "label": "D85N",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999998573,
@@ -108,17 +137,22 @@
    "ligands": [
     {
      "comp": "CMO",
-     "copies": 4
+     "copies": 4,
+     "name": "CARBON MONOXIDE"
     },
     {
      "comp": "HEM",
-     "copies": 4
+     "copies": 4,
+     "name": "PROTOPORPHYRIN IX CONTAINING FE"
     },
     {
      "comp": "PEM",
-     "copies": 2
+     "copies": 2,
+     "name": "2-[P-[2-P-CHLOROBENZAMIDO)ETHYL]PHENOXY]-2-METHYLPROPIONIC ACID"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.0,
@@ -153,9 +187,21 @@
    "ligands": [
     {
      "comp": "HEM",
-     "copies": 4
+     "copies": 4,
+     "name": "PROTOPORPHYRIN IX CONTAINING FE"
     }
    ],
+   "mutations": [
+    {
+     "label": "N82D",
+     "type": "Conflict"
+    },
+    {
+     "label": "D85N",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999818525,
@@ -190,9 +236,21 @@
    "ligands": [
     {
      "comp": "HEM",
-     "copies": 4
+     "copies": 4,
+     "name": "PROTOPORPHYRIN IX CONTAINING FE"
     }
    ],
+   "mutations": [
+    {
+     "label": "N82D",
+     "type": "Conflict"
+    },
+    {
+     "label": "D85N",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      1.0,
@@ -227,9 +285,21 @@
    "ligands": [
     {
      "comp": "HEM",
-     "copies": 4
+     "copies": 4,
+     "name": "PROTOPORPHYRIN IX CONTAINING FE"
     }
    ],
+   "mutations": [
+    {
+     "label": "N82D",
+     "type": "Conflict"
+    },
+    {
+     "label": "D85N",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.8587972253,
@@ -264,9 +334,21 @@
    "ligands": [
     {
      "comp": "HEM",
-     "copies": 4
+     "copies": 4,
+     "name": "PROTOPORPHYRIN IX CONTAINING FE"
     }
    ],
+   "mutations": [
+    {
+     "label": "N82D",
+     "type": "Conflict"
+    },
+    {
+     "label": "D85N",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.8606364249,
@@ -301,9 +383,21 @@
    "ligands": [
     {
      "comp": "HEM",
-     "copies": 4
+     "copies": 4,
+     "name": "PROTOPORPHYRIN IX CONTAINING FE"
     }
    ],
+   "mutations": [
+    {
+     "label": "N82D",
+     "type": "Conflict"
+    },
+    {
+     "label": "D85N",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.8592623174,
@@ -338,17 +432,22 @@
    "ligands": [
     {
      "comp": "CMO",
-     "copies": 4
+     "copies": 4,
+     "name": "CARBON MONOXIDE"
     },
     {
      "comp": "HEM",
-     "copies": 4
+     "copies": 4,
+     "name": "PROTOPORPHYRIN IX CONTAINING FE"
     },
     {
      "comp": "L35",
-     "copies": 4
+     "copies": 4,
+     "name": "2-[4-({[(3,5-DICHLOROPHENYL)AMINO]CARBONYL}AMINO)PHENOXY]-2-METHYLPROPANOIC ACID"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.0,
@@ -383,9 +482,41 @@
    "ligands": [
     {
      "comp": "HEM",
-     "copies": 4
+     "copies": 4,
+     "name": "PROTOPORPHYRIN IX CONTAINING FE"
     }
    ],
+   "mutations": [
+    {
+     "label": "G63A",
+     "type": "Conflict"
+    },
+    {
+     "label": "A65G",
+     "type": "Conflict"
+    },
+    {
+     "label": "N82D",
+     "type": "Conflict"
+    },
+    {
+     "label": "D85N",
+     "type": "Conflict"
+    },
+    {
+     "label": "V111A",
+     "type": "Conflict"
+    },
+    {
+     "label": "V112L",
+     "type": "Conflict"
+    },
+    {
+     "label": "L114V",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.9757091086,
@@ -420,9 +551,21 @@
    "ligands": [
     {
      "comp": "HEM",
-     "copies": 4
+     "copies": 4,
+     "name": "PROTOPORPHYRIN IX CONTAINING FE"
     }
    ],
+   "mutations": [
+    {
+     "label": "N82D",
+     "type": "Conflict"
+    },
+    {
+     "label": "D85N",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.9999999922,
@@ -457,9 +600,21 @@
    "ligands": [
     {
      "comp": "HEM",
-     "copies": 4
+     "copies": 4,
+     "name": "PROTOPORPHYRIN IX CONTAINING FE"
     }
    ],
+   "mutations": [
+    {
+     "label": "N82D",
+     "type": "Conflict"
+    },
+    {
+     "label": "D85N",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.9999995284,
@@ -494,9 +649,21 @@
    "ligands": [
     {
      "comp": "HEM",
-     "copies": 4
+     "copies": 4,
+     "name": "PROTOPORPHYRIN IX CONTAINING FE"
     }
    ],
+   "mutations": [
+    {
+     "label": "N82D",
+     "type": "Conflict"
+    },
+    {
+     "label": "D85N",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      -0.9999998102,
@@ -531,9 +698,21 @@
    "ligands": [
     {
      "comp": "HEM",
-     "copies": 4
+     "copies": 4,
+     "name": "PROTOPORPHYRIN IX CONTAINING FE"
     }
    ],
+   "mutations": [
+    {
+     "label": "N82D",
+     "type": "Conflict"
+    },
+    {
+     "label": "D85N",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.4588902392,
@@ -568,9 +747,21 @@
    "ligands": [
     {
      "comp": "HEM",
-     "copies": 4
+     "copies": 4,
+     "name": "PROTOPORPHYRIN IX CONTAINING FE"
     }
    ],
+   "mutations": [
+    {
+     "label": "N82D",
+     "type": "Conflict"
+    },
+    {
+     "label": "D85N",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.999999884,
@@ -605,13 +796,17 @@
    "ligands": [
     {
      "comp": "CYN",
-     "copies": 4
+     "copies": 4,
+     "name": "CYANIDE ION"
     },
     {
      "comp": "HEM",
-     "copies": 4
+     "copies": 4,
+     "name": "PROTOPORPHYRIN IX CONTAINING FE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999996234,
@@ -646,21 +841,27 @@
    "ligands": [
     {
      "comp": "HEM",
-     "copies": 4
+     "copies": 4,
+     "name": "PROTOPORPHYRIN IX CONTAINING FE"
     },
     {
      "comp": "NA",
-     "copies": 2
+     "copies": 2,
+     "name": "SODIUM ION"
     },
     {
      "comp": "CL",
-     "copies": 1
+     "copies": 1,
+     "name": "CHLORIDE ION"
     },
     {
      "comp": "PEG",
-     "copies": 1
+     "copies": 1,
+     "name": "DI(HYDROXYETHYL)ETHER"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.8613840153,
@@ -695,9 +896,12 @@
    "ligands": [
     {
      "comp": "HEM",
-     "copies": 4
+     "copies": 4,
+     "name": "PROTOPORPHYRIN IX CONTAINING FE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999997011,
@@ -732,9 +936,12 @@
    "ligands": [
     {
      "comp": "HEM",
-     "copies": 4
+     "copies": 4,
+     "name": "PROTOPORPHYRIN IX CONTAINING FE"
     }
    ],
+   "mutations": [],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999995952,
@@ -769,9 +976,25 @@
    "ligands": [
     {
      "comp": "HEM",
-     "copies": 4
+     "copies": 4,
+     "name": "PROTOPORPHYRIN IX CONTAINING FE"
     }
    ],
+   "mutations": [
+    {
+     "label": "Y24F",
+     "type": "Conflict"
+    },
+    {
+     "label": "N82D",
+     "type": "Conflict"
+    },
+    {
+     "label": "D85N",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
    "transform": {
     "rotation": [
      0.9999997344,
