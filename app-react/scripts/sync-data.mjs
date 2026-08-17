@@ -1,4 +1,4 @@
-import { cpSync, mkdirSync, existsSync, readdirSync } from 'node:fs'
+import { cpSync, mkdirSync, existsSync, readdirSync, readFileSync, statSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 const here = dirname(fileURLToPath(import.meta.url))
@@ -8,9 +8,33 @@ const mvsSrc = resolve(root, 'app', 'public', 'mvs')
 const pubData = resolve(here, '..', 'public', 'data')
 const pubMvs = resolve(here, '..', 'public', 'mvs')
 mkdirSync(pubData, { recursive: true }); mkdirSync(pubMvs, { recursive: true })
-if (existsSync(proc)) cpSync(proc, pubData, { recursive: true })
+
+// Only the flat JSONs the app actually requests, not all of data/processed/.
+//
+// This used to be `cpSync(proc, pubData, {recursive:true})`, which shipped every complex's
+// directory into public/data/ as well — and the per-complex pages below stage their own copy of
+// exactly the same files, so human haemoglobin's 341 CIFs went into the deployment twice at 71 MB
+// each. Together with data/processed/processed_antibody_antigen_interfaces.json (189 MB), which no
+// page has ever fetched, 411 MB of a 742 MB build was unreachable at runtime. GitHub Pages caps a
+// deployment at 1 GB and its deploy step starts failing well before that.
+//
+// The names are read out of src/data.js rather than duplicated here, because loadAll() defaults a
+// failed fetch to []/{}: a file listed there but not staged here would not error in production, it
+// would render an empty page. Parsing keeps the two from drifting silently.
+const dataJs = readFileSync(resolve(here, '..', 'src', 'data.js'), 'utf8')
+const namesBlock = dataJs.match(/const names = \[([\s\S]*?)\]/)
+if (!namesBlock) throw new Error('sync-data: cannot find the `names` list in src/data.js')
+const FLAT = [...namesBlock[1].matchAll(/'([^']+)'/g)].map((m) => m[1])
+
+let staged = 0, bytes = 0
+for (const n of FLAT) {
+  const src = resolve(proc, `${n}.json`)
+  if (!existsSync(src)) { console.warn(`  ! ${n}.json listed in data.js but missing from data/processed/`); continue }
+  cpSync(src, resolve(pubData, `${n}.json`))
+  staged++; bytes += statSync(src).size
+}
 if (existsSync(mvsSrc)) cpSync(mvsSrc, pubMvs, { recursive: true })
-console.log('synced processed data + mvs scenes into public/')
+console.log(`synced ${staged}/${FLAT.length} flat data JSONs (${Math.round(bytes / 1e6)} MB) + mvs scenes into public/`)
 
 // Aggregated-interface pages: each loads a flat set of JSONs from public/<name>/ plus one CIF per
 // assembly. Stage them from the committed sources: processed JSONs (data/processed/<CX>/) and the
