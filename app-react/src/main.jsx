@@ -66,6 +66,13 @@ function Root() {
     title: 'Human haemoglobin',
     organism: 'Homo sapiens',
   }} /></>
+  // RNA polymerase II: near-copies rather than states, and the clearest demonstration here of
+  // what one genuine outlier does to a linear colour scale.
+  if (route === '#polii-similarity') return <><BackLink /><ConformationalStatesApp config={{
+    basePath: 'polii-similarity', complexId: 'PDB-CPX-133430',
+    title: 'RNA polymerase II',
+    organism: 'Saccharomyces cerevisiae',
+  }} /></>
   // Respiratory complex I: the depositors varied conformation and sample condition
   // independently, so this set carries its own negative control. The matrix separates
   // conformation (Cohen's d 1.42) and is blind to condition (-0.15) and detergent (0.26).

@@ -70,9 +70,36 @@ RCSB_ASSEMBLY = "https://files.rcsb.org/download/{pdb}-assembly{asm}.cif"
 # observation and the page said so for all of them; PDB-CPX-106364's notes report TM-score
 # separation and rotor geometry as well, so a blanket "measured using the shape measure, may not
 # apply to TM-score" would be false there. Default stays "shape".
-DATA_NOTES_SCOPE = {"PDB-CPX-106364": "mixed", "PDB-CPX-138641": "mixed"}
+DATA_NOTES_SCOPE = {"PDB-CPX-106364": "mixed", "PDB-CPX-138641": "mixed",
+                    "PDB-CPX-133430": "mixed"}
 
 DATA_NOTES = {
+    "PDB-CPX-133430": [
+        "This is not a set of conformational states. Seventeen of the eighteen instances are "
+        "12-subunit Pol II elongation complexes at 3.4 to 4.5 A, and what varies between them is "
+        "the nucleic-acid scaffold and the lesion it carries (CPD, cisplatin, an RdRP scaffold, a "
+        "hepatitis delta ribozyme), not the conformation of the enzyme. Read it as a set of near "
+        "copies with one outlier, not as states.",
+        "That outlier, 3j1n_1, is a 16 A cryo-EM map of a preinitiation complex rather than an "
+        "elongation complex, and it is disjoint from everything else: every pair involving it "
+        "scores 0.195 to 0.210 on 1 - TM-score while every other pair in the set tops out at "
+        "0.030. Nothing lies between. It is kept rather than dropped because it is real, but the "
+        "matrix should be read as one tight group plus a structure that does not belong to it.",
+        "One consequence is worth knowing before reading any colour on this page. The scale runs "
+        "linearly to the largest value present, so 3j1n_1 sets the top of the ramp and squeezes "
+        "everything else into the bottom: the middle half of all pairs occupies 7.1% of the ramp "
+        "on TM-score with it present, against 33.3% without. Drill into the tight group and the "
+        "colours will still be scaled to the full set, by design, so read the values rather than "
+        "the shades.",
+        "The set carries its own positive control. 2ja7_1 and 2ja7_2 are two assemblies of one "
+        "entry and should be identical: backbone RMSD between them is 0.09 A and TM-score returns "
+        "exactly 0.0000. The shape score returns 0.0684 for the same pair, which is its noise "
+        "floor here, and that is 16% of the largest shape value among the other seventeen. Shape "
+        "differences below roughly that size are not meaningful on this page.",
+        "1nt9_1 was excluded before scoring. It has no spectral descriptor at all, so all 18 of "
+        "its pairs were missing from the combined score and the build will not work from an "
+        "incomplete matrix. Nineteen assemblies have US-align scores; eighteen are shown.",
+    ],
     "PDB-CPX-138641": [
         "The depositors varied two things independently and said so in the entry titles: the "
         "conformation (Resting, Closed, Open, Open-ready) and the sample condition (apo, NADH, "
@@ -283,8 +310,15 @@ DATA_NOTES = {
 # ---------------------------------------------------------------------------
 # Clustering (delegated to the notebook's clustering.py)
 # ---------------------------------------------------------------------------
-def score_matrix(repo, complex_id, score_type):
-    """Pairwise dissimilarity matrix for one complex, straight from the notebook's own combiner."""
+def score_matrix(repo, complex_id, score_type, exclude=()):
+    """Pairwise dissimilarity matrix for one complex, straight from the notebook's own combiner.
+
+    `exclude` drops assemblies before the matrix is built. The gate below refuses an incomplete
+    matrix, and a single assembly missing one descriptor takes its whole row and column with it --
+    on PDB-CPX-133430, 1nt9_1 has no spectral score at all, so 18 of 171 pairs were unusable and
+    the build stopped rather than lose one instance. Dropping that instance is the lesser loss, but
+    it has to be a deliberate argument and named in the data notes, never a silent repair.
+    """
     sys.path.insert(0, repo)
     import pandas as pd
     import clustering as C
@@ -301,6 +335,12 @@ def score_matrix(repo, complex_id, score_type):
     })
     if df.empty:
         raise SystemExit(f"no pairwise scores for {complex_id}")
+    if exclude:
+        keep = ~(df.asm1_id.isin(exclude) | df.asm2_id.isin(exclude))
+        dropped = sorted(set(df.asm1_id[~keep]) | set(df.asm2_id[~keep]))
+        df = df[keep]
+        print(f"excluded {len(exclude)} assemblies before scoring: {', '.join(sorted(exclude))}"
+              f" (touched rows naming {len(dropped)})")
 
     combined, spectral, zernike, labels = C.compute_combined_scores_matrix_from_df(df)
     matrix = {"combined": combined, "spectral": spectral, "zernike": zernike}[score_type]
@@ -1081,6 +1121,9 @@ def main():
     ap.add_argument("--reference", default="1ns9_1",
                     help="assembly every other assembly is superposed onto ('auto' = medoid)")
     ap.add_argument("--score-type", default="combined", choices=["combined", "spectral", "zernike"])
+    ap.add_argument("--exclude", default="", help="comma-separated assembly ids to drop before "
+                    "scoring, for instances whose descriptors are missing and would otherwise "
+                    "make the whole matrix incomplete")
     ap.add_argument("--linkage", default="average", choices=["average", "complete", "single"])
     ap.add_argument("--out-dir", default=None)
     ap.add_argument("--overlap-from-reference", action="store_true",
@@ -1108,7 +1151,8 @@ def main():
     os.makedirs(cif_dir, exist_ok=True)
     os.makedirs(cache_dir, exist_ok=True)
 
-    labels, matrix = score_matrix(args.clustering_repo, args.complex, args.score_type)
+    excluded = tuple(x.strip() for x in args.exclude.split(",") if x.strip())
+    labels, matrix = score_matrix(args.clustering_repo, args.complex, args.score_type, excluded)
     n_total = len(labels)
     subset = None
     if args.overlap_from_reference:

@@ -1,0 +1,2116 @@
+{
+ "complex_id": "PDB-CPX-133430",
+ "reference_assembly": "2r7z_1",
+ "method": {
+  "score_type": "combined",
+  "linkage": "average",
+  "cut_mode": "auto_gap",
+  "n_clusters": 4,
+  "source": "pdbe_complex_clustering/clustering.py (notebook defaults)",
+  "coordinate_source": "PDBe model server assembly coordinates",
+  "atoms_shipped": "backbone"
+ },
+ "subset": null,
+ "data_notes": [
+  "This is not a set of conformational states. Seventeen of the eighteen instances are 12-subunit Pol II elongation complexes at 3.4 to 4.5 A, and what varies between them is the nucleic-acid scaffold and the lesion it carries (CPD, cisplatin, an RdRP scaffold, a hepatitis delta ribozyme), not the conformation of the enzyme. Read it as a set of near copies with one outlier, not as states.",
+  "That outlier, 3j1n_1, is a 16 A cryo-EM map of a preinitiation complex rather than an elongation complex, and it is disjoint from everything else: every pair involving it scores 0.195 to 0.210 on 1 - TM-score while every other pair in the set tops out at 0.030. Nothing lies between. It is kept rather than dropped because it is real, but the matrix should be read as one tight group plus a structure that does not belong to it.",
+  "One consequence is worth knowing before reading any colour on this page. The scale runs linearly to the largest value present, so 3j1n_1 sets the top of the ramp and squeezes everything else into the bottom: the middle half of all pairs occupies 7.1% of the ramp on TM-score with it present, against 33.3% without. Drill into the tight group and the colours will still be scaled to the full set, by design, so read the values rather than the shades.",
+  "The set carries its own positive control. 2ja7_1 and 2ja7_2 are two assemblies of one entry and should be identical: backbone RMSD between them is 0.09 A and TM-score returns exactly 0.0000. The shape score returns 0.0684 for the same pair, which is its noise floor here, and that is 16% of the largest shape value among the other seventeen. Shape differences below roughly that size are not meaningful on this page.",
+  "1nt9_1 was excluded before scoring. It has no spectral descriptor at all, so all 18 of its pairs were missing from the combined score and the build will not work from an incomplete matrix. Nineteen assemblies have US-align scores; eighteen are shown."
+ ],
+ "data_notes_scope": "mixed",
+ "assemblies": [
+  {
+   "assembly_id": "1wcm_1",
+   "pdb_id": "1wcm",
+   "structure_title": "Complete 12-Subunit RNA Polymerase II at 3.8 Angstrom",
+   "resolution": 3.8,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.3571,
+   "ligands": [
+    {
+     "comp": "ZN",
+     "copies": 8,
+     "name": "ZINC ION"
+    },
+    {
+     "comp": "MG",
+     "copies": 1,
+     "name": "MAGNESIUM ION"
+    }
+   ],
+   "mutations": [],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     -0.9999769368,
+     -1.16867e-05,
+     0.0067915946,
+     -3.2009e-06,
+     -0.9999975975,
+     -0.002192046,
+     0.0067916039,
+     -0.0021920172,
+     0.9999745343
+    ],
+    "translation": [
+     1.0263569641,
+     0.3187737774,
+     -0.7771030196
+    ],
+    "source": "1wcm_1-2r7z_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "1y1w_1",
+   "pdb_id": "1y1w",
+   "structure_title": "Complete RNA Polymerase II elongation complex",
+   "resolution": 4,
+   "exp_method": "x-ray",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.329,
+   "ligands": [
+    {
+     "comp": "ZN",
+     "copies": 8,
+     "name": "ZINC ION"
+    },
+    {
+     "comp": "MG",
+     "copies": 1,
+     "name": "MAGNESIUM ION"
+    }
+   ],
+   "mutations": [],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     -0.9999710342,
+     0.0059486027,
+     0.0047481499,
+     -0.0059572436,
+     -0.9999806214,
+     -0.001807768,
+     0.0047373042,
+     -0.0018360016,
+     0.9999870934
+    ],
+    "translation": [
+     -0.0977415334,
+     0.7177867795,
+     -0.6276514578
+    ],
+    "source": "1y1w_1-2r7z_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "1y77_1",
+   "pdb_id": "1y77",
+   "structure_title": "Complete RNA Polymerase II elongation complex with substrate analogue GMPCPP",
+   "resolution": 4.5,
+   "exp_method": "x-ray",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.2968,
+   "ligands": [
+    {
+     "comp": "ZN",
+     "copies": 8,
+     "name": "ZINC ION"
+    },
+    {
+     "comp": "G2P",
+     "copies": 1,
+     "name": "PHOSPHOMETHYLPHOSPHONIC ACID GUANYLATE ESTER"
+    },
+    {
+     "comp": "MG",
+     "copies": 1,
+     "name": "MAGNESIUM ION"
+    }
+   ],
+   "mutations": [],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     -0.999989105,
+     -0.0033906914,
+     -0.0032082754,
+     0.0033966764,
+     -0.999992498,
+     -0.0018618731,
+     -0.0032019383,
+     -0.0018727503,
+     0.9999931202
+    ],
+    "translation": [
+     0.1165177919,
+     -0.3478226305,
+     0.2024699102
+    ],
+    "source": "1y77_1-2r7z_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "2b8k_1",
+   "pdb_id": "2b8k",
+   "structure_title": "12-subunit RNA Polymerase II",
+   "resolution": 4.15,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.345,
+   "ligands": [
+    {
+     "comp": "ZN",
+     "copies": 8,
+     "name": "ZINC ION"
+    }
+   ],
+   "mutations": [],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9998377297,
+     -0.0146437898,
+     0.0104916002,
+     0.0147201169,
+     0.9998654763,
+     -0.0072351552,
+     -0.0103842387,
+     0.0073884187,
+     0.9999187861
+    ],
+    "translation": [
+     -110.0156265131,
+     0.253485579,
+     -0.3924087534
+    ],
+    "source": "2b8k_1-2r7z_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "2ja5_1",
+   "pdb_id": "2ja5",
+   "structure_title": "CPD lesion containing RNA Polymerase II elongation complex A",
+   "resolution": 3.8,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.2977,
+   "ligands": [
+    {
+     "comp": "ZN",
+     "copies": 8,
+     "name": "ZINC ION"
+    },
+    {
+     "comp": "BRU",
+     "copies": 1,
+     "name": "5-BROMO-2'-DEOXYURIDINE-5'-MONOPHOSPHATE"
+    },
+    {
+     "comp": "MG",
+     "copies": 1,
+     "name": "MAGNESIUM ION"
+    }
+   ],
+   "mutations": [],
+   "modified": [
+    {
+     "comp": "BRU",
+     "name": "5-BROMO-2'-DEOXYURIDINE-5'-MONOPHOSPHATE"
+    }
+   ],
+   "transform": {
+    "rotation": [
+     -0.9999819941,
+     -0.0026060799,
+     -0.0054055363,
+     0.0026334556,
+     -0.999983713,
+     -0.0050634638,
+     -0.0053922524,
+     -0.0050776079,
+     0.9999725704
+    ],
+    "translation": [
+     0.2467267089,
+     -0.2959277894,
+     0.7523982756
+    ],
+    "source": "2ja5_1-2r7z_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "2ja6_1",
+   "pdb_id": "2ja6",
+   "structure_title": "CPD lesion containing RNA Polymerase II elongation complex B",
+   "resolution": 4,
+   "exp_method": "x-ray",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.3085,
+   "ligands": [
+    {
+     "comp": "ZN",
+     "copies": 8,
+     "name": "ZINC ION"
+    },
+    {
+     "comp": "BRU",
+     "copies": 1,
+     "name": "5-BROMO-2'-DEOXYURIDINE-5'-MONOPHOSPHATE"
+    },
+    {
+     "comp": "MG",
+     "copies": 1,
+     "name": "MAGNESIUM ION"
+    },
+    {
+     "comp": "TT",
+     "copies": 1,
+     "name": "[(1R,3R,4S,9R,10S,12R,15AS,15BR,18BR,18CS)-10-HYDROXY-15A,15B-DIMETHYL-13,15,16,18-TETRAOXOHEXADECAHYDRO-8H-9,12-EPOXY-1,4-METHANO-2,5,7-TRIOXA-12A,14,17,18A-TETRAAZACYCLOHEXADECA[1,2,3,4-DEF]BIPHENYLEN-3-YL]METHYL DIHYDROGEN PHOSPHATE"
+    }
+   ],
+   "mutations": [],
+   "modified": [
+    {
+     "comp": "BRU",
+     "name": "5-BROMO-2'-DEOXYURIDINE-5'-MONOPHOSPHATE"
+    }
+   ],
+   "transform": {
+    "rotation": [
+     -0.9999909302,
+     -0.0042465831,
+     0.000325721,
+     0.0042456238,
+     -0.9999868077,
+     -0.0028912152,
+     0.0003379945,
+     -0.002889806,
+     0.9999957674
+    ],
+    "translation": [
+     1.2228838159,
+     -0.3436795662,
+     0.0168407243
+    ],
+    "source": "2ja6_1-2r7z_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "2ja7_1",
+   "pdb_id": "2ja7",
+   "structure_title": "CPD lesion containing RNA Polymerase II elongation complex C",
+   "resolution": 3.8,
+   "exp_method": "x-ray",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.2917,
+   "ligands": [
+    {
+     "comp": "ZN",
+     "copies": 8,
+     "name": "ZINC ION"
+    },
+    {
+     "comp": "BRU",
+     "copies": 1,
+     "name": "5-BROMO-2'-DEOXYURIDINE-5'-MONOPHOSPHATE"
+    },
+    {
+     "comp": "MG",
+     "copies": 1,
+     "name": "MAGNESIUM ION"
+    },
+    {
+     "comp": "TT",
+     "copies": 1,
+     "name": "[(1R,3R,4S,9R,10S,12R,15AS,15BR,18BR,18CS)-10-HYDROXY-15A,15B-DIMETHYL-13,15,16,18-TETRAOXOHEXADECAHYDRO-8H-9,12-EPOXY-1,4-METHANO-2,5,7-TRIOXA-12A,14,17,18A-TETRAAZACYCLOHEXADECA[1,2,3,4-DEF]BIPHENYLEN-3-YL]METHYL DIHYDROGEN PHOSPHATE"
+    }
+   ],
+   "mutations": [],
+   "modified": [
+    {
+     "comp": "BRU",
+     "name": "5-BROMO-2'-DEOXYURIDINE-5'-MONOPHOSPHATE"
+    }
+   ],
+   "transform": {
+    "rotation": [
+     -0.0016581859,
+     -0.9999985204,
+     -0.0004578897,
+     0.9999985104,
+     -0.0016584049,
+     0.0004784015,
+     -0.0004791601,
+     -0.0004570958,
+     0.9999997807
+    ],
+    "translation": [
+     -110.3637756952,
+     1.4504518708,
+     -141.5741296347
+    ],
+    "source": "2ja7_1-2r7z_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "2ja7_2",
+   "pdb_id": "2ja7",
+   "structure_title": "CPD lesion containing RNA Polymerase II elongation complex C",
+   "resolution": 3.8,
+   "exp_method": "x-ray",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.2899,
+   "ligands": [
+    {
+     "comp": "ZN",
+     "copies": 8,
+     "name": "ZINC ION"
+    },
+    {
+     "comp": "BRU",
+     "copies": 1,
+     "name": "5-BROMO-2'-DEOXYURIDINE-5'-MONOPHOSPHATE"
+    },
+    {
+     "comp": "MG",
+     "copies": 1,
+     "name": "MAGNESIUM ION"
+    },
+    {
+     "comp": "TT",
+     "copies": 1,
+     "name": "[(1R,3R,4S,9R,10S,12R,15AS,15BR,18BR,18CS)-10-HYDROXY-15A,15B-DIMETHYL-13,15,16,18-TETRAOXOHEXADECAHYDRO-8H-9,12-EPOXY-1,4-METHANO-2,5,7-TRIOXA-12A,14,17,18A-TETRAAZACYCLOHEXADECA[1,2,3,4-DEF]BIPHENYLEN-3-YL]METHYL DIHYDROGEN PHOSPHATE"
+    }
+   ],
+   "mutations": [],
+   "modified": [
+    {
+     "comp": "BRU",
+     "name": "5-BROMO-2'-DEOXYURIDINE-5'-MONOPHOSPHATE"
+    }
+   ],
+   "transform": {
+    "rotation": [
+     -0.0014327909,
+     0.999998766,
+     -0.0006442303,
+     0.9999665935,
+     0.0014379286,
+     0.0080463818,
+     0.0080472982,
+     -0.00063268,
+     -0.9999674198
+    ],
+    "translation": [
+     -110.7331755771,
+     0.2516275222,
+     0.1513049897
+    ],
+    "source": "2ja7_2-2r7z_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "2ja8_1",
+   "pdb_id": "2ja8",
+   "structure_title": "CPD lesion containing RNA Polymerase II elongation complex D",
+   "resolution": 3.8,
+   "exp_method": "x-ray",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.2923,
+   "ligands": [
+    {
+     "comp": "ZN",
+     "copies": 8,
+     "name": "ZINC ION"
+    },
+    {
+     "comp": "BRU",
+     "copies": 1,
+     "name": "5-BROMO-2'-DEOXYURIDINE-5'-MONOPHOSPHATE"
+    },
+    {
+     "comp": "MG",
+     "copies": 1,
+     "name": "MAGNESIUM ION"
+    },
+    {
+     "comp": "TT",
+     "copies": 1,
+     "name": "[(1R,3R,4S,9R,10S,12R,15AS,15BR,18BR,18CS)-10-HYDROXY-15A,15B-DIMETHYL-13,15,16,18-TETRAOXOHEXADECAHYDRO-8H-9,12-EPOXY-1,4-METHANO-2,5,7-TRIOXA-12A,14,17,18A-TETRAAZACYCLOHEXADECA[1,2,3,4-DEF]BIPHENYLEN-3-YL]METHYL DIHYDROGEN PHOSPHATE"
+    }
+   ],
+   "mutations": [],
+   "modified": [
+    {
+     "comp": "BRU",
+     "name": "5-BROMO-2'-DEOXYURIDINE-5'-MONOPHOSPHATE"
+    }
+   ],
+   "transform": {
+    "rotation": [
+     -0.9999940818,
+     -0.0025359775,
+     -0.0023248865,
+     0.0025517177,
+     -0.9999736749,
+     -0.0067925094,
+     -0.0023075996,
+     -0.0067984016,
+     0.999974228
+    ],
+    "translation": [
+     0.775465938,
+     -0.2372738121,
+     0.1975139219
+    ],
+    "source": "2ja8_1-2r7z_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "2r7z_1",
+   "pdb_id": "2r7z",
+   "structure_title": "Cisplatin lesion containing RNA polymerase II elongation complex",
+   "resolution": 3.8,
+   "exp_method": "x-ray",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.2865,
+   "ligands": [
+    {
+     "comp": "ZN",
+     "copies": 8,
+     "name": "ZINC ION"
+    },
+    {
+     "comp": "CPT",
+     "copies": 1,
+     "name": "Cisplatin"
+    },
+    {
+     "comp": "MG",
+     "copies": 1,
+     "name": "MAGNESIUM ION"
+    }
+   ],
+   "mutations": [],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "translation": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "source": null,
+    "derivation": "identity"
+   }
+  },
+  {
+   "assembly_id": "2r92_1",
+   "pdb_id": "2r92",
+   "structure_title": "Elongation complex of RNA polymerase II with artificial RdRP scaffold",
+   "resolution": 3.8,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.3033,
+   "ligands": [
+    {
+     "comp": "ZN",
+     "copies": 8,
+     "name": "ZINC ION"
+    },
+    {
+     "comp": "MG",
+     "copies": 1,
+     "name": "MAGNESIUM ION"
+    }
+   ],
+   "mutations": [],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     -0.9999881887,
+     0.0027698127,
+     0.0039938149,
+     -0.0027866026,
+     -0.9999872781,
+     -0.0042045702,
+     0.0039821182,
+     -0.0042156498,
+     0.9999831854
+    ],
+    "translation": [
+     0.870922603,
+     0.5526640211,
+     -0.5507662123
+    ],
+    "source": "2r7z_1-2r92_1_transform.txt",
+    "derivation": "inverted"
+   }
+  },
+  {
+   "assembly_id": "2r93_1",
+   "pdb_id": "2r93",
+   "structure_title": "Elongation complex of RNA polymerase II with a hepatitis delta virus-derived RNA stem loop",
+   "resolution": 4,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.299,
+   "ligands": [
+    {
+     "comp": "ZN",
+     "copies": 8,
+     "name": "ZINC ION"
+    },
+    {
+     "comp": "MG",
+     "copies": 1,
+     "name": "MAGNESIUM ION"
+    }
+   ],
+   "mutations": [],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9999853285,
+     -0.004582145,
+     0.0028890542,
+     -0.0045846601,
+     -0.9999891167,
+     0.0008645401,
+     0.0028850613,
+     -0.0008777728,
+     -0.999995453
+    ],
+    "translation": [
+     0.798998546,
+     -0.2924194047,
+     0.2697637893
+    ],
+    "source": "2r7z_1-2r93_1_transform.txt",
+    "derivation": "inverted"
+   }
+  },
+  {
+   "assembly_id": "3fki_1",
+   "pdb_id": "3fki",
+   "structure_title": "12-Subunit RNA Polymerase II Refined with Zn-SAD data",
+   "resolution": 3.88,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.351,
+   "ligands": [
+    {
+     "comp": "ZN",
+     "copies": 8,
+     "name": "ZINC ION"
+    },
+    {
+     "comp": "MG",
+     "copies": 1,
+     "name": "MAGNESIUM ION"
+    }
+   ],
+   "mutations": [],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.999844132,
+     -0.0138515817,
+     0.0109473892,
+     0.0139269714,
+     0.9998796157,
+     -0.0068405787,
+     -0.0108513184,
+     0.0069919764,
+     0.9999166771
+    ],
+    "translation": [
+     -109.9907615849,
+     0.0966603619,
+     -0.3854122534
+    ],
+    "source": "2r7z_1-3fki_1_transform.txt",
+    "derivation": "inverted"
+   }
+  },
+  {
+   "assembly_id": "3j1n_1",
+   "pdb_id": "3j1n",
+   "structure_title": "Cryo-EM map of a yeast minimal preinitiation complex interacting with the Mediator Head module",
+   "resolution": 16.0,
+   "exp_method": "em",
+   "cluster_id": 4,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.9335,
+   "ligands": [],
+   "mutations": [],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     -0.5984446834,
+     -0.0631669562,
+     0.7986700799,
+     0.2360053339,
+     0.9387532428,
+     0.2510853071,
+     -0.765614422,
+     0.338751066,
+     -0.5468841486
+    ],
+    "translation": [
+     -123.8775555061,
+     -222.7063325646,
+     108.8884305767
+    ],
+    "source": "2r7z_1-3j1n_1_transform.txt",
+    "derivation": "inverted"
+   }
+  },
+  {
+   "assembly_id": "4a93_1",
+   "pdb_id": "4a93",
+   "structure_title": "RNA Polymerase II elongation complex containing a CPD Lesion",
+   "resolution": 3.4,
+   "exp_method": "x-ray",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.3545,
+   "ligands": [
+    {
+     "comp": "ZN",
+     "copies": 8,
+     "name": "ZINC ION"
+    },
+    {
+     "comp": "BRU",
+     "copies": 1,
+     "name": "5-BROMO-2'-DEOXYURIDINE-5'-MONOPHOSPHATE"
+    },
+    {
+     "comp": "MG",
+     "copies": 1,
+     "name": "MAGNESIUM ION"
+    },
+    {
+     "comp": "TT",
+     "copies": 1,
+     "name": "[(1R,3R,4S,9R,10S,12R,15AS,15BR,18BR,18CS)-10-HYDROXY-15A,15B-DIMETHYL-13,15,16,18-TETRAOXOHEXADECAHYDRO-8H-9,12-EPOXY-1,4-METHANO-2,5,7-TRIOXA-12A,14,17,18A-TETRAAZACYCLOHEXADECA[1,2,3,4-DEF]BIPHENYLEN-3-YL]METHYL DIHYDROGEN PHOSPHATE"
+    }
+   ],
+   "mutations": [],
+   "modified": [
+    {
+     "comp": "BRU",
+     "name": "5-BROMO-2'-DEOXYURIDINE-5'-MONOPHOSPHATE"
+    }
+   ],
+   "transform": {
+    "rotation": [
+     -0.9999908088,
+     0.0021466497,
+     -0.003711354,
+     -0.0021197095,
+     -0.9999714891,
+     -0.007247612,
+     -0.0037268062,
+     -0.0072396784,
+     0.9999668484
+    ],
+    "translation": [
+     0.4871433561,
+     0.2316087753,
+     0.4388269158
+    ],
+    "source": "2r7z_1-4a93_1_transform.txt",
+    "derivation": "inverted"
+   }
+  },
+  {
+   "assembly_id": "5u5q_1",
+   "pdb_id": "5u5q",
+   "structure_title": "12 Subunit RNA Polymerase II at Room Temperature collected using SFX",
+   "resolution": 3.8,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.3851,
+   "ligands": [
+    {
+     "comp": "ZN",
+     "copies": 8,
+     "name": "ZINC ION"
+    },
+    {
+     "comp": "MG",
+     "copies": 1,
+     "name": "MAGNESIUM ION"
+    }
+   ],
+   "mutations": [],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     -0.9999524246,
+     0.0097503247,
+     -0.0002822511,
+     -0.0097490489,
+     -0.9999435939,
+     -0.0042148703,
+     -0.0003233316,
+     -0.0042119181,
+     0.9999910776
+    ],
+    "translation": [
+     1.3465728013,
+     1.7719906733,
+     0.3427922652
+    ],
+    "source": "2r7z_1-5u5q_1_transform.txt",
+    "derivation": "inverted"
+   }
+  },
+  {
+   "assembly_id": "9bvt_1",
+   "pdb_id": "9bvt",
+   "structure_title": "RNA Pol II - High Mn(+2) concentration",
+   "resolution": 3.4,
+   "exp_method": "x-ray",
+   "cluster_id": 3,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.3538,
+   "ligands": [
+    {
+     "comp": "ZN",
+     "copies": 8,
+     "name": "ZINC ION"
+    },
+    {
+     "comp": "MN",
+     "copies": 2,
+     "name": "MANGANESE (II) ION"
+    },
+    {
+     "comp": "GOL",
+     "copies": 1,
+     "name": "GLYCEROL"
+    }
+   ],
+   "mutations": [],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     -0.9999287324,
+     0.0110449355,
+     0.0045320645,
+     -0.011090275,
+     -0.9998874506,
+     -0.0101040575,
+     0.0044199558,
+     -0.0101535992,
+     0.9999386823
+    ],
+    "translation": [
+     0.2878287856,
+     1.4427785087,
+     -0.7449949899
+    ],
+    "source": "2r7z_1-9bvt_1_transform.txt",
+    "derivation": "inverted"
+   }
+  },
+  {
+   "assembly_id": "9bw0_1",
+   "pdb_id": "9bw0",
+   "structure_title": "RNA Polymerase II - No ATP",
+   "resolution": 3.51,
+   "exp_method": "x-ray",
+   "cluster_id": 3,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.366,
+   "ligands": [
+    {
+     "comp": "ZN",
+     "copies": 8,
+     "name": "ZINC ION"
+    }
+   ],
+   "mutations": [],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     -0.9999721799,
+     0.0071928951,
+     -0.001975254,
+     -0.0071678729,
+     -0.9998974813,
+     -0.012395504,
+     -0.0020642111,
+     -0.0123810008,
+     0.9999212218
+    ],
+    "translation": [
+     -1.2534910749,
+     0.8098462732,
+     -0.0913278861
+    ],
+    "source": "2r7z_1-9bw0_1_transform.txt",
+    "derivation": "inverted"
+   }
+  }
+ ],
+ "heatmap": {
+  "labels": [
+   "1wcm_1",
+   "1y1w_1",
+   "1y77_1",
+   "2b8k_1",
+   "2ja5_1",
+   "2ja6_1",
+   "2ja7_1",
+   "2ja7_2",
+   "2ja8_1",
+   "2r7z_1",
+   "2r92_1",
+   "2r93_1",
+   "3fki_1",
+   "3j1n_1",
+   "4a93_1",
+   "5u5q_1",
+   "9bvt_1",
+   "9bw0_1"
+  ],
+  "ordering": "tree-penalised path-length seriation (matrix only, pre-clustering)",
+  "dendrogram_order": [
+   "3j1n_1",
+   "9bvt_1",
+   "9bw0_1",
+   "4a93_1",
+   "2ja6_1",
+   "2ja8_1",
+   "2ja7_1",
+   "2ja7_2",
+   "2r7z_1",
+   "1y1w_1",
+   "1y77_1",
+   "5u5q_1",
+   "1wcm_1",
+   "2b8k_1",
+   "3fki_1",
+   "2r93_1",
+   "2ja5_1",
+   "2r92_1"
+  ],
+  "default_metric": "tmscore",
+  "coverage": {
+   "pairs": 153,
+   "metrics": {
+    "shape": {
+     "pairs": 153,
+     "shown": true
+    },
+    "tmscore": {
+     "pairs": 153,
+     "shown": true
+    },
+    "rmsd": {
+     "pairs": 153,
+     "shown": false,
+     "per_pair": true
+    }
+   }
+  },
+  "rmsd": {
+   "label": "Backbone RMSD after superposition (US-align)",
+   "cell_label": "RMSD",
+   "unit": "\u00c5",
+   "matrix": [
+    [
+     0.0,
+     0.23,
+     0.17,
+     0.35,
+     0.45,
+     0.4,
+     0.4,
+     0.41,
+     0.43,
+     0.35,
+     0.36,
+     0.38,
+     0.73,
+     7.52,
+     0.81,
+     0.84,
+     0.95,
+     0.99
+    ],
+    [
+     0.23,
+     0.0,
+     0.15,
+     0.48,
+     0.41,
+     0.49,
+     0.41,
+     0.43,
+     0.51,
+     0.29,
+     0.37,
+     0.39,
+     0.85,
+     7.46,
+     0.88,
+     0.93,
+     0.9,
+     0.95
+    ],
+    [
+     0.17,
+     0.15,
+     0.0,
+     0.47,
+     0.44,
+     0.5,
+     0.43,
+     0.45,
+     0.54,
+     0.35,
+     0.38,
+     0.41,
+     0.86,
+     7.45,
+     0.89,
+     0.9,
+     0.91,
+     0.96
+    ],
+    [
+     0.35,
+     0.48,
+     0.47,
+     0.0,
+     0.55,
+     0.53,
+     0.51,
+     0.5,
+     0.51,
+     0.57,
+     0.49,
+     0.55,
+     0.7,
+     7.49,
+     0.76,
+     0.93,
+     0.87,
+     0.92
+    ],
+    [
+     0.45,
+     0.41,
+     0.44,
+     0.55,
+     0.0,
+     0.22,
+     0.16,
+     0.16,
+     0.2,
+     0.44,
+     0.31,
+     0.37,
+     0.82,
+     7.46,
+     0.75,
+     0.94,
+     0.91,
+     0.96
+    ],
+    [
+     0.4,
+     0.49,
+     0.5,
+     0.53,
+     0.22,
+     0.0,
+     0.32,
+     0.33,
+     0.19,
+     0.5,
+     0.28,
+     0.3,
+     0.82,
+     7.44,
+     0.77,
+     0.94,
+     0.93,
+     0.98
+    ],
+    [
+     0.4,
+     0.41,
+     0.43,
+     0.51,
+     0.16,
+     0.32,
+     0.0,
+     0.09,
+     0.31,
+     0.44,
+     0.29,
+     0.34,
+     0.81,
+     7.41,
+     0.79,
+     0.93,
+     0.91,
+     0.96
+    ],
+    [
+     0.41,
+     0.43,
+     0.45,
+     0.5,
+     0.16,
+     0.33,
+     0.09,
+     0.0,
+     0.3,
+     0.46,
+     0.3,
+     0.35,
+     0.8,
+     7.38,
+     0.78,
+     0.93,
+     0.91,
+     0.96
+    ],
+    [
+     0.43,
+     0.51,
+     0.54,
+     0.51,
+     0.2,
+     0.19,
+     0.31,
+     0.3,
+     0.0,
+     0.56,
+     0.31,
+     0.36,
+     0.8,
+     7.38,
+     0.72,
+     0.92,
+     0.92,
+     0.97
+    ],
+    [
+     0.35,
+     0.29,
+     0.35,
+     0.57,
+     0.44,
+     0.5,
+     0.44,
+     0.46,
+     0.56,
+     0.0,
+     0.41,
+     0.38,
+     0.84,
+     7.49,
+     0.87,
+     0.95,
+     0.92,
+     0.97
+    ],
+    [
+     0.36,
+     0.37,
+     0.38,
+     0.49,
+     0.31,
+     0.28,
+     0.29,
+     0.3,
+     0.31,
+     0.41,
+     0.0,
+     0.25,
+     0.81,
+     7.39,
+     0.8,
+     0.88,
+     0.86,
+     0.91
+    ],
+    [
+     0.38,
+     0.39,
+     0.41,
+     0.55,
+     0.37,
+     0.3,
+     0.34,
+     0.35,
+     0.36,
+     0.38,
+     0.25,
+     0.0,
+     0.83,
+     7.43,
+     0.84,
+     0.89,
+     0.88,
+     0.94
+    ],
+    [
+     0.73,
+     0.85,
+     0.86,
+     0.7,
+     0.82,
+     0.82,
+     0.81,
+     0.8,
+     0.8,
+     0.84,
+     0.81,
+     0.83,
+     0.0,
+     7.43,
+     0.9,
+     1.01,
+     0.86,
+     0.92
+    ],
+    [
+     7.52,
+     7.46,
+     7.45,
+     7.49,
+     7.46,
+     7.44,
+     7.41,
+     7.38,
+     7.38,
+     7.49,
+     7.39,
+     7.43,
+     7.43,
+     0.0,
+     7.28,
+     7.41,
+     7.45,
+     7.48
+    ],
+    [
+     0.81,
+     0.88,
+     0.89,
+     0.76,
+     0.75,
+     0.77,
+     0.79,
+     0.78,
+     0.72,
+     0.87,
+     0.8,
+     0.84,
+     0.9,
+     7.28,
+     0.0,
+     1.05,
+     0.92,
+     0.94
+    ],
+    [
+     0.84,
+     0.93,
+     0.9,
+     0.93,
+     0.94,
+     0.94,
+     0.93,
+     0.93,
+     0.92,
+     0.95,
+     0.88,
+     0.89,
+     1.01,
+     7.41,
+     1.05,
+     0.0,
+     0.93,
+     0.97
+    ],
+    [
+     0.95,
+     0.9,
+     0.91,
+     0.87,
+     0.91,
+     0.93,
+     0.91,
+     0.91,
+     0.92,
+     0.92,
+     0.86,
+     0.88,
+     0.86,
+     7.45,
+     0.92,
+     0.93,
+     0.0,
+     0.57
+    ],
+    [
+     0.99,
+     0.95,
+     0.96,
+     0.92,
+     0.96,
+     0.98,
+     0.96,
+     0.96,
+     0.97,
+     0.97,
+     0.91,
+     0.94,
+     0.92,
+     7.48,
+     0.94,
+     0.97,
+     0.57,
+     0.0
+    ]
+   ]
+  },
+  "metrics": {
+   "shape": {
+    "label": "Shape (combined Zernike + spectral)",
+    "cell_label": "dissimilarity",
+    "order": [
+     "4a93_1",
+     "2ja7_1",
+     "2ja7_2",
+     "2ja8_1",
+     "2ja6_1",
+     "1y1w_1",
+     "1y77_1",
+     "2r7z_1",
+     "9bw0_1",
+     "9bvt_1",
+     "2r92_1",
+     "2ja5_1",
+     "2r93_1",
+     "3fki_1",
+     "2b8k_1",
+     "1wcm_1",
+     "5u5q_1",
+     "3j1n_1"
+    ],
+    "matrix": [
+     [
+      0.0,
+      0.394695,
+      0.349189,
+      0.126384,
+      0.28122,
+      0.399391,
+      0.368702,
+      0.358136,
+      0.37784,
+      0.311905,
+      0.277323,
+      0.245735,
+      0.265263,
+      0.895524,
+      0.428459,
+      0.242656,
+      0.362236,
+      0.386167
+     ],
+     [
+      0.394695,
+      0.0,
+      0.12944,
+      0.394683,
+      0.330786,
+      0.188373,
+      0.209221,
+      0.225019,
+      0.180969,
+      0.177866,
+      0.34839,
+      0.333888,
+      0.333501,
+      0.955449,
+      0.300951,
+      0.416016,
+      0.331234,
+      0.342236
+     ],
+     [
+      0.349189,
+      0.12944,
+      0.0,
+      0.322563,
+      0.28249,
+      0.177282,
+      0.184414,
+      0.172947,
+      0.175641,
+      0.156749,
+      0.295396,
+      0.282139,
+      0.321451,
+      0.934275,
+      0.264631,
+      0.374804,
+      0.298616,
+      0.32278
+     ],
+     [
+      0.126384,
+      0.394683,
+      0.322563,
+      0.0,
+      0.25169,
+      0.396119,
+      0.34424,
+      0.322006,
+      0.352954,
+      0.318082,
+      0.276943,
+      0.238994,
+      0.253117,
+      0.914402,
+      0.375396,
+      0.233192,
+      0.367251,
+      0.376327
+     ],
+     [
+      0.28122,
+      0.330786,
+      0.28249,
+      0.25169,
+      0.0,
+      0.270388,
+      0.251206,
+      0.222372,
+      0.232493,
+      0.256917,
+      0.124531,
+      0.146179,
+      0.269124,
+      0.905503,
+      0.313147,
+      0.324551,
+      0.286279,
+      0.312715
+     ],
+     [
+      0.399391,
+      0.188373,
+      0.177282,
+      0.396119,
+      0.270388,
+      0.0,
+      0.15081,
+      0.159202,
+      0.14453,
+      0.178571,
+      0.284445,
+      0.266692,
+      0.339116,
+      0.969266,
+      0.2426,
+      0.402896,
+      0.329689,
+      0.345933
+     ],
+     [
+      0.368702,
+      0.209221,
+      0.184414,
+      0.34424,
+      0.251206,
+      0.15081,
+      0.0,
+      0.068351,
+      0.125649,
+      0.17194,
+      0.248174,
+      0.248806,
+      0.34963,
+      0.950726,
+      0.230871,
+      0.385933,
+      0.331442,
+      0.338669
+     ],
+     [
+      0.358136,
+      0.225019,
+      0.172947,
+      0.322006,
+      0.222372,
+      0.159202,
+      0.068351,
+      0.0,
+      0.115376,
+      0.171971,
+      0.236449,
+      0.292738,
+      0.330581,
+      0.940205,
+      0.247334,
+      0.392066,
+      0.321157,
+      0.35214
+     ],
+     [
+      0.37784,
+      0.180969,
+      0.175641,
+      0.352954,
+      0.232493,
+      0.14453,
+      0.125649,
+      0.115376,
+      0.0,
+      0.176534,
+      0.27707,
+      0.251172,
+      0.321931,
+      0.946595,
+      0.232107,
+      0.383105,
+      0.331442,
+      0.344533
+     ],
+     [
+      0.311905,
+      0.177866,
+      0.156749,
+      0.318082,
+      0.256917,
+      0.178571,
+      0.17194,
+      0.171971,
+      0.176534,
+      0.0,
+      0.248968,
+      0.244004,
+      0.31389,
+      0.921977,
+      0.265936,
+      0.371033,
+      0.283802,
+      0.300073
+     ],
+     [
+      0.277323,
+      0.34839,
+      0.295396,
+      0.276943,
+      0.124531,
+      0.284445,
+      0.248174,
+      0.236449,
+      0.27707,
+      0.248968,
+      0.0,
+      0.141806,
+      0.256095,
+      0.932911,
+      0.346736,
+      0.302999,
+      0.266404,
+      0.291033
+     ],
+     [
+      0.245735,
+      0.333888,
+      0.282139,
+      0.238994,
+      0.146179,
+      0.266692,
+      0.248806,
+      0.292738,
+      0.251172,
+      0.244004,
+      0.141806,
+      0.0,
+      0.250982,
+      0.903827,
+      0.316,
+      0.338435,
+      0.276033,
+      0.305403
+     ],
+     [
+      0.265263,
+      0.333501,
+      0.321451,
+      0.253117,
+      0.269124,
+      0.339116,
+      0.34963,
+      0.330581,
+      0.321931,
+      0.31389,
+      0.256095,
+      0.250982,
+      0.0,
+      0.975317,
+      0.381806,
+      0.27689,
+      0.377865,
+      0.35075
+     ],
+     [
+      0.895524,
+      0.955449,
+      0.934275,
+      0.914402,
+      0.905503,
+      0.969266,
+      0.950726,
+      0.940205,
+      0.946595,
+      0.921977,
+      0.932911,
+      0.903827,
+      0.975317,
+      0.0,
+      0.970934,
+      0.901141,
+      0.941012,
+      0.909888
+     ],
+     [
+      0.428459,
+      0.300951,
+      0.264631,
+      0.375396,
+      0.313147,
+      0.2426,
+      0.230871,
+      0.247334,
+      0.232107,
+      0.265936,
+      0.346736,
+      0.316,
+      0.381806,
+      0.970934,
+      0.0,
+      0.418029,
+      0.334734,
+      0.356402
+     ],
+     [
+      0.242656,
+      0.416016,
+      0.374804,
+      0.233192,
+      0.324551,
+      0.402896,
+      0.385933,
+      0.392066,
+      0.383105,
+      0.371033,
+      0.302999,
+      0.338435,
+      0.27689,
+      0.901141,
+      0.418029,
+      0.0,
+      0.385886,
+      0.397267
+     ],
+     [
+      0.362236,
+      0.331234,
+      0.298616,
+      0.367251,
+      0.286279,
+      0.329689,
+      0.331442,
+      0.321157,
+      0.331442,
+      0.283802,
+      0.266404,
+      0.276033,
+      0.377865,
+      0.941012,
+      0.334734,
+      0.385886,
+      0.0,
+      0.190358
+     ],
+     [
+      0.386167,
+      0.342236,
+      0.32278,
+      0.376327,
+      0.312715,
+      0.345933,
+      0.338669,
+      0.35214,
+      0.344533,
+      0.300073,
+      0.291033,
+      0.305403,
+      0.35075,
+      0.909888,
+      0.356402,
+      0.397267,
+      0.190358,
+      0.0
+     ]
+    ]
+   },
+   "tmscore": {
+    "label": "Structural (1 \u2212 TM-score)",
+    "cell_label": "1 \u2212 TM-score",
+    "order": [
+     "9bw0_1",
+     "9bvt_1",
+     "4a93_1",
+     "2r93_1",
+     "2r92_1",
+     "2ja5_1",
+     "2ja6_1",
+     "2ja7_2",
+     "2ja8_1",
+     "2ja7_1",
+     "2r7z_1",
+     "1y77_1",
+     "1y1w_1",
+     "1wcm_1",
+     "5u5q_1",
+     "2b8k_1",
+     "3fki_1",
+     "3j1n_1"
+    ],
+    "matrix": [
+     [
+      0.0,
+      0.005,
+      0.005,
+      0.005,
+      0.005,
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.005,
+      0.005,
+      0.005,
+      0.005,
+      0.195,
+      0.01,
+      0.01,
+      0.02,
+      0.02
+     ],
+     [
+      0.005,
+      0.0,
+      0.0,
+      0.005,
+      0.01,
+      0.01,
+      0.005,
+      0.005,
+      0.01,
+      0.0,
+      0.01,
+      0.01,
+      0.01,
+      0.195,
+      0.01,
+      0.015,
+      0.02,
+      0.025
+     ],
+     [
+      0.005,
+      0.0,
+      0.0,
+      0.005,
+      0.01,
+      0.01,
+      0.005,
+      0.005,
+      0.01,
+      0.0,
+      0.01,
+      0.01,
+      0.01,
+      0.195,
+      0.01,
+      0.015,
+      0.02,
+      0.025
+     ],
+     [
+      0.005,
+      0.005,
+      0.005,
+      0.0,
+      0.01,
+      0.015,
+      0.01,
+      0.01,
+      0.015,
+      0.005,
+      0.01,
+      0.01,
+      0.005,
+      0.195,
+      0.015,
+      0.01,
+      0.025,
+      0.02
+     ],
+     [
+      0.005,
+      0.01,
+      0.01,
+      0.01,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.0,
+      0.0,
+      0.01,
+      0.195,
+      0.01,
+      0.015,
+      0.02,
+      0.025
+     ],
+     [
+      0.01,
+      0.01,
+      0.01,
+      0.015,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.005,
+      0.005,
+      0.005,
+      0.01,
+      0.2,
+      0.01,
+      0.015,
+      0.02,
+      0.025
+     ],
+     [
+      0.01,
+      0.005,
+      0.005,
+      0.01,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.005,
+      0.005,
+      0.005,
+      0.01,
+      0.205,
+      0.01,
+      0.015,
+      0.02,
+      0.025
+     ],
+     [
+      0.01,
+      0.005,
+      0.005,
+      0.01,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.005,
+      0.005,
+      0.005,
+      0.01,
+      0.205,
+      0.01,
+      0.015,
+      0.02,
+      0.025
+     ],
+     [
+      0.01,
+      0.01,
+      0.01,
+      0.015,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.005,
+      0.005,
+      0.005,
+      0.01,
+      0.205,
+      0.01,
+      0.015,
+      0.02,
+      0.025
+     ],
+     [
+      0.005,
+      0.0,
+      0.0,
+      0.005,
+      0.01,
+      0.005,
+      0.005,
+      0.005,
+      0.005,
+      0.0,
+      0.01,
+      0.01,
+      0.01,
+      0.195,
+      0.01,
+      0.015,
+      0.02,
+      0.02
+     ],
+     [
+      0.005,
+      0.01,
+      0.01,
+      0.01,
+      0.0,
+      0.005,
+      0.005,
+      0.005,
+      0.005,
+      0.01,
+      0.0,
+      0.0,
+      0.01,
+      0.205,
+      0.01,
+      0.015,
+      0.02,
+      0.025
+     ],
+     [
+      0.005,
+      0.01,
+      0.01,
+      0.01,
+      0.0,
+      0.005,
+      0.005,
+      0.005,
+      0.005,
+      0.01,
+      0.0,
+      0.0,
+      0.01,
+      0.2,
+      0.01,
+      0.015,
+      0.025,
+      0.025
+     ],
+     [
+      0.005,
+      0.01,
+      0.01,
+      0.005,
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.0,
+      0.195,
+      0.015,
+      0.015,
+      0.025,
+      0.025
+     ],
+     [
+      0.195,
+      0.195,
+      0.195,
+      0.195,
+      0.195,
+      0.2,
+      0.205,
+      0.205,
+      0.205,
+      0.195,
+      0.205,
+      0.2,
+      0.195,
+      0.0,
+      0.205,
+      0.21,
+      0.21,
+      0.21
+     ],
+     [
+      0.01,
+      0.01,
+      0.01,
+      0.015,
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.015,
+      0.205,
+      0.0,
+      0.02,
+      0.02,
+      0.025
+     ],
+     [
+      0.01,
+      0.015,
+      0.015,
+      0.01,
+      0.015,
+      0.015,
+      0.015,
+      0.015,
+      0.015,
+      0.015,
+      0.015,
+      0.015,
+      0.015,
+      0.21,
+      0.02,
+      0.0,
+      0.03,
+      0.03
+     ],
+     [
+      0.02,
+      0.02,
+      0.02,
+      0.025,
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.025,
+      0.025,
+      0.21,
+      0.02,
+      0.03,
+      0.0,
+      0.005
+     ],
+     [
+      0.02,
+      0.025,
+      0.025,
+      0.02,
+      0.025,
+      0.025,
+      0.025,
+      0.025,
+      0.025,
+      0.02,
+      0.025,
+      0.025,
+      0.025,
+      0.21,
+      0.025,
+      0.03,
+      0.005,
+      0.0
+     ]
+    ]
+   }
+  }
+ }
+}
