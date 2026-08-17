@@ -3,11 +3,13 @@ import DissimilarityHeatmap, { HEATMAP_HELP } from './DissimilarityHeatmap.jsx'
 import Hint from '../components/Hint.jsx'
 import SuperpositionViewer from './SuperpositionViewer.jsx'
 import SortIcon from '../components/SortIcon.jsx'
+import { Pager } from '../components/Pager.jsx'
 import '../styles.css'
 
 const BASE = import.meta.env.BASE_URL || '/'
 
 export const MAX_SHOWN = 5
+const PAGE_SIZE = 10
 
 // Categorical palette for the superposed structures, checked with the dataviz palette validator
 // (all-pairs, light surface): passes the lightness band, chroma floor and normal-vision floor.
@@ -17,6 +19,60 @@ export const MAX_SHOWN = 5
 // repaints the others.
 const SERIES = ['#0072B2', '#D55E00', '#009E73', '#CC79A7', '#56B4E9']
 
+// Short button labels for the Measure switch. A lookup rather than a conditional, so a dataset
+// that gains a metric the page has not seen before falls back to its key instead of being
+// mislabelled as one of the others.
+const METRIC_NAME = { shape: 'Shape', tmscore: 'TM-score', rmsd: 'RMSD' }
+
+// Presentation order, and the first one present is what a page opens on. TM-score leads: measured
+// on ATCase against the depositors' own T/R labels it separates the states best (Cohen's d 1.81 vs
+// shape's 1.67) and gives the least fragmented ordering. RMSD is deliberately absent — it is the
+// best number to READ but the worst to order by, so it rides along on hover instead. Anything not
+// listed sorts to the end in the order the dataset supplied it.
+const METRIC_ORDER = ['tmscore', 'shape']
+const orderMetrics = (keys) => [...keys].sort((a, b) => {
+  const ia = METRIC_ORDER.indexOf(a), ib = METRIC_ORDER.indexOf(b)
+  return (ia < 0 ? METRIC_ORDER.length : ia) - (ib < 0 ? METRIC_ORDER.length : ib)
+})
+
+// What each measure actually is, and where each one misleads. These are not interchangeable views
+// of the same quantity: they disagree, and a reader who switches between them needs to know why.
+// Rendered only for the measures a given dataset actually carries.
+const METRIC_HELP = {
+  shape: ['Shape',
+    'Zernike + spectral descriptors of the whole assembly. Normalised, so values mean nothing '
+    + 'outside this complex. Also responds to how much of the model was built, not just to '
+    + 'conformation.'],
+  tmscore: ['TM-score',
+    'Shown as 1 − TM-score. Built to test whether two structures share a fold, which every pair '
+    + 'here does, so it works at the top of its range and changes little. Reported to 2 decimals, '
+    + 'giving steps of 0.005. Asymmetric, so the two directions are averaged.'],
+}
+// Listed after the measures, since RMSD annotates every pair regardless of which one is selected.
+const RMSD_HELP = ['RMSD',
+  'Backbone RMSD in ångströms, shown on every pair you hover. The one value here in units you can '
+  + 'act on. Not selectable as a measure: it is dominated by the largest displacements, so it '
+  + 'orders the matrix poorly. Comparable within this complex only.']
+const METRIC_SCALE_NOTE = 'Colours are stretched to each measure’s own range, so a shade means '
+  + 'different things on different measures. Read the values at the ends of the bar.'
+
+// One renderer for both help popups, so they stay in the same voice and the plain-text version a
+// screen reader gets is always derived from the same strings as the visible one.
+// `entries` is [heading, text] pairs; `tail` is an optional closing paragraph with no heading.
+function helpHint(entries, { width = 330, tail = null } = {}) {
+  const aria = [...entries.map(([n, t]) => `${n}: ${t}`), ...(tail ? [tail] : [])].join(' ')
+  return (
+    <Hint width={width} aria={aria} text={(
+      <>
+        {entries.map(([name, txt]) => (
+          <span key={name} className="hint-para"><b>{name}:</b> {txt}</span>
+        ))}
+        {tail && <span className="hint-para">{tail}</span>}
+      </>
+    )} />
+  )
+}
+
 const COLS = [
   { key: 'assembly_id', label: 'Assembly' },
   { key: 'structure_title', label: 'Structure title' },
@@ -25,7 +81,7 @@ const COLS = [
 ]
 
 export default function ConformationalStatesApp({ config }) {
-  const { basePath, complexId, title, organism } = config
+  const { basePath, complexId, title, organism, synthetic } = config
   const [data, setData] = useState(null)
   const [slots, setSlots] = useState(Array(MAX_SHOWN).fill(null))
   // `notice` is a routine limit warning shown beside the viewer; `error` is fatal and replaces the
@@ -33,15 +89,34 @@ export default function ConformationalStatesApp({ config }) {
   const [notice, setNotice] = useState(null)
   const [error, setError] = useState(null)
   const [sort, setSort] = useState({ key: null, dir: 'asc' })   // null = heatmap (seriation) order
+  const [page, setPage] = useState(0)
+  // The heatmap solves its own square size from the card width; the viewer is told to match it so
+  // the two row-2 cards end level with no filler inside either one.
+  const [panelSize, setPanelSize] = useState(520)
+  // Which pairwise measure the heatmap shows. Resolved once the data says which measures it
+  // carries — a page with no RMSD must not open on a measure it does not have. Order and default
+  // come from METRIC_ORDER; the measures disagree with one another, so which one a page opens on
+  // is a real editorial choice, not a detail.
+  const [metric, setMetric] = useState(null)
+  // Drilled-in range, as {from, to} indices into the CURRENT metric's seriation order, or null for
+  // the whole set. Reading structure off a 341-instance matrix works; acting on it does not, since
+  // a cell is under 2px. Dragging a block is the way in — it needs no precision, and the ordering
+  // already groups what belongs together, so a contiguous range is the natural unit.
+  const [zoom, setZoom] = useState(null)
+
 
   useEffect(() => {
     fetch(`${BASE}${basePath}/instance_similarity.json`)
       .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json() })
       .then((d) => {
         setData(d)
-        // Preselect the table's first row — which is the first assembly in the heatmap's seriation
-        // order — so the page never opens on an empty viewer.
-        const first = d.heatmap.order[0]
+        // The measure this dataset opens on: the best-behaved one it actually carries.
+        const opening = orderMetrics(Object.keys(d.heatmap.metrics))[0]
+        setMetric(opening)
+        // Preselect the table's first row — the first assembly in THAT measure's seriation order,
+        // since each measure orders the rows differently — so the page never opens on an empty
+        // viewer showing a structure from a different ordering.
+        const first = d.heatmap.metrics[opening]?.order[0]
         if (first) setSlots((prev) => prev.map((s, i) => (i === 0 ? first : s)))
       })
       .catch((e) => setError(String(e)))
@@ -90,6 +165,12 @@ export default function ConformationalStatesApp({ config }) {
     else addMany(ids)
   }
 
+  // Re-sorting re-derives the list, so send the reader back to the first page.
+  useEffect(() => { setPage(0) }, [sort.key, sort.dir, basePath, zoom])
+  // Each measure carries its OWN seriation, so a range of indices means something different under
+  // each one. Carrying a zoom across the switch would silently show a different set of instances.
+  useEffect(() => { setZoom(null) }, [metric, basePath])
+
   if (error) {
     return (
       <div className="wrap">
@@ -104,18 +185,54 @@ export default function ConformationalStatesApp({ config }) {
 
   // Diagonal cells of the heatmap show the structure's own metadata, as the notebook's does.
   const metaOf = Object.fromEntries(data.assemblies.map((a) => [a.assembly_id, a]))
+  const metrics = data.heatmap.metrics
+  const metricKeys = orderMetrics(Object.keys(metrics))
+  // Per-pair RMSD, shown on hover alongside whichever measure is selected. Null when the sidecars
+  // were incomplete, exactly as a missing measure is.
+  const rmsdOf = data.heatmap.rmsd || null
+  // What the Measure "?" explains: every measure this dataset carries, plus RMSD if it has it.
+  const helpEntries = [...metricKeys.filter((k) => METRIC_HELP[k]).map((k) => METRIC_HELP[k]),
+                       ...(rmsdOf ? [RMSD_HELP] : [])]
+  // Falls back to the first available measure rather than to a hard-coded name: `metric` is null
+  // for the render between the fetch resolving and the state landing, and a dataset need not
+  // carry whichever measure was hard-coded.
+  const hm = metrics[metric] || metrics[metricKeys[0]]
+
+  // false only when the builder ran in cross-group mode and this instance sits in a different
+  // packing group from the reference.
+  const overlays = (a) => a.superposes_with_reference !== false
+  const nOverlay = data.assemblies.filter(overlays).length
   // Default order matches the heatmap (seriation), so a row's position in the table is the same as
   // its position along the matrix. A column sort overrides it; a third click on that column
   // restores the heatmap order.
-  const seriation = Object.fromEntries(data.heatmap.order.map((a, i) => [a, i]))
-  const rows = [...data.assemblies].sort((x, y) => {
-    if (!sort.key) return seriation[x.assembly_id] - seriation[y.assembly_id]
-    const a = x[sort.key], b = y[sort.key]
-    if (a == null) return 1
-    if (b == null) return -1
-    const cmp = typeof a === 'number' ? a - b : String(a).localeCompare(String(b))
-    return sort.dir === 'asc' ? cmp : -cmp
-  })
+  // The matrix itself is never sliced — the heatmap looks every cell up by label — so drilling in
+  // is purely a matter of handing it a shorter order. That also keeps the colour scale fixed to
+  // the full set for free.
+  const shownOrder = zoom ? hm.order.slice(zoom.from, zoom.to + 1) : hm.order
+  const inView = zoom ? new Set(shownOrder) : null
+  // A drag hands back indices into the order the heatmap was given, so while drilled in they are
+  // relative to the current view — rebase them to keep zooming further in.
+  const onSelectBlock = (from, to) => {
+    const base = zoom ? zoom.from : 0
+    setZoom({ from: base + from, to: base + to })
+  }
+
+  const seriation = Object.fromEntries(shownOrder.map((a, i) => [a, i]))
+  const rows = [...data.assemblies].filter((a) => !inView || inView.has(a.assembly_id))
+    .sort((x, y) => {
+      if (!sort.key) return seriation[x.assembly_id] - seriation[y.assembly_id]
+      const a = x[sort.key], b = y[sort.key]
+      if (a == null) return 1
+      if (b == null) return -1
+      const cmp = typeof a === 'number' ? a - b : String(a).localeCompare(String(b))
+      return sort.dir === 'asc' ? cmp : -cmp
+    })
+  // Clamp rather than trust the stored page: the list can shrink under us (a different complex,
+  // a filter) and slicing past the end would render an empty table.
+  const pageCount = Math.max(1, Math.ceil(rows.length / PAGE_SIZE))
+  const curPage = Math.min(page, pageCount - 1)
+  const from = curPage * PAGE_SIZE
+  const paged = rows.slice(from, from + PAGE_SIZE)
   const onSort = (key) => setSort((s) => {
     if (s.key !== key) return { key, dir: 'asc' }
     if (s.dir === 'asc') return { key, dir: 'desc' }
@@ -126,10 +243,51 @@ export default function ConformationalStatesApp({ config }) {
     <div className="wrap">
       <div className="page-head">
         <h1>{title}</h1>
-        <a className="complex-id" href={`https://www.ebi.ac.uk/pdbe/pdbe-kb/complexes/${complexId}`}
-           target="_blank" rel="noreferrer" title="View this complex on PDBe-KB">{complexId}</a>
+        {/* A synthetic set has no PDBe entry, so its id is plain text -- a link that 404s reads as
+            a real complex whose page is merely broken. */}
+        {synthetic
+          ? <span className="complex-id">{complexId}<span className="synth-tag">synthetic</span></span>
+          : <a className="complex-id" href={`https://www.ebi.ac.uk/pdbe/pdbe-kb/complexes/${complexId}`}
+               target="_blank" rel="noreferrer" title="View this complex on PDBe-KB">{complexId}</a>}
         {organism && <i className="page-organism">{organism}</i>}
       </div>
+
+      {data.subset && (data.subset.applied ? (
+        <p className="banner info">
+          Showing <b>{data.subset.kept} of {data.subset.of}</b> assembly instances — the largest
+          group that shares a common superposition. The rest differ in quaternary arrangement
+          (their subunits are packed differently between crystal forms), so no single transform
+          can place them in this frame. Group sizes: {data.subset.group_sizes.join(', ')}.
+        </p>
+      ) : (
+        <p className="banner warn">
+          These {data.subset.of} instances fall into <b>{data.subset.group_sizes.length} packing
+          groups</b> (sizes {data.subset.group_sizes.join(', ')}) whose subunits are arranged
+          differently, so no single transform aligns them all. Every instance is listed and every
+          pair is scored, but only the <b>{nOverlay}</b> sharing {data.reference_assembly}&rsquo;s
+          group overlay in 3D — the other <b>{data.subset.of - nOverlay}</b> are marked{' '}
+          <span className="cs-nofit">△</span> and will appear offset in the viewer.
+        </p>
+      ))}
+
+      {!!(data.data_notes || []).length && (
+        <details className="cs-notes">
+          <summary>
+            Data notes — shape measure
+            <span className="cs-notes-count">{data.data_notes.length}</span>
+          </summary>
+          {/* Every note below was measured against the shape score. TM-score is length-normalised
+              and computed on CA positions alone, so several of these caveats — anything about
+              modelled extent or hydrogen content — may simply not apply to it. */}
+          <p className="cs-notes-scope">
+            Measured using the <b>shape</b> measure ({data.method.score_type} Zernike + spectral).
+            {metricKeys.length > 1 && ' Not re-measured for TM-score, so these may not apply there.'}
+          </p>
+          <ul>
+            {data.data_notes.map((n, i) => <li key={i}>{n}</li>)}
+          </ul>
+        </details>
+      )}
 
       <div className="cs-grid">
         <div className="card cs-instances">
@@ -140,12 +298,13 @@ export default function ConformationalStatesApp({ config }) {
           </p>
           <div className="cs-toolbar">
             <span className="cs-order">
-              Order: <b>{sort.key ? COLS.find((c) => c.key === sort.key)?.label : 'similarity (heatmap)'}</b>
+              Order: <b>{sort.key ? COLS.find((c) => c.key === sort.key)?.label
+                : 'matching the heatmap'}</b>
             </span>
             {sort.key && (
               <button className="cs-linkbtn" onClick={() => setSort({ key: null, dir: 'asc' })}
                       title="Return the rows to the heatmap's ordering">
-                restore similarity order
+                match the heatmap again
               </button>
             )}
           </div>
@@ -168,7 +327,7 @@ export default function ConformationalStatesApp({ config }) {
                 </tr>
               </thead>
               <tbody>
-                {rows.map((r) => {
+                {paged.map((r) => {
                   const on = slots.includes(r.assembly_id)
                   return (
                     <tr key={r.assembly_id} className={on ? 'cs-row-on' : undefined}>
@@ -179,6 +338,10 @@ export default function ConformationalStatesApp({ config }) {
                       <td className="mono">
                         {on && <span className="cs-swatch" style={{ background: colorOf[r.assembly_id] }} />}
                         {r.assembly_id}
+                        {!overlays(r) && (
+                          <span className="cs-nofit"
+                                title={`Packing group ${r.packing_group}: this instance does not share the reference's arrangement, so it will not overlay in the 3D view`}>△</span>
+                        )}
                       </td>
                       <td className="cs-title" title={r.structure_title}>{r.structure_title}</td>
                       <td className="num">{r.resolution ?? '—'}</td>
@@ -188,19 +351,67 @@ export default function ConformationalStatesApp({ config }) {
                 })}
               </tbody>
             </table>
+
           </div>
+          <Pager page={curPage} pageCount={pageCount} setPage={setPage}
+                 from={from} to={from + paged.length} total={rows.length} unit="instances" />
         </div>
 
         <div className="card cs-heatmap">
-          <h2>How similar is every pair? <Hint text={HEATMAP_HELP} /></h2>
-          <p className="note">
-            All {data.assemblies.length} instances compared against each other —{' '}
-            {(data.assemblies.length * (data.assemblies.length - 1) / 2).toLocaleString()} pairs,
-            scored on global shape ({data.method.score_type} of the spectral and Zernike measures).
-          </p>
-          <DissimilarityHeatmap order={data.heatmap.order} labels={data.heatmap.labels}
-                                matrix={data.heatmap.matrix} metaOf={metaOf}
-                                colorOf={colorOf} onPick={onPick} />
+          <h2>How similar is every pair? {helpHint(HEATMAP_HELP)}</h2>
+          {zoom ? (
+            <p className="note cs-zoomed">
+              Showing <b>{shownOrder.length} of {data.assemblies.length}</b> instances —{' '}
+              rows {zoom.from + 1}–{zoom.to + 1} of the matrix. Drag again to go deeper.
+              <button className="cs-linkbtn" onClick={() => setZoom(null)}
+                      title="Return to the full matrix">
+                show all {data.assemblies.length}
+              </button>
+            </p>
+          ) : (
+            <p className="note">
+              All {data.assemblies.length} instances compared against each other —{' '}
+              {(data.assemblies.length * (data.assemblies.length - 1) / 2).toLocaleString()} pairs.
+              {/* Shown at every size, not just the crowded ones: the gesture works throughout, and
+                  making the sentence conditional made the larger pages a line taller than the rest. */}
+              {' '}Drag down the diagonal to look inside a block.
+            </p>
+          )}
+          {/* Handed to the heatmap rather than rendered here, so the measure switch and the zoom
+              control share one bar instead of stacking two thin rows above the matrix. The
+              heatmap owns that bar's layout; this is just its left-hand content.
+
+              Rendered even when there is only one measure. A reader needs to know WHICH measure
+              the matrix shows before reading a single cell, and a page that silently omits the
+              row leaves that unstated — human haemoglobin ships shape alone because TM-score is
+              missing for 53,539 of its pairs. */}
+          <DissimilarityHeatmap key={metric} order={shownOrder} labels={data.heatmap.labels}
+                                matrix={hm.matrix} cellLabel={hm.cell_label} metaOf={metaOf}
+                                colorOf={colorOf} onPick={onPick} onSize={setPanelSize}
+                                onSelectBlock={onSelectBlock} rmsd={rmsdOf}
+                                toolbar={(
+                                  <div className="cs-metric">
+                                    <span className="cs-metric-label">
+                                      Measure{' '}
+                                      {helpHint(helpEntries, { tail: METRIC_SCALE_NOTE })}
+                                    </span>
+                                    {metricKeys.length > 1 ? (
+                                      <span className="pill">
+                                        {metricKeys.map((k) => (
+                                          <button key={k} className={k === metric ? 'active' : undefined}
+                                                  onClick={() => setMetric(k)} title={metrics[k].label}>
+                                            {METRIC_NAME[k] || k}
+                                          </button>
+                                        ))}
+                                      </span>
+                                    ) : (
+                                      <span className="cs-metric-only" title={hm.label}>
+                                        {METRIC_NAME[metric] || metric}
+                                      </span>
+                                    )}
+                                    <span className="cs-metric-note">{hm.label}</span>
+                                  </div>
+                                )} />
         </div>
 
         <div className="card cs-viewer">
@@ -221,7 +432,7 @@ export default function ConformationalStatesApp({ config }) {
           {/* Beside the viewer, not at the top of the page: this fires on a heatmap or table click,
               and a message above row 1 is off-screen once the page is scrolled. */}
           {notice && <p className="cs-notice">{notice}</p>}
-          <SuperpositionViewer basePath={basePath} entries={shown} />
+          <SuperpositionViewer basePath={basePath} entries={shown} height={panelSize} />
         </div>
       </div>
     </div>

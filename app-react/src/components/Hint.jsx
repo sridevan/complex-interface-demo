@@ -6,10 +6,13 @@ import { createPortal } from 'react-dom'
 // clipped by a scrolling table / overflow ancestor (.ex-scroll, .table-scroll). Opens downward
 // from the badge; left is clamped to stay on-screen. stopPropagation keeps a click on the badge
 // from triggering a sortable header's sort handler.
-export default function Hint({ text }) {
+// `text` may be a string or JSX. When it is JSX, pass `aria` with the plain-text equivalent —
+// otherwise the badge announces nothing to a screen reader. `width` widens the popup for help
+// that is a list rather than a sentence.
+export default function Hint({ text, aria, width = 260 }) {
   const ref = useRef(null)
   const [pos, setPos] = useState(null)
-  const POP_W = 260
+  const POP_W = width
   const show = () => {
     const r = ref.current?.getBoundingClientRect()
     if (!r) return
@@ -17,7 +20,8 @@ export default function Hint({ text }) {
   }
   const hide = () => setPos(null)
   return (
-    <span className="hint" ref={ref} tabIndex={0} role="note" aria-label={typeof text === 'string' ? text : undefined}
+    <span className="hint" ref={ref} tabIndex={0} role="note"
+          aria-label={typeof text === 'string' ? text : aria}
           onMouseEnter={show} onMouseLeave={hide} onFocus={show} onBlur={hide}
           onClick={(e) => { e.stopPropagation(); e.preventDefault() }}>
       ?

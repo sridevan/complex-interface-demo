@@ -24,6 +24,11 @@ h1 { font-size: 26px; margin: 0 0 4px; }
   letter-spacing: 0.2px; color: var(--accent); background: #eaf2fb; border: 1px solid #bcd8f4;
   border-radius: 7px; padding: 4px 11px; line-height: 1.2; text-decoration: none; }
 a.complex-id:hover { background: #dcebfa; border-color: var(--accent); }
+/* Marks a generated dataset wherever its name appears, so a test set is never mistaken for a
+   measured one. Deliberately grey rather than accent-coloured: it is a caveat, not a feature. */
+.synth-tag { display: inline-block; margin-left: 8px; padding: 2px 7px; border-radius: 5px;
+  background: #e8e8ec; border: 1px solid #c9c9d1; color: #55555f; font-size: 11px;
+  font-weight: 600; font-family: inherit; letter-spacing: 0.3px; vertical-align: middle; }
 .subtitle { color: var(--muted); margin: 0 0 20px; font-size: 14px; }
 .page-organism { color: var(--muted); font-size: 15px; }  /* species next to the complex id */
 .banner { padding: 10px 14px; border-radius: 8px; font-size: 13px; margin-bottom: 12px; }
@@ -315,6 +320,11 @@ table.seqmap { border-collapse: collapse; font-size: 11px; }
 /* Definition list inside a hint popup (e.g. the contact-type legend). */
 .hint-pop .hint-list { margin: 5px 0 4px; padding-left: 15px; }
 .hint-pop .hint-list li { margin: 2px 0; }
+/* Paragraphs inside a hint popup, for help that is several entries rather than one sentence —
+   the measure switch explains each score separately. */
+.hint-pop .hint-para { display: block; }
+.hint-pop .hint-para + .hint-para { margin-top: 7px; }
+.hint-pop .hint-para b { color: #9ecbff; }
 
 /* Natural-variant badge on an antigen interface residue (e.g. K417N). Warm antibody-orange pill so
    it reads as "biological annotation" distinct from the blue contact palette. */
@@ -447,14 +457,15 @@ table.heatmap thead th { position: sticky; top: 0; background: #fbfcfd; z-index:
 /* Column flexboxes so each card's content area absorbs the leftover height rather than leaving the
    shorter card padded out (same pattern as .cm-row above). */
 .cs-heatmap, .cs-viewer { display: flex; flex-direction: column; }
-.cs-hm { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
+.cs-hm { display: flex; flex-direction: column; }
 @media (max-width: 980px) {
   .cs-grid { grid-template-columns: minmax(0, 1fr); }
   .cs-instances, .cs-heatmap, .cs-viewer { grid-column: 1; }
 }
 
 /* Capped so 20 rows can't push the heatmap and viewer below the fold. */
-.cs-instances-scroll { overflow: auto; max-height: 460px; }
+/* Ten rows fit without scrolling; the pager handles the rest. */
+.cs-instances-scroll { overflow: auto; }
 .cs-tbl { font-size: 12.5px; }
 .cs-tbl td { vertical-align: top; }
 /* width:100% + max-width:0 makes this the flexible column: it takes whatever the fixed
@@ -468,31 +479,87 @@ table.heatmap thead th { position: sticky; top: 0; background: #fbfcfd; z-index:
 .cs-notice { margin: 0 0 14px; padding: 8px 12px; border-radius: 6px; font-size: 13px;
   background: #fdf3e3; color: #8a5a10; border: 1px solid #f0dcb8; }
 
-.cs-hm-scroll { overflow: auto; flex: 1 1 auto; min-height: 0; border: 1px solid var(--border);
+/* The matrix solves its cell size from this box's width (see the ResizeObserver in
+   DissimilarityHeatmap) and the box height then follows the matrix, so there is no leftover space
+   inside the border. */
+/* Square at every instance count. The cell size is solved from the width, so the matrix already
+   fills the box horizontally; pinning the box to 1:1 makes its HEIGHT stop depending on whether
+   the row-label gutter is drawn (which costs 74px of matrix width but only gives back a 58px
+   label band). Labelled matrices leave ~16px of slack at the bottom, which is the price of every
+   similarity card being the same height. */
+.cs-hm-scroll { overflow: hidden; aspect-ratio: 1; border: 1px solid var(--border);
   border-radius: 8px; }
-.cs-hm-table { border-collapse: separate; border-spacing: 0; width: auto; }
-.cs-hm-corner { position: sticky; left: 0; top: 0; z-index: 3; background: #fff; }
-.cs-hm-colhead { height: 66px; vertical-align: bottom; padding: 2px 0; background: #fff;
-  position: sticky; top: 0; z-index: 2; font-size: 11px; }
-.cs-hm-colhead span { display: inline-block; writing-mode: vertical-rl; transform: rotate(180deg);
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
-.cs-hm-rowhead { position: sticky; left: 0; background: #fff; z-index: 1; padding: 0 8px 0 6px;
-  text-align: left; white-space: nowrap; font-size: 11px; font-weight: 500;
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
-.cs-hm-cell { width: 22px; height: 22px; padding: 0; border: 1px solid #eef0f3; box-sizing: border-box;
-  text-align: center; vertical-align: middle; }
-/* Tick marking a displayed structure on its own diagonal cell. White with a dark shadow so it holds
-   up against both ends of the viridis ramp. */
-.cs-hm-check { display: block; font-size: 12px; line-height: 1; color: #fff; font-weight: 700;
-  text-shadow: 0 0 2px rgba(0, 0, 0, .85); pointer-events: none; }
+/* Zoomed past fit the matrix is larger than its box, so it becomes scrollable in both directions.
+   The box itself never changes size, so the page layout is identical at every zoom level. */
+.cs-hm-pannable { overflow: auto; }
+/* Positioning context for the marked-range overlay, sized to the matrix it sits over. */
+.cs-hm-stage { position: relative; }
+/* The matrix as an image, used above the labelling threshold. `display: block` kills the inline
+   baseline gap that would otherwise make the stage a few px taller than the canvas. */
+.cs-hm-canvas { display: block; cursor: pointer; outline: none;
+  -webkit-user-select: none; user-select: none; }
+.cs-hm-canvas:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+/* The marked range, drawn ONCE over the whole block rather than as a border on each cell: at
+   1.68px per cell a per-cell outline is thinner than the cell and disappears. Two strokes, dark
+   outside and white inside, so it reads against both ends of the viridis ramp. pointer-events
+   are off so it never intercepts the drag it is describing. */
+.cs-hm-mark { position: absolute; pointer-events: none; z-index: 2;
+  border: 2px solid #fff; box-shadow: 0 0 0 2px rgba(0,0,0,.75), inset 0 0 0 1px rgba(0,0,0,.55);
+  border-radius: 2px; }
+/* `table-layout: fixed` + an explicit width: the column widths then come straight from --cell
+   instead of being re-derived from content, which is what keeps sub-pixel cells square at large
+   instance counts. --matrix is solved in DissimilarityHeatmap and already includes the row-label
+   gutter when one is drawn. */
+.cs-hm-table { border-collapse: separate; border-spacing: 0;
+  table-layout: fixed; width: var(--matrix, auto); }
+/* No cell border: the matrix reads as one continuous colour field rather than a tiled grid, and
+   at small cell sizes a 1px rule either side was eating ~20% of the cell. Hover and focus use
+   `outline`, which draws over the fill without displacing neighbours. */
+/* line-height:0 here, not on the container: it removes the inline-box slack that otherwise adds a
+   few stray pixels under the last row, without collapsing the axis labels. */
+.cs-hm-cell { width: var(--cell, 22px); height: var(--cell, 22px); padding: 0; border: none;
+  box-sizing: border-box; text-align: center; vertical-align: middle; line-height: 0; }
+/* Tick marking a displayed structure on its own diagonal cell. Dark with a light halo: the
+   diagonal is now a neutral grey rather than the dark end of the viridis ramp, so the white tick
+   this used to be had nothing to sit against. */
+.cs-hm-check { display: block; font-size: 12px; line-height: 1; color: #1c2430; font-weight: 700;
+  text-shadow: 0 0 2px rgba(255, 255, 255, .9); pointer-events: none; }
 .cs-hm-live:hover { outline: 2px solid #ffffff; outline-offset: -2px; }
 /* Both triangles render at full saturation: the matrix is symmetric, so dimming one half would make
    the same value read as two different magnitudes. Clickability is signalled by the cursor and the
    hover outline instead. */
 .cs-hm-foot { margin-top: 10px; }
+/* Zoom controls sit above the matrix, right-aligned. Rendered on every page, so the bar costs the
+   same height everywhere; on an 11-instance matrix the cells are already 45px and zoom-in is
+   simply disabled rather than hidden, which keeps the control where the reader expects it. */
+/* Measure switch on the left, zoom on the right, one row. min-width:0 on the left lets the
+   measure note truncate rather than pushing the zoom buttons off the edge on a narrow card. */
+.cs-hm-bar { display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  margin-bottom: 6px; }
+.cs-hm-bar-left { min-width: 0; flex: 1 1 auto; }
+/* Given the same weight as the measure switch it shares the row with: a label, then real bordered
+   buttons rather than bare glyphs on a flat pill. On a 341-instance matrix this is the control
+   that makes the thing usable at all, so it should not read as decoration. */
+.cs-hm-zoom { display: flex; align-items: center; gap: 5px; flex: 0 0 auto; }
+.cs-hm-zoom-label { color: var(--muted); font-weight: 600; font-size: 12px; }
+.cs-hm-zoom button { width: 26px; height: 26px; padding: 0; line-height: 1; font-size: 16px;
+  font-weight: 600; border: 1px solid var(--border); background: #fff; border-radius: 6px;
+  cursor: pointer; color: var(--text); }
+.cs-hm-zoom button:hover:not(:disabled) { background: var(--accent); color: #fff;
+  border-color: var(--accent); }
+.cs-hm-zoom button:disabled { opacity: .35; cursor: default; }
+/* Fixed width so stepping through zoom levels does not shuffle the buttons sideways. */
+.cs-hm-zoomval { font-size: 12px; font-weight: 600; color: var(--text); min-width: 34px;
+  text-align: center; font-variant-numeric: tabular-nums; }
 /* Colourbar with its label beneath, so the ramp itself stays uninterrupted. `margin: 0 auto`
    centres the fixed-width block within the card rather than leaving it hard against the left edge. */
-.cs-hm-legend { font-size: 11px; color: var(--muted); max-width: 260px; margin: 0 auto; }
+.cs-hm-legend { font-size: 11px; color: var(--muted); max-width: 360px; margin: 0 auto; }
+/* Value at each end of the ramp. The ticks are fixed-width and the ramp takes the rest, so the
+   bar stays put as the numbers change length between metrics. */
+.cs-hm-ramp-row { display: flex; align-items: center; gap: 7px; }
+.cs-hm-tick { flex: 0 0 auto; min-width: 34px; font-variant-numeric: tabular-nums;
+  white-space: nowrap; }
+.cs-hm-ramp-row .cs-hm-tick:last-child { text-align: right; }
 /* Continuous ramp drawn as abutting segments, so it reads as one gradient bar. */
 .cs-hm-ramp { display: flex; width: 100%; height: 11px; border: 1px solid #e2e5ea; }
 .cs-hm-ramp i { flex: 1 1 auto; }
@@ -539,3 +606,78 @@ table.heatmap thead th { position: sticky; top: 0; background: #fbfcfd; z-index:
 /* Keyboard focus for heatmap cells must read against both ends of the viridis ramp. */
 .cs-hm-live:focus-visible { outline: 3px solid #ffffff; outline-offset: -3px;
   box-shadow: 0 0 0 2px #1c2430; }
+
+/* Marks an instance that cannot be superposed onto the reference (different packing group). */
+.cs-nofit { display: inline-block; margin-left: 6px; color: #b56b17; font-weight: 700;
+  cursor: help; }
+
+/* Per-complex data artefacts. Collapsed by default so it never competes with the data, but the
+   count is visible closed so a reader knows caveats exist before drawing conclusions. */
+.cs-notes { background: #fff9ec; border: 1px solid #f0dcb8; border-radius: 8px; padding: 10px 14px;
+  margin-bottom: 18px; font-size: 13px; color: #6b5320; }
+.cs-notes > summary { cursor: pointer; font-weight: 600; color: #8a5a10; }
+.cs-notes > summary:hover { text-decoration: underline; }
+.cs-notes-count { display: inline-block; margin-left: 6px; padding: 0 7px; border-radius: 999px;
+  background: #f0dcb8; color: #6b5320; font-size: 11px; font-weight: 700; }
+.cs-notes ul { margin: 10px 0 2px; padding-left: 20px; }
+.cs-notes li { margin: 0 0 7px; line-height: 1.5; }
+
+/* Axis labels, drawn up to MAX_LABELLED instances (see DissimilarityHeatmap). */
+.cs-hm-table th, .cs-hm-table td { border-bottom: none; }
+.cs-hm-corner { position: sticky; left: 0; top: 0; z-index: 3; background: #fff;
+  width: 74px; padding: 0; }
+/* text-align:center is load-bearing: the global `th` rule is left-aligned, which pins each rotated
+   label to the left edge of its column instead of centring it over the cells below. */
+.cs-hm-colhead { vertical-align: bottom; padding: 0 0 3px; background: #fff; position: sticky;
+  top: 0; z-index: 2; font-size: var(--cellfont, 11px); line-height: 1.15; text-align: center; }
+.cs-hm-colhead span { display: inline-block; writing-mode: vertical-rl; transform: rotate(180deg);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; line-height: 1; }
+.cs-hm-rowhead { position: sticky; left: 0; top: auto; background: #fff; z-index: 1;
+  padding: 0 8px 0 4px; width: 74px; max-width: 74px; overflow: hidden; text-align: right;
+  white-space: nowrap; vertical-align: middle; font-size: var(--cellfont, 11px); font-weight: 500;
+  line-height: 1.15; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+/* Caption under the matrix, shown only when the axes carry no labels. */
+.cs-hm-nosel { user-select: none; }
+.cs-hm-caption { margin: 6px 0 0; font-size: 11px; color: var(--muted); text-align: center; }
+
+
+/* Says the matrix is showing a drilled-in range rather than everything — the matrix looks the
+   same either way, so the state has to be stated rather than inferred. */
+.cs-zoomed { background: #eef4fb; border: 1px solid #cfe0f3; border-radius: 6px;
+  padding: 7px 10px; }
+.cs-zoomed .cs-linkbtn { margin-left: 8px; }
+
+/* Measure switch above the heatmap (shape vs TM-score). */
+.cs-metric { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 12px;
+  min-width: 0; }
+/* Truncates instead of wrapping: the bar is one row shared with the zoom control, and a wrapping
+   note would make the card taller than its neighbours. */
+.cs-metric-note { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cs-metric-label { color: var(--muted); font-weight: 600; }
+/* The single-measure case: named, but not offered as a choice, so it is not a button. Padding
+   matches .cs-metric .pill button so the row is the same height either way. */
+.cs-metric-only { padding: 4px 12px; font-size: 12px; border: 1px solid var(--border);
+  border-radius: 6px; background: #f6f7f9; color: var(--muted); }
+/* nowrap: sharing a row with the zoom control leaves less width, and "TM-score" was breaking
+   across two lines and making this card taller than its neighbours. */
+.cs-metric .pill { flex: 0 0 auto; }
+.cs-metric .pill button { padding: 4px 12px; font-size: 12px; white-space: nowrap; }
+.cs-metric-label { flex: 0 0 auto; }
+.cs-metric-note { color: var(--muted); }
+
+/* States which measure the data notes were made against, so a reader who has switched to TM-score
+   is not misled by caveats that only apply to the shape score. */
+.cs-notes-scope { margin: 10px 0 0; font-size: 12px; color: #8a5a10; }
+
+/* Summary of a block marked out on the heatmap diagonal. */
+.cs-block { margin-top: 12px; background: #f4f7fb; border: 1px solid #d7e3f2; border-radius: 8px;
+  padding: 12px 14px; font-size: 12.5px; }
+.cs-block h3 { margin: 0 0 8px; font-size: 13px; }
+.cs-block .cs-block-close { float: right; border: none; background: none; color: var(--accent);
+  cursor: pointer; font: inherit; }
+.cs-block dl { margin: 0; display: grid; grid-template-columns: 108px 1fr; gap: 4px 10px; }
+.cs-block dt { color: var(--muted); }
+.cs-block dd { margin: 0; }
+.cs-block .cs-block-ids { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px;
+  color: var(--muted); margin-top: 8px; line-height: 1.6; }

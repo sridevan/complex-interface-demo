@@ -51,6 +51,15 @@ for (const { cx, name, bundleCif } of COMPLEXES) {
 // scripts/build_instance_similarity.py.
 const SIMILARITY = [
   { cx: 'PDB-CPX-131443', name: 'hemoglobin-similarity' },   // horse haemoglobin, 20 assemblies
+  { cx: 'PDB-CPX-151210', name: 'rnr-similarity' },          // B. subtilis RNR, 40 assemblies
+  { cx: 'PDB-CPX-132237', name: 'rhodopsin-similarity' },    // bovine rhodopsin, 12 of 28
+  { cx: 'PDB-CPX-119152', name: 'kir22-similarity' },        // chicken Kir2.2, 11 assemblies
+  { cx: 'PDB-CPX-129047', name: 'ldh-similarity' },          // L. casei LDH, 13 assemblies (T/R)
+  { cx: 'PDB-CPX-130018', name: 'enolase-similarity' },      // yeast enolase, 24 assemblies
+  { cx: 'PDB-CPX-137391', name: 'atcase-similarity' },       // E. coli ATCase, 58 assemblies (T/R)
+  // Human haemoglobin, 341 assemblies — by far the largest set here, and the one that shows how
+  // the view behaves at the scale of a well-studied complex.
+  { cx: 'PDB-CPX-154652', name: 'human-hb-similarity' },
 ]
 for (const { cx, name } of SIMILARITY) {
   const srcJson = resolve(proc, cx, 'instance_similarity.json')

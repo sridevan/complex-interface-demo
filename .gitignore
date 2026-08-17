@@ -16,10 +16,17 @@ data/raw/
 data/intermediate/
 
 # Generated copies inside the React app (rebuilt by `npm run sync-data` on predev/prebuild)
+app-react/public/human-hb-similarity/
 app-react/public/data/
 app-react/public/mvs/
 app-react/public/hemoglobin/
 app-react/public/hemoglobin-similarity/
+app-react/public/rnr-similarity/
+app-react/public/rhodopsin-similarity/
+app-react/public/kir22-similarity/
+app-react/public/ldh-similarity/
+app-react/public/enolase-similarity/
+app-react/public/atcase-similarity/
 app-react/public/cct/
 app-react/public/arp23/
 app-react/public/pygm/
@@ -31,10 +38,13 @@ app-react/public/pygm/
 .vscode/
 .claude/
 
-# 579MB / 78k files of raw pygm pipeline output. Unlike the other PDB-CPX-*
-# dirs (which are committed), pygm is bundleCif:false in sync-data.mjs, so the
-# viewer fetches its assemblies from PDBe/RCSB at runtime and never reads this.
-PDB-CPX-129188/
+# Raw US-align output trees: one *_scores.csv / *_cc.csv / *_transform.txt per PAIR, so they grow
+# with the square of the instance count (PDB-CPX-137391 alone is 157MB, 154652 is 57MB, ~360MB in
+# total). They are INPUTS to scripts/build_instance_similarity.py, not inputs to the site: the
+# deploy builds from data/processed/, which holds the finished JSON and the superposed CIFs.
+# Leading slash anchors this to the repo root. Unanchored it also matches
+# data/processed/PDB-CPX-*/, which is exactly what the deploy builds from.
+/PDB-CPX-*/
 
 # one-off spike output, not read by the pipeline or the app
 spike_zernike.txt

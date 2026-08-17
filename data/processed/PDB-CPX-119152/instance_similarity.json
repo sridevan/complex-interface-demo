@@ -1,0 +1,969 @@
+{
+ "complex_id": "PDB-CPX-119152",
+ "reference_assembly": "3sph_1",
+ "method": {
+  "score_type": "combined",
+  "linkage": "average",
+  "cut_mode": "auto_gap",
+  "n_clusters": 4,
+  "source": "pdbe_complex_clustering/clustering.py (notebook defaults)",
+  "coordinate_source": "PDBe model server assembly coordinates",
+  "atoms_shipped": "backbone"
+ },
+ "subset": null,
+ "data_notes": [
+  "The structural variation is large and real: the two apo structures (3jyc, 3spj) sit 9.7 A from the PIP2-bound reference, consistent with the cytoplasmic-domain movement Kir channels make on PIP2 binding, and the scores order the set monotonically along it (0.22 for PIP2-bound through 0.83 for apo).",
+  "Extent and conformation are confounded by the biology rather than by any error: PIP2 binding both changes the shape and orders the tether helix, so PIP2-bound structures also carry the most modelled residues (1328 against 1284 for apo). Dissimilarity correlates with measured RMSD at r = +0.83 and with residue count at r = -0.88, and those two are themselves correlated (r = -0.72). Controlling for residue count leaves r = +0.60, so the shape signal is not merely a residue count -- but this dataset cannot prove the point, because both explanations move together. With only 11 instances the estimates are noisy."
+ ],
+ "assemblies": [
+  {
+   "assembly_id": "3jyc_1",
+   "pdb_id": "3jyc",
+   "structure_title": "Crystal structure of the eukaryotic strong inward-rectifier K+ channel Kir2.2 at 3.1 Angstrom resolution",
+   "resolution": 3.11,
+   "exp_method": "x-ray",
+   "cluster_id": 3,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.7216,
+   "ligands": [
+    {
+     "comp": "K",
+     "copies": 20
+    }
+   ],
+   "transform": {
+    "rotation": [
+     -0.9998954742,
+     -0.0144367556,
+     0.0007878273,
+     -0.0144354905,
+     0.999894541,
+     0.0015885415,
+     -0.0008106776,
+     0.0015770028,
+     -0.9999984279
+    ],
+    "translation": [
+     -83.9766794605,
+     0.0069461903,
+     2.1408028146
+    ],
+    "source": "3jyc_1-3sph_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "3spc_1",
+   "pdb_id": "3spc",
+   "structure_title": "Inward rectifier potassium channel Kir2.2 in complex with dioctanoylglycerol pyrophosphate (DGPP)",
+   "resolution": 2.454,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.5817,
+   "ligands": [
+    {
+     "comp": "K",
+     "copies": 24
+    },
+    {
+     "comp": "P8P",
+     "copies": 4
+    }
+   ],
+   "transform": {
+    "rotation": [
+     -0.9999490304,
+     0.0100963615,
+     -4.037e-07,
+     -0.0100963614,
+     -0.999949022,
+     -0.0001299254,
+     -1.7155e-06,
+     -0.0001299147,
+     0.9999999916
+    ],
+    "translation": [
+     -41.3656168567,
+     -41.34970209,
+     -95.6662416412
+    ],
+    "source": "3spc_1-3sph_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "3spg_1",
+   "pdb_id": "3spg",
+   "structure_title": "Inward rectifier potassium channel Kir2.2 R186A mutant in complex with PIP2",
+   "resolution": 2.613,
+   "exp_method": "x-ray",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.5825,
+   "ligands": [
+    {
+     "comp": "K",
+     "copies": 24
+    },
+    {
+     "comp": "PIO",
+     "copies": 4
+    }
+   ],
+   "transform": {
+    "rotation": [
+     0.0100017735,
+     0.999949981,
+     2.369e-06,
+     0.9999499808,
+     -0.0100017736,
+     1.86186e-05,
+     1.86414e-05,
+     2.1826e-06,
+     -0.9999999998
+    ],
+    "translation": [
+     -0.0224480158,
+     -0.8410732191,
+     -20.5190896772
+    ],
+    "source": "3spg_1-3sph_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "3sph_1",
+   "pdb_id": "3sph",
+   "structure_title": "Inward rectifier potassium channel Kir2.2 I223L mutant in complex with PIP2",
+   "resolution": 3.003,
+   "exp_method": "x-ray",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.5381,
+   "ligands": [
+    {
+     "comp": "K",
+     "copies": 16
+    },
+    {
+     "comp": "PIO",
+     "copies": 4
+    }
+   ],
+   "transform": {
+    "rotation": [
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "translation": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "source": null,
+    "derivation": "identity"
+   }
+  },
+  {
+   "assembly_id": "3spi_1",
+   "pdb_id": "3spi",
+   "structure_title": "Inward rectifier potassium channel Kir2.2 in complex with PIP2",
+   "resolution": 3.307,
+   "exp_method": "x-ray",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.5879,
+   "ligands": [
+    {
+     "comp": "K",
+     "copies": 16
+    },
+    {
+     "comp": "PIO",
+     "copies": 4
+    }
+   ],
+   "transform": {
+    "rotation": [
+     0.9999985385,
+     -0.0017096742,
+     0.0,
+     -0.0017096742,
+     -0.9999985385,
+     0.0,
+     0.0,
+     -0.0,
+     -1.0
+    ],
+    "translation": [
+     0.2292089525,
+     -83.0966692644,
+     0.271123494
+    ],
+    "source": "3sph_1-3spi_1_transform.txt",
+    "derivation": "inverted"
+   }
+  },
+  {
+   "assembly_id": "3spj_1",
+   "pdb_id": "3spj",
+   "structure_title": "Apo inward rectifier potassium channel Kir2.2 I223L mutant",
+   "resolution": 3.307,
+   "exp_method": "x-ray",
+   "cluster_id": 3,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.7332,
+   "ligands": [
+    {
+     "comp": "K",
+     "copies": 20
+    }
+   ],
+   "transform": {
+    "rotation": [
+     -0.0102252305,
+     -0.9999473085,
+     -0.0009082679,
+     0.9999476049,
+     -0.0102247875,
+     -0.0004910281,
+     0.0004817154,
+     -0.0009132412,
+     0.999999467
+    ],
+    "translation": [
+     -41.3544776498,
+     -41.3641136762,
+     -19.914251059
+    ],
+    "source": "3sph_1-3spj_1_transform.txt",
+    "derivation": "inverted"
+   }
+  },
+  {
+   "assembly_id": "5kuk_1",
+   "pdb_id": "5kuk",
+   "structure_title": "Crystal Structure of Inward Rectifier Kir2.2 K62W Mutant",
+   "resolution": 2,
+   "exp_method": "x-ray",
+   "cluster_id": 4,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.608,
+   "ligands": [
+    {
+     "comp": "K",
+     "copies": 36
+    },
+    {
+     "comp": "DMU",
+     "copies": 4
+    }
+   ],
+   "transform": {
+    "rotation": [
+     0.9997454372,
+     0.0225623653,
+     -2.28629e-05,
+     -0.0225623649,
+     0.9997454373,
+     1.91326e-05,
+     2.32888e-05,
+     -1.86118e-05,
+     0.9999999996
+    ],
+    "translation": [
+     -41.3623496894,
+     -41.3628704209,
+     -20.3896858342
+    ],
+    "source": "3sph_1-5kuk_1_transform.txt",
+    "derivation": "inverted"
+   }
+  },
+  {
+   "assembly_id": "5kum_1",
+   "pdb_id": "5kum",
+   "structure_title": "Crystal Structure of Inward Rectifier Kir2.2 K62W Mutant In Complex with PIP2",
+   "resolution": 2.8,
+   "exp_method": "x-ray",
+   "cluster_id": 4,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.5838,
+   "ligands": [
+    {
+     "comp": "K",
+     "copies": 32
+    },
+    {
+     "comp": "DMU",
+     "copies": 4
+    },
+    {
+     "comp": "PIO",
+     "copies": 4
+    }
+   ],
+   "transform": {
+    "rotation": [
+     -0.0255899375,
+     0.9996725239,
+     0.0,
+     -0.9996725239,
+     -0.0255899375,
+     -0.0,
+     -0.0,
+     -0.0,
+     1.0
+    ],
+    "translation": [
+     -41.3624999998,
+     -41.3624999978,
+     -20.3295184049
+    ],
+    "source": "3sph_1-5kum_1_transform.txt",
+    "derivation": "inverted"
+   }
+  },
+  {
+   "assembly_id": "6m84_1",
+   "pdb_id": "6m84",
+   "structure_title": "Crystal structure of cKir2.2 force open mutant in complex with PI(4,5)P2",
+   "resolution": 2.81,
+   "exp_method": "x-ray",
+   "cluster_id": 4,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.58,
+   "ligands": [
+    {
+     "comp": "K",
+     "copies": 24
+    },
+    {
+     "comp": "LMT",
+     "copies": 4
+    },
+    {
+     "comp": "PIO",
+     "copies": 4
+    }
+   ],
+   "transform": {
+    "rotation": [
+     -0.006287141,
+     -0.9999802357,
+     -0.0,
+     -0.9999802357,
+     0.006287141,
+     -0.0,
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "translation": [
+     -41.362499999,
+     -41.3624999982,
+     -21.0041993865
+    ],
+    "source": "3sph_1-6m84_1_transform.txt",
+    "derivation": "inverted"
+   }
+  },
+  {
+   "assembly_id": "6m85_1",
+   "pdb_id": "6m85",
+   "structure_title": "Crystal Structure of Inward Rectifier Kir2.2 in a different salt condition",
+   "resolution": 2.71,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.5968,
+   "ligands": [
+    {
+     "comp": "K",
+     "copies": 24
+    }
+   ],
+   "transform": {
+    "rotation": [
+     0.0049467043,
+     -0.999987765,
+     2.1959e-06,
+     0.9999877499,
+     0.0049467039,
+     -0.0001734148,
+     0.0001734018,
+     3.0537e-06,
+     0.999999985
+    ],
+    "translation": [
+     0.3406391921,
+     -0.0680700404,
+     -20.5973582184
+    ],
+    "source": "3sph_1-6m85_1_transform.txt",
+    "derivation": "inverted"
+   }
+  },
+  {
+   "assembly_id": "6m86_1",
+   "pdb_id": "6m86",
+   "structure_title": "Crystal Structure of Inward Rectifier Kir2.2 Force Open Mutant",
+   "resolution": 3.6,
+   "exp_method": "x-ray",
+   "cluster_id": 1,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.5671,
+   "ligands": [
+    {
+     "comp": "K",
+     "copies": 20
+    }
+   ],
+   "transform": {
+    "rotation": [
+     -0.0072142619,
+     -0.9999739769,
+     -0.0,
+     -0.9999739769,
+     0.0072142619,
+     -0.0,
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "translation": [
+     0.3612799782,
+     -0.2364360462,
+     -20.54755625
+    ],
+    "source": "3sph_1-6m86_1_transform.txt",
+    "derivation": "inverted"
+   }
+  }
+ ],
+ "heatmap": {
+  "labels": [
+   "3jyc_1",
+   "3spc_1",
+   "3spg_1",
+   "3sph_1",
+   "3spi_1",
+   "3spj_1",
+   "5kuk_1",
+   "5kum_1",
+   "6m84_1",
+   "6m85_1",
+   "6m86_1"
+  ],
+  "ordering": "tree-penalised path-length seriation (matrix only, pre-clustering)",
+  "dendrogram_order": [
+   "5kuk_1",
+   "5kum_1",
+   "6m84_1",
+   "3spg_1",
+   "3sph_1",
+   "3spi_1",
+   "3jyc_1",
+   "3spj_1",
+   "6m86_1",
+   "3spc_1",
+   "6m85_1"
+  ],
+  "default_metric": "tmscore",
+  "rmsd": {
+   "label": "Backbone RMSD after superposition (US-align)",
+   "cell_label": "RMSD",
+   "unit": "\u00c5",
+   "matrix": [
+    [
+     0.0,
+     1.39,
+     3.51,
+     3.02,
+     3.04,
+     0.54,
+     3.53,
+     3.45,
+     3.4,
+     1.29,
+     1.84
+    ],
+    [
+     1.39,
+     0.0,
+     2.29,
+     1.86,
+     1.89,
+     1.57,
+     2.32,
+     2.24,
+     2.2,
+     0.3,
+     0.71
+    ],
+    [
+     3.51,
+     2.29,
+     0.0,
+     0.7,
+     0.71,
+     3.66,
+     0.29,
+     0.33,
+     0.56,
+     2.43,
+     1.86
+    ],
+    [
+     3.02,
+     1.86,
+     0.7,
+     0.0,
+     0.2,
+     3.16,
+     0.78,
+     0.69,
+     0.63,
+     1.99,
+     1.49
+    ],
+    [
+     3.04,
+     1.89,
+     0.71,
+     0.2,
+     0.0,
+     3.19,
+     0.76,
+     0.7,
+     0.61,
+     2.02,
+     1.52
+    ],
+    [
+     0.54,
+     1.57,
+     3.66,
+     3.16,
+     3.19,
+     0.0,
+     3.68,
+     3.6,
+     3.56,
+     1.48,
+     2.02
+    ],
+    [
+     3.53,
+     2.32,
+     0.29,
+     0.78,
+     0.76,
+     3.68,
+     0.0,
+     0.31,
+     0.51,
+     2.45,
+     1.87
+    ],
+    [
+     3.45,
+     2.24,
+     0.33,
+     0.69,
+     0.7,
+     3.6,
+     0.31,
+     0.0,
+     0.52,
+     2.36,
+     1.8
+    ],
+    [
+     3.4,
+     2.2,
+     0.56,
+     0.63,
+     0.61,
+     3.56,
+     0.51,
+     0.52,
+     0.0,
+     2.32,
+     1.77
+    ],
+    [
+     1.29,
+     0.3,
+     2.43,
+     1.99,
+     2.02,
+     1.48,
+     2.45,
+     2.36,
+     2.32,
+     0.0,
+     0.82
+    ],
+    [
+     1.84,
+     0.71,
+     1.86,
+     1.49,
+     1.52,
+     2.02,
+     1.87,
+     1.8,
+     1.77,
+     0.82,
+     0.0
+    ]
+   ]
+  },
+  "metrics": {
+   "shape": {
+    "label": "Shape (combined Zernike + spectral)",
+    "cell_label": "dissimilarity",
+    "order": [
+     "5kuk_1",
+     "5kum_1",
+     "6m84_1",
+     "3spg_1",
+     "3spi_1",
+     "3sph_1",
+     "6m86_1",
+     "6m85_1",
+     "3spc_1",
+     "3jyc_1",
+     "3spj_1"
+    ],
+    "matrix": [
+     [
+      0.0,
+      0.56815,
+      0.888096,
+      0.814419,
+      0.870992,
+      0.268968,
+      0.889472,
+      0.882256,
+      0.874717,
+      0.562445,
+      0.596162
+     ],
+     [
+      0.56815,
+      0.0,
+      0.679624,
+      0.605785,
+      0.661242,
+      0.594106,
+      0.723587,
+      0.714965,
+      0.708804,
+      0.204847,
+      0.356372
+     ],
+     [
+      0.888096,
+      0.679624,
+      0.0,
+      0.270762,
+      0.298553,
+      0.900582,
+      0.516691,
+      0.496705,
+      0.48936,
+      0.68909,
+      0.595785
+     ],
+     [
+      0.814419,
+      0.605785,
+      0.270762,
+      0.0,
+      0.219786,
+      0.826158,
+      0.512938,
+      0.477167,
+      0.474134,
+      0.632537,
+      0.546977
+     ],
+     [
+      0.870992,
+      0.661242,
+      0.298553,
+      0.219786,
+      0.0,
+      0.879852,
+      0.562939,
+      0.531437,
+      0.52921,
+      0.716262,
+      0.608699
+     ],
+     [
+      0.268968,
+      0.594106,
+      0.900582,
+      0.826158,
+      0.879852,
+      0.0,
+      0.904269,
+      0.871953,
+      0.85489,
+      0.600562,
+      0.63069
+     ],
+     [
+      0.889472,
+      0.723587,
+      0.516691,
+      0.512938,
+      0.562939,
+      0.904269,
+      0.0,
+      0.26802,
+      0.262625,
+      0.752494,
+      0.686671
+     ],
+     [
+      0.882256,
+      0.714965,
+      0.496705,
+      0.477167,
+      0.531437,
+      0.871953,
+      0.26802,
+      0.0,
+      0.213007,
+      0.736154,
+      0.646466
+     ],
+     [
+      0.874717,
+      0.708804,
+      0.48936,
+      0.474134,
+      0.52921,
+      0.85489,
+      0.262625,
+      0.213007,
+      0.0,
+      0.731795,
+      0.661535
+     ],
+     [
+      0.562445,
+      0.204847,
+      0.68909,
+      0.632537,
+      0.716262,
+      0.600562,
+      0.752494,
+      0.736154,
+      0.731795,
+      0.0,
+      0.342113
+     ],
+     [
+      0.596162,
+      0.356372,
+      0.595785,
+      0.546977,
+      0.608699,
+      0.63069,
+      0.686671,
+      0.646466,
+      0.661535,
+      0.342113,
+      0.0
+     ]
+    ]
+   },
+   "tmscore": {
+    "label": "Structural (1 \u2212 TM-score)",
+    "cell_label": "1 \u2212 TM-score",
+    "order": [
+     "5kum_1",
+     "5kuk_1",
+     "6m84_1",
+     "3spg_1",
+     "3spi_1",
+     "3sph_1",
+     "6m86_1",
+     "3spc_1",
+     "6m85_1",
+     "3jyc_1",
+     "3spj_1"
+    ],
+    "matrix": [
+     [
+      0.0,
+      0.08,
+      0.145,
+      0.125,
+      0.13,
+      0.0,
+      0.155,
+      0.155,
+      0.155,
+      0.075,
+      0.08
+     ],
+     [
+      0.08,
+      0.0,
+      0.045,
+      0.03,
+      0.03,
+      0.08,
+      0.05,
+      0.05,
+      0.05,
+      0.0,
+      0.01
+     ],
+     [
+      0.145,
+      0.045,
+      0.0,
+      0.0,
+      0.0,
+      0.155,
+      0.01,
+      0.01,
+      0.01,
+      0.045,
+      0.035
+     ],
+     [
+      0.125,
+      0.03,
+      0.0,
+      0.0,
+      0.0,
+      0.135,
+      0.01,
+      0.01,
+      0.01,
+      0.035,
+      0.03
+     ],
+     [
+      0.13,
+      0.03,
+      0.0,
+      0.0,
+      0.0,
+      0.135,
+      0.01,
+      0.01,
+      0.01,
+      0.035,
+      0.035
+     ],
+     [
+      0.0,
+      0.08,
+      0.155,
+      0.135,
+      0.135,
+      0.0,
+      0.165,
+      0.16,
+      0.155,
+      0.08,
+      0.09
+     ],
+     [
+      0.155,
+      0.05,
+      0.01,
+      0.01,
+      0.01,
+      0.165,
+      0.0,
+      0.0,
+      0.0,
+      0.06,
+      0.045
+     ],
+     [
+      0.155,
+      0.05,
+      0.01,
+      0.01,
+      0.01,
+      0.16,
+      0.0,
+      0.0,
+      0.0,
+      0.055,
+      0.045
+     ],
+     [
+      0.155,
+      0.05,
+      0.01,
+      0.01,
+      0.01,
+      0.155,
+      0.0,
+      0.0,
+      0.0,
+      0.05,
+      0.045
+     ],
+     [
+      0.075,
+      0.0,
+      0.045,
+      0.035,
+      0.035,
+      0.08,
+      0.06,
+      0.055,
+      0.05,
+      0.0,
+      0.01
+     ],
+     [
+      0.08,
+      0.01,
+      0.035,
+      0.03,
+      0.035,
+      0.09,
+      0.045,
+      0.045,
+      0.045,
+      0.01,
+      0.0
+     ]
+    ]
+   }
+  }
+ }
+}

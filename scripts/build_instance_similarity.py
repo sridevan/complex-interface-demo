@@ -39,9 +39,12 @@ Usage:
 """
 import argparse
 import csv
+import glob
 import json
 import os
 import sys
+import time
+import urllib.error
 import urllib.request
 
 import numpy as np
@@ -51,13 +54,157 @@ MODEL_SERVER = "https://www.ebi.ac.uk/pdbe/model-server/v1/{pdb}/assembly?name={
 
 
 # ---------------------------------------------------------------------------
+# Per-complex data artefacts, surfaced on the page. These are measured findings, not guesses --
+# each was established by comparing atom content, modelled extent and backbone RMSD against the
+# shape scores. They belong with the data because the scores cannot be read at face value without
+# them: several complexes have instances that are structurally near-identical yet score as
+# maximally different.
+# ---------------------------------------------------------------------------
+DATA_NOTES = {
+    "PDB-CPX-154652": [
+        "At 341 instances this is by far the largest set here -- the next largest is ATCase at 58 "
+        "-- so the heatmap is drawn without axis labels and identity comes from hovering a cell or "
+        "from the instances table, which lists the rows in the same order.",
+        "The reference is 1a00_1, not the medoid (1y45_1). Only the reference's own row of "
+        "US-align output was available when this was built, and every instance is superposed onto "
+        "it; a rebuild against the medoid would give slightly tighter transforms throughout.",
+        "Only the shape measure is offered. TM-score needs a score for every pair and 53,539 of "
+        "the 57,970 pairs have none, so that metric is omitted rather than shown with holes.",
+        "Transforms were checked against the best rigid superposition achievable on the same "
+        "residues: 340 of 341 are optimal. The exception is 2m6z_1, an NMR structure, which is "
+        "placed at 5.82 A where 3.06 A is achievable, so it will sit visibly off the others in "
+        "the 3D view. Every other instance lands between 0.14 and 3.79 A of the reference "
+        "(median 1.13 A).",
+        "Whether an instance shares the reference's frame was decided from the reference's own "
+        "US-align row rather than by partitioning all 57,970 pairs, because only that row was "
+        "available. By that test all 341 overlay 1a00_1, so none is flagged. Note four instances "
+        "(8vyl_1, 8wj0_1, 8wj1_1, 8wj2_1) fall below TM-score 0.8 against the reference while "
+        "still aligning across their full extent -- they fit less tightly, but are not a "
+        "separate packing arrangement.",
+        "The set is 316 x-ray, 21 EM, 2 NMR and 2 other, spanning 1.25-4.50 A; two instances "
+        "have no resolution. Resolution varies far more than in the smaller sets here, so it is "
+        "worth checking before reading any pair's dissimilarity as conformational.",
+        "DO NOT TRUST the scores for 8wj0_1, 8wj1_1 and 8wj2_1. They were scored upstream on a "
+        "structure half again as large as the one shown here. PDBe defines exactly one assembly "
+        "for each of these entries -- a four-chain alpha2beta2 tetramer of 566, 566 and 574 "
+        "residues, which is what is drawn and superposed -- but the US-align sidecars record 849, "
+        "849 and 861 residues, exactly three alpha-beta dimers where the assembly has two. The "
+        "ratio is 1.50 for all three. Checked across all 341 instances, these are the only three "
+        "where the scored and the displayed structure disagree.",
+        "The consequence is that the three sit lower against every other instance than they "
+        "should: about a third of what was scored had no counterpart to align to, which alone "
+        "accounts for their falling below TM-score 0.8 against the reference. Read their position "
+        "in the matrix as an artefact of the comparison, not as conformational difference. Note "
+        "8vyl_1 shows the same signature -- a much larger partner and a low reverse TM-score -- "
+        "but legitimately: it really is a six-chain nanobody complex of 820 residues, and its "
+        "scored and displayed sizes agree.",
+        "Whether the shape scores for those three are affected is NOT established. They come from "
+        "the same upstream pipeline that produced the sidecars, so if that pipeline built the same "
+        "oversized assemblies then their Zernike and spectral values are wrong too and they sit in "
+        "the wrong place in this heatmap. That has not been verified either way.",
+    ],
+    "PDB-CPX-129047": [
+        "1llc_1 is one of two assemblies PDBe defines for entry 1llc, neither marked preferred. "
+        "Its subunits are arranged asymmetrically (one centroid pair only 23.3 A apart) unlike the "
+        "222-symmetric tetramer every other instance shows, so it is likely a crystallographic "
+        "rather than biological grouping. It sits 18 A from the reference even at best fit and "
+        "scores the highest dissimilarity here. 1llc_2 is the symmetric tetramer of the same entry.",
+        "Only 2zqy is labelled T-state by its depositor; four instances are labelled R-state and "
+        "six more are unlabelled but group with them. The R/T contrast therefore rests on a single "
+        "T-state structure.",
+    ],
+    "PDB-CPX-137391": [
+        "The best-behaved dataset in this collection. Dissimilarity tracks measured backbone RMSD "
+        "at r = +0.97, and controlling for modelled-residue count leaves r = +0.98 -- it gets "
+        "stronger, not weaker, so the scores here are not a proxy for how much was built. Residue "
+        "counts span 2604-2778, only 6% and uncorrelated with the scores (r = -0.17).",
+        "The set is cleanly bimodal with no instances in between: 37 T-state structures at "
+        "0.04-2.41 A from the reference (dissimilarity 0.19-0.47) and 19 R-state structures at "
+        "5.79-6.82 A (0.70-0.81). Both states are named by their depositors -- the 1ra* series is "
+        "CTP-ligated T, while 1xjw, 1f1b, 1r0b, 1q95 and 4f04 are labelled R and 8atc/1d09 are PALA "
+        "complexes. The reference 1rai_1 is itself a T-state structure.",
+        "The engineered intermediate 4e2f (K164E/E239K) lands at 2.41 A and 0.438 -- the very top of "
+        "the T group, at the boundary with R -- without the method being told anything about it.",
+        "2atc is a 1980s deposition whose residue assignments agree with modern entries at only "
+        "~71% of positions, so its comparison uses the 1959 residues that do agree.",
+    ],
+    "PDB-CPX-130018": [
+        "The best-behaved set here: dissimilarity tracks measured backbone RMSD at r = +0.90 "
+        "(+0.89 after controlling for modelled-residue count), and residue counts are uniform "
+        "(851-874). Differences are small in absolute terms, 0.24-1.06 A, and concentrated around "
+        "the active-site loop.",
+    ],
+    "PDB-CPX-151210": [
+        "Four instances (9byh, 9bw3, 9by1, 9bxc) leave almost all of both beta subunits unmodelled "
+        "- 1366 residues against 1944, retaining only a ~12-14 residue C-terminal tail. They "
+        "superpose on the reference at 0.02-0.39 A, i.e. near-identical, yet score 0.91-0.96 "
+        "dissimilarity, close to the maximum.",
+        "Across all 40 instances the score correlates with modelled-residue count (r = -0.62) and "
+        "not with measured RMSD (r = -0.10). For this complex the heatmap is largely reporting how "
+        "much of the model was built rather than its shape.",
+    ],
+    "PDB-CPX-131443": [
+        "Hydrogen content separates the set: the 14 structures with zero hydrogens group together, "
+        "while 5c6e (joint X-ray/neutron, with 738 heavy-water atoms), 6sva, 8puq, 8pur and 6r2o "
+        "carry 48-54% hydrogens and sit apart. The heme gives it away - 172 atoms without "
+        "hydrogens, 292 with.",
+        "2zlv is missing a 14-residue loop (beta 43-56) in both beta chains, which is why it "
+        "separates despite superposing on the reference at 0.53 A.",
+        "Backbone RMSD to the reference is 0.3-2.4 A throughout, so the groupings above reflect "
+        "what each deposition contains rather than how the protein is folded.",
+    ],
+    "PDB-CPX-132237": [
+        "These 28 instances fall into five groups (12, 7, 5, 2, 2) with no common rigid "
+        "superposition. The split is purely quaternary: the monomers agree at 0.0-3.3 A whichever "
+        "groups they come from -- median 0.8 A between groups against 1.1 A within, so monomer "
+        "shape does not predict group membership at all -- while the best whole-assembly fit is "
+        "0.1-7.0 A within a group and 15.2-33.3 A between them. Only the 12 sharing the "
+        "reference's group overlay in the 3D view.",
+        "Part of that separation is the crystal-form difference rhodopsin is known for: the "
+        "tetragonal P 41 form (1f88, 1hzx, 1l9h, 2g87, 2hpy, 2ped, 3oax), the trigonal P 31 form "
+        "(1gzm, 2j4y) and the rhombohedral H 3 opsin form (3cap, 3pxo, 4bez, 5te3, 6fk7) pair "
+        "their subunits differently; 1gzm against 1f88 is 23.3 A. Which rhodopsin dimer is "
+        "physiological rather than a lattice contact has been argued since the first structures.",
+        "But two of the five groups are not crystal-form differences at all -- they are "
+        "differences in which contact was annotated as the assembly. Groups 2 and 3 come from the "
+        "same P 41 crystals: PDBe defines two dimers each for 1hzx and 1l9h (assemblies 3 and 4), "
+        "and 1hzx_3 against 1hzx_4 has identical monomers (0.00 A) with the assemblies 31.2 A "
+        "apart. Likewise 7zbc/7zbe and 8a6c/8a6d/8a6e are one crystal form -- space group "
+        "P 2 21 21, cells matching within 0.6 A on every axis -- with a single assembly defined "
+        "each, yet their monomers agree to 0.25 A while the assemblies differ by 28.3 A. Different "
+        "depositions of one lattice had different neighbouring pairs called the dimer.",
+        "The reference's group is not one crystal form either, but for the opposite reason: it "
+        "holds instances from H 3 (3cap), P 2 21 21 (8a6c, 4.6 A from the reference) and P 31 2 1 "
+        "(8fcz, 6.8 A), plus the cryo-EM native dimer 6ofj (4.9 A), which involves no lattice at "
+        "all. One arrangement recurring across unrelated lattices and outside a crystal is "
+        "suggestive, but only weakly so: those 4.6-6.8 A agreements are far looser than the "
+        "0.27-0.29 A between two instances of a single form (3cap against 5te3).",
+        "The picosecond time-resolved structures (8a6c/8a6d/8a6e) model hydrogens, and the "
+        "nanobody complexes (8fcz/8fd0/8fd1) carry an extra chain (843 residues against 607), both "
+        "of which shift their scores independently of conformation.",
+    ],
+    "PDB-CPX-119152": [
+        "The structural variation is large and real: the two apo structures (3jyc, 3spj) sit 9.7 A "
+        "from the PIP2-bound reference, consistent with the cytoplasmic-domain movement Kir "
+        "channels make on PIP2 binding, and the scores order the set monotonically along it "
+        "(0.22 for PIP2-bound through 0.83 for apo).",
+        "Extent and conformation are confounded by the biology rather than by any error: PIP2 "
+        "binding both changes the shape and orders the tether helix, so PIP2-bound structures also "
+        "carry the most modelled residues (1328 against 1284 for apo). Dissimilarity correlates "
+        "with measured RMSD at r = +0.83 and with residue count at r = -0.88, and those two are "
+        "themselves correlated (r = -0.72). Controlling for residue count leaves r = +0.60, so the "
+        "shape signal is not merely a residue count -- but this dataset cannot prove the point, "
+        "because both explanations move together. With only 11 instances the estimates are noisy.",
+    ],
+}
+
+# ---------------------------------------------------------------------------
 # Clustering (delegated to the notebook's clustering.py)
 # ---------------------------------------------------------------------------
-def cluster_assemblies(repo, complex_id, score_type, linkage_method):
-    """Run the notebook's default pipeline. Returns (labels, matrix, clusters, k, linkage)."""
+def score_matrix(repo, complex_id, score_type):
+    """Pairwise dissimilarity matrix for one complex, straight from the notebook's own combiner."""
     sys.path.insert(0, repo)
     import pandas as pd
-    from sklearn import cluster as skcluster
     import clustering as C
 
     tsv = os.path.join(repo, "merged_zernike_spectral_scores.tsv")
@@ -78,10 +225,17 @@ def cluster_assemblies(repo, complex_id, score_type, linkage_method):
 
     n_missing = int(np.isnan(matrix).sum())
     if n_missing:
-        raise SystemExit(f"{n_missing} missing pairs in the {score_type} matrix; refusing to cluster "
-                         "an incomplete matrix (same gate as the notebook)")
+        raise SystemExit(f"{n_missing} missing pairs in the {score_type} matrix; refusing to work "
+                         "from an incomplete matrix (same gate as the notebook)")
+    return labels, matrix
 
-    # auto_gap: pick k from this complex's own gap statistic, clamped to [2, n-1].
+
+def cluster_matrix(repo, matrix, labels, linkage_method):
+    """auto_gap clustering: pick k from this matrix's own gap statistic, clamped to [2, n-1]."""
+    sys.path.insert(0, repo)
+    from sklearn import cluster as skcluster
+    import clustering as C
+
     full_tree = skcluster.AgglomerativeClustering(
         linkage=linkage_method, metric="precomputed", compute_distances=True,
         compute_full_tree=True, distance_threshold=0, n_clusters=None,
@@ -90,7 +244,165 @@ def cluster_assemblies(repo, complex_id, score_type, linkage_method):
                 len(labels) - 1))
     clusters, k, link_matrix, _ = C.compute_clusters_from_precomputed_distance(
         matrix, labels, skcluster, linkage_method=linkage_method, no_clusters=k)
-    return labels, matrix, clusters, k, link_matrix
+    return clusters, k, link_matrix
+
+
+def read_score_row(path):
+    """First data row of a US-align scores sidecar, or None if the file is empty or truncated.
+
+    An interrupted copy of the sidecar tree leaves zero-byte files behind. Those carry no score,
+    so the pair is simply unknown -- which the callers already handle as a missing pair. Letting
+    the CSV reader raise instead would abort a whole build over one truncated file.
+    """
+    try:
+        with open(path) as fh:
+            return next(csv.DictReader(fh))
+    except StopIteration:
+        return None
+
+
+def superposable_groups(raw_dir, labels, thresh=0.8):
+    """Partition assemblies into sets whose members can be superposed AS WHOLE ASSEMBLIES.
+
+    Two assemblies are joined when TM-align aligned at least `thresh` of the smaller one. A
+    lower fraction means it could only align part -- typically one chain of a homodimer whose
+    two subunits are packed differently between crystal forms. Those assemblies have no common
+    rigid superposition at all (measured: ~25 A best-possible, against ~0.5 A per chain), so
+    they cannot share a reference frame and belong on separate pages, not the same one.
+
+    Returns groups sorted largest first.
+    """
+    adj = {a: set() for a in labels}
+    known = set(labels)
+    for a in labels:
+        for path in glob.glob(os.path.join(raw_dir, a, "*_scores.csv")):
+            row = read_score_row(path)
+            if row is None:
+                continue
+            x, y = row["asm_id1"], row["asm_id2"]
+            if x not in known or y not in known:
+                continue
+            shorter = min(int(row["length_structure_1"]), int(row["length_structure_2"]))
+            if shorter and int(row["aligned_length"]) / shorter >= thresh:
+                adj[x].add(y)
+                adj[y].add(x)
+    seen, groups = set(), []
+    for a in labels:
+        if a in seen:
+            continue
+        stack, comp = [a], set()
+        while stack:
+            b = stack.pop()
+            if b in comp:
+                continue
+            comp.add(b)
+            stack.extend(c for c in adj[b] if c not in comp)
+        seen |= comp
+        groups.append(sorted(comp))
+    return sorted(groups, key=len, reverse=True)
+
+
+def reference_overlap(raw_dir, ref, labels, thresh=0.8):
+    """Which assemblies share the reference's frame, judged from the reference's own row alone.
+
+    superposable_groups() needs every pair to partition the set properly. Deciding whether a
+    given assembly overlays THE REFERENCE needs only one row of that matrix -- ref vs each other
+    -- which is the row a partially-copied sidecar tree is most likely to have in full. Returns
+    (overlapping, outside, n_seen) so the caller can tell "not in the reference's frame" from
+    "no US-align score present at all".
+    """
+    known, over, seen = set(labels), {ref}, set()
+    for path in glob.glob(os.path.join(raw_dir, ref, "*_scores.csv")):
+        row = read_score_row(path)
+        if row is None:
+            continue
+        x, y = row["asm_id1"], row["asm_id2"]
+        other = y if x == ref else x
+        if other not in known or ref not in (x, y):
+            continue
+        seen.add(other)
+        shorter = min(int(row["length_structure_1"]), int(row["length_structure_2"]))
+        if shorter and int(row["aligned_length"]) / shorter >= thresh:
+            over.add(other)
+    return over, [a for a in labels if a not in over], len(seen)
+
+
+def tmscore_matrix(raw_dir, labels):
+    """Pairwise 1 - TM-score matrix from the TM-align sidecars, or None if any pair is missing.
+
+    Offered alongside the Zernike/spectral shape score because the two behave very differently.
+    TM-score is length-normalised, bounded in [0, 1] and down-weights poorly-fitting regions, so it
+    is largely blind to the two things that dominate the shape score on these datasets: how much of
+    the model was built, and whether hydrogens were deposited (it is computed on CA positions, which
+    hydrogens cannot affect). On ATCase it recovers the depositors' own T/R labelling exactly where
+    the shape score does not.
+
+    Averages tm_score_1 and tm_score_2 because TM-score is asymmetric -- it is normalised by the
+    length of whichever structure is taken as the reference.
+    """
+    idx = {a: i for i, a in enumerate(labels)}
+    n = len(labels)
+    M = np.full((n, n), np.nan)
+    np.fill_diagonal(M, 0.0)
+    for a in labels:
+        for path in glob.glob(os.path.join(raw_dir, a, "*_scores.csv")):
+            row = read_score_row(path)
+            if row is None:
+                continue
+            x, y = row["asm_id1"], row["asm_id2"]
+            if x not in idx or y not in idx:
+                continue
+            try:
+                tm = 1.0 - (float(row["tm_score_1"]) + float(row["tm_score_2"])) / 2
+            except (KeyError, ValueError):
+                continue
+            M[idx[x], idx[y]] = M[idx[y], idx[x]] = max(0.0, tm)
+    if np.isnan(M).any():
+        missing = int(np.isnan(M).sum() / 2)
+        print(f"  (no TM-score metric: {missing} pairs have no score)")
+        return None
+    return M
+
+
+def rmsd_matrix(raw_dir, labels):
+    """Pairwise backbone RMSD from the US-align sidecars, or None if any pair is missing.
+
+    The only measure here in units anyone can reason about: "these two differ by 5.4 A" means
+    something, "1 - TM-score = 0.115" does not. It is also the only one that is neither saturated
+    nor coarsely quantised. TM-score is normalised by d0, which grows with chain length -- 15.5 A
+    for a 2,700-residue assembly -- so a real quaternary rearrangement of a few angstroms barely
+    moves it, and what movement there is arrives rounded to two decimals: enolase's whole set
+    spans 0.035, which is eight distinct values. Its RMSD spans 0.09-1.79 A.
+
+    Not length-normalised, so RMSD is meaningless BETWEEN complexes -- but every page compares
+    instances of one complex, which is exactly where it is the right measure.
+
+    Caveat worth knowing when reading it: a global superposition understates quaternary change,
+    because the fit distributes the error across both halves rather than leaving it in the part
+    that actually moved.
+    """
+    idx = {a: i for i, a in enumerate(labels)}
+    n = len(labels)
+    M = np.full((n, n), np.nan)
+    np.fill_diagonal(M, 0.0)
+    for a in labels:
+        for path in glob.glob(os.path.join(raw_dir, a, "*_scores.csv")):
+            row = read_score_row(path)
+            if row is None:
+                continue
+            x, y = row["asm_id1"], row["asm_id2"]
+            if x not in idx or y not in idx:
+                continue
+            try:
+                v = float(row["rmsd"])
+            except (KeyError, ValueError):
+                continue
+            M[idx[x], idx[y]] = M[idx[y], idx[x]] = max(0.0, v)
+    if np.isnan(M).any():
+        missing = int(np.isnan(M).sum() / 2)
+        print(f"  (no RMSD metric: {missing} pairs have no score)")
+        return None
+    return M
 
 
 def leaf_order(link_matrix, labels):
@@ -161,12 +473,37 @@ def transform_to_reference(raw_dir, asm, ref):
 # ---------------------------------------------------------------------------
 # Structures
 # ---------------------------------------------------------------------------
-def fetch_assembly(pdb_id, asm_id, dest):
+def fetch_assembly(pdb_id, asm_id, dest, attempts=5):
+    """Fetch one assembly, retrying the model server's transient failures.
+
+    A complex with a few hundred assemblies is a few hundred consecutive requests, and the model
+    server intermittently answers one with a 502/503. Without a retry a single blip throws away
+    the whole run; the responses are cached on disk, so a resumed run only re-fetches what is
+    genuinely missing. Backoff is exponential and the 4xx family is not retried -- those mean the
+    assembly does not exist, and repeating the request will not change that.
+    """
     if os.path.exists(dest):
         return False
     url = MODEL_SERVER.format(pdb=pdb_id, asm=asm_id)
-    with urllib.request.urlopen(url, timeout=120) as r:
-        data = r.read()
+    for attempt in range(attempts):
+        try:
+            with urllib.request.urlopen(url, timeout=120) as r:
+                data = r.read()
+            break
+        except urllib.error.HTTPError as e:
+            if e.code < 500 or attempt == attempts - 1:
+                raise
+            wait = 2 ** attempt
+            print(f"  {pdb_id}_{asm_id}: HTTP {e.code}, retrying in {wait}s "
+                  f"({attempt + 1}/{attempts - 1})")
+            time.sleep(wait)
+        except (urllib.error.URLError, TimeoutError) as e:
+            if attempt == attempts - 1:
+                raise
+            wait = 2 ** attempt
+            print(f"  {pdb_id}_{asm_id}: {e}, retrying in {wait}s "
+                  f"({attempt + 1}/{attempts - 1})")
+            time.sleep(wait)
     if b"_atom_site" not in data:
         raise SystemExit(f"model server returned no coordinates for {pdb_id} assembly {asm_id}")
     with open(dest, "wb") as fh:
@@ -174,7 +511,14 @@ def fetch_assembly(pdb_id, asm_id, dest):
     return True
 
 
-def write_superposed(src, dest, R, t):
+# Columns the viewer never reads; dropping them roughly halves each atom_site line. The SIFTS
+# cross-reference block in particular is four columns of UniProt bookkeeping per atom.
+DROP_COLS = {"pdbx_sifts_xref_db_name", "pdbx_sifts_xref_db_acc",
+             "pdbx_sifts_xref_db_num", "pdbx_sifts_xref_db_res", "pdbx_label_index"}
+BACKBONE = {"N", "CA", "C", "O", "OXT"}
+
+
+def write_superposed(src, dest, R, t, atoms="all"):
     """Copy an assembly CIF with the rigid transform applied to every atom.
 
     Baking the superposition into the coordinates keeps the viewer free of matrix maths:
@@ -182,31 +526,164 @@ def write_superposed(src, dest, R, t):
     still recorded in the JSON, so the derivation stays inspectable.
 
     The model server writes a whitespace-delimited atom_site loop with no quoted values
-    (verified: 26 columns, zero field-count anomalies across all 20 assemblies), so a
-    token-wise rewrite of the three coordinate columns is safe here.
+    (verified: 26 columns, zero field-count anomalies across every assembly used here), so a
+    token-wise rewrite of the three coordinate columns is safe.
+
+    atoms='backbone' keeps only polymer N/CA/C/O(/OXT) and drops HETATM records entirely. The
+    page renders a backbone cartoon and nothing else, so this is lossless for what is drawn
+    while cutting the shipped bytes several-fold. Use atoms='all' to keep side chains, ligands
+    and waters (a larger file, and what the earlier haemoglobin build shipped).
+
+    Only the FIRST model is kept. An NMR entry's assembly carries the whole ensemble -- 2m6z and
+    2h35 are 20 models of ~2,300 atoms each -- and without this the viewer draws twenty copies on
+    top of one another and every downstream count (atom content, ligand copies) is twenty times
+    what it should be. One model is the right comparator against a crystal structure; taking the
+    first is the convention the PDB itself uses for a representative.
     """
     cols, in_loop, out = [], False, []
     ix = iy = iz = None
+    keep = None            # indices of retained columns, computed once the loop header is read
+    i_atom = i_group = i_model = None
+    model1 = None          # the first model number seen; every later one is skipped
     for line in open(src):
         s = line.rstrip("\n")
         st = s.strip()
         if st.startswith("_atom_site."):
-            cols.append(st.split(".", 1)[1])
+            name = st.split(".", 1)[1]
+            cols.append(name)
             in_loop = True
-            out.append(s)
-            continue
-        if in_loop and ix is None and cols:
+            continue                                  # header re-emitted below, post-filter
+        if in_loop and keep is None and cols:
+            keep = [n for n, c in enumerate(cols) if c not in DROP_COLS]
             ix, iy, iz = (cols.index("Cartn_x"), cols.index("Cartn_y"), cols.index("Cartn_z"))
+            i_atom, i_group = cols.index("label_atom_id"), cols.index("group_PDB")
+            i_model = cols.index("pdbx_PDB_model_num") if "pdbx_PDB_model_num" in cols else None
+            out.extend(f"_atom_site.{cols[n]}" for n in keep)
         if in_loop and (st.startswith("ATOM ") or st.startswith("HETATM ")):
             f = st.split()
             if len(f) == len(cols):
+                if i_model is not None:
+                    if model1 is None:
+                        model1 = f[i_model]
+                    elif f[i_model] != model1:
+                        continue                      # a later NMR model; keep the first only
+                if atoms == "backbone" and (f[i_group] != "ATOM" or f[i_atom] not in BACKBONE):
+                    continue
                 xyz = R @ np.array([float(f[ix]), float(f[iy]), float(f[iz])]) + t
                 f[ix], f[iy], f[iz] = (f"{v:.3f}" for v in xyz)
-                out.append(" ".join(f))
+                out.append(" ".join(f[n] for n in keep))
                 continue
         out.append(s)
     with open(dest, "w") as fh:
         fh.write("\n".join(out) + "\n")
+
+
+def ligands_of(path, top=6):
+    """Bound components in an assembly, most copies first, waters excluded.
+
+    Blocks in the heatmap usually have a chemical identity -- in ATCase the two blocks are the
+    CTP-inhibited and PALA-locked states -- so the page needs ligands to summarise a selection.
+    """
+    cols, counts, seen, in_loop = [], {}, set(), False
+    for line in open(path):
+        s = line.strip()
+        if s.startswith("_atom_site."):
+            cols.append(s.split(".", 1)[1])
+            in_loop = True
+            continue
+        if in_loop and s.startswith("HETATM "):
+            f = s.split()
+            if len(f) != len(cols):
+                continue
+            r = dict(zip(cols, f))
+            comp = r["label_comp_id"]
+            if comp in ("HOH", "DOD"):
+                continue
+            key = (comp, r["auth_asym_id"], r["auth_seq_id"])
+            if key in seen:
+                continue
+            seen.add(key)
+            counts[comp] = counts.get(comp, 0) + 1
+    ranked = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))
+    return [{"comp": c, "copies": n} for c, n in ranked[:top]]
+
+
+def read_chains(path):
+    """{auth_asym_id: {label_seq_id(int): (comp_id, xyz)}} for CA atoms.
+
+    Keyed on label_seq_id because it is dense and gap-free within an entity; author numbering
+    varies wildly between depositions of the same protein (8a6e numbers rhodopsin 402-809 where
+    3cap uses 1-348).
+    """
+    cols, out, in_loop = [], {}, False
+    for line in open(path):
+        s = line.strip()
+        if s.startswith("_atom_site."):
+            cols.append(s.split(".", 1)[1])
+            in_loop = True
+            continue
+        if in_loop and (s.startswith("ATOM ") or s.startswith("HETATM ")):
+            f = s.split()
+            if len(f) != len(cols):
+                continue
+            r = dict(zip(cols, f))
+            if r.get("label_atom_id") != "CA" or not r["label_seq_id"].isdigit():
+                continue
+            out.setdefault(r["auth_asym_id"].replace("_", "-"), {})[int(r["label_seq_id"])] = (
+                r["label_comp_id"],
+                np.array([float(r["Cartn_x"]), float(r["Cartn_y"]), float(r["Cartn_z"])]))
+    return out
+
+
+def align_offset(a_res, b_res, min_overlap=20):
+    """Best constant numbering offset between two chains, by residue-name identity.
+
+    Depositions of one protein routinely differ by a constant shift in canonical numbering --
+    an expression tag, a retained initiator methionine, a construct starting later. A shift of
+    one residue is enough to pair every alpha-carbon with its neighbour and make an identical
+    structure look 23 A apart, so the offset has to be recovered rather than assumed to be 0.
+    Returns (offset, identity, n_overlap); identity is over the overlapping residues.
+    """
+    if not a_res or not b_res:
+        return 0, 0.0, 0
+    lo = min(b_res) - max(a_res)
+    hi = max(b_res) - min(a_res)
+    best = (0, 0.0, 0)
+    for off in range(lo, hi + 1):
+        same = total = 0
+        for s, (comp, _) in a_res.items():
+            other = b_res.get(s + off)
+            if other is not None:
+                total += 1
+                same += comp == other[0]
+        if total >= min_overlap:
+            ident = same / total
+            if (ident, total) > (best[1], best[2]):
+                best = (off, ident, total)
+    return best
+
+
+def read_res(path, numbering="auth"):
+    """{(auth_asym_id, residue number): (comp_id, xyz)} for CA atoms — read_ca plus residue name."""
+    seq_col = "label_seq_id" if numbering == "label" else "auth_seq_id"
+    cols, out, in_loop = [], {}, False
+    for line in open(path):
+        s = line.strip()
+        if s.startswith("_atom_site."):
+            cols.append(s.split(".", 1)[1])
+            in_loop = True
+            continue
+        if in_loop and (s.startswith("ATOM ") or s.startswith("HETATM ")):
+            f = s.split()
+            if len(f) != len(cols):
+                continue
+            r = dict(zip(cols, f))
+            if r.get("label_atom_id") != "CA":
+                continue
+            out[(r["auth_asym_id"].replace("_", "-"), r[seq_col])] = (
+                r["label_comp_id"],
+                np.array([float(r["Cartn_x"]), float(r["Cartn_y"]), float(r["Cartn_z"])]))
+    return out
 
 
 def read_ca(path, numbering="label"):
@@ -256,43 +733,122 @@ def reported_rmsd(raw_dir, asm, ref):
     for a, b in ((asm, ref), (ref, asm)):
         p = os.path.join(raw_dir, a, f"{a}-{b}_scores.csv")
         if os.path.exists(p):
-            row = next(csv.DictReader(open(p)))
+            row = read_score_row(p)                 # None if the sidecar is empty or truncated
+            if row is None:
+                continue
             return float(row["rmsd"]), int(row["aligned_length"])
     return None, None
 
 
-def validate(raw_dir, cif_dir, asm, ref):
-    """Measure the CA RMSD between the shipped superposed files and compare to TM-align.
+def geometric_chain_map(A, B):
+    """Match chains between two already-superposed assemblies by nearest centroid.
 
-    This checks the artifact the viewer actually loads, not an intermediate: if the
-    transform were wrong, or applied wrongly during the rewrite, the RMSD would diverge
-    from the value TM-align reported for the same pair.
+    Needed because a correspondence file can name chains the served assembly does not have, and
+    because for a symmetric homo-oligomer any symmetry-equivalent relabelling is equally valid --
+    geometry is the only thing that can disambiguate which copy landed on which. Uses optimal
+    (Hungarian) assignment so a 12-chain complex is tractable where 12! permutations is not.
+    """
+    if not A or not B or len(A) != len(B) or len(A) > 16:
+        return {}
+    from scipy.optimize import linear_sum_assignment
+    la, lb = sorted(A), sorted(B)
+    ca = np.array([np.mean([x for _, x in A[c].values()], axis=0) for c in la])
+    cb = np.array([np.mean([x for _, x in B[c].values()], axis=0) for c in lb])
+    cost = np.linalg.norm(ca[:, None, :] - cb[None, :, :], axis=2)
+    ri, ci = linear_sum_assignment(cost)
+    return {la[i]: lb[j] for i, j in zip(ri, ci)}
+
+
+def kabsch_rmsd(P, Q):
+    """RMSD of the OPTIMAL rigid superposition of P onto Q (the best any transform could do)."""
+    Pc, Qc = P - P.mean(0), Q - Q.mean(0)
+    V, S, Wt = np.linalg.svd(Pc.T @ Qc)
+    d = np.sign(np.linalg.det(V @ Wt))
+    R = V @ np.diag([1.0, 1.0, d]) @ Wt
+    return float(np.sqrt((((Pc @ R) - Qc) ** 2).sum(1).mean()))
+
+
+def validate(raw_dir, cif_dir, asm, ref):
+    """Measure the CA RMSD between the shipped superposed files and judge the superposition.
+
+    This checks the artifact the viewer actually loads, not an intermediate.
+
+    The test is NOT "does this match TM-align's reported RMSD". TM-align reports its number
+    over the subset it chose to align, which for some complexes is only one chain of a
+    homodimer -- so a transform can be perfectly faithful yet score far worse across the whole
+    assembly the viewer renders. The meaningful question is: over the residues we actually
+    draw, is this transform as good as ANY rigid transform could be? So compare the applied
+    RMSD against the Kabsch-optimal RMSD on the same residue set.
+
+      applied ~= optimal          -> the superposition is the best achievable (pass), even if
+                                     that best is poor because the assemblies genuinely differ
+      applied  >  optimal         -> the transform superposes something other than what we draw
 
     Tries canonical then author residue numbering and keeps whichever pairs up more
     residues, so a single entry's odd numbering can't masquerade as a bad transform.
     """
     cmap = chain_map(raw_dir, asm, ref)
     rep_rmsd, aligned = reported_rmsd(raw_dir, asm, ref)
-    best = None
-    for numbering in ("label", "auth"):
-        A = read_ca(os.path.join(cif_dir, f"{asm}.cif"), numbering)
-        B = read_ca(os.path.join(cif_dir, f"{ref}.cif"), numbering)
-        pairs = [(v, B[(cmap[k[0]], k[1])]) for k, v in A.items()
-                 if k[0] in cmap and (cmap[k[0]], k[1]) in B]
-        if best is None or len(pairs) > len(best[1]):
-            best = (numbering, pairs)
-    numbering, pairs = best
+    # Pair residues chain by chain, recovering each chain pair's numbering offset from residue
+    # identity. Assuming a zero offset silently pairs neighbouring residues and turns an
+    # identical structure into a ~23 A "mismatch" -- see align_offset.
+    A = read_chains(os.path.join(cif_dir, f"{asm}.cif"))
+    B = read_chains(os.path.join(cif_dir, f"{ref}.cif"))
+
+    # The correspondence file can name chains the served assembly does not have: 1llc's cc.csv
+    # numbers assembly 2's chains A-5..A-8 (continuing across the whole entry) while the model
+    # server restarts per assembly and calls them A-1..A-4. Nothing overlaps, so fall back to
+    # assigning chains geometrically -- the files are already superposed, so the chain of `ref`
+    # whose centroid is nearest is the corresponding one. This asks "given this transform, which
+    # chain landed on which", and the optimality comparison afterwards uses the same pairing, so
+    # it cannot flatter the result.
+    geo = geometric_chain_map(A, B)
+
+    def build(mapping):
+        """Residue pairs under one chain mapping, offset-aware, keeping only same-residue pairs.
+
+        The identity floor is 0.6, not 0.9: 2atc (a 1980s deposition) shares only ~71% of residue
+        assignments with modern entries, yet its chains pair at offset 0 over their full length, so
+        the agreeing residues are perfectly good for an RMSD. A frame-shifted mis-pairing sits near
+        6-9% identity (see rhodopsin's 8a6e), far below this floor, so it is still rejected.
+        """
+        out, num, den = [], 0, 0
+        for ca, cb in (mapping or {}).items():
+            if ca not in A or cb not in B:
+                continue
+            off, ident, n_over = align_offset(A[ca], B[cb])
+            if n_over < 20 or ident < 0.6:
+                continue
+            for seq, (comp, xyz) in A[ca].items():
+                other = B[cb].get(seq + off)
+                if other is not None and other[0] == comp:
+                    out.append((xyz, other[1]))
+                    num += 1
+            den += n_over
+        return out, ((num / den) if den else 0.0)
+
+    # Symmetry makes the chain correspondence of a homo-oligomer genuinely ambiguous, so take
+    # whichever mapping pairs up more residues. They agree whenever cc.csv is right.
+    cc_pairs, cc_ident = build(cmap)
+    geo_pairs, geo_ident = build(geo)
+    if len(geo_pairs) > len(cc_pairs):
+        pairs, identity, numbering = geo_pairs, geo_ident, "label+offset (chains matched geometrically)"
+    else:
+        pairs, identity, numbering = cc_pairs, cc_ident, "label+offset"
     if not pairs:
-        return {"n_matched": 0, "rmsd_applied": None, "rmsd_tmalign": rep_rmsd,
-                "aligned_length": aligned, "numbering": numbering}
+        return {"n_matched": 0, "rmsd_applied": None, "rmsd_optimal": None,
+                "rmsd_tmalign": rep_rmsd, "aligned_length": aligned,
+                "numbering": numbering, "residue_identity": 0.0}
     P = np.array([p[0] for p in pairs])
     Q = np.array([p[1] for p in pairs])
     return {
         "n_matched": len(pairs),
         "rmsd_applied": round(float(np.sqrt(((P - Q) ** 2).sum(1).mean())), 3),
+        "rmsd_optimal": round(kabsch_rmsd(P, Q), 3),
         "rmsd_tmalign": rep_rmsd,
         "aligned_length": aligned,
         "numbering": numbering,
+        "residue_identity": round(identity, 3),
     }
 
 
@@ -337,6 +893,20 @@ def main():
     ap.add_argument("--score-type", default="combined", choices=["combined", "spectral", "zernike"])
     ap.add_argument("--linkage", default="average", choices=["average", "complete", "single"])
     ap.add_argument("--out-dir", default=None)
+    ap.add_argument("--overlap-from-reference", action="store_true",
+                    help="decide what overlays the reference from the reference's own US-align "
+                         "row instead of partitioning every pair; for sidecar trees that hold "
+                         "that row in full but not the whole matrix. Needs --reference")
+    ap.add_argument("--allow-cross-group", action="store_true",
+                    help="keep every instance even when they fall into several packing groups; "
+                         "those outside the reference's group are flagged as not superposing")
+    ap.add_argument("--largest-superposable-group", action="store_true",
+                    help="restrict to the biggest set of assemblies that share a common rigid "
+                         "superposition; needed when a complex's assemblies fall into several "
+                         "crystal-packing arrangements that no single transform can align")
+    ap.add_argument("--atoms", default="backbone", choices=["backbone", "all"],
+                    help="what to ship: polymer backbone only (default, what the viewer draws) "
+                         "or every atom including side chains, ligands and waters")
     ap.add_argument("--validate", action="store_true",
                     help="apply each transform to CA coordinates and check against TM-align's RMSD")
     args = ap.parse_args()
@@ -348,8 +918,69 @@ def main():
     os.makedirs(cif_dir, exist_ok=True)
     os.makedirs(cache_dir, exist_ok=True)
 
-    labels, matrix, clusters, k, link_matrix = cluster_assemblies(
-        args.clustering_repo, args.complex, args.score_type, args.linkage)
+    labels, matrix = score_matrix(args.clustering_repo, args.complex, args.score_type)
+    n_total = len(labels)
+    subset = None
+    if args.overlap_from_reference:
+        # Partitioning the whole set needs every pair. Deciding what overlays the REFERENCE needs
+        # only the reference's own row, so this mode works on a sidecar tree that holds that row
+        # in full but not the rest -- at the cost of not knowing how the non-overlapping
+        # instances relate to each other, which the page does not ask.
+        if args.reference == "auto":
+            raise SystemExit("--overlap-from-reference needs an explicit --reference")
+        if args.reference not in labels:
+            raise SystemExit(f"reference {args.reference} is not one of the scored assemblies")
+        over, outside, n_seen = reference_overlap(raw_dir, args.reference, labels)
+        if n_seen < len(labels) - 1:
+            raise SystemExit(
+                f"--overlap-from-reference needs the reference's full row: {args.reference} has "
+                f"US-align scores against {n_seen} of {len(labels) - 1} other assemblies.")
+        groups = [sorted(over)] + ([sorted(outside)] if outside else [])
+        print(f"overlap judged from {args.reference}'s row only: {len(over)} of {n_total} share "
+              f"its frame, {len(outside)} do not")
+        if outside:
+            subset = {"applied": False, "kept": n_total, "of": n_total,
+                      "group_sizes": [len(g) for g in groups],
+                      "reason": "instances outside the reference's group have no common rigid "
+                                "superposition with it (they differ in quaternary arrangement, "
+                                "typically crystal packing) and will not overlay"}
+        groups_are_partition = False
+    else:
+        groups = superposable_groups(raw_dir, labels)
+        groups_are_partition = True
+    if groups_are_partition and len(groups) > 1:
+        sizes = ", ".join(str(len(g)) for g in groups)
+        print(f"NOTE: these {n_total} assemblies fall into {len(groups)} groups that cannot be "
+              f"superposed onto one another (sizes {sizes}).")
+        if not (args.largest_superposable_group or args.allow_cross_group):
+            raise SystemExit(
+                "No single reference frame covers them all. Re-run with "
+                "--largest-superposable-group to build the biggest coherent set, or "
+                "--allow-cross-group to keep every instance and accept that those outside the "
+                "reference's group will not superpose, or investigate why the assemblies differ "
+                "(usually crystal packing of a non-biological dimer).")
+    if groups_are_partition and len(groups) > 1 and args.allow_cross_group:
+        # Keep every instance. Only the reference's own group superposes; the rest are shipped
+        # with their transform applied but land in a different frame, and are flagged so the page
+        # can say so rather than quietly showing a broken overlay.
+        subset = {"applied": False, "kept": n_total, "of": n_total,
+                  "group_sizes": [len(g) for g in groups],
+                  "reason": "instances outside the reference's group have no common rigid "
+                            "superposition with it (they differ in quaternary arrangement, "
+                            "typically crystal packing) and will not overlay"}
+        print(f"keeping all {n_total} assemblies; only the reference's group will superpose")
+    elif groups_are_partition and len(groups) > 1:
+        keep = groups[0]
+        idx = [labels.index(a) for a in keep]
+        matrix = matrix[np.ix_(idx, idx)]
+        labels = keep
+        subset = {"applied": True, "kept": len(keep), "of": n_total,
+                  "group_sizes": [len(g) for g in groups],
+                  "reason": "assemblies outside this group have no common rigid superposition "
+                            "(they differ in quaternary arrangement, typically crystal packing)"}
+        print(f"restricted to the largest group: {len(keep)} of {n_total} assemblies")
+
+    clusters, k, link_matrix = cluster_matrix(args.clustering_repo, matrix, labels, args.linkage)
     print(f"clustered {len(labels)} assemblies into k={k} "
           f"(score={args.score_type}, linkage={args.linkage}, auto_gap)")
 
@@ -358,7 +989,13 @@ def main():
     # Medoid = lowest mean dissimilarity to everything else; the most central frame to
     # superpose onto, which keeps every transform small.
     mean_dist = matrix.sum(1) / (len(labels) - 1)
-    medoid = labels[int(np.argmin(mean_dist))]
+    if len(groups) > 1 and (args.allow_cross_group or args.overlap_from_reference):
+        # Restrict the medoid to the biggest group: any reference outside it would superpose
+        # fewer instances than necessary.
+        pool = [labels.index(a) for a in groups[0] if a in labels]
+        medoid = labels[pool[int(np.argmin(mean_dist[pool]))]]
+    else:
+        medoid = labels[int(np.argmin(mean_dist))]
     ref = medoid if args.reference == "auto" else args.reference
     if ref not in labels:
         raise SystemExit(f"reference {ref} is not one of the clustered assemblies")
@@ -373,13 +1010,16 @@ def main():
         if fetch_assembly(pdb_id, asm_id, cached):
             print(f"  fetched {asm}")
         R, t, src, kind = transform_to_reference(raw_dir, asm, ref)
-        write_superposed(cached, os.path.join(cif_dir, f"{asm}.cif"), R, t)
+        write_superposed(cached, os.path.join(cif_dir, f"{asm}.cif"), R, t, args.atoms)
         rec = {
             "assembly_id": asm,
             "pdb_id": pdb_id,
             **meta[pdb_id],
             "cluster_id": cluster_of[asm],
+            "packing_group": next((i for i, g in enumerate(groups, 1) if asm in g), None),
+            "superposes_with_reference": any(asm in g and ref in g for g in groups),
             "mean_dissimilarity": round(float(mean_dist[labels.index(asm)]), 4),
+            "ligands": ligands_of(cached),
             # Row-major 3x3 rotation + translation, applied as X = R.x + t.
             "transform": {"rotation": [round(v, 10) for v in R.flatten().tolist()],
                           "translation": [round(v, 10) for v in t.tolist()],
@@ -398,6 +1038,40 @@ def main():
     # similarity structure); the dendrogram leaf order is kept alongside it for reference.
     order = seriation_order(args.clustering_repo, matrix, labels)
     dendro_order = leaf_order(link_matrix, labels)
+
+    # Each metric gets its own seriation ordering: the ordering is derived from the matrix, so
+    # reusing the shape ordering for TM-score would misrepresent it.
+    metrics = {"shape": {
+        "label": f"Shape ({args.score_type} Zernike + spectral)",
+        "cell_label": "dissimilarity",
+        "order": order,
+        "matrix": [[round(float(v), 6) for v in row] for row in matrix],
+    }}
+    tm = tmscore_matrix(raw_dir, labels)
+    if tm is not None:
+        metrics["tmscore"] = {
+            "label": "Structural (1 \u2212 TM-score)",
+            "cell_label": "1 \u2212 TM-score",
+            "order": seriation_order(args.clustering_repo, tm, labels),
+            "matrix": [[round(float(v), 6) for v in row] for row in tm],
+        }
+    # RMSD rides along as an ANNOTATION, not as a selectable measure: it is shown for whichever
+    # pair the reader hovers, in angstroms, alongside whatever measure is driving the colours.
+    #
+    # It is deliberately not a measure of its own. Measured on ATCase against the depositors' own
+    # T/R labels, its seriation is the most fragmented of the three -- longest contiguous T block
+    # 15 of 26, against TM-score's 23 -- because a global RMSD is dominated by the largest
+    # displacements, so instances differing for reasons other than state (a disordered loop, a
+    # slightly different modelled extent) get pulled apart in the ordering. Best number to read,
+    # worst to order by.
+    rm = rmsd_matrix(raw_dir, labels)
+    rmsd_block = None if rm is None else {
+        "label": "Backbone RMSD after superposition (US-align)",
+        "cell_label": "RMSD",
+        "unit": "\u00c5",
+        # 2 dp is what US-align reports; keeping more would invent precision.
+        "matrix": [[round(float(v), 2) for v in row] for row in rm],
+    }
     payload = {
         "complex_id": args.complex,
         "reference_assembly": ref,
@@ -408,14 +1082,23 @@ def main():
             "n_clusters": k,
             "source": "pdbe_complex_clustering/clustering.py (notebook defaults)",
             "coordinate_source": "PDBe model server assembly coordinates",
+            "atoms_shipped": args.atoms,
         },
+        "subset": subset,
+        "data_notes": DATA_NOTES.get(args.complex, []),
         "assemblies": assemblies,
         "heatmap": {
-            "order": order,
+            "labels": labels,
             "ordering": "tree-penalised path-length seriation (matrix only, pre-clustering)",
             "dendrogram_order": dendro_order,
-            "labels": labels,
-            "matrix": [[round(float(v), 6) for v in row] for row in matrix],
+            # TM-score first where a dataset has it: measured on ATCase against the depositors'
+            # own T/R labels it separates the states best of the three (Cohen's d 1.81, and the
+            # least fragmented seriation). Shape is the fallback.
+            "default_metric": next(m for m in ("tmscore", "shape") if m in metrics),
+            # Per-pair RMSD in angstroms, shown on hover alongside whichever measure is selected.
+            # Null when the sidecars are incomplete, exactly as the measures are.
+            "rmsd": rmsd_block,
+            "metrics": metrics,
         },
     }
     out = os.path.join(out_dir, "instance_similarity.json")
@@ -425,26 +1108,46 @@ def main():
 
     if args.validate:
         bad = []
-        print("\nvalidation (applied transform vs TM-align's own RMSD):")
+        print("\nvalidation — applied RMSD vs the best any rigid transform could achieve on the "
+              "same residues:")
         for rec in assemblies:
             v = rec["validation"]
             if rec["assembly_id"] == ref:
                 continue
-            delta = (None if v["rmsd_applied"] is None or v["rmsd_tmalign"] is None
-                     else abs(v["rmsd_applied"] - v["rmsd_tmalign"]))
-            partial = v["aligned_length"] and v["n_matched"] < v["aligned_length"]
-            flag = ""
-            if delta is None or delta > 0.05:
-                flag = "  <-- PARTIAL MATCH" if partial else "  <-- MISMATCH"
-                if not partial:
-                    bad.append(rec["assembly_id"])
-            print(f"  {rec['assembly_id']:8s} {rec['transform']['derivation']:8s} "
-                  f"applied={v['rmsd_applied']} tm-align={v['rmsd_tmalign']} "
-                  f"matched={v['n_matched']}/{v['aligned_length']}{flag}")
+            applied, best = v["rmsd_applied"], v["rmsd_optimal"]
+            # An instance outside the reference's packing group is EXPECTED not to overlay: that
+            # is the documented consequence of --allow-cross-group, not a defect. Only instances
+            # sharing the reference's frame are held to the optimality test.
+            same_frame = rec.get("superposes_with_reference", True)
+            if applied is None or best is None:
+                flag = "  <-- NO OVERLAP"
+            # TM-align optimises TM-score, not plain RMSD, so its transform sits a few percent
+            # above the Kabsch optimum even when it is perfectly good. The failure we care about
+            # is the other regime -- a transform that superposes one chain of a homodimer while
+            # the rest flies apart, which runs 2x the optimum or worse.
+            elif applied > best * 1.25 and applied > best + 1.0:
+                flag = "  <-- NOT THE BEST FIT"
+            else:
+                flag = ""
+            if flag and same_frame:
+                bad.append(rec["assembly_id"])
+            if not same_frame:
+                flag = f"  [packing group {rec.get('packing_group')} — does not overlay the reference]"
+            frac = (v["aligned_length"] / v["n_matched"]) if v["n_matched"] else 0
+            note = f"  [TM-align aligned {frac:.0%} of what we draw]" if frac < 0.9 else ""
+            if not flag and applied is not None and applied > 5:
+                note += "  [loose fit: these assemblies genuinely differ]"
+            print(f"  {rec['assembly_id']:9s} {rec['transform']['derivation']:8s} "
+                  f"applied={applied} optimal={best} tm-align={v['rmsd_tmalign']} "
+                  f"matched={v['n_matched']}{flag}{note}")
         if bad:
-            raise SystemExit(f"\nFAILED: transforms disagree with TM-align for {bad}")
-        print("\nall transforms agree with TM-align (differences only where residue "
-              "matching is partial, which reflects numbering gaps, not the transform)")
+            raise SystemExit(
+                f"\nFAILED for {bad}: the stored transform is not the best rigid superposition of "
+                "the residues being rendered. This happens when TM-align aligned only part of the "
+                "assembly (e.g. one chain of a homodimer), which means no single transform "
+                "superposes these assemblies -- they differ in quaternary arrangement.")
+        print("\nevery transform is the best rigid superposition achievable for the residues "
+              "rendered")
 
 
 if __name__ == "__main__":

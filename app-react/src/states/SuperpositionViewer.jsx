@@ -67,9 +67,29 @@ export default function SuperpositionViewer({ basePath, entries, height = 520 })
           }
           if (cancelled) return
           const model = viewer.addModel(text, 'cif')
-          // Backbone only: a cartoon trace draws the polymer backbone and leaves ligands, ions and
+          // Backbone only: a cartoon draws the polymer backbone and leaves ligands, ions and
           // waters unstyled (and so invisible), which is exactly the requested representation.
-          viewer.setStyle({ model }, { cartoon: { color: e.color, arrows: false } })
+          //
+          // `ribbon` draws a smooth tube of even thickness along the spline, which is how PDBe-KB
+          // draws its superposed structures. The default cartoon widens helices into ribbons and
+          // flattens strands — right for reading ONE structure, wrong here: several overlaid
+          // ribbons occlude each other, and their varying width exaggerates differences that are
+          // only secondary-structure assignment. An even tube makes the actual backbone
+          // displacement between instances the thing you see.
+          //
+          // Checked against the alternatives: `style:'trace'` is an unsmoothed polyline straight
+          // between CA atoms, and `tubes:true` collapses each helix into a fat cylinder — both
+          // read worse when several structures are overlaid.
+          // `oval` + equal thickness and width gives a circular cross-section, so the tube reads
+          // the same from every angle. 0.4 is lighter than the reference snapshot looks, and
+          // deliberately: that snapshot is a single small domain, where a heavy tube still leaves
+          // space between turns. Over a whole tetramer with up to five instances overlaid, a
+          // heavier tube fuses neighbouring strands into one mass — the opposite of what a
+          // superposition is for.
+          viewer.setStyle({ model }, {
+            cartoon: { color: e.color, style: 'oval', ribbon: true, arrows: false,
+                       thickness: 0.4, width: 0.4 },
+          })
         }
         if (cancelled) return
         viewer.zoomTo()

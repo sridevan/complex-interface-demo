@@ -32,6 +32,46 @@ function Root() {
     title: 'Horse haemoglobin — similarity between assembly instances',
     organism: 'Equus caballus',
   }} /></>
+  if (route === '#rnr-similarity') return <><BackLink /><ConformationalStatesApp config={{
+    basePath: 'rnr-similarity', complexId: 'PDB-CPX-151210',
+    title: 'Ribonucleotide reductase — similarity between assembly instances',
+    organism: 'Bacillus subtilis',
+  }} /></>
+  if (route === '#kir22-similarity') return <><BackLink /><ConformationalStatesApp config={{
+    basePath: 'kir22-similarity', complexId: 'PDB-CPX-119152',
+    title: 'Kir2.2 potassium channel — similarity between assembly instances',
+    organism: 'Gallus gallus',
+  }} /></>
+  // Exception to the usual size limits: 58 instances and a 12-chain assembly, kept because its
+  // scores track measured structural difference better than any other complex here.
+  if (route === '#atcase-similarity') return <><BackLink /><ConformationalStatesApp config={{
+    basePath: 'atcase-similarity', complexId: 'PDB-CPX-137391',
+    title: 'Aspartate carbamoyltransferase — similarity between assembly instances',
+    organism: 'Escherichia coli',
+  }} /></>
+  if (route === '#ldh-similarity') return <><BackLink /><ConformationalStatesApp config={{
+    basePath: 'ldh-similarity', complexId: 'PDB-CPX-129047',
+    title: 'L-lactate dehydrogenase — similarity between assembly instances',
+    organism: 'Lacticaseibacillus casei',
+  }} /></>
+  if (route === '#enolase-similarity') return <><BackLink /><ConformationalStatesApp config={{
+    basePath: 'enolase-similarity', complexId: 'PDB-CPX-130018',
+    title: 'Enolase 1 — similarity between assembly instances',
+    organism: 'Saccharomyces cerevisiae',
+  }} /></>
+  // 341 assemblies — an order of magnitude past the other sets, and the case the view has to
+  // survive. Note this is HUMAN haemoglobin; '#hemoglobin-similarity' above is the horse one.
+  if (route === '#human-hb-similarity') return <><BackLink /><ConformationalStatesApp config={{
+    basePath: 'human-hb-similarity', complexId: 'PDB-CPX-154652',
+    title: 'Human haemoglobin — similarity between assembly instances',
+    organism: 'Homo sapiens',
+  }} /></>
+  // Only the largest packing group is built for rhodopsin; see the subset note on the page.
+  if (route === '#rhodopsin-similarity') return <><BackLink /><ConformationalStatesApp config={{
+    basePath: 'rhodopsin-similarity', complexId: 'PDB-CPX-132237',
+    title: 'Rhodopsin — similarity between assembly instances',
+    organism: 'Bos taurus',
+  }} /></>
   return <Landing />
 }
 
