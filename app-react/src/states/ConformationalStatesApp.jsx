@@ -455,7 +455,6 @@ export default function ConformationalStatesApp({ config }) {
                                         {METRIC_NAME[metric] || metric}
                                       </span>
                                     )}
-                                    <span className="cs-metric-note">{hm.label}</span>
                                   </div>
                                 )} />
         </div>

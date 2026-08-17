@@ -734,9 +734,6 @@ table.heatmap thead th { position: sticky; top: 0; background: #fbfcfd; z-index:
 /* Measure switch above the heatmap (shape vs TM-score). */
 .cs-metric { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 12px;
   min-width: 0; }
-/* Truncates instead of wrapping: the bar is one row shared with the zoom control, and a wrapping
-   note would make the card taller than its neighbours. */
-.cs-metric-note { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .cs-metric-label { color: var(--muted); font-weight: 600; }
 /* The single-measure case: named, but not offered as a choice, so it is not a button. Padding
    matches .cs-metric .pill button so the row is the same height either way. */
@@ -747,7 +744,6 @@ table.heatmap thead th { position: sticky; top: 0; background: #fbfcfd; z-index:
 .cs-metric .pill { flex: 0 0 auto; }
 .cs-metric .pill button { padding: 4px 12px; font-size: 12px; white-space: nowrap; }
 .cs-metric-label { flex: 0 0 auto; }
-.cs-metric-note { color: var(--muted); }
 
 /* States which measure the data notes were made against, so a reader who has switched to TM-score
    is not misled by caveats that only apply to the shape score. */
