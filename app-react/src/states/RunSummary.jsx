@@ -54,7 +54,10 @@ export default function RunSummary({ data, metricKeys }) {
         <Stat label="Assemblies" value={num(n)} />
         <Stat label="PDB entries" value={num(entries)}
               sub={entries < n ? `${num(n - entries)} repeat` : null} />
-        <Stat label="Pairs" value={num(pairs)} />
+        {/* "Comparisons", not "Pairs": the number counts work done, which is what this card is
+            about, and it matches what the heatmap's own help calls a cell. The sub-line says where
+            the number comes from, since n(n-1)/2 is not self-evident from 341 assemblies. */}
+        <Stat label="Comparisons" value={num(pairs)} sub="one per pair" />
       </div>
 
       {/* Coverage per measure, including any computed and then dropped. Listing only what is shown
@@ -79,11 +82,12 @@ export default function RunSummary({ data, metricKeys }) {
                   </span>
                 </div>
                 <div className="rs-meter" role="img"
-                     aria-label={`${METRIC_NAME[k]}: ${num(c.pairs)} of ${num(pairs)} pairs`}>
+                     aria-label={`${METRIC_NAME[k]}: ${num(c.pairs)} of ${num(pairs)} comparisons`}>
                   <span className="rs-meter-fill" style={{ width: `${frac * 100}%` }} />
                 </div>
                 <div className="rs-measure-cov">
-                  {frac >= 1 ? `all ${num(pairs)} pairs` : `${num(c.pairs)} of ${num(pairs)} pairs`}
+                  {frac >= 1 ? `all ${num(pairs)} comparisons`
+                             : `${num(c.pairs)} of ${num(pairs)} comparisons`}
                 </div>
               </div>
             )
