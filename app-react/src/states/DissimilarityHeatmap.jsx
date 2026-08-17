@@ -495,7 +495,7 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
         <table className="cs-hm-table cs-hm-nosel" role="grid" ref={gridRef}
                style={{ "--cell": `${cell}px`, "--cellfont": `${font}px`,
                         "--matrix": `${cell * n + (labelled ? ROW_HEAD : 0)}px` }}
-               aria-label="Pairwise shape dissimilarity between assembly instances">
+               aria-label={`Pairwise ${cellLabel} between ${n} assembly instances`}>
           {labelled && (
             <thead>
               <tr>
