@@ -59,8 +59,9 @@ export default function RunSummary({ data, metricKeys }) {
 
       <div className="rs-kpi">
         <Stat label="Assemblies" value={num(n)} />
-        <Stat label="PDB entries" value={num(entries)}
-              sub={entries < n ? `${num(n - entries)} repeat` : null} />
+        {/* No "N repeat" sub-line: it was arithmetic on the two figures either side of it, and the
+            point it made about independence is made where it bites, in the selection summary. */}
+        <Stat label="PDB entries" value={num(entries)} />
         {/* "Comparisons", not "Pairs": the number counts work done, which is what this card is
             about, and it matches what the heatmap's own help calls a cell. The sub-line says where
             the number comes from, since n(n-1)/2 is not self-evident from 341 assemblies. */}
