@@ -66,6 +66,16 @@ function Root() {
     title: 'Human haemoglobin',
     organism: 'Homo sapiens',
   }} /></>
+  // Rotary F-ATP synthase: the depositors labelled three primary rotary states and their
+  // substates in the entry titles, so this set has an independent ground truth to check the view
+  // against. TM-score separates the three states with no overlap at all (Cohen's d 6.98, every
+  // within-state pair closer than every between-state pair), which is the cleanest recovery of any
+  // set here.
+  if (route === '#atpsynthase-similarity') return <><BackLink /><ConformationalStatesApp config={{
+    basePath: 'atpsynthase-similarity', complexId: 'PDB-CPX-106364',
+    title: 'F-ATP synthase',
+    organism: 'Polytomella sp.',
+  }} /></>
   // Only the largest packing group is built for rhodopsin; see the subset note on the page.
   if (route === '#rhodopsin-similarity') return <><BackLink /><ConformationalStatesApp config={{
     basePath: 'rhodopsin-similarity', complexId: 'PDB-CPX-132237',

@@ -51,6 +51,12 @@ import numpy as np
 
 PDBE_API = "https://www.ebi.ac.uk/pdbe/api/v2/pdb/entry"
 MODEL_SERVER = "https://www.ebi.ac.uk/pdbe/model-server/v1/{pdb}/assembly?name={asm}&encoding=cif"
+# Fallback coordinate source. PDBe's ModelServer query layer has answered 404 to every request at
+# least once (the swagger page kept serving, so it reads as "assembly does not exist" rather than
+# as an outage), which stops a build dead. RCSB assembles from the same deposited matrices: atom
+# counts were identical on 2atc_1, 3jyc_1, 9bz5_1 and 1ns9_1, spanning four complexes, so this is
+# the same construction and not an approximation. PDBe is still tried first.
+RCSB_ASSEMBLY = "https://files.rcsb.org/download/{pdb}-assembly{asm}.cif"
 
 
 # ---------------------------------------------------------------------------
@@ -61,6 +67,28 @@ MODEL_SERVER = "https://www.ebi.ac.uk/pdbe/model-server/v1/{pdb}/assembly?name={
 # maximally different.
 # ---------------------------------------------------------------------------
 DATA_NOTES = {
+    "PDB-CPX-106364": [
+        "Every entry here is a focussed refinement of the F1 head and rotor, not the whole "
+        "F-ATP synthase. The comparison covers that region only, so nothing on this page speaks "
+        "to the membrane-embedded Fo domain or to the peripheral stalk.",
+        "The depositors labelled the states themselves, in the entry titles: three primary rotary "
+        "states and their substates (1A-1F, 2A-2D, 3A-3C). That makes this the one set here with "
+        "an independent ground truth to check the view against, rather than a grouping read off "
+        "the matrix.",
+        "Measured against those labels, TM-score separates the three primary states completely: "
+        "every within-state pair is more similar than every between-state pair, with no overlap "
+        "at all (Cohen's d 6.98). The shape score also recovers them as contiguous blocks but "
+        "with overlapping ranges (d 1.47), which is what the atom-content caveat on that measure "
+        "predicts for reconstructions of differing modelled extent.",
+        "Substates order less cleanly than the states containing them. On the shape score the "
+        "substates of states 2 and 3 come out in their labelled sequence, but state 1's do not; "
+        "on TM-score none of the three ladders is recovered in order. Read the block structure, "
+        "not the position within a block.",
+        "Coordinates were fetched from RCSB rather than from PDBe. PDBe's ModelServer answered "
+        "404 to every request while this was built, including for entries that plainly have the "
+        "assembly. RCSB assembles from the same deposited matrices and its atom counts match "
+        "PDBe's exactly on four assemblies checked across four other complexes here.",
+    ],
     "PDB-CPX-154652": [
         "At 341 instances this is by far the largest set here -- the next largest is ATCase at 58 "
         "-- so the heatmap is drawn without axis labels and identity comes from hovering a cell or "
@@ -486,26 +514,40 @@ def fetch_assembly(pdb_id, asm_id, dest, attempts=5):
     """
     if os.path.exists(dest):
         return False
-    url = MODEL_SERVER.format(pdb=pdb_id, asm=asm_id)
-    for attempt in range(attempts):
-        try:
-            with urllib.request.urlopen(url, timeout=120) as r:
-                data = r.read()
+    data = None
+    last = None
+    # PDBe first, then RCSB. A 4xx from PDBe is not retried there (repeating will not change it)
+    # but it IS worth trying the other source, since PDBe has returned 404 for entries that do
+    # have the assembly.
+    for source, url in (("pdbe", MODEL_SERVER.format(pdb=pdb_id, asm=asm_id)),
+                        ("rcsb", RCSB_ASSEMBLY.format(pdb=pdb_id, asm=asm_id))):
+        for attempt in range(attempts):
+            try:
+                with urllib.request.urlopen(url, timeout=120) as r:
+                    data = r.read()
+                break
+            except urllib.error.HTTPError as e:
+                last = e
+                if e.code < 500 or attempt == attempts - 1:
+                    break
+                wait = 2 ** attempt
+                print(f"  {pdb_id}_{asm_id}: HTTP {e.code}, retrying in {wait}s "
+                      f"({attempt + 1}/{attempts - 1})")
+                time.sleep(wait)
+            except (urllib.error.URLError, TimeoutError) as e:
+                last = e
+                if attempt == attempts - 1:
+                    break
+                wait = 2 ** attempt
+                print(f"  {pdb_id}_{asm_id}: {e}, retrying in {wait}s "
+                      f"({attempt + 1}/{attempts - 1})")
+                time.sleep(wait)
+        if data is not None:
+            if source == "rcsb":
+                print(f"  {pdb_id}_{asm_id}: PDBe unavailable ({last}), fetched from RCSB")
             break
-        except urllib.error.HTTPError as e:
-            if e.code < 500 or attempt == attempts - 1:
-                raise
-            wait = 2 ** attempt
-            print(f"  {pdb_id}_{asm_id}: HTTP {e.code}, retrying in {wait}s "
-                  f"({attempt + 1}/{attempts - 1})")
-            time.sleep(wait)
-        except (urllib.error.URLError, TimeoutError) as e:
-            if attempt == attempts - 1:
-                raise
-            wait = 2 ** attempt
-            print(f"  {pdb_id}_{asm_id}: {e}, retrying in {wait}s "
-                  f"({attempt + 1}/{attempts - 1})")
-            time.sleep(wait)
+    if data is None:
+        raise SystemExit(f"could not fetch {pdb_id} assembly {asm_id} from PDBe or RCSB: {last}")
     if b"_atom_site" not in data:
         raise SystemExit(f"model server returned no coordinates for {pdb_id} assembly {asm_id}")
     with open(dest, "wb") as fh:
