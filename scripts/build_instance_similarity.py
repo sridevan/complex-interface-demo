@@ -71,9 +71,32 @@ RCSB_ASSEMBLY = "https://files.rcsb.org/download/{pdb}-assembly{asm}.cif"
 # separation and rotor geometry as well, so a blanket "measured using the shape measure, may not
 # apply to TM-score" would be false there. Default stays "shape".
 DATA_NOTES_SCOPE = {"PDB-CPX-106364": "mixed", "PDB-CPX-138641": "mixed",
-                    "PDB-CPX-133430": "mixed"}
+                    "PDB-CPX-133430": "mixed", "PDB-CPX-128088": "mixed"}
 
 DATA_NOTES = {
+    "PDB-CPX-128088": [
+        "The two measures disagree on this set, and one of them is wrong. Read it on TM-score. "
+        "Grouping the eight state-labelled instances by rotational state gives Cohen's d 1.86 on "
+        "TM-score and -0.72 on shape, a negative value meaning instances sharing a state come out "
+        "LESS alike than instances that do not. Grouping the same instances by which study "
+        "deposited them reverses it: 0.32 on TM-score, 2.02 on shape.",
+        "What the shape score is tracking here is reconstruction resolution, not shape. Across the "
+        "36 pairs it correlates with backbone RMSD at r = -0.05, which is no relationship at all, "
+        "and with the difference in resolution between the two structures at r = +0.46. TM-score "
+        "over the same pairs correlates with backbone RMSD at r = +0.96. The two deposition series "
+        "sit at different resolutions (5.0-7.5 A for the 5y entries, 3.25-4.3 A for the 6q/6r "
+        "entries, 8.7 A for 5tsj), so grouping by resolution and grouping by study are the same "
+        "grouping, and shape finds it instead of the biology.",
+        "On TM-score the set passes a replication test no other page here can offer. Two "
+        "independent studies each labelled rotational states 1, 2 and 3, and the matrix pairs them "
+        "across studies rather than within: 5y5x and 6qum (both state 1) sit together, as do 5y60 "
+        "and 6r0y (state 3) and 5y5z and 6r0w (state 2), with the 1L and 1R substates of 6r0z and "
+        "6r10 falling in the state 1 group. Agreement between separate reconstructions is stronger "
+        "evidence than agreement with a single set of labels.",
+        "5tsj_1 carries bound VH single-domain antibodies that no other instance has, and at 8.7 A "
+        "it is the lowest-resolution structure here. It has no rotational state in its title and "
+        "is excluded from the state statistics above, but it is kept in the matrix.",
+    ],
     "PDB-CPX-133430": [
         "This is not a set of conformational states. Seventeen of the eighteen instances are "
         "12-subunit Pol II elongation complexes at 3.4 to 4.5 A, and what varies between them is "

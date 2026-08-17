@@ -87,6 +87,8 @@ const SIMILARITY = [
   { cx: 'PDB-CPX-138641', name: 'complex1-similarity' },
   // Yeast RNA polymerase II, 18 assemblies: 17 near-copies plus one 16 A preinitiation complex
   { cx: 'PDB-CPX-133430', name: 'polii-similarity' },
+  // Thermus V/A-ATPase, 9 assemblies: two studies, same three rotational states
+  { cx: 'PDB-CPX-128088', name: 'vatpase-similarity' },
   // Human haemoglobin, 341 assemblies — by far the largest set here, and the one that shows how
   // the view behaves at the scale of a well-studied complex.
   { cx: 'PDB-CPX-154652', name: 'human-hb-similarity' },

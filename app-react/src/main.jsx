@@ -66,6 +66,15 @@ function Root() {
     title: 'Human haemoglobin',
     organism: 'Homo sapiens',
   }} /></>
+  // Thermus V/A-ATPase: two independent studies label the same three rotational states, so the
+  // matrix can be checked for agreement BETWEEN reconstructions. TM-score passes (d 1.86); the
+  // shape score instead separates the two studies (d 2.02) because they sit at different
+  // resolutions. The clearest case here of the shape measure reading provenance.
+  if (route === '#vatpase-similarity') return <><BackLink /><ConformationalStatesApp config={{
+    basePath: 'vatpase-similarity', complexId: 'PDB-CPX-128088',
+    title: 'V/A-type ATPase',
+    organism: 'Thermus thermophilus',
+  }} /></>
   // RNA polymerase II: near-copies rather than states, and the clearest demonstration here of
   // what one genuine outlier does to a linear colour scale.
   if (route === '#polii-similarity') return <><BackLink /><ConformationalStatesApp config={{

@@ -1,0 +1,938 @@
+{
+ "complex_id": "PDB-CPX-128088",
+ "reference_assembly": "6r0w_1",
+ "method": {
+  "score_type": "combined",
+  "linkage": "average",
+  "cut_mode": "auto_gap",
+  "n_clusters": 4,
+  "source": "pdbe_complex_clustering/clustering.py (notebook defaults)",
+  "coordinate_source": "PDBe model server assembly coordinates",
+  "atoms_shipped": "backbone"
+ },
+ "subset": null,
+ "data_notes": [
+  "The two measures disagree on this set, and one of them is wrong. Read it on TM-score. Grouping the eight state-labelled instances by rotational state gives Cohen's d 1.86 on TM-score and -0.72 on shape, a negative value meaning instances sharing a state come out LESS alike than instances that do not. Grouping the same instances by which study deposited them reverses it: 0.32 on TM-score, 2.02 on shape.",
+  "What the shape score is tracking here is reconstruction resolution, not shape. Across the 36 pairs it correlates with backbone RMSD at r = -0.05, which is no relationship at all, and with the difference in resolution between the two structures at r = +0.46. TM-score over the same pairs correlates with backbone RMSD at r = +0.96. The two deposition series sit at different resolutions (5.0-7.5 A for the 5y entries, 3.25-4.3 A for the 6q/6r entries, 8.7 A for 5tsj), so grouping by resolution and grouping by study are the same grouping, and shape finds it instead of the biology.",
+  "On TM-score the set passes a replication test no other page here can offer. Two independent studies each labelled rotational states 1, 2 and 3, and the matrix pairs them across studies rather than within: 5y5x and 6qum (both state 1) sit together, as do 5y60 and 6r0y (state 3) and 5y5z and 6r0w (state 2), with the 1L and 1R substates of 6r0z and 6r10 falling in the state 1 group. Agreement between separate reconstructions is stronger evidence than agreement with a single set of labels.",
+  "5tsj_1 carries bound VH single-domain antibodies that no other instance has, and at 8.7 A it is the lowest-resolution structure here. It has no rotational state in its title and is excluded from the state statistics above, but it is kept in the matrix."
+ ],
+ "data_notes_scope": "mixed",
+ "assemblies": [
+  {
+   "assembly_id": "5tsj_1",
+   "pdb_id": "5tsj",
+   "structure_title": "Thermus thermophilus V/A-ATPase bound to VH dAbs",
+   "resolution": 8.7,
+   "exp_method": "em",
+   "cluster_id": 3,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.6759,
+   "ligands": [],
+   "mutations": [
+    {
+     "label": "L134M",
+     "type": "Conflict"
+    },
+    {
+     "label": "L171M",
+     "type": "Conflict"
+    },
+    {
+     "label": "L178M",
+     "type": "Conflict"
+    },
+    {
+     "label": "A173P",
+     "type": "Conflict"
+    },
+    {
+     "label": "SNoneN",
+     "type": "Conflict"
+    },
+    {
+     "label": "A327V",
+     "type": "Conflict"
+    },
+    {
+     "label": "V353I",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q401P",
+     "type": "Conflict"
+    },
+    {
+     "label": "I403L",
+     "type": "Conflict"
+    },
+    {
+     "label": "G404A",
+     "type": "Conflict"
+    },
+    {
+     "label": "H408Y",
+     "type": "Conflict"
+    },
+    {
+     "label": "V422L",
+     "type": "Conflict"
+    },
+    {
+     "label": "L474M",
+     "type": "Conflict"
+    },
+    {
+     "label": "F477A",
+     "type": "Conflict"
+    },
+    {
+     "label": "A480I",
+     "type": "Conflict"
+    },
+    {
+     "label": "V506L",
+     "type": "Conflict"
+    },
+    {
+     "label": "V508I",
+     "type": "Conflict"
+    },
+    {
+     "label": "Q525S",
+     "type": "Conflict"
+    },
+    {
+     "label": "G526A",
+     "type": "Conflict"
+    },
+    {
+     "label": "A538S",
+     "type": "Conflict"
+    },
+    {
+     "label": "L540V",
+     "type": "Conflict"
+    },
+    {
+     "label": "R543S",
+     "type": "Conflict"
+    },
+    {
+     "label": "L585M",
+     "type": "Conflict"
+    },
+    {
+     "label": "L592I",
+     "type": "Conflict"
+    },
+    {
+     "label": "L598I",
+     "type": "Conflict"
+    },
+    {
+     "label": "L599V",
+     "type": "Conflict"
+    },
+    {
+     "label": "L624I",
+     "type": "Conflict"
+    },
+    {
+     "label": "A651T",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9971979098,
+     -0.0747844916,
+     0.001899629,
+     0.0747745219,
+     0.997188591,
+     0.004866707,
+     -0.0022582426,
+     -0.0047110262,
+     0.9999863532
+    ],
+    "translation": [
+     -90.4601155583,
+     -107.7201592487,
+     -53.7254480075
+    ],
+    "source": "5tsj_1-6r0w_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "5y5x_1",
+   "pdb_id": "5y5x",
+   "structure_title": "V/A-type ATPase/synthase from Thermus thermophilus, rotational state 1",
+   "resolution": 5.0,
+   "exp_method": "em",
+   "cluster_id": 1,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.83,
+   "ligands": [
+    {
+     "comp": "ADP",
+     "copies": 2,
+     "name": "ADENOSINE-5'-DIPHOSPHATE"
+    }
+   ],
+   "mutations": [
+    {
+     "label": "L134M",
+     "type": "Conflict"
+    },
+    {
+     "label": "L171M",
+     "type": "Conflict"
+    },
+    {
+     "label": "L178M",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9996151638,
+     -0.0270601202,
+     -0.0061052556,
+     0.027152258,
+     0.9995103515,
+     0.0155503097,
+     0.0056814729,
+     -0.0157100968,
+     0.9998604471
+    ],
+    "translation": [
+     -94.0982073726,
+     -96.8923066322,
+     -48.9391078029
+    ],
+    "source": "5y5x_1-6r0w_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "5y5z_1",
+   "pdb_id": "5y5z",
+   "structure_title": "V/A-type ATPase/synthase from Thermus thermophilus, rotational state 2",
+   "resolution": 6.7,
+   "exp_method": "em",
+   "cluster_id": 3,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.7258,
+   "ligands": [
+    {
+     "comp": "ADP",
+     "copies": 2,
+     "name": "ADENOSINE-5'-DIPHOSPHATE"
+    }
+   ],
+   "mutations": [
+    {
+     "label": "L134M",
+     "type": "Conflict"
+    },
+    {
+     "label": "L171M",
+     "type": "Conflict"
+    },
+    {
+     "label": "L178M",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9989657067,
+     -0.0113957664,
+     0.044018784,
+     0.0089260653,
+     0.9983964598,
+     0.0559002187,
+     -0.0445852239,
+     -0.0554494869,
+     0.9974655444
+    ],
+    "translation": [
+     -105.1173341156,
+     -99.5918290058,
+     -33.926728487
+    ],
+    "source": "5y5z_1-6r0w_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "5y60_1",
+   "pdb_id": "5y60",
+   "structure_title": "V/A-type ATPase/synthase from Thermus thermophilus, rotational state 3.",
+   "resolution": 7.5,
+   "exp_method": "em",
+   "cluster_id": 1,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.8165,
+   "ligands": [
+    {
+     "comp": "ADP",
+     "copies": 2,
+     "name": "ADENOSINE-5'-DIPHOSPHATE"
+    }
+   ],
+   "mutations": [
+    {
+     "label": "L134M",
+     "type": "Conflict"
+    },
+    {
+     "label": "L171M",
+     "type": "Conflict"
+    },
+    {
+     "label": "L178M",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9977503259,
+     0.0099609842,
+     0.0662952936,
+     -0.0133079434,
+     0.9986486546,
+     0.050237071,
+     -0.0657052951,
+     -0.051006308,
+     0.9965345808
+    ],
+    "translation": [
+     -111.9528457536,
+     -95.1194614148,
+     -30.7378785576
+    ],
+    "source": "5y60_1-6r0w_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "6qum_1",
+   "pdb_id": "6qum",
+   "structure_title": "Thermus thermophilus V/A-type ATPase/synthase, rotational state 1",
+   "resolution": 3.25,
+   "exp_method": "em",
+   "cluster_id": 4,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.6554,
+   "ligands": [
+    {
+     "comp": "ADP",
+     "copies": 2,
+     "name": "ADENOSINE-5'-DIPHOSPHATE"
+    },
+    {
+     "comp": "MG",
+     "copies": 1,
+     "name": "MAGNESIUM ION"
+    }
+   ],
+   "mutations": [],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9978790182,
+     -0.0591092809,
+     0.0272682608,
+     0.0595134073,
+     0.9981257301,
+     -0.0142541667,
+     -0.0263745992,
+     0.015846761,
+     0.9995265182
+    ],
+    "translation": [
+     -0.0534511847,
+     0.1730562559,
+     2.9004619176
+    ],
+    "source": "6qum_1-6r0w_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "6r0w_1",
+   "pdb_id": "6r0w",
+   "structure_title": "Thermus thermophilus V/A-type ATPase/synthase, rotational state 2",
+   "resolution": 3.6,
+   "exp_method": "em",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.5743,
+   "ligands": [
+    {
+     "comp": "ADP",
+     "copies": 2,
+     "name": "ADENOSINE-5'-DIPHOSPHATE"
+    },
+    {
+     "comp": "MG",
+     "copies": 1,
+     "name": "MAGNESIUM ION"
+    }
+   ],
+   "mutations": [],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "translation": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "source": null,
+    "derivation": "identity"
+   }
+  },
+  {
+   "assembly_id": "6r0y_1",
+   "pdb_id": "6r0y",
+   "structure_title": "Thermus thermophilus V/A-type ATPase/synthase, rotational state 3",
+   "resolution": 3.9,
+   "exp_method": "em",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.5758,
+   "ligands": [
+    {
+     "comp": "ADP",
+     "copies": 2,
+     "name": "ADENOSINE-5'-DIPHOSPHATE"
+    },
+    {
+     "comp": "MG",
+     "copies": 1,
+     "name": "MAGNESIUM ION"
+    }
+   ],
+   "mutations": [],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9988153422,
+     -0.0455026196,
+     0.0172459802,
+     0.0459198229,
+     0.9986416677,
+     -0.0246209139,
+     -0.0161022384,
+     0.0253836789,
+     0.9995480913
+    ],
+    "translation": [
+     -1.7040210477,
+     1.1587466624,
+     -0.7877266578
+    ],
+    "source": "6r0w_1-6r0y_1_transform.txt",
+    "derivation": "inverted"
+   }
+  },
+  {
+   "assembly_id": "6r0z_1",
+   "pdb_id": "6r0z",
+   "structure_title": "Thermus thermophilus V/A-type ATPase/synthase, rotational state 1L",
+   "resolution": 3.8,
+   "exp_method": "em",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.5821,
+   "ligands": [
+    {
+     "comp": "ADP",
+     "copies": 2,
+     "name": "ADENOSINE-5'-DIPHOSPHATE"
+    },
+    {
+     "comp": "MG",
+     "copies": 1,
+     "name": "MAGNESIUM ION"
+    }
+   ],
+   "mutations": [],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9990921044,
+     -0.0304384315,
+     0.0298071932,
+     0.0304084333,
+     0.9995364914,
+     0.001459292,
+     -0.0298377959,
+     -0.000551577,
+     0.9995546017
+    ],
+    "translation": [
+     -0.8319293607,
+     0.5871188607,
+     2.9721737781
+    ],
+    "source": "6r0w_1-6r0z_1_transform.txt",
+    "derivation": "inverted"
+   }
+  },
+  {
+   "assembly_id": "6r10_1",
+   "pdb_id": "6r10",
+   "structure_title": "Thermus thermophilus V/A-type ATPase/synthase, rotational state 1R",
+   "resolution": 4.3,
+   "exp_method": "em",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.605,
+   "ligands": [
+    {
+     "comp": "ADP",
+     "copies": 2,
+     "name": "ADENOSINE-5'-DIPHOSPHATE"
+    },
+    {
+     "comp": "MG",
+     "copies": 1,
+     "name": "MAGNESIUM ION"
+    }
+   ],
+   "mutations": [],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.99998323,
+     -0.0046828849,
+     0.0034073776,
+     0.0046424715,
+     0.9999199147,
+     0.0117733457,
+     -0.0034622379,
+     -0.0117573296,
+     0.9999248862
+    ],
+    "translation": [
+     -0.3886041728,
+     -0.4171827214,
+     1.5693969142
+    ],
+    "source": "6r0w_1-6r10_1_transform.txt",
+    "derivation": "inverted"
+   }
+  }
+ ],
+ "heatmap": {
+  "labels": [
+   "5tsj_1",
+   "5y5x_1",
+   "5y5z_1",
+   "5y60_1",
+   "6qum_1",
+   "6r0w_1",
+   "6r0y_1",
+   "6r0z_1",
+   "6r10_1"
+  ],
+  "ordering": "tree-penalised path-length seriation (matrix only, pre-clustering)",
+  "dendrogram_order": [
+   "5y5x_1",
+   "5y60_1",
+   "5tsj_1",
+   "5y5z_1",
+   "6qum_1",
+   "6r10_1",
+   "6r0y_1",
+   "6r0w_1",
+   "6r0z_1"
+  ],
+  "default_metric": "tmscore",
+  "coverage": {
+   "pairs": 36,
+   "metrics": {
+    "shape": {
+     "pairs": 36,
+     "shown": true
+    },
+    "tmscore": {
+     "pairs": 36,
+     "shown": true
+    },
+    "rmsd": {
+     "pairs": 36,
+     "shown": false,
+     "per_pair": true
+    }
+   }
+  },
+  "rmsd": {
+   "label": "Backbone RMSD after superposition (US-align)",
+   "cell_label": "RMSD",
+   "unit": "\u00c5",
+   "matrix": [
+    [
+     0.0,
+     3.02,
+     5.92,
+     6.08,
+     3.03,
+     5.84,
+     5.62,
+     3.93,
+     3.87
+    ],
+    [
+     3.02,
+     0.0,
+     5.45,
+     5.58,
+     2.82,
+     5.87,
+     5.75,
+     3.9,
+     3.26
+    ],
+    [
+     5.92,
+     5.45,
+     0.0,
+     6.05,
+     6.01,
+     2.96,
+     6.04,
+     6.62,
+     5.96
+    ],
+    [
+     6.08,
+     5.58,
+     6.05,
+     0.0,
+     6.04,
+     6.57,
+     3.47,
+     6.55,
+     6.34
+    ],
+    [
+     3.03,
+     2.82,
+     6.01,
+     6.04,
+     0.0,
+     5.35,
+     5.1,
+     2.48,
+     2.78
+    ],
+    [
+     5.84,
+     5.87,
+     2.96,
+     6.57,
+     5.35,
+     0.0,
+     5.35,
+     5.89,
+     5.7
+    ],
+    [
+     5.62,
+     5.75,
+     6.04,
+     3.47,
+     5.1,
+     5.35,
+     0.0,
+     5.58,
+     5.72
+    ],
+    [
+     3.93,
+     3.9,
+     6.62,
+     6.55,
+     2.48,
+     5.89,
+     5.58,
+     0.0,
+     4.61
+    ],
+    [
+     3.87,
+     3.26,
+     5.96,
+     6.34,
+     2.78,
+     5.7,
+     5.72,
+     4.61,
+     0.0
+    ]
+   ]
+  },
+  "metrics": {
+   "shape": {
+    "label": "Shape (combined Zernike + spectral)",
+    "cell_label": "dissimilarity",
+    "order": [
+     "6r10_1",
+     "6r0y_1",
+     "6r0z_1",
+     "6r0w_1",
+     "6qum_1",
+     "5y5z_1",
+     "5tsj_1",
+     "5y60_1",
+     "5y5x_1"
+    ],
+    "matrix": [
+     [
+      0.0,
+      0.825926,
+      0.329508,
+      0.764406,
+      0.6582,
+      0.720288,
+      0.700869,
+      0.723608,
+      0.684462
+     ],
+     [
+      0.825926,
+      0.0,
+      0.840223,
+      0.417303,
+      0.839644,
+      0.912645,
+      0.94287,
+      0.937912,
+      0.923131
+     ],
+     [
+      0.329508,
+      0.840223,
+      0.0,
+      0.842073,
+      0.700095,
+      0.753543,
+      0.773479,
+      0.803628,
+      0.764223
+     ],
+     [
+      0.764406,
+      0.417303,
+      0.842073,
+      0.0,
+      0.89344,
+      0.904297,
+      0.905892,
+      0.9109,
+      0.893554
+     ],
+     [
+      0.6582,
+      0.839644,
+      0.700095,
+      0.89344,
+      0.0,
+      0.525285,
+      0.536506,
+      0.529646,
+      0.560774
+     ],
+     [
+      0.720288,
+      0.912645,
+      0.753543,
+      0.904297,
+      0.525285,
+      0.0,
+      0.215306,
+      0.205123,
+      0.357827
+     ],
+     [
+      0.700869,
+      0.94287,
+      0.773479,
+      0.905892,
+      0.536506,
+      0.215306,
+      0.0,
+      0.210639,
+      0.321062
+     ],
+     [
+      0.723608,
+      0.937912,
+      0.803628,
+      0.9109,
+      0.529646,
+      0.205123,
+      0.210639,
+      0.0,
+      0.335059
+     ],
+     [
+      0.684462,
+      0.923131,
+      0.764223,
+      0.893554,
+      0.560774,
+      0.357827,
+      0.321062,
+      0.335059,
+      0.0
+     ]
+    ]
+   },
+   "tmscore": {
+    "label": "Structural (1 \u2212 TM-score)",
+    "cell_label": "1 \u2212 TM-score",
+    "order": [
+     "5tsj_1",
+     "5y5x_1",
+     "6r10_1",
+     "6qum_1",
+     "6r0z_1",
+     "6r0y_1",
+     "5y60_1",
+     "5y5z_1",
+     "6r0w_1"
+    ],
+    "matrix": [
+     [
+      0.0,
+      0.04,
+      0.11,
+      0.115,
+      0.05,
+      0.115,
+      0.11,
+      0.06,
+      0.06
+     ],
+     [
+      0.04,
+      0.0,
+      0.08,
+      0.08,
+      0.03,
+      0.1,
+      0.09,
+      0.04,
+      0.03
+     ],
+     [
+      0.11,
+      0.08,
+      0.0,
+      0.09,
+      0.1,
+      0.03,
+      0.1,
+      0.12,
+      0.1
+     ],
+     [
+      0.115,
+      0.08,
+      0.09,
+      0.0,
+      0.1,
+      0.11,
+      0.03,
+      0.11,
+      0.11
+     ],
+     [
+      0.05,
+      0.03,
+      0.1,
+      0.1,
+      0.0,
+      0.08,
+      0.075,
+      0.015,
+      0.02
+     ],
+     [
+      0.115,
+      0.1,
+      0.03,
+      0.11,
+      0.08,
+      0.0,
+      0.08,
+      0.09,
+      0.09
+     ],
+     [
+      0.11,
+      0.09,
+      0.1,
+      0.03,
+      0.075,
+      0.08,
+      0.0,
+      0.08,
+      0.09
+     ],
+     [
+      0.06,
+      0.04,
+      0.12,
+      0.11,
+      0.015,
+      0.09,
+      0.08,
+      0.0,
+      0.05
+     ],
+     [
+      0.06,
+      0.03,
+      0.1,
+      0.11,
+      0.02,
+      0.09,
+      0.09,
+      0.05,
+      0.0
+     ]
+    ]
+   }
+  }
+ }
+}
