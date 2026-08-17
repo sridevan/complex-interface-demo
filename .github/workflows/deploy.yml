@@ -33,7 +33,9 @@ jobs:
       - name: Build (stages demo data, then vite build)
         working-directory: app-react
         run: npm run build
-      - uses: actions/upload-pages-artifact@v3
+      # v5 pairs with deploy-pages@v5; both moved to the node24 runtime, clearing the Node 20
+      # deprecation warning the runner prints for node20 actions.
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: app-react/dist
 
@@ -45,4 +47,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
