@@ -673,6 +673,24 @@
    "6m85_1"
   ],
   "default_metric": "tmscore",
+  "coverage": {
+   "pairs": 55,
+   "metrics": {
+    "shape": {
+     "pairs": 55,
+     "shown": true
+    },
+    "tmscore": {
+     "pairs": 55,
+     "shown": true
+    },
+    "rmsd": {
+     "pairs": 55,
+     "shown": false,
+     "per_pair": true
+    }
+   }
+  },
   "rmsd": {
    "label": "Backbone RMSD after superposition (US-align)",
    "cell_label": "RMSD",

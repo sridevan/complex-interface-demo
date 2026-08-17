@@ -451,7 +451,54 @@ table.heatmap thead th { position: sticky; top: 0; background: #fbfcfd; z-index:
    columns. minmax(0,…) so the 20-column heatmap scrolls internally instead of stretching its track;
    the grid's default `align-items: stretch` makes the two row-2 cards end flush. */
 .cs-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; }
-.cs-instances { grid-column: 1 / -1; margin-bottom: 0; }
+/* Row 1 is its own flex row, not part of .cs-grid: the grid below is two equal columns for the
+   heatmap and the viewer, and one CSS grid cannot give a row a different split. 70/30 here. */
+.cs-row1 { display: flex; gap: 18px; align-items: stretch; margin-bottom: 18px; }
+.cs-row1 .cs-instances { flex: 7 1 0; min-width: 0; margin-bottom: 0; }
+.cs-row1 .cs-runsummary { flex: 3 1 0; min-width: 0; margin-bottom: 0; display: flex;
+  flex-direction: column; }
+/* KPI row of stat tiles. Proportional figures deliberately: tabular numerals give every digit the
+   width of a zero, which reads loose at this size and is meant for columns that align vertically.
+   Type through this whole panel is a step up from the app's small text: it is a narrow column, and
+   at the smaller size 21% of the card was empty. */
+.rs-kpi { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px;
+  padding: 4px 0 16px; }
+.rs-stat-value { font-size: 26px; font-weight: 600; line-height: 1.1; letter-spacing: -0.4px; }
+.rs-stat-label { font-size: 12px; color: var(--muted); margin-top: 3px; }
+.rs-stat-sub { font-size: 11.5px; color: var(--muted); opacity: .8; }
+
+.rs-section { border-top: 1px solid var(--border); padding-top: 13px; margin-top: 2px; }
+.rs-section + .rs-section { margin-top: 16px; }
+.rs-section-label { font-size: 11px; font-weight: 700; letter-spacing: .6px;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 11px; }
+
+.rs-measure { margin-bottom: 13px; }
+.rs-measure:last-child { margin-bottom: 0; }
+.rs-measure-head { display: flex; justify-content: space-between; align-items: baseline;
+  font-size: 13.5px; margin-bottom: 5px; }
+.rs-measure-name { font-weight: 600; }
+/* State is carried by the word, never by colour alone. */
+.rs-measure-state { font-size: 12px; color: var(--muted); }
+/* Meter: the unfilled track is a lighter step of the SAME hue as the fill, not grey, so a
+   nearly-empty bar still reads as one quantity partly filled rather than as two colours. */
+.rs-meter { height: 7px; border-radius: 4px; background: #dbe7f4; overflow: hidden; }
+.rs-meter-fill { display: block; height: 100%; border-radius: 4px; background: var(--accent);
+  min-width: 3px; }
+.rs-measure-cov { font-size: 12px; color: var(--muted); margin-top: 5px;
+  font-variant-numeric: tabular-nums; }
+/* A measure that was computed but is not displayed stays legible but recedes. */
+.rs-off .rs-measure-name, .rs-off .rs-measure-cov { color: var(--muted); }
+.rs-off .rs-meter-fill { background: #9db8d4; }
+
+.rs-list { display: flex; flex-direction: column; gap: 8px; font-size: 13.5px; }
+.rs-line { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 8px;
+  align-items: baseline; }
+.rs-key { color: var(--muted); font-size: 12.5px; }
+.rs-val { line-height: 1.45; }
+.rs-note { color: var(--muted); }
+.rs-muted .rs-val { color: var(--muted); }
+.rs-foot { margin: auto 0 0; padding-top: 14px; font-size: 12px; color: var(--muted); }
+.rs-foot .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
 .cs-heatmap { grid-column: 1; margin-bottom: 0; }
 .cs-viewer { grid-column: 2; margin-bottom: 0; }
 /* Column flexboxes so each card's content area absorbs the leftover height rather than leaving the
@@ -560,17 +607,20 @@ table.heatmap thead th { position: sticky; top: 0; background: #fbfcfd; z-index:
   text-align: center; font-variant-numeric: tabular-nums; }
 /* Colourbar with its label beneath, so the ramp itself stays uninterrupted. `margin: 0 auto`
    centres the fixed-width block within the card rather than leaving it hard against the left edge. */
-.cs-hm-legend { font-size: 11px; color: var(--muted); max-width: 360px; margin: 0 auto; }
+.cs-hm-legend { font-size: 13px; color: var(--muted); max-width: 400px; margin: 0 auto; }
 /* Value at each end of the ramp. The ticks are fixed-width and the ramp takes the rest, so the
    bar stays put as the numbers change length between metrics. */
 .cs-hm-ramp-row { display: flex; align-items: center; gap: 7px; }
-.cs-hm-tick { flex: 0 0 auto; min-width: 34px; font-variant-numeric: tabular-nums;
+.cs-hm-tick { flex: 0 0 auto; min-width: 40px; font-variant-numeric: tabular-nums;
   white-space: nowrap; }
 .cs-hm-ramp-row .cs-hm-tick:last-child { text-align: right; }
 /* Continuous ramp drawn as abutting segments, so it reads as one gradient bar. */
-.cs-hm-ramp { display: flex; width: 100%; height: 11px; border: 1px solid #e2e5ea; }
+.cs-hm-ramp { display: flex; width: 100%; height: 13px; border: 1px solid #e2e5ea; }
 .cs-hm-ramp i { flex: 1 1 auto; }
-.cs-hm-legend-caps { margin-top: 3px; text-align: center; white-space: nowrap; }
+.cs-hm-legend-caps { margin-top: 6px; text-align: center; white-space: nowrap; }
+/* The quantity being measured carries the emphasis; the arrows are structure, not content. */
+.cs-hm-quantity { color: var(--text); font-weight: 600; }
+.cs-hm-arrow { opacity: .55; }
 .cs-tip-act { margin-top: 5px; color: #9fd0ff; font-size: 11px; }
 .cs-tip-title { margin: 2px 0 4px; max-width: 300px; line-height: 1.35; }
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
+import { methodLabel } from './methods'
 
 // Lives with the heatmap it describes, but is rendered by the parent next to the card heading.
 // [heading, text] pairs, the same shape as the measure help, so both popups read alike.
@@ -590,19 +591,26 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
             </span>
             <span className="cs-hm-tick">{fmtVal(max)}</span>
           </div>
-          <div className="cs-hm-legend-caps">less similar</div>
+          {/* Both directions named, with the measured quantity between them. The previous label
+              was a lone "less similar" centred under the ramp, which said neither which end it
+              referred to nor what was being measured. The middle term comes from the metric, so
+              it reads "dissimilarity" on one measure and "1 - TM-score" on another. */}
+          <div className="cs-hm-legend-caps">
+            More similar <span className="cs-hm-arrow">←</span>
+            {' '}<span className="cs-hm-quantity">{cellLabel}</span>{' '}
+            <span className="cs-hm-arrow">→</span> More different
+          </div>
         </div>
-        {/* Always shown: the instance count belongs next to the matrix on every page, not only on
-            the ones too big to label. Reserving the line also keeps the card height independent
-            of whether labels were drawn. Mid-drag it becomes the live readout for the range being
-            marked out — at these cell sizes the outline alone does not tell you how many you have.
-            One line either way, so the card does not resize under the pointer. */}
+        {/* Live readout for the range being marked out: at these cell sizes the outline alone does
+            not tell you how many instances you have. Idle it is blank but still occupies its line,
+            so the card does not resize under the pointer as the drag starts. The instance count
+            used to sit here; it now lives in the provenance panel, where it is not repeated. */}
         <p className="cs-hm-caption">
           {dragCount > 0
             ? (dragCount < MIN_DRAG
                 ? `${dragCount} marked — drag at least ${MIN_DRAG} to zoom in`
                 : `${dragCount} instances marked — release to zoom in`)
-            : `${n} instances${labelled ? '' : ' — too many to label; hover a cell for the pair'}`}
+            : ' '}
         </p>
       </div>
 
@@ -618,7 +626,7 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
                 <div className="cm-tip-head">{hover.r}</div>
                 {m.structure_title && <div className="cs-tip-title">{m.structure_title}</div>}
                 <div>
-                  <span className="cm-tip-sub">method</span> {m.exp_method || 'n/a'}
+                  <span className="cm-tip-sub">method</span> {m.exp_method ? methodLabel(m.exp_method) : 'n/a'}
                   {'  '}<span className="cm-tip-sub">resolution</span>{' '}
                   {m.resolution != null ? `${m.resolution} Å` : 'n/a'}
                 </div>

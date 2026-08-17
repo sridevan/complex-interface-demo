@@ -357,11 +357,12 @@ def tmscore_matrix(raw_dir, labels):
             except (KeyError, ValueError):
                 continue
             M[idx[x], idx[y]] = M[idx[y], idx[x]] = max(0.0, tm)
+    n_pairs = n * (n - 1) // 2
+    have = n_pairs - int(np.isnan(M).sum() / 2)
     if np.isnan(M).any():
-        missing = int(np.isnan(M).sum() / 2)
-        print(f"  (no TM-score metric: {missing} pairs have no score)")
-        return None
-    return M
+        print(f"  (no TM-score metric: {have} of {n_pairs} pairs have a score)")
+        return None, have
+    return M, have
 
 
 def rmsd_matrix(raw_dir, labels):
@@ -398,11 +399,12 @@ def rmsd_matrix(raw_dir, labels):
             except (KeyError, ValueError):
                 continue
             M[idx[x], idx[y]] = M[idx[y], idx[x]] = max(0.0, v)
+    n_pairs = n * (n - 1) // 2
+    have = n_pairs - int(np.isnan(M).sum() / 2)
     if np.isnan(M).any():
-        missing = int(np.isnan(M).sum() / 2)
-        print(f"  (no RMSD metric: {missing} pairs have no score)")
-        return None
-    return M
+        print(f"  (no RMSD metric: {have} of {n_pairs} pairs have a score)")
+        return None, have
+    return M, have
 
 
 def leaf_order(link_matrix, labels):
@@ -1160,7 +1162,7 @@ def main():
         "order": order,
         "matrix": [[round(float(v), 6) for v in row] for row in matrix],
     }}
-    tm = tmscore_matrix(raw_dir, labels)
+    tm, tm_have = tmscore_matrix(raw_dir, labels)
     if tm is not None:
         metrics["tmscore"] = {
             "label": "Structural (1 \u2212 TM-score)",
@@ -1177,7 +1179,7 @@ def main():
     # displacements, so instances differing for reasons other than state (a disordered loop, a
     # slightly different modelled extent) get pulled apart in the ordering. Best number to read,
     # worst to order by.
-    rm = rmsd_matrix(raw_dir, labels)
+    rm, rm_have = rmsd_matrix(raw_dir, labels)
     rmsd_block = None if rm is None else {
         "label": "Backbone RMSD after superposition (US-align)",
         "cell_label": "RMSD",
@@ -1208,6 +1210,18 @@ def main():
             # own T/R labels it separates the states best of the three (Cohen's d 1.81, and the
             # least fragmented seriation). Shape is the fallback.
             "default_metric": next(m for m in ("tmscore", "shape") if m in metrics),
+            # What was ATTEMPTED, not only what succeeded. A measure computed and then dropped for
+            # being incomplete used to vanish without trace, which left the page looking as though
+            # only one measure had ever been intended. Recording the pair counts lets it say that
+            # TM-score was tried and covers 4,431 of 57,970 pairs, rather than silently omitting it.
+            "coverage": {
+                "pairs": len(labels) * (len(labels) - 1) // 2,
+                "metrics": {
+                    "shape": {"pairs": len(labels) * (len(labels) - 1) // 2, "shown": True},
+                    "tmscore": {"pairs": tm_have, "shown": tm is not None},
+                    "rmsd": {"pairs": rm_have, "shown": False, "per_pair": rmsd_block is not None},
+                },
+            },
             # Per-pair RMSD in angstroms, shown on hover alongside whichever measure is selected.
             # Null when the sidecars are incomplete, exactly as the measures are.
             "rmsd": rmsd_block,

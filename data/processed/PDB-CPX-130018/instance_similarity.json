@@ -1465,6 +1465,24 @@
    "2one_1"
   ],
   "default_metric": "tmscore",
+  "coverage": {
+   "pairs": 276,
+   "metrics": {
+    "shape": {
+     "pairs": 276,
+     "shown": true
+    },
+    "tmscore": {
+     "pairs": 276,
+     "shown": true
+    },
+    "rmsd": {
+     "pairs": 276,
+     "shown": false,
+     "per_pair": true
+    }
+   }
+  },
   "rmsd": {
    "label": "Backbone RMSD after superposition (US-align)",
    "cell_label": "RMSD",

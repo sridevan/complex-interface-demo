@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react'
+import { methodCounts } from './methods'
 import Hint from '../components/Hint.jsx'
 
 // Why every deposited compound is listed, including the ones that are only there because of how the
@@ -98,9 +99,7 @@ export default function BlockSummary({ block, assemblies, labels, matrix, cellLa
     }
 
     const entries = new Set(blockRows.map((a) => a.pdb_id)).size
-    const methods = [...frequency(blockRows, (a) => [a.exp_method || 'unknown'])]
-      .map(([k, v]) => ({ k, n: Math.round(v * blockRows.length) }))
-      .sort((a, b) => b.n - a.n)
+    const methods = methodCounts(blockRows)
     const res = blockRows.map((a) => a.resolution).filter((r) => r != null).sort((a, b) => a - b)
 
     const ligIn = frequency(blockRows, (a) => (a.ligands || []).map((l) => l.comp))
@@ -161,8 +160,12 @@ export default function BlockSummary({ block, assemblies, labels, matrix, cellLa
 
   return (
     <div className="card cs-blocksummary">
+      {/* Noun phrase, matching the other cards. "Composition" is the honest word for what the rows
+          below are: what the selection is made of, and how that differs from everything else. It is
+          not a verdict on whether the selection is one group — the note says so, because no
+          statistic here can tell. */}
       <h2>
-        What is in this selection?
+        Selection composition
         <span className="cs-count">{s.n} of {assemblies.length}</span>
         {onClear && (
           <button className="cs-linkbtn cs-clear-inline" onClick={onClear}
@@ -189,7 +192,7 @@ export default function BlockSummary({ block, assemblies, labels, matrix, cellLa
         </Row>
 
         <Row label="Method">
-          {s.methods.map((m) => `${m.n} ${m.k}`).join(' · ')}
+          {s.methods.map((m) => `${m.n} ${m.label}`).join(' · ')}
           {s.res.length > 0 && (
             <span className="bs-note"> · {s.res[0].toFixed(2)}–{s.res[s.res.length - 1].toFixed(2)} Å
               {s.res.length < s.n && ` (${s.n - s.res.length} without a resolution)`}</span>

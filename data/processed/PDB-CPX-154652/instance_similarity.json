@@ -17261,6 +17261,24 @@
    "1jy7_2"
   ],
   "default_metric": "shape",
+  "coverage": {
+   "pairs": 57970,
+   "metrics": {
+    "shape": {
+     "pairs": 57970,
+     "shown": true
+    },
+    "tmscore": {
+     "pairs": 4431,
+     "shown": false
+    },
+    "rmsd": {
+     "pairs": 4431,
+     "shown": false,
+     "per_pair": false
+    }
+   }
+  },
   "rmsd": null,
   "metrics": {
    "shape": {

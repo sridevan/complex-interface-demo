@@ -3337,6 +3337,24 @@
    "1sku_1"
   ],
   "default_metric": "tmscore",
+  "coverage": {
+   "pairs": 1653,
+   "metrics": {
+    "shape": {
+     "pairs": 1653,
+     "shown": true
+    },
+    "tmscore": {
+     "pairs": 1653,
+     "shown": true
+    },
+    "rmsd": {
+     "pairs": 1653,
+     "shown": false,
+     "per_pair": true
+    }
+   }
+  },
   "rmsd": {
    "label": "Backbone RMSD after superposition (US-align)",
    "cell_label": "RMSD",

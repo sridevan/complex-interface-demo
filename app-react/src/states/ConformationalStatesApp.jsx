@@ -1,6 +1,8 @@
 import React, { useEffect, useMemo, useState } from 'react'
+import { methodLabel } from './methods'
 import DissimilarityHeatmap, { HEATMAP_HELP } from './DissimilarityHeatmap.jsx'
 import BlockSummary from './BlockSummary.jsx'
+import RunSummary from './RunSummary.jsx'
 import Hint from '../components/Hint.jsx'
 import SuperpositionViewer from './SuperpositionViewer.jsx'
 import SortIcon from '../components/SortIcon.jsx'
@@ -307,7 +309,10 @@ export default function ConformationalStatesApp({ config }) {
         </details>
       )}
 
-      <div className="cs-grid">
+      {/* Row 1 is its own flex container rather than part of .cs-grid: the grid below it is two
+          equal columns for the heatmap and the viewer, and a CSS grid cannot give one row a
+          different column split. */}
+      <div className="cs-row1">
         <div className="card cs-instances">
           <h2>Assembly instances</h2>
           <p className="note">
@@ -377,7 +382,7 @@ export default function ConformationalStatesApp({ config }) {
                       </td>
                       <td className="cs-title" title={r.structure_title}>{r.structure_title}</td>
                       <td className="num">{r.resolution ?? '—'}</td>
-                      <td>{r.exp_method ?? '—'}</td>
+                      <td>{r.exp_method ? methodLabel(r.exp_method) : '—'}</td>
                     </tr>
                   )
                 })}
@@ -389,8 +394,18 @@ export default function ConformationalStatesApp({ config }) {
                  from={from} to={from + paged.length} total={rows.length} unit="instances" />
         </div>
 
+        <RunSummary data={data} metricKeys={metricKeys} />
+      </div>
+
+      <div className="cs-grid">
         <div className="card cs-heatmap">
-          <h2>How similar is every pair? {helpHint(HEATMAP_HELP)}</h2>
+          {/* Named for what the card is, not posed as a question: the ramp runs low = same,
+              high = different, so the quantity on screen is a dissimilarity, and the old
+              "How similar…?" read inverted against its own colourbar. "Dissimilarity" is generic
+              here — the legend and the hover name the exact quantity, which changes with the
+              measure ("1 - TM-score", "RMSD"). The heading deliberately does not track the measure
+              switch beneath it: a section heading should stay a fixed landmark. */}
+          <h2>Pairwise structural dissimilarity {helpHint(HEATMAP_HELP)}</h2>
           {zoom ? (
             <p className="note cs-zoomed">
               Showing <b>{shownOrder.length} of {data.assemblies.length}</b> instances —{' '}
@@ -401,12 +416,11 @@ export default function ConformationalStatesApp({ config }) {
               </button>
             </p>
           ) : (
+            // The instance and pair counts used to lead this line; they now live once, in the
+            // provenance panel beside the table, so this says only what the reader can do here.
             <p className="note">
-              All {data.assemblies.length} instances compared against each other —{' '}
-              {(data.assemblies.length * (data.assemblies.length - 1) / 2).toLocaleString()} pairs.
-              {/* Shown at every size, not just the crowded ones: the gesture works throughout, and
-                  making the sentence conditional made the larger pages a line taller than the rest. */}
-              {' '}Drag down the diagonal to look inside a block.
+              Every instance compared with every other. Drag down the diagonal to look inside a
+              block.
             </p>
           )}
           {/* Handed to the heatmap rather than rendered here, so the measure switch and the zoom
@@ -459,7 +473,7 @@ export default function ConformationalStatesApp({ config }) {
           </h2>
           <p className="note">
             Compare the selected instances directly: backbone trace only, one colour each, all
-            superposed onto {data.reference_assembly}.
+            superposed onto the same reference.
           </p>
           {/* Beside the viewer, not at the top of the page: this fires on a heatmap or table click,
               and a message above row 1 is off-screen once the page is scrolled. */}
