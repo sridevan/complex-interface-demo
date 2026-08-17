@@ -122,8 +122,11 @@ export default function RunSummary({ data, metricKeys }) {
         </div>
       </div>
 
+      {/* Names what the identifier is, not just the identifier: "3sph_1" alone reads as a bare
+          accession, and which of the set everything was aligned to is the one fact here that
+          changes how every number above it should be read. */}
       <p className="rs-foot">
-        Superposed onto <span className="mono">{data.reference_assembly}</span>
+        Superposed onto reference assembly <span className="mono">{data.reference_assembly}</span>
       </p>
     </div>
   )
