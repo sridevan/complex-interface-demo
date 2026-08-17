@@ -311,15 +311,20 @@ export default function ConformationalStatesApp({ config }) {
       {!!(data.data_notes || []).length && (
         <details className="cs-notes">
           <summary>
-            Data notes — shape measure
+            Data notes{data.data_notes_scope === 'mixed' ? '' : ' — shape measure'}
             <span className="cs-notes-count">{data.data_notes.length}</span>
           </summary>
-          {/* Every note below was measured against the shape score. TM-score is length-normalised
-              and computed on CA positions alone, so several of these caveats — anything about
-              modelled extent or hydrogen content — may simply not apply to it. */}
+          {/* Which measure the notes belong to is declared by the dataset, not assumed. On most
+              complexes every note is a shape-score observation, and saying so matters: TM-score is
+              length-normalised and computed on CA positions alone, so caveats about modelled extent
+              or hydrogen content may not apply to it. Where a complex's notes span both measures,
+              claiming they are shape-only would be worse than saying nothing. */}
           <p className="cs-notes-scope">
-            Measured using the <b>shape</b> measure ({data.method.score_type} Zernike + spectral).
-            {metricKeys.length > 1 && ' Not re-measured for TM-score, so these may not apply there.'}
+            {data.data_notes_scope === 'mixed'
+              ? 'Each note names the measure it was made against.'
+              : <>Measured using the <b>shape</b> measure ({data.method.score_type} Zernike
+                 + spectral).
+                 {metricKeys.length > 1 && ' Not re-measured for TM-score, so these may not apply there.'}</>}
           </p>
           <ul>
             {data.data_notes.map((n, i) => <li key={i}>{n}</li>)}

@@ -66,6 +66,12 @@ RCSB_ASSEMBLY = "https://files.rcsb.org/download/{pdb}-assembly{asm}.cif"
 # them: several complexes have instances that are structurally near-identical yet score as
 # maximally different.
 # ---------------------------------------------------------------------------
+# Which measure a complex's notes were made against. Historically every note was a shape-score
+# observation and the page said so for all of them; PDB-CPX-106364's notes report TM-score
+# separation and rotor geometry as well, so a blanket "measured using the shape measure, may not
+# apply to TM-score" would be false there. Default stays "shape".
+DATA_NOTES_SCOPE = {"PDB-CPX-106364": "mixed"}
+
 DATA_NOTES = {
     "PDB-CPX-106364": [
         "Every entry here is a focussed refinement of the F1 head and rotor, not the whole "
@@ -80,10 +86,21 @@ DATA_NOTES = {
         "at all (Cohen's d 6.98). The shape score also recovers them as contiguous blocks but "
         "with overlapping ranges (d 1.47), which is what the atom-content caveat on that measure "
         "predicts for reconstructions of differing modelled extent.",
-        "Substates order less cleanly than the states containing them. On the shape score the "
-        "substates of states 2 and 3 come out in their labelled sequence, but state 1's do not; "
-        "on TM-score none of the three ladders is recovered in order. Read the block structure, "
-        "not the position within a block.",
+        "Substate lettering is NOT a rotation sequence, so do not read position within a block as "
+        "progress around the cycle. Measuring the rotor's rotation directly (fit the alpha3beta3 "
+        "head, then take the residual rotation carrying the rotor over) puts state 1 at "
+        "*=115 A=113 B=115 C=117 D=97 E=102 F=107 degrees and state 2 at *=7 A=0 B=17 C=10 D=5: "
+        "monotonic in neither. The three primary states sit near 0, 110 and 128 degrees, the ~120 "
+        "degree steps expected of a three-fold rotary machine, which is what the blocks are. Those "
+        "angles are magnitudes rather than signed rotations about the rotor axis, which is enough "
+        "at these separations but would not tell apart opposite rotations of similar size.",
+        "No measure on this page resolves the substates, and the reason is dilution rather than "
+        "precision. The rotor is 1,266 of 4,506 CA atoms, so a whole-assembly score is dominated "
+        "by a head that barely moves: within-state backbone RMSD spans 0.5-2.9 A here, against "
+        "0.9-11.3 A when the head is used for the fit and only the rotor is measured. Ordering on "
+        "that rotor-only distance recovers the true angular sequence of state 3 exactly, and most "
+        "of states 1 and 2, failing only among structures within about 4 degrees of each other, "
+        "which is below what a 2.8-4.2 A reconstruction separates.",
         "Coordinates were fetched from RCSB rather than from PDBe. PDBe's ModelServer answered "
         "404 to every request while this was built, including for entries that plainly have the "
         "assembly. RCSB assembles from the same deposited matrices and its atom counts match "
@@ -1243,6 +1260,7 @@ def main():
         },
         "subset": subset,
         "data_notes": DATA_NOTES.get(args.complex, []),
+        "data_notes_scope": DATA_NOTES_SCOPE.get(args.complex, "shape"),
         "assemblies": assemblies,
         "heatmap": {
             "labels": labels,
