@@ -76,6 +76,17 @@ function helpHint(entries, { width = 330, tail = null } = {}) {
   )
 }
 
+// Moved out of a note under the heading: it described what is already on screen (a backbone trace
+// in colours) and named a reference the provenance panel already names. What it did not say is how
+// a structure gets here, which is the part a reader can act on.
+const VIEWER_HELP = [
+  ['What you see', 'Backbone trace only, one colour per instance, every one superposed onto the '
+    + 'same reference assembly so the differences you see are real and not placement.'],
+  ['Choosing structures', `Click a cell on the matrix diagonal to add that instance, or a cell `
+    + `below the diagonal to add both of a pair. Rows in the table above work too. Up to `
+    + `${MAX_SHOWN} at once; click again to remove.`],
+]
+
 const COLS = [
   { key: 'assembly_id', label: 'Assembly' },
   { key: 'structure_title', label: 'Structure title' },
@@ -416,12 +427,12 @@ export default function ConformationalStatesApp({ config }) {
               </button>
             </p>
           ) : (
-            // The instance and pair counts used to lead this line; they now live once, in the
-            // provenance panel beside the table, so this says only what the reader can do here.
-            <p className="note">
-              Every instance compared with every other. Drag down the diagonal to look inside a
-              block.
-            </p>
+            // Only the gesture. "Every instance compared with every other" was the heading said
+            // twice, and the counts live in the provenance panel. This clause stays visible rather
+            // than folding into the info icon because drag-to-zoom is the one thing here that
+            // cannot be discovered by looking: a reader who does not know the gesture exists has
+            // no reason to open a popup to find it.
+            <p className="note">Drag down the diagonal to look inside a block.</p>
           )}
           {/* Handed to the heatmap rather than rendered here, so the measure switch and the zoom
               control share one bar instead of stacking two thin rows above the matrix. The
@@ -461,7 +472,7 @@ export default function ConformationalStatesApp({ config }) {
 
         <div className="card cs-viewer">
           <h2>
-            3D view
+            3D view {helpHint(VIEWER_HELP)}
             <span className="cs-count" title={`Up to ${MAX_SHOWN} instances can be superposed`}>
               {shown.length} of {MAX_SHOWN}
             </span>
@@ -470,10 +481,6 @@ export default function ConformationalStatesApp({ config }) {
                       title="Clear the current selection">clear</button>
             )}
           </h2>
-          <p className="note">
-            Compare the selected instances directly: backbone trace only, one colour each, all
-            superposed onto the same reference.
-          </p>
           {/* Beside the viewer, not at the top of the page: this fires on a heatmap or table click,
               and a message above row 1 is off-screen once the page is scrolled. */}
           {notice && <p className="cs-notice">{notice}</p>}
