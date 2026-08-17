@@ -89,6 +89,10 @@ export default function ConformationalStatesApp({ config }) {
   const [notice, setNotice] = useState(null)
   const [error, setError] = useState(null)
   const [sort, setSort] = useState({ key: null, dir: 'asc' })   // null = heatmap (seriation) order
+  // Lift the displayed structures to the top of the table. Opt-in, never automatic: reordering the
+  // list every time a heatmap cell is clicked would move rows out from under the pointer and lose
+  // the reader's place on every selection.
+  const [selectedFirst, setSelectedFirst] = useState(false)
   const [page, setPage] = useState(0)
   // The heatmap solves its own square size from the card width; the viewer is told to match it so
   // the two row-2 cards end level with no filler inside either one.
@@ -165,8 +169,11 @@ export default function ConformationalStatesApp({ config }) {
     else addMany(ids)
   }
 
-  // Re-sorting re-derives the list, so send the reader back to the first page.
-  useEffect(() => { setPage(0) }, [sort.key, sort.dir, basePath, zoom])
+  // Re-sorting re-derives the list, so send the reader back to the first page. `selectedFirst` is
+  // included because toggling it moves the selected rows to page 1 — leaving the reader on page 12
+  // would hide the thing they just asked to see. Deliberately NOT keyed on `slots`: once the mode
+  // is on, selecting another structure should not also jump the page.
+  useEffect(() => { setPage(0) }, [sort.key, sort.dir, basePath, zoom, selectedFirst])
   // Each measure carries its OWN seriation, so a range of indices means something different under
   // each one. Carrying a zoom across the switch would silently show a different set of instances.
   useEffect(() => { setZoom(null) }, [metric, basePath])
@@ -220,6 +227,16 @@ export default function ConformationalStatesApp({ config }) {
   const seriation = Object.fromEntries(shownOrder.map((a, i) => [a, i]))
   const rows = [...data.assemblies].filter((a) => !inView || inView.has(a.assembly_id))
     .sort((x, y) => {
+      // Selected first, when asked for. A stable PARTITION, not a re-sort: whatever order was in
+      // force still holds within each group, so this lifts the chosen rows out of the list rather
+      // than scrambling it. Worth having because the table is paginated at 10 and a large set runs
+      // to 35 pages — two structures picked from opposite ends of the matrix are otherwise 30
+      // pages apart, and the table is the only place their metadata is shown.
+      if (selectedFirst) {
+        const sx = slots.includes(x.assembly_id) ? 0 : 1
+        const sy = slots.includes(y.assembly_id) ? 0 : 1
+        if (sx !== sy) return sx - sy
+      }
       if (!sort.key) return seriation[x.assembly_id] - seriation[y.assembly_id]
       const a = x[sort.key], b = y[sort.key]
       if (a == null) return 1
@@ -297,12 +314,26 @@ export default function ConformationalStatesApp({ config }) {
             selection.
           </p>
           <div className="cs-toolbar">
+            {/* The Order label states plainly when the rows no longer mirror the matrix. That
+                correspondence is load-bearing — row N in the table is row N in the heatmap — so
+                anything that suspends it has to say so rather than let the reader assume. */}
             <span className="cs-order">
-              Order: <b>{sort.key ? COLS.find((c) => c.key === sort.key)?.label
-                : 'matching the heatmap'}</b>
+              Order: <b>{[selectedFirst && 'selected first',
+                          sort.key ? COLS.find((c) => c.key === sort.key)?.label
+                                   : (!selectedFirst && 'matching the heatmap')]
+                          .filter(Boolean).join(', then ')}</b>
             </span>
-            {sort.key && (
-              <button className="cs-linkbtn" onClick={() => setSort({ key: null, dir: 'asc' })}
+            <label className="cs-order-toggle"
+                   title={`Lift the ${shown.length ? shown.length : ''} displayed structure`
+                          + `${shown.length === 1 ? '' : 's'} to the top of the table, keeping the `
+                          + `current order within each group`}>
+              <input type="checkbox" checked={selectedFirst}
+                     onChange={(e) => setSelectedFirst(e.target.checked)} />
+              selected first
+            </label>
+            {(sort.key || selectedFirst) && (
+              <button className="cs-linkbtn"
+                      onClick={() => { setSort({ key: null, dir: 'asc' }); setSelectedFirst(false) }}
                       title="Return the rows to the heatmap's ordering">
                 match the heatmap again
               </button>

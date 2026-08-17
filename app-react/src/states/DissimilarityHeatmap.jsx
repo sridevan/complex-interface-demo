@@ -42,6 +42,11 @@ function viridis(t) {
 // made genuinely identical PAIRS indistinguishable from the self-comparison. Grey appears nowhere
 // in viridis, so it cannot be mistaken for a value.
 const DIAGONAL = '#d7dae0'
+// Outline colour for anything drawn OVER the matrix: the selection ring's halo, the hover outline,
+// the marked drag range. Deliberately not white — white flashed against the data and, now that the
+// diagonal is a light grey, had nothing to separate itself from where the selection ring sits.
+// Near-black is darker than viridis's darkest (#440154), so it reads at every shade.
+const HALO = '#15191f'
 
 const LEGEND_STOPS = Array.from({ length: 24 }, (_, i) => i / 23)
 
@@ -350,16 +355,19 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
     //
     // Drawn over a WHITE halo. Three of the five slot colours (the blue, the light blue and the
     // green) sit inside viridis's own blue-to-green range, so a bare ring can read as just another
-    // cell. White appears nowhere in viridis, so the halo separates the marker from the data at
-    // every shade while the ring itself keeps the structure's own colour — which is what ties it
-    // to the 3D view and the legend.
+    // cell. The halo separates the marker from the data while the ring itself keeps the
+    // structure's own colour, which is what ties it to the 3D view and the legend.
+    //
+    // Dark rather than white. The ring sits on the diagonal, which is a light neutral grey, so a
+    // white halo had almost nothing to separate itself from; dark reads against both the grey
+    // diagonal and the neighbouring cells the ring overlaps.
     const ring = Math.max(2, Math.min(3, cell / 4))
     const halo = ring + 2
     for (let i = 0; i < n; i++) {
       const col = colorOf[order[i]]
       if (!col) continue
       ctx.lineWidth = halo
-      ctx.strokeStyle = '#fff'
+      ctx.strokeStyle = HALO
       ctx.strokeRect(i * cell - halo / 2, i * cell - halo / 2, cell + halo, cell + halo)
       ctx.lineWidth = ring
       ctx.strokeStyle = col
@@ -376,23 +384,21 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
           ctx.moveTo(b, a); ctx.lineTo(a, b)
           ctx.stroke()
         }
+        // No halo: the ✕ sits on the diagonal, which is a light neutral grey, so a dark stroke
+        // reads on its own.
         ctx.lineCap = 'round'
-        ctx.lineWidth = 3.5
-        ctx.strokeStyle = 'rgba(255,255,255,.92)'   // halo, as the table's text-shadow does
-        cross()
-        ctx.lineWidth = 1.8
-        ctx.strokeStyle = '#1c2430'
+        ctx.lineWidth = 2
+        ctx.strokeStyle = HALO
         cross()
       }
     }
-    // Keyboard cursor, so arrow-key navigation is visible without per-cell DOM nodes.
+    // Keyboard cursor, so arrow-key navigation is visible without per-cell DOM nodes. Same
+    // near-black as every other mark over the matrix, no light halo: viridis's darkest is
+    // #440154, which #15191f still separates from.
     if (movedRef.current) {
       ctx.lineWidth = 2
-      ctx.strokeStyle = '#fff'
+      ctx.strokeStyle = HALO
       ctx.strokeRect(cur.j * cell - 1, cur.i * cell - 1, cell + 2, cell + 2)
-      ctx.lineWidth = 1
-      ctx.strokeStyle = 'rgba(0,0,0,.8)'
-      ctx.strokeRect(cur.j * cell - 2.5, cur.i * cell - 2.5, cell + 5, cell + 5)
     }
   }, [tile, cell, n, colorOf, order, cur, labelled, measured])
 
@@ -527,7 +533,8 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
                   const picked = isDiag && colorOf[r]
                   if (picked) {
                     const w = cell < 14 ? 2 : 3
-                    style.boxShadow = `inset 0 0 0 ${w}px ${colorOf[r]}, inset 0 0 0 ${w + 2}px #fff`
+                    style.boxShadow =
+                      `inset 0 0 0 ${w}px ${colorOf[r]}, inset 0 0 0 ${w + 2}px ${HALO}`
                   }
                   const shownNow = colorOf[r] && (isDiag || colorOf[c])
                   const label = isDiag
