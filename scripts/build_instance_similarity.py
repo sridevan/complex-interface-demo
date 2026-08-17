@@ -84,9 +84,21 @@ DATA_NOTES = {
         "grouping them by condition gives -0.15 and -0.16, and by detergent 0.26 and -0.03. "
         "Values at or below zero mean instances sharing a condition are no more alike than "
         "instances that do not, so what the view responds to here is structure and not batch.",
-        "Seriation puts Closed, then Open with Open-ready, then Resting in contiguous blocks, "
-        "with conditions scattered inside each block rather than forming blocks of their own. "
-        "That scattering is the negative control made visible: it is what a measure reading "
+        "Four conformations are labelled but the matrix shows two families, not four blocks. "
+        "Closed, Open-ready and Open sit 0.008 to 0.015 apart on 1 - TM-score while all three sit "
+        "0.033 to 0.048 from Resting, a gap three to five times wider, so they read as one "
+        "connected family rather than three groups.",
+        "Within that family the order is mechanistic, not arbitrary. Seriation returns Closed, "
+        "then Open-ready, then Open, and the distances are close to additive (Closed to Open-ready "
+        "0.0100, Open-ready to Open 0.0079, Closed to Open 0.0150 against 0.0179 if the three were "
+        "exactly collinear), so Open-ready really does lie between the other two. This is the one "
+        "place in this app where a sequence of states, and not just a grouping, comes back out.",
+        "Resting is the loose group. Its own instances differ by 0.0183 on average, which is more "
+        "than the whole distance from Closed to Open, so it is the most internally varied set on "
+        "the page rather than a tight state, and the NuoE variant 9q8i_1 seriates in among its "
+        "members rather than apart from them.",
+        "Conditions scatter inside every block rather than forming blocks of their own. That "
+        "scattering is the negative control made visible: it is what a measure reading "
         "conformation rather than provenance looks like.",
         "Three instances (7nyr_1, 7nyu_1, 7nyv_1) come from a separate study that numbers its "
         "conformations 1 to 3 instead of naming them, and they group together at one end of the "
