@@ -70,9 +70,34 @@ RCSB_ASSEMBLY = "https://files.rcsb.org/download/{pdb}-assembly{asm}.cif"
 # observation and the page said so for all of them; PDB-CPX-106364's notes report TM-score
 # separation and rotor geometry as well, so a blanket "measured using the shape measure, may not
 # apply to TM-score" would be false there. Default stays "shape".
-DATA_NOTES_SCOPE = {"PDB-CPX-106364": "mixed"}
+DATA_NOTES_SCOPE = {"PDB-CPX-106364": "mixed", "PDB-CPX-138641": "mixed"}
 
 DATA_NOTES = {
+    "PDB-CPX-138641": [
+        "The depositors varied two things independently and said so in the entry titles: the "
+        "conformation (Resting, Closed, Open, Open-ready) and the sample condition (apo, NADH, "
+        "turnover at pH 6, turnover at pH 8, decylubiquinone, piericidin A), across three "
+        "detergent preparations. That makes this the one set here carrying its own negative "
+        "control, rather than only a grouping to be recovered.",
+        "The matrix separates conformation and is blind to sample preparation. Grouping the same "
+        "24 instances by conformation gives Cohen's d 1.42 on TM-score and 1.52 on shape; "
+        "grouping them by condition gives -0.15 and -0.16, and by detergent 0.26 and -0.03. "
+        "Values at or below zero mean instances sharing a condition are no more alike than "
+        "instances that do not, so what the view responds to here is structure and not batch.",
+        "Seriation puts Closed, then Open with Open-ready, then Resting in contiguous blocks, "
+        "with conditions scattered inside each block rather than forming blocks of their own. "
+        "That scattering is the negative control made visible: it is what a measure reading "
+        "conformation rather than provenance looks like.",
+        "Three instances (7nyr_1, 7nyu_1, 7nyv_1) come from a separate study that numbers its "
+        "conformations 1 to 3 instead of naming them, and they group together at one end of the "
+        "matrix. Whether that block is a genuine conformational difference or an artefact of a "
+        "different reconstruction is not something this page can decide, and nothing here should "
+        "be read as settling it.",
+        "Two assemblies with US-align scores, 9taj_1 and 9tam_1, are absent: they are recent "
+        "depositions with no entry yet in the shape-score table this page is built from, and the "
+        "build starts there. The 24 instances shown are every one that could be scored on both "
+        "measures, not every one deposited.",
+    ],
     "PDB-CPX-106364": [
         "Every entry here is a focussed refinement of the F1 head and rotor, not the whole "
         "F-ATP synthase. The comparison covers that region only, so nothing on this page speaks "

@@ -66,6 +66,14 @@ function Root() {
     title: 'Human haemoglobin',
     organism: 'Homo sapiens',
   }} /></>
+  // Respiratory complex I: the depositors varied conformation and sample condition
+  // independently, so this set carries its own negative control. The matrix separates
+  // conformation (Cohen's d 1.42) and is blind to condition (-0.15) and detergent (0.26).
+  if (route === '#complex1-similarity') return <><BackLink /><ConformationalStatesApp config={{
+    basePath: 'complex1-similarity', complexId: 'PDB-CPX-138641',
+    title: 'Respiratory complex I',
+    organism: 'Escherichia coli',
+  }} /></>
   // Rotary F-ATP synthase: the depositors labelled three primary rotary states and their
   // substates in the entry titles, so this set has an independent ground truth to check the view
   // against. TM-score separates the three states with no overlap at all (Cohen's d 6.98, every

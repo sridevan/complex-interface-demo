@@ -1,0 +1,3937 @@
+{
+ "complex_id": "PDB-CPX-138641",
+ "reference_assembly": "7z83_1",
+ "method": {
+  "score_type": "combined",
+  "linkage": "average",
+  "cut_mode": "auto_gap",
+  "n_clusters": 5,
+  "source": "pdbe_complex_clustering/clustering.py (notebook defaults)",
+  "coordinate_source": "PDBe model server assembly coordinates",
+  "atoms_shipped": "backbone"
+ },
+ "subset": null,
+ "data_notes": [
+  "The depositors varied two things independently and said so in the entry titles: the conformation (Resting, Closed, Open, Open-ready) and the sample condition (apo, NADH, turnover at pH 6, turnover at pH 8, decylubiquinone, piericidin A), across three detergent preparations. That makes this the one set here carrying its own negative control, rather than only a grouping to be recovered.",
+  "The matrix separates conformation and is blind to sample preparation. Grouping the same 24 instances by conformation gives Cohen's d 1.42 on TM-score and 1.52 on shape; grouping them by condition gives -0.15 and -0.16, and by detergent 0.26 and -0.03. Values at or below zero mean instances sharing a condition are no more alike than instances that do not, so what the view responds to here is structure and not batch.",
+  "Seriation puts Closed, then Open with Open-ready, then Resting in contiguous blocks, with conditions scattered inside each block rather than forming blocks of their own. That scattering is the negative control made visible: it is what a measure reading conformation rather than provenance looks like.",
+  "Three instances (7nyr_1, 7nyu_1, 7nyv_1) come from a separate study that numbers its conformations 1 to 3 instead of naming them, and they group together at one end of the matrix. Whether that block is a genuine conformational difference or an artefact of a different reconstruction is not something this page can decide, and nothing here should be read as settling it.",
+  "Two assemblies with US-align scores, 9taj_1 and 9tam_1, are absent: they are recent depositions with no entry yet in the shape-score table this page is built from, and the build starts there. The 24 instances shown are every one that could be scored on both measures, not every one deposited."
+ ],
+ "data_notes_scope": "mixed",
+ "assemblies": [
+  {
+   "assembly_id": "7nyr_1",
+   "pdb_id": "7nyr",
+   "structure_title": "Respiratory complex I from Escherichia coli - conformation 1",
+   "resolution": 3.3,
+   "exp_method": "em",
+   "cluster_id": 4,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.7504,
+   "ligands": [
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "CSX",
+     "copies": 3,
+     "name": "S-OXY CYSTEINE"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    },
+    {
+     "comp": "FMN",
+     "copies": 1,
+     "name": "FLAVIN MONONUCLEOTIDE"
+    }
+   ],
+   "mutations": [
+    {
+     "label": "G532S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [
+    {
+     "comp": "CSX",
+     "name": "S-OXY CYSTEINE"
+    }
+   ],
+   "transform": {
+    "rotation": [
+     0.5348176633,
+     -0.624669451,
+     0.5689974903,
+     -0.1012612202,
+     -0.7159252987,
+     -0.6907945656,
+     0.8388779603,
+     0.3118317553,
+     -0.4461442862
+    ],
+    "translation": [
+     -26.888204975,
+     389.9251299874,
+     -18.2441207604
+    ],
+    "source": "7nyr_1-7z83_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "7nyu_1",
+   "pdb_id": "7nyu",
+   "structure_title": "Respiratory complex I from Escherichia coli - conformation 2",
+   "resolution": 3.8,
+   "exp_method": "em",
+   "cluster_id": 5,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.6933,
+   "ligands": [
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "CSX",
+     "copies": 3,
+     "name": "S-OXY CYSTEINE"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    },
+    {
+     "comp": "FMN",
+     "copies": 1,
+     "name": "FLAVIN MONONUCLEOTIDE"
+    }
+   ],
+   "mutations": [
+    {
+     "label": "G532S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [
+    {
+     "comp": "CSX",
+     "name": "S-OXY CYSTEINE"
+    }
+   ],
+   "transform": {
+    "rotation": [
+     0.5788871042,
+     -0.6279914751,
+     0.5201119377,
+     -0.1396567458,
+     -0.7047888991,
+     -0.695534759,
+     0.8033590193,
+     0.3299989619,
+     -0.4956964507
+    ],
+    "translation": [
+     -29.697765044,
+     408.8159877212,
+     -9.9344694877
+    ],
+    "source": "7nyu_1-7z83_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "7nyv_1",
+   "pdb_id": "7nyv",
+   "structure_title": "Respiratory complex I from Escherichia coli - conformation 3",
+   "resolution": 3.7,
+   "exp_method": "em",
+   "cluster_id": 4,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.8042,
+   "ligands": [
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "CSX",
+     "copies": 3,
+     "name": "S-OXY CYSTEINE"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    },
+    {
+     "comp": "FMN",
+     "copies": 1,
+     "name": "FLAVIN MONONUCLEOTIDE"
+    }
+   ],
+   "mutations": [
+    {
+     "label": "G532S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [
+    {
+     "comp": "CSX",
+     "name": "S-OXY CYSTEINE"
+    }
+   ],
+   "transform": {
+    "rotation": [
+     0.5560938039,
+     -0.6267296625,
+     0.545865928,
+     -0.1121429557,
+     -0.7073590498,
+     -0.6979019503,
+     0.8235190579,
+     0.3268839317,
+     -0.4636413015
+    ],
+    "translation": [
+     -29.2154480813,
+     402.6852625261,
+     -20.5492575978
+    ],
+    "source": "7nyv_1-7z83_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "7p61_1",
+   "pdb_id": "7p61",
+   "structure_title": "Complex I from E. coli, DDM-purified, with NADH, Resting state",
+   "resolution": 3.2,
+   "exp_method": "em",
+   "cluster_id": 1,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.5132,
+   "ligands": [
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "3PE",
+     "copies": 2,
+     "name": "1,2-Distearoyl-sn-glycerophosphoethanolamine"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    },
+    {
+     "comp": "FMN",
+     "copies": 1,
+     "name": "FLAVIN MONONUCLEOTIDE"
+    },
+    {
+     "comp": "NAI",
+     "copies": 1,
+     "name": "1,4-DIHYDRONICOTINAMIDE ADENINE DINUCLEOTIDE"
+    }
+   ],
+   "mutations": [
+    {
+     "label": "D168G",
+     "type": "Conflict"
+    },
+    {
+     "label": "I580T",
+     "type": "Conflict"
+    },
+    {
+     "label": "V561I",
+     "type": "Conflict"
+    },
+    {
+     "label": "F566Y",
+     "type": "Conflict"
+    },
+    {
+     "label": "G532S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9953953251,
+     -0.0930860024,
+     0.0228723191,
+     0.0920055682,
+     0.9947655697,
+     0.044457133,
+     -0.0268909323,
+     -0.0421480416,
+     0.9987494282
+    ],
+    "translation": [
+     11.340211932,
+     -12.5512934286,
+     9.9796141519
+    ],
+    "source": "7p61_1-7z83_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "7p62_1",
+   "pdb_id": "7p62",
+   "structure_title": "Complex I from E. coli, DDM-purified, Apo, Resting state",
+   "resolution": 3.6,
+   "exp_method": "em",
+   "cluster_id": 1,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.4861,
+   "ligands": [
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "3PE",
+     "copies": 2,
+     "name": "1,2-Distearoyl-sn-glycerophosphoethanolamine"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    },
+    {
+     "comp": "FMN",
+     "copies": 1,
+     "name": "FLAVIN MONONUCLEOTIDE"
+    }
+   ],
+   "mutations": [
+    {
+     "label": "D168G",
+     "type": "Conflict"
+    },
+    {
+     "label": "I580T",
+     "type": "Conflict"
+    },
+    {
+     "label": "V561I",
+     "type": "Conflict"
+    },
+    {
+     "label": "F566Y",
+     "type": "Conflict"
+    },
+    {
+     "label": "G532S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9953662244,
+     -0.0812936302,
+     -0.051355867,
+     0.079219063,
+     0.9960046711,
+     -0.0412193558,
+     0.0545015545,
+     0.0369599909,
+     0.9978294141
+    ],
+    "translation": [
+     12.1720553409,
+     0.5653495966,
+     -8.7666834948
+    ],
+    "source": "7p62_1-7z83_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "7p63_1",
+   "pdb_id": "7p63",
+   "structure_title": "Complex I from E. coli, DDM/LMNG-purified, under Turnover at pH 6, Closed state",
+   "resolution": 3.4,
+   "exp_method": "em",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.519,
+   "ligands": [
+    {
+     "comp": "3PE",
+     "copies": 8,
+     "name": "1,2-Distearoyl-sn-glycerophosphoethanolamine"
+    },
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "LFA",
+     "copies": 4,
+     "name": "EICOSANE"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    },
+    {
+     "comp": "DCQ",
+     "copies": 1,
+     "name": "2-decyl-5,6-dimethoxy-3-methylcyclohexa-2,5-diene-1,4-dione"
+    }
+   ],
+   "mutations": [
+    {
+     "label": "D168G",
+     "type": "Conflict"
+    },
+    {
+     "label": "I580T",
+     "type": "Conflict"
+    },
+    {
+     "label": "V561I",
+     "type": "Conflict"
+    },
+    {
+     "label": "F566Y",
+     "type": "Conflict"
+    },
+    {
+     "label": "G532S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9983461953,
+     -0.0066104026,
+     -0.0571067154,
+     0.0065342406,
+     0.9999774959,
+     -0.0015203043,
+     0.0571154801,
+     0.001144641,
+     0.9983669224
+    ],
+    "translation": [
+     1.2525305719,
+     -0.4731230494,
+     -2.4305170328
+    ],
+    "source": "7p63_1-7z83_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "7p64_1",
+   "pdb_id": "7p64",
+   "structure_title": "Complex I from E. coli, DDM/LMNG-purified, under Turnover at pH 6, Open state",
+   "resolution": 2.5,
+   "exp_method": "em",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.417,
+   "ligands": [
+    {
+     "comp": "3PE",
+     "copies": 18,
+     "name": "1,2-Distearoyl-sn-glycerophosphoethanolamine"
+    },
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "LFA",
+     "copies": 5,
+     "name": "EICOSANE"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    },
+    {
+     "comp": "DCQ",
+     "copies": 1,
+     "name": "2-decyl-5,6-dimethoxy-3-methylcyclohexa-2,5-diene-1,4-dione"
+    }
+   ],
+   "mutations": [
+    {
+     "label": "D168G",
+     "type": "Conflict"
+    },
+    {
+     "label": "I580T",
+     "type": "Conflict"
+    },
+    {
+     "label": "V561I",
+     "type": "Conflict"
+    },
+    {
+     "label": "F566Y",
+     "type": "Conflict"
+    },
+    {
+     "label": "G532S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.997710568,
+     -0.0266839925,
+     -0.0621416686,
+     0.0259710809,
+     0.9995876094,
+     -0.0122521082,
+     0.0624429772,
+     0.0106101715,
+     0.9979921337
+    ],
+    "translation": [
+     5.5255517221,
+     -0.4044432597,
+     -5.1510610321
+    ],
+    "source": "7p64_1-7z83_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "7p69_1",
+   "pdb_id": "7p69",
+   "structure_title": "Complex I from E. coli, DDM/LMNG-purified, under Turnover at pH 6, Resting state",
+   "resolution": 3.0,
+   "exp_method": "em",
+   "cluster_id": 3,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.5268,
+   "ligands": [
+    {
+     "comp": "3PE",
+     "copies": 12,
+     "name": "1,2-Distearoyl-sn-glycerophosphoethanolamine"
+    },
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "LFA",
+     "copies": 6,
+     "name": "EICOSANE"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    },
+    {
+     "comp": "FMN",
+     "copies": 1,
+     "name": "FLAVIN MONONUCLEOTIDE"
+    }
+   ],
+   "mutations": [
+    {
+     "label": "D168G",
+     "type": "Conflict"
+    },
+    {
+     "label": "I580T",
+     "type": "Conflict"
+    },
+    {
+     "label": "V561I",
+     "type": "Conflict"
+    },
+    {
+     "label": "F566Y",
+     "type": "Conflict"
+    },
+    {
+     "label": "G532S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9992263678,
+     -0.0035069151,
+     -0.0391710024,
+     0.001992614,
+     0.9992515547,
+     -0.0386310747,
+     0.039277161,
+     0.0385231358,
+     0.9984854894
+    ],
+    "translation": [
+     1.6901349984,
+     6.8863424047,
+     -9.7371311568
+    ],
+    "source": "7p69_1-7z83_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "7p7c_1",
+   "pdb_id": "7p7c",
+   "structure_title": "Complex I from E. coli, DDM/LMNG-purified, Apo, Open state",
+   "resolution": 2.4,
+   "exp_method": "em",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.4273,
+   "ligands": [
+    {
+     "comp": "3PE",
+     "copies": 10,
+     "name": "1,2-Distearoyl-sn-glycerophosphoethanolamine"
+    },
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "LFA",
+     "copies": 3,
+     "name": "EICOSANE"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    },
+    {
+     "comp": "FMN",
+     "copies": 1,
+     "name": "FLAVIN MONONUCLEOTIDE"
+    }
+   ],
+   "mutations": [
+    {
+     "label": "D168G",
+     "type": "Conflict"
+    },
+    {
+     "label": "I580T",
+     "type": "Conflict"
+    },
+    {
+     "label": "V561I",
+     "type": "Conflict"
+    },
+    {
+     "label": "F566Y",
+     "type": "Conflict"
+    },
+    {
+     "label": "G532S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9975519462,
+     -0.0272128084,
+     -0.0644172158,
+     0.0249584332,
+     0.9990563228,
+     -0.0355463158,
+     0.0653237419,
+     0.0338515437,
+     0.9972897682
+    ],
+    "translation": [
+     6.3558460402,
+     3.3953746845,
+     -9.4230109503
+    ],
+    "source": "7p7c_1-7z83_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "7p7e_1",
+   "pdb_id": "7p7e",
+   "structure_title": "Complex I from E. coli, DDM/LMNG-purified, Apo, Resting state",
+   "resolution": 2.7,
+   "exp_method": "em",
+   "cluster_id": 3,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.629,
+   "ligands": [
+    {
+     "comp": "3PE",
+     "copies": 9,
+     "name": "1,2-Distearoyl-sn-glycerophosphoethanolamine"
+    },
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "LFA",
+     "copies": 3,
+     "name": "EICOSANE"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    },
+    {
+     "comp": "FMN",
+     "copies": 1,
+     "name": "FLAVIN MONONUCLEOTIDE"
+    }
+   ],
+   "mutations": [
+    {
+     "label": "D168G",
+     "type": "Conflict"
+    },
+    {
+     "label": "I580T",
+     "type": "Conflict"
+    },
+    {
+     "label": "V561I",
+     "type": "Conflict"
+    },
+    {
+     "label": "F566Y",
+     "type": "Conflict"
+    },
+    {
+     "label": "G532S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9981876997,
+     0.0396790637,
+     -0.0452425481,
+     -0.0387619331,
+     0.9990283724,
+     0.020971975,
+     0.0460307376,
+     -0.0191802789,
+     0.9987558701
+    ],
+    "translation": [
+     -5.3052892496,
+     -1.8478277595,
+     -2.3224756757
+    ],
+    "source": "7p7e_1-7z83_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "7p7j_1",
+   "pdb_id": "7p7j",
+   "structure_title": "Complex I from E. coli, DDM/LMNG-purified, with DQ, Open state",
+   "resolution": 2.7,
+   "exp_method": "em",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.4231,
+   "ligands": [
+    {
+     "comp": "3PE",
+     "copies": 12,
+     "name": "1,2-Distearoyl-sn-glycerophosphoethanolamine"
+    },
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "LFA",
+     "copies": 4,
+     "name": "EICOSANE"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    },
+    {
+     "comp": "DCQ",
+     "copies": 1,
+     "name": "2-decyl-5,6-dimethoxy-3-methylcyclohexa-2,5-diene-1,4-dione"
+    }
+   ],
+   "mutations": [
+    {
+     "label": "D168G",
+     "type": "Conflict"
+    },
+    {
+     "label": "I580T",
+     "type": "Conflict"
+    },
+    {
+     "label": "V561I",
+     "type": "Conflict"
+    },
+    {
+     "label": "F566Y",
+     "type": "Conflict"
+    },
+    {
+     "label": "G532S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9996633071,
+     0.0234892622,
+     -0.0110239274,
+     -0.0237683376,
+     0.9993817606,
+     -0.0259068066,
+     0.0104085802,
+     0.0261601044,
+     0.9996035766
+    ],
+    "translation": [
+     -2.821491237,
+     6.7821520245,
+     -5.7884240193
+    ],
+    "source": "7p7j_1-7z83_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "7p7k_1",
+   "pdb_id": "7p7k",
+   "structure_title": "Complex I from E. coli, DDM/LMNG-purified, with DQ, Resting state",
+   "resolution": 3.1,
+   "exp_method": "em",
+   "cluster_id": 3,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.5778,
+   "ligands": [
+    {
+     "comp": "3PE",
+     "copies": 8,
+     "name": "1,2-Distearoyl-sn-glycerophosphoethanolamine"
+    },
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "LFA",
+     "copies": 4,
+     "name": "EICOSANE"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    },
+    {
+     "comp": "FMN",
+     "copies": 1,
+     "name": "FLAVIN MONONUCLEOTIDE"
+    }
+   ],
+   "mutations": [
+    {
+     "label": "D168G",
+     "type": "Conflict"
+    },
+    {
+     "label": "I580T",
+     "type": "Conflict"
+    },
+    {
+     "label": "V561I",
+     "type": "Conflict"
+    },
+    {
+     "label": "F566Y",
+     "type": "Conflict"
+    },
+    {
+     "label": "G532S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9995396691,
+     0.0267411465,
+     0.0143304193,
+     -0.0260096289,
+     0.9984596863,
+     -0.0490076935,
+     -0.0156188679,
+     0.0486124049,
+     0.9986955918
+    ],
+    "translation": [
+     -5.1062501318,
+     12.0330892987,
+     -9.3414068599
+    ],
+    "source": "7p7k_1-7z83_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "7p7l_1",
+   "pdb_id": "7p7l",
+   "structure_title": "Complex I from E. coli, DDM/LMNG-purified, with NADH and FMN, Open state",
+   "resolution": 3.0,
+   "exp_method": "em",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.4452,
+   "ligands": [
+    {
+     "comp": "3PE",
+     "copies": 15,
+     "name": "1,2-Distearoyl-sn-glycerophosphoethanolamine"
+    },
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "LFA",
+     "copies": 5,
+     "name": "EICOSANE"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    },
+    {
+     "comp": "FMN",
+     "copies": 1,
+     "name": "FLAVIN MONONUCLEOTIDE"
+    }
+   ],
+   "mutations": [
+    {
+     "label": "D168G",
+     "type": "Conflict"
+    },
+    {
+     "label": "I580T",
+     "type": "Conflict"
+    },
+    {
+     "label": "V561I",
+     "type": "Conflict"
+    },
+    {
+     "label": "F566Y",
+     "type": "Conflict"
+    },
+    {
+     "label": "G532S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9988587948,
+     -0.0143481647,
+     -0.0455547834,
+     0.013766363,
+     0.9998199505,
+     -0.0130596279,
+     0.045733963,
+     0.0124176005,
+     0.9988764728
+    ],
+    "translation": [
+     4.6530594573,
+     1.7835533,
+     -4.0713402446
+    ],
+    "source": "7p7l_1-7z83_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "7p7m_1",
+   "pdb_id": "7p7m",
+   "structure_title": "Complex I from E. coli, DDM/LMNG-purified, inhibited by Piericidin A, Open state",
+   "resolution": 3.2,
+   "exp_method": "em",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.4353,
+   "ligands": [
+    {
+     "comp": "3PE",
+     "copies": 11,
+     "name": "1,2-Distearoyl-sn-glycerophosphoethanolamine"
+    },
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "LFA",
+     "copies": 3,
+     "name": "EICOSANE"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    },
+    {
+     "comp": "FMN",
+     "copies": 1,
+     "name": "FLAVIN MONONUCLEOTIDE"
+    }
+   ],
+   "mutations": [
+    {
+     "label": "D168G",
+     "type": "Conflict"
+    },
+    {
+     "label": "I580T",
+     "type": "Conflict"
+    },
+    {
+     "label": "V561I",
+     "type": "Conflict"
+    },
+    {
+     "label": "F566Y",
+     "type": "Conflict"
+    },
+    {
+     "label": "G532S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9925679284,
+     -0.1005349705,
+     -0.0685684132,
+     0.1014873285,
+     0.994780984,
+     0.0105411584,
+     0.0671507985,
+     -0.0174216408,
+     0.997590726
+    ],
+    "translation": [
+     18.964035377,
+     -7.5692499881,
+     -0.6007539561
+    ],
+    "source": "7p7m_1-7z83_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "7z7r_1",
+   "pdb_id": "7z7r",
+   "structure_title": "Complex I from E. coli, LMNG-purified, Apo, Open-ready state",
+   "resolution": 3.36,
+   "exp_method": "em",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.4587,
+   "ligands": [
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "3PE",
+     "copies": 2,
+     "name": "1,2-Distearoyl-sn-glycerophosphoethanolamine"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    },
+    {
+     "comp": "FMN",
+     "copies": 1,
+     "name": "FLAVIN MONONUCLEOTIDE"
+    },
+    {
+     "comp": "LFA",
+     "copies": 1,
+     "name": "EICOSANE"
+    }
+   ],
+   "mutations": [],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9988124763,
+     -0.0411971036,
+     -0.0260083804,
+     0.0418026731,
+     0.9988568257,
+     0.0231857332,
+     0.0250234632,
+     -0.0242454194,
+     0.9993928086
+    ],
+    "translation": [
+     8.014125231,
+     -6.4093211731,
+     3.4844495821
+    ],
+    "source": "7z7r_1-7z83_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "7z7s_1",
+   "pdb_id": "7z7s",
+   "structure_title": "Complex I from E. coli, LMNG-purified, under Turnover at pH 6, Closed state",
+   "resolution": 2.4,
+   "exp_method": "em",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.4939,
+   "ligands": [
+    {
+     "comp": "3PE",
+     "copies": 13,
+     "name": "1,2-Distearoyl-sn-glycerophosphoethanolamine"
+    },
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "LFA",
+     "copies": 4,
+     "name": "EICOSANE"
+    },
+    {
+     "comp": "DCQ",
+     "copies": 2,
+     "name": "2-decyl-5,6-dimethoxy-3-methylcyclohexa-2,5-diene-1,4-dione"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    }
+   ],
+   "mutations": [],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9996099744,
+     0.0066774162,
+     -0.027116622,
+     -0.0063546765,
+     0.999908156,
+     0.0119706996,
+     0.0271940649,
+     -0.0117937134,
+     0.999560599
+    ],
+    "translation": [
+     2.0303670374,
+     -2.1068207541,
+     1.6629101974
+    ],
+    "source": "7z7s_1-7z83_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "7z7t_1",
+   "pdb_id": "7z7t",
+   "structure_title": "Complex I from E. coli, LMNG-purified, under Turnover at pH 6, Open state",
+   "resolution": 3.1,
+   "exp_method": "em",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.4269,
+   "ligands": [
+    {
+     "comp": "3PE",
+     "copies": 8,
+     "name": "1,2-Distearoyl-sn-glycerophosphoethanolamine"
+    },
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "LFA",
+     "copies": 3,
+     "name": "EICOSANE"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    },
+    {
+     "comp": "FMN",
+     "copies": 1,
+     "name": "FLAVIN MONONUCLEOTIDE"
+    }
+   ],
+   "mutations": [],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9998954429,
+     0.0047336862,
+     -0.0136636549,
+     -0.0046431836,
+     0.9999671236,
+     0.0066477431,
+     0.013694674,
+     -0.0065836051,
+     0.9998845494
+    ],
+    "translation": [
+     1.7400726381,
+     0.0337071525,
+     0.5560511662
+    ],
+    "source": "7z7t_1-7z83_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "7z7v_1",
+   "pdb_id": "7z7v",
+   "structure_title": "Complex I from E. coli, LMNG-purified, under Turnover at pH 6, Open-ready state",
+   "resolution": 2.29,
+   "exp_method": "em",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.4227,
+   "ligands": [
+    {
+     "comp": "3PE",
+     "copies": 12,
+     "name": "1,2-Distearoyl-sn-glycerophosphoethanolamine"
+    },
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "LFA",
+     "copies": 3,
+     "name": "EICOSANE"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "C14",
+     "copies": 1,
+     "name": "TETRADECANE"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    }
+   ],
+   "mutations": [],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9997449944,
+     0.0013432694,
+     -0.0225420028,
+     -0.0012751403,
+     0.9999945771,
+     0.0030364191,
+     0.0225459593,
+     -0.0030069006,
+     0.9997412857
+    ],
+    "translation": [
+     2.456642572,
+     0.5134545937,
+     0.254268436
+    ],
+    "source": "7z7v_1-7z83_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "7z80_1",
+   "pdb_id": "7z80",
+   "structure_title": "Complex I from E. coli, DDM/LMNG-purified, under Turnover at pH 8, Closed state",
+   "resolution": 2.93,
+   "exp_method": "em",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.5111,
+   "ligands": [
+    {
+     "comp": "3PE",
+     "copies": 10,
+     "name": "1,2-Distearoyl-sn-glycerophosphoethanolamine"
+    },
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "LFA",
+     "copies": 4,
+     "name": "EICOSANE"
+    },
+    {
+     "comp": "DCQ",
+     "copies": 2,
+     "name": "2-decyl-5,6-dimethoxy-3-methylcyclohexa-2,5-diene-1,4-dione"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    }
+   ],
+   "mutations": [
+    {
+     "label": "D168G",
+     "type": "Conflict"
+    },
+    {
+     "label": "I580T",
+     "type": "Conflict"
+    },
+    {
+     "label": "V561I",
+     "type": "Conflict"
+    },
+    {
+     "label": "F566Y",
+     "type": "Conflict"
+    },
+    {
+     "label": "G532S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.999586679,
+     -0.0066646306,
+     -0.0279652271,
+     0.0069365437,
+     0.9999294986,
+     0.0096375407,
+     0.0278990249,
+     -0.0098275393,
+     0.9995624362
+    ],
+    "translation": [
+     0.5217473792,
+     -2.0330995883,
+     0.571575208
+    ],
+    "source": "7z80_1-7z83_1_transform.txt",
+    "derivation": "direct"
+   }
+  },
+  {
+   "assembly_id": "7z83_1",
+   "pdb_id": "7z83",
+   "structure_title": "Complex I from E. coli, DDM/LMNG-purified, under Turnover at pH 8, Open state",
+   "resolution": 2.88,
+   "exp_method": "em",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.4136,
+   "ligands": [
+    {
+     "comp": "3PE",
+     "copies": 9,
+     "name": "1,2-Distearoyl-sn-glycerophosphoethanolamine"
+    },
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "LFA",
+     "copies": 4,
+     "name": "EICOSANE"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    },
+    {
+     "comp": "FMN",
+     "copies": 1,
+     "name": "FLAVIN MONONUCLEOTIDE"
+    }
+   ],
+   "mutations": [
+    {
+     "label": "D168G",
+     "type": "Conflict"
+    },
+    {
+     "label": "I580T",
+     "type": "Conflict"
+    },
+    {
+     "label": "V561I",
+     "type": "Conflict"
+    },
+    {
+     "label": "F566Y",
+     "type": "Conflict"
+    },
+    {
+     "label": "G532S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "translation": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "source": null,
+    "derivation": "identity"
+   }
+  },
+  {
+   "assembly_id": "7z84_1",
+   "pdb_id": "7z84",
+   "structure_title": "Complex I from E. coli, DDM/LMNG-purified, under Turnover at pH 8, Open-ready state",
+   "resolution": 2.87,
+   "exp_method": "em",
+   "cluster_id": 2,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.4643,
+   "ligands": [
+    {
+     "comp": "3PE",
+     "copies": 10,
+     "name": "1,2-Distearoyl-sn-glycerophosphoethanolamine"
+    },
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "LFA",
+     "copies": 4,
+     "name": "EICOSANE"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    },
+    {
+     "comp": "FMN",
+     "copies": 1,
+     "name": "FLAVIN MONONUCLEOTIDE"
+    }
+   ],
+   "mutations": [
+    {
+     "label": "D168G",
+     "type": "Conflict"
+    },
+    {
+     "label": "I580T",
+     "type": "Conflict"
+    },
+    {
+     "label": "V561I",
+     "type": "Conflict"
+    },
+    {
+     "label": "F566Y",
+     "type": "Conflict"
+    },
+    {
+     "label": "G532S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9998258706,
+     -0.009063729,
+     -0.0163118775,
+     0.0090565135,
+     0.9999588557,
+     -0.0005161635,
+     0.0163158847,
+     0.0003683449,
+     0.9998668192
+    ],
+    "translation": [
+     0.1106357751,
+     -0.5956361634,
+     -1.5908329592
+    ],
+    "source": "7z83_1-7z84_1_transform.txt",
+    "derivation": "inverted"
+   }
+  },
+  {
+   "assembly_id": "7zc5_1",
+   "pdb_id": "7zc5",
+   "structure_title": "Complex I from E. coli, DDM/LMNG-purified, under Turnover at pH 8, Resting state",
+   "resolution": 3.0,
+   "exp_method": "em",
+   "cluster_id": 3,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.5315,
+   "ligands": [
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "3PE",
+     "copies": 6,
+     "name": "1,2-Distearoyl-sn-glycerophosphoethanolamine"
+    },
+    {
+     "comp": "LFA",
+     "copies": 5,
+     "name": "EICOSANE"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    },
+    {
+     "comp": "FMN",
+     "copies": 1,
+     "name": "FLAVIN MONONUCLEOTIDE"
+    }
+   ],
+   "mutations": [
+    {
+     "label": "D168G",
+     "type": "Conflict"
+    },
+    {
+     "label": "I580T",
+     "type": "Conflict"
+    },
+    {
+     "label": "V561I",
+     "type": "Conflict"
+    },
+    {
+     "label": "F566Y",
+     "type": "Conflict"
+    },
+    {
+     "label": "G532S",
+     "type": "Conflict"
+    }
+   ],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.999909508,
+     0.0068622664,
+     0.0115708769,
+     -0.0065750056,
+     0.9996736795,
+     -0.0246840791,
+     -0.0117364898,
+     0.0246057668,
+     0.9996283365
+    ],
+    "translation": [
+     -1.5284904836,
+     5.616327585,
+     -5.046855988
+    ],
+    "source": "7z83_1-7zc5_1_transform.txt",
+    "derivation": "inverted"
+   }
+  },
+  {
+   "assembly_id": "7zci_1",
+   "pdb_id": "7zci",
+   "structure_title": "Complex I from E. coli, LMNG-purified, under Turnover at pH 6, Resting state",
+   "resolution": 2.69,
+   "exp_method": "em",
+   "cluster_id": 3,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.5283,
+   "ligands": [
+    {
+     "comp": "3PE",
+     "copies": 11,
+     "name": "1,2-Distearoyl-sn-glycerophosphoethanolamine"
+    },
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "LFA",
+     "copies": 5,
+     "name": "EICOSANE"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    },
+    {
+     "comp": "FMN",
+     "copies": 1,
+     "name": "FLAVIN MONONUCLEOTIDE"
+    }
+   ],
+   "mutations": [],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     0.9998644293,
+     0.0031781325,
+     0.0161561906,
+     -0.0028377273,
+     0.9997744163,
+     -0.0210490827,
+     -0.0162194428,
+     0.0210003822,
+     0.9996478948
+    ],
+    "translation": [
+     -1.5368979375,
+     5.791430045,
+     -3.4965608665
+    ],
+    "source": "7z83_1-7zci_1_transform.txt",
+    "derivation": "inverted"
+   }
+  },
+  {
+   "assembly_id": "9q8i_1",
+   "pdb_id": "9q8i",
+   "structure_title": "Cryo-EM structure of E. coli complex I variant V96P/N142M (NuoE)",
+   "resolution": 2.35,
+   "exp_method": "em",
+   "cluster_id": 1,
+   "packing_group": 1,
+   "superposes_with_reference": true,
+   "mean_dissimilarity": 0.5422,
+   "ligands": [
+    {
+     "comp": "3PE",
+     "copies": 10,
+     "name": "1,2-Distearoyl-sn-glycerophosphoethanolamine"
+    },
+    {
+     "comp": "SF4",
+     "copies": 7,
+     "name": "IRON/SULFUR CLUSTER"
+    },
+    {
+     "comp": "CL",
+     "copies": 2,
+     "name": "CHLORIDE ION"
+    },
+    {
+     "comp": "FES",
+     "copies": 2,
+     "name": "FE2/S2 (INORGANIC) CLUSTER"
+    },
+    {
+     "comp": "CA",
+     "copies": 1,
+     "name": "CALCIUM ION"
+    },
+    {
+     "comp": "FMN",
+     "copies": 1,
+     "name": "FLAVIN MONONUCLEOTIDE"
+    }
+   ],
+   "mutations": [
+    {
+     "label": "V96P",
+     "type": "Engineered mutation"
+    },
+    {
+     "label": "N142M",
+     "type": "Engineered mutation"
+    }
+   ],
+   "modified": [],
+   "transform": {
+    "rotation": [
+     -0.5755238309,
+     0.7987627148,
+     -0.1753580492,
+     0.4533665901,
+     0.4901015733,
+     0.7444858513,
+     0.6806107956,
+     0.3489678684,
+     -0.6441974633
+    ],
+    "translation": [
+     62.5416678401,
+     -248.469349902,
+     22.562412839
+    ],
+    "source": "7z83_1-9q8i_1_transform.txt",
+    "derivation": "inverted"
+   }
+  }
+ ],
+ "heatmap": {
+  "labels": [
+   "7nyr_1",
+   "7nyu_1",
+   "7nyv_1",
+   "7p61_1",
+   "7p62_1",
+   "7p63_1",
+   "7p64_1",
+   "7p69_1",
+   "7p7c_1",
+   "7p7e_1",
+   "7p7j_1",
+   "7p7k_1",
+   "7p7l_1",
+   "7p7m_1",
+   "7z7r_1",
+   "7z7s_1",
+   "7z7t_1",
+   "7z7v_1",
+   "7z80_1",
+   "7z83_1",
+   "7z84_1",
+   "7zc5_1",
+   "7zci_1",
+   "9q8i_1"
+  ],
+  "ordering": "tree-penalised path-length seriation (matrix only, pre-clustering)",
+  "dendrogram_order": [
+   "7nyu_1",
+   "7nyr_1",
+   "7nyv_1",
+   "7p7e_1",
+   "7p7k_1",
+   "7zc5_1",
+   "7p69_1",
+   "7zci_1",
+   "7p63_1",
+   "7z7s_1",
+   "7z80_1",
+   "7z7t_1",
+   "7z7r_1",
+   "7z84_1",
+   "7p7l_1",
+   "7p7j_1",
+   "7p7m_1",
+   "7p7c_1",
+   "7z83_1",
+   "7p64_1",
+   "7z7v_1",
+   "9q8i_1",
+   "7p61_1",
+   "7p62_1"
+  ],
+  "default_metric": "tmscore",
+  "coverage": {
+   "pairs": 276,
+   "metrics": {
+    "shape": {
+     "pairs": 276,
+     "shown": true
+    },
+    "tmscore": {
+     "pairs": 276,
+     "shown": true
+    },
+    "rmsd": {
+     "pairs": 276,
+     "shown": false,
+     "per_pair": true
+    }
+   }
+  },
+  "rmsd": {
+   "label": "Backbone RMSD after superposition (US-align)",
+   "cell_label": "RMSD",
+   "unit": "\u00c5",
+   "matrix": [
+    [
+     0.0,
+     3.13,
+     1.46,
+     3.42,
+     3.22,
+     4.13,
+     4.43,
+     3.96,
+     4.06,
+     4.01,
+     4.64,
+     5.08,
+     4.92,
+     4.87,
+     4.71,
+     4.25,
+     3.5,
+     4.91,
+     4.14,
+     4.09,
+     4.81,
+     5.01,
+     5.18,
+     3.82
+    ],
+    [
+     3.13,
+     0.0,
+     3.34,
+     2.74,
+     2.2,
+     3.7,
+     3.4,
+     1.92,
+     3.08,
+     2.24,
+     3.39,
+     2.6,
+     3.52,
+     3.51,
+     3.53,
+     3.81,
+     2.92,
+     3.71,
+     3.74,
+     2.96,
+     3.58,
+     2.53,
+     2.75,
+     2.49
+    ],
+    [
+     1.46,
+     3.34,
+     0.0,
+     4.14,
+     3.68,
+     4.86,
+     4.93,
+     4.05,
+     4.51,
+     3.77,
+     5.1,
+     5.09,
+     5.37,
+     5.35,
+     5.32,
+     4.93,
+     3.84,
+     5.46,
+     4.83,
+     4.49,
+     5.38,
+     5.03,
+     5.48,
+     4.47
+    ],
+    [
+     3.42,
+     2.74,
+     4.14,
+     0.0,
+     1.01,
+     3.11,
+     3.13,
+     2.5,
+     2.99,
+     3.43,
+     3.18,
+     3.37,
+     3.29,
+     3.37,
+     3.26,
+     3.22,
+     2.91,
+     3.31,
+     3.15,
+     2.86,
+     3.19,
+     3.26,
+     2.76,
+     1.05
+    ],
+    [
+     3.22,
+     2.2,
+     3.68,
+     1.01,
+     0.0,
+     2.95,
+     2.83,
+     1.73,
+     2.58,
+     2.61,
+     2.85,
+     2.75,
+     3.0,
+     3.06,
+     3.06,
+     3.08,
+     2.4,
+     3.1,
+     3.0,
+     2.43,
+     2.99,
+     2.67,
+     2.5,
+     1.31
+    ],
+    [
+     4.13,
+     3.7,
+     4.86,
+     3.11,
+     2.95,
+     0.0,
+     1.41,
+     3.22,
+     1.58,
+     3.85,
+     1.61,
+     3.85,
+     1.8,
+     1.78,
+     1.39,
+     0.57,
+     1.81,
+     1.67,
+     0.37,
+     1.68,
+     1.46,
+     3.9,
+     3.58,
+     3.14
+    ],
+    [
+     4.43,
+     3.4,
+     4.93,
+     3.13,
+     2.83,
+     1.41,
+     0.0,
+     2.54,
+     0.63,
+     3.11,
+     0.44,
+     3.01,
+     0.85,
+     0.75,
+     0.92,
+     1.38,
+     1.27,
+     0.83,
+     1.4,
+     0.68,
+     0.85,
+     3.06,
+     2.89,
+     3.03
+    ],
+    [
+     3.96,
+     1.92,
+     4.05,
+     2.5,
+     1.73,
+     3.22,
+     2.54,
+     0.0,
+     2.23,
+     1.19,
+     2.47,
+     1.3,
+     2.57,
+     2.64,
+     2.9,
+     3.27,
+     2.15,
+     2.85,
+     3.23,
+     2.01,
+     2.81,
+     1.22,
+     1.77,
+     2.18
+    ],
+    [
+     4.06,
+     3.08,
+     4.51,
+     2.99,
+     2.58,
+     1.58,
+     0.63,
+     2.23,
+     0.0,
+     2.72,
+     0.79,
+     2.85,
+     1.2,
+     1.04,
+     1.22,
+     1.57,
+     0.92,
+     1.22,
+     1.56,
+     0.55,
+     1.23,
+     2.89,
+     2.87,
+     2.88
+    ],
+    [
+     4.01,
+     2.24,
+     3.77,
+     3.43,
+     2.61,
+     3.85,
+     3.11,
+     1.19,
+     2.72,
+     0.0,
+     3.07,
+     1.79,
+     3.29,
+     3.23,
+     3.56,
+     3.88,
+     2.46,
+     3.53,
+     3.81,
+     2.55,
+     3.52,
+     1.73,
+     2.69,
+     3.16
+    ],
+    [
+     4.64,
+     3.39,
+     5.1,
+     3.18,
+     2.85,
+     1.61,
+     0.44,
+     2.47,
+     0.79,
+     3.07,
+     0.0,
+     2.77,
+     0.77,
+     0.58,
+     0.96,
+     1.58,
+     1.48,
+     0.76,
+     1.6,
+     0.74,
+     0.82,
+     2.89,
+     2.71,
+     2.99
+    ],
+    [
+     5.08,
+     2.6,
+     5.09,
+     3.37,
+     2.75,
+     3.85,
+     3.01,
+     1.3,
+     2.85,
+     1.79,
+     2.77,
+     0.0,
+     2.8,
+     2.82,
+     3.2,
+     3.87,
+     3.01,
+     3.12,
+     3.85,
+     2.58,
+     3.08,
+     0.43,
+     1.4,
+     2.88
+    ],
+    [
+     4.92,
+     3.52,
+     5.37,
+     3.29,
+     3.0,
+     1.8,
+     0.85,
+     2.57,
+     1.2,
+     3.29,
+     0.77,
+     2.8,
+     0.0,
+     0.57,
+     1.0,
+     1.78,
+     1.89,
+     0.8,
+     1.81,
+     1.13,
+     0.82,
+     2.9,
+     2.58,
+     3.01
+    ],
+    [
+     4.87,
+     3.51,
+     5.35,
+     3.37,
+     3.06,
+     1.78,
+     0.75,
+     2.64,
+     1.04,
+     3.23,
+     0.58,
+     2.82,
+     0.57,
+     0.0,
+     0.86,
+     1.78,
+     1.8,
+     0.84,
+     1.8,
+     1.08,
+     0.85,
+     2.94,
+     2.67,
+     3.14
+    ],
+    [
+     4.71,
+     3.53,
+     5.32,
+     3.26,
+     3.06,
+     1.39,
+     0.92,
+     2.9,
+     1.22,
+     3.56,
+     0.96,
+     3.2,
+     1.0,
+     0.86,
+     0.0,
+     1.4,
+     1.91,
+     0.75,
+     1.47,
+     1.3,
+     0.54,
+     3.27,
+     2.87,
+     3.05
+    ],
+    [
+     4.25,
+     3.81,
+     4.93,
+     3.22,
+     3.08,
+     0.57,
+     1.38,
+     3.27,
+     1.57,
+     3.88,
+     1.58,
+     3.87,
+     1.78,
+     1.78,
+     1.4,
+     0.0,
+     1.78,
+     1.56,
+     0.32,
+     1.67,
+     1.41,
+     3.93,
+     3.64,
+     3.24
+    ],
+    [
+     3.5,
+     2.92,
+     3.84,
+     2.91,
+     2.4,
+     1.81,
+     1.27,
+     2.15,
+     0.92,
+     2.46,
+     1.48,
+     3.01,
+     1.89,
+     1.8,
+     1.91,
+     1.78,
+     0.0,
+     1.88,
+     1.78,
+     0.91,
+     1.93,
+     3.02,
+     3.2,
+     2.95
+    ],
+    [
+     4.91,
+     3.71,
+     5.46,
+     3.31,
+     3.1,
+     1.67,
+     0.83,
+     2.85,
+     1.22,
+     3.53,
+     0.76,
+     3.12,
+     0.8,
+     0.84,
+     0.75,
+     1.56,
+     1.88,
+     0.0,
+     1.65,
+     1.23,
+     0.51,
+     3.18,
+     2.8,
+     3.07
+    ],
+    [
+     4.14,
+     3.74,
+     4.83,
+     3.15,
+     3.0,
+     0.37,
+     1.4,
+     3.23,
+     1.56,
+     3.81,
+     1.6,
+     3.85,
+     1.81,
+     1.8,
+     1.47,
+     0.32,
+     1.78,
+     1.65,
+     0.0,
+     1.65,
+     1.5,
+     3.91,
+     3.64,
+     3.2
+    ],
+    [
+     4.09,
+     2.96,
+     4.49,
+     2.86,
+     2.43,
+     1.68,
+     0.68,
+     2.01,
+     0.55,
+     2.55,
+     0.74,
+     2.58,
+     1.13,
+     1.08,
+     1.3,
+     1.67,
+     0.91,
+     1.23,
+     1.65,
+     0.0,
+     1.21,
+     2.62,
+     2.63,
+     2.76
+    ],
+    [
+     4.81,
+     3.58,
+     5.38,
+     3.19,
+     2.99,
+     1.46,
+     0.85,
+     2.81,
+     1.23,
+     3.52,
+     0.82,
+     3.08,
+     0.82,
+     0.85,
+     0.54,
+     1.41,
+     1.93,
+     0.51,
+     1.5,
+     1.21,
+     0.0,
+     3.16,
+     2.74,
+     2.97
+    ],
+    [
+     5.01,
+     2.53,
+     5.03,
+     3.26,
+     2.67,
+     3.9,
+     3.06,
+     1.22,
+     2.89,
+     1.73,
+     2.89,
+     0.43,
+     2.9,
+     2.94,
+     3.27,
+     3.93,
+     3.02,
+     3.18,
+     3.91,
+     2.62,
+     3.16,
+     0.0,
+     1.28,
+     2.77
+    ],
+    [
+     5.18,
+     2.75,
+     5.48,
+     2.76,
+     2.5,
+     3.58,
+     2.89,
+     1.77,
+     2.87,
+     2.69,
+     2.71,
+     1.4,
+     2.58,
+     2.67,
+     2.87,
+     3.64,
+     3.2,
+     2.8,
+     3.64,
+     2.63,
+     2.74,
+     1.28,
+     0.0,
+     2.16
+    ],
+    [
+     3.82,
+     2.49,
+     4.47,
+     1.05,
+     1.31,
+     3.14,
+     3.03,
+     2.18,
+     2.88,
+     3.16,
+     2.99,
+     2.88,
+     3.01,
+     3.14,
+     3.05,
+     3.24,
+     2.95,
+     3.07,
+     3.2,
+     2.76,
+     2.97,
+     2.77,
+     2.16,
+     0.0
+    ]
+   ]
+  },
+  "metrics": {
+   "shape": {
+    "label": "Shape (combined Zernike + spectral)",
+    "cell_label": "dissimilarity",
+    "order": [
+     "7p63_1",
+     "7z7s_1",
+     "7z80_1",
+     "7z7r_1",
+     "7z84_1",
+     "7p7j_1",
+     "7p7m_1",
+     "7p7l_1",
+     "7z7v_1",
+     "7p64_1",
+     "7p7c_1",
+     "7z7t_1",
+     "7z83_1",
+     "9q8i_1",
+     "7p61_1",
+     "7p62_1",
+     "7zci_1",
+     "7p69_1",
+     "7zc5_1",
+     "7p7k_1",
+     "7p7e_1",
+     "7nyu_1",
+     "7nyr_1",
+     "7nyv_1"
+    ],
+    "matrix": [
+     [
+      0.0,
+      0.448372,
+      0.29525,
+      0.68384,
+      0.679751,
+      0.888027,
+      0.801247,
+      0.646821,
+      0.792276,
+      0.630248,
+      0.807591,
+      0.736278,
+      0.821011,
+      0.851271,
+      0.852125,
+      0.84129,
+      0.733435,
+      0.850545,
+      0.840964,
+      0.820239,
+      0.924456,
+      0.711591,
+      0.741932,
+      0.860808
+     ],
+     [
+      0.448372,
+      0.0,
+      0.452331,
+      0.627324,
+      0.648974,
+      0.851398,
+      0.760089,
+      0.470211,
+      0.738953,
+      0.522642,
+      0.76134,
+      0.587441,
+      0.755934,
+      0.77336,
+      0.805071,
+      0.81037,
+      0.674439,
+      0.799421,
+      0.819483,
+      0.775405,
+      0.882191,
+      0.56182,
+      0.601214,
+      0.819139
+     ],
+     [
+      0.29525,
+      0.452331,
+      0.0,
+      0.794417,
+      0.773109,
+      0.920745,
+      0.883313,
+      0.687448,
+      0.824585,
+      0.645377,
+      0.882676,
+      0.759019,
+      0.913725,
+      0.882208,
+      0.937249,
+      0.917309,
+      0.769706,
+      0.913753,
+      0.929854,
+      0.86814,
+      0.926465,
+      0.758876,
+      0.807357,
+      0.953362
+     ],
+     [
+      0.68384,
+      0.627324,
+      0.794417,
+      0.0,
+      0.260068,
+      0.595504,
+      0.454979,
+      0.440276,
+      0.438979,
+      0.613264,
+      0.471382,
+      0.522103,
+      0.496526,
+      0.478896,
+      0.52724,
+      0.583664,
+      0.421095,
+      0.490052,
+      0.596807,
+      0.450244,
+      0.528375,
+      0.478459,
+      0.421525,
+      0.427643
+     ],
+     [
+      0.679751,
+      0.648974,
+      0.773109,
+      0.260068,
+      0.0,
+      0.566221,
+      0.422919,
+      0.420949,
+      0.392807,
+      0.558609,
+      0.430518,
+      0.469162,
+      0.48557,
+      0.43204,
+      0.496092,
+      0.540766,
+      0.387285,
+      0.450134,
+      0.576164,
+      0.426981,
+      0.507903,
+      0.418357,
+      0.394916,
+      0.442076
+     ],
+     [
+      0.888027,
+      0.851398,
+      0.920745,
+      0.595504,
+      0.566221,
+      0.0,
+      0.311499,
+      0.720754,
+      0.40195,
+      0.828812,
+      0.346435,
+      0.755127,
+      0.366017,
+      0.296368,
+      0.318306,
+      0.198932,
+      0.449548,
+      0.304072,
+      0.227092,
+      0.361531,
+      0.295821,
+      0.750748,
+      0.714659,
+      0.466581
+     ],
+     [
+      0.801247,
+      0.760089,
+      0.883313,
+      0.454979,
+      0.422919,
+      0.311499,
+      0.0,
+      0.554012,
+      0.171847,
+      0.732697,
+      0.207739,
+      0.60416,
+      0.217923,
+      0.207301,
+      0.253097,
+      0.267394,
+      0.253209,
+      0.142431,
+      0.326292,
+      0.183613,
+      0.243994,
+      0.566165,
+      0.583915,
+      0.440392
+     ],
+     [
+      0.646821,
+      0.470211,
+      0.687448,
+      0.440276,
+      0.420949,
+      0.720754,
+      0.554012,
+      0.0,
+      0.566865,
+      0.292682,
+      0.587695,
+      0.241119,
+      0.5812,
+      0.586651,
+      0.673974,
+      0.704421,
+      0.464624,
+      0.584623,
+      0.692618,
+      0.511993,
+      0.68196,
+      0.200702,
+      0.2183,
+      0.587501
+     ],
+     [
+      0.792276,
+      0.738953,
+      0.824585,
+      0.438979,
+      0.392807,
+      0.40195,
+      0.171847,
+      0.566865,
+      0.0,
+      0.629513,
+      0.235497,
+      0.602249,
+      0.260224,
+      0.220194,
+      0.311936,
+      0.35814,
+      0.211586,
+      0.247574,
+      0.370284,
+      0.19528,
+      0.346546,
+      0.506283,
+      0.515418,
+      0.489016
+     ],
+     [
+      0.630248,
+      0.522642,
+      0.645377,
+      0.613264,
+      0.558609,
+      0.828812,
+      0.732697,
+      0.292682,
+      0.629513,
+      0.0,
+      0.734201,
+      0.288493,
+      0.685578,
+      0.704336,
+      0.758694,
+      0.800936,
+      0.546323,
+      0.728567,
+      0.846965,
+      0.685708,
+      0.766576,
+      0.359709,
+      0.371765,
+      0.735872
+     ],
+     [
+      0.807591,
+      0.76134,
+      0.882676,
+      0.471382,
+      0.430518,
+      0.346435,
+      0.207739,
+      0.587695,
+      0.235497,
+      0.734201,
+      0.0,
+      0.611546,
+      0.191877,
+      0.165156,
+      0.275926,
+      0.307351,
+      0.289252,
+      0.178043,
+      0.318612,
+      0.20219,
+      0.201766,
+      0.559656,
+      0.535888,
+      0.429422
+     ],
+     [
+      0.736278,
+      0.587441,
+      0.759019,
+      0.522103,
+      0.469162,
+      0.755127,
+      0.60416,
+      0.241119,
+      0.602249,
+      0.288493,
+      0.611546,
+      0.0,
+      0.651229,
+      0.652477,
+      0.646325,
+      0.807326,
+      0.514834,
+      0.665931,
+      0.764586,
+      0.592017,
+      0.666121,
+      0.198403,
+      0.273393,
+      0.680021
+     ],
+     [
+      0.821011,
+      0.755934,
+      0.913725,
+      0.496526,
+      0.48557,
+      0.366017,
+      0.217923,
+      0.5812,
+      0.260224,
+      0.685578,
+      0.191877,
+      0.651229,
+      0.0,
+      0.192421,
+      0.297025,
+      0.326741,
+      0.330543,
+      0.221278,
+      0.343194,
+      0.240861,
+      0.293648,
+      0.552897,
+      0.565189,
+      0.450027
+     ],
+     [
+      0.851271,
+      0.77336,
+      0.882208,
+      0.478896,
+      0.43204,
+      0.296368,
+      0.207301,
+      0.586651,
+      0.220194,
+      0.704336,
+      0.165156,
+      0.652477,
+      0.192421,
+      0.0,
+      0.263383,
+      0.325455,
+      0.31967,
+      0.208863,
+      0.355039,
+      0.21788,
+      0.286972,
+      0.602092,
+      0.54573,
+      0.444841
+     ],
+     [
+      0.852125,
+      0.805071,
+      0.937249,
+      0.52724,
+      0.496092,
+      0.318306,
+      0.253097,
+      0.673974,
+      0.311936,
+      0.758694,
+      0.275926,
+      0.646325,
+      0.297025,
+      0.263383,
+      0.0,
+      0.292617,
+      0.327917,
+      0.215062,
+      0.281138,
+      0.231941,
+      0.142826,
+      0.617249,
+      0.593753,
+      0.430294
+     ],
+     [
+      0.84129,
+      0.81037,
+      0.917309,
+      0.583664,
+      0.540766,
+      0.198932,
+      0.267394,
+      0.704421,
+      0.35814,
+      0.800936,
+      0.307351,
+      0.807326,
+      0.326741,
+      0.325455,
+      0.292617,
+      0.0,
+      0.403137,
+      0.235285,
+      0.182662,
+      0.349258,
+      0.279248,
+      0.707102,
+      0.653671,
+      0.46675
+     ],
+     [
+      0.733435,
+      0.674439,
+      0.769706,
+      0.421095,
+      0.387285,
+      0.449548,
+      0.253209,
+      0.464624,
+      0.211586,
+      0.546323,
+      0.289252,
+      0.514834,
+      0.330543,
+      0.31967,
+      0.327917,
+      0.403137,
+      0.0,
+      0.275185,
+      0.427174,
+      0.212118,
+      0.340498,
+      0.465551,
+      0.503239,
+      0.497446
+     ],
+     [
+      0.850545,
+      0.799421,
+      0.913753,
+      0.490052,
+      0.450134,
+      0.304072,
+      0.142431,
+      0.584623,
+      0.247574,
+      0.728567,
+      0.178043,
+      0.665931,
+      0.221278,
+      0.208863,
+      0.215062,
+      0.235285,
+      0.275185,
+      0.0,
+      0.283774,
+      0.197983,
+      0.2023,
+      0.573285,
+      0.553882,
+      0.399332
+     ],
+     [
+      0.840964,
+      0.819483,
+      0.929854,
+      0.596807,
+      0.576164,
+      0.227092,
+      0.326292,
+      0.692618,
+      0.370284,
+      0.846965,
+      0.318612,
+      0.764586,
+      0.343194,
+      0.355039,
+      0.281138,
+      0.182662,
+      0.427174,
+      0.283774,
+      0.0,
+      0.367147,
+      0.28668,
+      0.717554,
+      0.676536,
+      0.525148
+     ],
+     [
+      0.820239,
+      0.775405,
+      0.86814,
+      0.450244,
+      0.426981,
+      0.361531,
+      0.183613,
+      0.511993,
+      0.19528,
+      0.685708,
+      0.20219,
+      0.592017,
+      0.240861,
+      0.21788,
+      0.231941,
+      0.349258,
+      0.212118,
+      0.197983,
+      0.367147,
+      0.0,
+      0.234443,
+      0.501207,
+      0.513823,
+      0.373706
+     ],
+     [
+      0.924456,
+      0.882191,
+      0.926465,
+      0.528375,
+      0.507903,
+      0.295821,
+      0.243994,
+      0.68196,
+      0.346546,
+      0.766576,
+      0.201766,
+      0.666121,
+      0.293648,
+      0.286972,
+      0.142826,
+      0.279248,
+      0.340498,
+      0.2023,
+      0.28668,
+      0.234443,
+      0.0,
+      0.636092,
+      0.582494,
+      0.420676
+     ],
+     [
+      0.711591,
+      0.56182,
+      0.758876,
+      0.478459,
+      0.418357,
+      0.750748,
+      0.566165,
+      0.200702,
+      0.506283,
+      0.359709,
+      0.559656,
+      0.198403,
+      0.552897,
+      0.602092,
+      0.617249,
+      0.707102,
+      0.465551,
+      0.573285,
+      0.717554,
+      0.501207,
+      0.636092,
+      0.0,
+      0.21647,
+      0.563843
+     ],
+     [
+      0.741932,
+      0.601214,
+      0.807357,
+      0.421525,
+      0.394916,
+      0.714659,
+      0.583915,
+      0.2183,
+      0.515418,
+      0.371765,
+      0.535888,
+      0.273393,
+      0.565189,
+      0.54573,
+      0.593753,
+      0.653671,
+      0.503239,
+      0.553882,
+      0.676536,
+      0.513823,
+      0.582494,
+      0.21647,
+      0.0,
+      0.566321
+     ],
+     [
+      0.860808,
+      0.819139,
+      0.953362,
+      0.427643,
+      0.442076,
+      0.466581,
+      0.440392,
+      0.587501,
+      0.489016,
+      0.735872,
+      0.429422,
+      0.680021,
+      0.450027,
+      0.444841,
+      0.430294,
+      0.46675,
+      0.497446,
+      0.399332,
+      0.525148,
+      0.373706,
+      0.420676,
+      0.563843,
+      0.566321,
+      0.0
+     ]
+    ]
+   },
+   "tmscore": {
+    "label": "Structural (1 \u2212 TM-score)",
+    "cell_label": "1 \u2212 TM-score",
+    "order": [
+     "7z80_1",
+     "7z7s_1",
+     "7p63_1",
+     "7z7r_1",
+     "7z7v_1",
+     "7z84_1",
+     "7p7l_1",
+     "7p7m_1",
+     "7p7c_1",
+     "7p7j_1",
+     "7p64_1",
+     "7z83_1",
+     "7z7t_1",
+     "7p62_1",
+     "7p61_1",
+     "9q8i_1",
+     "7zci_1",
+     "7p7k_1",
+     "7zc5_1",
+     "7p69_1",
+     "7p7e_1",
+     "7nyu_1",
+     "7nyv_1",
+     "7nyr_1"
+    ],
+    "matrix": [
+     [
+      0.0,
+      0.03,
+      0.01,
+      0.05,
+      0.045,
+      0.065,
+      0.07,
+      0.055,
+      0.06,
+      0.06,
+      0.07,
+      0.08,
+      0.08,
+      0.08,
+      0.075,
+      0.065,
+      0.05,
+      0.08,
+      0.065,
+      0.06,
+      0.075,
+      0.075,
+      0.08,
+      0.055
+     ],
+     [
+      0.03,
+      0.0,
+      0.03,
+      0.04,
+      0.03,
+      0.055,
+      0.05,
+      0.025,
+      0.04,
+      0.03,
+      0.05,
+      0.03,
+      0.05,
+      0.05,
+      0.055,
+      0.055,
+      0.04,
+      0.055,
+      0.055,
+      0.04,
+      0.055,
+      0.035,
+      0.035,
+      0.035
+     ],
+     [
+      0.01,
+      0.03,
+      0.0,
+      0.065,
+      0.055,
+      0.075,
+      0.08,
+      0.055,
+      0.07,
+      0.05,
+      0.08,
+      0.08,
+      0.09,
+      0.09,
+      0.09,
+      0.085,
+      0.06,
+      0.09,
+      0.08,
+      0.07,
+      0.09,
+      0.08,
+      0.09,
+      0.07
+     ],
+     [
+      0.05,
+      0.04,
+      0.065,
+      0.0,
+      0.01,
+      0.04,
+      0.035,
+      0.025,
+      0.035,
+      0.04,
+      0.04,
+      0.035,
+      0.04,
+      0.045,
+      0.04,
+      0.04,
+      0.035,
+      0.04,
+      0.04,
+      0.035,
+      0.04,
+      0.035,
+      0.025,
+      0.01
+     ],
+     [
+      0.045,
+      0.03,
+      0.055,
+      0.01,
+      0.0,
+      0.04,
+      0.035,
+      0.015,
+      0.035,
+      0.025,
+      0.035,
+      0.025,
+      0.035,
+      0.035,
+      0.04,
+      0.04,
+      0.03,
+      0.04,
+      0.04,
+      0.03,
+      0.035,
+      0.025,
+      0.025,
+      0.015
+     ],
+     [
+      0.065,
+      0.055,
+      0.075,
+      0.04,
+      0.04,
+      0.0,
+      0.015,
+      0.04,
+      0.015,
+      0.055,
+      0.015,
+      0.055,
+      0.015,
+      0.015,
+      0.01,
+      0.0,
+      0.015,
+      0.01,
+      0.0,
+      0.015,
+      0.01,
+      0.055,
+      0.05,
+      0.04
+     ],
+     [
+      0.07,
+      0.05,
+      0.08,
+      0.035,
+      0.035,
+      0.015,
+      0.0,
+      0.03,
+      0.0,
+      0.04,
+      0.0,
+      0.035,
+      0.005,
+      0.0,
+      0.01,
+      0.015,
+      0.005,
+      0.005,
+      0.015,
+      0.0,
+      0.005,
+      0.04,
+      0.035,
+      0.035
+     ],
+     [
+      0.055,
+      0.025,
+      0.055,
+      0.025,
+      0.015,
+      0.04,
+      0.03,
+      0.0,
+      0.025,
+      0.005,
+      0.03,
+      0.01,
+      0.03,
+      0.03,
+      0.04,
+      0.045,
+      0.025,
+      0.03,
+      0.045,
+      0.02,
+      0.035,
+      0.0,
+      0.01,
+      0.02
+     ],
+     [
+      0.06,
+      0.04,
+      0.07,
+      0.035,
+      0.035,
+      0.015,
+      0.0,
+      0.025,
+      0.0,
+      0.03,
+      0.0,
+      0.03,
+      0.01,
+      0.0,
+      0.01,
+      0.015,
+      0.005,
+      0.005,
+      0.015,
+      0.0,
+      0.01,
+      0.035,
+      0.035,
+      0.035
+     ],
+     [
+      0.06,
+      0.03,
+      0.05,
+      0.04,
+      0.025,
+      0.055,
+      0.04,
+      0.005,
+      0.03,
+      0.0,
+      0.04,
+      0.015,
+      0.04,
+      0.04,
+      0.05,
+      0.055,
+      0.03,
+      0.045,
+      0.055,
+      0.03,
+      0.05,
+      0.015,
+      0.025,
+      0.04
+     ],
+     [
+      0.07,
+      0.05,
+      0.08,
+      0.04,
+      0.035,
+      0.015,
+      0.0,
+      0.03,
+      0.0,
+      0.04,
+      0.0,
+      0.03,
+      0.0,
+      0.0,
+      0.005,
+      0.015,
+      0.01,
+      0.005,
+      0.015,
+      0.0,
+      0.005,
+      0.035,
+      0.03,
+      0.035
+     ],
+     [
+      0.08,
+      0.03,
+      0.08,
+      0.035,
+      0.025,
+      0.055,
+      0.035,
+      0.01,
+      0.03,
+      0.015,
+      0.03,
+      0.0,
+      0.03,
+      0.03,
+      0.04,
+      0.055,
+      0.035,
+      0.04,
+      0.055,
+      0.03,
+      0.04,
+      0.005,
+      0.01,
+      0.035
+     ],
+     [
+      0.08,
+      0.05,
+      0.09,
+      0.04,
+      0.035,
+      0.015,
+      0.005,
+      0.03,
+      0.01,
+      0.04,
+      0.0,
+      0.03,
+      0.0,
+      0.0,
+      0.01,
+      0.015,
+      0.01,
+      0.005,
+      0.015,
+      0.005,
+      0.005,
+      0.035,
+      0.03,
+      0.035
+     ],
+     [
+      0.08,
+      0.05,
+      0.09,
+      0.045,
+      0.035,
+      0.015,
+      0.0,
+      0.03,
+      0.0,
+      0.04,
+      0.0,
+      0.03,
+      0.0,
+      0.0,
+      0.005,
+      0.015,
+      0.01,
+      0.005,
+      0.015,
+      0.005,
+      0.005,
+      0.035,
+      0.03,
+      0.04
+     ],
+     [
+      0.075,
+      0.055,
+      0.09,
+      0.04,
+      0.04,
+      0.01,
+      0.01,
+      0.04,
+      0.01,
+      0.05,
+      0.005,
+      0.04,
+      0.01,
+      0.005,
+      0.0,
+      0.01,
+      0.015,
+      0.0,
+      0.01,
+      0.01,
+      0.0,
+      0.04,
+      0.04,
+      0.04
+     ],
+     [
+      0.065,
+      0.055,
+      0.085,
+      0.04,
+      0.04,
+      0.0,
+      0.015,
+      0.045,
+      0.015,
+      0.055,
+      0.015,
+      0.055,
+      0.015,
+      0.015,
+      0.01,
+      0.0,
+      0.015,
+      0.01,
+      0.0,
+      0.015,
+      0.01,
+      0.055,
+      0.05,
+      0.04
+     ],
+     [
+      0.05,
+      0.04,
+      0.06,
+      0.035,
+      0.03,
+      0.015,
+      0.005,
+      0.025,
+      0.005,
+      0.03,
+      0.01,
+      0.035,
+      0.01,
+      0.01,
+      0.015,
+      0.015,
+      0.0,
+      0.015,
+      0.015,
+      0.0,
+      0.015,
+      0.035,
+      0.04,
+      0.035
+     ],
+     [
+      0.08,
+      0.055,
+      0.09,
+      0.04,
+      0.04,
+      0.01,
+      0.005,
+      0.03,
+      0.005,
+      0.045,
+      0.005,
+      0.04,
+      0.005,
+      0.005,
+      0.0,
+      0.01,
+      0.015,
+      0.0,
+      0.01,
+      0.005,
+      0.0,
+      0.04,
+      0.03,
+      0.04
+     ],
+     [
+      0.065,
+      0.055,
+      0.08,
+      0.04,
+      0.04,
+      0.0,
+      0.015,
+      0.045,
+      0.015,
+      0.055,
+      0.015,
+      0.055,
+      0.015,
+      0.015,
+      0.01,
+      0.0,
+      0.015,
+      0.01,
+      0.0,
+      0.015,
+      0.01,
+      0.055,
+      0.05,
+      0.04
+     ],
+     [
+      0.06,
+      0.04,
+      0.07,
+      0.035,
+      0.03,
+      0.015,
+      0.0,
+      0.02,
+      0.0,
+      0.03,
+      0.0,
+      0.03,
+      0.005,
+      0.005,
+      0.01,
+      0.015,
+      0.0,
+      0.005,
+      0.015,
+      0.0,
+      0.01,
+      0.03,
+      0.03,
+      0.03
+     ],
+     [
+      0.075,
+      0.055,
+      0.09,
+      0.04,
+      0.035,
+      0.01,
+      0.005,
+      0.035,
+      0.01,
+      0.05,
+      0.005,
+      0.04,
+      0.005,
+      0.005,
+      0.0,
+      0.01,
+      0.015,
+      0.0,
+      0.01,
+      0.01,
+      0.0,
+      0.04,
+      0.03,
+      0.035
+     ],
+     [
+      0.075,
+      0.035,
+      0.08,
+      0.035,
+      0.025,
+      0.055,
+      0.04,
+      0.0,
+      0.035,
+      0.015,
+      0.035,
+      0.005,
+      0.035,
+      0.035,
+      0.04,
+      0.055,
+      0.035,
+      0.04,
+      0.055,
+      0.03,
+      0.04,
+      0.0,
+      0.005,
+      0.03
+     ],
+     [
+      0.08,
+      0.035,
+      0.09,
+      0.025,
+      0.025,
+      0.05,
+      0.035,
+      0.01,
+      0.035,
+      0.025,
+      0.03,
+      0.01,
+      0.03,
+      0.03,
+      0.04,
+      0.05,
+      0.04,
+      0.03,
+      0.05,
+      0.03,
+      0.03,
+      0.005,
+      0.0,
+      0.02
+     ],
+     [
+      0.055,
+      0.035,
+      0.07,
+      0.01,
+      0.015,
+      0.04,
+      0.035,
+      0.02,
+      0.035,
+      0.04,
+      0.035,
+      0.035,
+      0.035,
+      0.04,
+      0.04,
+      0.04,
+      0.035,
+      0.04,
+      0.04,
+      0.03,
+      0.035,
+      0.03,
+      0.02,
+      0.0
+     ]
+    ]
+   }
+  }
+ }
+}

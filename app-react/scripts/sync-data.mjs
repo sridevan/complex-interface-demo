@@ -83,6 +83,8 @@ const SIMILARITY = [
   { cx: 'PDB-CPX-137391', name: 'atcase-similarity' },       // E. coli ATCase, 58 assemblies (T/R)
   // Polytomella F-ATP synthase, 16 assemblies across three rotary states labelled by the depositors
   { cx: 'PDB-CPX-106364', name: 'atpsynthase-similarity' },
+  // E. coli respiratory complex I, 24 assemblies: conformation crossed with sample condition
+  { cx: 'PDB-CPX-138641', name: 'complex1-similarity' },
   // Human haemoglobin, 341 assemblies — by far the largest set here, and the one that shows how
   // the view behaves at the scale of a well-studied complex.
   { cx: 'PDB-CPX-154652', name: 'human-hb-similarity' },
