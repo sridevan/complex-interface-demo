@@ -591,13 +591,17 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
             </span>
             <span className="cs-hm-tick">{fmtVal(max)}</span>
           </div>
-          {/* Both directions named, with the measured quantity between them. The previous label
-              was a lone "less similar" centred under the ramp, which said neither which end it
-              referred to nor what was being measured. The middle term comes from the metric, so
-              it reads "dissimilarity" on one measure and "1 - TM-score" on another. */}
+          {/* Both directions named, with the quantity between them. Generic on purpose: this used
+              to interpolate cellLabel, so on TM-score it read "1 - TM-score", naming a measure the
+              active pill directly above already names. What the legend is for is which way the
+              ramp runs, and "dissimilarity" carries that where the measure's own name does not.
+              Not "score" -- TM-score runs 0 to 1 with 1 = identical and this ramp paints the
+              complement, so a word implying higher-is-more-similar would point the reader the
+              wrong way down the bar. The exact quantity still labels every number that is actually
+              reported: the hover tooltip and the selection summary both use cellLabel. */}
           <div className="cs-hm-legend-caps">
             More similar <span className="cs-hm-arrow">←</span>
-            {' '}<span className="cs-hm-quantity">{cellLabel}</span>{' '}
+            {' '}<span className="cs-hm-quantity">dissimilarity</span>{' '}
             <span className="cs-hm-arrow">→</span> More different
           </div>
         </div>
