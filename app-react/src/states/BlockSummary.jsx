@@ -29,29 +29,16 @@ const LIGAND_NOTE = 'Listed as deposited, crystallisation and cryoprotection add
 // How to read the numbers. On the heading rather than on one row, because the same convention
 // governs the ligands, the mutations and the modified residues alike.
 const SELECTION_HELP = [
-  ['The two percentages', 'A pair like "0% vs 20%" is your selection first, then everything you '
-    + 'did not select. It reads: none of the instances you picked carry this, and 20% of the '
-    + 'others do. Each figure is the share of instances carrying it, not how much is present, so '
-    + 'a structure with four copies of a ligand counts once.'],
-  ['Why the rest, not the whole set', 'Comparing against the whole set would put your selection '
-    + 'inside its own baseline and flatten the contrast. A block of 12 out of 58 carrying none of '
-    + 'a compound sits against 20% in the rest but only 15% across the whole set, because the '
-    + 'block itself drags that average down. Two groups that do not overlap is the honest '
-    + 'comparison.'],
-  ['What gets listed', 'Differences of at least 15 percentage points, marked as more common (up) '
-    + 'or less common (down). It is a difference and not a ratio, so 42% against 30% is a real gap '
-    + 'and still does not appear. Hover a chip for the counts behind the percentages.'],
-  ['This is a display cutoff, not a test', 'Fifteen points is where the list stops getting longer, '
-    + 'nothing more. Measured by permutation on these datasets, a randomly chosen selection of the '
-    + 'same size clears it about 96% of the time, so seeing something listed is close to no '
-    + 'evidence on its own. The reason is scale: a set of 58 instances carries around 75 distinct '
-    + 'ligands, mutations and modified residues, and the largest of 75 differences is large by '
-    + 'chance. Testing properly (Fisher plus a correction for those 75) drops false positives to '
-    + 'under 1% but then reports nothing at all on real blocks either — these sets are too small '
-    + 'to support inference over that many features. So read this as a description of what you '
-    + 'picked, weigh it by the counts, and confirm anything that matters against the structures.'],
-  ['Small selections', 'Below five instances no percentages are shown at all. One of three is 33%, '
-    + 'and that invites a reading the numbers cannot support.'],
+  ['The two percentages', 'The selection, then every instance not selected. Each is the proportion '
+    + 'of structures carrying it, so several copies in one structure count once. Comparing against '
+    + 'the rest rather than the whole set keeps the selection out of its own baseline. Hover a chip '
+    + 'for the counts.'],
+  ['The 15-point cutoff', 'A display threshold, not a test of significance. It is a difference in '
+    + 'percentage points, so 42% against 30% is not listed. By permutation, a random selection of '
+    + 'the same size clears it about 96% of the time, because dozens of ligands and sequence '
+    + 'differences are compared at once.'],
+  ['Reading it', 'A description of what you selected rather than a result. Below five instances no '
+    + 'comparison is shown.'],
 ]
 
 // Below this many instances the percentages are noise, so counts are reported instead.
