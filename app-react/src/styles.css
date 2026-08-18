@@ -763,3 +763,14 @@ table.heatmap thead th { position: sticky; top: 0; background: #fbfcfd; z-index:
 .cs-block dd { margin: 0; }
 .cs-block .cs-block-ids { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px;
   color: var(--muted); margin-top: 8px; line-height: 1.6; }
+
+/* Heading row that carries a card-level action on the right. */
+.cs-h2-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+/* An action that is deliberately not available yet: the notebook it opens is not published, so the
+   button says so rather than either vanishing or doing nothing when clicked. Dashed border and
+   muted ink read as "not wired up" without the button looking broken; the wrapping span carries the
+   title because a disabled button swallows the pointer events a tooltip needs. */
+.cs-nb { display: inline-flex; }
+.cs-nbbtn { font: inherit; font-size: 12px; font-weight: 500; padding: 4px 10px;
+  border: 1px dashed #c4c9d0; border-radius: 6px; background: #f6f7f9; color: var(--muted);
+  cursor: not-allowed; white-space: nowrap; }

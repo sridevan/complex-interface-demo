@@ -14,7 +14,8 @@ export const HEATMAP_HELP = [
     + 'similar instances next to each other so that blocks emerge. No clustering is applied and no '
     + 'boundaries are drawn: a block is a feature of the ordering, not an assignment, and where one '
     + 'ends is your call. The instances table above uses the same order, and each measure is '
-    + 'seriated separately, so switching measure reorders both.'],
+    + 'seriated separately, so switching measure reorders both. Cutting the matrix into groups is '
+    + 'a separate analysis: it belongs to the notebook this page is built from, not to the page.'],
   ['Selecting', 'Click a diagonal cell to add that instance to the superposition view, or a cell '
     + 'below the diagonal to add both of a pair. Click again to remove.'],
   ['Zooming in', 'Press anywhere in the matrix and drag up or down to narrow it, and the table, to '

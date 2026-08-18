@@ -428,7 +428,23 @@ export default function ConformationalStatesApp({ config }) {
               here — the legend and the hover name the exact quantity, which changes with the
               measure ("1 - TM-score", "RMSD"). The heading deliberately does not track the measure
               switch beneath it: a section heading should stay a fixed landmark. */}
-          <h2>Pairwise structural dissimilarity {helpHint(HEATMAP_HELP)}</h2>
+          <h2 className="cs-h2-row">
+            <span>Pairwise structural dissimilarity {helpHint(HEATMAP_HELP)}</span>
+            {/* Deliberately disabled rather than absent or wired up. The clustering analysis lives
+                in a notebook outside this app, in a repository that is not public, so a working
+                link would 404 for every reader; and a button that silently does nothing is worse
+                than one that says why. Not labelled "clustering": the cut is computed and shipped
+                as provenance but never drawn, because auto_gap returns k=4 on ATCase where the
+                depositors say 2, so a button promising clusters would endorse a number this page
+                declines to show. The title carries the reason; enable this the day the notebook is
+                published. */}
+            <span className="cs-nb"
+                  title="Opens the analysis notebook (explore_assembly_clustering.ipynb). Not part of this demo — the heatmap here is the evidence, and the notebook is where a cut into groups can be tried.">
+              <button className="cs-nbbtn" disabled aria-disabled="true">
+                Explore structural variation
+              </button>
+            </span>
+          </h2>
           {zoom ? (
             <p className="note cs-zoomed">
               Showing <b>{shownOrder.length} of {data.assemblies.length}</b> instances —{' '}
