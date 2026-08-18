@@ -51,6 +51,14 @@ const SELECTION_HELP = [
     + 'comparison is shown.'],
 ]
 
+// The three numbers are different quantities and were reading as one run-on sentence, with the
+// maximum printed after the rest-of-set figure so it looked like the maximum of that. Split onto
+// their own lines, each naming the pairs it is measured over.
+const TIGHTNESS_NOTE = 'Distances in the units of the measure shown above. The first line covers '
+  + 'pairs inside the selection, the second pairs from the selection to every instance not '
+  + 'selected. A selection spanning two blocks has an ordinary average but a much larger maximum, '
+  + 'which is why both are given.'
+
 // Below this many instances the percentages are noise, so counts are reported instead.
 const MIN_BLOCK = 5
 // A ligand or mutation has to differ from the rest of the set by this much to be worth naming.
@@ -230,14 +238,26 @@ export default function BlockSummary({ block, assemblies, labels, matrix, cellLa
           )}
         </Row>
 
-        <Row label={`Tightness (${metricName})`}>
-          {s.within == null ? '—' : <>within <b>{s.within.toFixed(3)}</b> {cellLabel}</>}
-          {s.between != null && <> · rest of the set {s.between.toFixed(3)}</>}
-          {s.withinMax != null && <span className="bs-note"> (up to {s.withinMax.toFixed(3)})</span>}
-          {ratio && <> · <b>{ratio.toFixed(1)}×</b> apart</>}
-          {s.rmsdWithin != null && (
-            <span className="bs-note"> · backbone RMSD {s.rmsdWithin.toFixed(2)} Å,
-              up to {s.rmsdMax.toFixed(2)} Å</span>
+        <Row label={`Tightness (${metricName})`} hint={TIGHTNESS_NOTE}>
+          {s.within == null ? '—' : (
+            <>
+              <div>
+                inside the selection <b>{s.within.toFixed(3)}</b> on average
+                {s.withinMax != null && <>, {s.withinMax.toFixed(3)} at most</>}
+              </div>
+              {s.between != null && (
+                <div>
+                  to the rest <b>{s.between.toFixed(3)}</b> on average
+                  {ratio && <>, <b>{ratio.toFixed(1)}×</b> further</>}
+                </div>
+              )}
+              {s.rmsdWithin != null && (
+                <div className="bs-note">
+                  backbone RMSD inside the selection {s.rmsdWithin.toFixed(2)} Å on
+                  average, {s.rmsdMax.toFixed(2)} Å at most
+                </div>
+              )}
+            </>
           )}
         </Row>
 
