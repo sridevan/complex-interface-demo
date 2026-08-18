@@ -100,6 +100,16 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
   // structure, so this adds a gesture without taking one away.
   const dragRef = useRef(null)
   const [dragTo, setDragTo] = useState(null)
+  // dragTo is mirrored in a ref because the window listeners below complete the gesture and must
+  // read the position this render, not the one they closed over.
+  const dragToRef = useRef(null)
+  const setDrag = (i) => { dragToRef.current = i; setDragTo(i) }
+  // Set when a drag completed, so the cell's own mouseup does not ALSO fire a click selection.
+  const swallowRef = useRef(false)
+  // Latest updateDragTo / endDrag, assigned each render. The window listeners are registered once
+  // and call through these, so they always act on the current geometry and the current props.
+  const moveRef = useRef(null)
+  const endRef = useRef(null)
   const cellRefs = useRef(new Map())
   const movedRef = useRef(false)
 
@@ -226,13 +236,33 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
   const zoomIn = () => applyZoom(Math.min(zoom * 1.6, 40 / fitCell))
   const zoomOut = () => applyZoom(Math.max(1, zoom / 1.6))
 
-  // A pointer released anywhere outside the matrix has to clear the drag too. Without this the
-  // range stays armed and the next cell the pointer crosses silently extends a selection the
-  // user already abandoned.
+  // A drag is tracked on the WINDOW, not on the matrix box.
+  //
+  // This used to be a cancel-only handler: releasing outside the box disarmed the drag and threw
+  // it away, after the caption had already said "release to zoom in". That is easy to hit and gets
+  // easier the further you drill, because each level makes the cells larger, so the same hand
+  // movement runs off the bottom edge. Reported as "the first drag works, anything after that does
+  // not". Where the button comes up has nothing to do with what the user asked for, so completion
+  // no longer depends on it.
+  //
+  // Capture phase, so this still runs before the cell's own bubbling mouseup and can set
+  // swallowRef in time to stop a completed drag also registering as a click.
   useEffect(() => {
-    const up = () => { if (dragRef.current != null) { dragRef.current = null; setDragTo(null) } }
-    window.addEventListener('mouseup', up)
-    return () => window.removeEventListener('mouseup', up)
+    const move = (e) => { if (dragRef.current != null) moveRef.current(e.clientY) }
+    const up = () => {
+      if (dragRef.current == null) return
+      const zoomed = endRef.current()
+      swallowRef.current = zoomed
+      // Cleared on the next tick regardless: a release landing above the diagonal, or outside the
+      // matrix entirely, has no cell handler to clear it, and the flag would swallow the next click.
+      if (zoomed) setTimeout(() => { swallowRef.current = false }, 0)
+    }
+    window.addEventListener('mousemove', move)
+    window.addEventListener('mouseup', up, true)
+    return () => {
+      window.removeEventListener('mousemove', move)
+      window.removeEventListener('mouseup', up, true)
+    }
   }, [])
 
   // Only move focus when the user actually navigated — never steal it on first render.
@@ -252,19 +282,22 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
   // someone to press exactly on a one-and-a-half-pixel diagonal line is asking them to miss. A
   // press anywhere in the matrix marks out rows from there, and a press that does not travel far
   // enough still falls through to a plain click on whatever cell it landed on.
-  const beginDrag = (i) => { dragRef.current = i; setDragTo(i) }
+  const beginDrag = (i) => { dragRef.current = i; setDrag(i) }
   // Where the drag has reached, from the pointer's Y position rather than from per-cell
   // mouseenter events. At 341 instances a row is under 2px, and the browser coalesces pointer
   // moves — it will step straight over cells without ever entering them, so an event-driven
   // preview sticks at whatever row the drag began on. Geometry cannot skip. It also means the
   // pointer need not stay on the diagonal itself: dragging anywhere down the matrix works.
+  // Row under the pointer, clamped to the matrix. Clamping is what makes a drag that runs off the
+  // bottom edge mean "to the end" rather than nothing.
+  const updateDragTo = (clientY) => {
+    if (!gridRef.current || dragRef.current == null) return
+    const r = gridRef.current.getBoundingClientRect()
+    const top = r.top + (n <= MAX_LABELLED ? COL_HEAD : 0)
+    const i = Math.floor((clientY - top) / cell)
+    setDrag(Math.max(0, Math.min(n - 1, i)))
+  }
   const dragMove = (e) => {
-    if (gridRef.current && dragRef.current != null) {
-      const r = gridRef.current.getBoundingClientRect()
-      const top = r.top + (n <= MAX_LABELLED ? COL_HEAD : 0)
-      const i = Math.floor((e.clientY - top) / cell)
-      setDragTo(Math.max(0, Math.min(n - 1, i)))
-    }
     // In canvas mode there are no per-cell nodes, so the tooltip is resolved here from geometry.
     // This sets state on every move, but the subtree it re-renders is one <canvas> and a tooltip
     // — not the 116,281 cells the table had to reconcile to do the same job.
@@ -284,9 +317,9 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
   // the pointer travelled.
   const endDrag = () => {
     const from = dragRef.current
-    const to = dragTo
+    const to = dragToRef.current
     dragRef.current = null
-    setDragTo(null)
+    setDrag(null)
     if (from == null || to == null) return false
     // Below MIN_DRAG the gesture is treated as a click. At 341 instances a cell is under 2px, so
     // a hand tremor covers several of them -- without a floor, trying to select one structure
@@ -295,6 +328,8 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
     if (onSelectBlock) onSelectBlock(Math.min(from, to), Math.max(from, to))
     return true
   }
+  moveRef.current = updateDragTo
+  endRef.current = endDrag
   // Set when a drag completed, so the cell's own mouseup does not ALSO fire a selection. Capture
   // on the box runs before the cell's bubbling handler, so the flag is always set in time.
   // --- canvas renderer (n > MAX_LABELLED) ------------------------------------------------------
@@ -421,16 +456,6 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
     return { i, j }
   }
 
-  const swallowRef = useRef(false)
-  const onBoxMouseUp = () => {
-    const zoomed = endDrag()
-    swallowRef.current = zoomed
-    // Cleared on the next tick regardless. The cell handler clears it too, but a release landing
-    // on a cell ABOVE the diagonal has no handler at all — without this the flag would survive
-    // and swallow the user's next click.
-    if (zoomed) setTimeout(() => { swallowRef.current = false }, 0)
-  }
-
   const onKeyDown = (e, i, j, r, c, isDiag) => {
     const k = e.key
     if (k === 'Enter' || k === ' ') { e.preventDefault(); onPick(r, isDiag ? null : c); return }
@@ -465,7 +490,7 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
         </div>
       </div>
       <div className={'cs-hm-scroll' + (zoom > 1 ? ' cs-hm-pannable' : '')} ref={boxRef}
-           onMouseMove={dragMove} onMouseUpCapture={onBoxMouseUp}>
+           onMouseMove={dragMove}>
        <div className="cs-hm-stage" style={{ width: `${cell * n + (labelled ? ROW_HEAD : 0)}px` }}>
         {/* One rectangle over the whole marked range. Two strokes — dark outside, white inside —
             so it holds up against both ends of the viridis ramp, and everything outside it is
