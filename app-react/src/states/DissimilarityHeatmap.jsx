@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
+import Hint from '../components/Hint.jsx'
 import { methodLabel } from './methods'
 
 // Lives with the heatmap it describes, but is rendered by the parent next to the card heading.
@@ -20,6 +21,13 @@ export const HEATMAP_HELP = [
     + 'range; repeat to go further. Colours stay scaled to the full set, so a shade always means '
     + 'the same value. Use + and \u2212 when cells are too small to click.'],
 ]
+
+// How the colours map to values. It lived on the measure switch, which is the wrong place: it
+// describes the colourbar, and a reader wondering what a shade means is looking at the bar rather
+// than at the measure buttons above the matrix.
+const SCALE_NOTE = 'Colour runs from zero to the largest value present and is scaled to each '
+  + 'measure separately, so a shade means different things on different measures. A few extreme '
+  + 'pairs can compress the rest: read the values at the ends of the bar.'
 
 // Viridis, matching the notebook's Section 13 heatmap. Perceptually uniform and colourblind-safe,
 // so magnitude reads monotonically: dark purple = similar shape, yellow = most different.
@@ -651,6 +659,7 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
             More similar <span className="cs-hm-arrow">←</span>
             {' '}<span className="cs-hm-quantity">dissimilarity</span>{' '}
             <span className="cs-hm-arrow">→</span> More different
+            <Hint text={SCALE_NOTE} width={320} />
           </div>
         </div>
         {/* Live readout for the range being marked out: at these cell sizes the outline alone does

@@ -54,14 +54,9 @@ const METRIC_HELP = {
 }
 // Listed after the measures, since RMSD annotates every pair regardless of which one is selected.
 const RMSD_HELP = ['RMSD',
-  'Backbone RMSD in \u00e5ngstr\u00f6ms, on hover for every pair and the only measure here in '
+  'Backbone RMSD in \u00c5, on hover for every pair and the only measure here in '
   + 'physical units. Not offered as an ordering: it is dominated by the largest displacements and '
   + 'depends on structure size, so compare within this set only.']
-const METRIC_SCALE_NOTE = 'Colour runs from zero to the largest value present and is scaled to '
-  + 'each measure separately, so a shade means different things on different measures. A few '
-  + 'extreme pairs can compress the rest: read the values at the ends of the bar.'
-
-
 // Moved out of a note under the heading: it described what is already on screen (a backbone trace
 // in colours) and named a reference the provenance panel already names. What it did not say is how
 // a structure gets here, which is the part a reader can act on.
@@ -458,7 +453,7 @@ export default function ConformationalStatesApp({ config }) {
                                   <div className="cs-metric">
                                     <span className="cs-metric-label">
                                       Measure{' '}
-                                      {helpHint(helpEntries, { tail: METRIC_SCALE_NOTE })}
+                                      {helpHint(helpEntries)}
                                     </span>
                                     {metricKeys.length > 1 ? (
                                       <span className="pill">
