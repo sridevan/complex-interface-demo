@@ -43,25 +43,23 @@ const orderMetrics = (keys) => [...keys].sort((a, b) => {
 // Rendered only for the measures a given dataset actually carries.
 const METRIC_HELP = {
   shape: ['Shape',
-    '3D Zernike and spectral descriptors of the whole assembly, combined into one score. '
-    + 'Normalised within this set, so a value carries no meaning outside this complex. It also '
-    + 'responds to how much of each model was built, so differing atom content or missing residues '
-    + 'can separate instances that share a conformation.'],
+    '3D Zernike and spectral descriptors of the whole assembly, combined into one score and '
+    + 'normalised within this set, so values mean nothing outside this complex. It also responds '
+    + 'to how much of each model was built, so missing residues can separate instances that share '
+    + 'a conformation.'],
   tmscore: ['TM-score',
-    'Shown as 1 \u2212 TM-score. TM-score tests whether two structures share a fold, which every '
-    + 'pair here does, so it operates near the top of its range. US-align reports two decimals and '
-    + 'the measure is asymmetric, so the two directions are averaged, giving steps of 0.005.'],
+    'Shown as 1 \u2212 TM-score. It tests whether two structures share a fold, which every pair '
+    + 'here does, so it works near the top of its range. Averaged over both directions and rounded '
+    + 'to two decimals, giving steps of 0.005.'],
 }
 // Listed after the measures, since RMSD annotates every pair regardless of which one is selected.
 const RMSD_HELP = ['RMSD',
-  'Backbone RMSD in \u00e5ngstr\u00f6ms after superposition, shown on hover for every pair. The '
-  + 'only measure here in physical units. Not offered as an ordering: it is dominated by the '
-  + 'largest displacements, and it depends on the size and aligned extent of the structures, so '
-  + 'compare within this set rather than across complexes.']
-const METRIC_SCALE_NOTE = 'Colour runs linearly from zero to the largest value present, and each '
-  + 'measure is scaled to its own range. A shade means different things on different measures, and '
-  + 'a few extreme pairs compress the rest of the set into a narrow part of the ramp. Read the '
-  + 'values at the ends of the bar.'
+  'Backbone RMSD in \u00e5ngstr\u00f6ms, on hover for every pair and the only measure here in '
+  + 'physical units. Not offered as an ordering: it is dominated by the largest displacements and '
+  + 'depends on structure size, so compare within this set only.']
+const METRIC_SCALE_NOTE = 'Colour runs from zero to the largest value present and is scaled to '
+  + 'each measure separately, so a shade means different things on different measures. A few '
+  + 'extreme pairs can compress the rest: read the values at the ends of the bar.'
 
 
 // Moved out of a note under the heading: it described what is already on screen (a backbone trace

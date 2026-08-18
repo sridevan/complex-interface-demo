@@ -4,24 +4,21 @@ import { methodLabel } from './methods'
 // Lives with the heatmap it describes, but is rendered by the parent next to the card heading.
 // [heading, text] pairs, the same shape as the measure help, so both popups read alike.
 export const HEATMAP_HELP = [
-  ['Reading it', 'Each cell is one pairwise comparison. The diagonal is grey because it compares '
-    + 'an instance with itself: always zero, and not a measurement.'],
+  ['Reading it', 'Each cell is one pairwise comparison. The grey diagonal compares an instance '
+    + 'with itself: always zero, and not a measurement.'],
   // The most consequential caveat on the page. Blocks are produced by the ordering alone, and a
   // reader who assumes a clustering step will read a cut that was never made. Clustering IS
   // computed upstream (auto_gap returns k=4 on ATCase against a true k=2, k=18 on human
   // haemoglobin) and is deliberately not drawn, so the help must not imply otherwise.
   ['Ordering', 'Rows and columns are placed by tree-penalised path-length seriation, which puts '
     + 'similar instances next to each other so that blocks emerge. No clustering is applied and no '
-    + 'boundaries are drawn, so a block is a feature of the ordering rather than an assignment, '
-    + 'and where it ends is a matter of judgement. The instances table uses the same order, and '
-    + 'each measure is ordered separately, so switching measure reorders both. Grouping the matrix '
-    + 'into clusters is a separate analysis and is not performed here.'],
+    + 'boundaries are drawn, so a block is a feature of the ordering rather than an assignment. '
+    + 'Each measure is ordered separately, and the instances table follows the same order.'],
   ['Selecting', 'Click a diagonal cell to add that instance to the superposition view, or a cell '
-    + 'below the diagonal to add both of a pair. Click again to remove.'],
-  ['Zooming in', 'Press anywhere in the matrix and drag vertically to narrow it, and the table, to '
-    + 'that range; repeat to go further. Colours stay scaled to the full set at every depth, so a '
-    + 'shade always means the same value. Use the + and \u2212 controls when cells are too small '
-    + 'to click.'],
+    + 'below it to add both of a pair. Click again to remove.'],
+  ['Zooming in', 'Press anywhere and drag vertically to narrow the matrix, and the table, to that '
+    + 'range; repeat to go further. Colours stay scaled to the full set, so a shade always means '
+    + 'the same value. Use + and \u2212 when cells are too small to click.'],
 ]
 
 // Viridis, matching the notebook's Section 13 heatmap. Perceptually uniform and colourblind-safe,
