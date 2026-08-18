@@ -20,6 +20,14 @@ const PAGE_SIZE = 10
 // hence every structure is also named, in the viewer legend and in the table.
 // Colours are held per SLOT, not per position in the selection, so removing one structure never
 // repaints the others.
+// Entry page for one assembly at PDBe. The id after the underscore is the assembly number, which
+// the complexes tab takes as its `id` parameter, so the link lands on the same assembly the row
+// describes rather than on the entry's default one.
+const pdbeAssemblyUrl = (asm) => {
+  const [pdb, id] = asm.split('_')
+  return `https://www.ebi.ac.uk/pdbe/entry/pdb/${pdb}?activeTab=complexes&id=${id}`
+}
+
 const SERIES = ['#0072B2', '#D55E00', '#009E73', '#CC79A7', '#56B4E9']
 
 // Short button labels for the Measure switch. A lookup rather than a conditional, so a dataset
@@ -372,7 +380,13 @@ export default function ConformationalStatesApp({ config }) {
                       </td>
                       <td className="mono">
                         {on && <span className="cs-swatch" style={{ background: colorOf[r.assembly_id] }} />}
-                        {r.assembly_id}
+                        {/* The row's own click target is the checkbox, so stopPropagation is not
+                            needed here, but the link must not look like the plain text it replaces:
+                            it is underlined on hover only, to keep a column of identifiers from
+                            reading as a wall of links. */}
+                        <a className="cs-asm-link" href={pdbeAssemblyUrl(r.assembly_id)}
+                           target="_blank" rel="noreferrer"
+                           title={`View ${r.assembly_id} at PDBe`}>{r.assembly_id}</a>
                         {!overlays(r) && (
                           <span className="cs-nofit"
                                 title={`Packing group ${r.packing_group}: this instance does not share the reference's arrangement, so it will not overlay in the 3D view`}>△</span>
