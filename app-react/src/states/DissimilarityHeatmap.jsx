@@ -110,6 +110,11 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
   // and call through these, so they always act on the current geometry and the current props.
   const moveRef = useRef(null)
   const endRef = useRef(null)
+  // Set by Escape, read by the mouseup that follows it. Cancelling has to suppress that release as
+  // well: without it the button coming up still counts as a click on whatever cell is under the
+  // pointer, which below the diagonal superposes a pair -- the exact side effect Escape exists to
+  // avoid.
+  const cancelledRef = useRef(false)
   const cellRefs = useRef(new Map())
   const movedRef = useRef(false)
 
@@ -250,18 +255,32 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
   useEffect(() => {
     const move = (e) => { if (dragRef.current != null) moveRef.current(e.clientY) }
     const up = () => {
-      if (dragRef.current == null) return
-      const zoomed = endRef.current()
-      swallowRef.current = zoomed
+      if (dragRef.current == null && !cancelledRef.current) return
+      const zoomed = cancelledRef.current ? false : endRef.current()
+      const swallow = zoomed || cancelledRef.current
+      cancelledRef.current = false
+      swallowRef.current = swallow
       // Cleared on the next tick regardless: a release landing above the diagonal, or outside the
       // matrix entirely, has no cell handler to clear it, and the flag would swallow the next click.
-      if (zoomed) setTimeout(() => { swallowRef.current = false }, 0)
+      if (swallow) setTimeout(() => { swallowRef.current = false }, 0)
+    }
+    // Escape abandons a drag in progress. It is the only exit with no side effect: completing
+    // drills somewhere unwanted, and dragging back under MIN_DRAG deliberately falls through to a
+    // plain click, which adds a structure to the superposition view. Disarming here also makes the
+    // mouseup above return early, so the release that follows does nothing.
+    const key = (e) => {
+      if (e.key !== 'Escape' || dragRef.current == null) return
+      dragRef.current = null
+      setDrag(null)
+      cancelledRef.current = true
     }
     window.addEventListener('mousemove', move)
     window.addEventListener('mouseup', up, true)
+    window.addEventListener('keydown', key)
     return () => {
       window.removeEventListener('mousemove', move)
       window.removeEventListener('mouseup', up, true)
+      window.removeEventListener('keydown', key)
     }
   }, [])
 
@@ -645,7 +664,7 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
           {dragCount > 0
             ? (dragCount < MIN_DRAG
                 ? `${dragCount} marked — drag at least ${MIN_DRAG} to zoom in`
-                : `${dragCount} instances marked — release to zoom in`)
+                : `${dragCount} instances marked — release to zoom in, Esc to cancel`)
             : ' '}
         </p>
       </div>
