@@ -5,10 +5,10 @@ import Hint, { helpHint } from '../components/Hint.jsx'
 // Why every deposited compound is listed, including the ones that are only there because of how the
 // crystal was grown. Complex-agnostic on purpose: it is shown on every page, and naming one complex
 // as "here" would contradict itself on that complex's own page.
-const LIGAND_NOTE = 'Listed as deposited, crystallisation and cryoprotection additives included. '
-  + 'Only compounds that differ from the rest of the set are shown, so shared additives usually '
-  + 'stay out. When one does appear it often marks a single crystal form rather than a functional '
-  + 'state.'
+const LIGAND_NOTE = 'Listed as deposited, including crystallisation and cryoprotection '
+  + 'additives. Only compounds that differ from the rest of the set are shown, so shared additives '
+  + 'usually stay out. One that does appear often marks a single crystal form rather than a '
+  + 'functional state.'
 
 // What a drilled-in block of instances actually contains, as counts and ratios over the selection
 // versus everything else. Every line is arithmetic on structured PDBe data — ligand codes, mutation

@@ -43,39 +43,37 @@ const orderMetrics = (keys) => [...keys].sort((a, b) => {
 // Rendered only for the measures a given dataset actually carries.
 const METRIC_HELP = {
   shape: ['Shape',
-    '3D Zernike and spectral descriptors of the whole assembly, combined into a single score. '
+    '3D Zernike and spectral descriptors of the whole assembly, combined into one score. '
     + 'Normalised within this set, so a value carries no meaning outside this complex. It also '
     + 'responds to how much of each model was built, so differing atom content or missing residues '
     + 'can separate instances that share a conformation.'],
   tmscore: ['TM-score',
-    'Shown as 1 − TM-score. TM-score was built to detect a shared fold, which every pair here has, '
-    + 'so it works near the top of its range and varies little across a set like this. US-align '
-    + 'reports it to two decimals and it is asymmetric, so the two directions are averaged, giving '
-    + 'steps of 0.005.'],
+    'Shown as 1 \u2212 TM-score. TM-score tests whether two structures share a fold, which every '
+    + 'pair here does, so it operates near the top of its range. US-align reports two decimals and '
+    + 'the measure is asymmetric, so the two directions are averaged, giving steps of 0.005.'],
 }
 // Listed after the measures, since RMSD annotates every pair regardless of which one is selected.
 const RMSD_HELP = ['RMSD',
-  'Backbone RMSD in ångströms after superposition, shown on every pair you hover. The only measure '
-  + 'here in physical units, so it can be read on its own. Not selectable: it is dominated by the '
-  + 'largest displacements, so it seriates the matrix poorly. It also depends on the size and '
-  + 'aligned extent of the structures, so compare within this set rather than across complexes.']
+  'Backbone RMSD in \u00e5ngstr\u00f6ms after superposition, shown on hover for every pair. The '
+  + 'only measure here in physical units. Not offered as an ordering: it is dominated by the '
+  + 'largest displacements, and it depends on the size and aligned extent of the structures, so '
+  + 'compare within this set rather than across complexes.']
 const METRIC_SCALE_NOTE = 'Colour runs linearly from zero to the largest value present, and each '
-  + 'measure is scaled to its own range. A shade therefore means different things on different '
-  + 'measures, and a few extreme pairs compress the rest of the set into a narrow part of the ramp. '
-  + 'Read the values at the ends of the bar.'
+  + 'measure is scaled to its own range. A shade means different things on different measures, and '
+  + 'a few extreme pairs compress the rest of the set into a narrow part of the ramp. Read the '
+  + 'values at the ends of the bar.'
 
 
 // Moved out of a note under the heading: it described what is already on screen (a backbone trace
 // in colours) and named a reference the provenance panel already names. What it did not say is how
 // a structure gets here, which is the part a reader can act on.
 const VIEWER_HELP = [
-  ['What you see', 'Backbone trace only, one colour per instance. Each structure is placed by a '
-    + 'single global superposition onto the same reference assembly, computed with US-align at '
-    + 'build time, so what separates two traces is conformation rather than deposited coordinate '
-    + 'frames. The fit being global, a rigid-body shift of one domain spreads as displacement '
-    + 'across the whole model rather than staying local to that domain.'],
-  ['Choosing structures', `Added from the matrix or from the instances table, up to ${MAX_SHOWN} `
-    + `at once. Click a selected structure again to remove it.`],
+  ['What you see', 'Backbone trace only, one colour per instance, each placed by a single global '
+    + 'superposition onto the same reference assembly. Differences between traces are therefore '
+    + 'conformational rather than differences in deposited coordinate frames. Because the fit is '
+    + 'global, a rigid-body shift in one domain appears as displacement across the whole model.'],
+  ['Choosing structures', `Added from the matrix or the instances table, up to ${MAX_SHOWN} at `
+    + 'once. Click a selected structure again to remove it.'],
 ]
 
 const COLS = [
