@@ -1,15 +1,14 @@
 import React, { useMemo } from 'react'
 import { methodCounts } from './methods'
-import Hint from '../components/Hint.jsx'
+import Hint, { helpHint } from '../components/Hint.jsx'
 
 // Why every deposited compound is listed, including the ones that are only there because of how the
 // crystal was grown. Complex-agnostic on purpose: it is shown on every page, and naming one complex
 // as "here" would contradict itself on that complex's own page.
 const LIGAND_NOTE = 'Listed as deposited, crystallisation and cryoprotection additives included. '
-  + 'PDBe does not classify a compound as cofactor or additive, and no fixed list holds across '
-  + 'complexes: phosphate is buffer in some and substrate in others. Only compounds that differ '
-  + 'from the rest of the set are shown, so shared additives usually stay out. When one does '
-  + 'appear it often marks a single crystal form rather than a functional state.'
+  + 'Only compounds that differ from the rest of the set are shown, so shared additives usually '
+  + 'stay out. When one does appear it often marks a single crystal form rather than a functional '
+  + 'state.'
 
 // What a drilled-in block of instances actually contains, as counts and ratios over the selection
 // versus everything else. Every line is arithmetic on structured PDBe data — ligand codes, mutation
@@ -26,6 +25,26 @@ const LIGAND_NOTE = 'Listed as deposited, crystallisation and cryoprotection add
 //      were mostly solved deoxy. Residue-1 substitutions are therefore excluded outright, and method
 //      mix and entry count are shown so a reader can see when a "finding" tracks who made the
 //      structures rather than what they are.
+
+// How to read the numbers. On the heading rather than on one row, because the same convention
+// governs the ligands, the mutations and the modified residues alike.
+const SELECTION_HELP = [
+  ['The two percentages', 'A pair like "0% vs 20%" is your selection first, then everything you '
+    + 'did not select. It reads: none of the instances you picked carry this, and 20% of the '
+    + 'others do. Each figure is the share of instances carrying it, not how much is present, so '
+    + 'a structure with four copies of a ligand counts once.'],
+  ['Why the rest, not the whole set', 'Comparing against the whole set would put your selection '
+    + 'inside its own baseline and flatten the contrast. A block of 12 out of 58 carrying none of '
+    + 'a compound sits against 20% in the rest but only 15% across the whole set, because the '
+    + 'block itself drags that average down. Two groups that do not overlap is the honest '
+    + 'comparison.'],
+  ['What gets listed', 'Only differences of at least 15 percentage points, marked as more common '
+    + '(up) or less common (down). It is a difference, not a ratio, so 42% against 30% is a real '
+    + 'gap and still does not appear. Modest differences are therefore left out: the panel would '
+    + 'rather say nothing than make a weak claim.'],
+  ['Small selections', 'Below five instances no percentages are shown at all. One of three is 33%, '
+    + 'and that invites a reading the numbers cannot support.'],
+]
 
 // Below this many instances the percentages are noise, so counts are reported instead.
 const MIN_BLOCK = 5
@@ -165,7 +184,7 @@ export default function BlockSummary({ block, assemblies, labels, matrix, cellLa
           not a verdict on whether the selection is one group — the note says so, because no
           statistic here can tell. */}
       <h2>
-        Selection composition
+        Selection composition {helpHint(SELECTION_HELP, { width: 360 })}
         <span className="cs-count">{s.n} of {assemblies.length}</span>
         {onClear && (
           <button className="cs-linkbtn cs-clear-inline" onClick={onClear}

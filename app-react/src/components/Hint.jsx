@@ -32,3 +32,20 @@ export default function Hint({ text, aria, width = 260 }) {
     </span>
   )
 }
+
+// One renderer for every multi-paragraph help popup, so they stay in the same voice and the
+// plain-text version a screen reader gets is always derived from the same strings as the visible
+// one. `entries` is [heading, text] pairs; `tail` is an optional closing paragraph with no heading.
+export function helpHint(entries, { width = 330, tail = null } = {}) {
+  const aria = [...entries.map(([n, t]) => `${n}: ${t}`), ...(tail ? [tail] : [])].join(' ')
+  return (
+    <Hint width={width} aria={aria} text={(
+      <>
+        {entries.map(([name, txt]) => (
+          <span key={name} className="hint-para"><b>{name}:</b> {txt}</span>
+        ))}
+        {tail && <span className="hint-para">{tail}</span>}
+      </>
+    )} />
+  )
+}

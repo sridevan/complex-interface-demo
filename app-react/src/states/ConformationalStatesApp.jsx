@@ -3,7 +3,7 @@ import { methodLabel } from './methods'
 import DissimilarityHeatmap, { HEATMAP_HELP } from './DissimilarityHeatmap.jsx'
 import BlockSummary from './BlockSummary.jsx'
 import RunSummary from './RunSummary.jsx'
-import Hint from '../components/Hint.jsx'
+import { helpHint } from '../components/Hint.jsx'
 import SuperpositionViewer from './SuperpositionViewer.jsx'
 import SortIcon from '../components/SortIcon.jsx'
 import { Pager } from '../components/Pager.jsx'
@@ -64,22 +64,6 @@ const METRIC_SCALE_NOTE = 'Colour runs linearly from zero to the largest value p
   + 'measures, and a few extreme pairs compress the rest of the set into a narrow part of the ramp. '
   + 'Read the values at the ends of the bar.'
 
-// One renderer for both help popups, so they stay in the same voice and the plain-text version a
-// screen reader gets is always derived from the same strings as the visible one.
-// `entries` is [heading, text] pairs; `tail` is an optional closing paragraph with no heading.
-function helpHint(entries, { width = 330, tail = null } = {}) {
-  const aria = [...entries.map(([n, t]) => `${n}: ${t}`), ...(tail ? [tail] : [])].join(' ')
-  return (
-    <Hint width={width} aria={aria} text={(
-      <>
-        {entries.map(([name, txt]) => (
-          <span key={name} className="hint-para"><b>{name}:</b> {txt}</span>
-        ))}
-        {tail && <span className="hint-para">{tail}</span>}
-      </>
-    )} />
-  )
-}
 
 // Moved out of a note under the heading: it described what is already on screen (a backbone trace
 // in colours) and named a reference the provenance panel already names. What it did not say is how
