@@ -17,6 +17,7 @@
   "The engineered intermediate 4e2f (K164E/E239K) lands at 2.41 A and 0.438 -- the very top of the T group, at the boundary with R -- without the method being told anything about it.",
   "2atc is a 1980s deposition whose residue assignments agree with modern entries at only ~71% of positions, so its comparison uses the 1959 residues that do agree."
  ],
+ "data_notes_scope": "shape",
  "assemblies": [
   {
    "assembly_id": "1acm_1",
@@ -1274,7 +1275,7 @@
    ],
    "mutations": [
     {
-     "label": "MNoneM",
+     "label": "M1M",
      "type": "Initiating methionine"
     }
    ],
@@ -1334,7 +1335,7 @@
    ],
    "mutations": [
     {
-     "label": "MNoneM",
+     "label": "M1M",
      "type": "Initiating methionine"
     }
    ],
@@ -1388,7 +1389,7 @@
      "type": "Engineered mutation"
     },
     {
-     "label": "MNoneM",
+     "label": "M1M",
      "type": "Initiating methionine"
     }
    ],
@@ -1929,7 +1930,7 @@
      "type": "Engineered mutation"
     },
     {
-     "label": "MNoneM",
+     "label": "M1M",
      "type": "Initiating methionine"
     }
    ],

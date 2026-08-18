@@ -22,6 +22,7 @@
   "The consequence is that the three sit lower against every other instance than they should: about a third of what was scored had no counterpart to align to, which alone accounts for their falling below TM-score 0.8 against the reference. Read their position in the matrix as an artefact of the comparison, not as conformational difference. Note 8vyl_1 shows the same signature -- a much larger partner and a low reverse TM-score -- but legitimately: it really is a six-chain nanobody complex of 820 residues, and its scored and displayed sizes agree.",
   "Whether the shape scores for those three are affected is NOT established. They come from the same upstream pipeline that produced the sidecars, so if that pipeline built the same oversized assemblies then their Zernike and spectral values are wrong too and they sit in the wrong place in this heatmap. That has not been verified either way."
  ],
+ "data_notes_scope": "shape",
  "assemblies": [
   {
    "assembly_id": "1a00_1",
@@ -3550,10 +3551,6 @@
     }
    ],
    "mutations": [
-    {
-     "label": "VNoneM",
-     "type": "Engineered mutation"
-    },
     {
      "label": "V1M",
      "type": "Engineered mutation"

@@ -42,6 +42,7 @@ import csv
 import glob
 import json
 import os
+import re
 import sys
 import time
 import urllib.error
@@ -1091,13 +1092,30 @@ def entry_annotations(pdb_ids):
     mutated = pdbe_post_lenient("mutated_AA_or_NA", pdb_ids)
     modified = pdbe_post_lenient("modified_AA_or_NA", pdb_ids)
     out = {}
+    skipped_labels = []
     for pid in pdb_ids:
         muts = []
         for rec in mutated.get(pid, []):
             det = rec.get("mutation_details") or {}
             if not det.get("from") or not det.get("to"):
                 continue
-            muts.append({"label": f"{det['from']}{rec.get('author_residue_number')}{det['to']}",
+            # author_residue_number is null on some records and f-string formatting turned that into
+            # the literal word None, so labels like "MNoneM" reached the page: 15 of them across 5
+            # complexes. PDBe supplies residue_number on those same records, so fall back to it.
+            # Author numbering is preferred where present because it is what a reader sees in the
+            # structure; the two can differ (3jyc has author 370 for residue 335).
+            pos = rec.get("author_residue_number")
+            if pos is None:
+                pos = rec.get("residue_number")
+            if pos is None:
+                continue
+            label = f"{det['from']}{pos}{det['to']}"
+            # Guard rather than trust: anything that is not residue-position-residue is dropped, so
+            # a change upstream cannot put an unreadable label in front of a reader.
+            if not re.fullmatch(r"[A-Z][0-9]+[A-Z]", label):
+                skipped_labels.append(f"{pid}:{label}")
+                continue
+            muts.append({"label": label,
                          "chain": rec.get("chain_id"), "type": det.get("type")})
         mods = []
         for rec in modified.get(pid, []):
@@ -1113,6 +1131,9 @@ def entry_annotations(pdb_ids):
                 uniq.append({"label": m["label"], "type": m["type"]})
         out[pid] = {"mutations": uniq,
                     "modified": sorted({m["comp"] for m in mods})}
+    if skipped_labels:
+        print(f"  (dropped {len(skipped_labels)} unreadable mutation labels: "
+              f"{', '.join(skipped_labels[:5])}{'...' if len(skipped_labels) > 5 else ''})")
     return out
 
 

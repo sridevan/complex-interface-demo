@@ -14,6 +14,7 @@
  "data_notes": [
   "The best-behaved set here: dissimilarity tracks measured backbone RMSD at r = +0.90 (+0.89 after controlling for modelled-residue count), and residue counts are uniform (851-874). Differences are small in absolute terms, 0.24-1.06 A, and concentrated around the active-site loop."
  ],
+ "data_notes_scope": "shape",
  "assemblies": [
   {
    "assembly_id": "1ebg_1",
@@ -1004,10 +1005,6 @@
     {
      "label": "D321A",
      "type": "Engineered mutation"
-    },
-    {
-     "label": "SNoneA",
-     "type": "Engineered mutation"
     }
    ],
    "modified": [],
@@ -1061,10 +1058,6 @@
     },
     {
      "label": "D321A",
-     "type": "Engineered mutation"
-    },
-    {
-     "label": "SNoneA",
      "type": "Engineered mutation"
     }
    ],

@@ -10,6 +10,16 @@ const LIGAND_NOTE = 'Listed as deposited, including crystallisation and cryoprot
   + 'usually stay out. One that does appear often marks a single crystal form rather than a '
   + 'functional state.'
 
+// PDBe records sequence differences against the reference sequence; nothing here is read from a
+// structure title. The type field is deliberately not used: measured on human haemoglobin it calls
+// the cloning artefact V1M an "Engineered mutation" and the sickle variant E6V a "Conflict", so it
+// cannot separate engineering from biology and the panel does not pretend to.
+const MUTATION_NOTE = 'Sequence differences from the reference sequence, as deposited. A label '
+  + 'reads wild-type residue, position, observed residue, so E6V is glutamate to valine at '
+  + 'position 6. Engineered substitutions and natural variants are not distinguished, because the '
+  + 'deposited annotation does not separate them reliably. Substitutions at position 1 are excluded '
+  + 'throughout as initiator-methionine artefacts of recombinant expression.'
+
 // What a drilled-in block of instances actually contains, as counts and ratios over the selection
 // versus everything else. Every line is arithmetic on structured PDBe data — ligand codes, mutation
 // records, experimental method. Nothing is inferred from a structure title, and no state is named.
@@ -153,16 +163,19 @@ export default function BlockSummary({ block, assemblies, labels, matrix, cellLa
   // is shown beside it. Long systematic names are clipped and given in full on hover, since the
   // point is recognition ("carbon monoxide") rather than the full IUPAC string.
   const NAME_MAX = 26
+  // Counts behind the percentages, on every chip alike. A percentage hides how much evidence sits
+  // under it, and on sets this small that is the difference between a finding and a coincidence.
+  const nRest = assemblies.length - s.n
+  const countsTitle = (d) => `${Math.round(d.block * s.n)} of ${s.n} selected, `
+    + `${Math.round(d.rest * nRest)} of ${nRest} in the rest`
+
   const ligChip = (d, dir) => {
     const full = s.ligName.get(d.key)
     const name = full ? full.toLowerCase() : null
     const short = name && name.length > NAME_MAX ? `${name.slice(0, NAME_MAX - 1)}…` : name
     return (
       <span key={d.key} className={`bs-chip ${dir}`}
-            title={`${full ? `${d.key} — ${full}` : d.key}\n`
-                   + `${Math.round(d.block * s.n)} of ${s.n} selected, `
-                   + `${Math.round(d.rest * (assemblies.length - s.n))} of `
-                   + `${assemblies.length - s.n} in the rest`}>
+            title={`${full ? `${d.key} — ${full}` : d.key}\n${countsTitle(d)}`}>
         <b>{d.key}</b>{short && <span className="bs-lig-name">{short}</span>}
         <span className="bs-nums"><b>{pct(d.block)}</b> vs {pct(d.rest)}</span>
       </span>
@@ -242,7 +255,7 @@ export default function BlockSummary({ block, assemblies, labels, matrix, cellLa
           )}
         </Row>
 
-        <Row label="Mutations">
+        <Row label="Mutations" hint={MUTATION_NOTE}>
           {s.noRest ? <span className="bs-note">nothing to compare against</span>
            : s.small ? <span className="bs-note">too few instances to compare reliably</span> : (
             <>
@@ -250,14 +263,14 @@ export default function BlockSummary({ block, assemblies, labels, matrix, cellLa
                 <span className="bs-note">none differs from the rest by {pct(ENRICH_PP)} or more</span>
               )}
               {s.mutations.map((d) => (
-                <span key={d.key} className="bs-chip bs-up">
-                  {d.key} <b>{pct(d.block)}</b> vs {pct(d.rest)}
+                <span key={d.key} className="bs-chip bs-up" title={countsTitle(d)}>
+                  <b>{d.key}</b>
+                  <span className="bs-nums"><b>{pct(d.block)}</b> vs {pct(d.rest)}</span>
                 </span>
               ))}
               {s.initiatorN > 0 && (
-                <span className="bs-note"> — {s.initiatorN} instance{s.initiatorN === 1 ? '' : 's'}
-                  {' '}also carry a residue-1 substitution, excluded as an initiator-methionine
-                  artefact of recombinant expression</span>
+                <span className="bs-note"> · {s.initiatorN} with a position-1 substitution,
+                  {' '}excluded</span>
               )}
             </>
           )}
@@ -266,8 +279,9 @@ export default function BlockSummary({ block, assemblies, labels, matrix, cellLa
         {s.modified.length > 0 && (
           <Row label="Modified residues">
             {s.modified.map((d) => (
-              <span key={d.key} className="bs-chip bs-up">
-                {d.key} <b>{pct(d.block)}</b> vs {pct(d.rest)}
+              <span key={d.key} className="bs-chip bs-up" title={countsTitle(d)}>
+                <b>{d.key}</b>
+                <span className="bs-nums"><b>{pct(d.block)}</b> vs {pct(d.rest)}</span>
               </span>
             ))}
           </Row>
