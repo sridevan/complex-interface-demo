@@ -38,10 +38,18 @@ const SELECTION_HELP = [
     + 'a compound sits against 20% in the rest but only 15% across the whole set, because the '
     + 'block itself drags that average down. Two groups that do not overlap is the honest '
     + 'comparison.'],
-  ['What gets listed', 'Only differences of at least 15 percentage points, marked as more common '
-    + '(up) or less common (down). It is a difference, not a ratio, so 42% against 30% is a real '
-    + 'gap and still does not appear. Modest differences are therefore left out: the panel would '
-    + 'rather say nothing than make a weak claim.'],
+  ['What gets listed', 'Differences of at least 15 percentage points, marked as more common (up) '
+    + 'or less common (down). It is a difference and not a ratio, so 42% against 30% is a real gap '
+    + 'and still does not appear. Hover a chip for the counts behind the percentages.'],
+  ['This is a display cutoff, not a test', 'Fifteen points is where the list stops getting longer, '
+    + 'nothing more. Measured by permutation on these datasets, a randomly chosen selection of the '
+    + 'same size clears it about 96% of the time, so seeing something listed is close to no '
+    + 'evidence on its own. The reason is scale: a set of 58 instances carries around 75 distinct '
+    + 'ligands, mutations and modified residues, and the largest of 75 differences is large by '
+    + 'chance. Testing properly (Fisher plus a correction for those 75) drops false positives to '
+    + 'under 1% but then reports nothing at all on real blocks either — these sets are too small '
+    + 'to support inference over that many features. So read this as a description of what you '
+    + 'picked, weigh it by the counts, and confirm anything that matters against the structures.'],
   ['Small selections', 'Below five instances no percentages are shown at all. One of three is 33%, '
     + 'and that invites a reading the numbers cannot support.'],
 ]
@@ -163,7 +171,11 @@ export default function BlockSummary({ block, assemblies, labels, matrix, cellLa
     const name = full ? full.toLowerCase() : null
     const short = name && name.length > NAME_MAX ? `${name.slice(0, NAME_MAX - 1)}…` : name
     return (
-      <span key={d.key} className={`bs-chip ${dir}`} title={full ? `${d.key} — ${full}` : d.key}>
+      <span key={d.key} className={`bs-chip ${dir}`}
+            title={`${full ? `${d.key} — ${full}` : d.key}\n`
+                   + `${Math.round(d.block * s.n)} of ${s.n} selected, `
+                   + `${Math.round(d.rest * (assemblies.length - s.n))} of `
+                   + `${assemblies.length - s.n} in the rest`}>
         <b>{d.key}</b>{short && <span className="bs-lig-name">{short}</span>}
         <span className="bs-nums"><b>{pct(d.block)}</b> vs {pct(d.rest)}</span>
       </span>
