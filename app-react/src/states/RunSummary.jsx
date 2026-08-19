@@ -22,6 +22,7 @@ export default function RunSummary({ data, metricKeys }) {
   const noRes = A.filter((a) => a.resolution == null).length
   const res = A.map((a) => a.resolution).filter((r) => r != null).sort((a, b) => a - b)
   const methods = methodCounts(A)
+  const cx = data.complex
   // The bare word "Shape" names nothing a reader can check, so the panel uses the dataset's own
   // label for it ("Shape (combined Zernike + spectral)") rather than restating the composition
   // here, which would drift from the builder. TM-score and RMSD keep short names: their dataset
@@ -118,6 +119,12 @@ export default function RunSummary({ data, metricKeys }) {
           <Line label="Method">
             {methods.map((m) => `${num(m.n)} ${m.label}`).join(' · ')}
           </Line>
+          {cx?.oligomeric_state && (
+            <Line label="Assembly">
+              {cx.oligomeric_state}
+              {cx.symmetry && <span className="rs-note"> · symmetry {cx.symmetry}</span>}
+            </Line>
+          )}
           {res.length > 0 && (
             <Line label="Resolution">
               {res[0].toFixed(2)}–{res[res.length - 1].toFixed(2)} Å
@@ -143,11 +150,20 @@ export default function RunSummary({ data, metricKeys }) {
         </div>
       </div>
 
-      {/* Names what the identifier is, not just the identifier: "3sph_1" alone reads as a bare
-          accession, and which of the set everything was aligned to is the one fact here that
-          changes how every number above it should be read. */}
+      {/* Two different structures, kept apart on purpose. The reference is chosen here, as the
+          medoid, because a central frame keeps every transform small. The representative is PDBe's
+          own editorial choice for the complex, which is what a reader will see elsewhere on the
+          site; it is named but never superposed onto. */}
       <p className="rs-foot">
         Superposed onto reference assembly <span className="mono">{data.reference_assembly}</span>
+        {cx?.representative && (
+          <>
+            <br />
+            PDBe representative <span className="mono">{cx.representative}</span>
+            {cx.representative_in_set === false && (
+              <span className="rs-note"> · not among the scored assemblies</span>)}
+          </>
+        )}
       </p>
     </div>
   )

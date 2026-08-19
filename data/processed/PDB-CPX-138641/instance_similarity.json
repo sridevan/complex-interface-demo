@@ -11,6 +11,14 @@
   "atoms_shipped": "backbone"
  },
  "subset": null,
+ "complex": {
+  "name": "NADH-quinone oxidoreductase",
+  "complex_portal_id": null,
+  "oligomeric_state": "Heterotridecamer",
+  "symmetry": null,
+  "representative": "7z7s_1",
+  "representative_in_set": true
+ },
  "data_notes": [
   "The depositors varied two things independently and said so in the entry titles: the conformation (Resting, Closed, Open, Open-ready) and the sample condition (apo, NADH, turnover at pH 6, turnover at pH 8, decylubiquinone, piericidin A), across three detergent preparations. That makes this the one set here carrying its own negative control, rather than only a grouping to be recovered.",
   "The matrix separates conformation and is blind to sample preparation. Grouping the same 24 instances by conformation gives Cohen's d 1.42 on TM-score and 1.52 on shape; grouping them by condition gives -0.15 and -0.16, and by detergent 0.26 and -0.03. Values at or below zero mean instances sharing a condition are no more alike than instances that do not, so what the view responds to here is structure and not batch.",

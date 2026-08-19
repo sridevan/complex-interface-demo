@@ -11,6 +11,14 @@
   "atoms_shipped": "backbone"
  },
  "subset": null,
+ "complex": {
+  "name": "Aspartate carbamoyltransferase complex",
+  "complex_portal_id": "CPX-3091",
+  "oligomeric_state": "Heterododecamer",
+  "symmetry": "d3",
+  "representative": "9eeh_1",
+  "representative_in_set": false
+ },
  "data_notes": [
   "The best-behaved dataset in this collection. Dissimilarity tracks measured backbone RMSD at r = +0.97, and controlling for modelled-residue count leaves r = +0.98 -- it gets stronger, not weaker, so the scores here are not a proxy for how much was built. Residue counts span 2604-2778, only 6% and uncorrelated with the scores (r = -0.17).",
   "The set is cleanly bimodal with no instances in between: 37 T-state structures at 0.04-2.41 A from the reference (dissimilarity 0.19-0.47) and 19 R-state structures at 5.79-6.82 A (0.70-0.81). Both states are named by their depositors -- the 1ra* series is CTP-ligated T, while 1xjw, 1f1b, 1r0b, 1q95 and 4f04 are labelled R and 8atc/1d09 are PALA complexes. The reference 1rai_1 is itself a T-state structure.",

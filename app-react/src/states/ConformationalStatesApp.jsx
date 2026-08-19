@@ -418,6 +418,9 @@ export default function ConformationalStatesApp({ config }) {
                         <a className="cs-asm-link" href={pdbeAssemblyUrl(r.assembly_id)}
                            target="_blank" rel="noreferrer"
                            title={`View ${r.assembly_id} at PDBe`}>{r.assembly_id}</a>
+                        {r.assembly_id === data.complex?.representative && (
+                          <span className="cs-rep" title="PDBe's representative structure for this complex">rep</span>
+                        )}
                         {!overlays(r) && (
                           <span className="cs-nofit"
                                 title={`Packing group ${r.packing_group}: this instance does not share the reference's arrangement, so it will not overlay in the 3D view`}>△</span>

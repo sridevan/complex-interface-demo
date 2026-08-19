@@ -11,6 +11,14 @@
   "atoms_shipped": "backbone"
  },
  "subset": null,
+ "complex": {
+  "name": "DNA-directed RNA polymerase II complex",
+  "complex_portal_id": "CPX-2662",
+  "oligomeric_state": "Heteropentadecamer",
+  "symmetry": null,
+  "representative": "5u5q_1",
+  "representative_in_set": true
+ },
  "data_notes": [
   "This is not a set of conformational states. Seventeen of the eighteen instances are 12-subunit Pol II elongation complexes at 3.4 to 4.5 A, and what varies between them is the nucleic-acid scaffold and the lesion it carries (CPD, cisplatin, an RdRP scaffold, a hepatitis delta ribozyme), not the conformation of the enzyme. Read it as a set of near copies with one outlier, not as states.",
   "That outlier, 3j1n_1, is a 16 A cryo-EM map of a preinitiation complex rather than an elongation complex, and it is disjoint from everything else: every pair involving it scores 0.195 to 0.210 on 1 - TM-score while every other pair in the set tops out at 0.030. Nothing lies between. It is kept rather than dropped because it is real, but the matrix should be read as one tight group plus a structure that does not belong to it.",

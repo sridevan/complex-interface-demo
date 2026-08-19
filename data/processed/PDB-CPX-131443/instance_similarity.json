@@ -11,11 +11,20 @@
   "atoms_shipped": "backbone"
  },
  "subset": null,
+ "complex": {
+  "name": "Hemoglobin",
+  "complex_portal_id": null,
+  "oligomeric_state": "Heterotetramer",
+  "symmetry": "d2",
+  "representative": "2d5x_1",
+  "representative_in_set": true
+ },
  "data_notes": [
   "Hydrogen content separates the set: the 14 structures with zero hydrogens group together, while 5c6e (joint X-ray/neutron, with 738 heavy-water atoms), 6sva, 8puq, 8pur and 6r2o carry 48-54% hydrogens and sit apart. The heme gives it away - 172 atoms without hydrogens, 292 with.",
   "2zlv is missing a 14-residue loop (beta 43-56) in both beta chains, which is why it separates despite superposing on the reference at 0.53 A.",
   "Backbone RMSD to the reference is 0.3-2.4 A throughout, so the groupings above reflect what each deposition contains rather than how the protein is folded."
  ],
+ "data_notes_scope": "shape",
  "assemblies": [
   {
    "assembly_id": "1g0b_1",

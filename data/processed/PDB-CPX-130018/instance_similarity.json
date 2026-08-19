@@ -11,6 +11,14 @@
   "atoms_shipped": "backbone"
  },
  "subset": null,
+ "complex": {
+  "name": "Enolase 1",
+  "complex_portal_id": null,
+  "oligomeric_state": "Homodimer",
+  "symmetry": "c2",
+  "representative": "2xh0_1",
+  "representative_in_set": true
+ },
  "data_notes": [
   "The best-behaved set here: dissimilarity tracks measured backbone RMSD at r = +0.90 (+0.89 after controlling for modelled-residue count), and residue counts are uniform (851-874). Differences are small in absolute terms, 0.24-1.06 A, and concentrated around the active-site loop."
  ],

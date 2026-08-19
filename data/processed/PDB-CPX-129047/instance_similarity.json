@@ -11,10 +11,19 @@
   "atoms_shipped": "backbone"
  },
  "subset": null,
+ "complex": {
+  "name": "L-lactate dehydrogenase",
+  "complex_portal_id": null,
+  "oligomeric_state": "Homotetramer",
+  "symmetry": "d2",
+  "representative": "6j9s_2",
+  "representative_in_set": true
+ },
  "data_notes": [
   "1llc_1 is one of two assemblies PDBe defines for entry 1llc, neither marked preferred. Its subunits are arranged asymmetrically (one centroid pair only 23.3 A apart) unlike the 222-symmetric tetramer every other instance shows, so it is likely a crystallographic rather than biological grouping. It sits 18 A from the reference even at best fit and scores the highest dissimilarity here. 1llc_2 is the symmetric tetramer of the same entry.",
   "Only 2zqy is labelled T-state by its depositor; four instances are labelled R-state and six more are unlabelled but group with them. The R/T contrast therefore rests on a single T-state structure."
  ],
+ "data_notes_scope": "shape",
  "assemblies": [
   {
    "assembly_id": "1llc_1",

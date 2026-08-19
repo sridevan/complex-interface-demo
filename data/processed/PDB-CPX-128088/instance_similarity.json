@@ -11,6 +11,14 @@
   "atoms_shipped": "backbone"
  },
  "subset": null,
+ "complex": {
+  "name": null,
+  "complex_portal_id": null,
+  "oligomeric_state": "Hetero 26-mer",
+  "symmetry": null,
+  "representative": "5y5x_1",
+  "representative_in_set": true
+ },
  "data_notes": [
   "The two measures disagree on this set, and one of them is wrong. Read it on TM-score. Grouping the eight state-labelled instances by rotational state gives Cohen's d 1.86 on TM-score and -0.72 on shape, a negative value meaning instances sharing a state come out LESS alike than instances that do not. Grouping the same instances by which study deposited them reverses it: 0.32 on TM-score, 2.02 on shape.",
   "What the shape score is tracking here is reconstruction resolution, not shape. Across the 36 pairs it correlates with backbone RMSD at r = -0.05, which is no relationship at all, and with the difference in resolution between the two structures at r = +0.46. TM-score over the same pairs correlates with backbone RMSD at r = +0.96. The two deposition series sit at different resolutions (5.0-7.5 A for the 5y entries, 3.25-4.3 A for the 6q/6r entries, 8.7 A for 5tsj), so grouping by resolution and grouping by study are the same grouping, and shape finds it instead of the biology.",

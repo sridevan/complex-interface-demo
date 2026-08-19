@@ -11,10 +11,19 @@
   "atoms_shipped": "backbone"
  },
  "subset": null,
+ "complex": {
+  "name": "Ribonucleoside-diphosphate reductase",
+  "complex_portal_id": null,
+  "oligomeric_state": "Heterotetramer",
+  "symmetry": "c2",
+  "representative": "9byt_1",
+  "representative_in_set": true
+ },
  "data_notes": [
   "Four instances (9byh, 9bw3, 9by1, 9bxc) leave almost all of both beta subunits unmodelled - 1366 residues against 1944, retaining only a ~12-14 residue C-terminal tail. They superpose on the reference at 0.02-0.39 A, i.e. near-identical, yet score 0.91-0.96 dissimilarity, close to the maximum.",
   "Across all 40 instances the score correlates with modelled-residue count (r = -0.62) and not with measured RMSD (r = -0.10). For this complex the heatmap is largely reporting how much of the model was built rather than its shape."
  ],
+ "data_notes_scope": "shape",
  "assemblies": [
   {
    "assembly_id": "9bw3_1",

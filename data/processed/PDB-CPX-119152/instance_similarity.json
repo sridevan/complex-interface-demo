@@ -11,6 +11,14 @@
   "atoms_shipped": "backbone"
  },
  "subset": null,
+ "complex": {
+  "name": "ATP-sensitive inward rectifier potassium channel 12",
+  "complex_portal_id": null,
+  "oligomeric_state": "Homotetramer",
+  "symmetry": "c4",
+  "representative": "3spg_1",
+  "representative_in_set": true
+ },
  "data_notes": [
   "The structural variation is large and real: the two apo structures (3jyc, 3spj) sit 9.7 A from the PIP2-bound reference, consistent with the cytoplasmic-domain movement Kir channels make on PIP2 binding, and the scores order the set monotonically along it (0.22 for PIP2-bound through 0.83 for apo).",
   "Extent and conformation are confounded by the biology rather than by any error: PIP2 binding both changes the shape and orders the tether helix, so PIP2-bound structures also carry the most modelled residues (1328 against 1284 for apo). Dissimilarity correlates with measured RMSD at r = +0.83 and with residue count at r = -0.88, and those two are themselves correlated (r = -0.72). Controlling for residue count leaves r = +0.60, so the shape signal is not merely a residue count -- but this dataset cannot prove the point, because both explanations move together. With only 11 instances the estimates are noisy."

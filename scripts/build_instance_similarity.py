@@ -1153,6 +1153,36 @@ def entry_annotations(pdb_ids):
     return out
 
 
+def complex_details(complex_id):
+    """PDBe's own record for the complex: its name, oligomeric state, symmetry and the structure it
+    considers representative.
+
+    Worth carrying because it is editorially chosen rather than derived here. The representative is
+    NOT used as the superposition reference: that job wants the medoid, the most central frame, so
+    every transform stays small, and the two disagree on most sets. Measured across the twelve, one
+    is not reliably tighter than the other (rhodopsin favours PDBe's at 1.44 A against 3.59, complex
+    I favours the medoid at 1.99 against 2.52), so the medoid keeps the technical job and this
+    records the editorial one.
+    """
+    url = (f"https://www.ebi.ac.uk/pdbe/api/v2/complex/details/{complex_id}"
+           f"?id_type=pdb_complex_id")
+    try:
+        with urllib.request.urlopen(url, timeout=60) as r:
+            rec = (json.load(r).get(complex_id) or [{}])[0]
+    except Exception as e:                      # noqa: BLE001 - the page is fine without this
+        print(f"  (complex details unavailable: {e})")
+        return None
+    rep = rec.get("representative_structure") or {}
+    return {
+        "name": rec.get("name"),
+        "complex_portal_id": rec.get("complex_portal_id"),
+        "oligomeric_state": rec.get("oligomeric_state"),
+        "symmetry": (rec.get("symmetry") or {}).get("symbol") or None,
+        "representative": (f"{rep['pdb_id']}_{rep['assembly_id']}"
+                           if rep.get("pdb_id") is not None else None),
+    }
+
+
 def entry_metadata(pdb_ids):
     """{pdb_id: {structure_title, resolution, exp_method}} from the PDBe entry API."""
     pdb_ids = sorted(set(pdb_ids))
@@ -1295,6 +1325,14 @@ def main():
         raise SystemExit(f"reference {ref} is not one of the clustered assemblies")
     print(f"reference: {ref}" + (f"  (medoid is {medoid})" if ref != medoid else "  (medoid)"))
 
+    details = complex_details(args.complex)
+    if details:
+        rep = details.get("representative")
+        details["representative_in_set"] = bool(rep and rep in labels)
+        print(f"PDBe representative: {rep or 'none'}"
+              + ("" if details["representative_in_set"] else "  (not among the scored assemblies)")
+              + f"; superposing onto the medoid instead")
+
     entry_ids = sorted({a.rsplit("_", 1)[0] for a in labels})
     meta = entry_metadata([a.rsplit("_", 1)[0] for a in labels])
     # Sequence annotations, so a selected block can be described by what is actually bound to it
@@ -1400,6 +1438,7 @@ def main():
             "atoms_shipped": args.atoms,
         },
         "subset": subset,
+        "complex": details,
         "data_notes": DATA_NOTES.get(args.complex, []),
         "data_notes_scope": DATA_NOTES_SCOPE.get(args.complex, "shape"),
         "assemblies": assemblies,

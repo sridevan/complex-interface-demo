@@ -11,6 +11,14 @@
   "atoms_shipped": "backbone"
  },
  "subset": null,
+ "complex": {
+  "name": null,
+  "complex_portal_id": null,
+  "oligomeric_state": "Heteroicosamer",
+  "symmetry": null,
+  "representative": "6rdb_1",
+  "representative_in_set": true
+ },
  "data_notes": [
   "Every entry here is a focussed refinement of the F1 head and rotor, not the whole F-ATP synthase. The comparison covers that region only, so nothing on this page speaks to the membrane-embedded Fo domain or to the peripheral stalk.",
   "The depositors labelled the states themselves, in the entry titles: three primary rotary states and their substates (1A-1F, 2A-2D, 3A-3C). That makes this the one set here with an independent ground truth to check the view against, rather than a grouping read off the matrix.",

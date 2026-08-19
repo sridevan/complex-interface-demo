@@ -6,7 +6,7 @@ import './styles.css'
 const COMPLEXES = [
   { hash: '#spike', name: 'SARS-CoV-2 spike glycoprotein', oligomer: 'Homotrimer',
     cpxId: 'PDB-CPX-140202', interfaceType: 'antibody-antigen', nProto: 3, accent: '#4b7fcc' },
-  { hash: '#hemoglobin', name: 'Horse haemoglobin', oligomer: 'Heterotetramer (α₂β₂)',
+  { hash: '#hemoglobin', name: 'Horse haemoglobin', oligomer: 'Heterotetramer',
     cpxId: 'PDB-CPX-131443', interfaceType: 'protein-protein', nProto: 4, accent: '#c65a5a' },
   { hash: '#cct', name: 'Human CCT / TRiC chaperonin', oligomer: 'Hetero-16-mer (8 subunits × 2)',
     cpxId: 'PDB-CPX-143265', interfaceType: 'protein-protein', nProto: 16, accent: '#3f8f5a' },
@@ -23,6 +23,10 @@ const IFACE_LABEL = {
 // Second category: how similar the assembly instances of one complex are to each other in global
 // shape, rather than a view of that complex's interfaces.
 //
+// Oligomeric states are PDBe's own, taken from the complex details API at build time and copied
+// here; several were previously asserted from general knowledge and were wrong (RNA Pol II given as
+// a dodecamer when PDBe calls it a pentadecamer, the V/A-ATPase as 9 subunits against 26).
+//
 // Ordered best to worst by how well the shape scores track measured structural difference: primarily
 // the partial correlation between score and backbone RMSD once modelled extent is controlled for,
 // which is what distinguishes "measures shape" from "measures how much of the model was built".
@@ -31,16 +35,16 @@ const SIMILARITY = [
   { hash: '#atcase-similarity', name: 'Aspartate carbamoyltransferase', oligomer: 'Heterododecamer',
     cpxId: 'PDB-CPX-137391', organism: 'Escherichia coli',
     detail: '58 instances · 1,653 pairs', accent: '#b0447a' },
-  { hash: '#vatpase-similarity', name: 'V/A-type ATPase', oligomer: 'Rotary, 9 subunits',
+  { hash: '#vatpase-similarity', name: 'V/A-type ATPase', oligomer: 'Hetero 26-mer',
     cpxId: 'PDB-CPX-128088', organism: 'Thermus thermophilus',
     detail: '9 instances · 36 pairs', accent: '#a05195' },
-  { hash: '#polii-similarity', name: 'RNA polymerase II', oligomer: 'Heterododecamer',
+  { hash: '#polii-similarity', name: 'RNA polymerase II', oligomer: 'Heteropentadecamer',
     cpxId: 'PDB-CPX-133430', organism: 'Saccharomyces cerevisiae',
     detail: '18 instances · 153 pairs', accent: '#6b6f9c' },
-  { hash: '#complex1-similarity', name: 'Respiratory complex I', oligomer: 'Heteromultimer, 13 subunits',
+  { hash: '#complex1-similarity', name: 'Respiratory complex I', oligomer: 'Heterotridecamer',
     cpxId: 'PDB-CPX-138641', organism: 'Escherichia coli',
     detail: '24 instances · 276 pairs', accent: '#8a6d3b' },
-  { hash: '#atpsynthase-similarity', name: 'F-ATP synthase', oligomer: 'Rotary, 17 subunits',
+  { hash: '#atpsynthase-similarity', name: 'F-ATP synthase', oligomer: 'Heteroicosamer',
     cpxId: 'PDB-CPX-106364', organism: 'Polytomella sp.',
     detail: '16 instances · 120 pairs', accent: '#1f7a8c' },
   { hash: '#enolase-similarity', name: 'Enolase 1', oligomer: 'Homodimer',
