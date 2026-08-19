@@ -111,6 +111,10 @@ export default function ConformationalStatesApp({ config }) {
   // a cell is under 2px. Dragging a block is the way in — it needs no precision, and the ordering
   // already groups what belongs together, so a contiguous range is the natural unit.
   const [zoom, setZoom] = useState(null)
+  // Free-text filter over the table. Titles are where the depositors record what a structure is --
+  // "R2 quaternary state", "Open state", "turnover at pH 8" -- so typing a state name is the
+  // fastest way to pull its instances together out of a few hundred rows and check them.
+  const [query, setQuery] = useState('')
 
 
   useEffect(() => {
@@ -177,10 +181,11 @@ export default function ConformationalStatesApp({ config }) {
   // included because toggling it moves the selected rows to page 1 — leaving the reader on page 12
   // would hide the thing they just asked to see. Deliberately NOT keyed on `slots`: once the mode
   // is on, selecting another structure should not also jump the page.
-  useEffect(() => { setPage(0) }, [sort.key, sort.dir, basePath, zoom, selectedFirst])
+  useEffect(() => { setPage(0) }, [sort.key, sort.dir, basePath, zoom, selectedFirst, query])
   // Each measure carries its OWN seriation, so a range of indices means something different under
   // each one. Carrying a zoom across the switch would silently show a different set of instances.
   useEffect(() => { setZoom(null) }, [metric, basePath])
+  useEffect(() => { setQuery('') }, [basePath])
 
   if (error) {
     return (
@@ -229,7 +234,14 @@ export default function ConformationalStatesApp({ config }) {
   }
 
   const seriation = Object.fromEntries(shownOrder.map((a, i) => [a, i]))
-  const rows = [...data.assemblies].filter((a) => !inView || inView.has(a.assembly_id))
+  const q = query.trim().toLowerCase()
+  // Displayed structures stay listed whatever the filter says. Otherwise checking a match, then
+  // refining the query, would hide the very rows whose metadata you are comparing -- and the table
+  // is the only place that metadata appears.
+  const matches = (a) => !q || slots.includes(a.assembly_id)
+    || (a.structure_title || '').toLowerCase().includes(q)
+    || a.assembly_id.toLowerCase().includes(q)
+  const rows = [...data.assemblies].filter((a) => (!inView || inView.has(a.assembly_id)) && matches(a))
     .sort((x, y) => {
       // Selected first, when asked for. A stable PARTITION, not a re-sort: whatever order was in
       // force still holds within each group, so this lifts the chosen rows out of the list rather
@@ -343,6 +355,25 @@ export default function ConformationalStatesApp({ config }) {
                      onChange={(e) => setSelectedFirst(e.target.checked)} />
               selected first
             </label>
+            {/* Filters the table only. The matrix keeps every instance: drag-to-drill works on
+                positions in the ordering, and the colour scale is pinned to the whole set, so
+                removing rows from the matrix would break both. Checking a match still marks it in
+                the heatmap, which is how a filtered search gets back to the picture. */}
+            <span className="cs-filter">
+              <input type="search" value={query} placeholder="Filter by title or id"
+                     onChange={(e) => setQuery(e.target.value)}
+                     aria-label="Filter instances by structure title or assembly id" />
+              {q && (
+                <span className="cs-filter-n">
+                  {/* Denominator is what was on offer before filtering, which is the drilled-in
+                      block when there is one. Counting against the whole set while showing a
+                      block would overstate how much the filter removed. */}
+                  {rows.length} of {inView ? shownOrder.length : data.assemblies.length}
+                  <button className="cs-linkbtn" onClick={() => setQuery('')}
+                          title="Clear the filter">clear</button>
+                </span>
+              )}
+            </span>
             {(sort.key || selectedFirst) && (
               <button className="cs-linkbtn"
                       onClick={() => { setSort({ key: null, dir: 'asc' }); setSelectedFirst(false) }}
