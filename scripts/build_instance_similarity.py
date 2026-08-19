@@ -198,22 +198,38 @@ DATA_NOTES = {
         "At 341 instances this is by far the largest set here -- the next largest is ATCase at 58 "
         "-- so the heatmap is drawn without axis labels and identity comes from hovering a cell or "
         "from the instances table, which lists the rows in the same order.",
-        "The reference is 1a00_1, not the medoid (1y45_1). Only the reference's own row of "
-        "US-align output was available when this was built, and every instance is superposed onto "
-        "it; a rebuild against the medoid would give slightly tighter transforms throughout.",
-        "Only the shape measure is offered. TM-score needs a score for every pair and 53,539 of "
-        "the 57,970 pairs have none, so that metric is omitted rather than shown with holes.",
-        "Transforms were checked against the best rigid superposition achievable on the same "
-        "residues: 340 of 341 are optimal. The exception is 2m6z_1, an NMR structure, which is "
-        "placed at 5.82 A where 3.06 A is achievable, so it will sit visibly off the others in "
-        "the 3D view. Every other instance lands between 0.14 and 3.79 A of the reference "
-        "(median 1.13 A).",
-        "Whether an instance shares the reference's frame was decided from the reference's own "
-        "US-align row rather than by partitioning all 57,970 pairs, because only that row was "
-        "available. By that test all 341 overlay 1a00_1, so none is flagged. Note four instances "
-        "(8vyl_1, 8wj0_1, 8wj1_1, 8wj2_1) fall below TM-score 0.8 against the reference while "
-        "still aligning across their full extent -- they fit less tightly, but are not a "
-        "separate packing arrangement.",
+        "Every transform was checked against the best rigid superposition achievable on the "
+        "same residues, and all 341 are optimal. Instances land 0.12 to 4.32 A from the "
+        "reference, median 0.95 A. The furthest is 2m6z_1, an NMR structure, which is genuinely "
+        "that different rather than badly placed.",
+        "All 57,970 pairs have US-align output, so whether the instances share a common frame was "
+        "decided by partitioning every pair rather than by reading one row. They form a single "
+        "superposable group: there is no packing split in this set. Four instances (8vyl_1, "
+        "8wj0_1, 8wj1_1, 8wj2_1) still fit less tightly than the rest while aligning across their "
+        "full extent; for three of them the reason is the sizing fault described below.",
+        "On TM-score the set resolves the quaternary states, and the depositors named them in "
+        "their titles, so the grouping can be checked rather than assumed. The 11 instances "
+        "titled T-state occupy rows 61 to 171 of the ordering, the 7 titled R-state rows 192 to "
+        "244, and 12 of the 13 titled R2 rows 279 to 317. Each group is tight internally (mean "
+        "0.005 to 0.006) against 0.079 between T and R and 0.043 between R and R2.",
+        "The order is mechanistic: T, then R, then R2. T sits 0.140 from R2 and only 0.079 from "
+        "R, so R2 lies beyond R rather than between R and T, which is how the third quaternary "
+        "state is usually described. The shape score does not resolve any of this.",
+        "One entry supplies its own control. 1yff was deposited as two assemblies precisely "
+        "because it captures two quaternary states, and the two land 114 rows apart: 1yff_1 at "
+        "row 186 with the R group, 1yff_2 at row 300 inside the R2 block. Nothing in the method "
+        "knows they share an entry.",
+        "What it does NOT resolve is the T to T(high) shift. 52 instances are titled T-to-T(high) "
+        "quaternary transitions and they sit 0.008 from the T-state group, against a spread of "
+        "0.005 within T itself, so on a whole-assembly measure they are the same block. The T-like "
+        "half is T and T(high) merged.",
+        "The four rows that open the ordering are outliers by experiment rather than by state: "
+        "8vyl_1 carries a nanobody and so has extra chains, 2m6z_1 and 2h35_1 are NMR solution "
+        "structures, and 7xgy_1 is a 3.5 A cryo-EM map. Read their position as a difference in "
+        "what was deposited, not in conformation.",
+        "Carbon monoxide is bound in 46% of the R-like half against 12% of the T-like half, which "
+        "is consistent with a liganded and unliganded split, but the ligand difference alone does "
+        "not establish it and the page names no states of its own.",
         "The set is 316 x-ray, 21 EM, 2 NMR and 2 other, spanning 1.25-4.50 A; two instances "
         "have no resolution. Resolution varies far more than in the smaller sets here, so it is "
         "worth checking before reading any pair's dissimilarity as conformational.",
