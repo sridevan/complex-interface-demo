@@ -176,12 +176,11 @@ function Distribution({ values, selected, ext, discrete, digits, unit, label, po
       {markerX != null && <line x1={markerX} y1="0" x2={markerX} y2={H} className="ipd-marker"
         vectorEffect="non-scaling-stroke" />}
       {/* A transparent full-height rect per bar, so a bar is hoverable however short it is.
-          Empty bars are hoverable only when binned. There, "0 interfaces between 530 and 600" is
-          worth confirming and the hover is the only place the bin RANGE appears at all. On a
-          discrete chart the x position is the value itself and the gaps are literally nothing, so
-          "0 interfaces, 3" states what the empty space already says.
+          Empty bars are never hoverable, binned or not: highlighting a column to report that
+          nothing is in it draws the eye to the one place with no data. The bin range is not lost
+          with it -- bins are contiguous, so the tooltips either side of a gap bracket it exactly.
           Inset by half a stroke width so the hover outline is not clipped at the chart edges. */}
-      {bars.map((count, i) => (isCount && count === 0) ? null : (
+      {bars.map((count, i) => count === 0 ? null : (
         <rect key={`h${i}`} className="ipd-hit" vectorEffect="non-scaling-stroke"
           x={i * (bw + GAP) + 0.5} y={0.5} width={Math.max(0, bw - 1)} height={H - 1}
           onMouseEnter={(e) => onTip(tipFor(count, i), e)}

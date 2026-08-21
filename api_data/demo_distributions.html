@@ -577,13 +577,12 @@ function distribution(values, selected, ext, valueType, digits, label, unit) {
 
   // A transparent full-height rect per bar, so a bar is hoverable however short it is.
   //
-  // Empty bars are hoverable only when binned. There, "0 instances between 530 and 600" is worth
-  // confirming and the hover is the only place the bin RANGE appears at all. On a discrete chart
-  // the x position is the value itself and the gaps are literally nothing, so "0 instances, 3"
-  // states what the empty space already says.
+  // Empty bars are never hoverable, binned or not: highlighting a column to report that nothing is
+  // in it draws the eye to the one place with no data. The bin range is not lost with it -- bins
+  // are contiguous, so the tooltips either side of a gap bracket it exactly.
   const span = (max - min) || 1;          // value range, not to be confused with bw (bar width)
   bars.forEach((count, i) => {
-    if (isCount && count === 0) return;
+    if (count === 0) return;
     const where = isCount
       ? fmt(min + i, digits)
       : `${fmt(min + (i * span) / bars.length, digits)} to `

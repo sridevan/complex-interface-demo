@@ -379,9 +379,9 @@ Swap `const RESPONSE = {...}` for a `fetch()` and nothing else changes.
   bars are separated, because there is nothing between two integers. Without this the two chart
   types looked identical and a reader could not tell three ranges from three values.
 - **Hover marks the column and names it.** One delegated listener on the document, not a handler per
-  rect. Empty positions are hoverable only when binned, where the tooltip is the only place a bin's
-  range appears; on a discrete chart an empty position is a value nobody observed, and the gap
-  already says so.
+  rect. Empty positions are never hoverable: highlighting a column to report that nothing is in it
+  draws the eye to the one place with no data. Nothing is lost by it — bins are contiguous, so the
+  tooltips either side of a gap bracket its range exactly.
 
 ### Three display rules, decided from the data
 
