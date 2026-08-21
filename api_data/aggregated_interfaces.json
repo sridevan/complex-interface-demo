@@ -1,0 +1,185 @@
+{
+  "PDB-CPX-131443": {
+    "complex": {
+      "components": [
+        {
+          "chain_class_id": "CC_131443_0001",
+          "component_label": "P01958-1",
+          "accession": "P01958",
+          "accession_type": "UniProt",
+          "copy_index": 1,
+          "molecule_name": "Hemoglobin subunit alpha",
+          "gene": "HBA",
+          "organism": "Equus caballus",
+          "sequence_length": 142,
+          "function": "Involved in oxygen transport from the lung to the various peripheral tissues. Hemopressin acts as an antagonist peptide of the cannabinoid receptor CNR1. Hemopressin-binding efficiently blocks cannabinoid receptor CNR1 and subsequent signaling.",
+          "subunit": "Heterotetramer of two alpha chains and two beta chains"
+        },
+        {
+          "chain_class_id": "CC_131443_0002",
+          "component_label": "P01958-2",
+          "accession": "P01958",
+          "accession_type": "UniProt",
+          "copy_index": 2,
+          "molecule_name": "Hemoglobin subunit alpha",
+          "gene": "HBA",
+          "organism": "Equus caballus",
+          "sequence_length": 142,
+          "function": "Involved in oxygen transport from the lung to the various peripheral tissues. Hemopressin acts as an antagonist peptide of the cannabinoid receptor CNR1. Hemopressin-binding efficiently blocks cannabinoid receptor CNR1 and subsequent signaling.",
+          "subunit": "Heterotetramer of two alpha chains and two beta chains"
+        },
+        {
+          "chain_class_id": "CC_131443_0003",
+          "component_label": "P02062-1",
+          "accession": "P02062",
+          "accession_type": "UniProt",
+          "copy_index": 1,
+          "molecule_name": "Hemoglobin subunit beta",
+          "gene": "HBB",
+          "organism": "Equus caballus",
+          "sequence_length": 146,
+          "function": "Involved in oxygen transport from the lung to the various peripheral tissues.",
+          "subunit": "Heterotetramer of two alpha chains and two beta chains"
+        },
+        {
+          "chain_class_id": "CC_131443_0004",
+          "component_label": "P02062-2",
+          "accession": "P02062",
+          "accession_type": "UniProt",
+          "copy_index": 2,
+          "molecule_name": "Hemoglobin subunit beta",
+          "gene": "HBB",
+          "organism": "Equus caballus",
+          "sequence_length": 146,
+          "function": "Involved in oxygen transport from the lung to the various peripheral tissues.",
+          "subunit": "Heterotetramer of two alpha chains and two beta chains"
+        }
+      ],
+      "component_count": 4,
+      "distinct_accession_count": 2
+    },
+    "aggregated_interface_count": 6,
+    "aggregated_interfaces": [
+      {
+        "aggregated_interface_id": "AI_131443_0001_0003",
+        "partner_1": {
+          "chain_class_id": "CC_131443_0001",
+          "component_label": "P01958-1",
+          "accession": "P01958",
+          "copy_index": 1,
+          "gene": "HBA"
+        },
+        "partner_2": {
+          "chain_class_id": "CC_131443_0003",
+          "component_label": "P02062-1",
+          "accession": "P02062",
+          "copy_index": 1,
+          "gene": "HBB"
+        },
+        "instance_count": 19,
+        "distinct_entry_count": 19,
+        "median_interface_area": 893.0
+      },
+      {
+        "aggregated_interface_id": "AI_131443_0002_0004",
+        "partner_1": {
+          "chain_class_id": "CC_131443_0002",
+          "component_label": "P01958-2",
+          "accession": "P01958",
+          "copy_index": 2,
+          "gene": "HBA"
+        },
+        "partner_2": {
+          "chain_class_id": "CC_131443_0004",
+          "component_label": "P02062-2",
+          "accession": "P02062",
+          "copy_index": 2,
+          "gene": "HBB"
+        },
+        "instance_count": 19,
+        "distinct_entry_count": 19,
+        "median_interface_area": 882.0
+      },
+      {
+        "aggregated_interface_id": "AI_131443_0001_0004",
+        "partner_1": {
+          "chain_class_id": "CC_131443_0001",
+          "component_label": "P01958-1",
+          "accession": "P01958",
+          "copy_index": 1,
+          "gene": "HBA"
+        },
+        "partner_2": {
+          "chain_class_id": "CC_131443_0004",
+          "component_label": "P02062-2",
+          "accession": "P02062",
+          "copy_index": 2,
+          "gene": "HBB"
+        },
+        "instance_count": 19,
+        "distinct_entry_count": 19,
+        "median_interface_area": 505.7
+      },
+      {
+        "aggregated_interface_id": "AI_131443_0002_0003",
+        "partner_1": {
+          "chain_class_id": "CC_131443_0002",
+          "component_label": "P01958-2",
+          "accession": "P01958",
+          "copy_index": 2,
+          "gene": "HBA"
+        },
+        "partner_2": {
+          "chain_class_id": "CC_131443_0003",
+          "component_label": "P02062-1",
+          "accession": "P02062",
+          "copy_index": 1,
+          "gene": "HBB"
+        },
+        "instance_count": 19,
+        "distinct_entry_count": 19,
+        "median_interface_area": 504.1
+      },
+      {
+        "aggregated_interface_id": "AI_131443_0001_0002",
+        "partner_1": {
+          "chain_class_id": "CC_131443_0001",
+          "component_label": "P01958-1",
+          "accession": "P01958",
+          "copy_index": 1,
+          "gene": "HBA"
+        },
+        "partner_2": {
+          "chain_class_id": "CC_131443_0002",
+          "component_label": "P01958-2",
+          "accession": "P01958",
+          "copy_index": 2,
+          "gene": "HBA"
+        },
+        "instance_count": 18,
+        "distinct_entry_count": 18,
+        "median_interface_area": 293.3
+      },
+      {
+        "aggregated_interface_id": "AI_131443_0003_0004",
+        "partner_1": {
+          "chain_class_id": "CC_131443_0003",
+          "component_label": "P02062-1",
+          "accession": "P02062",
+          "copy_index": 1,
+          "gene": "HBB"
+        },
+        "partner_2": {
+          "chain_class_id": "CC_131443_0004",
+          "component_label": "P02062-2",
+          "accession": "P02062",
+          "copy_index": 2,
+          "gene": "HBB"
+        },
+        "instance_count": 17,
+        "distinct_entry_count": 17,
+        "median_interface_area": 202.2
+      }
+    ]
+  }
+}
