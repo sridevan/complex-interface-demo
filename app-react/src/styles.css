@@ -397,16 +397,34 @@ table.seqmap { border-collapse: collapse; font-size: 11px; }
 .ipd-label { font-size: 12px; font-weight: 600; }
 .ipd-val { font-size: 13px; margin: 2px 0 6px; color: var(--muted); }
 .ipd-val b { font-size: 17px; color: var(--text); }
-.ipd-pct { font-size: 11px; margin-left: 6px; }
-.ipd-svg { width: 100%; height: 56px; display: block; }
+/* Holds the median, not a percentile — see describe() for why the percentile was dropped. */
+.ipd-compare { font-size: 11px; margin-left: 6px; }
+/* Taller than it was: the dashed marker needs vertical run to read as a line rather than a tick. */
+.ipd-svg { width: 100%; height: 84px; display: block; }
 .ipd-bar { fill: #d3dae5; }
-/* Selected interface highlighted in orange everywhere: the marker line on continuous charts, the
-   selected bar on discrete ones (salt bridges, H-bonds, etc.) — so "selected = orange" is consistent. */
+/* The selected bar and the marker line say different things — "the bar your value falls in" and
+   "your value exactly" — so they no longer share a colour. The marker is near-black: darker than
+   both the orange bar and the grey ones, so it reads against either without competing, and it adds
+   no colour to the palette. Dashed, so it is unmistakably an annotation rather than a bar edge. */
 .ipd-bar.sel { fill: var(--antibody); }
-.ipd-marker { stroke: var(--antibody); stroke-width: 2; stroke-dasharray: 3 2; }
+.ipd-marker { stroke: #15191f; stroke-width: 2; stroke-dasharray: 4 3; }
+/* Hovering marks the whole COLUMN, not the bar: a bar one pixel tall has no outline worth drawing,
+   and the column is what the tooltip describes. A fill alone was nearly invisible over the orange
+   selected bar, so the outline does the work and the tint only supports it. */
+.ipd-hit { fill: transparent; stroke: none; }
+.ipd-hit:hover { fill: rgba(21, 25, 31, .05); stroke: #15191f; stroke-width: 1; }
 .ipd-axis { display: flex; justify-content: space-between; font-size: 10px; color: var(--muted); margin-top: 3px;
   font-variant-numeric: tabular-nums; }
-.ipd-nodata { font-size: 11px; color: var(--muted); height: 56px; display: flex; align-items: center; }
+.ipd-nodata { font-size: 11px; color: var(--muted); height: 84px; display: flex; align-items: center; }
+/* Grouped by what the property IS, so the two chart conventions are never interleaved: bars that
+   touch (contiguous bins) and bars that are separated (nothing between two integers). */
+.ipd-group { font-size: 13px; font-weight: 600; margin: 18px 0 10px; display: flex;
+  align-items: baseline; gap: 8px; }
+.ipd-group:first-of-type { margin-top: 4px; }
+.ipd-group span { font-weight: 400; font-size: 12px; color: var(--muted); }
+.ipd-tip { position: fixed; z-index: 40; pointer-events: none; background: #15191f; color: #f3f5f7;
+  font-size: 12px; line-height: 1.4; padding: 6px 9px; border-radius: 6px; white-space: nowrap;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, .25); }
 
 /* Contact heatmap */
 .hm-wrap { max-height: 560px; overflow: auto; border: 1px solid var(--border); border-radius: 8px; }

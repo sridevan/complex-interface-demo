@@ -515,11 +515,12 @@ export default function ComplexInterfaceApp({ config = {} }) {
       <div className="ex-row">
         <InterfacePropertyDistributions instances={instances} selected={instance} props={PISA_PROPS}
           populationLabel={`deposited instances of the ${lab(current?.component_label_1)} ↔ ${lab(current?.component_label_2)} equivalent interface`}
+          populationNoun="instances"
           note={(
             <p className="note">PISA-derived properties are shown for the selected interface instance relative to
               other deposited instances of the same equivalent interface. The selected instance is highlighted.
-              Discrete contact counts are shown as individual values; continuous properties such as energies and
-              areas are shown as binned distributions.</p>
+              Continuous properties such as areas and energies are shown as binned distributions; discrete
+              contact counts are shown as individual values.</p>
           )} />
       </div>
       </>
