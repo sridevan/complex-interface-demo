@@ -187,10 +187,14 @@ export default function ContactMap({ pairs, total, leftLabel, rightLabel }) {
         </span>
       </div>
       {tip && (() => {
-        // Position near the cursor; flip to the left when close to the right edge.
-        const s = { top: tip.y + 14 }
+        // Beside the cursor, flipped to the other side near the right or bottom edge of the
+        // viewport: the lower rows of a tall matrix otherwise push the tip off the bottom, where
+        // only its first line stays visible and the structure title is lost.
+        const s = {}
         if (tip.x > window.innerWidth * 0.72) s.right = window.innerWidth - tip.x + 14
         else s.left = tip.x + 14
+        if (tip.y > window.innerHeight * 0.72) s.bottom = window.innerHeight - tip.y + 14
+        else s.top = tip.y + 14
         return (
           <div className="cm-tip" style={s}>
             {/* Pair formatted like the Sankey tooltip — residue (component); no chain id (aggregated). */}

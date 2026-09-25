@@ -676,9 +676,14 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
       </div>
 
       {hover && (() => {
-        const s = { top: hover.y + 14 }
+        // Beside the cursor, flipped to the other side near the right or bottom edge of the
+        // viewport: the lower rows of a tall matrix otherwise push the tip off the bottom, where
+        // only its first line stays visible and the structure title is lost.
+        const s = {}
         if (hover.x > window.innerWidth * 0.72) s.right = window.innerWidth - hover.x + 14
         else s.left = hover.x + 14
+        if (hover.y > window.innerHeight * 0.72) s.bottom = window.innerHeight - hover.y + 14
+        else s.top = hover.y + 14
         const m = metaOf[hover.r] || {}
         return (
           <div className="cm-tip" style={s}>
