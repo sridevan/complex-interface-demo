@@ -4,6 +4,7 @@ import App from './App.jsx'
 import Landing from './Landing.jsx'
 import ComplexInterfaceApp from './complex/ComplexInterfaceApp.jsx'
 import ConformationalStatesApp from './states/ConformationalStatesApp.jsx'
+import StructuralGroupsApp from './groups/StructuralGroupsApp.jsx'
 import './styles.css'
 
 function BackLink() {
@@ -41,6 +42,38 @@ function Root() {
     basePath: 'kir22-similarity', complexId: 'PDB-CPX-119152',
     title: 'Kir2.2 potassium channel',
     organism: 'Gallus gallus',
+  }} /></>
+  // PROTOTYPE, for comparison with '#kir22-similarity' above, which it does not replace: the same
+  // dataset organised by computed structural groups. The grouping configuration is a temporary
+  // choice for the prototype, not a recommendation.
+  if (route === '#kir22-groups') return <><BackLink /><StructuralGroupsApp config={{
+    basePath: 'kir22-similarity', complexId: 'PDB-CPX-119152',
+    title: 'Kir2.2 potassium channel',
+    organism: 'Gallus gallus',
+    similarityHash: '#kir22-similarity',
+    grouping: { method: 'Agglomerative hierarchical clustering', linkage: 'Average', nGroups: 3 },
+  }} /></>
+  // The same prototype on a complex far too large to draw leaf by leaf: 341 assemblies, so the
+  // tree is collapsed to a wedge per group. Six groups because, with average linkage, the first
+  // five cuts only peel off outliers (337/3/1, then 335/3/1/1/1) and the sixth is the first to
+  // divide the main population (174/161).
+  if (route === '#human-hb-groups') return <><BackLink /><StructuralGroupsApp config={{
+    basePath: 'human-hb-similarity', complexId: 'PDB-CPX-154652',
+    title: 'Human haemoglobin',
+    organism: 'Homo sapiens',
+    similarityHash: '#human-hb-similarity',
+    grouping: { method: 'Agglomerative hierarchical clustering', linkage: 'Average', nGroups: 6 },
+  }} /></>
+  // The prototype on a complex just past the instance-level limit: 58 assemblies, so the whole
+  // set opens on the group overview, while both of its groups (39 and 19) are small enough to
+  // open in full in the group-only view. Two groups, because the tree says so plainly: the top
+  // merge is at 0.135 and the next at 0.037, and a third cut only detaches a single assembly.
+  if (route === '#atcase-groups') return <><BackLink /><StructuralGroupsApp config={{
+    basePath: 'atcase-similarity', complexId: 'PDB-CPX-137391',
+    title: 'Aspartate carbamoyltransferase',
+    organism: 'Escherichia coli',
+    similarityHash: '#atcase-similarity',
+    grouping: { method: 'Agglomerative hierarchical clustering', linkage: 'Average', nGroups: 2 },
   }} /></>
   // Exception to the usual size limits: 58 instances and a 12-chain assembly, kept because its
   // scores track measured structural difference better than any other complex here.

@@ -5,7 +5,7 @@ import Hint, { helpHint } from '../components/Hint.jsx'
 // Why every deposited compound is listed, including the ones that are only there because of how the
 // crystal was grown. Complex-agnostic on purpose: it is shown on every page, and naming one complex
 // as "here" would contradict itself on that complex's own page.
-const LIGAND_NOTE = 'Listed as deposited, including crystallisation and cryoprotection '
+export const LIGAND_NOTE = 'Listed as deposited, including crystallisation and cryoprotection '
   + 'additives. Only compounds that differ from the rest of the set are shown, so shared additives '
   + 'usually stay out. One that does appear often marks a single crystal form rather than a '
   + 'functional state.'
@@ -14,7 +14,7 @@ const LIGAND_NOTE = 'Listed as deposited, including crystallisation and cryoprot
 // structure title. The type field is deliberately not used: measured on human haemoglobin it calls
 // the cloning artefact V1M an "Engineered mutation" and the sickle variant E6V a "Conflict", so it
 // cannot separate engineering from biology and the panel does not pretend to.
-const MUTATION_NOTE = 'Sequence differences from the reference sequence, as deposited. A label '
+export const MUTATION_NOTE = 'Sequence differences from the reference sequence, as deposited. A label '
   + 'reads wild-type residue, position, observed residue, so E6V is glutamate to valine at '
   + 'position 6. Engineered substitutions and natural variants are not distinguished, because the '
   + 'deposited annotation does not separate them reliably. Substitutions at position 1 are excluded '
@@ -62,12 +62,12 @@ const TIGHTNESS_NOTE = 'Distances in the units of the measure shown above. The f
 // Below this many instances the percentages are noise, so counts are reported instead.
 const MIN_BLOCK = 5
 // A ligand or mutation has to differ from the rest of the set by this much to be worth naming.
-const ENRICH_PP = 0.15
+export const ENRICH_PP = 0.15
 // Substitutions at residue 1 are the initiator methionine — an artefact of recombinant expression,
 // not biology. A positional rule, not a curated list of sequences to ignore.
 const INITIATOR = /^[A-Z]1[A-Z]$/
 
-const pct = (v) => `${Math.round(v * 100)}%`
+export const pct = (v) => `${Math.round(v * 100)}%`
 
 // Fraction of a set of instances carrying each value of some property.
 function frequency(instances, pick) {
@@ -89,9 +89,10 @@ function differing(inBlock, outBlock, sign) {
     .sort((a, b) => b.delta - a.delta)
 }
 
-export default function BlockSummary({ block, assemblies, labels, matrix, cellLabel, rmsd,
-                                       metricName, onClear, rangeLabel }) {
-  const stats = useMemo(() => {
+// The arithmetic behind the panel, separate from its rendering so the structural-groups prototype
+// can summarise a computed group with exactly the same rules as a dragged selection.
+export function summariseSelection({ block, assemblies, labels, matrix, rmsd }) {
+  {
     const inSet = new Set(block)
     const byId = new Map(assemblies.map((a) => [a.assembly_id, a]))
     const blockRows = block.map((id) => byId.get(id)).filter(Boolean)
@@ -161,7 +162,14 @@ export default function BlockSummary({ block, assemblies, labels, matrix, cellLa
       // read as "40% vs 0%" purely because the other side is empty.
       noRest: restRows.length === 0,
     }
-  }, [block, assemblies, labels, matrix, rmsd])
+  }
+}
+
+export default function BlockSummary({ block, assemblies, labels, matrix, cellLabel, rmsd,
+                                       metricName, onClear, rangeLabel }) {
+  const stats = useMemo(
+    () => summariseSelection({ block, assemblies, labels, matrix, rmsd }),
+    [block, assemblies, labels, matrix, rmsd])
 
   if (!stats) return null
   const s = stats

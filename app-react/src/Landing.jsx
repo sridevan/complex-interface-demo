@@ -69,6 +69,22 @@ const SIMILARITY = [
     cpxId: 'PDB-CPX-154652', organism: 'Homo sapiens',
     detail: '341 instances · 57,970 pairs', accent: '#8a4fb8' },
 ]
+// Third category: prototypes, for discussion. The similarity data of a complex organised by
+// computed structural groups. Kept apart from the similarity views they are compared with, and
+// labelled as prototypes on the section rather than card by card. Smallest complex first, since
+// what the page draws changes with size: every assembly up to 50, the groups above that.
+const STRUCTURAL_GROUPS = [
+  { hash: '#kir22-groups', name: 'Kir2.2 potassium channel', oligomer: 'Homotetramer',
+    cpxId: 'PDB-CPX-119152', organism: 'Gallus gallus',
+    detail: '11 instances · 3 structural groups', accent: '#4b7fcc' },
+  { hash: '#atcase-groups', name: 'Aspartate carbamoyltransferase', oligomer: 'Heterododecamer',
+    cpxId: 'PDB-CPX-137391', organism: 'Escherichia coli',
+    detail: '58 instances · 2 structural groups', accent: '#b0447a' },
+  { hash: '#human-hb-groups', name: 'Human haemoglobin', oligomer: 'Heterotetramer (α₂β₂)',
+    cpxId: 'PDB-CPX-154652', organism: 'Homo sapiens',
+    detail: '341 instances · 6 structural groups', accent: '#c65a5a' },
+]
+
 export default function Landing() {
   const cards = [...COMPLEXES].sort((a, b) => {
     const aAb = a.interfaceType === 'antibody-antigen'
@@ -119,6 +135,28 @@ export default function Landing() {
               <div><dt>Comparison</dt><dd>{c.detail}</dd></div>
             </dl>
             <div className="landing-go" style={{ color: c.accent }}>Open similarity view →</div>
+          </a>
+        ))}
+      </div>
+
+      <div className="landing-section">
+        <h2>Structural groups<span className="synth-tag">prototype</span></h2>
+        <p>Assembly instances of a complex grouped by structural similarity, with the features
+          associated with each group. Groups are computed and do not necessarily correspond to
+          known biological conformational states.</p>
+      </div>
+      <div className="landing-grid">
+        {STRUCTURAL_GROUPS.map((c) => (
+          <a key={c.hash} href={c.hash} className="landing-card" style={{ '--acc': c.accent }}>
+            <div className="landing-accent" style={{ background: c.accent }} />
+            <h2>{c.name}</h2>
+            <dl className="lc-meta">
+              <div><dt>Organism</dt><dd><i>{c.organism}</i></dd></div>
+              <div><dt>Oligomeric state</dt><dd>{c.oligomer}</dd></div>
+              <div><dt>PDB Complex ID</dt><dd className="mono">{c.cpxId}</dd></div>
+              <div><dt>Grouping</dt><dd>{c.detail}</dd></div>
+            </dl>
+            <div className="landing-go" style={{ color: c.accent }}>Open structural groups view →</div>
           </a>
         ))}
       </div>

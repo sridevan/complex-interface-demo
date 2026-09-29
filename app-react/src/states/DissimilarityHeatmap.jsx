@@ -43,7 +43,8 @@ function viridisRGB(t) {
   const f = x - i
   return STOPS[i].map((c, k) => Math.round(c + (STOPS[i + 1][k] - c) * f))
 }
-function viridis(t) {
+// Exported for the structural-groups pages' figure export, which has to paint the same ramp.
+export function viridis(t) {
   const [r, g, b] = viridisRGB(t)
   return `rgb(${r},${g},${b})`
 }
@@ -54,7 +55,7 @@ function viridis(t) {
 // most similar cells here", and on human haemoglobin the off-diagonal minimum is also 0.000, which
 // made genuinely identical PAIRS indistinguishable from the self-comparison. Grey appears nowhere
 // in viridis, so it cannot be mistaken for a value.
-const DIAGONAL = '#d7dae0'
+export const DIAGONAL = '#d7dae0'
 // Outline colour for anything drawn OVER the matrix: the selection ring's halo, the hover outline,
 // the marked drag range. Deliberately not white — white flashed against the data and, now that the
 // diagonal is a light grey, had nothing to separate itself from where the selection ring sits.
@@ -63,7 +64,7 @@ const HALO = '#15191f'
 
 const LEGEND_STOPS = Array.from({ length: 24 }, (_, i) => i / 23)
 
-// order    : assembly ids in seriation order (rows and columns share it)
+// order    : assembly ids in display order (rows and columns share it)
 // labels   : assembly ids in matrix order
 // matrix   : symmetric dissimilarity matrix indexed by `labels`
 // metaOf   : { assembly_id -> { structure_title, exp_method, resolution } } for the diagonal hover
@@ -85,7 +86,21 @@ const COL_HEAD = 58
 
 export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel = 'dissimilarity',
                                               metaOf, colorOf, onPick, onSize, onSelectBlock,
-                                              block, toolbar, rmsd }) {
+                                              block, toolbar, rmsd,
+                                              // Optional, and the defaults are the similarity
+                                              // page's behaviour. Used by the structural-groups
+                                              // prototype: a panel drawn in a gutter left of the
+                                              // row labels (its dendrogram), quiet outlines round
+                                              // ranges of rows (its groups), and dragSelect off,
+                                              // because on that page a group is the only thing
+                                              // that can be selected.
+                                              leftGutter = 0, leftPanel = null, bands = null,
+                                              dragSelect = true,
+                                              // pickable(id) limits which instances a click may
+                                              // display; a cell needs both of its instances to
+                                              // qualify. Absent, every instance does. pickNote is
+                                              // what the tooltip says on a cell that does not.
+                                              pickable = null, pickNote = null }) {
   const [hover, setHover] = useState(null)
   // Cell size is solved from the space the card gives us, so an 11-instance matrix and a
   // 40-instance one both fill the same box — and the heatmap ends up the same size as the 3D
@@ -163,7 +178,7 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
       // drawn as a 2.3:1 rectangle that towered over every other page. Sub-pixel cells stay
       // square because width and height are solved from the same number, and the matrix is the
       // width of the card at every n -- which is what makes the pages match.
-      const gutter = n <= MAX_LABELLED ? ROW_HEAD : 0
+      const gutter = (n <= MAX_LABELLED ? ROW_HEAD : 0) + leftGutter
       const c = Math.min(64, Math.round(((w0 - gutter - 2) / n) * 1000) / 1000)
       setFitCell(c)
       setMeasured(true)
@@ -173,7 +188,7 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
     const ro = new ResizeObserver(fit)
     ro.observe(el)
     return () => ro.disconnect()
-  }, [n])
+  }, [n, leftGutter])
 
   // Height the viewer beside us should match. Reporting the matrix box alone left the viewer 90px
   // short — the box is only part of this column, which also carries the toolbar above it and the
@@ -306,7 +321,7 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
   // someone to press exactly on a one-and-a-half-pixel diagonal line is asking them to miss. A
   // press anywhere in the matrix marks out rows from there, and a press that does not travel far
   // enough still falls through to a plain click on whatever cell it landed on.
-  const beginDrag = (i) => { dragRef.current = i; setDrag(i) }
+  const beginDrag = (i) => { if (!dragSelect) return; dragRef.current = i; setDrag(i) }
   // Where the drag has reached, from the pointer's Y position rather than from per-cell
   // mouseenter events. At 341 instances a row is under 2px, and the browser coalesces pointer
   // moves — it will step straight over cells without ever entering them, so an event-driven
@@ -329,7 +344,8 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
       const p = cellAt(e)
       if (!p) { setHover(null); return }
       const r = order[p.i], c = order[p.j]
-      setHover({ r, c, v: value(r, c), isDiag: p.i === p.j, active: p.i >= p.j,
+      setHover({ r, c, v: value(r, c), isDiag: p.i === p.j, lower: p.i > p.j,
+                 active: p.i >= p.j && (!pickable || (pickable(r) && pickable(c))),
                  x: e.clientX, y: e.clientY })
     }
   }
@@ -515,13 +531,27 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
       </div>
       <div className={'cs-hm-scroll' + (zoom > 1 ? ' cs-hm-pannable' : '')} ref={boxRef}
            onMouseMove={dragMove}>
-       <div className="cs-hm-stage" style={{ width: `${cell * n + (labelled ? ROW_HEAD : 0)}px` }}>
+       <div className="cs-hm-stage"
+            style={{ width: `${cell * n + (labelled ? ROW_HEAD : 0) + leftGutter}px`,
+                     paddingLeft: leftGutter || undefined }}>
+        {leftPanel && leftGutter > 0 && (
+          <div className="cs-hm-left" style={{ width: leftGutter }}>
+            {leftPanel({ cell, n, top: labelled ? COL_HEAD : 0 })}
+          </div>
+        )}
+        {bands && bands.map((b) => (
+          <div key={b.key} className="cs-hm-band" aria-hidden="true" style={{
+            left: leftGutter + (labelled ? ROW_HEAD : 0) + b.from * cell,
+            top: (labelled ? COL_HEAD : 0) + b.from * cell,
+            width: (b.to - b.from + 1) * cell,
+            height: (b.to - b.from + 1) * cell }} />
+        ))}
         {/* One rectangle over the whole marked range. Two strokes — dark outside, white inside —
             so it holds up against both ends of the viridis ramp, and everything outside it is
             dimmed so the range reads even when it is a few pixels tall. */}
         {mark && (
           <div className="cs-hm-mark" aria-hidden="true" style={{
-            left: (labelled ? ROW_HEAD : 0) + mark.lo * cell,
+            left: leftGutter + (labelled ? ROW_HEAD : 0) + mark.lo * cell,
             top: (labelled ? COL_HEAD : 0) + mark.lo * cell,
             width: (mark.hi - mark.lo + 1) * cell,
             height: (mark.hi - mark.lo + 1) * cell }} />
@@ -539,7 +569,9 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
                   onMouseUp={(e) => {
                     if (swallowRef.current) { swallowRef.current = false; return }
                     const p = cellAt(e)
-                    if (p && p.i >= p.j) onPick(order[p.i], p.i === p.j ? null : order[p.j])
+                    if (!p || p.i < p.j) return
+                    if (pickable && !(pickable(order[p.i]) && pickable(order[p.j]))) return
+                    onPick(order[p.i], p.i === p.j ? null : order[p.j])
                   }}
                   onMouseLeave={() => setHover(null)}
                   onKeyDown={(e) => onKeyDown(e, cur.i, cur.j, order[cur.i], order[cur.j],
@@ -576,7 +608,8 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
                 {order.map((c, j) => {
                   const v = value(r, c)
                   const isDiag = i === j
-                  const active = isDiag || i > j          // diagonal + below only
+                  // diagonal + below only, and only instances the caller lets a click display
+                  const active = (isDiag || i > j) && (!pickable || (pickable(r) && pickable(c)))
                   const style = { background: isDiag ? DIAGONAL : viridis(max > 0 ? v / max : 0),
                                   cursor: active ? 'pointer' : 'default' }
                   // A structure's own diagonal cell carries its selected state: slot-coloured ring
@@ -612,7 +645,8 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
                           if (swallowRef.current) { swallowRef.current = false; return }
                           onPick(r, isDiag ? null : c)
                         } : undefined}
-                        onMouseEnter={(e) => setHover({ r, c, v, isDiag, active, x: e.clientX, y: e.clientY })}
+                        onMouseEnter={(e) => setHover({ r, c, v, isDiag, active, lower: i > j,
+                                                        x: e.clientX, y: e.clientY })}
                         onMouseMove={(e) => setHover((h) => (h ? { ...h, x: e.clientX, y: e.clientY } : h))}
                         onMouseLeave={() => setHover(null)}>
                       {/* ✕ rather than a tick: the ring already says "this one is displayed", so
@@ -697,7 +731,9 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
                   {m.resolution != null ? `${m.resolution} Å` : 'n/a'}
                 </div>
                 <div className="cs-tip-act">
-                  {colorOf[hover.r] ? 'click to remove this structure' : 'click to show this structure'}
+                  {!hover.active ? pickNote
+                    : colorOf[hover.r] ? 'click to remove this structure'
+                    : 'click to show this structure'}
                 </div>
               </>
             ) : (
@@ -714,7 +750,7 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
                   </div>
                 )}
                 <div className="cs-tip-act">
-                  {!hover.active ? 'mirror of the cell below the diagonal'
+                  {!hover.active ? ((hover.lower && pickNote) || 'mirror of the cell below the diagonal')
                     : colorOf[hover.r] && colorOf[hover.c] ? 'click to remove this pair'
                     : 'click to superpose this pair'}
                 </div>

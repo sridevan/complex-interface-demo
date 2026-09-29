@@ -816,3 +816,213 @@ table.heatmap thead th { position: sticky; top: 0; background: #fbfcfd; z-index:
 .cs-rep { margin-left: 6px; padding: 1px 5px; border-radius: 4px; background: #eef2f7;
   border: 1px solid #d7dee7; color: var(--muted); font-size: 10px; font-weight: 700;
   letter-spacing: .3px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+
+/* ---- structural groups prototype (src/groups) ---- */
+/* Optional heatmap furniture, used only when the caller asks for it. The left panel holds the
+   dendrogram; bands are quiet outlines round each group's block on the diagonal. White with a
+   thin dark edge, so they read on both ends of the ramp without adding a colour to the matrix. */
+.cs-hm-left { position: absolute; left: 0; top: 0; z-index: 1; }
+.cs-hm-band { position: absolute; pointer-events: none; z-index: 1;
+  border: 1.5px solid rgba(255, 255, 255, .92); box-shadow: 0 0 0 1px rgba(21, 25, 31, .35); }
+/* The gutter makes the content wider than it is tall, so the square box would end in a blank
+   band. Height follows the content here; the cap keeps a zoomed matrix scrolling inside it. */
+.sg-heatmap .cs-hm-scroll { aspect-ratio: auto; max-height: 760px; }
+
+.sg-intro { margin: 2px 0 16px; font-size: 13px; color: var(--muted); }
+.sg-intro a { color: var(--accent); }
+
+.sg-dendro { display: block; overflow: visible; }
+.sg-dendro line { shape-rendering: crispEdges; }
+.sg-dendro-axis line { stroke: #a9b0ba; stroke-width: 1; }
+.sg-dendro-axis text { font-size: 9px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+.sg-dendro-cut { stroke: #6b7480; stroke-width: 1; stroke-dasharray: 3 3; }
+.sg-dendro-bar { cursor: pointer; outline: none; }
+.sg-dendro-bar text { font-size: 10px; font-weight: 600; fill: #fff; pointer-events: none; }
+.sg-dendro-bar rect { opacity: .78; }
+.sg-dendro-bar:hover rect, .sg-dendro-bar:focus-visible rect, .sg-dendro-bar.on rect { opacity: 1; }
+
+/* Group colour, carried by a round dot and a pale tint of the same hue. --g is set inline from
+   the group. Text stays in ink throughout: the amber would not be legible as type, and the name
+   beside the dot is what identifies the group when the colour cannot. Round, where the swatches
+   for displayed structures are square, so the two kinds of colour are not read as one key. */
+.sg-dot { display: inline-block; flex: 0 0 auto; width: 9px; height: 9px; border-radius: 50%;
+  background: var(--g, #6b7480); margin-right: 6px; vertical-align: baseline; }
+.sg-chips { display: flex; flex-direction: column; gap: 6px; }
+.sg-chip { display: flex; align-items: baseline; gap: 2px; width: 100%; padding: 7px 11px;
+  font: inherit; font-size: 13px; text-align: left; cursor: pointer; color: var(--text);
+  background: color-mix(in srgb, var(--g) 7%, #fff);
+  border: 1px solid color-mix(in srgb, var(--g) 35%, #fff); border-radius: 7px; }
+.sg-chip b { margin-right: 6px; }
+.sg-chip:hover { border-color: var(--g); }
+.sg-chip.on { background: color-mix(in srgb, var(--g) 18%, #fff); border-color: var(--g);
+  box-shadow: 0 0 0 1px var(--g), inset 4px 0 0 var(--g); }
+.sg-chip-n { opacity: .75; }
+.sg-tag { margin-left: auto; font-size: 10.5px; font-weight: 600; letter-spacing: .3px;
+  padding: 1px 7px; border-radius: 999px; border: 1px solid currentColor; opacity: .7; }
+.sg-default-note { margin: 7px 0 10px; font-size: 12px; color: var(--muted); }
+.sg-selected-name .sg-dot { width: 11px; height: 11px; margin-right: 8px; }
+.cs-count .sg-dot { width: 8px; height: 8px; margin-right: 5px; }
+.sg-selected-name { font-size: 20px; font-weight: 600; letter-spacing: -0.2px; margin: -3px 0 10px; }
+.sg-groups .rs-line { grid-template-columns: 122px minmax(0, 1fr); }
+.sg-groups .rs-key { white-space: nowrap; }
+.sg-groups .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; }
+
+/* Group value in the table: a button, since clicking it selects the whole group. */
+.sg-cell { font: inherit; font-size: 12px; padding: 1px 9px 1px 8px; cursor: pointer;
+  white-space: nowrap; color: var(--text); background: color-mix(in srgb, var(--g) 8%, #fff);
+  border: 1px solid color-mix(in srgb, var(--g) 40%, #fff); border-radius: 999px; }
+.sg-cell:hover { border-color: var(--g); }
+.sg-cell.on { background: color-mix(in srgb, var(--g) 22%, #fff); border-color: var(--g);
+  box-shadow: 0 0 0 1px var(--g); font-weight: 600; }
+.sg-tbl td { vertical-align: middle; }
+/* Membership of the selected group, separate from "displayed in the viewer" (.cs-row-on): a rule
+   down the left edge, so a row can carry both. */
+.sg-row-sel > td:first-child { box-shadow: inset 3px 0 0 var(--g, #15191f); }
+.sg-row-sel { background: #f6f7f9; }
+.sg-row-sel.cs-row-on { background: #f2f7fd; }
+
+.sg-nbbtn { font: inherit; font-size: 12px; font-weight: 500; padding: 4px 10px; cursor: pointer;
+  border: 1px solid var(--border); border-radius: 6px; background: #fff; color: var(--accent);
+  white-space: nowrap; }
+.sg-nbbtn:hover { border-color: var(--accent); background: #eaf2fb; }
+.sg-nb { margin: 0 0 12px; padding: 8px 11px; font-size: 12.5px; line-height: 1.5;
+  background: #f6f7f9; border: 1px dashed #c4c9d0; border-radius: 6px; color: #4a5361; }
+.sg-nb a { color: var(--accent); }
+
+/* Selected-group summary: one block per question, label left and figure right, so within-group
+   and between-group numbers cannot be read as one run of values. */
+.sg-selected-name { margin-bottom: 2px; }
+.sg-selected-sub { font-size: 13px; color: var(--muted); margin-bottom: 4px; }
+.sg-block { margin-top: 11px; }
+.sg-block-title { font-size: 12.5px; font-weight: 600; margin-bottom: 4px; }
+.sg-pair { display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+  font-size: 13px; line-height: 1.7; color: var(--muted); }
+.sg-pair b { color: var(--text); font-weight: 600; font-variant-numeric: tabular-nums;
+  text-align: right; }
+.sg-ratio { font-size: 12.5px; color: var(--muted); }
+.sg-rep { display: flex; align-items: center; gap: 2px; font-size: 13px; }
+.sg-rep .cs-rep { letter-spacing: 0; font-size: 10.5px; }
+.sg-tag[title] { cursor: help; }
+/* Provenance, folded away. Quiet until asked for: the chevron turns when it is open. */
+.sg-details { margin: auto 0 0; padding-top: 12px; font-size: 12.5px; }
+.sg-details > summary { cursor: pointer; color: var(--accent); list-style: none;
+  width: fit-content; }
+.sg-details > summary::-webkit-details-marker { display: none; }
+.sg-details > summary::after { content: ' \203A'; display: inline-block; margin-left: 4px;
+  transition: transform .12s; }
+.sg-details[open] > summary::after { transform: rotate(90deg); }
+.sg-details > summary:hover { text-decoration: underline; text-underline-offset: 2px; }
+.sg-details-body { margin-top: 8px; }
+.sg-details-body .sg-pair { display: grid; grid-template-columns: 62px minmax(0, 1fr);
+  line-height: 1.45; margin-bottom: 3px; }
+.sg-details-body .sg-pair b { font-weight: 500; text-align: left; }
+.sg-details-note { margin: 8px 0 10px; color: var(--muted); line-height: 1.45; }
+.sg-details-body .sg-nb { margin: 8px 0 0; }
+/* The group chip used as a label rather than a control. */
+.sg-cell-static { display: inline-block; margin-left: 10px; cursor: default; vertical-align: middle;
+  font-weight: 600; line-height: 1.5; }
+.sg-cell-static:hover { border-color: var(--g); }
+.sg-features .bs-row { grid-template-columns: 176px minmax(0, 1fr); }
+.sg-features .bs-key { white-space: nowrap; }
+/* View switch above the matrix: every assembly, or the selected group alone. */
+.sg-scope { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 12px; }
+.sg-scope .pill button { padding: 4px 12px; font-size: 12px; white-space: nowrap; }
+.sg-scope .pill button:disabled { opacity: .45; cursor: default; }
+/* Representative comparison, in the superposition card. One compact row in the normal view; the
+   same box holds the two representatives and their distances while comparing. */
+.sg-compare { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin: 0 0 12px;
+  padding: 8px 11px; font-size: 12.5px; background: #f6f7f9; border: 1px solid var(--border);
+  border-radius: 7px; }
+.sg-compare-title { flex: 1 0 100%; font-size: 11px; font-weight: 700; letter-spacing: .6px;
+  text-transform: uppercase; color: var(--muted); }
+.sg-compare-from { font-weight: 600; white-space: nowrap; }
+.sg-compare-id { font-weight: 400; color: var(--muted); }
+.sg-compare-with { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); }
+.sg-compare-with select { font: inherit; font-size: 12.5px; padding: 3px 6px; color: var(--text);
+  border: 1px solid var(--border); border-radius: 6px; background: #fff; }
+.sg-compare-go, .sg-compare-back { font: inherit; font-size: 12px; font-weight: 600;
+  padding: 4px 11px; border-radius: 6px; cursor: pointer; white-space: nowrap; }
+.sg-compare-go { margin-left: auto; color: #fff; background: var(--accent);
+  border: 1px solid var(--accent); }
+.sg-compare-go:hover { background: #255a90; border-color: #255a90; }
+.sg-compare-back { margin-left: auto; color: var(--accent); background: #fff;
+  border: 1px solid var(--border); }
+.sg-compare-back:hover { border-color: var(--accent); background: #eaf2fb; }
+.sg-compare.on { align-items: flex-start; }
+.sg-compare-reps { display: flex; flex-direction: column; gap: 3px; }
+.sg-compare-rep { display: flex; align-items: center; gap: 5px; white-space: nowrap; }
+.sg-compare-rep .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.sg-compare-metrics { display: flex; align-items: center; gap: 16px; }
+.sg-compare-metrics span { display: flex; flex-direction: column; }
+.sg-compare-metrics i { font-style: normal; font-size: 11px; color: var(--muted); }
+.sg-compare-metrics b { font-size: 14px; font-variant-numeric: tabular-nums; }
+/* Folds the smaller groups out of the picker. Quiet, like the clustering details link. */
+.sg-more { margin: 7px 0 0; padding: 0; border: none; background: none; font: inherit;
+  font-size: 12.5px; color: var(--accent); cursor: pointer; text-align: left; }
+.sg-more::after { content: ' \203A'; display: inline-block; margin-left: 4px; transition: transform .12s; }
+.sg-more[aria-expanded="true"]::after { transform: rotate(-90deg); }
+.sg-more:hover { text-decoration: underline; text-underline-offset: 2px; }
+.sg-more:disabled { color: var(--muted); cursor: default; text-decoration: none; }
+/* The table card and the groups card share a row and so a height. Whatever the table does not
+   need goes between its last row and the pager, which keeps the pager on the card's bottom edge
+   level with the foot of the groups card instead of leaving a blank band beneath it. */
+.sg-instances { display: flex; flex-direction: column; }
+.sg-instances .cs-instances-scroll { flex: 1 1 auto; }
+/* flow-root so the comparison box's bottom margin counts towards the measured height. */
+.sg-viewer-extras { display: flow-root; }
+/* The line under the colour bar is the similarity page's drag readout. Nothing is dragged here,
+   so it would only ever be a blank line. */
+.sg-heatmap .cs-hm-caption { display: none; }
+/* Pager of the groups pages' table: the foot of the card rather than a caption under it. Larger
+   and heavier than the shared pager, with a rule above, so it reads as the control it is. Scoped
+   to this card; the shared .pager is unchanged everywhere else. */
+.sg-instances .pager { margin-top: 0; padding-top: 12px; border-top: 1px solid var(--border);
+  font-size: 13.5px; gap: 16px; }
+.sg-instances .pager-info { color: var(--text); font-weight: 600; }
+.sg-instances .pager-btn { font-size: 13px; font-weight: 600; padding: 6px 14px; }
+.sg-tbl-fill { height: 100%; }
+/* Actions in the matrix card's heading: download, then the notebook. */
+.sg-head-actions { display: inline-flex; align-items: center; gap: 8px; flex: 0 0 auto; }
+.sg-export { position: relative; display: inline-flex; }
+.sg-export .sg-nbbtn:disabled { opacity: .6; cursor: default; }
+.sg-export-menu { position: absolute; top: calc(100% + 4px); right: 0; z-index: 20; min-width: 160px;
+  display: flex; flex-direction: column; padding: 4px; background: #fff;
+  border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 6px 22px rgba(30, 50, 90, .14); }
+.sg-export-menu button { font: inherit; font-size: 12.5px; font-weight: 400; text-align: left;
+  padding: 6px 10px; border: none; background: none; border-radius: 5px; cursor: pointer;
+  color: var(--text); white-space: nowrap; }
+.sg-export-menu button:hover, .sg-export-menu button:focus-visible { background: #eaf2fb;
+  color: var(--accent); outline: none; }
+.sg-export-error { display: flex; justify-content: space-between; gap: 12px; margin: 0 0 10px; }
+/* Structural-group overview, for sets too large for the instance-level view. */
+.sg-ov { width: 100%; border: 1px solid var(--border); }
+.sg-ov svg { display: block; }
+.sg-ov-wedge { fill: #e3e6ea; stroke: #9aa2ad; stroke-width: 1; stroke-linejoin: round; }
+.sg-ov-wedge.on { fill: #c4c9d1; stroke: #15191f; stroke-width: 1.6; }
+.sg-ov-sel { fill: color-mix(in srgb, var(--g) 14%, #fff); stroke: var(--g); stroke-width: 1.5; }
+.sg-ov-row { cursor: pointer; outline: none; }
+.sg-ov-name { font-size: 13px; font-weight: 700; fill: var(--text); }
+.sg-ov-n { font-weight: 400; fill: var(--muted); }
+.sg-ov-track { fill: #e6e9ee; }
+.sg-ov-hit { fill: transparent; }
+.sg-ov-row:hover .sg-ov-hit, .sg-ov-row:focus-visible .sg-ov-hit { fill: rgba(21, 25, 31, .045); }
+.sg-ov-cut { font-size: 9.5px; fill: var(--muted); }
+/* Why there is no matrix, and what to do instead. A note, not a warning: nothing is wrong. */
+.sg-hidden { margin: 0 0 10px; padding: 10px 12px; font-size: 13px; line-height: 1.5;
+  background: #f6f7f9; border: 1px solid var(--border); border-radius: 7px; }
+.sg-hidden p { margin: 0; }
+.sg-hidden-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px !important; }
+/* Keeps the help icon on the heading's line now that two actions share the row. */
+.sg-heatmap .cs-h2-row > span:first-child { white-space: nowrap; }
+.sg-head-actions .sg-nbbtn { padding: 4px 9px; }
+.sg-heatmap .cs-h2-row { gap: 6px; }
+.sg-heatmap .sg-head-actions { gap: 6px; }
+.sg-head-actions .sg-nbbtn { padding: 4px 8px; }
+/* Representative comparison on the tree: the two structures marked in their viewer colours, the
+   route between them in ink, and the rest of the tree stepped back so the route reads. */
+.sg-dendro-dim { opacity: .45; }
+.sg-dendro-route line { stroke: #15191f; stroke-width: 2.4; stroke-linecap: square; }
+.sg-dendro-mark { stroke: #fff; stroke-width: 1.5; }
+.sg-ov-cmp { fill: none; stroke: var(--g); stroke-width: 1.5; stroke-dasharray: 5 3; }
+.sg-ov-rep { font-size: 11.5px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  fill: var(--text); }
