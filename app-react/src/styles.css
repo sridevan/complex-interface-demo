@@ -922,7 +922,6 @@ table.heatmap thead th { position: sticky; top: 0; background: #fbfcfd; z-index:
 .sg-cell-static { display: inline-block; margin-left: 10px; cursor: default; vertical-align: middle;
   font-weight: 600; line-height: 1.5; }
 .sg-cell-static:hover { border-color: var(--g); }
-.sg-features .bs-row { grid-template-columns: 176px minmax(0, 1fr); }
 .sg-features .bs-key { white-space: nowrap; }
 /* View switch above the matrix: every assembly, or the selected group alone. */
 .sg-scope { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 12px; }

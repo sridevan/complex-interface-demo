@@ -37,12 +37,6 @@ const FEATURES_HELP = [
     + 'interpretation of a group and cannot establish one.'],
 ]
 
-// Not "interacting partners": the subunits of the complex are the same in every instance by
-// definition, so what can differ is whatever else was deposited bound to it.
-const MACROMOLECULE_NOTE = 'Macromolecules bound in addition to the subunits of the complex, '
-  + 'such as a peptide, an antibody or a short nucleic acid fragment. Some instances carry them '
-  + 'and others do not.'
-
 const MODIFIED_NOTE = 'Modified residues as deposited, by chemical component code.'
 
 // Group picker, then what the selected group IS: its size, its representative, how tight it is
@@ -69,8 +63,16 @@ export function GroupsCard({ clustering, selection, stats, representative, quant
   const open = showAll || selectedHidden
   const listed = folds && !open ? groups.slice(0, MAX_LISTED) : groups
   const hiddenN = hidden.reduce((n, g) => n + g.members.length, 0)
-  const ratio = stats && stats.within > 0 && stats.between != null
-    ? stats.between / stats.within : null
+  // The two means are shown to four decimals, and the ratio is the ratio of the figures as shown.
+  // At three decimals a tight group's mean kept one significant digit (0.007 for 0.00722), and
+  // dividing the numbers on the card gave 15.4 where the card said 14.9. A reader who checks the
+  // arithmetic should get the number printed. The maximum is a single pair of values reported to
+  // 0.005, so it stays at three.
+  const mean = (v) => v.toFixed(4)
+  // A group of one has no pairs inside it, so no within-group mean and no ratio.
+  const ratio = stats && stats.within != null && stats.between != null
+    && Number(mean(stats.within)) > 0
+    ? Number(mean(stats.between)) / Number(mean(stats.within)) : null
   const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`
   const input = `pairwise ${quantity} dissimilarity`
   const withinHint = `Pairwise ${quantity} between the members, the quantity the clustering `
@@ -79,7 +81,9 @@ export function GroupsCard({ clustering, selection, stats, representative, quant
       ? ` Backbone RMSD between members: ${stats.rmsdWithin.toFixed(2)} Å mean, `
         + `${stats.rmsdMax.toFixed(2)} Å maximum.` : '')
   const betweenHint = `Mean pairwise ${quantity} from the members to every assembly outside `
-    + 'this group.'
+    + 'this group, all other groups pooled. The ratio divides it by the within-group mean, using '
+    + 'the two figures as shown. Higher is less alike, so a large ratio means the group is far '
+    + 'more uniform inside than it is like the rest. Not a statistical test.'
   const Block = ({ title, hint, children }) => (
     <div className="sg-block">
       <div className="sg-block-title">{title}{hint && <> <Hint text={hint} width={300} /></>}</div>
@@ -141,18 +145,21 @@ export function GroupsCard({ clustering, selection, stats, representative, quant
           <Block title="Within-group similarity" hint={withinHint}>
             {stats.within == null ? <div className="rs-note">Single assembly</div> : (
               <>
-                <Pair label={`Mean ${quantity}`} value={stats.within.toFixed(3)} />
+                <Pair label={`Mean ${quantity}`} value={mean(stats.within)} />
                 <Pair label={`Maximum ${quantity}`} value={stats.withinMax.toFixed(3)} />
               </>
             )}
           </Block>
 
+          {/* Named to pair with "Within-group similarity" above. Both headings say similarity
+              while the figures are 1 - TM-score, where larger means LESS alike, so the hints say
+              which way the number runs and the ratio is worded without "greater". */}
           {stats.between != null && (
-            <Block title="Separation from other groups" hint={betweenHint}>
-              <Pair label={`Mean ${quantity}`} value={stats.between.toFixed(3)} />
+            <Block title="Across-group similarity" hint={betweenHint}>
+              <Pair label={`Mean ${quantity}`} value={mean(stats.between)} />
               {ratio && (
                 <div className="sg-ratio">
-                  {ratio.toFixed(1)}× greater than within-group
+                  {ratio.toFixed(1)}× the within-group mean
                 </div>
               )}
             </Block>
@@ -246,9 +253,6 @@ export function AssociatedFeatures({ selection, stats, total, anyModified }) {
               <span className="bs-note"> · {s.initiatorN} with a position-1 substitution,
                 {' '}excluded</span>
             )}
-          </Row>
-          <Row label="Bound macromolecules" hint={MACROMOLECULE_NOTE}>
-            <span className="bs-note">not in the current dataset</span>
           </Row>
         </div>
       )}
