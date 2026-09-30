@@ -750,7 +750,7 @@ export default function DissimilarityHeatmap({ order, labels, matrix, cellLabel 
                   </div>
                 )}
                 <div className="cs-tip-act">
-                  {!hover.active ? ((hover.lower && pickNote) || 'mirror of the cell below the diagonal')
+                  {!hover.active ? (hover.lower ? pickNote : 'mirror of the cell below the diagonal')
                     : colorOf[hover.r] && colorOf[hover.c] ? 'click to remove this pair'
                     : 'click to superpose this pair'}
                 </div>

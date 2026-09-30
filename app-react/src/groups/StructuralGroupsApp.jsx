@@ -27,12 +27,20 @@ import '../styles.css'
 
 const BASE = import.meta.env.BASE_URL || '/'
 
-// At most this many structures are drawn at once. It is also the largest group that opens with
-// every member displayed: a bigger group opens on its representative alone, and members are added
-// by hand for comparison. One number for both, so "show all" never asks for more than the viewer
-// will draw. A route may lower the second through grouping.showAllUpTo.
-const MAX_SHOWN = 10
 const PAGE_SIZE = 10
+// A group of up to this many assemblies is shown with every member aligned; a larger one by its
+// representative alone. What is shown is fixed by the group: there is no adding or removing of
+// structures by hand, which is exploration and belongs in the notebook.
+//
+// Eight, not ten: eight is as many colours as can be told apart by every reader. Checked with
+// the dataviz palette validator over all pairs: the worst pair under a colour-vision deficiency
+// is dE 7.1 (protan), the worst for normal vision 15.6, and no ten-colour set searched came
+// close. Each structure is also named in the legend, so identity never rests on colour alone.
+const OVERLAY_MAX = 8
+// One colour per aligned member. The first six are Okabe-Ito, as on the similarity page, so a
+// structure shown on both keeps a familiar colour; the representative always takes the first.
+const SERIES = ['#0072B2', '#D55E00', '#009E73', '#CC79A7', '#56B4E9', '#E69F00', '#9F3960',
+                '#815C0A']
 // One rule for what the page draws. The instance-level view, a matrix cell for every pair and a
 // dendrogram leaf for every assembly, is drawn for a complex of at most this many assemblies.
 // Above it the page shows the groups themselves, and nothing finer: looking inside a group is
@@ -42,10 +50,6 @@ const PAGE_SIZE = 10
 const DETAIL_MAX = 50
 // Width of the dendrogram gutter, px.
 const DENDRO_W = 124
-
-// First five as on the similarity page, so a structure shown on both keeps a familiar colour.
-const SERIES = ['#0072B2', '#D55E00', '#009E73', '#CC79A7', '#56B4E9', '#E69F00', '#7A5195', '#4D4D4D',
-                '#882255', '#999933']
 
 // The page presents ONE structural similarity model: pairwise 1 - TM-score. It is what the
 // clustering runs on, what the matrix shows and what every figure in the group card is measured
@@ -69,8 +73,8 @@ const HEATMAP_HELP = [
     + 'branch below the dashed cut line, marked by its coloured strip. Light outlines mark the '
     + 'groups on the matrix. Click a '
     + 'group bar to select that group.'],
-  ['Superposition', 'Click a cell inside the selected group to hide or show those assemblies '
-    + 'in the superposition view.'],
+  ['Hovering', 'A cell gives the pair\'s 1 \u2212 TM-score and backbone RMSD. Cells are not '
+    + 'clickable: what the 3D view shows is decided by the selected group.'],
 ]
 const OVERVIEW_HELP = [
   ['Reading it', 'The clustering tree, drawn down to the structural groups. Each group is one '
@@ -83,20 +87,24 @@ const OVERVIEW_HELP = [
     + 'table are in the downloads, and the notebook is where to look inside a group or try '
     + 'another grouping.'],
 ]
+// The viewer shows the representative of the selected group and nothing more. Overlaying a
+// group's members, or any other subset, is exploration, and exploration belongs in the notebook;
+// the one comparison the page offers is between two groups' representatives.
 const VIEWER_HELP = [
-  ['What you see', 'Backbone trace only, one colour per assembly, each placed by a single global '
-    + 'superposition onto the same reference assembly.'],
-  ['Choosing structures', `A group of up to ${MAX_SHOWN} assemblies opens with every member `
-    + 'displayed. A larger group opens on its representative, and other members can be added '
-    + `for comparison, up to ${MAX_SHOWN} at once. This changes the view only: the selected `
-    + 'group, its summary and its associated features stay as they are.'],
+  ['What you see', `A group of up to ${OVERLAY_MAX} assemblies with every member aligned, one `
+    + 'colour each, the representative first. A larger group by its representative alone, in the '
+    + 'group\'s colour. Backbone traces, each placed by a single global alignment onto the same '
+    + 'reference assembly.'],
+  ['What you can change', 'Nothing here: the group decides what is drawn. Use Compare '
+    + 'representatives to align it with another group\'s representative, and the notebook for '
+    + 'any other subset.'],
 ]
 const COMPARE_HELP = [
-  ['In the dendrogram', 'Both representatives are marked in their colours, and the route between '
-    + 'them through the tree is drawn in black. The further left it reaches, the more dissimilar '
+  ['In the dendrogram', 'Each representative is drawn in its group\'s colour, in the viewer and '
+    + 'on the tree, and the route between them through the tree is drawn in black. The further left it reaches, the more dissimilar '
     + 'the merge that joins them.'],
   ['What you see', 'The representative of the selected group and the representative of one other '
-    + 'group, superposed, and no other structure. Each is the medoid of its group.'],
+    + 'group, aligned, and no other structure. Each is the medoid of its group.'],
   ['What it changes', 'The view only. The selected group, its statistics and its associated '
     + 'features are as they were.'],
 ]
@@ -110,7 +118,6 @@ const COLS = [
   { key: 'exp_method', label: 'Method' },
 ]
 
-const EMPTY = Array(MAX_SHOWN).fill(null)
 
 // Reports its own height, as the heatmap does, so the viewer beside it can keep level with
 // whatever this panel is showing.
@@ -137,8 +144,6 @@ export default function StructuralGroupsApp({ config }) {
   // free-form selection here. The page presents one reproducible grouping; arbitrary subsets are
   // what the similarity page is for, and other groupings are what the notebook is for.
   const [selectedId, setSelectedId] = useState(null)
-  const [slots, setSlots] = useState(EMPTY)
-  const [notice, setNotice] = useState(null)
   const [sort, setSort] = useState({ key: null, dir: 'asc' })
   const [page, setPage] = useState(0)
   const [panelSize, setPanelSize] = useState(520)
@@ -153,7 +158,7 @@ export default function StructuralGroupsApp({ config }) {
   const [compareWith, setCompareWith] = useState(null)
   const [comparing, setComparing] = useState(false)
   // Height of what sits between the viewer card's note and the viewer itself: the comparison box
-  // and any notice. The heatmap card has nothing in that position, so the viewer gives up exactly
+  // The heatmap card has nothing in that position, so the viewer gives up exactly
   // this much and the two cards end level, with no blank band under the matrix.
   const extrasRef = useRef(null)
   const [extrasH, setExtrasH] = useState(0)
@@ -184,21 +189,12 @@ export default function StructuralGroupsApp({ config }) {
     () => (hm ? structuralGroups(labels, hm.matrix, { nGroups: grouping.nGroups }) : null),
     [hm, labels, grouping.nGroups])
 
-  // What a group opens on: every member if it is small enough, otherwise the representative.
-  const showAllUpTo = Math.min(grouping.showAllUpTo ?? MAX_SHOWN, MAX_SHOWN)
-  const opensOn = (g) => (g.members.length <= showAllUpTo
-    ? [g.representative, ...g.members.filter((m) => m !== g.representative)]
-    : [g.representative])
   const selectGroup = (id) => {
     const g = clustering.groups.find((x) => x.id === id)
     if (!g) return
     setSelectedId(id)
     // Selecting a group always lands on that group's own view, so a comparison in progress ends.
     setComparing(false)
-    const next = [...EMPTY]
-    opensOn(g).forEach((m, i) => { next[i] = m })
-    setSlots(next)
-    setNotice(null)
     // The table follows the dendrogram, so a group is a run of consecutive rows. Turn to the page
     // it starts on, or selecting a group in a table of hundreds shows rows from another one.
     setPage(!sort.key && !groupOnly ? Math.floor(g.from / PAGE_SIZE) : 0)
@@ -206,15 +202,6 @@ export default function StructuralGroupsApp({ config }) {
   // Opens on the largest group, and returns to it whenever the grouping itself is recomputed.
   useEffect(() => { if (clustering) selectGroup(1) }, [clustering])   // eslint-disable-line
   useEffect(() => { setPage(0) }, [sort.key, sort.dir, basePath])
-
-  const colorOf = useMemo(() => {
-    const m = {}
-    slots.forEach((a, i) => { if (a) m[a] = SERIES[i] })
-    return m
-  }, [slots])
-  const shown = useMemo(
-    () => slots.map((a, i) => (a ? { assembly_id: a, color: SERIES[i] } : null)).filter(Boolean),
-    [slots])
 
   const sel = useMemo(() => {
     const g = clustering && clustering.groups.find((x) => x.id === selectedId)
@@ -258,47 +245,16 @@ export default function StructuralGroupsApp({ config }) {
   const pair = (a, b) => ({ dissimilarity: hm.matrix[at[a]][at[b]],
                             rmsd: rmsdM ? rmsdM[at[a]]?.[at[b]] ?? null : null })
   const comparison = comparing && other ? comparisonOf(sel, other, pair) : null
-  // What is on screen: the two representatives while comparing, otherwise the group's view.
-  const entries = comparison ? comparison.entries : shown
-  const colours = comparison
-    ? Object.fromEntries(comparison.entries.map((e) => [e.assembly_id, e.color])) : colorOf
-
-  // --- viewer selection, as on the similarity page -------------------------------------------
-  const addMany = (ids) => {
-    const wanted = ids.filter((id) => !slots.includes(id))
-    if (!wanted.length) { setNotice(null); return }
-    const free = slots.reduce((n, s) => n + (s === null ? 1 : 0), 0)
-    if (wanted.length > free) {
-      setNotice(`A maximum of ${MAX_SHOWN} structures can be superposed simultaneously. Deselect one to continue.`)
-      return
-    }
-    const next = [...slots]
-    for (const id of wanted) next[next.indexOf(null)] = id
-    setNotice(null)
-    setSlots(next)
-  }
-  const removeMany = (ids) => {
-    setNotice(null)
-    setSlots((prev) => prev.map((s) => (ids.includes(s) ? null : s)))
-  }
-  // Visualization only, and only within the selected group: these change which members are drawn
-  // and nothing else. They never touch selectedId, so the summary and the associated features
-  // cannot move. The guards repeat what the disabled controls already enforce.
-  const toggle = (id) => {
-    if (comparison || !inSel.has(id)) return
-    if (slots.includes(id)) removeMany([id]); else addMany([id])
-  }
-  const onPick = (a, b) => {
-    const ids = b ? [a, b] : [a]
-    if (comparison || !ids.every((id) => inSel.has(id))) return
-    if (ids.every((id) => slots.includes(id))) removeMany(ids)
-    else addMany(ids)
-  }
-  const resetView = () => selectGroup(sel.id)
-  const large = sel.members.length > showAllUpTo
-  const opening = large ? [sel.representative] : sel.members
-  const atOpening = shown.length === opening.length
-    && opening.every((m) => slots.includes(m))
+  // What is on screen: the two representatives while comparing; otherwise every member of a
+  // small group, representative first; otherwise the representative alone, in the group's
+  // colour. The same map colours the rows in the table and the labels on the matrix.
+  const overlay = sel.members.length <= OVERLAY_MAX
+  const entries = comparison ? comparison.entries
+    : overlay
+      ? [sel.representative, ...sel.members.filter((m) => m !== sel.representative)]
+          .map((id, i) => ({ assembly_id: id, color: SERIES[i] }))
+      : [{ assembly_id: sel.representative, color: sel.color }]
+  const colours = Object.fromEntries(entries.map((e) => [e.assembly_id, e.color]))
 
   // --- table ------------------------------------------------------------------------------------
   const leaf = Object.fromEntries(order.map((a, i) => [a, i]))
@@ -433,7 +389,6 @@ export default function StructuralGroupsApp({ config }) {
             <table className={'cs-tbl sg-tbl' + (paged.length === PAGE_SIZE ? ' sg-tbl-fill' : '')}>
               <thead>
                 <tr>
-                  <th className="cs-check-col"><span className="cs-sr">Show</span></th>
                   {COLS.map((c) => (
                     <th key={c.key} className={(c.num ? 'num ' : '') + 'sortable'}
                         onClick={() => onSort(c.key)} title="Click to sort">
@@ -454,15 +409,6 @@ export default function StructuralGroupsApp({ config }) {
                   return (
                     <tr key={r.assembly_id} className={cls || undefined}
                         style={{ '--g': groups[r.group - 1].color }}>
-                      <td className="cs-check-col">
-                        <input type="checkbox" checked={on} onChange={() => toggle(r.assembly_id)}
-                               disabled={!!comparison || !inSel.has(r.assembly_id)}
-                               title={comparison ? 'Go back to the group view to change what is displayed'
-                                 : inSel.has(r.assembly_id)
-                                 ? `Show or hide ${r.assembly_id} in the superposition view`
-                                 : `Select Group ${r.group} to display this assembly`}
-                               aria-label={`Show ${r.assembly_id}`} />
-                      </td>
                       <td className="mono">
                         {on && <span className="cs-swatch" style={{ background: colours[r.assembly_id] }} />}
                         <a className="cs-asm-link" href={pdbeAssemblyUrl(r.assembly_id)}
@@ -543,11 +489,9 @@ export default function StructuralGroupsApp({ config }) {
             <DissimilarityHeatmap key="all"
                                   order={view.order} labels={labels}
                                   matrix={hm.matrix} cellLabel={QUANTITY} metaOf={metaOf}
-                                  colorOf={colours} onPick={onPick} onSize={setPanelSize}
+                                  colorOf={colours} onPick={() => {}} onSize={setPanelSize}
                                   dragSelect={false} rmsd={data.heatmap.rmsd || null}
-                                  pickable={(id) => !comparison && inSel.has(id)}
-                                  pickNote={comparison ? 'representative comparison'
-                                    : 'outside the selected structural group'}
+                                  pickable={() => false} pickNote={null}
                                   block={view.block} bands={view.bands}
                                   leftGutter={DENDRO_W}
                                   leftPanel={({ cell, top: y0 }) => (
@@ -577,24 +521,13 @@ export default function StructuralGroupsApp({ config }) {
             </>
           ) : (
             <>
-              <h2>
-                Superposition view {helpHint(VIEWER_HELP)}
-                <span className="cs-count"
-                      title={`Members of ${sel.label} displayed. Up to ${MAX_SHOWN} can be superposed at once.`}>
-                  {shown.length} of {sel.members.length}
-                </span>
-                {!atOpening && (
-                  <button className="cs-linkbtn cs-clear-inline" onClick={resetView}
-                          title={large ? `Return to the representative of ${sel.label}`
-                                       : `Display every member of ${sel.label} again`}>
-                    {large ? 'reset' : 'show all'}
-                  </button>
-                )}
-              </h2>
+              <h2>3D alignment view {helpHint(VIEWER_HELP)}</h2>
               <p className="note">
-                {large
-                  ? `${sel.label} contains ${sel.members.length} assemblies. Showing the representative by default.`
-                  : sel.label}
+                {overlay
+                  ? `${sel.label}: ${sel.members.length === 1 ? 'its one assembly'
+                      : `all ${sel.members.length} assemblies aligned`}`
+                  : `${sel.label} contains ${sel.members.length} assemblies. Showing the `
+                    + `representative, ${sel.representative}.`}
               </p>
             </>
           )}
@@ -605,9 +538,8 @@ export default function StructuralGroupsApp({ config }) {
             ) : other && (
               <CompareControl groups={groups} selected={sel} withId={other.id}
                               onWith={setCompareWith}
-                              onCompare={() => { setCompareWith(other.id); setNotice(null); setComparing(true) }} />
+                              onCompare={() => { setCompareWith(other.id); setComparing(true) }} />
             )}
-            {!comparison && notice && <p className="cs-notice">{notice}</p>}
           </div>
           <SuperpositionViewer basePath={basePath} entries={entries}
                                height={Math.max(320, panelSize - extrasH)} />

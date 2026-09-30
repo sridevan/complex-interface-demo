@@ -1,5 +1,9 @@
 import React from 'react'
 import Hint from '../components/Hint.jsx'
+import { groupColor } from './clustering'
+
+// The neutral every group past the fourth is given.
+const GREY = groupColor(99)
 
 // Representative comparison: the medoid of the selected structural group superposed on the medoid
 // of one other group, and nothing else in the viewer. It answers one question, how different are
@@ -12,9 +16,21 @@ import Hint from '../components/Hint.jsx'
 // Shared by every structural-groups page: it takes groups and a pairwise lookup, and knows nothing
 // about which complex it is looking at.
 
-// The two structure colours. Blue and orange: separable under every common colour-vision
-// deficiency, and neither is a group colour (coral, magenta, rust, cyan) or a step of viridis.
-export const COMPARE_COLORS = ['#0072B2', '#E69F00']
+// Each representative wears its GROUP's colour, so the viewer, the group list and the tree say
+// the same thing about which structure is which.
+//
+// Groups past the fourth share a neutral grey, and that grey fails against two of the group
+// colours on aligned backbones (dE 2.0 from the magenta under deuteranopia, 14.6 from the rust
+// for normal vision). So in a comparison a grey group is drawn near-black instead, which clears
+// every group colour (worst pair dE 13.6) and the grey itself (23.1), and two grey groups still
+// differ from each other. The chip beside the structure keeps the group's own grey.
+const NEUTRAL_IN_VIEWER = '#2E3440'
+export function compareColors(selected, other) {
+  const a = selected.color === GREY ? NEUTRAL_IN_VIEWER : selected.color
+  let b = other.color === GREY ? NEUTRAL_IN_VIEWER : other.color
+  if (b === a) b = GREY
+  return [a, b]
+}
 
 const METRICS_NOTE = 'Between the two representatives only, from the same pairwise comparison the '
   + 'matrix shows. TM-score is averaged over both directions and reported to two decimals. '
@@ -23,10 +39,11 @@ const METRICS_NOTE = 'Between the two representatives only, from the same pairwi
 // pair(a, b) -> { dissimilarity, rmsd } for two assembly ids; rmsd may be null.
 export function comparisonOf(selected, other, pair) {
   const p = pair(selected.representative, other.representative)
+  const [ca, cb] = compareColors(selected, other)
   return {
     entries: [
-      { assembly_id: selected.representative, color: COMPARE_COLORS[0] },
-      { assembly_id: other.representative, color: COMPARE_COLORS[1] },
+      { assembly_id: selected.representative, color: ca },
+      { assembly_id: other.representative, color: cb },
     ],
     tm: 1 - p.dissimilarity,
     dissimilarity: p.dissimilarity,
