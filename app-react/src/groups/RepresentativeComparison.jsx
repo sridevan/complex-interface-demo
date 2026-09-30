@@ -1,9 +1,6 @@
 import React from 'react'
 import Hint from '../components/Hint.jsx'
-import { groupColor } from './clustering'
-
-// The neutral every group past the fourth is given.
-const GREY = groupColor(99)
+import { UNPLACED as GREY } from './clustering'
 
 // Representative comparison: the medoid of the selected structural group superposed on the medoid
 // of one other group, and nothing else in the viewer. It answers one question, how different are
@@ -19,7 +16,7 @@ const GREY = groupColor(99)
 // Each representative wears its GROUP's colour, so the viewer, the group list and the tree say
 // the same thing about which structure is which.
 //
-// Groups past the fourth share a neutral grey, and that grey fails against two of the group
+// Single-assembly groups share a neutral grey, and that grey fails against two of the group
 // colours on aligned backbones (dE 2.0 from the magenta under deuteranopia, 14.6 from the rust
 // for normal vision). So in a comparison a grey group is drawn near-black instead, which clears
 // every group colour (worst pair dE 13.6) and the grey itself (23.1), and two grey groups still

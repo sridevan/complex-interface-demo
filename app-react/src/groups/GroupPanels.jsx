@@ -8,9 +8,11 @@ export const GROUP_NOTE = 'Structural groups are computationally derived from pa
 
 const GROUPS_HELP = [
   ['Structural groups', GROUP_NOTE],
-  ['Colours', 'Each group has one colour, used for its chip, its table cells and the strip '
-    + 'beside the dendrogram. It shows membership only. The colours in the matrix are a '
-    + 'separate scale and show pairwise dissimilarity.'],
+  ['Colours', 'Each group of two or more assemblies has one colour, used for its chip, its '
+    + 'table cells and the strip beside the dendrogram. A group of one assembly is grey: it is a '
+    + 'structure the clustering could not place with any other, not a population. Colour shows '
+    + 'membership only; the colours in the matrix are a separate scale and show pairwise '
+    + 'dissimilarity.'],
   ['Numbering', 'Groups are numbered by size, largest first.'],
   ['Selecting', 'Click a group here, in the table or beside the dendrogram. Every view follows '
     + 'the same selection.'],
@@ -66,11 +68,24 @@ export function GroupsCard({ clustering, selection, stats, representative, quant
   const [showAll, setShowAll] = useState(false)
   const folds = groups.length > MAX_LISTED + 1
   const hidden = folds ? groups.slice(MAX_LISTED) : []
-  // A group selected from the table or the dendrogram must not be selected out of sight.
+  // A group selected from the table or the tree must not be selected out of sight, so a folded
+  // list still shows the selected group, appended below the largest ones. The fold itself stays
+  // in the reader's hands: it never opens or locks on its own.
   const selectedHidden = hidden.some((g) => g.id === selection.id)
-  const open = showAll || selectedHidden
-  const listed = folds && !open ? groups.slice(0, MAX_LISTED) : groups
-  const hiddenN = hidden.reduce((n, g) => n + g.members.length, 0)
+  const listed = folds && !showAll
+    ? [...groups.slice(0, MAX_LISTED), ...(selectedHidden ? [groups.find((g) => g.id === selection.id)] : [])]
+    : groups
+  // What the fold holds, said precisely: a single assembly is not a small group but an unplaced
+  // structure, and the line says which of the two the folded groups are.
+  const foldLabel = (() => {
+    const rest = hidden.filter((g) => g.id !== selection.id)
+    const singles = rest.filter((g) => g.members.length === 1).length
+    const smalls = rest.filter((g) => g.members.length > 1 && g.members.length < SMALL_GROUP).length
+    const n = rest.length
+    const kinds = singles === n ? (n === 1 ? 'a single assembly' : 'all single assemblies')
+      : [singles && `${singles} single`, smalls && `${smalls} small`].filter(Boolean).join(', ')
+    return `${n} more group${n === 1 ? '' : 's'}` + (kinds ? ` · ${kinds}` : '')
+  })()
   // The two means are shown to four decimals, and the ratio is the ratio of the figures as shown.
   // At three decimals a tight group's mean kept one significant digit (0.007 for 0.00722), and
   // dividing the numbers on the card gave 15.4 where the card said 14.9. A reader who checks the
@@ -125,13 +140,9 @@ export function GroupsCard({ clustering, selection, stats, representative, quant
         })}
       </div>
       {folds && (
-        <button type="button" className="sg-more" aria-expanded={open}
-                disabled={selectedHidden}
-                title={selectedHidden ? 'The selected group is one of these' : undefined}
+        <button type="button" className="sg-more" aria-expanded={showAll}
                 onClick={() => setShowAll(!showAll)}>
-          {open ? 'Show fewer groups'
-                : `${hidden.length} more groups · ${plural(hiddenN, 'assembly', 'assemblies')}`
-                  + (hidden.every((g) => g.members.length < SMALL_GROUP) ? ' · all small' : '')}
+          {showAll ? 'Show fewer groups' : foldLabel}
         </button>
       )}
       <p className="sg-default-note">Largest group selected by default.</p>

@@ -92,8 +92,11 @@ export function medoid(members, matrix) {
   return best.i
 }
 
-// One colour per group, by group number: coral, magenta, rust, light cyan, then neutral grey for
-// any group past the fourth rather than a generated hue.
+// A named colour means a population: coral, magenta, rust, light cyan, given to groups of two or
+// more in size order. A group of one is not a population but a structure the clustering could not
+// place with anything, and every such group takes the same neutral grey, so that colour reads as
+// "unplaced" rather than as one more group. Multi-member groups past the fourth also fall to the
+// grey rather than receive a generated hue.
 //
 // Two colour systems share this page and must not be confused. Viridis encodes pairwise
 // dissimilarity, a quantity. These encode group membership, an identity. So none of them may look
@@ -107,7 +110,7 @@ export function medoid(members, matrix) {
 // Used for chips, labels, the strip beside the dendrogram and selection indicators. Never for a
 // heatmap cell.
 export const GROUP_COLORS = ['#E8685A', '#B0327A', '#8C4A1E', '#3FA7D6']
-export const groupColor = (id) => GROUP_COLORS[id - 1] || '#6b7480'
+export const UNPLACED = '#6b7480'
 
 // Everything the page needs, from one matrix: the tree, the leaf order every view shares, and the
 // groups. Groups are numbered by size, largest first, and carry no other meaning.
@@ -119,10 +122,11 @@ export function structuralGroups(labels, matrix, { nGroups }) {
   const bySize = parts
     .map((node, drawn) => ({ node, drawn }))
     .sort((a, b) => b.node.leaves.length - a.node.leaves.length || a.drawn - b.drawn)
+  let coloured = 0
   const groups = bySize.map(({ node }, i) => ({
     id: i + 1,
     name: `Group ${i + 1}`,
-    color: groupColor(i + 1),
+    color: node.leaves.length > 1 ? (GROUP_COLORS[coloured++] || UNPLACED) : UNPLACED,
     node,
     members: node.leaves.map((l) => labels[l]),
     from: pos.get(node.leaves[0]),

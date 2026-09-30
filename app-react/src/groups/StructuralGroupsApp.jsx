@@ -248,7 +248,9 @@ export default function StructuralGroupsApp({ config }) {
   // What is on screen: the two representatives while comparing; otherwise every member of a
   // small group, representative first; otherwise the representative alone, in the group's
   // colour. The same map colours the rows in the table and the labels on the matrix.
-  const overlay = sel.members.length <= OVERLAY_MAX
+  // A lone structure, whether the representative of a large group or the one member of a
+  // singleton, wears the group's colour: for a singleton that is the grey every chip gives it.
+  const overlay = sel.members.length > 1 && sel.members.length <= OVERLAY_MAX
   const entries = comparison ? comparison.entries
     : overlay
       ? [sel.representative, ...sel.members.filter((m) => m !== sel.representative)]
@@ -524,10 +526,11 @@ export default function StructuralGroupsApp({ config }) {
               <h2>3D alignment view {helpHint(VIEWER_HELP)}</h2>
               <p className="note">
                 {overlay
-                  ? `${sel.label}: ${sel.members.length === 1 ? 'its one assembly'
-                      : `all ${sel.members.length} assemblies aligned`}`
-                  : `${sel.label} contains ${sel.members.length} assemblies. Showing the `
-                    + `representative, ${sel.representative}.`}
+                  ? `All ${sel.members.length} assemblies of structural ${sel.label.toLowerCase()} aligned`
+                  : sel.members.length === 1
+                    ? `The one assembly of structural ${sel.label.toLowerCase()}, ${sel.representative}`
+                    : `Structural ${sel.label.toLowerCase()} has ${sel.members.length} assemblies. `
+                      + `Showing its representative, ${sel.representative}`}
               </p>
             </>
           )}
