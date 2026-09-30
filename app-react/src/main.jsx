@@ -53,6 +53,17 @@ function Root() {
     similarityHash: '#kir22-similarity',
     grouping: { method: 'Agglomerative hierarchical clustering', linkage: 'Average', nGroups: 3 },
   }} /></>
+  // The prototype on the set with the cleanest ground truth: the depositors labelled three
+  // rotary states in the entry titles, and three groups recover them exactly (7, 5 and 4
+  // assemblies). The tree says three plainly: the top two merges are at 0.043 and 0.042, the
+  // next at 0.012.
+  if (route === '#atpsynthase-groups') return <><BackLink /><StructuralGroupsApp config={{
+    basePath: 'atpsynthase-similarity', complexId: 'PDB-CPX-106364',
+    title: 'F-ATP synthase',
+    organism: 'Polytomella sp.',
+    similarityHash: '#atpsynthase-similarity',
+    grouping: { method: 'Agglomerative hierarchical clustering', linkage: 'Average', nGroups: 3 },
+  }} /></>
   // The same prototype on a complex far too large to draw leaf by leaf: 341 assemblies, so the
   // tree is collapsed to a wedge per group. Six groups because, with average linkage, the first
   // five cuts only peel off outliers (337/3/1, then 335/3/1/1/1) and the sixth is the first to
