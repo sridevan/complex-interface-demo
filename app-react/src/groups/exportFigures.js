@@ -1,7 +1,7 @@
 import { viridis, DIAGONAL } from '../states/DissimilarityHeatmap.jsx'
 
 // Downloads for the structural-groups pages: the dendrogram and the pairwise matrix as SVG and
-// PNG, and the assembly table as CSV.
+// PNG, the assembly table as CSV, and every pairwise score as CSV.
 //
 // The figures are DRAWN FROM THE DATA, not captured from the page. A capture would inherit the
 // page's size, its scroll position, its hover state and whichever group happened to be selected;
@@ -284,6 +284,32 @@ export function tableCsv(rows) {
 export function exportTable({ fileStem, rows }) {
   const name = `${fileStem}_structural_group_assemblies.csv`
   save(new Blob([tableCsv(rows)], { type: 'text/csv;charset=utf-8' }), name)
+  return name
+}
+
+// Every pairwise score, one row per unordered pair, for anyone who wants to run their own
+// clustering: 1 - TM-score as the page uses it, the TM-score it came from, backbone RMSD where the
+// dataset has it, and the group each assembly landed in here. Long format rather than a square
+// matrix, because that is what pandas, R and a spreadsheet take without reshaping; at 341
+// assemblies it is 57,970 rows, about 3 MB.
+export function pairsCsv({ labels, matrix, rmsd, groupOf }) {
+  const head = ['assembly_a', 'assembly_b', 'tm_dissimilarity', 'tm_score',
+                ...(rmsd ? ['rmsd_angstrom'] : []), 'group_a', 'group_b']
+  const lines = [head.join(',')]
+  for (let i = 0; i < labels.length; i++) {
+    for (let j = i + 1; j < labels.length; j++) {
+      const d = matrix[i][j]
+      const row = [labels[i], labels[j], d.toFixed(4), (1 - d).toFixed(4)]
+      if (rmsd) row.push(rmsd.matrix[i]?.[j] == null ? '' : rmsd.matrix[i][j].toFixed(2))
+      row.push(`Group ${groupOf[labels[i]]}`, `Group ${groupOf[labels[j]]}`)
+      lines.push(row.join(','))
+    }
+  }
+  return lines.join('\r\n') + '\r\n'
+}
+export function exportPairs({ fileStem, ...input }) {
+  const name = `${fileStem}_pairwise_tm_dissimilarity.csv`
+  save(new Blob([pairsCsv(input)], { type: 'text/csv;charset=utf-8' }), name)
   return name
 }
 

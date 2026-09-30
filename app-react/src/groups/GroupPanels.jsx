@@ -21,6 +21,13 @@ const PROVENANCE_NOTE = 'Structural groups were generated using the current clus
 
 // How many groups the picker lists before folding the rest.
 const MAX_LISTED = 3
+// Below this many assemblies a group is flagged as small. With average linkage the first cuts
+// tend to peel off single odd structures, so a small "group" is more likely an outlier than a
+// population, and every figure computed for it rests on a handful of pairs. The same threshold
+// gates the percentages in the features panel and the selection summary on the similarity page.
+export const SMALL_GROUP = 5
+const SMALL_NOTE = `Fewer than ${SMALL_GROUP} assemblies. Likely an outlier rather than a `
+  + 'population, and its statistics and associated features rest on very few structures.'
 
 const LARGEST_NOTE = 'Largest refers only to the number of deposited assembly instances in this '
   + 'structural group and does not imply biological importance.'
@@ -29,10 +36,11 @@ const REP_NOTE = 'The medoid is the assembly with the smallest average structura
   + 'other members of this group.'
 
 const FEATURES_HELP = [
-  ['The two percentages', 'Assemblies in the group carrying the feature, then assemblies '
-    + 'outside it. Several copies in one assembly count once. Hover a feature for the counts.'],
+  ['The two percentages', 'PDB entries in the group carrying the feature, then entries outside '
+    + 'it. Counted per entry rather than per assembly, so an entry with several assemblies counts '
+    + 'once; its features are pooled over them. Hover a feature for the counts.'],
   ['What is listed', `Features differing by ${pct(ENRICH_PP)} points or more. A display threshold, `
-    + 'not a test of significance.'],
+    + 'not a test of significance. Nothing here is tested or ranked by evidence.'],
   ['Reading it', 'An association describes which structures were deposited. It can support an '
     + 'interpretation of a group and cannot establish one.'],
 ]
@@ -107,6 +115,11 @@ export function GroupsCard({ clustering, selection, stats, representative, quant
               <b>{g.name}</b>
               <span className="sg-chip-n">{plural(g.members.length, 'assembly', 'assemblies')}</span>
               {g.id === largest.id && <span className="sg-tag" title={LARGEST_NOTE}>largest</span>}
+              {g.members.length < SMALL_GROUP && (
+                <span className="sg-tag sg-tag-warn" title={SMALL_NOTE}>
+                  {g.members.length === 1 ? 'single' : 'small'}
+                </span>
+              )}
             </button>
           )
         })}
@@ -117,7 +130,8 @@ export function GroupsCard({ clustering, selection, stats, representative, quant
                 title={selectedHidden ? 'The selected group is one of these' : undefined}
                 onClick={() => setShowAll(!showAll)}>
           {open ? 'Show fewer groups'
-                : `${hidden.length} more groups · ${plural(hiddenN, 'assembly', 'assemblies')}`}
+                : `${hidden.length} more groups · ${plural(hiddenN, 'assembly', 'assemblies')}`
+                  + (hidden.every((g) => g.members.length < SMALL_GROUP) ? ' · all small' : '')}
         </button>
       )}
       <p className="sg-default-note">Largest group selected by default.</p>
@@ -134,6 +148,18 @@ export function GroupsCard({ clustering, selection, stats, representative, quant
           <div className="sg-selected-sub">
             {plural(stats.n, 'assembly', 'assemblies')} · {plural(stats.entries, 'PDB entry', 'PDB entries')}
           </div>
+          {/* Said in the card, where the figures are, and not only as a badge in the list: a reader
+              who arrives at a small group from the table or the tree never saw the badge. */}
+          {stats.n < SMALL_GROUP && (
+            <p className="cs-notice sg-small-note" role="note">
+              {stats.n === 1
+                ? 'Single assembly: an outlier rather than a group. No within-group statistics, and '
+                  + 'its associated features describe one structure.'
+                : `Small group of ${stats.n}: may be an outlier rather than a population. Its `
+                  + `statistics rest on ${stats.n * (stats.n - 1) / 2} pair${stats.n === 2 ? '' : 's'} `
+                  + `and its associated features on ${stats.n} structures.`}
+            </p>
+          )}
 
           <Block title="Representative" hint={REP_NOTE}>
             <div className="sg-rep">
@@ -183,29 +209,23 @@ export function GroupsCard({ clustering, selection, stats, representative, quant
   )
 }
 
-// Which deposited features go with the selected group. The arithmetic is summariseSelection's, the
-// same code behind the similarity page's "Selection composition": this is a different rendering
-// of it, ordered by the kinds of annotation that help interpret a group.
-//
-// One deliberate difference: that panel shows nothing below five instances. Here a computed group
-// of two or three still gets its features, because the group is the unit the page is about, and
-// the counts are stated beside the heading so the percentages cannot pass for more than they are.
-export function AssociatedFeatures({ selection, stats, total, anyModified }) {
-  if (!stats) return null
-  const s = stats
-  const nRest = total - s.n
-  const scope = 'group'
-  const counts = (d) => `${Math.round(d.block * s.n)}/${s.n} assemblies in this ${scope}\n`
-    + `${Math.round(d.rest * nRest)}/${nRest} assemblies outside this ${scope}`
+// Which deposited features go with the selected group. The arithmetic is groupFeatures (per PDB
+// entry); the rendering follows the similarity page's "Selection composition" so the two read
+// alike. Unlike that panel, a group of two or three still gets its features, because the group is
+// the unit the page is about; the small-group flag and the counts on hover say what they rest on.
+export function AssociatedFeatures({ selection, features, small }) {
+  if (!features) return null
+  const f = features
+  const counts = (d) => `${d.a}/${f.nIn} entries in this group\n${d.c}/${f.nOut} entries outside this group`
   const NAME_MAX = 26
-  const chip = (d, dir, name) => {
+  const chip = (d, name) => {
     const low = name ? name.toLowerCase() : null
     const short = low && low.length > NAME_MAX ? `${low.slice(0, NAME_MAX - 1)}…` : low
     return (
-      <span key={d.key} className={`bs-chip ${dir}`}
-            title={`${name ? `${d.key}: ${name}\n` : ''}${counts(d)}`}>
-        <b>{d.key}</b>{short && <span className="bs-lig-name">{short}</span>}
-        <span className="bs-nums"><b>{pct(d.block)}</b> vs {pct(d.rest)}</span>
+      <span key={d.key} className={`bs-chip ${d.delta > 0 ? 'bs-up' : 'bs-down'}`}
+            title={`${name ? `${d.label}: ${name}\n` : ''}${counts(d)}`}>
+        <b>{d.label}</b>{short && <span className="bs-lig-name">{short}</span>}
+        <span className="bs-nums"><b>{pct(d.inShare)}</b> vs {pct(d.outShare)}</span>
       </span>
     )
   }
@@ -227,30 +247,30 @@ export function AssociatedFeatures({ selection, stats, total, anyModified }) {
         </span>
       </h2>
       <p className="note">
-        {s.n} {s.n === 1 ? 'assembly' : 'assemblies'} in this {scope}, compared with
-        the {nRest} outside it.
-        {s.n < 5 && ' With so few assemblies, read the counts rather than the percentages.'}
+        {f.nIn} PDB {f.nIn === 1 ? 'entry' : 'entries'} in this group
+        {f.nIn !== f.asmIn && ` (${f.asmIn} assemblies)`}, compared with
+        the {f.nOut} outside it{f.nOut !== f.asmOut && ` (${f.asmOut} assemblies)`}.
+        {small && ' With so few, read the counts rather than the percentages.'}
       </p>
-      {s.noRest ? (
+      {f.noRest ? (
         <p className="bs-note">This group is the whole set, so there is nothing to compare it
           against.</p>
       ) : (
         <div className="bs-grid">
           <Row label="Ligands" hint={LIGAND_NOTE}>
-            {s.enriched.length + s.depleted.length === 0 && none}
-            {s.enriched.map((d) => chip(d, 'bs-up', s.ligName.get(d.key)))}
-            {s.depleted.map((d) => chip(d, 'bs-down', s.ligName.get(d.key)))}
+            {f.ligands.length === 0 && none}
+            {f.ligands.map((d) => chip(d, f.ligName.get(d.label)))}
           </Row>
           <Row label="Modified residues" hint={MODIFIED_NOTE}>
-            {s.modified.length === 0
-              ? <span className="bs-note">{anyModified ? 'nothing differs' : 'none deposited for this complex'}</span>
-              : s.modified.map((d) => chip(d, 'bs-up'))}
+            {f.modified.length === 0
+              ? <span className="bs-note">{f.anyModified ? 'nothing differs' : 'none deposited for this complex'}</span>
+              : f.modified.map((d) => chip(d))}
           </Row>
           <Row label="Mutations" hint={MUTATION_NOTE}>
-            {s.mutations.length === 0 && none}
-            {s.mutations.map((d) => chip(d, 'bs-up'))}
-            {s.initiatorN > 0 && (
-              <span className="bs-note"> · {s.initiatorN} with a position-1 substitution,
+            {f.mutations.length === 0 && none}
+            {f.mutations.map((d) => chip(d))}
+            {f.initiatorN > 0 && (
+              <span className="bs-note"> · {f.initiatorN} with a position-1 substitution,
                 {' '}excluded</span>
             )}
           </Row>

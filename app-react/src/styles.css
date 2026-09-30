@@ -923,10 +923,6 @@ table.heatmap thead th { position: sticky; top: 0; background: #fbfcfd; z-index:
   font-weight: 600; line-height: 1.5; }
 .sg-cell-static:hover { border-color: var(--g); }
 .sg-features .bs-key { white-space: nowrap; }
-/* View switch above the matrix: every assembly, or the selected group alone. */
-.sg-scope { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 12px; }
-.sg-scope .pill button { padding: 4px 12px; font-size: 12px; white-space: nowrap; }
-.sg-scope .pill button:disabled { opacity: .45; cursor: default; }
 /* Representative comparison, in the superposition card. One compact row in the normal view; the
    same box holds the two representatives and their distances while comparing. */
 .sg-compare { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin: 0 0 12px;
@@ -1006,11 +1002,6 @@ table.heatmap thead th { position: sticky; top: 0; background: #fbfcfd; z-index:
 .sg-ov-hit { fill: transparent; }
 .sg-ov-row:hover .sg-ov-hit, .sg-ov-row:focus-visible .sg-ov-hit { fill: rgba(21, 25, 31, .045); }
 .sg-ov-cut { font-size: 9.5px; fill: var(--muted); }
-/* Why there is no matrix, and what to do instead. A note, not a warning: nothing is wrong. */
-.sg-hidden { margin: 0 0 10px; padding: 10px 12px; font-size: 13px; line-height: 1.5;
-  background: #f6f7f9; border: 1px solid var(--border); border-radius: 7px; }
-.sg-hidden p { margin: 0; }
-.sg-hidden-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px !important; }
 /* Keeps the help icon on the heading's line now that two actions share the row. */
 .sg-heatmap .cs-h2-row > span:first-child { white-space: nowrap; }
 .sg-head-actions .sg-nbbtn { padding: 4px 9px; }
@@ -1025,3 +1016,9 @@ table.heatmap thead th { position: sticky; top: 0; background: #fbfcfd; z-index:
 .sg-ov-cmp { fill: none; stroke: var(--g); stroke-width: 1.5; stroke-dasharray: 5 3; }
 .sg-ov-rep { font-size: 11.5px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   fill: var(--text); }
+/* Small-group flag: amber, like the app's other routine warnings, and always next to the count. */
+.sg-tag-warn { color: #8a5a10; border-color: #e0c48a; background: #fff6e3; opacity: 1; }
+.sg-tag + .sg-tag-warn { margin-left: 6px; }
+.sg-small-note { margin: 6px 0 4px; font-size: 12.5px; line-height: 1.45; }
+.sg-nb-note { margin-top: -6px; }
+.sg-nb-note .cs-linkbtn { font-size: 13px; }

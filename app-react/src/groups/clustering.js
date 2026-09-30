@@ -134,15 +134,6 @@ export function structuralGroups(labels, matrix, { nGroups }) {
   return { root, order, groups, groupOf, cutHeight, maxHeight: root.height }
 }
 
-// One group's own tree, in the shape Dendrogram takes: the subtree under the group's top node,
-// with the group as its only member and no cut line. For looking inside a group of a complex too
-// large to draw leaf by leaf.
-export function groupSubtree(group) {
-  return { root: group.node, order: group.members,
-           groups: [{ ...group, from: 0, to: group.members.length - 1 }],
-           cutHeight: null, maxHeight: group.node.height }
-}
-
 // The route through the tree from one node to another: up from each to the merge that first joins
 // them, that merge included. Returned as a set of node ids. Used to draw how two representatives,
 // or the two groups they stand for, are related. Null when either node is not in this tree.

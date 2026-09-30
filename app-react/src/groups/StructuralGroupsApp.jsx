@@ -6,12 +6,13 @@ import SuperpositionViewer from '../states/SuperpositionViewer.jsx'
 import Hint, { helpHint } from '../components/Hint.jsx'
 import SortIcon from '../components/SortIcon.jsx'
 import { Pager } from '../components/Pager.jsx'
-import { structuralGroups, groupSubtree } from './clustering'
+import { structuralGroups } from './clustering'
 import Dendrogram from './Dendrogram.jsx'
 import GroupOverview from './GroupOverview.jsx'
-import { GroupsCard, AssociatedFeatures, GROUP_NOTE } from './GroupPanels.jsx'
+import { GroupsCard, AssociatedFeatures, GROUP_NOTE, SMALL_GROUP } from './GroupPanels.jsx'
+import { groupFeatures } from './features'
 import ExportMenu from './ExportMenu.jsx'
-import { exportFigure, exportTable, HEATMAP_EXPORT_MAX } from './exportFigures'
+import { exportFigure, exportTable, exportPairs, HEATMAP_EXPORT_MAX } from './exportFigures'
 import { CompareControl, ComparePanel, comparisonOf } from './RepresentativeComparison.jsx'
 import '../styles.css'
 
@@ -33,10 +34,11 @@ const BASE = import.meta.env.BASE_URL || '/'
 const MAX_SHOWN = 10
 const PAGE_SIZE = 10
 // One rule for what the page draws. The instance-level view, a matrix cell for every pair and a
-// dendrogram leaf for every assembly, is drawn only when the set ON DISPLAY has at most this many
-// assemblies. That set is the whole complex, or the selected group in the group-only view. Above
-// it the page shows the groups themselves. A choice about legibility, not about the data: every
-// pair is still computed, and the full tree and table are in the downloads.
+// dendrogram leaf for every assembly, is drawn for a complex of at most this many assemblies.
+// Above it the page shows the groups themselves, and nothing finer: looking inside a group is
+// left to the notebook, which is where any re-cutting of the tree belongs. A choice about
+// legibility and scope, not about the data: every pair is still computed, and the full tree and
+// table are in the downloads.
 const DETAIL_MAX = 50
 // Width of the dendrogram gutter, px.
 const DENDRO_W = 124
@@ -76,9 +78,10 @@ const OVERVIEW_HELP = [
     + 'wedge is a more varied group.'],
   ['Group size', 'Taller rows are larger groups, within limits, so that a group of one stays '
     + 'visible. The count and the bar under it give the exact share of assemblies.'],
-  ['Detail', `The pairwise matrix and a leaf for every assembly are shown for sets of up to `
-    + `${DETAIL_MAX} assemblies: choose a group of that size and switch the view to it. The full `
-    + 'tree and table are in the downloads.'],
+  ['Detail', `The pairwise matrix and a leaf for every assembly are drawn for complexes of up `
+    + `to ${DETAIL_MAX} assemblies. Above that the page stops at the groups. The full tree and `
+    + 'table are in the downloads, and the notebook is where to look inside a group or try '
+    + 'another grouping.'],
 ]
 const VIEWER_HELP = [
   ['What you see', 'Backbone trace only, one colour per assembly, each placed by a single global '
@@ -141,9 +144,6 @@ export default function StructuralGroupsApp({ config }) {
   const [panelSize, setPanelSize] = useState(520)
   const [nbOpen, setNbOpen] = useState(false)
   const [exportError, setExportError] = useState(null)
-  // Which rows the matrix shows: every assembly, or the selected group alone. Only offered where
-  // the whole set is too large to label, which is where looking inside one group earns its place.
-  const [scope, setScope] = useState('all')
   // Narrows the table to the selected group. For a table of hundreds, where a group's members
   // otherwise start part-way down a page and run on for a dozen more.
   const [groupOnly, setGroupOnly] = useState(false)
@@ -206,7 +206,6 @@ export default function StructuralGroupsApp({ config }) {
   // Opens on the largest group, and returns to it whenever the grouping itself is recomputed.
   useEffect(() => { if (clustering) selectGroup(1) }, [clustering])   // eslint-disable-line
   useEffect(() => { setPage(0) }, [sort.key, sort.dir, basePath])
-  useEffect(() => { setScope('all') }, [basePath])
 
   const colorOf = useMemo(() => {
     const m = {}
@@ -226,6 +225,8 @@ export default function StructuralGroupsApp({ config }) {
   const stats = useMemo(() => (sel ? summariseSelection({
     block: sel.members, assemblies: data.assemblies, labels, matrix: hm.matrix,
     rmsd: data.heatmap.rmsd || null }) : null), [sel, data, labels, hm])
+  const features = useMemo(
+    () => (sel ? groupFeatures(sel.members, data.assemblies) : null), [sel, data])
 
   if (error) {
     return (
@@ -243,18 +244,10 @@ export default function StructuralGroupsApp({ config }) {
   const { groups, groupOf, order } = clustering
   const inSel = new Set(sel.members)
   const nAll = data.assemblies.length
-  const canScope = nAll > DETAIL_MAX
-  const groupView = canScope && scope === 'group'
-  const selGroup = groups.find((g) => g.id === sel.id)
-  // What the panel draws, from the size of the set on display.
-  const shownN = groupView ? sel.members.length : nAll
-  const mode = shownN > DETAIL_MAX ? (groupView ? 'hidden' : 'overview')
-    : shownN < 2 ? 'single' : 'detail'
-  const view = groupView
-    ? { clustering: groupSubtree(selGroup), order: sel.members, bands: null, block: null }
-    : { clustering, order,
-        bands: groups.map((g) => ({ key: g.id, from: g.from, to: g.to })),
-        block: { from: sel.from, to: sel.to } }
+  const overview = nAll > DETAIL_MAX     // too many assemblies for the instance-level view
+  const view = { clustering, order,
+                 bands: groups.map((g) => ({ key: g.id, from: g.from, to: g.to })),
+                 block: { from: sel.from, to: sel.to } }
   // --- representative comparison --------------------------------------------------------------
   // The group compared against: the one chosen, or the first other group when nothing valid is
   // chosen yet (on load, or after selecting the group that had been the choice).
@@ -270,7 +263,6 @@ export default function StructuralGroupsApp({ config }) {
   const colours = comparison
     ? Object.fromEntries(comparison.entries.map((e) => [e.assembly_id, e.color])) : colorOf
 
-  const anyModified = data.assemblies.some((a) => (a.modified || []).length > 0)
   // --- viewer selection, as on the similarity page -------------------------------------------
   const addMany = (ids) => {
     const wanted = ids.filter((id) => !slots.includes(id))
@@ -361,6 +353,7 @@ export default function StructuralGroupsApp({ config }) {
     ['dendrogram', 'svg', 'Dendrogram SVG'],
     ['dendrogram', 'png', 'Dendrogram PNG'],
     ['table', 'csv', 'Assembly instances CSV'],
+    ['pairs', 'csv', 'Pairwise dissimilarity CSV'],
     ...(nAll <= HEATMAP_EXPORT_MAX
       ? [['heatmap', 'svg', 'Heatmap SVG'], ['heatmap', 'png', 'Heatmap PNG']] : []),
   ]
@@ -375,33 +368,12 @@ export default function StructuralGroupsApp({ config }) {
 
   const doExport = (what, format) => (what === 'table'
     ? exportTable({ fileStem: data.complex_id, rows: tableRows() })
+    : what === 'pairs'
+    ? exportPairs({ fileStem: data.complex_id, labels, matrix: hm.matrix,
+                    rmsd: data.heatmap.rmsd || null, groupOf })
     : exportFigure(what, format, {
         fileStem: data.complex_id, title: `${title} (${data.complex_id})`,
         quantity: QUANTITY, labels, matrix: hm.matrix, clustering }))
-  // For the buttons outside the menu. Same export, same error line.
-  const download = async (what, format, label) => {
-    setExportError(null)
-    try { await doExport(what, format) } catch (e) {
-      setExportError(`${label} could not be exported: ${e && e.message ? e.message : 'unknown error'}.`)
-    }
-  }
-
-  const viewSwitch = canScope && (
-    <div className="sg-scope">
-      <span className="cs-metric-label">View</span>
-      <span className="pill">
-        <button className={!groupView ? 'active' : undefined} onClick={() => setScope('all')}
-                title="Every structural group of the complex">
-          All {nAll} assemblies
-        </button>
-        <button className={groupView ? 'active' : undefined} onClick={() => setScope('group')}
-                title={`Only the ${sel.members.length} assemblies of ${sel.label}`}>
-          {sel.label} only
-        </button>
-      </span>
-    </div>
-  )
-
   const grp = (r) => {
     const on = sel.id === r.group
     return (
@@ -436,7 +408,7 @@ export default function StructuralGroupsApp({ config }) {
               Order: <b>{sort.key ? COLS.find((c) => c.key === sort.key)?.label
                                   : 'matching the dendrogram'}</b>
             </span>
-            {canScope && (
+            {overview && (
               <label className="cs-order-toggle"
                      title={`List only the assemblies of ${sel.label}`}>
                 <input type="checkbox" checked={groupOnly}
@@ -526,7 +498,7 @@ export default function StructuralGroupsApp({ config }) {
         <div className="card cs-heatmap sg-heatmap">
           <h2 className="cs-h2-row">
             <span>Pairwise structural dissimilarity {helpHint([
-              ...(mode === 'detail' ? HEATMAP_HELP : OVERVIEW_HELP)])}</span>
+              ...(overview ? OVERVIEW_HELP : HEATMAP_HELP)])}</span>
             <span className="sg-head-actions">
               {/* Always the whole complex in clustering order, whatever is selected or zoomed:
                   a file with a fixed name should hold the same figure every time. */}
@@ -553,14 +525,22 @@ export default function StructuralGroupsApp({ config }) {
             </div>
           )}
           <p className="note">
-            {mode === 'detail'
-              ? 'Select a structural group to highlight its assemblies and inspect its structural similarity.'
-              : `${nAll} assemblies in ${groups.length} structural groups.`
-                + (mode === 'overview'
-                  ? ` Detailed pairwise view is shown for sets of up to ${DETAIL_MAX} assemblies.` : '')}
+            {overview
+              ? `${nAll} assemblies in ${groups.length} structural groups. The pairwise matrix and `
+                + `dendrogram are drawn for complexes of up to ${DETAIL_MAX} assemblies.`
+              : 'Select a structural group to highlight its assemblies and inspect its structural similarity.'}
           </p>
-          {mode === 'detail' ? (
-            <DissimilarityHeatmap key={groupView ? sel.id : 'all'}
+          {/* The page presents one grouping and does not open a group up. Said where a reader
+              would look for that, beside the tree, with the way to do it. */}
+          <p className="note sg-nb-note">
+            To explore the clustering within a structural group, or to try other methods and
+            parameters, use the{' '}
+            <button type="button" className="cs-linkbtn" onClick={() => setNbOpen(true)}>
+              analysis notebook
+            </button>.
+          </p>
+          {!overview ? (
+            <DissimilarityHeatmap key="all"
                                   order={view.order} labels={labels}
                                   matrix={hm.matrix} cellLabel={QUANTITY} metaOf={metaOf}
                                   colorOf={colours} onPick={onPick} onSize={setPanelSize}
@@ -577,29 +557,9 @@ export default function StructuralGroupsApp({ config }) {
                                                 compare={comparison ? comparison.entries : null}
                                                 onSelectGroup={selectGroup} />
                                   )}
-                                  toolbar={canScope ? viewSwitch : null} />
+                                  toolbar={null} />
           ) : (
             <Measured onSize={setPanelSize}>
-              <div className="cs-hm-bar">{viewSwitch}</div>
-              {mode !== 'overview' && (
-                <div className="sg-hidden">
-                  <p>
-                    {mode === 'single'
-                      ? `${sel.label} has one assembly, so there are no pairs inside it to show.`
-                      : `${sel.members.length} assemblies in this structural group. Detailed `
-                        + `pairwise view is hidden for sets larger than ${DETAIL_MAX} assemblies.`}
-                  </p>
-                  <p className="sg-hidden-actions">
-                    <button type="button" className="sg-nbbtn"
-                            onClick={() => download('dendrogram', 'svg', 'Dendrogram SVG')}>
-                      Download full dendrogram
-                    </button>
-                    <button type="button" className="sg-nbbtn" onClick={() => setNbOpen(true)}>
-                      Explore clustering in notebook
-                    </button>
-                  </p>
-                </div>
-              )}
               <GroupOverview clustering={clustering} selectedId={sel.id}
                              onSelectGroup={selectGroup} quantity={QUANTITY}
                              compare={comparison ? [
@@ -653,8 +613,8 @@ export default function StructuralGroupsApp({ config }) {
                                height={Math.max(320, panelSize - extrasH)} />
         </div>
 
-        <AssociatedFeatures selection={sel} stats={stats} total={data.assemblies.length}
-                            anyModified={anyModified} />
+        <AssociatedFeatures selection={sel} features={features}
+                            small={sel.members.length < SMALL_GROUP} />
       </div>
 
     </div>
