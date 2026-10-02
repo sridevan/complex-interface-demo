@@ -88,6 +88,14 @@ const STRUCTURAL_GROUPS = [
     detail: '341 instances · 6 structural groups', accent: '#c65a5a' },
 ]
 
+// Fourth category: prototypes that are separate static pages (pages/<name>/ in the repository),
+// not routes of this app, so they are linked by path rather than by hash.
+const STRUCTURAL_COMPARISON = [
+  { href: `${import.meta.env.BASE_URL}structural-comparison/`, name: 'Human haemoglobin',
+    oligomer: 'Heterotetramer (α₂β₂)', cpxId: 'PDB-CPX-154652', organism: 'Homo sapiens',
+    detail: 'T state ↔ R state · 5 + 5 PDB entries', accent: '#c2185b' },
+]
+
 export default function Landing() {
   const cards = [...COMPLEXES].sort((a, b) => {
     const aAb = a.interfaceType === 'antibody-antigen'
@@ -160,6 +168,28 @@ export default function Landing() {
               <div><dt>Grouping</dt><dd>{c.detail}</dd></div>
             </dl>
             <div className="landing-go" style={{ color: c.accent }}>Open structural groups view →</div>
+          </a>
+        ))}
+      </div>
+
+      <div className="landing-section">
+        <h2>Structural comparison between groups<span className="synth-tag">prototype</span></h2>
+        <p>Where a complex differs between two structural groups: a residue-level profile of
+          displacement and local deformation, and a map of the residue-pair distances that change.</p>
+      </div>
+      <div className="landing-grid">
+        {STRUCTURAL_COMPARISON.map((c) => (
+          // one card in an auto-fit grid would stretch to the full row; keep it the width of the others
+          <a key={c.href} href={c.href} className="landing-card" style={{ '--acc': c.accent, maxWidth: 400 }}>
+            <div className="landing-accent" style={{ background: c.accent }} />
+            <h2>{c.name}</h2>
+            <dl className="lc-meta">
+              <div><dt>Organism</dt><dd><i>{c.organism}</i></dd></div>
+              <div><dt>Oligomeric state</dt><dd>{c.oligomer}</dd></div>
+              <div><dt>PDB Complex ID</dt><dd className="mono">{c.cpxId}</dd></div>
+              <div><dt>Comparison</dt><dd>{c.detail}</dd></div>
+            </dl>
+            <div className="landing-go" style={{ color: c.accent }}>Open structural comparison →</div>
           </a>
         ))}
       </div>

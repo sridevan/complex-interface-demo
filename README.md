@@ -11,6 +11,10 @@ from `main`. Two worked examples:
 - **Protein homo-oligomer** — horse haemoglobin, `PDB-CPX-131443` (α₂β₂); a generic
   *Aggregated Interface View* that is entirely data-driven and works for any complex.
 
+The site also carries pre-built standalone prototype pages from `pages/` (see `pages/README.md`),
+currently [structural comparison between groups](https://sridevan.github.io/complex-interface-demo/structural-comparison/)
+for human haemoglobin (T state vs R state).
+
 For the antibody–antigen case the core idea is to make interfaces comparable *across many
 structures* by normalising both sides to conserved coordinates —
 

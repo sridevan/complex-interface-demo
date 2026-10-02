@@ -1,0 +1,25 @@
+{
+ "pairs": {
+  "T|R": {
+   "file": "data/distance_map_T_R.bin",
+   "a": "T",
+   "b": "R",
+   "definition": "Cα–Cα distance in group b minus distance in group a, per structure pair; median over structure pairs",
+   "n": 578,
+   "cells": 167331,
+   "nComparisons": 25,
+   "arrays": [
+    "median",
+    "q1",
+    "q3",
+    "min",
+    "max"
+   ],
+   "dtype": "float32",
+   "missing": "NaN",
+   "counts": "uint8",
+   "absMedianP99": 5.48,
+   "absMedianMax": 17.78
+  }
+ }
+}

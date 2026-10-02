@@ -1,4 +1,4 @@
-import { cpSync, mkdirSync, existsSync, readdirSync, readFileSync, statSync } from 'node:fs'
+import { cpSync, mkdirSync, existsSync, readdirSync, readFileSync, rmSync, statSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 const here = dirname(fileURLToPath(import.meta.url))
@@ -103,4 +103,19 @@ for (const { cx, name } of SIMILARITY) {
   const srcCif = resolve(proc, cx, 'assemblies')
   if (existsSync(srcCif)) cpSync(srcCif, pubCif, { recursive: true })
   console.log(`synced ${cx} instance-similarity data into public/${name}/`)
+}
+
+// Pre-built standalone pages: finished static sites committed under pages/<name>/, published as-is
+// at <base>/<name>/. They are separate apps with their own bundles, not routes of this one, so
+// they are copied rather than built (see pages/README.md). The target is cleared first so a file
+// dropped from a page does not linger in public/.
+const pagesSrc = resolve(root, 'pages')
+if (existsSync(pagesSrc)) {
+  for (const d of readdirSync(pagesSrc, { withFileTypes: true })) {
+    if (!d.isDirectory()) continue
+    const pub = resolve(here, '..', 'public', d.name)
+    rmSync(pub, { recursive: true, force: true })
+    cpSync(resolve(pagesSrc, d.name), pub, { recursive: true })
+    console.log(`synced standalone page pages/${d.name}/ into public/${d.name}/`)
+  }
 }
